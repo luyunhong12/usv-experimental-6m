@@ -48,7 +48,7 @@ class LedgerTests(unittest.TestCase):
         self.assertAlmostEqual(
             sum(r["mass_kg"] for r in rows("speed15_concept"))
             - sum(r["mass_kg"] for r in rows()),
-            4 * 76 + 4 * 2 + 30 + 1.5 * (1.5**3 - 1) + 167.85922625681135,
+            4 * 76 + 4 * 2 + 30 + 1.5 * (1.5**3 - 1),
         )
 
     def test_unique_and_physical(self):
@@ -97,7 +97,7 @@ class LedgerTests(unittest.TestCase):
         self.assertEqual(sum("E163" in r["name"] for r in rows("speed15_concept")), 6)
 
     def test_nominal_fore_ballast_equilibrium(self):
-        """名义满油升级方案调平，基准方案不生成升级方案纵向配重。"""
+        """重布置后名义满油调平，两方案均不生成纵向配重。"""
         from pathlib import Path
         from scenario_profiles import apply_speed15
         import xml.etree.ElementTree as E
@@ -112,7 +112,7 @@ class LedgerTests(unittest.TestCase):
             solid = model.find(
                 "link[@name='hull']/collision[@name='fixed_fore_trim_ballast_collision']"
             )
-            self.assertEqual(solid is not None, profile == "speed15_concept")
+            self.assertIsNone(solid)
             if profile == "speed15_concept":
                 np.testing.assert_allclose(
                     result["pose_z_roll_pitch"][1:], [0, 0], atol=1e-8
@@ -120,6 +120,33 @@ class LedgerTests(unittest.TestCase):
                 self.assertAlmostEqual(
                     result["ship_mass_kg"],
                     sum(p["mass_kg"] for p in rows(profile)) + 60 * 0.84,
+                )
+
+    def test_relocated_batteries_clear_equipment(self):
+        """电池与托架须避开集中设备包络，并保留至少 30 mm 船壳余量。"""
+        parts = rows("speed15_concept")
+        distributed = {"wiring", "fenders", "mooring", "installation_fasteners"}
+        obstacles = [p for p in parts if "size_m" in p and p["id"] not in distributed]
+        for part in parts:
+            if part["id"] in {"retained_2", "retained_3"}:
+                obstacles.append(dict(part, size_m=[0.47, 0.295, 0.495]))
+            if part["id"] == "fixed_trim_ballast":
+                obstacles.append(dict(part, size_m=part["geometry"]["size_m"]))
+        moved = [
+            p for p in parts if p["id"].startswith(("extra_battery_", "extra_tray_"))
+        ]
+        self.assertEqual(sum(p["mass_kg"] for p in moved), 312)
+        for part in moved:
+            for obstacle in obstacles:
+                if part["id"] == obstacle["id"]:
+                    continue
+                overlap = (np.array(part["size_m"]) + obstacle["size_m"]) / 2 - abs(
+                    np.array(part["cg_m"]) - obstacle["cg_m"]
+                )
+                self.assertLessEqual(
+                    float(min(overlap)),
+                    0,
+                    msg=part["id"] + " overlaps " + obstacle["id"],
                 )
 
     def test_fixed_ballast_mass_geometry_and_balance(self):
@@ -140,9 +167,12 @@ class LedgerTests(unittest.TestCase):
         for ballast in (p for p in parts if "geometry" in p):
             size = np.array(ballast["geometry"]["size_m"])
             mass = ballast["mass_kg"]
-            self.assertAlmostEqual(
-                np.prod(size) * ballast["geometry"]["material_density_kg_m3"], mass
-            )
+            if "material_density_kg_m3" in ballast["geometry"]:
+                self.assertAlmostEqual(
+                    np.prod(size) * ballast["geometry"]["material_density_kg_m3"], mass
+                )
+            else:
+                np.testing.assert_allclose(size, ballast["size_m"])
             expected = mass / 12 * (np.sum(size**2) - size**2)
             np.testing.assert_allclose(
                 np.diag(ballast["inertia_at_cg_kg_m2"]), expected
@@ -150,13 +180,13 @@ class LedgerTests(unittest.TestCase):
             for signs in itertools.product([-1, 1], repeat=3):
                 corner = np.array(ballast["cg_m"]) + np.array(signs) * size / 2
                 self.assertLessEqual(
-                    np.max(envelope[:, :3] @ corner + envelope[:, 3]), -0.05
+                    np.max(envelope[:, :3] @ corner + envelope[:, 3]), -0.03
                 )
         hull = E.Element("link")
         add_ledger_solids(hull, parts)
         add_ledger_solids(hull, parts)  # repeated profile application is idempotent
-        self.assertEqual(len(hull.findall("visual")), 2)
-        self.assertEqual(len(hull.findall("collision")), 2)
+        self.assertEqual(len(hull.findall("visual")), 9)
+        self.assertEqual(len(hull.findall("collision")), 9)
         self.assertIsNone(hull.find("inertial"))  # no duplicate mass from rendering
 
 

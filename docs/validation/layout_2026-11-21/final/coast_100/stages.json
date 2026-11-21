@@ -1,0 +1,26 @@
+[
+  {
+    "name": "approach",
+    "duration": 35,
+    "mode": "direct",
+    "throttle": 1,
+    "steering_deg": 0,
+    "index": 0,
+    "start_sim": 1.336,
+    "end_sim": 36.34,
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  },
+  {
+    "name": "coast",
+    "duration": 75,
+    "mode": "direct",
+    "throttle": 0,
+    "steering_deg": 0,
+    "index": 1,
+    "start_sim": 36.34,
+    "end_sim": 111.408,
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  }
+]

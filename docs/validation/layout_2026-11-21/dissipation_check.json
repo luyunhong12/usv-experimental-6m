@@ -1,0 +1,90 @@
+{
+  "reverse_60_long": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "reverse_60_low_fuel": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "reverse_60_loaded": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "reverse_60_step2ms": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "reverse_60_mesh": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "neutral_035": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "neutral_065": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "neutral_100": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "turn_055_left": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "turn_055_right": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "turn_100_left": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "turn_100_right": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "coast_100": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "brake_100": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "astern_left": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "astern_right": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "zigzag_10_10": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "loaded_low_fuel": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "zigzag_10_10_low_speed": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "reverse_25": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "reverse_40": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  },
+  "reverse_60": {
+    "minimum_dissipation_w": -0.0,
+    "finite": true
+  }
+}

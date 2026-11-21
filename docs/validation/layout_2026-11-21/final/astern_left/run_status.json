@@ -1,0 +1,34 @@
+{
+  "case": "astern_left",
+  "spec": {
+    "kind": "maneuver_audit",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "reverse",
+        "duration": 30,
+        "mode": "direct",
+        "throttle": -0.4,
+        "steering_deg": 0
+      },
+      {
+        "name": "astern_turn",
+        "duration": 45,
+        "mode": "direct",
+        "throttle": -0.4,
+        "steering_deg": -10
+      },
+      {
+        "name": "coast",
+        "duration": 40,
+        "mode": "direct",
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "finished_stages": 3,
+  "start_sim": 1.236,
+  "failure": null,
+  "bridge_resumed": false
+}

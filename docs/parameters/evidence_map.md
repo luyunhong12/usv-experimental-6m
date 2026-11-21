@@ -1,6 +1,8 @@
 # 科学依据与证据地图
 
-最新补充：[分布式横流阻力与固定实体配平](../validation/distributed_drag_2026-11-21/README.md)。
+最新补充：[升级电池质量矩、包络与操纵取舍](../validation/layout_2026-11-21/README.md)。
+
+上一轮：[分布式横流阻力与固定实体配平](../validation/distributed_drag_2026-11-21/README.md)。
 
 历史专项：[零舵受力归因、镜像剖分修复、阻力分账及直接操纵](../validation/force_maneuvers_2026-11-21/README.md)。历史约 0.058°/秒和旧参考几何不再代表当前版本。
 

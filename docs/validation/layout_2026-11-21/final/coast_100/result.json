@@ -1,0 +1,79 @@
+{
+  "case": "coast_100",
+  "spec": {
+    "kind": "maneuver_audit",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "approach",
+        "duration": 35,
+        "mode": "direct",
+        "throttle": 1,
+        "steering_deg": 0
+      },
+      {
+        "name": "coast",
+        "duration": 75,
+        "mode": "direct",
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "checks": {
+    "startup_ready": true,
+    "completed": true,
+    "no_failure": true,
+    "finite": true,
+    "attitude_bounded": true,
+    "power_limited": true,
+    "energy_balance": true,
+    "fuel_mass_consistent": true,
+    "resistance_dissipative": true,
+    "command_reached_physics": true,
+    "health_command_observed": true,
+    "initial_soc_matches": true
+  },
+  "passed": true,
+  "failure": null,
+  "start_sim": 1.336,
+  "metrics": {
+    "approach": {
+      "tail_speed_m_s": 4.1938518644138805,
+      "tail_speed_std_m_s": 8.718491745842605e-06,
+      "mean_motor_w": 39999.999999999396,
+      "distance_m": 138.6910545098374,
+      "heading_change_rad": 0.025563330119468815,
+      "mean_wet_area_m2": 10.53793391139331,
+      "mean_projected_x_m2": 0.3610307652317244,
+      "mean_surge_drag_n": 3679.3251182109952
+    },
+    "coast": {
+      "tail_speed_m_s": 0.003045730040351493,
+      "tail_speed_std_m_s": 0.0005105402506066731,
+      "mean_motor_w": 0.0,
+      "distance_m": 18.079414374294682,
+      "heading_change_rad": 0.0018528056172756116,
+      "mean_wet_area_m2": 10.553123338884236,
+      "mean_projected_x_m2": 0.3613037363549156,
+      "mean_surge_drag_n": 0.3750726328937174,
+      "time_to_abs_speed_0_1_s": 25.436,
+      "distance_to_abs_speed_0_1_m": 16.856946264024263
+    }
+  },
+  "summary": {
+    "max_roll_pitch_deg": [
+      0.6729888261728793,
+      0.8707819281311837
+    ],
+    "soc_start_end": [
+      0.8999999963443231,
+      0.8921988407499348
+    ],
+    "temperature_max_c": 25.227932944026307,
+    "fuel_consumed_l": 0.0,
+    "sim_end": 111.616
+  },
+  "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+  "postprocess_recovered": false
+}

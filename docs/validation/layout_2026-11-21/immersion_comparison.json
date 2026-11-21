@@ -1,0 +1,12 @@
+{
+  "previous": {
+    "wet_area_m2": 10.82880660485249,
+    "side_projected_area_m2": 1.3926784426632834,
+    "dissipation_w": 1603.6144682634922
+  },
+  "relocated": {
+    "wet_area_m2": 10.555322440490947,
+    "side_projected_area_m2": 1.287695329878419,
+    "dissipation_w": 1638.556520781457
+  }
+}

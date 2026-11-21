@@ -1,6 +1,6 @@
 # 用 ROS 2 在 VRX 中开船
 
-当前推荐入口是 **ROS 控制 + Gazebo/VRX 悉尼场景**，不需要安装或启动 ArduPilot、SITL 或 Nav2。本轮接入前验证见 [验收记录](../validation/distributed_drag_2026-11-21/README.md)，物理边界见 [已知问题](../validation/known_issues.md)。
+当前推荐入口是 **ROS 控制 + Gazebo/VRX 悉尼场景**，不需要安装或启动 ArduPilot、SITL 或 Nav2。本轮接入前验证见 [验收记录](../validation/layout_2026-11-21/README.md)，物理边界见 [已知问题](../validation/known_issues.md)。
 
 ## 环境与构建
 
@@ -94,4 +94,4 @@ python3 tests/regression/assess_maneuvers.py \
 
 ## 固定配重与当前方案
 
-基准方案新增约 32.05 kg 横向配平板；`speed15_concept` 另外增加约 167.86 kg 纵向配平板。两块板均有台账质量、惯性、显示和碰撞，不是控制器自动配平。原设备位置保留。升级方案名义满油总质量约 1739.03 kg；不应继续引用旧版本 1539.12 kg 和 15.21 km/h 作为当前结果。当前速度、倒车偏航及适用范围见 [配平复验](../validation/distributed_drag_2026-11-21/README.md)。
+基准方案保留约 32.05 kg 横向板；`speed15_concept` 采用升级电池前后重布置，取消上一版约 167.86 kg 纵向板。满油总质量约 1571.17 kg，静水轻载全速约 15.10 km/h。显示、碰撞、质量与惯性由台账同步生成；实际安装、线缆与承载能力尚需核实。倒车仍有配平回转，详见 [布置复验](../validation/layout_2026-11-21/README.md)。

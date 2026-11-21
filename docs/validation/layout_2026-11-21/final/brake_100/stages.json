@@ -1,0 +1,50 @@
+[
+  {
+    "name": "approach",
+    "duration": 35,
+    "mode": "direct",
+    "throttle": 1,
+    "steering_deg": 0,
+    "index": 0,
+    "start_sim": 1.336,
+    "end_sim": 36.34,
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  },
+  {
+    "name": "reverse_brake",
+    "duration": 18,
+    "mode": "direct",
+    "throttle": -0.6,
+    "steering_deg": 0,
+    "index": 1,
+    "start_sim": 36.34,
+    "end_sim": 54.392,
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  },
+  {
+    "name": "reverse",
+    "duration": 60,
+    "mode": "direct",
+    "throttle": -0.6,
+    "steering_deg": 0,
+    "index": 2,
+    "start_sim": 54.392,
+    "end_sim": 114.412,
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  },
+  {
+    "name": "coast",
+    "duration": 45,
+    "mode": "direct",
+    "throttle": 0,
+    "steering_deg": 0,
+    "index": 3,
+    "start_sim": 114.412,
+    "end_sim": 159.504,
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  }
+]

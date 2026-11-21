@@ -1,0 +1,67 @@
+{
+  "ready": true,
+  "wall_s": 5.319365633000416,
+  "sim_s": 1.622,
+  "health": {
+    "gz_partition": "usv_perf_reverse_60_step2ms_257209db",
+    "sim_s": 1.622,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 1,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  "transport_retries": [
+    {
+      "wall_s": 3.0049546340014786,
+      "topic": "propulsion/state"
+    },
+    {
+      "wall_s": 3.0049546340014786,
+      "topic": "energy/truth"
+    },
+    {
+      "wall_s": 3.0049546340014786,
+      "topic": "actuators/state"
+    },
+    {
+      "wall_s": 3.0049546340014786,
+      "topic": "environment/state"
+    },
+    {
+      "wall_s": 3.0049546340014786,
+      "topic": "fuel_mass/state"
+    },
+    {
+      "wall_s": 3.0049546340014786,
+      "topic": "hydrodynamics/resistance"
+    },
+    {
+      "wall_s": 3.0049546340014786,
+      "topic": "audit/hull"
+    },
+    {
+      "wall_s": 3.0049546340014786,
+      "topic": "audit/propulsion"
+    },
+    {
+      "wall_s": 3.0049546340014786,
+      "topic": "hydrodynamics/appendages"
+    },
+    {
+      "wall_s": 3.0049546340014786,
+      "topic": "audit/appendages"
+    }
+  ]
+}

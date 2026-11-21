@@ -1,0 +1,78 @@
+[
+  {
+    "name": "approach",
+    "duration": 25,
+    "mode": "direct",
+    "throttle": 0.35,
+    "steering_deg": 0,
+    "index": 0,
+    "start_sim": 1.336,
+    "end_sim": 26.396,
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  },
+  {
+    "name": "execute_1",
+    "duration": 40,
+    "mode": "direct",
+    "throttle": 0.35,
+    "steering_deg": -10,
+    "until_heading_deg": 10,
+    "index": 1,
+    "start_sim": 26.396,
+    "end_sim": 30.808,
+    "heading_triggered": true,
+    "heading_reference_rad": 0.0008165755981291062
+  },
+  {
+    "name": "execute_2",
+    "duration": 40,
+    "mode": "direct",
+    "throttle": 0.35,
+    "steering_deg": 10,
+    "until_heading_deg": -10,
+    "index": 2,
+    "start_sim": 30.808,
+    "end_sim": 41.06,
+    "heading_triggered": true,
+    "heading_reference_rad": 0.0008165755981291062
+  },
+  {
+    "name": "execute_3",
+    "duration": 40,
+    "mode": "direct",
+    "throttle": 0.35,
+    "steering_deg": -10,
+    "until_heading_deg": 10,
+    "index": 3,
+    "start_sim": 41.06,
+    "end_sim": 51.212,
+    "heading_triggered": true,
+    "heading_reference_rad": 0.0008165755981291062
+  },
+  {
+    "name": "execute_4",
+    "duration": 40,
+    "mode": "direct",
+    "throttle": 0.35,
+    "steering_deg": 10,
+    "until_heading_deg": -10,
+    "index": 4,
+    "start_sim": 51.212,
+    "end_sim": 61.368,
+    "heading_triggered": true,
+    "heading_reference_rad": 0.0008165755981291062
+  },
+  {
+    "name": "recover",
+    "duration": 45,
+    "mode": "direct",
+    "throttle": 0.35,
+    "steering_deg": 0,
+    "index": 5,
+    "start_sim": 61.368,
+    "end_sim": 106.432,
+    "heading_triggered": false,
+    "heading_reference_rad": 0.0008165755981291062
+  }
+]

@@ -1,0 +1,117 @@
+{
+  "case": "brake_100",
+  "spec": {
+    "kind": "maneuver_audit",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "approach",
+        "duration": 35,
+        "mode": "direct",
+        "throttle": 1,
+        "steering_deg": 0
+      },
+      {
+        "name": "reverse_brake",
+        "duration": 18,
+        "mode": "direct",
+        "throttle": -0.6,
+        "steering_deg": 0
+      },
+      {
+        "name": "reverse",
+        "duration": 60,
+        "mode": "direct",
+        "throttle": -0.6,
+        "steering_deg": 0
+      },
+      {
+        "name": "coast",
+        "duration": 45,
+        "mode": "direct",
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "checks": {
+    "startup_ready": true,
+    "completed": true,
+    "no_failure": true,
+    "finite": true,
+    "attitude_bounded": true,
+    "power_limited": true,
+    "energy_balance": true,
+    "fuel_mass_consistent": true,
+    "resistance_dissipative": true,
+    "command_reached_physics": true,
+    "health_command_observed": true,
+    "initial_soc_matches": true,
+    "reverse_brakes": true,
+    "reverses": true
+  },
+  "passed": true,
+  "failure": null,
+  "start_sim": 1.336,
+  "metrics": {
+    "approach": {
+      "tail_speed_m_s": 4.193851863465656,
+      "tail_speed_std_m_s": 8.718733377959903e-06,
+      "mean_motor_w": 39999.99999999938,
+      "distance_m": 138.5400754683342,
+      "heading_change_rad": 0.025535166085972918,
+      "mean_wet_area_m2": 10.537933990970117,
+      "mean_projected_x_m2": 0.36103075089111475,
+      "mean_surge_drag_n": 3679.32499478359
+    },
+    "reverse_brake": {
+      "tail_speed_m_s": -1.870182056278793,
+      "tail_speed_std_m_s": 0.016674382226226473,
+      "mean_motor_w": 8049.083094094745,
+      "distance_m": 30.029281825776238,
+      "heading_change_rad": 0.007401403197996554,
+      "mean_wet_area_m2": 10.55541393164039,
+      "mean_projected_x_m2": 0.36123192262598325,
+      "mean_surge_drag_n": -859.2813661381084,
+      "time_to_abs_speed_0_1_s": 3.695999999999998,
+      "distance_to_abs_speed_0_1_m": 7.287081564384753
+    },
+    "reverse": {
+      "tail_speed_m_s": -1.8839063392060444,
+      "tail_speed_std_m_s": 1.6417614489814784e-05,
+      "mean_motor_w": 8049.083389479596,
+      "distance_m": 112.89044057406946,
+      "heading_change_rad": 0.21531796533918998,
+      "mean_wet_area_m2": 10.555360609316699,
+      "mean_projected_x_m2": 0.3612530716202739,
+      "mean_surge_drag_n": -870.2277113814113
+    },
+    "coast": {
+      "tail_speed_m_s": -0.02460598901634827,
+      "tail_speed_std_m_s": 0.004355559370110458,
+      "mean_motor_w": 0.0,
+      "distance_m": 12.008893521375832,
+      "heading_change_rad": 0.04086042707889134,
+      "mean_wet_area_m2": 10.55309070248811,
+      "mean_projected_x_m2": 0.36130390435490045,
+      "mean_surge_drag_n": -3.1287492224531124,
+      "time_to_abs_speed_0_1_s": 23.424000000000007,
+      "distance_to_abs_speed_0_1_m": 10.998073305383159
+    }
+  },
+  "summary": {
+    "max_roll_pitch_deg": [
+      0.6731800318126109,
+      0.8019710149370711
+    ],
+    "soc_start_end": [
+      0.8999999963443231,
+      0.8888362320508524
+    ],
+    "temperature_max_c": 25.245501734599408,
+    "fuel_consumed_l": 0.0,
+    "sim_end": 159.708
+  },
+  "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+  "postprocess_recovered": false
+}
