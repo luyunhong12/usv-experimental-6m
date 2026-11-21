@@ -1,0 +1,161 @@
+{
+  "passed": true,
+  "checks": {
+    "all_cases_passed": true,
+    "stronger_wave_increases_heave": true,
+    "beam_roll_exceeds_longitudinal_roll": true
+  },
+  "strong_to_quarter_heave_ratio": 1.9983139077342746,
+  "cases": {
+    "calm": {
+      "passed": true,
+      "case": "calm",
+      "gain": 0,
+      "direction_rad": 0,
+      "period_s": 5,
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "no_failure": true,
+        "attitude_bounded": true,
+        "positive_buoyancy": true,
+        "settles_after_release": true
+      },
+      "metrics": {
+        "heave_peak_to_peak_m": 3.809796825321454e-05,
+        "roll_peak_to_peak_deg": 0.0011389903100574468,
+        "pitch_peak_to_peak_deg": 0.007520108308191001,
+        "surface_peak_to_peak_m": 0.0,
+        "max_abs_attitude_deg": 6.50364470418108,
+        "mean_buoyancy_N": 17469.413091180566,
+        "pressure_triangles": 2998,
+        "final_pose_z_roll_pitch": [
+          -0.2709029600619514,
+          0.026241916624161744,
+          -0.01500137454428947
+        ]
+      },
+      "failure": null
+    },
+    "longitudinal": {
+      "passed": true,
+      "case": "longitudinal",
+      "gain": 0.3,
+      "direction_rad": 0,
+      "period_s": 5,
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "no_failure": true,
+        "attitude_bounded": true,
+        "positive_buoyancy": true,
+        "responds_to_waves": true
+      },
+      "metrics": {
+        "heave_peak_to_peak_m": 0.22061257306566315,
+        "roll_peak_to_peak_deg": 0.5425909300335163,
+        "pitch_peak_to_peak_deg": 2.0048558136578025,
+        "surface_peak_to_peak_m": 0.2198136483817749,
+        "max_abs_attitude_deg": 1.8729649744411694,
+        "mean_buoyancy_N": 17474.82232940911,
+        "pressure_triangles": 2998,
+        "final_pose_z_roll_pitch": [
+          -0.27838004018374135,
+          0.025715683411313344,
+          -0.011098491321574663
+        ]
+      },
+      "failure": null
+    },
+    "beam": {
+      "passed": true,
+      "case": "beam",
+      "gain": 0.3,
+      "direction_rad": 1.5707963267948966,
+      "period_s": 5,
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "no_failure": true,
+        "attitude_bounded": true,
+        "positive_buoyancy": true,
+        "responds_to_waves": true
+      },
+      "metrics": {
+        "heave_peak_to_peak_m": 0.22568662659199104,
+        "roll_peak_to_peak_deg": 2.054800572448067,
+        "pitch_peak_to_peak_deg": 0.5512844324648272,
+        "surface_peak_to_peak_m": 0.22042822716725266,
+        "max_abs_attitude_deg": 2.529274542184106,
+        "mean_buoyancy_N": 17465.13402558907,
+        "pressure_triangles": 2998,
+        "final_pose_z_roll_pitch": [
+          -0.333921254552925,
+          0.04156859428140395,
+          -0.014838413673431024
+        ]
+      },
+      "failure": null
+    },
+    "quarter": {
+      "passed": true,
+      "case": "quarter",
+      "gain": 0.3,
+      "direction_rad": 0.7853981633974483,
+      "period_s": 5,
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "no_failure": true,
+        "attitude_bounded": true,
+        "positive_buoyancy": true,
+        "responds_to_waves": true
+      },
+      "metrics": {
+        "heave_peak_to_peak_m": 0.19246878260858571,
+        "roll_peak_to_peak_deg": 1.3538646815504394,
+        "pitch_peak_to_peak_deg": 1.1547714076604927,
+        "surface_peak_to_peak_m": 0.1893446367809897,
+        "max_abs_attitude_deg": 2.1837500870619646,
+        "mean_buoyancy_N": 17472.018337085086,
+        "pressure_triangles": 2998,
+        "final_pose_z_roll_pitch": [
+          -0.2963141566323087,
+          0.018899698690133714,
+          -0.009288937563848708
+        ]
+      },
+      "failure": null
+    },
+    "strong": {
+      "passed": true,
+      "case": "strong",
+      "gain": 0.6,
+      "direction_rad": 0.7853981633974483,
+      "period_s": 5,
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "no_failure": true,
+        "attitude_bounded": true,
+        "positive_buoyancy": true,
+        "responds_to_waves": true
+      },
+      "metrics": {
+        "heave_peak_to_peak_m": 0.3846130450914215,
+        "roll_peak_to_peak_deg": 2.6783667533014555,
+        "pitch_peak_to_peak_deg": 2.3410658210916337,
+        "surface_peak_to_peak_m": 0.3784995676600618,
+        "max_abs_attitude_deg": 2.846413451282232,
+        "mean_buoyancy_N": 17474.587449430015,
+        "pressure_triangles": 2998,
+        "final_pose_z_roll_pitch": [
+          -0.3261503305981408,
+          0.012214684372004373,
+          -0.0034613187888381572
+        ]
+      },
+      "failure": null
+    }
+  }
+}

@@ -1,0 +1,1410 @@
+{
+  "passed": true,
+  "cases": {
+    "load0_fuel6": {
+      "case": "load0_fuel6",
+      "spec": {
+        "payload_kg": 0,
+        "fuel_l": 6,
+        "wave_gain": 0,
+        "current": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ]
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true,
+        "target_speed": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 14.99375828356424,
+      "max_roll_pitch_deg": [
+        1.2918700973296342,
+        2.172889764540087
+      ],
+      "peak_power_w": 39999.999999999985,
+      "final_soc": 0.8909499586295895,
+      "max_temperature_c": 25.257848354579156,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1493.7604401134447,
+      "initial_ship_cg_m": [
+        -0.8687834045239101,
+        -0.013974867891819407,
+        0.4997627432274786
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": 0.8795858933653573,
+      "environment_last": [
+        65.28,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.064965109502644,
+        8.185914472545145,
+        6.700935436766111,
+        -0.03671543200658066,
+        9.829345401490682e-05,
+        0.0
+      ],
+      "passed": true
+    },
+    "load0_fuel30": {
+      "case": "load0_fuel30",
+      "spec": {
+        "payload_kg": 0,
+        "fuel_l": 30,
+        "wave_gain": 0,
+        "current": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ]
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true,
+        "target_speed": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 14.985444327910681,
+      "max_roll_pitch_deg": [
+        1.288556277237528,
+        2.123172682934142
+      ],
+      "peak_power_w": 39999.99999999991,
+      "final_soc": 0.8909156439182159,
+      "max_temperature_c": 25.259184733808294,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1513.9204401134448,
+      "initial_ship_cg_m": [
+        -0.8561464501613191,
+        -0.013788682415562642,
+        0.4971691435684194
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": 0.8976849137815403,
+      "environment_last": [
+        65.28,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -41.115027743148175,
+        8.424390086661374,
+        6.3994706076481975,
+        -0.038258517279569755,
+        0.00010851081153798387,
+        0.0
+      ],
+      "passed": true
+    },
+    "load0_fuel60": {
+      "case": "load0_fuel60",
+      "spec": {
+        "payload_kg": 0,
+        "fuel_l": 60,
+        "wave_gain": 0,
+        "current": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ]
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true,
+        "target_speed": true
+      },
+      "speed_40_49_s_km_h": 14.983692921170428,
+      "max_roll_pitch_deg": [
+        1.279549788942093,
+        2.063475944037557
+      ],
+      "peak_power_w": 39999.999999999956,
+      "final_soc": 0.8909405778949525,
+      "max_temperature_c": 25.258378050347595,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1539.1204401134448,
+      "initial_ship_cg_m": [
+        -0.8407342852434447,
+        -0.0135370674407131,
+        0.4958636185272408
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": 0.91983962334138,
+      "environment_last": [
+        65.28,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -42.41277817622395,
+        8.701777302367306,
+        6.052256832176756,
+        -0.0401781842439376,
+        0.00012149622373113777,
+        0.0
+      ],
+      "passed": true
+    },
+    "load100_fuel6": {
+      "case": "load100_fuel6",
+      "spec": {
+        "payload_kg": 100,
+        "fuel_l": 6,
+        "wave_gain": 0,
+        "current": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ]
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true,
+        "target_speed": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 15.001418913745637,
+      "max_roll_pitch_deg": [
+        1.2989595829367788,
+        1.9951468528216443
+      ],
+      "peak_power_w": 39999.999999999956,
+      "final_soc": 0.8909305332400997,
+      "max_temperature_c": 25.258961770508478,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1593.7604401134447,
+      "initial_ship_cg_m": [
+        -0.8142620864715939,
+        -0.013098017758679716,
+        0.5060518942646508
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": 0.9695664210118348,
+      "environment_last": [
+        65.28,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -45.37525632197363,
+        9.543636675889648,
+        5.589549886036944,
+        -0.04462238992018738,
+        0.0001595938492508443,
+        0.0
+      ],
+      "passed": true
+    },
+    "load100_fuel30": {
+      "case": "load100_fuel30",
+      "spec": {
+        "payload_kg": 100,
+        "fuel_l": 30,
+        "wave_gain": 0,
+        "current": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ]
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true,
+        "target_speed": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 14.99360424825062,
+      "max_roll_pitch_deg": [
+        1.2882908934760215,
+        1.9513098984114552
+      ],
+      "peak_power_w": 39999.999999999985,
+      "final_soc": 0.8909604754460515,
+      "max_temperature_c": 25.257868578004093,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1613.9204401134448,
+      "initial_ship_cg_m": [
+        -0.8030893936110082,
+        -0.012934324795775238,
+        0.503540447042863
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": 0.9777774910043557,
+      "environment_last": [
+        65.28,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -45.87103889340592,
+        9.602371703527265,
+        5.2709483935358445,
+        -0.04538982907902492,
+        0.00016589087626935674,
+        0.0
+      ],
+      "passed": true
+    },
+    "load100_fuel60": {
+      "case": "load100_fuel60",
+      "spec": {
+        "payload_kg": 100,
+        "fuel_l": 60,
+        "wave_gain": 0,
+        "current": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ]
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true,
+        "target_speed": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 15.004429834501536,
+      "max_roll_pitch_deg": [
+        1.2871701656124588,
+        1.900281297910624
+      ],
+      "peak_power_w": 39999.99999999996,
+      "final_soc": 0.8909486458719965,
+      "max_temperature_c": 25.258551903747218,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1639.1204401134448,
+      "initial_ship_cg_m": [
+        -0.7894424908967412,
+        -0.012711193576532265,
+        0.5022168052073628
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": 1.0004067490225717,
+      "environment_last": [
+        65.28,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -47.247081404778925,
+        9.983452239932317,
+        5.075073321056459,
+        -0.047483929182208645,
+        0.00018607515246524874,
+        0.0
+      ],
+      "passed": true
+    },
+    "load300_fuel6": {
+      "case": "load300_fuel6",
+      "spec": {
+        "payload_kg": 300,
+        "fuel_l": 6,
+        "wave_gain": 0,
+        "current": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ]
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true,
+        "target_speed": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 14.990793462691371,
+      "max_roll_pitch_deg": [
+        1.3043553794956964,
+        1.7015610959999312
+      ],
+      "peak_power_w": 39999.999999999985,
+      "final_soc": 0.8909365957751135,
+      "max_temperature_c": 25.258613146395938,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1793.7604401134447,
+      "initial_ship_cg_m": [
+        -0.723458694736832,
+        -0.011637657310045514,
+        0.5165266214828492
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": 1.1388625030263753,
+      "environment_last": [
+        65.28,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -55.97608066753891,
+        12.556114303689657,
+        4.420675594971606,
+        -0.06143934788787644,
+        0.0003494966915572442,
+        0.0
+      ],
+      "passed": true
+    },
+    "load300_fuel30": {
+      "case": "load300_fuel30",
+      "spec": {
+        "payload_kg": 300,
+        "fuel_l": 30,
+        "wave_gain": 0,
+        "current": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ]
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true,
+        "target_speed": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 14.996596381017921,
+      "max_roll_pitch_deg": [
+        1.290878640984542,
+        1.6656901221680624
+      ],
+      "peak_power_w": 39999.99999999999,
+      "final_soc": 0.8909501973032907,
+      "max_temperature_c": 25.257837419075962,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1813.9204401134448,
+      "initial_ship_cg_m": [
+        -0.7145273416829298,
+        -0.011508249416262937,
+        0.5141756784409278
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": 1.156114749956084,
+      "environment_last": [
+        65.28,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -57.10106548556418,
+        12.722788451216841,
+        4.603247776610929,
+        -0.0633278950109063,
+        0.00036584557036778903,
+        0.0
+      ],
+      "passed": true
+    },
+    "load300_fuel60": {
+      "case": "load300_fuel60",
+      "spec": {
+        "payload_kg": 300,
+        "fuel_l": 60,
+        "wave_gain": 0,
+        "current": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ]
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true,
+        "target_speed": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 15.003020675769795,
+      "max_roll_pitch_deg": [
+        1.2863194958452728,
+        1.62431290872143
+      ],
+      "peak_power_w": 39999.99999999984,
+      "final_soc": 0.8909307374442271,
+      "max_temperature_c": 25.258949693568944,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1839.1204401134448,
+      "initial_ship_cg_m": [
+        -0.7035924863321024,
+        -0.011328881356253458,
+        0.5128504964719
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": 1.189272689894825,
+      "environment_last": [
+        65.28,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -59.28644425940628,
+        13.430359616558594,
+        5.540850241396245,
+        -0.0670871258393384,
+        0.000416580615110233,
+        0.0
+      ],
+      "passed": true
+    },
+    "port": {
+      "case": "port",
+      "spec": {
+        "payload_kg": 150,
+        "fuel_l": 30,
+        "wave_gain": 0,
+        "current": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ],
+        "payload_center": [
+          0,
+          0.6,
+          0.6
+        ]
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true,
+        "target_speed": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 14.99134171479722,
+      "max_roll_pitch_deg": [
+        2.9877319929031674,
+        1.8863520598650552
+      ],
+      "peak_power_w": 39999.999999999985,
+      "final_soc": 0.8909431650028161,
+      "max_temperature_c": 25.258239330488173,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1663.9204401134448,
+      "initial_ship_cg_m": [
+        -0.7789532140664565,
+        0.041625358103075744,
+        0.5064398023614554
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": 0.970597230808201,
+      "environment_last": [
+        65.28,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -45.43739358878098,
+        -24.261556184098584,
+        3.032367230042753,
+        -0.044799804776894304,
+        -0.0009009267651432902,
+        0.0
+      ],
+      "passed": true
+    },
+    "starboard": {
+      "case": "starboard",
+      "spec": {
+        "payload_kg": 150,
+        "fuel_l": 30,
+        "wave_gain": 0,
+        "current": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ],
+        "payload_center": [
+          0,
+          -0.6,
+          0.6
+        ]
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true,
+        "target_speed": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 15.001991181341628,
+      "max_roll_pitch_deg": [
+        4.277386609833792,
+        1.8774280680162259
+      ],
+      "peak_power_w": 39999.99999999997,
+      "final_soc": 0.8909307120658855,
+      "max_temperature_c": 25.258324495043794,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1663.9204401134448,
+      "initial_ship_cg_m": [
+        -0.77895323051679,
+        -0.06671646625856549,
+        0.5064422129600579
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": 0.9014863123278389,
+      "environment_last": [
+        65.28,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -41.33673223473971,
+        30.802105520556278,
+        0.15272072365159245,
+        -0.03888132441620246,
+        0.001241887741217656,
+        0.0
+      ],
+      "passed": true
+    },
+    "bow": {
+      "case": "bow",
+      "spec": {
+        "payload_kg": 150,
+        "fuel_l": 30,
+        "wave_gain": 0,
+        "current": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ],
+        "payload_center": [
+          1,
+          0,
+          0.6
+        ]
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "controller_telemetry_received": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true,
+        "target_speed": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 15.00091966518036,
+      "max_roll_pitch_deg": [
+        1.2909833285959462,
+        1.4087452083888286
+      ],
+      "peak_power_w": 39999.99999999992,
+      "final_soc": 0.8909391003341507,
+      "max_temperature_c": 25.258472498840046,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1663.9204401134448,
+      "initial_ship_cg_m": [
+        -0.6887757231155252,
+        -0.012545701328018037,
+        0.506438535517954
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": 1.0374186068250686,
+      "environment_last": [
+        65.28,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -49.52836141898653,
+        8.512075519149535,
+        2.0724162691492274,
+        -0.051137705134974246,
+        0.00014637516184503184,
+        0.0
+      ],
+      "passed": true
+    },
+    "stern": {
+      "case": "stern",
+      "spec": {
+        "payload_kg": 150,
+        "fuel_l": 30,
+        "wave_gain": 0,
+        "current": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ],
+        "payload_center": [
+          -1,
+          0,
+          0.6
+        ]
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true,
+        "target_speed": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 14.996201885285382,
+      "max_roll_pitch_deg": [
+        1.2923325276912365,
+        2.380679126215372
+      ],
+      "peak_power_w": 39999.99999999993,
+      "final_soc": 0.890936651128882,
+      "max_temperature_c": 25.25861196537424,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1663.9204401134448,
+      "initial_ship_cg_m": [
+        -0.8691307437271487,
+        -0.012545648500824775,
+        0.5064395778210762
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": 1.029362994803895,
+      "environment_last": [
+        65.28,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -49.02860225834709,
+        12.69830990462058,
+        11.510735379257,
+        -0.049937416643475147,
+        0.00028924949537629087,
+        0.0
+      ],
+      "passed": true
+    },
+    "combined": {
+      "case": "combined",
+      "spec": {
+        "payload_kg": 100,
+        "fuel_l": 30,
+        "wave_gain": 0.3,
+        "current": [
+          0.2,
+          0.15,
+          0
+        ],
+        "wind": [
+          0,
+          8,
+          0
+        ],
+        "power_mode": "survey",
+        "generator_on": true
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true,
+        "fuel_consumed": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 10.626761526212897,
+      "max_roll_pitch_deg": [
+        8.692738435776953,
+        2.1913449478160225
+      ],
+      "peak_power_w": 40000.0,
+      "final_soc": 0.8910086323834625,
+      "max_temperature_c": 25.260953443695644,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1613.9204401134448,
+      "initial_ship_cg_m": [
+        -0.8030893956624109,
+        -0.012934327576845124,
+        0.5035404281002047
+      ],
+      "fuel_consumed_l": 0.007432339087326767,
+      "coast_speed_65_s_km_h": -1.0247100210747628,
+      "environment_last": [
+        65.28,
+        0.009940519287978974,
+        0.002537001572400826,
+        0.0006811490630670484,
+        0.21621505562779966,
+        0.1723569455930697,
+        -0.023603071165786853,
+        0.0,
+        8.0,
+        0.0,
+        14.483993095160864,
+        116.73539699418559,
+        -7.869597074939508,
+        1.9582645955784475,
+        -102.7174687891719,
+        0.0
+      ],
+      "passed": true
+    },
+    "stress": {
+      "case": "stress",
+      "spec": {
+        "payload_kg": 300,
+        "fuel_l": 6,
+        "wave_gain": 0.6,
+        "current": [
+          0.3,
+          0.4,
+          0
+        ],
+        "wind": [
+          0,
+          10,
+          0
+        ],
+        "power_mode": "peak"
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 10.550999541968762,
+      "max_roll_pitch_deg": [
+        9.643668465456827,
+        3.0602428873037346
+      ],
+      "peak_power_w": 40000.0,
+      "final_soc": 0.8906455079278907,
+      "max_temperature_c": 25.275559956183287,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1793.7604401134447,
+      "initial_ship_cg_m": [
+        -0.7234586980315814,
+        -0.01163766217110899,
+        0.5165265878942253
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": -1.672020448903469,
+      "environment_last": [
+        65.28,
+        0.06850850718986365,
+        0.032430864910523896,
+        0.003266692853225438,
+        0.3730823379378111,
+        0.3784741990340885,
+        -0.2515841901386807,
+        0.0,
+        10.0,
+        0.0,
+        14.776153100248443,
+        171.24655840970132,
+        -15.949304282431955,
+        0.3226494883090712,
+        -161.10050551673686,
+        0.0
+      ],
+      "passed": true
+    },
+    "light": {
+      "case": "light",
+      "spec": {
+        "payload_kg": 0,
+        "fuel_l": 60,
+        "wave_gain": 0,
+        "current": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ],
+        "mass_case": "light"
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true,
+        "target_speed": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 14.99747204548192,
+      "max_roll_pitch_deg": [
+        1.0609143399051015,
+        1.585175997682597
+      ],
+      "peak_power_w": 40000.0,
+      "final_soc": 0.8909636523792329,
+      "max_temperature_c": 25.257652988659462,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1320.6746648907558,
+      "initial_ship_cg_m": [
+        -0.8016094325051327,
+        -0.01120201649606696,
+        0.49567689619073346
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": 0.7251491658822934,
+      "environment_last": [
+        65.28,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -31.474990429129033,
+        3.2470433879623073,
+        4.280579346839619,
+        -0.024811052442837638,
+        1.3066439772222791e-05,
+        0.0
+      ],
+      "passed": true
+    },
+    "heavy": {
+      "case": "heavy",
+      "spec": {
+        "payload_kg": 0,
+        "fuel_l": 60,
+        "wave_gain": 0,
+        "current": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ],
+        "mass_case": "heavy"
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true,
+        "target_speed": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 14.988684927933617,
+      "max_roll_pitch_deg": [
+        1.4713525554060867,
+        2.592275383967883
+      ],
+      "peak_power_w": 39999.99999999999,
+      "final_soc": 0.8909292339910183,
+      "max_temperature_c": 25.259067820365704,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1766.5662153361338,
+      "initial_ship_cg_m": [
+        -0.877259716902412,
+        -0.015213775220303566,
+        0.4955657677234777
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": 1.1107639788231245,
+      "environment_last": [
+        65.28,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -54.16153008092329,
+        17.986776237171107,
+        12.165461449978306,
+        -0.058458277409049825,
+        0.0005729977269650811,
+        0.0
+      ],
+      "passed": true
+    },
+    "wind_only": {
+      "case": "wind_only",
+      "spec": {
+        "payload_kg": 0,
+        "fuel_l": 60,
+        "wave_gain": 0,
+        "current": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          -8,
+          0,
+          0
+        ]
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "controller_telemetry_received": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 14.992321780590624,
+      "max_roll_pitch_deg": [
+        1.288418348077639,
+        2.0762870933526703
+      ],
+      "peak_power_w": 40000.0,
+      "final_soc": 0.8907180829121996,
+      "max_temperature_c": 25.271335395690826,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1539.1204401134448,
+      "initial_ship_cg_m": [
+        -0.8407342852434447,
+        -0.0135370674407131,
+        0.4958636185272408
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": 0.39195638850113995,
+      "environment_last": [
+        65.28,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -8.0,
+        0.0,
+        0.0,
+        -15.198960317911006,
+        1.60845709853387,
+        1.9737434193853398,
+        -38.137265999759144,
+        6.280642382613833,
+        0.0
+      ],
+      "passed": true
+    },
+    "current_only": {
+      "case": "current_only",
+      "spec": {
+        "payload_kg": 0,
+        "fuel_l": 60,
+        "wave_gain": 0,
+        "current": [
+          0,
+          0.3,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ]
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "controller_telemetry_received": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 14.991070903868517,
+      "max_roll_pitch_deg": [
+        1.5899331410510669,
+        2.0636642826090137
+      ],
+      "peak_power_w": 39999.99999999997,
+      "final_soc": 0.8909982743008293,
+      "max_temperature_c": 25.25507980536205,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1539.1204401134448,
+      "initial_ship_cg_m": [
+        -0.8407342852434447,
+        -0.0135370674407131,
+        0.4958636185272408
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": 1.1858106363352303,
+      "environment_last": [
+        65.28,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.3,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -41.79109886784434,
+        8.58004935735136,
+        5.4822226739104245,
+        -0.0667619095204093,
+        -0.14594528268898355,
+        0.0
+      ],
+      "passed": true
+    },
+    "waves_only": {
+      "case": "waves_only",
+      "spec": {
+        "payload_kg": 0,
+        "fuel_l": 60,
+        "wave_gain": 0.3,
+        "current": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ]
+      },
+      "checks": {
+        "completed": true,
+        "finite": true,
+        "processes_alive": true,
+        "controller_telemetry_received": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "soc_decreases": true,
+        "mass_tracks_fuel": true,
+        "initial_total_mass": true,
+        "fuel_agrees_energy": true,
+        "bounded_forward_operation": true
+      },
+      "rendering": "GPU sensor image generation omitted; their physical mass and power retained; GNSS/IMU active",
+      "speed_40_49_s_km_h": 14.96288104520909,
+      "max_roll_pitch_deg": [
+        1.2295258479396418,
+        2.137101819630495
+      ],
+      "peak_power_w": 39999.99999999999,
+      "final_soc": 0.8909766456639275,
+      "max_temperature_c": 25.257085671448195,
+      "final_sim_s": 65.28,
+      "initial_ship_mass_kg": 1539.1204401134448,
+      "initial_ship_cg_m": [
+        -0.8407342875837848,
+        -0.013537070380632675,
+        0.4958635983480306
+      ],
+      "fuel_consumed_l": 0.0,
+      "coast_speed_65_s_km_h": 0.8719459367668322,
+      "environment_last": [
+        65.28,
+        -0.0055980718567600896,
+        -0.008708030984553038,
+        -0.004559823061379396,
+        -0.009510270029410637,
+        -0.011291498015228805,
+        0.05781794950187634,
+        0.0,
+        0.0,
+        0.0,
+        -41.96926787405583,
+        8.429339975826212,
+        1.4603834062920487,
+        -0.036725919206676276,
+        0.0004674574980092443,
+        -0.0
+      ],
+      "passed": true
+    }
+  },
+  "independent_audit_passed": true
+}

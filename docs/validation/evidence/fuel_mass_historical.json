@@ -1,0 +1,303 @@
+{
+  "status": "ENGINEERING_QUASISTATIC_ESTIMATE_NOT_SEA_TRIAL",
+  "results": {
+    "backend_force": {
+      "mode": "force",
+      "passed": true,
+      "samples": 224,
+      "checks": {
+        "force_or_torque_response": true,
+        "native_readback": true,
+        "no_velocity_impulse": true,
+        "finite": true
+      },
+      "measured_accelerations": [
+        0.9999999999999405,
+        1.99999999999978
+      ],
+      "expected_accelerations": [
+        1,
+        2
+      ],
+      "boundary_velocity_step": 0.039999999999995595
+    },
+    "backend_torque": {
+      "mode": "torque",
+      "passed": true,
+      "samples": 224,
+      "checks": {
+        "force_or_torque_response": true,
+        "native_readback": true,
+        "no_velocity_impulse": true,
+        "finite": true
+      },
+      "measured_accelerations": [
+        0.33333333333334075,
+        0.6666666666665967
+      ],
+      "expected_accelerations": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "boundary_velocity_step": 0.013333333333334085
+    },
+    "full": {
+      "case": "full",
+      "passed": true,
+      "samples": 391,
+      "checks": {
+        "finite": true,
+        "mass_tracks_fuel": true,
+        "com_matches_independent_geometry": true,
+        "full_tensor_matches_independent_geometry": true,
+        "floating_equilibrium": true,
+        "displacement_matches_mass": true,
+        "energy_fuel_agrees": true
+      },
+      "final_fuel_l": 60.0,
+      "final_ship_mass_kg": 1443.2133679681485,
+      "fuel_consumed_l": 0.0,
+      "native_hull_mass_change_kg": 0.0,
+      "max_mass_error_kg": 0.0,
+      "final_cg_error_m": 2.560174294785611e-13,
+      "final_inertia_error_kg_m2": 1.9981598597951233e-09,
+      "tail_max_pose_error": [
+        3.619280727062968e-06,
+        6.39465209525264e-06,
+        2.041718001235572e-05
+      ],
+      "final_z_roll_pitch": [
+        -0.2390390212657587,
+        0.026719528747325416,
+        -0.003360888137760102
+      ],
+      "final_sim_s": 40.036
+    },
+    "half": {
+      "case": "half",
+      "passed": true,
+      "samples": 391,
+      "checks": {
+        "finite": true,
+        "mass_tracks_fuel": true,
+        "com_matches_independent_geometry": true,
+        "full_tensor_matches_independent_geometry": true,
+        "floating_equilibrium": true,
+        "displacement_matches_mass": true,
+        "energy_fuel_agrees": true
+      },
+      "final_fuel_l": 30.0,
+      "final_ship_mass_kg": 1418.0133679681485,
+      "fuel_consumed_l": 0.0,
+      "native_hull_mass_change_kg": 0.0,
+      "max_mass_error_kg": 0.0,
+      "final_cg_error_m": 2.6079138848444927e-13,
+      "final_inertia_error_kg_m2": 1.9990693544968963e-09,
+      "tail_max_pose_error": [
+        3.4340428145263058e-06,
+        6.548700637213495e-06,
+        2.0360498126716607e-05
+      ],
+      "final_z_roll_pitch": [
+        -0.23600692016798702,
+        0.026813001044949134,
+        -0.003990757311466155
+      ],
+      "final_sim_s": 40.036
+    },
+    "low": {
+      "case": "low",
+      "passed": true,
+      "samples": 391,
+      "checks": {
+        "finite": true,
+        "mass_tracks_fuel": true,
+        "com_matches_independent_geometry": true,
+        "full_tensor_matches_independent_geometry": true,
+        "floating_equilibrium": true,
+        "displacement_matches_mass": true,
+        "energy_fuel_agrees": true
+      },
+      "final_fuel_l": 6.0,
+      "final_ship_mass_kg": 1397.8533679681484,
+      "fuel_consumed_l": 0.0,
+      "native_hull_mass_change_kg": 0.0,
+      "max_mass_error_kg": 0.0,
+      "final_cg_error_m": 2.646771690706373e-13,
+      "final_inertia_error_kg_m2": 1.999978849198669e-09,
+      "tail_max_pose_error": [
+        3.3088972276884565e-06,
+        6.686501657811317e-06,
+        2.030024710306111e-05
+      ],
+      "final_z_roll_pitch": [
+        -0.23356980534067168,
+        0.02689572311356545,
+        -0.004508443924601487
+      ],
+      "final_sim_s": 40.036
+    },
+    "burn": {
+      "case": "burn",
+      "passed": true,
+      "samples": 391,
+      "checks": {
+        "finite": true,
+        "mass_tracks_fuel": true,
+        "com_matches_independent_geometry": true,
+        "full_tensor_matches_independent_geometry": true,
+        "floating_equilibrium": true,
+        "displacement_matches_mass": true,
+        "energy_fuel_agrees": true,
+        "fuel_consumed": true,
+        "native_mass_decreases": true,
+        "com_changes": true,
+        "inertia_changes": true
+      },
+      "final_fuel_l": 29.99541814687685,
+      "final_ship_mass_kg": 1418.009519211525,
+      "fuel_consumed_l": 0.00458185312314896,
+      "native_hull_mass_change_kg": -0.003848756623483496,
+      "max_mass_error_kg": 2.2737367544323206e-13,
+      "final_cg_error_m": 2.60735877333218e-13,
+      "final_inertia_error_kg_m2": 1.9990693544968963e-09,
+      "tail_max_pose_error": [
+        3.4383449979968894e-06,
+        6.547024546731811e-06,
+        2.034441371212385e-05
+      ],
+      "final_z_roll_pitch": [
+        -0.2360064552139604,
+        0.026812992920380942,
+        -0.003990834903697971
+      ],
+      "final_sim_s": 40.036
+    },
+    "reset": {
+      "case": "reset",
+      "passed": true,
+      "samples": 626,
+      "checks": {
+        "finite": true,
+        "mass_tracks_fuel": true,
+        "com_matches_independent_geometry": true,
+        "full_tensor_matches_independent_geometry": true,
+        "floating_equilibrium": true,
+        "displacement_matches_mass": true,
+        "energy_fuel_agrees": true,
+        "pause_preserves_fuel": true,
+        "reset_restores_mass": true,
+        "reset_time_rewinds": true,
+        "reset_turns_generator_off": true
+      },
+      "final_fuel_l": 30.0,
+      "final_ship_mass_kg": 1418.0133679681485,
+      "fuel_consumed_l": 0.0,
+      "native_hull_mass_change_kg": 0.0,
+      "max_mass_error_kg": 2.2737367544323206e-13,
+      "final_cg_error_m": 2.6018076582090544e-13,
+      "final_inertia_error_kg_m2": 1.9990693544968963e-09,
+      "tail_max_pose_error": [
+        3.434036342342406e-06,
+        6.497605006646617e-06,
+        2.0360438766282504e-05
+      ],
+      "final_z_roll_pitch": [
+        -0.23600691999587153,
+        0.026813000885310863,
+        -0.00399075929421902
+      ],
+      "final_sim_s": 40.036
+    },
+    "steering_contact": {
+      "case": "steering_contact",
+      "samples": 295,
+      "render_captured": true,
+      "passed": true,
+      "final_sim_time_s": 30.192,
+      "final_z_roll_pitch": [
+        -0.23915965309775492,
+        0.026476313060116195,
+        -0.0033101997666676935
+      ],
+      "target_z_roll_pitch": [
+        -0.23903931414666754,
+        0.026722349475991697,
+        -0.003342495098874912
+      ],
+      "final_displacement_m3": 1.444159438166939,
+      "tail_max_pose_error": [
+        0.00012325750540828628,
+        0.00025368897501607673,
+        3.2891724635231764e-05
+      ],
+      "finite": true,
+      "final_steering_rad": 0.29891597805751297,
+      "final_probe_z_m": 0.7539271584870139,
+      "max_steering_rad": 0.2989161864534565,
+      "max_steering_velocity_rad_s": 0.15005936728786973
+    },
+    "reversal": {
+      "case": "reversal",
+      "passed": true,
+      "samples": 391,
+      "reverse_rpm_delay_s": 0.5239999999999991,
+      "reverse_motion_delay_s": 4.32,
+      "checks": {
+        "coast_slowdown": true,
+        "finite": true,
+        "power_limited": true,
+        "torque_limited": true,
+        "attitude_bounded": true,
+        "watchdog_off": true,
+        "motion_direction": true,
+        "both_directions": true,
+        "finite_reversal_delay": true
+      },
+      "driven_speed_m_s": -0.8467022063510197,
+      "driven_yaw_deg": -10.995264168288106,
+      "max_abs_power_W": 2479.9536851416033,
+      "final_speed_m_s": -0.20486268228097895,
+      "max_abs_roll_pitch_deg": [
+        1.60408210632937,
+        0.3022322313935098
+      ],
+      "final_sim_s": 40.036
+    }
+  },
+  "fuel_only_com_change_at_final_attitude_m": [
+    -1.7188641576737496e-06,
+    -8.8473442304976e-08,
+    4.0860562405820033e-07
+  ],
+  "fuel_only_inertia_change_at_final_attitude_kg_m2": [
+    [
+      -0.00013522504917773404,
+      7.29712604741195e-05,
+      -0.00033747132959405235
+    ],
+    [
+      7.29712604741195e-05,
+      -0.0016133024118971662,
+      -1.872289634530233e-05
+    ],
+    [
+      -0.00033747132959405235,
+      -1.872289634530233e-05,
+      -0.0015882228317423142
+    ]
+  ],
+  "sha256": {
+    "src/usv_simulation/include/FuelMass.hh": "f3b8a6acf925619209d23e8f3562079852b3c13d0d91eb9cd3204d23179276ee",
+    "src/usv_simulation/src/AzimuthPropulsion.cc": "001aac42f486f7919e9c3a183c3bac06a61602c13eed2957db6888f0cee5dab5",
+    "src/usv_physics/src/Physics.cc": "13a3bba0082c127c865672441b450942fefb31e8f15afffb7894e13eacb77d86",
+    "src/usv_physics/include/usv_physics/RuntimeInertia.hh": "27995812ffaf7dc4e915946fee32370689bfd9b88bb1397e29142d9e877694f8",
+    "src/usv_description/config/fuel_tank.json": "62ff0956f2f9093a638c1195e24251c6e13d9316cbe49d5031828f377fd28b24",
+    "src/usv_energy/config/energy.json": "05657e9601421b3b0a785e43d4ae3decafca2c046896baaef06d8b1c2340bb66",
+    "scripts/fuel_mass.py": "af5b995b343fef60ef59def64085ee7e067ef14587ad3a6b862d1b2d1a52a3e0",
+    "scripts/fuel_equilibrium.py": "86afc49a4e4c6c3406176bd67c7c4a4a5fac0d923be1f9bddbc322091495342f",
+    "scripts/prepare_hull.py": "842b1b9d5b4bafa749951c23037424839d3b27ff87cada1681749fc26bd375d8",
+    "scripts/validate_fuel_mass.py": "da06cb2ffff05e711593b53169a54d0618ad3f494f4e4d3ddcebdfbc341d1132",
+    "scripts/validate_inertia_backend.py": "9fb10da600f813f6b72fa1f5b4b304a5828570b89ab868e164e7dd4763d7bff6"
+  }
+}

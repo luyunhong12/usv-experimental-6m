@@ -6,6 +6,33 @@
 >
 > **最新进展：高速零舵发散转圈已通过被动受力修复与专项验收。** 补全原有水下支腿、底鳍和电机外壳受力，没有增加航向控制。当前静水满油末段仍有约 0.058°/秒的小幅配平偏航，不宣称零舵绝对直线。见 [方向稳定性修复报告](docs/validation/directional_stability_2026-11-21/README.md)。
 
+## 船长什么样，结构是什么
+
+**以下是设计渲染图和 Gazebo 仿真截图，目前没有实船照片。** 设计图用于说明结构；历史截图用于展示外观，不作为最新物理测试的证明。
+
+![中央单机船体设计总览](design/azimuth_thruster/图片/第二船体_总览.png)
+
+*中央单机方案原始设计总览，早于当前传感器装配。原始模型与导出方法见 [建模说明](docs/modeling/README.md)。*
+
+| 桨舵一体结构细节 | VRX 悉尼水域实景截图 |
+|---|---|
+| ![中央推进器转向设计](design/azimuth_thruster/图片/中央推进器_转向35度.png) | ![悉尼水域中的仿真船](docs/assets/vrx_sydney_2026-11-20.png) |
+| 原始设计中的 35° 转向姿态，展示安装架、转向轴、支腿和螺旋桨；不是运行关节测量。 | 2026-11-20 Gazebo 截图；这是仿真水域，不是实船拍摄。[图像来源](docs/validation/evidence/manifest.json)。 |
+
+```mermaid
+flowchart LR
+    Hull[船体与固定设备] --> Steering[转向关节]
+    Steering --> Unit[可偏转的支腿与电机组件]
+    Unit --> Shaft[桨轴旋转关节]
+    Shaft --> Prop[螺旋桨]
+    Fuel[燃油消耗] --> Mass[质量、重心与惯性更新]
+    Mass --> Hull
+    Energy[电池与发电充电模型] --> Limits[可用功率与保护限制]
+    Limits --> Shaft
+```
+
+这是机械关系与仿真耦合示意，不是制造图或完整接线图。船体、甲板和固定设备计入质量台账；外观、刚体接触和水动力采用各自合适的几何表示。[装配与碰撞记录](docs/history/2026-11-19_物理覆盖与精细碰撞.md) · [转向扫碰记录](docs/history/2026-11-19_转向桨叶扫碰与单机估算.md) · [逐件质量台账](ros_ws/src/usv_description/config/component_mass_ledger.json)。
+
 ## 为什么做这个项目
 
 希望先把“船”本身做好，再接自主航行系统：能合理漂浮和随浪、推力与功率相互约束、载荷改变吃水和操纵表现、油电消耗影响可用动力、燃油减少影响质量和惯性。之后再讨论飞控和导航算法的表现，避免控制器掩盖仿真对象的问题。
@@ -18,18 +45,23 @@
 4. **用试验揭示问题。** 记录原始遥测、工况、源码版本与失败案例；不通过放宽检查或修改原始数据得到“通过”。
 5. **先物理，后控制与导航。** 保留手动/ROS 控制以便验证，不急着堆叠飞控和任务系统。
 
-## 已有能力与验证边界
+## 每个模块的依据与证据
 
-| 模块 | 当前内容 | 不能据此宣称 |
+我们希望尽可能接近真实船舶，但**理论有依据、参数有来源、代码通过测试，是三个不同层次**。厂家额定值只能支持相应设备的参考工况；工程估算和仿真通过都不能代替海试。下面每个模块都给出可追溯入口，完整公式、来源适用范围和未解决问题见 [科学依据与证据地图](docs/parameters/evidence_map.md)。
+
+| 模块与实现思路 | 参数、过程与验证材料 | 尚未证明的部分 |
 |---|---|---|
-| 模型与装配 | 两种 Blender 设计、精细推进器、碰撞网格和装配检查 | 制造净空、强度及适航认证 |
-| 水动力 | 静水恢复、分布式波浪压力、流/风、阻尼、附加质量近似 | CFD 或海试标定、高速滑行和砰击准确 |
-| 推进与转向 | 正反推、桨轴动态、转矩/功率限制、舵角与速率限制 | 真实推进器全工况性能图 |
-| 油电 | 电池、负载、发电/充电、低电/温度保护、燃油消耗 | 已验证的真实航程或完整电气热模型 |
-| 动态质量 | 燃油对应的质量、重心和惯性更新及后端回读 | 油液动态晃荡已建模 |
-| 传感器与接口 | IMU、GPS、相机、点云、TF、健康诊断 | 所有传感器已做实机噪声标定 |
-| 运行可靠性 | 连续就绪检测、失联停推、必需进程退出清理 | 全海况、任意机器长期稳定 |
-| 飞控与导航 | 历史 ArduPilot 适配代码保留；Nav2 尚未实现 | 本阶段已经完成自主航行系统集成 |
+| **船体、装配与碰撞**：保留原始设计，分别生成外观、接触和封闭浮力几何 | [建模入口](docs/modeling/README.md)、[物理覆盖](docs/history/2026-11-19_物理覆盖与精细碰撞.md)、[扫碰检查](docs/history/2026-11-19_转向桨叶扫碰与单机估算.md) | 刚体接触不是强度、变形、制造净空认证 |
+| **质量与功耗**：逐件质量加权求重心，平行轴定理合成惯性；按设备工作状态汇总功耗 | [权威台账](ros_ws/src/usv_description/config/component_mass_ledger.json)、[台账推导与组合工况](docs/history/2026-11-21_逐件台账与载荷油量风浪流验证.md)、[公开摘要](docs/validation/evidence/README.md) | 材料密度、结构厚度、安装位置和部分设备功耗仍是工程值 |
+| **浮力与随浪**：封闭体积静水浮力、浸水表面压力积分，使用 VRX 波场 | [静水推导与验证](docs/history/2026-11-19_船体接入与静水试验.md)、[随浪方法](docs/history/2026-11-20_船体外观装配与随浪优化.md)、[随浪结果](docs/validation/evidence/waves_2026-11-20.json) | 没有实船波浪响应标定；未完整覆盖破波、砰击、滑行 |
+| **阻力、附加质量与方向稳定性**：参考海洋航行器动力学框架，按几何求附体浸水面积及力臂，补全升阻力 | [理论与系数边界](docs/parameters/evidence_map.md)、[阻力配置](ros_ws/src/usv_description/config/resistance.json)、[附体参数](ros_ws/src/usv_description/config/appendage_hydrodynamics.json)、[15 项专项与对照数据](docs/validation/directional_stability_2026-11-21/README.md) | 系数未经 CFD/海试标定；仍有小幅配平偏航，附体阻力与集中船体阻力可能存在重复预算 |
+| **推进与转向**：正反推、桨轴转矩/功率限制、舵角与速率约束 | [推进参数](ros_ws/src/usv_description/config/propulsion.json)、[厂家参考与建模假设](docs/history/2026-11-19_推进与操纵验证.md)、[当前操纵验收](docs/validation/directional_stability_2026-11-21/README.md) | 6 kW 厂家参考不证明 40 kW 概念方案；缺少真实桨的全工况性能图与空化数据 |
+| **油量、电量与保护**：能量平衡、电流积分、发电/充电限制、负载和保护状态 | [能源配置](ros_ws/src/usv_energy/config/energy.json)、[原理与设备来源](docs/history/2026-11-19_油电能源与感知验证.md)、[能源基线](docs/validation/baseline_2026-11-21/README.md) | 电池内阻、热参数及油耗曲线有估算；两小时能源计算不等于实际续航 |
+| **燃油引起的动态质量**：准静态液面体积积分，更新质量、重心和完整惯性，回读物理后端 | [油箱参数](ros_ws/src/usv_description/config/fuel_tank.json)、[方法及后端验证](docs/history/2026-11-19_燃油质量重心惯性联动.md)、[公开测试摘要](docs/validation/evidence/fuel_mass_historical.json) | 未建模油液动态晃荡、进水及柔性结构 |
+| **传感器与运行接口**：IMU、GPS、相机、点云、TF、健康检测；就绪检测、失联停推及退出清理 | [WAM-V 差距与接口改进](docs/history/2026-11-20_WAMV差距完善.md)、[启动与运行验证](docs/history/2026-11-21_阻力操纵与启动可靠性改进.md)、[完整场景回归](docs/validation/directional_stability_2026-11-21/full_sydney_smoke.json) | 传感器噪声未实机标定；未完成新机器安装与所有环境长期测试 |
+| **ArduPilot / Nav2**：保留历史适配，先完成船体物理，再验收控制所有权与导航 | [集成规划与当前边界](docs/integration/README.md) | 本阶段没有完成这两套自主航行系统的集成验收 |
+
+历史过程记录保留当时参数，不应与当前配置混用。当前参数入口是 [参数说明](docs/parameters/README.md)；已公开的历史附件及其校验值见 [证据清单](docs/validation/evidence/README.md)。
 
 ## 当前方向稳定性
 
@@ -136,6 +168,19 @@ python3 tests/regression/run_performance_suite.py \
 6. **发布可复现性**：仍需全新环境安装验证、第三方素材分发核查和大型数据附件发布。
 
 物理问题稳定后，再建立定位融合与 Nav2 船舶适配，重新验收 ArduPilot。两种控制模式必须明确执行器所有权，不能同时叠加控制。[集成规划](docs/integration/README.md) · [当前问题清单](docs/validation/known_issues.md)。
+
+## 遇到问题，去哪里查
+
+| 想了解或排查的问题 | 优先阅读 |
+|---|---|
+| 安装依赖、打开悉尼水域、不能启动、如何开船 | [安装运行](docs/getting_started/README.md)、[依赖说明](dependencies/README.md) |
+| 船体结构、模型导出、碰撞与推进器装配 | [建模说明](docs/modeling/README.md)、[扫碰记录](docs/history/2026-11-19_转向桨叶扫碰与单机估算.md) |
+| 为什么取这个质量、密度、功率、油量或水动力系数 | [参数入口](docs/parameters/README.md)、[科学依据地图](docs/parameters/evidence_map.md)、[逐件台账](ros_ws/src/usv_description/config/component_mass_ledger.json) |
+| 不随浪、漂浮姿态是否合理 | [静水试验](docs/history/2026-11-19_船体接入与静水试验.md)、[随浪试验](docs/history/2026-11-20_船体外观装配与随浪优化.md) |
+| 高速转圈、零舵偏航、倒车/转向和航速 | [当前方向稳定性报告](docs/validation/directional_stability_2026-11-21/README.md)；对照旧版本看 [历史性能基线](docs/validation/baseline_2026-11-21/README.md) |
+| 油电消耗、质量重心变化是否真的接入 | [能源建模](docs/history/2026-11-19_油电能源与感知验证.md)、[动态惯性验证](docs/history/2026-11-19_燃油质量重心惯性联动.md) |
+| 还有什么没做好、下一步怎么接飞控/导航 | [已知问题](docs/validation/known_issues.md)、[集成规划](docs/integration/README.md) |
+| 如何核对测试结果，为什么有的历史附件打不开 | [公开证据及来源](docs/validation/evidence/README.md)、[全部文档索引](docs/README.md)；完整 artifacts 仍在本地，不假称已全部公开 |
 
 ## 文档、贡献与许可
 

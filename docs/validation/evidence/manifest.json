@@ -1,0 +1,26 @@
+[
+  {
+    "source": "artifacts/validation/WAMV差距完善_2026-11-20/final_pbr_mounts.png",
+    "published": "docs/assets/vrx_sydney_2026-11-20.png",
+    "sha256": "5266f07bdfdb3d8ecec9b5253002b3d1f240d12894241867f980590fe7f6a33d",
+    "note": "原始文件逐字节复制；历史工况，不代表最新代码重新测试"
+  },
+  {
+    "source": "artifacts/validation/船体三项优化_2026-11-20/wave_summary.json",
+    "published": "docs/validation/evidence/waves_2026-11-20.json",
+    "sha256": "94adad03ff819aa5e6c4fdec350463764c3177a26865c3cd083b9bd4d5b5c948",
+    "note": "原始文件逐字节复制；历史工况，不代表最新代码重新测试"
+  },
+  {
+    "source": "artifacts/validation/燃油质量联动验证/summary.json",
+    "published": "docs/validation/evidence/fuel_mass_historical.json",
+    "sha256": "47cc67def72b839b32d2855cebb9254a3f2bd867ed40dd3b54d1fd79e9a5b5a3",
+    "note": "原始文件逐字节复制；历史工况，不代表最新代码重新测试"
+  },
+  {
+    "source": "artifacts/validation/逐件台账与组合工况_2026-11-21/summary.json",
+    "published": "docs/validation/evidence/load_weather_2026-11-21.json",
+    "sha256": "8aeb41f58dbd76c11b29c067a68835fce12630ee681e9eaf7c9b0306756a9fb0",
+    "note": "原始文件逐字节复制；历史工况，不代表最新代码重新测试"
+  }
+]

@@ -4,6 +4,8 @@
 - [模块与控制边界](architecture/README.md)
 - [原始模型与导出](modeling/README.md)
 - [参数的权威来源](parameters/README.md)
+- [科学依据与证据地图](parameters/evidence_map.md)
+- [公开历史测试附件与来源](validation/evidence/README.md)
 - [未来 ArduPilot / Nav2 集成](integration/README.md)
 - [高速零舵方向稳定性修复](validation/directional_stability_2026-11-21/README.md)
 - [公开发布记录](history/2026-11-21_公开发布与方向稳定性修复.md)
