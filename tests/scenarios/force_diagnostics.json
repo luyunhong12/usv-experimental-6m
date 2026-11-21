@@ -1,0 +1,96 @@
+{
+  "nominal": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "duration": 65,
+        "throttle": 1,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "cancel_water_couple": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "duration": 65,
+        "throttle": 1,
+        "steering_deg": 0
+      }
+    ],
+    "propulsion_overrides": {
+      "diagnostic_water_torque_scale": 0
+    }
+  },
+  "reverse_water_couple": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "duration": 65,
+        "throttle": 1,
+        "steering_deg": 0
+      }
+    ],
+    "propulsion_overrides": {
+      "diagnostic_water_torque_scale": -1
+    }
+  },
+  "symmetric_mass": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "duration": 65,
+        "throttle": 1,
+        "steering_deg": 0
+      }
+    ],
+    "symmetric_mass_diagnostic": true
+  },
+  "symmetric_mass_no_couple": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "duration": 65,
+        "throttle": 1,
+        "steering_deg": 0
+      }
+    ],
+    "symmetric_mass_diagnostic": true,
+    "propulsion_overrides": {
+      "diagnostic_water_torque_scale": 0
+    }
+  },
+  "geometry_only": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "duration": 65,
+        "throttle": 1,
+        "steering_deg": 0
+      }
+    ],
+    "hydro_overrides": {
+      "quadratic_damping": "180 1500 1800",
+      "reference_wet_area": 10.336297195730799,
+      "reference_projected_area": "0.36034404899294414 1.2437296471375594 4.493324095600857"
+    }
+  }
+}

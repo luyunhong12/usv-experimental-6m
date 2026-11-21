@@ -1,0 +1,38 @@
+[
+  {
+    "name": "reverse",
+    "duration": 30,
+    "mode": "direct",
+    "throttle": -0.4,
+    "steering_deg": 0,
+    "index": 0,
+    "start_sim": 1.336,
+    "end_sim": 31.42,
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  },
+  {
+    "name": "astern_turn",
+    "duration": 45,
+    "mode": "direct",
+    "throttle": -0.4,
+    "steering_deg": 10,
+    "index": 1,
+    "start_sim": 31.42,
+    "end_sim": 76.476,
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  },
+  {
+    "name": "coast",
+    "duration": 40,
+    "mode": "direct",
+    "throttle": 0,
+    "steering_deg": 0,
+    "index": 2,
+    "start_sim": 76.476,
+    "end_sim": 116.488,
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  }
+]

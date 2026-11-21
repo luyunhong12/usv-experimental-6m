@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "exit_codes": {
+    "neutral_smoke": 0
+  },
+  "execution_unchanged": true,
+  "skipped": [],
+  "fingerprint": "a1c4810ced48c029a65bc5665b46b4dae8c8322b2f85e2194aaa52686c122cf0",
+  "cases": {
+    "neutral_smoke": {
+      "case": "neutral_smoke",
+      "spec": {
+        "kind": "maneuver_audit",
+        "isolated_water": true,
+        "stages": [
+          {
+            "name": "neutral",
+            "mode": "direct",
+            "duration": 30,
+            "throttle": 0.35,
+            "steering_deg": 0
+          }
+        ]
+      },
+      "checks": {
+        "startup_ready": true,
+        "completed": true,
+        "no_failure": true,
+        "finite": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "fuel_mass_consistent": true,
+        "resistance_dissipative": true,
+        "command_reached_physics": true,
+        "health_command_observed": true,
+        "initial_soc_matches": true
+      },
+      "passed": true,
+      "failure": null,
+      "start_sim": 1.236,
+      "metrics": {
+        "neutral": {
+          "tail_speed_m_s": 1.2064445709248837,
+          "tail_speed_std_m_s": 4.062442989318799e-05,
+          "mean_motor_w": 1312.4097854315069,
+          "distance_m": 31.637206543081568,
+          "heading_change_rad": -0.03626058911747389,
+          "mean_wet_area_m2": 10.319264133933066,
+          "mean_projected_x_m2": 0.35628391283046157,
+          "mean_surge_drag_n": 403.16399852881057
+        }
+      },
+      "summary": {
+        "max_roll_pitch_deg": [
+          0.676837537601099,
+          1.3425644666809422
+        ],
+        "soc_start_end": [
+          0.8999999963443223,
+          0.8997692312581668
+        ],
+        "temperature_max_c": 25.00023328511896,
+        "fuel_consumed_l": 0.0,
+        "sim_end": 31.524
+      },
+      "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+      "postprocess_recovered": false
+    }
+  }
+}

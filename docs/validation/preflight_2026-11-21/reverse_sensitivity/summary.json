@@ -1,0 +1,197 @@
+{
+  "passed": true,
+  "execution_unchanged": true,
+  "skipped": [],
+  "fingerprint": "63237afca0280d9a21d8f9fa1791cf3f16036010a9e3ab85d4beb5d22e84dde3",
+  "cases": {
+    "reverse_60_appendage_080": {
+      "case": "reverse_60_appendage_080",
+      "spec": {
+        "kind": "maneuver_audit",
+        "isolated_water": true,
+        "stages": [
+          {
+            "name": "reverse",
+            "mode": "direct",
+            "throttle": -0.6,
+            "steering_deg": 0,
+            "duration": 100
+          }
+        ],
+        "appendage_coefficient_scale": 0.8
+      },
+      "checks": {
+        "startup_ready": true,
+        "completed": true,
+        "no_failure": true,
+        "finite": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "fuel_mass_consistent": true,
+        "resistance_dissipative": true,
+        "command_reached_physics": true,
+        "health_command_observed": true,
+        "initial_soc_matches": true,
+        "reverses": true
+      },
+      "passed": true,
+      "failure": null,
+      "start_sim": 1.236,
+      "metrics": {
+        "reverse": {
+          "tail_speed_m_s": -1.884199650090775,
+          "tail_speed_std_m_s": 1.541163066880732e-06,
+          "mean_motor_w": 8049.0833891369375,
+          "distance_m": 183.4349712972247,
+          "heading_change_rad": 3.2665844728848663,
+          "mean_wet_area_m2": 10.349175897214824,
+          "mean_projected_x_m2": 0.35809365831168277,
+          "mean_surge_drag_n": -860.3577014938572
+        }
+      },
+      "summary": {
+        "max_roll_pitch_deg": [
+          0.9060019036050161,
+          1.2635261940815443
+        ],
+        "soc_start_end": [
+          0.8999999963443223,
+          0.8956343153688767
+        ],
+        "temperature_max_c": 25.024974692713776,
+        "fuel_consumed_l": 0.0,
+        "sim_end": 101.456
+      },
+      "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+      "postprocess_recovered": false
+    },
+    "reverse_60_appendage_120": {
+      "case": "reverse_60_appendage_120",
+      "spec": {
+        "kind": "maneuver_audit",
+        "isolated_water": true,
+        "stages": [
+          {
+            "name": "reverse",
+            "mode": "direct",
+            "throttle": -0.6,
+            "steering_deg": 0,
+            "duration": 100
+          }
+        ],
+        "appendage_coefficient_scale": 1.2
+      },
+      "checks": {
+        "startup_ready": true,
+        "completed": true,
+        "no_failure": true,
+        "finite": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "fuel_mass_consistent": true,
+        "resistance_dissipative": true,
+        "command_reached_physics": true,
+        "health_command_observed": true,
+        "initial_soc_matches": true,
+        "reverses": true
+      },
+      "passed": true,
+      "failure": null,
+      "start_sim": 1.336,
+      "metrics": {
+        "reverse": {
+          "tail_speed_m_s": -1.8790375390269736,
+          "tail_speed_std_m_s": 1.0039475506367119e-06,
+          "mean_motor_w": 8049.083389088539,
+          "distance_m": 183.12725744962145,
+          "heading_change_rad": 3.6634247278613152,
+          "mean_wet_area_m2": 10.349251349759784,
+          "mean_projected_x_m2": 0.35808913917268714,
+          "mean_surge_drag_n": -856.2624923729927
+        }
+      },
+      "summary": {
+        "max_roll_pitch_deg": [
+          0.9066304918277452,
+          1.263196625139336
+        ],
+        "soc_start_end": [
+          0.8999999963443223,
+          0.8956338745654155
+        ],
+        "temperature_max_c": 25.024976720654468,
+        "fuel_consumed_l": 0.0,
+        "sim_end": 101.56
+      },
+      "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+      "postprocess_recovered": false
+    },
+    "reverse_60_symmetric_no_couple": {
+      "case": "reverse_60_symmetric_no_couple",
+      "spec": {
+        "kind": "maneuver_audit",
+        "isolated_water": true,
+        "stages": [
+          {
+            "name": "reverse",
+            "mode": "direct",
+            "throttle": -0.6,
+            "steering_deg": 0,
+            "duration": 100
+          }
+        ],
+        "symmetric_mass_diagnostic": true,
+        "propulsion_overrides": {
+          "diagnostic_water_torque_scale": 0
+        }
+      },
+      "checks": {
+        "startup_ready": true,
+        "completed": true,
+        "no_failure": true,
+        "finite": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "fuel_mass_consistent": true,
+        "resistance_dissipative": true,
+        "command_reached_physics": true,
+        "health_command_observed": true,
+        "initial_soc_matches": true,
+        "reverses": true
+      },
+      "passed": true,
+      "failure": null,
+      "start_sim": 1.236,
+      "metrics": {
+        "reverse": {
+          "tail_speed_m_s": -1.8855461081487173,
+          "tail_speed_std_m_s": 0.00028043427616464934,
+          "mean_motor_w": 8049.08341419671,
+          "distance_m": 183.3284714289051,
+          "heading_change_rad": 1.2000786741969671,
+          "mean_wet_area_m2": 10.350050309978931,
+          "mean_projected_x_m2": 0.35812494147322604,
+          "mean_surge_drag_n": -861.5004116740218
+        }
+      },
+      "summary": {
+        "max_roll_pitch_deg": [
+          0.6762843375277893,
+          1.2612097019589672
+        ],
+        "soc_start_end": [
+          0.8999999963443217,
+          0.8956362169491243
+        ],
+        "temperature_max_c": 25.02496361292561,
+        "fuel_consumed_l": 0.0,
+        "sim_end": 101.456
+      },
+      "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+      "postprocess_recovered": false
+    }
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "reverse",
+    "duration": 100,
+    "mode": "direct",
+    "throttle": -0.6,
+    "steering_deg": 0,
+    "index": 0,
+    "start_sim": 1.336,
+    "end_sim": 101.352,
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  }
+]

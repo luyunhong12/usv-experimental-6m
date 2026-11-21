@@ -1,0 +1,13 @@
+{
+  "python": "3.12.3",
+  "os_release": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.5 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+  "packages": {
+    "ros-jazzy-ros-base": "0.11.0-1noble.20261006.035407",
+    "ros-jazzy-gz-sim-vendor": "0.0.13-1noble.20260905.073557",
+    "ros-jazzy-gz-physics-vendor": "0.0.9-1noble.20260905.065116",
+    "ros-jazzy-ros-gz-bridge": "1.0.24-1noble.20260920.234644",
+    "libdart6.13": "not installed under this package name"
+  },
+  "git_head": "e973634bdb6f02f85415d31b36367cc49c4b2620",
+  "version_authority": "Content hashes in suite_binding.json; Git HEAD alone does not include dirty working tree changes."
+}

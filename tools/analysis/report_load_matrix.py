@@ -1,44 +1,247 @@
 #!/usr/bin/env python3
-"""Rebuild reviewable charts and Chinese verification report from saved results."""
+"""根据载荷矩阵证据生成汇总报告。
+
+Rebuild reviewable charts and Chinese verification report from saved results.
+"""
 
 # Resolve the checkout independently of the current working directory.
 from pathlib import Path as _ProjectPath
-import sys as _project_sys
-_PROJECT = next(p for p in _ProjectPath(__file__).resolve().parents if (p / "project.toml").is_file())
-_project_sys.path.insert(0, str(_PROJECT / "tools/lib"))
-_project_sys.path.insert(0, str(_PROJECT / "tools/modeling"))
+import sys
+
+# 项目脚本可从任意工作目录启动；建模工具保持在共享库之前。
+sys.path.insert(
+    0,
+    str(
+        next(
+            p
+            for p in _ProjectPath(__file__).resolve().parents
+            if (p / "project.toml").is_file()
+        )
+        / "tools/lib"
+    ),
+)
+sys.path.insert(
+    0,
+    str(
+        next(
+            p
+            for p in _ProjectPath(__file__).resolve().parents
+            if (p / "project.toml").is_file()
+        )
+        / "tools/modeling"
+    ),
+)
 from project_paths import PROJECT_ROOT, WORKSPACE, tool_path
-import argparse,json,hashlib,os
+import argparse
+import json
+import hashlib
+import os
 from pathlib import Path
 import numpy as np
-os.environ.setdefault('MPLCONFIGDIR','/tmp/usv_matplotlib')
+
+os.environ.setdefault("MPLCONFIGDIR", "/tmp/usv_matplotlib")
 import matplotlib
-matplotlib.use('Agg')
+
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);a=p.parse_args();o=a.output.resolve();w=WORKSPACE
-spec=json.loads((o/'matrix_spec.json').read_text());results={k:json.loads((o/k/'result.json').read_text()) for k in spec};audit=json.loads((o/'independent_audit.json').read_text());ledger=json.loads((o/'ledger_summary.json').read_text())
-passed=all(r['passed'] for r in results.values()) and audit['passed'] and set(audit['cases'])==set(results)
-summary={'passed':passed,'cases':results,'independent_audit_passed':audit['passed']};(o/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
-fig,axes=plt.subplots(3,1,figsize=(12,11),constrained_layout=True);xs=np.arange(len(results));names=list(results)
-axes[0].bar(xs,[r['speed_40_49_s_km_h'] for r in results.values()]);axes[0].axhline(15,color='red',ls='--',label='15 km/h command');axes[0].set_ylabel('Forward ground speed (km/h)');axes[0].legend();axes[0].set_ylim(0,18)
-for i,label in enumerate(['roll','pitch']):axes[1].plot(xs,[r['max_roll_pitch_deg'][i] for r in results.values()],'o-',label=label)
-axes[1].set_ylabel('Max absolute attitude (deg)');axes[1].legend()
-axes[2].bar(xs,[r['initial_ship_mass_kg'] for r in results.values()],color='slateblue');axes[2].set_ylabel('Initial total mass (kg)')
-for ax in axes:ax.set_xticks(xs,names,rotation=65,ha='right');ax.grid(axis='y',alpha=.25)
-fig.suptitle('Engineering simulation: load, fuel and environment matrix (65 s each)');fig.savefig(o/'matrix_overview.png',dpi=160);plt.close(fig)
+
+p = argparse.ArgumentParser()
+p.add_argument("--output", type=Path, required=True)
+a = p.parse_args()
+o = a.output.resolve()
+w = WORKSPACE
+spec = json.loads((o / "matrix_spec.json").read_text())
+results = {k: json.loads((o / k / "result.json").read_text()) for k in spec}
+audit = json.loads((o / "independent_audit.json").read_text())
+ledger = json.loads((o / "ledger_summary.json").read_text())
+passed = (
+    all(r["passed"] for r in results.values())
+    and audit["passed"]
+    and set(audit["cases"]) == set(results)
+)
+summary = {
+    "passed": passed,
+    "cases": results,
+    "independent_audit_passed": audit["passed"],
+}
+(o / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+fig, axes = plt.subplots(3, 1, figsize=(12, 11), constrained_layout=True)
+xs = np.arange(len(results))
+names = list(results)
+axes[0].bar(xs, [r["speed_40_49_s_km_h"] for r in results.values()])
+axes[0].axhline(15, color="red", ls="--", label="15 km/h command")
+axes[0].set_ylabel("Forward ground speed (km/h)")
+axes[0].legend()
+axes[0].set_ylim(0, 18)
+for i, label in enumerate(["roll", "pitch"]):
+    axes[1].plot(
+        xs, [r["max_roll_pitch_deg"][i] for r in results.values()], "o-", label=label
+    )
+axes[1].set_ylabel("Max absolute attitude (deg)")
+axes[1].legend()
+axes[2].bar(
+    xs, [r["initial_ship_mass_kg"] for r in results.values()], color="slateblue"
+)
+axes[2].set_ylabel("Initial total mass (kg)")
+for ax in axes:
+    ax.set_xticks(xs, names, rotation=65, ha="right")
+    ax.grid(axis="y", alpha=0.25)
+fig.suptitle("Engineering simulation: load, fuel and environment matrix (65 s each)")
+fig.savefig(o / "matrix_overview.png", dpi=160)
+plt.close(fig)
 # Keep physically relevant original telemetry; derive a compact trace for the fuel burn case.
-r=results['combined'];m=np.loadtxt(o/'combined/fuel_mass_state.csv',delimiter=',');e=np.loadtxt(o/'combined/energy_truth.csv',delimiter=',')
-fig,axes=plt.subplots(3,1,figsize=(9,8),sharex=True,constrained_layout=True)
-axes[0].plot(m[:,0],m[:,1]);axes[0].set_ylabel('Fuel (L)');axes[0].ticklabel_format(useOffset=False)
-axes[1].plot(m[:,0],m[:,2]-m[0,2],label='Native hull mass');axes[1].plot(m[:,0],.84*(m[:,1]-m[0,1]),'--',label='0.84 kg/L reference');axes[1].set_ylabel('Mass change (kg)');axes[1].legend()
-axes[2].plot(e[:,0],e[:,7]/1000,label='Motor');axes[2].plot(e[:,0],e[:,10]/1000,label='Generator AC');axes[2].set_ylabel('Power (kW)');axes[2].set_xlabel('Simulation time (s)');axes[2].legend()
-for ax in axes:ax.grid(alpha=.25)
-fig.savefig(o/'fuel_mass_energy.png',dpi=160);plt.close(fig)
-rel='../../artifacts/validation/'+o.name+'/'
-md=['# 2026-11-21 逐件台账与载荷、油量、风浪流验证','', '## 本轮范围与结论','',f"完成 69 条质量/功耗台账的接入，以及 {len(results)} 个实际 Gazebo + ROS 工况，每个约 65 秒；总体验证：{'通过' if passed else '存在未通过项，请检查 summary.json'}。本轮未接入或修改 ArduPilot。仿真在 VRX 悉尼水域进行，沿用当前船体、波浪压力、附加质量、阻尼和推进模型。",'', '首个满油基准保留了完整 GPU 传感器生成；其余批量工况关闭 camera/gpu_lidar 图像计算以提速，设备质量和电力负载仍然计入，IMU/GPS 和 ROS 控制仍实际运行。不同工况使用独立 Gazebo 分区、ROS 域和模型快照。','', '## 质量与功耗变化','', '旧账中的 493.422 kg“设备与附件余量”已由具名设备、安装件和传感器条目替代。没有为了保持旧重量额外加入无依据配重。原结构总成及明确的 CAD 结构件、传动件予以保留；燃油从干质量中排除，再由油箱模型随实际油量加入。','', '| 配置 | 旧满油质量 kg | 新满油质量 kg |','|---|---:|---:|',f"| 6 kW 基础方案 | 1443.213 | {ledger['baseline']['nominal']['fuel_states_level_tank']['60']['mass_kg']:.3f} |",f"| 40 kW / 15 km/h 概念方案 | 1780.776 | {ledger['speed15_concept']['nominal']['fuel_states_level_tank']['60']['mass_kg']:.3f} |",'', '升级方案逐块计入 4 块新增 E163 电池、4 个托架和 30 kg 电机增量；原 2 块电池也保留。桨的几何放大继续按质量 ∝ 尺寸³、惯性 ∝ 尺寸⁵换算，没有重复加入整台原电机。', '', f"辅助输出侧：正常 {ledger['aux_output_w']['normal']:.2f} W、持续采集 {ledger['aux_output_w']['survey']:.2f} W、全额定 {ledger['aux_output_w']['peak']:.2f} W。87% DC/DC 效率后的母线需求分别约为 {', '.join(f'{v:.2f}' for v in ledger['aux_bus_input_w'].values())} W。转舵、推进、发电充电和启动电池用电另由现有动态模型计算。",'',f"完整逐件名称、坐标、惯性、功耗和依据：[台账]({rel}逐件质量与功耗台账.md)、[CSV]({rel}component_ledger.csv)、[JSON]({rel}component_mass_ledger.json)。",'', '## 参数依据和估算方法','', '- 电池质量/尺寸参考 [ePropulsion E60/E163 官方手册](https://www.epropulsion.com/wp-content/uploads/2023/05/E-Series-Battery_E60-E163-User-Manual-EN-V1.2-20230530.pdf)：E163 76 kg、470×295×495 mm、51.2 V/163 Ah。升级方案是 6 块容量和电流能力并联代理，非已完成电气设计。', '- 发电机本体 82 kg 参考 [Fischer Panda 5000i 官方资料](https://www.fischerpanda.co.uk/PANDA_5000i.html)；逆变器采用厂家目录约 9.75 kg 代理。仅作为质量参考，不表示当前所有发电曲线已被该产品验证。', '- 激光雷达采用 [RoboSense Helios-16P 官方资料](https://cdn.robosense.cn/20220629181832_42540.pdf) 的约 0.99 kg / 11 W 代理；相机、计算机、泵和线束等采用明确标注的工程预算，并非对应设备实测。', '- 船壳/甲板总成约 505 kg 继续来自项目结构预算，惯性采用现有表面分布近似；CAD 实心铝构件按 2700 kg/m³、实心钢轴按 7850 kg/m³估算。它们不是已完成每块板、骨架和焊缝核算的制造 BOM。', '- 通用设备默认质量上下限约 ±30%，保留结构/传动估算多采用 ±20%，厂家电池采用 75–77 kg。全部取轻/取重作为保守敏感性端点，不解释为概率置信区间。位置误差预算仍为工程值；偏载试验覆盖载荷位置变化，不等于全部安装位置误差的统计分析。', '- 组件按共同模型 FLU 坐标、平行轴定理合成完整惯性张量。均匀长方体惯性只用于缺乏内部质量分布的设备代理，不能把外包络体积乘实心材料密度当成整机质量。', '- 各辅助设备采用 idle + (rated − idle) × duty 得到平均功率；采集工况提高计算、通信、冷却等占空比，峰值为全部额定开启。当前尚无逐设备开关和泵启停周期模型。','', '## 试验定义与结果','', '载荷 0/100/300 kg × 油量 6/30/60 L 的 9 个静水工况；150 kg 载荷分别置于左、右各 0.6 m及前、后各 1 m；另测独立风、流、浪，组合环境、压力工况，以及全轻/全重质量端点。附加载荷按 1.0×0.8×0.5 m 货物代理计算惯性，默认重心 z=0.6 m。', '', '每次 0–8 s 静置；8–50 s 通过 ROS 速度控制发送 15/3.6 m/s；50–65 s 零速度指令减速。表内航速是 40–49 s 船体纵向对地速度均值，不是任意浪流下的对水航速或绝对最高航速。静水目标容差 ±0.5 km/h；环境工况采用 5–18 km/h 的有界航行检查，另外保留实际偏差。', '', '独立风：世界 X 方向 −8 m/s；独立流：世界 Y 方向 +0.3 m/s；独立浪：VRX gain 0.3。组合：gain 0.3、风 [0,8,0] m/s、流 [0.2,0.15,0] m/s、100 kg、30 L、采集功耗，并开启发电机。压力工况：gain 0.6、风 [0,10,0]、流 [0.3,0.4,0]、300 kg、6 L、峰值辅助功耗。gain 是 VRX 波谱缩放参数，不能直接称为波高或某海况等级。','', '| 工况 | 初始总质量 kg | 稳定航速 km/h | 最大横摇/纵摇 ° | 65 s 后纵向速度 km/h | 结果 |','|---|---:|---:|---|---:|---|']
-for k,r in results.items():md.append(f"| {k} | {r['initial_ship_mass_kg']:.2f} | {r['speed_40_49_s_km_h']:.3f} | {r['max_roll_pitch_deg'][0]:.2f} / {r['max_roll_pitch_deg'][1]:.2f} | {r['coast_speed_65_s_km_h']:.3f} | {'通过' if r['passed'] else '未通过'} |")
-md+=['',f'![组合工况概览]({rel}matrix_overview.png)','',f"组合工况实际消耗燃油 {results['combined']['fuel_consumed_l']:.6f} L；燃油质量按 0.84 kg/L 减少。独立几何积分复算运行时船体重心及完整惯性，并核对 DART 原生回读、初始整船质量、能量余额、辅助用电台账和风/流输入。独立复算结果：[independent_audit.json]({rel}independent_audit.json)。",'',f'![燃油、质量与能源]({rel}fuel_mass_energy.png)','', '## 代码和复现','', '- `component_mass_ledger.json`：权威干质量/功耗条目；`equipment_ledger.py`：筛选配置、质量端点、缩放与合成。', '- `prepare_hull.py` / `fuel_mass.py`：基准 SDF 和运行时燃油更新采用同一干质量来源；`scenario_profiles.py`：按配置、载荷、油量重新求静水浮态及各 link 惯性。', '- `prepare_sydney.py`、`run_sydney.sh` 新增 `--fuel-l`、`--payload-center x y z`、`--mass-case nominal|light|heavy`、`--power-mode normal|survey|peak`；基础方案也重新计算不同油量/载荷，而非只改仪表油量。', '- `run_load_matrix.py` / `validate_load_matrix_case.py`：实际场景与 ROS 测试；`audit_load_matrix.py` 独立复算；`export_equipment_ledger.py` 和本报告生成脚本用于数据导出。', '', '在 ros_ws 目录，先 source ROS Jazzy 和 install/setup.bash，然后执行（需要本地 Gazebo/ROS 通信权限）：','', '```bash',f'python3 ../tests/regression/run_load_matrix.py --spec ../artifacts/validation/{o.name}/matrix_spec.json --output ../artifacts/validation/{o.name}',f'python3 ../tools/analysis/audit_load_matrix.py --output ../artifacts/validation/{o.name}',f'python3 ../tools/analysis/report_load_matrix.py --output ../artifacts/validation/{o.name}','```','', '调度器会跳过已有通过结果。完整重跑应复制 matrix_spec.json 到新的输出目录，保留本轮记录；不要用覆盖历史证据的方式比较版本。每个工况保留 world.sdf、boat.sdf、scene.json、CSV、Gazebo/ROS 日志和 result.json。首个基准结果是在关闭 GPU 图像前完成；其余为物理批量模式。CSV 原始数据无表头，对应字段见 schemas.json。','', '验证：新增台账 6 项单元测试、已有质量合成 3 项测试通过；C++ 能源/水动力等 8 项测试通过。基础 6 kW 配置的 6 L + 100 kg + 采集功耗场景生成检查通过，但本轮 20 个航行工况使用 40 kW 概念配置。','', '## 本轮发现与重试记录','', '前偏载 bow 的首次并行运行没有收到控制器状态，推进功率为 0；该次未通过，原始证据保留在 attempts/bow_missing_controller_telemetry。未把这次失败当成船体航行结果。后续将测试 ROS 域放到 40–59，并明确加入控制器状态接收检查，重新运行相同物理工况。仅凭一次重试不能证明根因已彻底消除，不能称为已修复确定的水动力问题。', '', '## 尚未被证明的部分','', '这是可追溯、可复现的工程仿真平台，不是实船数字孪生标定。设备布置包络尚未经过完整舱内安装/维护净空验证；结构总成仍有分组预算，实际材料分布、线缆走向和部件重心需将来替换。当前线性/二次阻尼系数固定；载荷改变浮态和惯性，但尚未按湿表面积自动重标定阻力，因此不能把不同载荷下接近的稳态航速解读为实船载荷不影响极速。阻力/附加质量未经过拖曳或海试标定，没有可信的高速兴波阻力、滑行、砰击或空化模型。燃油采用准静态自由液面近似，不模拟动态晃荡。65 秒工况用于短时行为筛查，不能证明长时间续航、热平衡或任意恶劣海况安全。', '', '本轮环境与偏载组合并非所有参数的完整笛卡尔积，也没有开展结构强度、抗沉性或适航认证。目标航速的通过只针对当前列明的工程模型与测试窗口。ArduPilot 继续暂缓。']
-(w/'../docs/history/2026-11-21_逐件台账与载荷油量风浪流验证.md').write_text('\n'.join(md)+'\n')
-files=list((w/'src/usv_description/config').rglob('*.json'))+[w/'src/usv_energy/config/energy.json']+[tool_path(n) for n in ['equipment_ledger.py','scenario_profiles.py','fuel_mass.py','prepare_hull.py','prepare_sydney.py','run_sydney.sh','validate_load_matrix_case.py','run_load_matrix.py','audit_load_matrix.py','export_equipment_ledger.py','report_load_matrix.py','test_equipment_ledger.py']]
-(o/'source_hashes.json').write_text(json.dumps({str(f.resolve().relative_to(PROJECT_ROOT)):hashlib.sha256(f.read_bytes()).hexdigest() for f in files},indent=2)+'\n')
-print(json.dumps({'cases':len(results),'passed':passed,'report':str(w/'../docs/history/2026-11-21_逐件台账与载荷油量风浪流验证.md')},indent=2))
+r = results["combined"]
+m = np.loadtxt(o / "combined/fuel_mass_state.csv", delimiter=",")
+e = np.loadtxt(o / "combined/energy_truth.csv", delimiter=",")
+fig, axes = plt.subplots(3, 1, figsize=(9, 8), sharex=True, constrained_layout=True)
+axes[0].plot(m[:, 0], m[:, 1])
+axes[0].set_ylabel("Fuel (L)")
+axes[0].ticklabel_format(useOffset=False)
+axes[1].plot(m[:, 0], m[:, 2] - m[0, 2], label="Native hull mass")
+axes[1].plot(m[:, 0], 0.84 * (m[:, 1] - m[0, 1]), "--", label="0.84 kg/L reference")
+axes[1].set_ylabel("Mass change (kg)")
+axes[1].legend()
+axes[2].plot(e[:, 0], e[:, 7] / 1000, label="Motor")
+axes[2].plot(e[:, 0], e[:, 10] / 1000, label="Generator AC")
+axes[2].set_ylabel("Power (kW)")
+axes[2].set_xlabel("Simulation time (s)")
+axes[2].legend()
+for ax in axes:
+    ax.grid(alpha=0.25)
+fig.savefig(o / "fuel_mass_energy.png", dpi=160)
+plt.close(fig)
+rel = "../../artifacts/validation/" + o.name + "/"
+md = [
+    "# 2026-11-21 逐件台账与载荷、油量、风浪流验证",
+    "",
+    "## 本轮范围与结论",
+    "",
+    f"完成 69 条质量/功耗台账的接入，以及 {len(results)} 个实际 Gazebo + ROS 工况，每个约 65 秒；总体验证：{'通过' if passed else '存在未通过项，请检查 summary.json'}。本轮未接入或修改 ArduPilot。仿真在 VRX 悉尼水域进行，沿用当前船体、波浪压力、附加质量、阻尼和推进模型。",
+    "",
+    "首个满油基准保留了完整 GPU 传感器生成；其余批量工况关闭 camera/gpu_lidar 图像计算以提速，设备质量和电力负载仍然计入，IMU/GPS 和 ROS 控制仍实际运行。不同工况使用独立 Gazebo 分区、ROS 域和模型快照。",
+    "",
+    "## 质量与功耗变化",
+    "",
+    "旧账中的 493.422 kg“设备与附件余量”已由具名设备、安装件和传感器条目替代。没有为了保持旧重量额外加入无依据配重。原结构总成及明确的 CAD 结构件、传动件予以保留；燃油从干质量中排除，再由油箱模型随实际油量加入。",
+    "",
+    "| 配置 | 旧满油质量 kg | 新满油质量 kg |",
+    "|---|---:|---:|",
+    f"| 6 kW 基础方案 | 1443.213 | {ledger['baseline']['nominal']['fuel_states_level_tank']['60']['mass_kg']:.3f} |",
+    f"| 40 kW / 15 km/h 概念方案 | 1780.776 | {ledger['speed15_concept']['nominal']['fuel_states_level_tank']['60']['mass_kg']:.3f} |",
+    "",
+    "升级方案逐块计入 4 块新增 E163 电池、4 个托架和 30 kg 电机增量；原 2 块电池也保留。桨的几何放大继续按质量 ∝ 尺寸³、惯性 ∝ 尺寸⁵换算，没有重复加入整台原电机。",
+    "",
+    f"辅助输出侧：正常 {ledger['aux_output_w']['normal']:.2f} W、持续采集 {ledger['aux_output_w']['survey']:.2f} W、全额定 {ledger['aux_output_w']['peak']:.2f} W。87% DC/DC 效率后的母线需求分别约为 {', '.join(f'{v:.2f}' for v in ledger['aux_bus_input_w'].values())} W。转舵、推进、发电充电和启动电池用电另由现有动态模型计算。",
+    "",
+    f"完整逐件名称、坐标、惯性、功耗和依据：[台账]({rel}逐件质量与功耗台账.md)、[CSV]({rel}component_ledger.csv)、[JSON]({rel}component_mass_ledger.json)。",
+    "",
+    "## 参数依据和估算方法",
+    "",
+    "- 电池质量/尺寸参考 [ePropulsion E60/E163 官方手册](https://www.epropulsion.com/wp-content/uploads/2023/05/E-Series-Battery_E60-E163-User-Manual-EN-V1.2-20230530.pdf)：E163 76 kg、470×295×495 mm、51.2 V/163 Ah。升级方案是 6 块容量和电流能力并联代理，非已完成电气设计。",
+    "- 发电机本体 82 kg 参考 [Fischer Panda 5000i 官方资料](https://www.fischerpanda.co.uk/PANDA_5000i.html)；逆变器采用厂家目录约 9.75 kg 代理。仅作为质量参考，不表示当前所有发电曲线已被该产品验证。",
+    "- 激光雷达采用 [RoboSense Helios-16P 官方资料](https://cdn.robosense.cn/20220629181832_42540.pdf) 的约 0.99 kg / 11 W 代理；相机、计算机、泵和线束等采用明确标注的工程预算，并非对应设备实测。",
+    "- 船壳/甲板总成约 505 kg 继续来自项目结构预算，惯性采用现有表面分布近似；CAD 实心铝构件按 2700 kg/m³、实心钢轴按 7850 kg/m³估算。它们不是已完成每块板、骨架和焊缝核算的制造 BOM。",
+    "- 通用设备默认质量上下限约 ±30%，保留结构/传动估算多采用 ±20%，厂家电池采用 75–77 kg。全部取轻/取重作为保守敏感性端点，不解释为概率置信区间。位置误差预算仍为工程值；偏载试验覆盖载荷位置变化，不等于全部安装位置误差的统计分析。",
+    "- 组件按共同模型 FLU 坐标、平行轴定理合成完整惯性张量。均匀长方体惯性只用于缺乏内部质量分布的设备代理，不能把外包络体积乘实心材料密度当成整机质量。",
+    "- 各辅助设备采用 idle + (rated − idle) × duty 得到平均功率；采集工况提高计算、通信、冷却等占空比，峰值为全部额定开启。当前尚无逐设备开关和泵启停周期模型。",
+    "",
+    "## 试验定义与结果",
+    "",
+    "载荷 0/100/300 kg × 油量 6/30/60 L 的 9 个静水工况；150 kg 载荷分别置于左、右各 0.6 m及前、后各 1 m；另测独立风、流、浪，组合环境、压力工况，以及全轻/全重质量端点。附加载荷按 1.0×0.8×0.5 m 货物代理计算惯性，默认重心 z=0.6 m。",
+    "",
+    "每次 0–8 s 静置；8–50 s 通过 ROS 速度控制发送 15/3.6 m/s；50–65 s 零速度指令减速。表内航速是 40–49 s 船体纵向对地速度均值，不是任意浪流下的对水航速或绝对最高航速。静水目标容差 ±0.5 km/h；环境工况采用 5–18 km/h 的有界航行检查，另外保留实际偏差。",
+    "",
+    "独立风：世界 X 方向 −8 m/s；独立流：世界 Y 方向 +0.3 m/s；独立浪：VRX gain 0.3。组合：gain 0.3、风 [0,8,0] m/s、流 [0.2,0.15,0] m/s、100 kg、30 L、采集功耗，并开启发电机。压力工况：gain 0.6、风 [0,10,0]、流 [0.3,0.4,0]、300 kg、6 L、峰值辅助功耗。gain 是 VRX 波谱缩放参数，不能直接称为波高或某海况等级。",
+    "",
+    "| 工况 | 初始总质量 kg | 稳定航速 km/h | 最大横摇/纵摇 ° | 65 s 后纵向速度 km/h | 结果 |",
+    "|---|---:|---:|---|---:|---|",
+]
+for k, r in results.items():
+    md.append(
+        f"| {k} | {r['initial_ship_mass_kg']:.2f} | {r['speed_40_49_s_km_h']:.3f} | {r['max_roll_pitch_deg'][0]:.2f} / {r['max_roll_pitch_deg'][1]:.2f} | {r['coast_speed_65_s_km_h']:.3f} | {'通过' if r['passed'] else '未通过'} |"
+    )
+md += [
+    "",
+    f"![组合工况概览]({rel}matrix_overview.png)",
+    "",
+    f"组合工况实际消耗燃油 {results['combined']['fuel_consumed_l']:.6f} L；燃油质量按 0.84 kg/L 减少。独立几何积分复算运行时船体重心及完整惯性，并核对 DART 原生回读、初始整船质量、能量余额、辅助用电台账和风/流输入。独立复算结果：[independent_audit.json]({rel}independent_audit.json)。",
+    "",
+    f"![燃油、质量与能源]({rel}fuel_mass_energy.png)",
+    "",
+    "## 代码和复现",
+    "",
+    "- `component_mass_ledger.json`：权威干质量/功耗条目；`equipment_ledger.py`：筛选配置、质量端点、缩放与合成。",
+    "- `prepare_hull.py` / `fuel_mass.py`：基准 SDF 和运行时燃油更新采用同一干质量来源；`scenario_profiles.py`：按配置、载荷、油量重新求静水浮态及各 link 惯性。",
+    "- `prepare_sydney.py`、`run_sydney.sh` 新增 `--fuel-l`、`--payload-center x y z`、`--mass-case nominal|light|heavy`、`--power-mode normal|survey|peak`；基础方案也重新计算不同油量/载荷，而非只改仪表油量。",
+    "- `run_load_matrix.py` / `validate_load_matrix_case.py`：实际场景与 ROS 测试；`audit_load_matrix.py` 独立复算；`export_equipment_ledger.py` 和本报告生成脚本用于数据导出。",
+    "",
+    "在 ros_ws 目录，先 source ROS Jazzy 和 install/setup.bash，然后执行（需要本地 Gazebo/ROS 通信权限）：",
+    "",
+    "```bash",
+    f"python3 ../tests/regression/run_load_matrix.py --spec ../artifacts/validation/{o.name}/matrix_spec.json --output ../artifacts/validation/{o.name}",
+    f"python3 ../tools/analysis/audit_load_matrix.py --output ../artifacts/validation/{o.name}",
+    f"python3 ../tools/analysis/report_load_matrix.py --output ../artifacts/validation/{o.name}",
+    "```",
+    "",
+    "调度器会跳过已有通过结果。完整重跑应复制 matrix_spec.json 到新的输出目录，保留本轮记录；不要用覆盖历史证据的方式比较版本。每个工况保留 world.sdf、boat.sdf、scene.json、CSV、Gazebo/ROS 日志和 result.json。首个基准结果是在关闭 GPU 图像前完成；其余为物理批量模式。CSV 原始数据无表头，对应字段见 schemas.json。",
+    "",
+    "验证：新增台账 6 项单元测试、已有质量合成 3 项测试通过；C++ 能源/水动力等 8 项测试通过。基础 6 kW 配置的 6 L + 100 kg + 采集功耗场景生成检查通过，但本轮 20 个航行工况使用 40 kW 概念配置。",
+    "",
+    "## 本轮发现与重试记录",
+    "",
+    "前偏载 bow 的首次并行运行没有收到控制器状态，推进功率为 0；该次未通过，原始证据保留在 attempts/bow_missing_controller_telemetry。未把这次失败当成船体航行结果。后续将测试 ROS 域放到 40–59，并明确加入控制器状态接收检查，重新运行相同物理工况。仅凭一次重试不能证明根因已彻底消除，不能称为已修复确定的水动力问题。",
+    "",
+    "## 尚未被证明的部分",
+    "",
+    "这是可追溯、可复现的工程仿真平台，不是实船数字孪生标定。设备布置包络尚未经过完整舱内安装/维护净空验证；结构总成仍有分组预算，实际材料分布、线缆走向和部件重心需将来替换。当前线性/二次阻尼系数固定；载荷改变浮态和惯性，但尚未按湿表面积自动重标定阻力，因此不能把不同载荷下接近的稳态航速解读为实船载荷不影响极速。阻力/附加质量未经过拖曳或海试标定，没有可信的高速兴波阻力、滑行、砰击或空化模型。燃油采用准静态自由液面近似，不模拟动态晃荡。65 秒工况用于短时行为筛查，不能证明长时间续航、热平衡或任意恶劣海况安全。",
+    "",
+    "本轮环境与偏载组合并非所有参数的完整笛卡尔积，也没有开展结构强度、抗沉性或适航认证。目标航速的通过只针对当前列明的工程模型与测试窗口。ArduPilot 继续暂缓。",
+]
+(w / "../docs/history/2026-11-21_逐件台账与载荷油量风浪流验证.md").write_text(
+    "\n".join(md) + "\n"
+)
+files = (
+    list((w / "src/usv_description/config").rglob("*.json"))
+    + [w / "src/usv_energy/config/energy.json"]
+    + [
+        tool_path(n)
+        for n in [
+            "equipment_ledger.py",
+            "scenario_profiles.py",
+            "fuel_mass.py",
+            "prepare_hull.py",
+            "prepare_sydney.py",
+            "run_sydney.sh",
+            "validate_load_matrix_case.py",
+            "run_load_matrix.py",
+            "audit_load_matrix.py",
+            "export_equipment_ledger.py",
+            "report_load_matrix.py",
+            "test_equipment_ledger.py",
+        ]
+    ]
+)
+(o / "source_hashes.json").write_text(
+    json.dumps(
+        {
+            str(f.resolve().relative_to(PROJECT_ROOT)): hashlib.sha256(
+                f.read_bytes()
+            ).hexdigest()
+            for f in files
+        },
+        indent=2,
+    )
+    + "\n"
+)
+print(
+    json.dumps(
+        {
+            "cases": len(results),
+            "passed": passed,
+            "report": str(
+                w / "../docs/history/2026-11-21_逐件台账与载荷油量风浪流验证.md"
+            ),
+        },
+        indent=2,
+    )
+)

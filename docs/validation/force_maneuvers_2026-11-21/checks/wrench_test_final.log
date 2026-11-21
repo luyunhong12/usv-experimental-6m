@@ -1,0 +1,8 @@
+Internal ctest changing into directory: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation
+Test project /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation
+    Start 1: whole_vessel_wrench_transform
+1/1 Test #1: whole_vessel_wrench_transform ....   Passed    0.02 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.02 sec

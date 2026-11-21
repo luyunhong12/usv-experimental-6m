@@ -1,11 +1,22 @@
+/** @file AppendageHydrodynamics.hh
+ * @brief 无人艇AppendageHydrodynamics接口与实现；工程模型边界见项目文档。
+ */
 #pragma once
 #include "Hydrostatics.hh"
 #include <algorithm>
 #include <cmath>
 #include <vector>
 namespace usv {
+
+/** @brief 保存附体裁切后的浸水几何属性。
+ */
 struct WetSurface {double area=0,span=0;V center=V::Zero;};
 // Convex x-z outline clipped against the (linearly sampled) local free surface.
+
+/** @brief 按各轮廓点的浸水深度裁切附体轮廓。
+ * @param points 附体轮廓顶点，m。
+ * @param depth 各顶点浸水深度，m；水下为正。
+ */
 inline WetSurface ClipAppendage(const std::vector<V>&points,const std::vector<double>&depth){
  std::vector<V> p;
  for(size_t i=0;i<points.size();++i){size_t j=(i+1)%points.size();
@@ -20,6 +31,15 @@ inline WetSurface ClipAppendage(const std::vector<V>&points,const std::vector<do
 }
 // Lift perpendicular to relative water velocity; drag always removes relative
 // kinetic energy. Independent of heading, commanded rudder and desired path.
+
+/** @brief 按当前浸水面积、跨度与相对速度计算附体升阻力。
+ * @param rho 水密度，kg/m³。
+ * @param area 浸水侧向面积，m²。
+ * @param span 浸水跨度，m。
+ * @param cd0 型阻系数工程假设。
+ * @param e 有限展弦比模型的效率系数。
+ * @param velocity 部件相对水流的速度向量，m/s。
+ */
 inline V AppendageForce(double rho,double area,double span,double cd0,double e,const V&velocity){
  double u=velocity.X(),v=velocity.Y(),speed=std::hypot(u,v);
  if(area<=1e-12||span<=1e-12||speed<=1e-9)return V::Zero;

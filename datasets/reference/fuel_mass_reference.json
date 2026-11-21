@@ -40,27 +40,27 @@
   "surface_model": "Gravity-horizontal quasi-static free surface clipped against a rigid box; ignores dynamic slosh, acceleration-induced surface tilt, baffles and fluid momentum relative to the vessel.",
   "mass_flux_model": "Slow consumed fuel exits carrying local vessel velocity; no exhaust jet reaction. Body generalized velocities remain continuous when inertia changes.",
   "dry_hull": {
-    "mass_kg": 1084.1134889835962,
+    "mass_kg": 1116.1675789122348,
     "cg_m": [
-      -0.5879172030653869,
-      -0.01921861379397553,
-      0.5092271178666761
+      -0.535135914286274,
+      -3.1829572421936956e-18,
+      0.5032185354832457
     ],
     "inertia_kg_m2": [
       [
-        344.88886004153517,
-        14.608570850456134,
-        -43.861826081216904
+        360.30884426590757,
+        -23.684725300036234,
+        -31.889660600402628
       ],
       [
-        14.608570850456134,
-        3280.5323373983383,
-        -0.0414061596428608
+        -23.684725300036234,
+        3387.49687625525,
+        4.317873993902541
       ],
       [
-        -43.861826081216904,
-        -0.0414061596428608,
-        3457.626594899063
+        -31.889660600402628,
+        4.317873993902541,
+        3577.2713951814735
       ]
     ]
   }

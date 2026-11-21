@@ -7,4 +7,7 @@ if [[ -f "$SIM_ROOT/../datasets/reference/boat_export.json" ]]; then
   python3 "$SIM_ROOT/../tools/modeling/build_pbr_materials.py"
   python3 "$SIM_ROOT/../tools/modeling/prepare_hull.py"
 fi
-exec colcon build --base-paths src ../dependencies/src/vrx --parallel-workers 2 "$@"
+python3 "$SIM_ROOT/../tools/lib/trial_evidence.py" begin-build
+colcon build --base-paths src ../dependencies/src/vrx --parallel-workers 2 "$@"
+
+python3 "$SIM_ROOT/../tools/lib/trial_evidence.py" record-build

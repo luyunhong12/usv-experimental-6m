@@ -1,0 +1,128 @@
+{
+  "reverse_60": {
+    "passed": true,
+    "runtime_passed": true,
+    "checks": {
+      "servo_rate": true,
+      "reference_rate": true,
+      "runtime": true,
+      "evidence_bound": true,
+      "direct_only": true,
+      "attitude": true,
+      "reverse_throttle_tracks": true,
+      "reverse_servo_tracks": true,
+      "reverse_astern": true,
+      "reverse_directional_quality": true
+    },
+    "metrics": {
+      "servo": {
+        "actual_peak_rad_s": 0.0006596015693194927,
+        "actual_limit_rad_s": 0.2,
+        "reference_peak_rad_s": 0.0,
+        "reference_limit_rad_s": 0.15
+      },
+      "reverse": {
+        "duration_s": 100.00800000000001,
+        "tail_surge_m_s": -1.8190727054080493,
+        "tail_speed_std_m_s": 1.6188944967818264e-05,
+        "tail_yaw_deg_s": 0.39217548564048405,
+        "heading_change_deg": 21.7626362183727,
+        "distance_m": 176.07999122435567
+      }
+    }
+  },
+  "zigzag_10_10": {
+    "passed": true,
+    "runtime_passed": true,
+    "checks": {
+      "servo_rate": true,
+      "reference_rate": true,
+      "runtime": true,
+      "evidence_bound": true,
+      "direct_only": true,
+      "attitude": true,
+      "approach_throttle_tracks": true,
+      "approach_servo_tracks": true,
+      "execute_1_throttle_tracks": true,
+      "execute_2_throttle_tracks": true,
+      "execute_3_throttle_tracks": true,
+      "execute_4_throttle_tracks": true,
+      "recover_throttle_tracks": true,
+      "recover_servo_tracks": true,
+      "recover_yaw": true,
+      "recover_steady_speed": true,
+      "recover_forward": true,
+      "recover_return_heading": true,
+      "recover_return_time": true,
+      "execute_1_trigger": true,
+      "execute_2_trigger": true,
+      "execute_3_trigger": true,
+      "execute_4_trigger": true,
+      "zigzag_overshoots": true
+    },
+    "metrics": {
+      "servo": {
+        "actual_peak_rad_s": 0.15190028534137612,
+        "actual_limit_rad_s": 0.2,
+        "reference_peak_rad_s": 0.15000000000000197,
+        "reference_limit_rad_s": 0.15
+      },
+      "approach": {
+        "duration_s": 25.056,
+        "tail_surge_m_s": 2.0696356932491944,
+        "tail_speed_std_m_s": 0.0014137133821677814,
+        "tail_yaw_deg_s": 0.0066673932549726235,
+        "heading_change_deg": 0.188933311808234,
+        "distance_m": 46.09848324536925
+      },
+      "execute_1": {
+        "duration_s": 2.975999999999999,
+        "tail_surge_m_s": 2.0578484978124454,
+        "tail_speed_std_m_s": 0.014304678378879545,
+        "tail_yaw_deg_s": 3.5855484434614997,
+        "heading_change_deg": 10.663633121715621,
+        "distance_m": 6.1362457945600966
+      },
+      "execute_2": {
+        "duration_s": 7.280000000000001,
+        "tail_surge_m_s": 2.0157582381930053,
+        "tail_speed_std_m_s": 0.02130891284619619,
+        "tail_yaw_deg_s": -3.8953750953927204,
+        "heading_change_deg": -21.351889139596388,
+        "distance_m": 14.790351406219857
+      },
+      "execute_3": {
+        "duration_s": 7.18,
+        "tail_surge_m_s": 2.005130120395969,
+        "tail_speed_std_m_s": 0.02297085595972571,
+        "tail_yaw_deg_s": 3.8661160271800656,
+        "heading_change_deg": 21.14625306095859,
+        "distance_m": 14.522427013286011
+      },
+      "execute_4": {
+        "duration_s": 7.176000000000002,
+        "tail_surge_m_s": 2.004953611898216,
+        "tail_speed_std_m_s": 0.022841850619318243,
+        "tail_yaw_deg_s": -3.8027453286540545,
+        "heading_change_deg": -20.72170057241481,
+        "distance_m": 14.513070032154214
+      },
+      "recover": {
+        "duration_s": 45.059999999999995,
+        "tail_surge_m_s": 2.0703383548375967,
+        "tail_speed_std_m_s": 7.3863565511300704e-09,
+        "tail_yaw_deg_s": 0.006715061652394743,
+        "heading_change_deg": -12.514716982965798,
+        "distance_m": 93.09613422054838,
+        "extra_heading_deg": 13.103772840022893,
+        "settling_time_s": 4.308,
+        "peak_yaw_deg_s": 7.310892738878685
+      },
+      "zigzag_overshoots_deg": [
+        12.03477703078628,
+        11.651940516626858,
+        11.610338046939521
+      ]
+    }
+  }
+}

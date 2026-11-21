@@ -1,0 +1,47 @@
+{
+  "reverse_60_appendage_080": {
+    "kind": "maneuver_audit",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "reverse",
+        "mode": "direct",
+        "throttle": -0.6,
+        "steering_deg": 0,
+        "duration": 100
+      }
+    ],
+    "appendage_coefficient_scale": 0.8
+  },
+  "reverse_60_appendage_120": {
+    "kind": "maneuver_audit",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "reverse",
+        "mode": "direct",
+        "throttle": -0.6,
+        "steering_deg": 0,
+        "duration": 100
+      }
+    ],
+    "appendage_coefficient_scale": 1.2
+  },
+  "reverse_60_symmetric_no_couple": {
+    "kind": "maneuver_audit",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "reverse",
+        "mode": "direct",
+        "throttle": -0.6,
+        "steering_deg": 0,
+        "duration": 100
+      }
+    ],
+    "symmetric_mass_diagnostic": true,
+    "propulsion_overrides": {
+      "diagnostic_water_torque_scale": 0
+    }
+  }
+}

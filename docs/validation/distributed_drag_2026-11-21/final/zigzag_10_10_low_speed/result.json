@@ -1,0 +1,153 @@
+{
+  "case": "zigzag_10_10_low_speed",
+  "spec": {
+    "kind": "maneuver_audit",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "approach",
+        "duration": 25,
+        "mode": "direct",
+        "throttle": 0.35,
+        "steering_deg": 0
+      },
+      {
+        "name": "execute_1",
+        "duration": 40,
+        "mode": "direct",
+        "throttle": 0.35,
+        "steering_deg": -10,
+        "until_heading_deg": 10
+      },
+      {
+        "name": "execute_2",
+        "duration": 40,
+        "mode": "direct",
+        "throttle": 0.35,
+        "steering_deg": 10,
+        "until_heading_deg": -10
+      },
+      {
+        "name": "execute_3",
+        "duration": 40,
+        "mode": "direct",
+        "throttle": 0.35,
+        "steering_deg": -10,
+        "until_heading_deg": 10
+      },
+      {
+        "name": "execute_4",
+        "duration": 40,
+        "mode": "direct",
+        "throttle": 0.35,
+        "steering_deg": 10,
+        "until_heading_deg": -10
+      },
+      {
+        "name": "recover",
+        "duration": 45,
+        "mode": "direct",
+        "throttle": 0.35,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "checks": {
+    "startup_ready": true,
+    "completed": true,
+    "no_failure": true,
+    "finite": true,
+    "attitude_bounded": true,
+    "power_limited": true,
+    "energy_balance": true,
+    "fuel_mass_consistent": true,
+    "resistance_dissipative": true,
+    "command_reached_physics": true,
+    "health_command_observed": true,
+    "initial_soc_matches": true
+  },
+  "passed": true,
+  "failure": null,
+  "start_sim": 1.236,
+  "metrics": {
+    "approach": {
+      "tail_speed_m_s": 1.1597016028151392,
+      "tail_speed_std_m_s": 0.0005879627333916188,
+      "mean_motor_w": 1312.4097851091524,
+      "distance_m": 24.337814801847145,
+      "heading_change_rad": 0.0007900467021090779,
+      "mean_wet_area_m2": 10.825486375978585,
+      "mean_projected_x_m2": 0.39589923202289645,
+      "mean_surge_drag_n": 411.2975763136376
+    },
+    "execute_1": {
+      "tail_speed_m_s": 1.1527757149062352,
+      "tail_speed_std_m_s": 0.007422789004145454,
+      "mean_motor_w": 1312.4096986870272,
+      "distance_m": 4.974225504086327,
+      "heading_change_rad": 0.1690453404568238,
+      "mean_wet_area_m2": 10.82553380910942,
+      "mean_projected_x_m2": 0.39589823927846884,
+      "mean_surge_drag_n": 409.1748108957849,
+      "tail_turn_radius_m": 29.425392564173066
+    },
+    "execute_2": {
+      "tail_speed_m_s": 1.132968030186283,
+      "tail_speed_std_m_s": 0.010506651884325527,
+      "mean_motor_w": 1312.4098001766922,
+      "distance_m": 11.563772162746382,
+      "heading_change_rad": -0.3454675437432694,
+      "mean_wet_area_m2": 10.825398377550052,
+      "mean_projected_x_m2": 0.39590620911902796,
+      "mean_surge_drag_n": 395.862710826522,
+      "tail_turn_radius_m": 18.66452086821533
+    },
+    "execute_3": {
+      "tail_speed_m_s": 1.130325869599219,
+      "tail_speed_std_m_s": 0.00881600531315897,
+      "mean_motor_w": 1312.409785595591,
+      "distance_m": 11.518425221951185,
+      "heading_change_rad": 0.3477876781844106,
+      "mean_wet_area_m2": 10.825471844147703,
+      "mean_projected_x_m2": 0.39590040490293005,
+      "mean_surge_drag_n": 394.3409169643864,
+      "tail_turn_radius_m": 18.548809118428707
+    },
+    "execute_4": {
+      "tail_speed_m_s": 1.1300875196827065,
+      "tail_speed_std_m_s": 0.00888554827372091,
+      "mean_motor_w": 1312.4097729539915,
+      "distance_m": 11.629680385714845,
+      "heading_change_rad": -0.35176092259645186,
+      "mean_wet_area_m2": 10.825379715479526,
+      "mean_projected_x_m2": 0.39590624532437335,
+      "mean_surge_drag_n": 394.20733893206386,
+      "tail_turn_radius_m": 18.280403951098354
+    },
+    "recover": {
+      "tail_speed_m_s": 1.16037438188995,
+      "tail_speed_std_m_s": 5.366754742637188e-09,
+      "mean_motor_w": 1312.4097854182712,
+      "distance_m": 52.027163085362645,
+      "heading_change_rad": -0.17806328850253847,
+      "mean_wet_area_m2": 10.825490619108182,
+      "mean_projected_x_m2": 0.395899085562882,
+      "mean_surge_drag_n": 411.6901698010803
+    }
+  },
+  "summary": {
+    "max_roll_pitch_deg": [
+      0.3398436738619402,
+      0.0875141652245989
+    ],
+    "soc_start_end": [
+      0.8999999963443231,
+      0.8991752399436248
+    ],
+    "temperature_max_c": 25.000841944699193,
+    "fuel_consumed_l": 0.0,
+    "sim_end": 106.848
+  },
+  "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+  "postprocess_recovered": false
+}

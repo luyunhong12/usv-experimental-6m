@@ -4,7 +4,7 @@
 
 > **项目定位：工程仿真平台，不是经过海试标定的实船数字孪生。** 没有完整实船数据时，使用明确标注来源和假设的参数。能够运行、画面精细、控制器能保持航向，都不能代替物理验证。
 >
-> **最新进展：高速零舵发散转圈已通过被动受力修复与专项验收。** 补全原有水下支腿、底鳍和电机外壳受力，没有增加航向控制。当前静水满油末段仍有约 0.058°/秒的小幅配平偏航，不宣称零舵绝对直线。见 [方向稳定性修复报告](docs/validation/directional_stability_2026-11-21/README.md)。
+> **本轮已加入分布式侧向阻力和实体配重，22 项操纵及扩展检查通过原门槛。** 配重后的名义满油航速约 14.59 km/h；零舵倒车仍有配平偏航，不等于自动直行。本轮不接入 ArduPilot/Nav2。见 [当前验收与设计取舍](docs/validation/distributed_drag_2026-11-21/README.md)，开船请看 [ROS 操作指南](docs/getting_started/README.md)。
 
 ## 船长什么样，结构是什么
 
@@ -55,7 +55,7 @@ flowchart LR
 | **质量与功耗**：逐件质量加权求重心，平行轴定理合成惯性；按设备工作状态汇总功耗 | [权威台账](ros_ws/src/usv_description/config/component_mass_ledger.json)、[台账推导与组合工况](docs/history/2026-11-21_逐件台账与载荷油量风浪流验证.md)、[公开摘要](docs/validation/evidence/README.md) | 材料密度、结构厚度、安装位置和部分设备功耗仍是工程值 |
 | **浮力与随浪**：封闭体积静水浮力、浸水表面压力积分，使用 VRX 波场 | [静水推导与验证](docs/history/2026-11-19_船体接入与静水试验.md)、[随浪方法](docs/history/2026-11-20_船体外观装配与随浪优化.md)、[随浪结果](docs/validation/evidence/waves_2026-11-20.json) | 没有实船波浪响应标定；未完整覆盖破波、砰击、滑行 |
 | **阻力、附加质量与方向稳定性**：参考海洋航行器动力学框架，按几何求附体浸水面积及力臂，补全升阻力 | [理论与系数边界](docs/parameters/evidence_map.md)、[阻力配置](ros_ws/src/usv_description/config/resistance.json)、[附体参数](ros_ws/src/usv_description/config/appendage_hydrodynamics.json)、[15 项专项与对照数据](docs/validation/directional_stability_2026-11-21/README.md) | 系数未经 CFD/海试标定；仍有小幅配平偏航，附体阻力与集中船体阻力可能存在重复预算 |
-| **推进与转向**：正反推、桨轴转矩/功率限制、舵角与速率约束 | [推进参数](ros_ws/src/usv_description/config/propulsion.json)、[厂家参考与建模假设](docs/history/2026-11-19_推进与操纵验证.md)、[当前操纵验收](docs/validation/directional_stability_2026-11-21/README.md) | 6 kW 厂家参考不证明 40 kW 概念方案；缺少真实桨的全工况性能图与空化数据 |
+| **推进与转向**：正反推、桨轴转矩/功率限制、舵角与速率约束 | [推进参数](ros_ws/src/usv_description/config/propulsion.json)、[厂家参考与建模假设](docs/history/2026-11-19_推进与操纵验证.md)、[当前操纵验收](docs/validation/distributed_drag_2026-11-21/README.md) | 6 kW 厂家参考不证明 40 kW 概念方案；缺少真实桨的全工况性能图与空化数据 |
 | **油量、电量与保护**：能量平衡、电流积分、发电/充电限制、负载和保护状态 | [能源配置](ros_ws/src/usv_energy/config/energy.json)、[原理与设备来源](docs/history/2026-11-19_油电能源与感知验证.md)、[能源基线](docs/validation/baseline_2026-11-21/README.md) | 电池内阻、热参数及油耗曲线有估算；两小时能源计算不等于实际续航 |
 | **燃油引起的动态质量**：准静态液面体积积分，更新质量、重心和完整惯性，回读物理后端 | [油箱参数](ros_ws/src/usv_description/config/fuel_tank.json)、[方法及后端验证](docs/history/2026-11-19_燃油质量重心惯性联动.md)、[公开测试摘要](docs/validation/evidence/fuel_mass_historical.json) | 未建模油液动态晃荡、进水及柔性结构 |
 | **传感器与运行接口**：IMU、GPS、相机、点云、TF、健康检测；就绪检测、失联停推及退出清理 | [WAM-V 差距与接口改进](docs/history/2026-11-20_WAMV差距完善.md)、[启动与运行验证](docs/history/2026-11-21_阻力操纵与启动可靠性改进.md)、[完整场景回归](docs/validation/directional_stability_2026-11-21/full_sydney_smoke.json) | 传感器噪声未实机标定；未完成新机器安装与所有环境长期测试 |
@@ -63,15 +63,34 @@ flowchart LR
 
 历史过程记录保留当时参数，不应与当前配置混用。当前参数入口是 [参数说明](docs/parameters/README.md)；已公开的历史附件及其校验值见 [证据清单](docs/validation/evidence/README.md)。
 
-## 当前方向稳定性
+## 当前受力审计与操纵验证
+
+最新 [配平复验](docs/validation/distributed_drag_2026-11-21/README.md) 给出分布式横流模型、实体配重推导、版本绑定、严格品质门槛及源码对应关系。初次人工操船建议 0.3 前进油门、-0.25 倒车油门；这不是自动限速或飞控航向保持。
+
+对照试验区分了几何假不对称、估算质量分布和桨反扭矩的影响。修正镜像剖分后，对称质量且无外部桨力偶的诊断工况偏航接近数值零；正常船仍保留原质量与反扭矩。纵向阻力采用明确的船体/附体参考预算分配，横向及角向分解仍待识别。
+
+新增直接操纵测试覆盖零舵长航、左右回转、停推、反推和倒车、航向触发蛇形操纵及重载低油量。判据、实际数值和限制见 [本轮报告](docs/validation/force_maneuvers_2026-11-21/README.md)。特别注意：较大倒车油门的持续零舵航行仍有明显偏航，不能把“能倒车、能转弯”当成“倒车自然直线稳定”。
+
+## 上一轮方向稳定性修复（历史对照）
 
 15 个专项工况通过，包括实际零舵、左右扰动释放、重载、低油量、1/2/4 ms 步长、旋转初始朝向和受力系数敏感性。另完成风浪流检查与完整悉尼场景操控回归。零舵无附加载荷末段航速约 **15.15 km/h**；60 秒对照中累计偏航从约 1,928° 降到约 4.8°。
 
 ![零舵受力修复对照](docs/validation/directional_stability_2026-11-21/before_after.png)
 
-这是当前工程模型的验证，不是海试认证。原型阻力/附加质量未重新调参，补充的升阻力系数仍需实测或 CFD 校准。下面保留的是**修复前**的性能基线。
+这是上一轮工程模型的验证，不是海试认证；最新几何和预算结果见上面的受力报告。原型阻力/附加质量未重新调参，补充的升阻力系数仍需实测或 CFD 校准。后面的“历史性能基线”章节保留修复前数据；当前配重方案另列。
 
-## 性能基线：15 km/h 是哪个方案
+## 当前配重方案的性能
+
+40 kW 概念方案保留原设备位置，加入约 32.05 kg 横向配平板和 167.86 kg 纵向配平板，名义满油总质量约 1739.03 kg。两块板的外形、碰撞、质量和惯性共用台账；按质量矩与静水平衡计算，不按偏航结果调质量。
+
+| 当前工况 | 直接满油门、零舵航速 |
+|---|---:|
+| 无附加载荷、60 L 燃油 | 约 14.59 km/h |
+| 300 kg 附加载荷、6 L 燃油 | 约 13.92 km/h |
+
+当前未达到严格 15.00 km/h。增加配重改善操纵，但增加排水量；未调高功率或降低阻力掩盖代价。[推导、实体参数及复验](docs/validation/distributed_drag_2026-11-21/README.md) · [质量台账](ros_ws/src/usv_description/config/component_mass_ledger.json)。
+
+## 历史性能基线：15 km/h 是哪个方案
 
 项目保留 **6 kW 基准方案**，另有 **40 kW、六电池的概念升级方案**。下面是后者在满油 60 L、静水、固定桨轴转速请求、仅用舵保持航向时的仿真结果，不是实船性能保证，也不适用于 6 kW 配置。
 
@@ -156,16 +175,18 @@ python3 tests/regression/run_performance_suite.py \
   --spec tests/scenarios/performance.json --output artifacts/my_performance_run
 ```
 
-每次试验使用新的输出目录，保留场景快照、遥测 CSV、健康日志及判定。原生测试需要本机 ROS DDS / Gazebo Transport 通信权限。仓库整理后已重新构建 12 个包，通过 10 项 C++、12 项 Python、5 项设计接口测试，并完成启动和四个操纵工况回归；这是本地验证，不是假称 GitHub CI 已验收。本轮新增附体解析测试后，C++ 测试为 11 项；方向稳定性专项的复现命令见最新报告。
+每次试验使用新的输出目录，保留场景快照、遥测 CSV、健康日志及判定；复用必须显式 `--resume` 且版本、工况与证据一致。原生测试需要本机 ROS DDS / Gazebo Transport 通信权限。最新 Code Supervisor full 与构建测试通过：12 项 C++、37 项 Python、5 项设计接口测试。操纵品质另行核对原有门槛；这是本地验证，不是假称 GitHub CI 或实船验收。完整证据、已执行范围和复现说明见 [接入前报告](docs/validation/distributed_drag_2026-11-21/README.md)。
 
 ## 已知问题与下一步
 
-1. **小幅配平偏航与模型标定**：原来的高速零舵发散转圈已在专项工况中修复；仍有约 0.058°/秒的配平偏航，单桨反扭矩、姿态和非对称载荷影响尚待进一步辨识。不能把有界稳定等同于绝对直线，也不能把工程升阻力系数当作海试数据。
+1. **小幅配平偏航与模型标定**：原来的高速零舵发散转圈已在专项工况中修复；镜像几何修正后仍有约 0.042°/秒的配平偏航，质量不对称、反扭矩和姿态耦合已通过反事实试验区分，但参数仍未实测。不能把有界稳定等同于绝对直线，也不能把工程升阻力系数当作海试数据。
 2. **水动力未标定**：当前阻力、附加质量、侧向力和偏航阻尼仍有工程假设；15 km/h 对输入参数敏感。
 3. **高速与复杂海况不足**：兴波、滑行、砰击、螺旋桨出水/空化，以及更大风浪尚未充分覆盖。
 4. **能源与热模型不完整**：没有完整电机、驱动器、线缆热模型和电芯差异；燃油采用准静态液面。
 5. **装配与结构边界**：刚体碰撞不等于结构变形、柔性线束、损伤、进水或制造认证。
-6. **发布可复现性**：仍需全新环境安装验证、第三方素材分发核查和大型数据附件发布。
+6. **持续倒车方向稳定性**：60% 零舵倒车 300 s 的末段偏航约 0.429°/s，虽满足 0.5°/s 工程门槛，累计仍约 107°；不能宣称倒车自然保持直线。
+7. **配重与航速取舍**：新增固定配重合计约 199.91 kg；55% 蛇形最大超越改善至约 12°，但名义全速约 14.59 km/h，尚未达到严格 15 km/h。配重的安装强度与内部干涉尚待设计核查。详见 [操纵品质报告](docs/validation/distributed_drag_2026-11-21/README.md)。
+8. **发布可复现性**：仍需全新环境安装验证、第三方素材分发核查和大型数据附件发布。
 
 物理问题稳定后，再建立定位融合与 Nav2 船舶适配，重新验收 ArduPilot。两种控制模式必须明确执行器所有权，不能同时叠加控制。[集成规划](docs/integration/README.md) · [当前问题清单](docs/validation/known_issues.md)。
 
@@ -177,7 +198,7 @@ python3 tests/regression/run_performance_suite.py \
 | 船体结构、模型导出、碰撞与推进器装配 | [建模说明](docs/modeling/README.md)、[扫碰记录](docs/history/2026-11-19_转向桨叶扫碰与单机估算.md) |
 | 为什么取这个质量、密度、功率、油量或水动力系数 | [参数入口](docs/parameters/README.md)、[科学依据地图](docs/parameters/evidence_map.md)、[逐件台账](ros_ws/src/usv_description/config/component_mass_ledger.json) |
 | 不随浪、漂浮姿态是否合理 | [静水试验](docs/history/2026-11-19_船体接入与静水试验.md)、[随浪试验](docs/history/2026-11-20_船体外观装配与随浪优化.md) |
-| 高速转圈、零舵偏航、倒车/转向和航速 | [当前方向稳定性报告](docs/validation/directional_stability_2026-11-21/README.md)；对照旧版本看 [历史性能基线](docs/validation/baseline_2026-11-21/README.md) |
+| 高速转圈、零舵偏航、倒车/转向和航速 | [当前操纵品质](docs/validation/distributed_drag_2026-11-21/README.md)；[受力归因](docs/validation/force_maneuvers_2026-11-21/README.md)；对照旧版本看 [历史性能基线](docs/validation/baseline_2026-11-21/README.md) |
 | 油电消耗、质量重心变化是否真的接入 | [能源建模](docs/history/2026-11-19_油电能源与感知验证.md)、[动态惯性验证](docs/history/2026-11-19_燃油质量重心惯性联动.md) |
 | 还有什么没做好、下一步怎么接飞控/导航 | [已知问题](docs/validation/known_issues.md)、[集成规划](docs/integration/README.md) |
 | 如何核对测试结果，为什么有的历史附件打不开 | [公开证据及来源](docs/validation/evidence/README.md)、[全部文档索引](docs/README.md)；完整 artifacts 仍在本地，不假称已全部公开 |

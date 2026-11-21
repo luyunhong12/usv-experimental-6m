@@ -1,0 +1,902 @@
+[
+  {
+    "source": "artifacts/force_audit_2026-11-21/resistance_budget.json",
+    "published": "resistance_budget.json",
+    "sha256": "3bac83579c59fec0bdef157f3410c4a77fa2c417d907dd5a4f0f0139494f7a30"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/geometry_symmetry.json",
+    "published": "geometry_symmetry.json",
+    "sha256": "1a161c89ff9419c9c651618340c44ecca4e3231d49f22af4a204b107a25cf231"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuver_preregistration.json",
+    "published": "maneuver_preregistration.json",
+    "sha256": "3a41fe35b35d86c09e01f24b2792147f0df5df92a7dd66383253cd2325ab242b"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuver_criteria_correction.json",
+    "published": "maneuver_criteria_correction.json",
+    "sha256": "4b98c9a862b4a43a71692133f804cdca0ae9cef814c4f1d7cb66d96574152372"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/final_source_manifest.json",
+    "published": "final_source_manifest.json",
+    "sha256": "c5af1cd14917eea1036bf233c774f6653a68824c461f37b8da6686755f24aa56"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/postprocessing_note.json",
+    "published": "postprocessing_note.json",
+    "sha256": "b33a4903d45172881ab80c8a411d2643a583983aad4f1e501695866f602fe71b"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/cancel_water_couple/result.json",
+    "published": "diagnostics/cancel_water_couple/result.json",
+    "sha256": "46a49079df6f112c0c3ca65e8462c59f135534ce9af4292de730723d889e9e40"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/cancel_water_couple/source_versions.json",
+    "published": "diagnostics/cancel_water_couple/source_versions.json",
+    "sha256": "1aab6f127cca4af19135c7cdb67c41a5ab58a631fd374cb1605b8212daff0b34"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/cancel_water_couple/run_status.json",
+    "published": "diagnostics/cancel_water_couple/run_status.json",
+    "sha256": "5717baf270fc12731e4e6ecbe7cac1413b00ec1015739f7aa214ee9ff107e50f"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/cancel_water_couple/stages.json",
+    "published": "diagnostics/cancel_water_couple/stages.json",
+    "sha256": "2a4d391aa7c7ddb4ba47cd41373f3ad5a2c94080473b2f365ed8d3dcca6602ca"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/cancel_water_couple/audit_hull.csv",
+    "published": "diagnostics/cancel_water_couple/audit_hull.csv",
+    "sha256": "ccfe81b17bc0d362ed73d1613b9aec6a1e89ae79aa623660505fcfd592c6a4ba"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/cancel_water_couple/audit_propulsion.csv",
+    "published": "diagnostics/cancel_water_couple/audit_propulsion.csv",
+    "sha256": "8e655bbe85503cb90725c907a21a54ddc4f7c213ffdf7402b4bebecc76481456"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/cancel_water_couple/audit_appendages.csv",
+    "published": "diagnostics/cancel_water_couple/audit_appendages.csv",
+    "sha256": "f56b0fdfcddfdc730f700698eb34f43638077bd97c114ce611582da1fb783a6b"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/cancel_water_couple/propulsion_state.csv",
+    "published": "diagnostics/cancel_water_couple/propulsion_state.csv",
+    "sha256": "ff66c97df57cdb4e061d0ce1f003a8a7430f53518690262a7bb8af5411a79e14"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/cancel_water_couple/fuel_mass_state.csv",
+    "published": "diagnostics/cancel_water_couple/fuel_mass_state.csv",
+    "sha256": "d8de2c922528d885a6e5c9993fc914120ed1dbe2bcf843e5abe9d9da81477c58"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/nominal/result.json",
+    "published": "diagnostics/nominal/result.json",
+    "sha256": "e39b1f1f79fdaaa91d4f750257b4677c5ad90d5725bc0c4e53399280bcd9dd53"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/nominal/source_versions.json",
+    "published": "diagnostics/nominal/source_versions.json",
+    "sha256": "6c44f9b13462b7b7a2db9a81cffe592ce79cc5b8840bd4f690d86df3029cc3fc"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/nominal/run_status.json",
+    "published": "diagnostics/nominal/run_status.json",
+    "sha256": "919fc7f594b744802fefa07e6c18e55b2b83b2972534899ecb6d9a620011f2ef"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/nominal/stages.json",
+    "published": "diagnostics/nominal/stages.json",
+    "sha256": "139e01ec2b97d8b7c37c51242d02cc117a90d83ddae86039f5f1a71aebd9b7da"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/nominal/audit_hull.csv",
+    "published": "diagnostics/nominal/audit_hull.csv",
+    "sha256": "e2f36e6278c79477cf5faaadf5151c84953ecd103b0be608b67b7a486bb835ea"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/nominal/audit_propulsion.csv",
+    "published": "diagnostics/nominal/audit_propulsion.csv",
+    "sha256": "3fd9e4124582bd22f177ea6968f201d3a24938d0325df73d02ef57d4308a45e0"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/nominal/audit_appendages.csv",
+    "published": "diagnostics/nominal/audit_appendages.csv",
+    "sha256": "5269d568b2caa057e9705f9aed6cabf1313e35c8304fe870e2b70fbf7d73aecb"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/nominal/propulsion_state.csv",
+    "published": "diagnostics/nominal/propulsion_state.csv",
+    "sha256": "024026b0335b527aa8973f2aff683c0133fccaf4e8b07cc77597f49cc28bade3"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/nominal/fuel_mass_state.csv",
+    "published": "diagnostics/nominal/fuel_mass_state.csv",
+    "sha256": "af5e04e8e1548093a93920ac0e04e9645d141cacae7cdd43ccd2e582bd20dc03"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/reverse_water_couple/result.json",
+    "published": "diagnostics/reverse_water_couple/result.json",
+    "sha256": "451cc2a1f22d56e46e335f2b03e6245906004c9e603d561b6963e829656312df"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/reverse_water_couple/source_versions.json",
+    "published": "diagnostics/reverse_water_couple/source_versions.json",
+    "sha256": "8f325a4ac48cd49fdf8e609d6e954d19ceff2aa083b753e9eaf9bb01b45b3733"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/reverse_water_couple/run_status.json",
+    "published": "diagnostics/reverse_water_couple/run_status.json",
+    "sha256": "5d784678d3e8e71fc88b1759c9454c710ee6d792f3d2ee3f3e287ade342032d4"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/reverse_water_couple/stages.json",
+    "published": "diagnostics/reverse_water_couple/stages.json",
+    "sha256": "2a4d391aa7c7ddb4ba47cd41373f3ad5a2c94080473b2f365ed8d3dcca6602ca"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/reverse_water_couple/audit_hull.csv",
+    "published": "diagnostics/reverse_water_couple/audit_hull.csv",
+    "sha256": "25ba5eebe1a6793645137b01e5450a57101f1eea1f261685795e90f897a6520d"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/reverse_water_couple/audit_propulsion.csv",
+    "published": "diagnostics/reverse_water_couple/audit_propulsion.csv",
+    "sha256": "5b56d60d14414f06dd3ba71a4be071933242e1fd12066bb368353c03d2cc1972"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/reverse_water_couple/audit_appendages.csv",
+    "published": "diagnostics/reverse_water_couple/audit_appendages.csv",
+    "sha256": "267e1a154ee36b03b66bbb47d54275defc51a97dddbcdff4975d7359bb30edcd"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/reverse_water_couple/propulsion_state.csv",
+    "published": "diagnostics/reverse_water_couple/propulsion_state.csv",
+    "sha256": "4bd48bf5d9b7ae08c81c32a8fe82cebd22dd60ce4950b17b36703b4a21a9e4d6"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/reverse_water_couple/fuel_mass_state.csv",
+    "published": "diagnostics/reverse_water_couple/fuel_mass_state.csv",
+    "sha256": "39cc0491f02e4a9df8926e0fbb6f6c1e07a1367fb042f432db54e52232eb758d"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/symmetric_mass/result.json",
+    "published": "diagnostics/symmetric_mass/result.json",
+    "sha256": "4e2312f12f117888e729e2930f6a59267b487971c2ea799fe9b10ac0b43c95c7"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/symmetric_mass/source_versions.json",
+    "published": "diagnostics/symmetric_mass/source_versions.json",
+    "sha256": "b07ccf5d66bdb82de8492787014e9d8239fc16babb79facd93715abfd287d544"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/symmetric_mass/run_status.json",
+    "published": "diagnostics/symmetric_mass/run_status.json",
+    "sha256": "47fe2c3bf5f279530d64b3a37e3165f00cb318bc2f7a4345b8233297bd25d718"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/symmetric_mass/stages.json",
+    "published": "diagnostics/symmetric_mass/stages.json",
+    "sha256": "bf2eb76d83fb93d10c664bc5c789b28273805330e48b601944408d00a72ecac4"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/symmetric_mass/audit_hull.csv",
+    "published": "diagnostics/symmetric_mass/audit_hull.csv",
+    "sha256": "45ad3a4bf9bc686126af079ee8f99c4ac86bf391750a3bad2ae29b67fc6681dd"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/symmetric_mass/audit_propulsion.csv",
+    "published": "diagnostics/symmetric_mass/audit_propulsion.csv",
+    "sha256": "4460e7b50769d28ebe084c009ce013f54d08cf6a764f3585be8b7a90e73a265c"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/symmetric_mass/audit_appendages.csv",
+    "published": "diagnostics/symmetric_mass/audit_appendages.csv",
+    "sha256": "4c58016170e42d7d1cb1835d3ca8acf083c2669a346ad77f6b7ad23bd94d3ee6"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/symmetric_mass/propulsion_state.csv",
+    "published": "diagnostics/symmetric_mass/propulsion_state.csv",
+    "sha256": "9b7f6e37af85a24e3f7cd28bad55e61882a2bcda031013266102625cdf31ca9b"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/symmetric_mass/fuel_mass_state.csv",
+    "published": "diagnostics/symmetric_mass/fuel_mass_state.csv",
+    "sha256": "1542d4de66960987463eee03f15cb159f19d701d85bdb989c18cd4fbce44df77"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/symmetric_mass_no_couple/result.json",
+    "published": "diagnostics/symmetric_mass_no_couple/result.json",
+    "sha256": "e25c2c153a7d5b26cc5b00c786d812ffb6f55e7db1352b6b542a1fcb5d68547f"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/symmetric_mass_no_couple/source_versions.json",
+    "published": "diagnostics/symmetric_mass_no_couple/source_versions.json",
+    "sha256": "cc3c2d261590683e3da701ec7e0e86f2e191651fd56eab80e392d2e046b8f921"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/symmetric_mass_no_couple/run_status.json",
+    "published": "diagnostics/symmetric_mass_no_couple/run_status.json",
+    "sha256": "835215f8ba09ad247d7e76b6b2e9dad841919f9033b51ea331a610d3d1302632"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/symmetric_mass_no_couple/stages.json",
+    "published": "diagnostics/symmetric_mass_no_couple/stages.json",
+    "sha256": "bf2eb76d83fb93d10c664bc5c789b28273805330e48b601944408d00a72ecac4"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/symmetric_mass_no_couple/audit_hull.csv",
+    "published": "diagnostics/symmetric_mass_no_couple/audit_hull.csv",
+    "sha256": "805be92f4d77af9d6a453fa6c2c6610430002eb53bc9897149cdb06b0b38bf3a"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/symmetric_mass_no_couple/audit_propulsion.csv",
+    "published": "diagnostics/symmetric_mass_no_couple/audit_propulsion.csv",
+    "sha256": "54fda8688017f75d086528919034144eab886298811592582da12b368203948f"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/symmetric_mass_no_couple/audit_appendages.csv",
+    "published": "diagnostics/symmetric_mass_no_couple/audit_appendages.csv",
+    "sha256": "97d190e2def2f4fd24960be3302c31dce43520d34ab8dc20e2be0387a5b1d61a"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/symmetric_mass_no_couple/propulsion_state.csv",
+    "published": "diagnostics/symmetric_mass_no_couple/propulsion_state.csv",
+    "sha256": "fedcb0da76ab2bfb357cf08941316632cd8d0b6102b45abc5ecb49f08f2ea450"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/diagnostics/symmetric_mass_no_couple/fuel_mass_state.csv",
+    "published": "diagnostics/symmetric_mass_no_couple/fuel_mass_state.csv",
+    "sha256": "420960163537e1d36b17595a8c9a0be795760ec2e86d0984065b323dbab8cd48"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/cancel_water_couple/result.json",
+    "published": "corrected_diagnostics/cancel_water_couple/result.json",
+    "sha256": "ffb98555d72534a55621d0bbbe4d39045481c3f153af28316961a7908d4eb398"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/cancel_water_couple/source_versions.json",
+    "published": "corrected_diagnostics/cancel_water_couple/source_versions.json",
+    "sha256": "03987acd1ac0db16bc1ae5a5c7dcb16eec4964ab1ad705ed8c179d5c13b63c3d"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/cancel_water_couple/run_status.json",
+    "published": "corrected_diagnostics/cancel_water_couple/run_status.json",
+    "sha256": "5717baf270fc12731e4e6ecbe7cac1413b00ec1015739f7aa214ee9ff107e50f"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/cancel_water_couple/stages.json",
+    "published": "corrected_diagnostics/cancel_water_couple/stages.json",
+    "sha256": "a933ea652140a75579863e4b02aa81a943ceafe66a4e0fb3d6e7e5803e26b14c"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/cancel_water_couple/audit_hull.csv",
+    "published": "corrected_diagnostics/cancel_water_couple/audit_hull.csv",
+    "sha256": "8d29fab960e51b5d29576c29603b2169a74e7c51c010177a128cbc69ab5176d0"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/cancel_water_couple/audit_propulsion.csv",
+    "published": "corrected_diagnostics/cancel_water_couple/audit_propulsion.csv",
+    "sha256": "0c929ddcdd58033523cc45d8b082bed2fd9a3870f647f778eb582182899e2816"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/cancel_water_couple/audit_appendages.csv",
+    "published": "corrected_diagnostics/cancel_water_couple/audit_appendages.csv",
+    "sha256": "e96013dd88374b47cd3e2897b7bc9a02b6fb2f79cb7baebf0b6e727831889bad"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/cancel_water_couple/propulsion_state.csv",
+    "published": "corrected_diagnostics/cancel_water_couple/propulsion_state.csv",
+    "sha256": "2d80e2479545a08bf90640cc3aa436d6dfb0d5dacc4b38fc655ea580a4900716"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/cancel_water_couple/fuel_mass_state.csv",
+    "published": "corrected_diagnostics/cancel_water_couple/fuel_mass_state.csv",
+    "sha256": "d3315444f5e33e3763a508b2b0b37432fdb4e85dd3691c9c833cf1599119e575"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/geometry_only/result.json",
+    "published": "corrected_diagnostics/geometry_only/result.json",
+    "sha256": "bea31a38991487d843d03e55729f01b75eb44c09333d0e274643fb43fadb6f30"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/geometry_only/source_versions.json",
+    "published": "corrected_diagnostics/geometry_only/source_versions.json",
+    "sha256": "af48c1992fd00c7b6843d9bb0f4c0c11447eec9ff15f548411e0c6ec1edc3b49"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/geometry_only/run_status.json",
+    "published": "corrected_diagnostics/geometry_only/run_status.json",
+    "sha256": "e1cc87a9c0352182ecf95d195a0d0527d3475f46d348eb9790a8210bf317f775"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/geometry_only/stages.json",
+    "published": "corrected_diagnostics/geometry_only/stages.json",
+    "sha256": "bf2eb76d83fb93d10c664bc5c789b28273805330e48b601944408d00a72ecac4"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/geometry_only/audit_hull.csv",
+    "published": "corrected_diagnostics/geometry_only/audit_hull.csv",
+    "sha256": "549e4f6da002a20dbdf0c5e139dd8bf3609a8250879c15cab04cb65c5155dbaf"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/geometry_only/audit_propulsion.csv",
+    "published": "corrected_diagnostics/geometry_only/audit_propulsion.csv",
+    "sha256": "db05ac170f2e0488ff48593ed87296935a321a2aaa50f9539734b47bdadac5fd"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/geometry_only/audit_appendages.csv",
+    "published": "corrected_diagnostics/geometry_only/audit_appendages.csv",
+    "sha256": "756ac6320a17b983d4c4a6f538ab956fd607a568a24aa2e780ed8f2d9844a06d"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/geometry_only/propulsion_state.csv",
+    "published": "corrected_diagnostics/geometry_only/propulsion_state.csv",
+    "sha256": "efb5c7bc41ae1dfa903cb38799f7097b344c062594a93059de1bda7341c16a0d"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/geometry_only/fuel_mass_state.csv",
+    "published": "corrected_diagnostics/geometry_only/fuel_mass_state.csv",
+    "sha256": "956e3e51da2c28c76efa9bbda91351e2d247d1e76aaa4892862a71dc780fc7d7"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/nominal/result.json",
+    "published": "corrected_diagnostics/nominal/result.json",
+    "sha256": "c019746ec385f5b8ee7c75b15fd3f7d04d2734fcb65fab26db143e07770d52dd"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/nominal/source_versions.json",
+    "published": "corrected_diagnostics/nominal/source_versions.json",
+    "sha256": "e7c453a2eb8e99ce6da90540f7c60241186e59cdf8ef007a3a29ba3e800cbec8"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/nominal/run_status.json",
+    "published": "corrected_diagnostics/nominal/run_status.json",
+    "sha256": "919fc7f594b744802fefa07e6c18e55b2b83b2972534899ecb6d9a620011f2ef"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/nominal/stages.json",
+    "published": "corrected_diagnostics/nominal/stages.json",
+    "sha256": "bf2eb76d83fb93d10c664bc5c789b28273805330e48b601944408d00a72ecac4"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/nominal/audit_hull.csv",
+    "published": "corrected_diagnostics/nominal/audit_hull.csv",
+    "sha256": "de4c857251b78399ac80e4403254bea1f24a8567e892ab259f6034d47a3d540f"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/nominal/audit_propulsion.csv",
+    "published": "corrected_diagnostics/nominal/audit_propulsion.csv",
+    "sha256": "693d38ce1be18f48a72d52a18b9dca0b43337c91b1902c08a4f055feb8c525d3"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/nominal/audit_appendages.csv",
+    "published": "corrected_diagnostics/nominal/audit_appendages.csv",
+    "sha256": "f34fd3e2759be0e5ffd6e8bd6f91e3c7880c92f8c9e1ef3bba96e6c7e52b570a"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/nominal/propulsion_state.csv",
+    "published": "corrected_diagnostics/nominal/propulsion_state.csv",
+    "sha256": "4dabb29a390cf00e7739d4a2cbf230c7fa7f02c5480d8b200e741d893c11c057"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/nominal/fuel_mass_state.csv",
+    "published": "corrected_diagnostics/nominal/fuel_mass_state.csv",
+    "sha256": "ccdd4b20c564f199da2f25013d83766c8157630e53c1461e2d2ea20e5b0e4231"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/reverse_water_couple/result.json",
+    "published": "corrected_diagnostics/reverse_water_couple/result.json",
+    "sha256": "b3f80d26e05e99636723a2aeb629fe09b7b4caf52853e77592b78582d154d355"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/reverse_water_couple/source_versions.json",
+    "published": "corrected_diagnostics/reverse_water_couple/source_versions.json",
+    "sha256": "92f26c7d763cd56aaf5ed1ff5c68435603432d9712961d08ca47a7a113ef9f03"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/reverse_water_couple/run_status.json",
+    "published": "corrected_diagnostics/reverse_water_couple/run_status.json",
+    "sha256": "5d784678d3e8e71fc88b1759c9454c710ee6d792f3d2ee3f3e287ade342032d4"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/reverse_water_couple/stages.json",
+    "published": "corrected_diagnostics/reverse_water_couple/stages.json",
+    "sha256": "a933ea652140a75579863e4b02aa81a943ceafe66a4e0fb3d6e7e5803e26b14c"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/reverse_water_couple/audit_hull.csv",
+    "published": "corrected_diagnostics/reverse_water_couple/audit_hull.csv",
+    "sha256": "3e4f310c8e86a690b6795c00e28866729a461147bec1c4c94ed5cfda93ffb666"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/reverse_water_couple/audit_propulsion.csv",
+    "published": "corrected_diagnostics/reverse_water_couple/audit_propulsion.csv",
+    "sha256": "65bfd36de3d90b09007bdc1abfabf79d887b114d011a06ec094501a084c898fe"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/reverse_water_couple/audit_appendages.csv",
+    "published": "corrected_diagnostics/reverse_water_couple/audit_appendages.csv",
+    "sha256": "23530b191797ed3e5b828fc3fca1ca1e79011a0fce0be5a4c382e64de88cb00f"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/reverse_water_couple/propulsion_state.csv",
+    "published": "corrected_diagnostics/reverse_water_couple/propulsion_state.csv",
+    "sha256": "c206c67fa58e85e7b2fc373aa3612e41a857c684c06d90ea2805499e42004e4f"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/reverse_water_couple/fuel_mass_state.csv",
+    "published": "corrected_diagnostics/reverse_water_couple/fuel_mass_state.csv",
+    "sha256": "fb6b9454a6361c6020102462aeb1682b0df79a1b99139254b25df5a3debf5a84"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/symmetric_mass/result.json",
+    "published": "corrected_diagnostics/symmetric_mass/result.json",
+    "sha256": "4e1298c50693266d0e2d4038a59609be382f1684da26c6d6f789dab56ec07765"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/symmetric_mass/source_versions.json",
+    "published": "corrected_diagnostics/symmetric_mass/source_versions.json",
+    "sha256": "b041ef90ce43e6ac652711998ca2c4ba97f7584d5321f9b3f471bc2257827680"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/symmetric_mass/run_status.json",
+    "published": "corrected_diagnostics/symmetric_mass/run_status.json",
+    "sha256": "eb97d739582d31981120995f3e8654d77d5f43872160750bcf7cdb877ef0ed0f"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/symmetric_mass/stages.json",
+    "published": "corrected_diagnostics/symmetric_mass/stages.json",
+    "sha256": "a933ea652140a75579863e4b02aa81a943ceafe66a4e0fb3d6e7e5803e26b14c"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/symmetric_mass/audit_hull.csv",
+    "published": "corrected_diagnostics/symmetric_mass/audit_hull.csv",
+    "sha256": "3d01e31d79b964b1ca1f4371df2e9b47d622deb1474547f0b6fafe41b362d6a6"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/symmetric_mass/audit_propulsion.csv",
+    "published": "corrected_diagnostics/symmetric_mass/audit_propulsion.csv",
+    "sha256": "cb6cd733b1feb57055cc60692db5630b4f2e7c5b3ae96f5beeb28a3d6ce8e4c9"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/symmetric_mass/audit_appendages.csv",
+    "published": "corrected_diagnostics/symmetric_mass/audit_appendages.csv",
+    "sha256": "79c8c2ab539f46001abf9d54dfda1924ed20501650a93f2732fe0617ce7056a2"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/symmetric_mass/propulsion_state.csv",
+    "published": "corrected_diagnostics/symmetric_mass/propulsion_state.csv",
+    "sha256": "3fbf0dd293c25fd76aa029f2d6b2137c5643fdaf6c26a75f577a01431f77433a"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/symmetric_mass/fuel_mass_state.csv",
+    "published": "corrected_diagnostics/symmetric_mass/fuel_mass_state.csv",
+    "sha256": "88230af7f3c956b612f089cfccf2b817aa88559a6009a92d36fffeec21045f8b"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/symmetric_mass_no_couple/result.json",
+    "published": "corrected_diagnostics/symmetric_mass_no_couple/result.json",
+    "sha256": "4967ae46f2eeec1f1405870e1b5432f5cbb348bd0a950b8ae2829062e795927d"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/symmetric_mass_no_couple/source_versions.json",
+    "published": "corrected_diagnostics/symmetric_mass_no_couple/source_versions.json",
+    "sha256": "daf732e42e800489d3963f5083ab584d9b1af20b845b4b24836e0875dd9ab942"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/symmetric_mass_no_couple/run_status.json",
+    "published": "corrected_diagnostics/symmetric_mass_no_couple/run_status.json",
+    "sha256": "b1380abea354500717a3aa031a9bd12a6b6f163b34b406861008ce0b1a7c13dc"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/symmetric_mass_no_couple/stages.json",
+    "published": "corrected_diagnostics/symmetric_mass_no_couple/stages.json",
+    "sha256": "e7a9b3c058c05c1d7b222f8fd5feeda2f4f6ca22bbcfe99ab3b030080bdff635"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/symmetric_mass_no_couple/audit_hull.csv",
+    "published": "corrected_diagnostics/symmetric_mass_no_couple/audit_hull.csv",
+    "sha256": "107334d740ba6d79da3d6f1664b20072de35b801ef8825cf199146d696654d6b"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/symmetric_mass_no_couple/audit_propulsion.csv",
+    "published": "corrected_diagnostics/symmetric_mass_no_couple/audit_propulsion.csv",
+    "sha256": "871f4a3620f0db860441f4bd0f4adff9ecc60901cc89d4b895b6734e163e0dc3"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/symmetric_mass_no_couple/audit_appendages.csv",
+    "published": "corrected_diagnostics/symmetric_mass_no_couple/audit_appendages.csv",
+    "sha256": "c155e7dcf13791d8e67e556047166b4faa72b204cd8d61666fabfdaa741964c8"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/symmetric_mass_no_couple/propulsion_state.csv",
+    "published": "corrected_diagnostics/symmetric_mass_no_couple/propulsion_state.csv",
+    "sha256": "7693218845ab62eae5ac250fe321365107f0bf923ffd21a01d89dd8fef435371"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/corrected_diagnostics/symmetric_mass_no_couple/fuel_mass_state.csv",
+    "published": "corrected_diagnostics/symmetric_mass_no_couple/fuel_mass_state.csv",
+    "sha256": "f742e64c63afb21f9b0c8ec64668ffa5603359c1f980873afa5bc08836fb8aa0"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/maneuver_assessment.json",
+    "published": "maneuver_assessment.json",
+    "sha256": "c90cb5be3259fb6b47d94dcdeba812b648496267e69125c472009128cd47b283"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/public_cli/result.json",
+    "published": "public_cli.json",
+    "sha256": "cfdd7730e4d5715cce392b11aedf591f651022481d9867a87ccca4a06a4f2841"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/acceptance_v1/maneuver_acceptance.json",
+    "published": "acceptance_v1/maneuver_acceptance.json",
+    "sha256": "4df0d723f8cbdff5346d8e5cd4d5948048dec96c28112284977d97eaa0f7363b"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/acceptance_v1/assess_maneuvers.py",
+    "published": "acceptance_v1/assess_maneuvers.py",
+    "sha256": "7f607ebdfad7dad56da24dafabf5c7feddd50917a1485918918b4f8e08740f19"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/acceptance_v1/maneuver_assessment.json",
+    "published": "acceptance_v1/maneuver_assessment.json",
+    "sha256": "a4f6881d0c4a679b61ca9fc73bba7b8e346c0d623710c964448f8aa17bae785f"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/astern_left/result.json",
+    "published": "maneuvers/astern_left/result.json",
+    "sha256": "329a598260e0f780a43251bdeed4387c93cde8b9b95245d95bc5804f53c2ff0b"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/astern_left/stages.json",
+    "published": "maneuvers/astern_left/stages.json",
+    "sha256": "ce2ee1d6f8d41bd1ee52997aa349606138eef0a2ecaeb1f0e1d530ee35b3feff"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/astern_left/source_versions.json",
+    "published": "maneuvers/astern_left/source_versions.json",
+    "sha256": "e7485ab621e08f1e1221c9958e7b0b133a872d5439621c604651166e4f38cd99"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/astern_left/propulsion_state.csv",
+    "published": "maneuvers/astern_left/propulsion_state.csv",
+    "sha256": "20b474fe5aedafa345890fc582d365ab672cb75d3101a114259cd36cb4902cf6"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/astern_left/actuators_state.csv",
+    "published": "maneuvers/astern_left/actuators_state.csv",
+    "sha256": "baeb9a9708267293782b01306ce2a36408b8f0f9c1e90326dc5185abfc4565b2"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/astern_right/result.json",
+    "published": "maneuvers/astern_right/result.json",
+    "sha256": "4d679462a469abf78e6241fb6b077aec0c5d2b24d54cd59635d2fd3aa80cc575"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/astern_right/stages.json",
+    "published": "maneuvers/astern_right/stages.json",
+    "sha256": "5148772720d876eb7af31c894a33439a47b66f840d7fe4e561cd30499614ba23"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/astern_right/source_versions.json",
+    "published": "maneuvers/astern_right/source_versions.json",
+    "sha256": "4759a04a962758b5672187acc29808b235dc444416fb0b6761a7da5361ad8c60"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/astern_right/propulsion_state.csv",
+    "published": "maneuvers/astern_right/propulsion_state.csv",
+    "sha256": "fe0e31448a4c7ac884ea6fc59e0c952151d2d812f04aaede4b777ac34568feff"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/astern_right/actuators_state.csv",
+    "published": "maneuvers/astern_right/actuators_state.csv",
+    "sha256": "5161f07209c66006379228201c50ef7b9ee436faa497ea6a3183d137718510de"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/brake_100/result.json",
+    "published": "maneuvers/brake_100/result.json",
+    "sha256": "291f9f3f7d80ad275086e8411537b2adc0a58023b4252364bfee94b473536e96"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/brake_100/stages.json",
+    "published": "maneuvers/brake_100/stages.json",
+    "sha256": "4e25c3694aadc6c76e8370208a1dfb3f8759da6faff220a97f7713ad544328c7"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/brake_100/source_versions.json",
+    "published": "maneuvers/brake_100/source_versions.json",
+    "sha256": "9f1f72c66d6bbcd05800c77c12111cd8a6df0f005f2dc52a7224f19d450a5e98"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/brake_100/propulsion_state.csv",
+    "published": "maneuvers/brake_100/propulsion_state.csv",
+    "sha256": "660920cb07856d0ba69a0ef8cba9455a76ae37c6578c59545eeac83195387e64"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/brake_100/actuators_state.csv",
+    "published": "maneuvers/brake_100/actuators_state.csv",
+    "sha256": "e1f0f1efc9ec75db3aa5b9c4abbcacc661ac41ea7e63da8429bbc34b918590b4"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/coast_100/result.json",
+    "published": "maneuvers/coast_100/result.json",
+    "sha256": "f257c744d8217d2f4ee32f86b2853a710401291c0fcf8b13e4fa49f3d91d4572"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/coast_100/stages.json",
+    "published": "maneuvers/coast_100/stages.json",
+    "sha256": "fe9e0b22915e23276264f76765696fd228c320771dc1510e4b6735d14030733c"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/coast_100/source_versions.json",
+    "published": "maneuvers/coast_100/source_versions.json",
+    "sha256": "7d8a4d4fb6b952db78b1ad527756f4dd5aa8ce77cbb97a040e8bc2d7eb2ed232"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/coast_100/propulsion_state.csv",
+    "published": "maneuvers/coast_100/propulsion_state.csv",
+    "sha256": "a7018779566a6875928b17071f933bc7f79a17fc3f856a72e39541d44bdc7dc2"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/coast_100/actuators_state.csv",
+    "published": "maneuvers/coast_100/actuators_state.csv",
+    "sha256": "513a4bc6074a8b6422120c0a63e966e982c108cf2dc3d8365be06a164d064f5b"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/loaded_low_fuel/result.json",
+    "published": "maneuvers/loaded_low_fuel/result.json",
+    "sha256": "30c9dc08c719d18d30a08e8f252bb0540578b7fe1a255c79825c7316bdc09daf"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/loaded_low_fuel/stages.json",
+    "published": "maneuvers/loaded_low_fuel/stages.json",
+    "sha256": "fc2816ccf18ea67a9b1ad9fb048d449646d1f813bb682485b28ba76074e79aeb"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/loaded_low_fuel/source_versions.json",
+    "published": "maneuvers/loaded_low_fuel/source_versions.json",
+    "sha256": "0c433209e2193db5eaf54efbbdc1e48b5bb20eaca59c8d444cd0afba749fc14b"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/loaded_low_fuel/propulsion_state.csv",
+    "published": "maneuvers/loaded_low_fuel/propulsion_state.csv",
+    "sha256": "c648aecc937255d0ea98ad31458487279c0b588d355751f8c25139bd54b1fcbc"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/loaded_low_fuel/actuators_state.csv",
+    "published": "maneuvers/loaded_low_fuel/actuators_state.csv",
+    "sha256": "1d4f589a3a56f56a6188d59983b6eeb94383053e29d4202ce2abd95fb6058eba"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/neutral_035/result.json",
+    "published": "maneuvers/neutral_035/result.json",
+    "sha256": "85a8dbee052e5d25fba5b75540bd33f0b722f58c3d9123b9bf2e48c34796ebe6"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/neutral_035/stages.json",
+    "published": "maneuvers/neutral_035/stages.json",
+    "sha256": "e81571661c064551f73476632c31c7ba26e1a3e833eb1dfe0c45b2006d21b87a"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/neutral_035/source_versions.json",
+    "published": "maneuvers/neutral_035/source_versions.json",
+    "sha256": "6840389c955426084f27db374640a15169fccddf179b370fc208c9633c6cd291"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/neutral_035/propulsion_state.csv",
+    "published": "maneuvers/neutral_035/propulsion_state.csv",
+    "sha256": "eea5bcf3a44d90ba9e03e0d1f151b6ec1a82c1db5fd68a160928c6e32e46e280"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/neutral_035/actuators_state.csv",
+    "published": "maneuvers/neutral_035/actuators_state.csv",
+    "sha256": "3d164cb0908f1e5f389031e651651e0f4fb6b9b3179803e19d7cf8a270228e9a"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/neutral_065/result.json",
+    "published": "maneuvers/neutral_065/result.json",
+    "sha256": "ff00516860521f755f69024cc24ded5c2e68ec4fd1ccf892c39667fa670e59e7"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/neutral_065/stages.json",
+    "published": "maneuvers/neutral_065/stages.json",
+    "sha256": "46dd050b6d814488fb2b7e6aa4bf48794bccd6331e222333c6346476279c1fd6"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/neutral_065/source_versions.json",
+    "published": "maneuvers/neutral_065/source_versions.json",
+    "sha256": "c8301c72e3b5164ccdb34fd122764ae5448c2f6f68bbaae05d607d6459d2baaa"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/neutral_065/propulsion_state.csv",
+    "published": "maneuvers/neutral_065/propulsion_state.csv",
+    "sha256": "46c2dbe9660e37e28d58a1c6b73fbdd18beaf40f1a93d813501e2caa1c24b48b"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/neutral_065/actuators_state.csv",
+    "published": "maneuvers/neutral_065/actuators_state.csv",
+    "sha256": "d5f659308480609df3042fb4bff07784be19fe55a558a5e00bd147641e6e0364"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/neutral_100/result.json",
+    "published": "maneuvers/neutral_100/result.json",
+    "sha256": "d7edd794451f837219f368f04dd9a79a9208c41248f72de35eca035389221ebb"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/neutral_100/stages.json",
+    "published": "maneuvers/neutral_100/stages.json",
+    "sha256": "078b0f6adca13f60aa6ee27cdd98fceb3e4853b7d4de42bdb149aee512e42187"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/neutral_100/source_versions.json",
+    "published": "maneuvers/neutral_100/source_versions.json",
+    "sha256": "0a9690ae68c0ee0784f4130602e82128abaeca7b5c3c231c97104cc195a215ef"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/neutral_100/propulsion_state.csv",
+    "published": "maneuvers/neutral_100/propulsion_state.csv",
+    "sha256": "5ce96fc6231346a01181590239d38208a31a1337439114cfcd55b78e6342c4ab"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/neutral_100/actuators_state.csv",
+    "published": "maneuvers/neutral_100/actuators_state.csv",
+    "sha256": "c14e258b69912f1b0222deb38817ef0649702a69d9a03f4bc6061f144ad9931d"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_055_left/result.json",
+    "published": "maneuvers/turn_055_left/result.json",
+    "sha256": "0448736b9077f42002ad6f10693ee7526a5cd005c5e1b705a4b69728c219e83b"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_055_left/stages.json",
+    "published": "maneuvers/turn_055_left/stages.json",
+    "sha256": "f78321cd0c3ea0d0d9a04fdb956e7189909847d036c316fae9cc3ee533f77cf3"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_055_left/source_versions.json",
+    "published": "maneuvers/turn_055_left/source_versions.json",
+    "sha256": "a20ea1e0eaf3c2d64f85e3352118adc2aa4cdbae79c0cff881fe170c31d2cef6"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_055_left/propulsion_state.csv",
+    "published": "maneuvers/turn_055_left/propulsion_state.csv",
+    "sha256": "670de83ba3a4888bba5d72c0b582834d0a9f909246abb0596a9df03f91a0ca72"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_055_left/actuators_state.csv",
+    "published": "maneuvers/turn_055_left/actuators_state.csv",
+    "sha256": "60bc45d4b90a3aea0e0035b455fcb1dfa6d4930c5c2a83a4dc3f02fbe490a3ff"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_055_right/result.json",
+    "published": "maneuvers/turn_055_right/result.json",
+    "sha256": "6dcb36191431eb177831eb70ec4500630c83a76de15bd4b586d408d65bc5feca"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_055_right/stages.json",
+    "published": "maneuvers/turn_055_right/stages.json",
+    "sha256": "7fdb35683f42676fcabee1e414a70eaf985a52a3be8220c6fd5d12a45acb313b"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_055_right/source_versions.json",
+    "published": "maneuvers/turn_055_right/source_versions.json",
+    "sha256": "8f5157fb024191ad54cde607e9b52901d1e911be0e489f5b85650bcc2a43ad55"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_055_right/propulsion_state.csv",
+    "published": "maneuvers/turn_055_right/propulsion_state.csv",
+    "sha256": "e918aa793819754bb4748279a71a8502fa62afe8f03188ba7b3d143428c57c41"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_055_right/actuators_state.csv",
+    "published": "maneuvers/turn_055_right/actuators_state.csv",
+    "sha256": "ccf87270e64bfebae90006f19e3b664ecf7a928debc67b2412c96833d1f35e52"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_100_left/result.json",
+    "published": "maneuvers/turn_100_left/result.json",
+    "sha256": "cc846a8c003199b229c2656267ec5f6be9e2f6edad690de729d58b447cc682c5"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_100_left/stages.json",
+    "published": "maneuvers/turn_100_left/stages.json",
+    "sha256": "e5ad5e08d0d85510303ac67e62000c09d2bec1218a383741e79186b4c4758124"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_100_left/source_versions.json",
+    "published": "maneuvers/turn_100_left/source_versions.json",
+    "sha256": "baa7349bf9a624ab60cbe5babf5206431732394f24c1f2bb86a2964893caa850"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_100_left/propulsion_state.csv",
+    "published": "maneuvers/turn_100_left/propulsion_state.csv",
+    "sha256": "6652588bd461ba25435d6936c46f8806dc22a33c531af4fb43fadc7db0d315f1"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_100_left/actuators_state.csv",
+    "published": "maneuvers/turn_100_left/actuators_state.csv",
+    "sha256": "101aa86c644a2d9cd6fff0cefe3c5973f3b0899ed71ae6d4f90207dda646bdeb"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_100_right/result.json",
+    "published": "maneuvers/turn_100_right/result.json",
+    "sha256": "036a7087f85f834b32f605e4d3a37428b620f698240079655a7d9488b81cd557"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_100_right/stages.json",
+    "published": "maneuvers/turn_100_right/stages.json",
+    "sha256": "3477bc0748ec3dccdc7181eb8f752946b8c8af0096956cd53b61052209a357e4"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_100_right/source_versions.json",
+    "published": "maneuvers/turn_100_right/source_versions.json",
+    "sha256": "de500b2886b4fbfa4b23ce8a1dd65168ff6dfa2af4361e11fbd90659ecea1016"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_100_right/propulsion_state.csv",
+    "published": "maneuvers/turn_100_right/propulsion_state.csv",
+    "sha256": "358b13baba153e90cd9080fe61ad2dcfe150febd5fb8089728d24bf53f62bee6"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/turn_100_right/actuators_state.csv",
+    "published": "maneuvers/turn_100_right/actuators_state.csv",
+    "sha256": "d7c53a9f301ac35c1a428edb6dc356ce54d078f0afe47a9400695a78a867509a"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/zigzag_10_10/result.json",
+    "published": "maneuvers/zigzag_10_10/result.json",
+    "sha256": "388558bd2eb5128852e39e6700d180267113f8438ad07710343ed489f0db5eb3"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/zigzag_10_10/stages.json",
+    "published": "maneuvers/zigzag_10_10/stages.json",
+    "sha256": "4eaf957854d1cd22310d02d7eaa1226b14de800a6fe524b1d2359db81e44df2a"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/zigzag_10_10/source_versions.json",
+    "published": "maneuvers/zigzag_10_10/source_versions.json",
+    "sha256": "e97d2e00960882aca5f18bbf6d9d7fa8a8cee883d72dbf58ceba4453b7e4d975"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/zigzag_10_10/propulsion_state.csv",
+    "published": "maneuvers/zigzag_10_10/propulsion_state.csv",
+    "sha256": "1be141e9bc3cfafd4570d2d942e614fe52d9e9b8aa3afd847d66c9b205cb34e6"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/maneuvers/zigzag_10_10/actuators_state.csv",
+    "published": "maneuvers/zigzag_10_10/actuators_state.csv",
+    "sha256": "ea2022c29703adc51bd00afcd8c20cad19545ad28e692d48ae3f7ab6dbe3907b"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/build_final.log",
+    "published": "checks/build_final.log",
+    "sha256": "f589c70c3dfe84e0f2067b7f13c31c52744004ebdd8bf301851a884d83fb8763"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/tests.log",
+    "published": "checks/tests.log",
+    "sha256": "17fe41b40f2cca71789a82b1134e3343a416e56de4d8b7e52b56bff34e1830fc"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/python_tests_final.log",
+    "published": "checks/python_tests_final.log",
+    "sha256": "ee019b48f4a7eb99f6ac2335fd1921cbb9d1cac4737acf0f42f29948d630c751"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/metrics_tests_final.log",
+    "published": "checks/metrics_tests_final.log",
+    "sha256": "921b60a7fd52e978fbb551cacd29df2d6708879400278e1fcc70fceeb0c6f8e0"
+  },
+  {
+    "source": "artifacts/force_audit_2026-11-21/wrench_test_final.log",
+    "published": "checks/wrench_test_final.log",
+    "sha256": "65761f7975c6ea00689a8b6b0dcfe6d2bf67ee4c117080421f5b7419ff114d8a"
+  }
+]

@@ -1,8 +1,18 @@
+/** @file test_appendages.cc
+ * @brief 当前模块的解析回归验证。
+ */
 #include "AppendageHydrodynamics.hh"
 #include <stdexcept>
 #include <iostream>
 using namespace usv;
+
+/** @brief 校验测试判据，失败时终止本项验证。
+ * @param x 应为真的测试判据。
+ */
 void check(bool x){if(!x)throw std::runtime_error("Appendage invariant failed");}
+
+/** @brief 执行该文件定义的解析或场景回归验证。
+ */
 int main(){
  std::vector<V> p{{0,0,-1},{1,0,-1},{1,0,1},{0,0,1}};
  auto wet=ClipAppendage(p,{1,1,-1,-1});check(std::abs(wet.area-1)<1e-12);check(std::abs(wet.center.Z()+.5)<1e-12);check(std::abs(wet.span-1)<1e-12);

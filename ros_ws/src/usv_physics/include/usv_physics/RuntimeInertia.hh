@@ -1,3 +1,6 @@
+/** @file RuntimeInertia.hh
+ * @brief 无人艇RuntimeInertia接口与实现；工程模型边界见项目文档。
+ */
 #pragma once
 #include <gz/sim/components/Inertial.hh>
 namespace usv::physics {

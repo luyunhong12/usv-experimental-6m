@@ -297,7 +297,7 @@
     </model>
     <include>
       <uri>/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/models/usv_azimuth_trial.sdf</uri>
-      <pose>0 0 -0.21088824982 0.0149558769007 -0.00479741668289 0</pose>
+      <pose>0 0 -0.213632549026 1.34672912567e-17 -0.00285739854607 0</pose>
     </include>
   </world>
 </sdf>

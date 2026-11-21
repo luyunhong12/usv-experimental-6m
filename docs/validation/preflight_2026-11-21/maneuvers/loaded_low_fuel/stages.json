@@ -1,0 +1,14 @@
+[
+  {
+    "name": "neutral",
+    "duration": 120,
+    "mode": "direct",
+    "throttle": 1,
+    "steering_deg": 0,
+    "index": 0,
+    "start_sim": 1.136,
+    "end_sim": 121.152,
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  }
+]

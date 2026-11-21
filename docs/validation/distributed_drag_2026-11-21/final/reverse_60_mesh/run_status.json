@@ -1,0 +1,23 @@
+{
+  "case": "reverse_60_mesh",
+  "spec": {
+    "kind": "maneuver_audit",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "reverse",
+        "duration": 100,
+        "mode": "direct",
+        "throttle": -0.6,
+        "steering_deg": 0
+      }
+    ],
+    "hydro_overrides": {
+      "pressure_max_edge": 0.175
+    }
+  },
+  "finished_stages": 1,
+  "start_sim": 1.136,
+  "failure": null,
+  "bridge_resumed": false
+}

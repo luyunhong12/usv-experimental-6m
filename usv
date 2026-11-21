@@ -10,7 +10,8 @@ case "$command" in
   drive) source /opt/ros/jazzy/setup.bash; source "$ROOT/ros_ws/install/setup.bash"; export GZ_PARTITION="${GZ_PARTITION:-usv_platform15}"; exec python3 "$ROOT/tools/control/drive_ros.py" "$@" ;;
   energy) source /opt/ros/jazzy/setup.bash; source "$ROOT/ros_ws/install/setup.bash"; export GZ_PARTITION="${GZ_PARTITION:-usv_platform15}"; exec python3 "$ROOT/tools/control/energy_console.py" "$@" ;;
   test) exec bash "$ROOT/tools/setup/test.sh" "$@" ;;
+  review) exec bash "$ROOT/tools/analysis/review.sh" "$@" ;;
   help|--help|-h) printf '%s
-' 'Usage: ./usv {build|run|drive|energy|test}' '  ./usv build' '  ./usv run                    # Sydney GUI, ROS control' '  ./usv run headless:=True     # no GUI' '  ./usv drive --throttle 0.3 --duration 10' '  ./usv test                   # unit tests; native integration is documented separately' ;;
+' 'Usage: ./usv {build|run|drive|energy|test|review}' '  ./usv build' '  ./usv run                    # Sydney GUI, ROS control' '  ./usv run headless:=True     # no GUI' '  ./usv drive --throttle 0.3 --duration 10' '  ./usv test                   # unit tests; native integration is documented separately' '  ./usv review --profile quick # manual Code Supervisor checks' ;;
   *) echo "Unknown command: $command" >&2; exit 2 ;;
 esac

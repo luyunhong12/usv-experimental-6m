@@ -1,0 +1,9 @@
+{
+  "base_commit": "27223d3",
+  "local_parser_fix_required": true,
+  "files": {
+    "src/code_supervisor/cpp.py": "e8ae8dec962a07edccd45527aca96a6a0cd1baf5d535a9fee4f983280ed1158b",
+    "tests/test_cpp_regions.py": "a7794237cde1ec44173449d3702153ce6a8d959f8e5bc969907a354e46586dee",
+    "docs/capabilities.md": "852b62bf262e490a109e36894f7e302526f193139233e5ea7f6e8bf2d58654c3"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "neutral_smoke": {
+    "kind": "maneuver_audit",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "duration": 30,
+        "throttle": 0.35,
+        "steering_deg": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "created_utc": "2026-11-21T03:33:46.488050+00:00",
+  "sha256": {
+    "tests/scenarios/maneuver_audit.json": "faeb5f7f0752bb52f50e06652ae3c2f41aaafc8cb845599164313833a5d30fb7",
+    "tests/scenarios/maneuver_acceptance.json": "4df0d723f8cbdff5346d8e5cd4d5948048dec96c28112284977d97eaa0f7363b",
+    "tests/regression/assess_maneuvers.py": "7f607ebdfad7dad56da24dafabf5c7feddd50917a1485918918b4f8e08740f19"
+  }
+}

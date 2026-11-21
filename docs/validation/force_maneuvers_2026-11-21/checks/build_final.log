@@ -1,0 +1,62 @@
+PBR assets current
+{
+  "profile": "ENGINEERING_ESTIMATE_NOT_MEASURED",
+  "sealed_envelope_watertight": true,
+  "max_source_vertex_distance_m": 6.967255752501893e-08,
+  "sealed_envelope_volume_m3": 8.358237950000001,
+  "triangles": 106,
+  "total_trial_mass_kg": 1193.5579401134448,
+  "trial_total_cg_m": [
+    -0.7087639846071212,
+    -0.017456344391320246,
+    0.5016625071491722
+  ],
+  "equilibrium_pose_z_roll_pitch": [
+    -0.20869509518118848,
+    0.011776493650281111,
+    -0.005815797140599119
+  ],
+  "displaced_volume_m3": 1.1935579401134448,
+  "residual": [
+    3.774758283725532e-15,
+    -3.22741833258533e-13,
+    -1.8859913630819847e-14
+  ],
+  "roll_pitch_restoring_stiffness_Nm_rad": [
+    17343.079228810915,
+    168120.76012387127
+  ],
+  "limitations": [
+    "station envelope sealed deck; no flooding",
+    "appendage displacement omitted",
+    "estimated aggregate/mesh inertia; no measured mass distribution",
+    "linear/quadratic damping uncalibrated; constant diagonal added mass trial; VRX distributed hull pressure and deep-water orbital flow; relative current/wind enabled",
+    "propulsion and energy are engineering proxies; fuel inertia uses a quasi-static unbaffled box tank"
+  ]
+}
+Starting >>> vrx_gazebo
+Starting >>> usv_description
+Finished <<< usv_description [0.08s]
+Starting >>> vrx_ros
+Finished <<< vrx_ros [0.08s]
+Starting >>> usv_energy
+Finished <<< usv_energy [0.08s]
+Starting >>> usv_physics
+Finished <<< vrx_gazebo [0.31s]
+Starting >>> wamv_description
+Finished <<< usv_physics [0.09s]
+Starting >>> usv_control
+Finished <<< wamv_description [0.07s]
+Starting >>> wamv_gazebo
+Finished <<< wamv_gazebo [0.06s]
+Starting >>> vrx_gz
+Finished <<< usv_control [0.34s]
+Starting >>> usv_ardupilot
+Finished <<< usv_ardupilot [0.06s]
+Finished <<< vrx_gz [0.35s]
+Starting >>> usv_simulation
+Finished <<< usv_simulation [7.20s]
+Starting >>> usv_bringup
+Finished <<< usv_bringup [0.06s]
+
+Summary: 12 packages finished [8.14s]

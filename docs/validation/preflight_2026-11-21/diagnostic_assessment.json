@@ -1,0 +1,810 @@
+{
+  "execution_fingerprint": "87a5d8de81fabcb4b58e7980e7be3a66a77366ab041ad9a609dab895413fc415",
+  "same_execution_as_maneuvers": true,
+  "scope": "Counterfactual diagnostics, not production configurations or physical calibration",
+  "cases": {
+    "zigzag_legacy": {
+      "passed": false,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "approach_throttle_tracks": true,
+        "approach_servo_tracks": true,
+        "execute_1_throttle_tracks": true,
+        "execute_2_throttle_tracks": true,
+        "execute_3_throttle_tracks": true,
+        "execute_4_throttle_tracks": true,
+        "recover_throttle_tracks": true,
+        "recover_servo_tracks": true,
+        "recover_yaw": true,
+        "recover_steady_speed": true,
+        "recover_forward": true,
+        "recover_return_heading": false,
+        "recover_return_time": true,
+        "execute_1_trigger": true,
+        "execute_2_trigger": true,
+        "execute_3_trigger": true,
+        "execute_4_trigger": true,
+        "zigzag_overshoots": false
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.16185241795256486,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.15000000000000197,
+          "reference_limit_rad_s": 0.15
+        },
+        "approach": {
+          "duration_s": 25.067999999999998,
+          "tail_surge_m_s": 2.1541451626409454,
+          "tail_speed_std_m_s": 0.001039378946657558,
+          "tail_yaw_deg_s": -0.051952888241924955,
+          "heading_change_deg": -2.540267185162789,
+          "distance_m": 48.17780457256813
+        },
+        "execute_1": {
+          "duration_s": 2.868000000000002,
+          "tail_surge_m_s": 2.1428112430993536,
+          "tail_speed_std_m_s": 0.015191470565197186,
+          "tail_yaw_deg_s": 3.39692599013795,
+          "heading_change_deg": 10.47537242374051,
+          "distance_m": 6.154432231597628
+        },
+        "execute_2": {
+          "duration_s": 7.484000000000002,
+          "tail_surge_m_s": 2.0659163882799643,
+          "tail_speed_std_m_s": 0.036550666673225894,
+          "tail_yaw_deg_s": -3.444245256115413,
+          "heading_change_deg": -21.235916905682032,
+          "distance_m": 15.603949886328257
+        },
+        "execute_3": {
+          "duration_s": 8.719999999999999,
+          "tail_surge_m_s": 1.986304614857601,
+          "tail_speed_std_m_s": 0.0582038147616218,
+          "tail_yaw_deg_s": 3.5826918304230566,
+          "heading_change_deg": 22.070438225655515,
+          "distance_m": 17.547671449032343
+        },
+        "execute_4": {
+          "duration_s": 8.716000000000001,
+          "tail_surge_m_s": 1.970756374871153,
+          "tail_speed_std_m_s": 0.07295486450049722,
+          "tail_yaw_deg_s": -3.64103144865061,
+          "heading_change_deg": -21.859820112404254,
+          "distance_m": 17.413630995049253
+        },
+        "recover": {
+          "duration_s": 45.1,
+          "tail_surge_m_s": 2.1546382628566993,
+          "tail_speed_std_m_s": 9.985457492296788e-09,
+          "tail_yaw_deg_s": -0.05219227542590241,
+          "heading_change_deg": -52.61074682446212,
+          "distance_m": 96.10329723010184,
+          "extra_heading_deg": 52.61074682446212,
+          "settling_time_s": 6.872,
+          "peak_yaw_deg_s": 16.18058253677873
+        },
+        "zigzag_overshoots_deg": [
+          24.7755038965243,
+          36.85141338738305,
+          38.74210129414274
+        ]
+      }
+    },
+    "zigzag_feedforward": {
+      "passed": false,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "approach_throttle_tracks": true,
+        "approach_servo_tracks": true,
+        "execute_1_throttle_tracks": true,
+        "execute_2_throttle_tracks": true,
+        "execute_3_throttle_tracks": true,
+        "execute_4_throttle_tracks": true,
+        "recover_throttle_tracks": true,
+        "recover_servo_tracks": true,
+        "recover_yaw": true,
+        "recover_steady_speed": true,
+        "recover_forward": true,
+        "recover_return_heading": false,
+        "recover_return_time": true,
+        "execute_1_trigger": true,
+        "execute_2_trigger": true,
+        "execute_3_trigger": true,
+        "execute_4_trigger": true,
+        "zigzag_overshoots": false
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.15261424994102593,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.15000000000000197,
+          "reference_limit_rad_s": 0.15
+        },
+        "approach": {
+          "duration_s": 25.056,
+          "tail_surge_m_s": 2.154171039657779,
+          "tail_speed_std_m_s": 0.0009789212032505262,
+          "tail_yaw_deg_s": -0.05189866098902273,
+          "heading_change_deg": -2.506196064982354,
+          "distance_m": 48.134706579133365
+        },
+        "execute_1": {
+          "duration_s": 2.6679999999999993,
+          "tail_surge_m_s": 2.1423029392805257,
+          "tail_speed_std_m_s": 0.01474158056869658,
+          "tail_yaw_deg_s": 3.715640568871081,
+          "heading_change_deg": 10.320250208487654,
+          "distance_m": 5.724088110768122
+        },
+        "execute_2": {
+          "duration_s": 6.972000000000001,
+          "tail_surge_m_s": 2.08222674879718,
+          "tail_speed_std_m_s": 0.031990397126441,
+          "tail_yaw_deg_s": -3.765773035730811,
+          "heading_change_deg": -21.424218414944875,
+          "distance_m": 14.634267495045126
+        },
+        "execute_3": {
+          "duration_s": 8.308,
+          "tail_surge_m_s": 2.015926685502773,
+          "tail_speed_std_m_s": 0.046479709140466195,
+          "tail_yaw_deg_s": 3.660338581892487,
+          "heading_change_deg": 22.031887902699975,
+          "distance_m": 16.941676602450695
+        },
+        "execute_4": {
+          "duration_s": 8.408000000000001,
+          "tail_surge_m_s": 2.00182303905045,
+          "tail_speed_std_m_s": 0.05906475143959223,
+          "tail_yaw_deg_s": -3.654295433145168,
+          "heading_change_deg": -21.64079658994397,
+          "distance_m": 17.036996941158755
+        },
+        "recover": {
+          "duration_s": 45.076,
+          "tail_surge_m_s": 2.1546382537128324,
+          "tail_speed_std_m_s": 1.666736461710489e-08,
+          "tail_yaw_deg_s": -0.05219957028731898,
+          "heading_change_deg": -48.19391691534434,
+          "distance_m": 96.2743891680083,
+          "extra_heading_deg": 48.19391691534433,
+          "settling_time_s": 7.4879999999999995,
+          "peak_yaw_deg_s": 14.793647512039982
+        },
+        "zigzag_overshoots_deg": [
+          19.578926713245945,
+          31.18068436389232,
+          32.99725564403957
+        ]
+      }
+    },
+    "reverse_25": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "reverse_throttle_tracks": true,
+        "reverse_servo_tracks": true,
+        "reverse_astern": true,
+        "reverse_directional_quality": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.002742628910889816,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "reverse": {
+          "duration_s": 100.03200000000001,
+          "tail_surge_m_s": -0.5597186323582344,
+          "tail_speed_std_m_s": 3.7434145080318893e-10,
+          "tail_yaw_deg_s": 0.02473224735831555,
+          "heading_change_deg": 3.1558472594868685,
+          "distance_m": 52.68026089892312
+        }
+      },
+      "force_audit": {
+        "window_sim_s": [
+          87.256,
+          102.08
+        ],
+        "yaw_rate_deg_s": 0.024732247479397746,
+        "speed_km_h": -2.014987076480721,
+        "roll_deg": 0.7069303243755783,
+        "pitch_deg": -1.243106186760523,
+        "components": {
+          "pressure": {
+            "mean_body_wrench_N_Nm": [
+              327.93638005404785,
+              186.45705069159683,
+              15111.333578893935,
+              -8.948762870578928,
+              -20.19582168448508,
+              0.44339423879047823
+            ],
+            "mean_world_vertical_moment_Nm": 3.0591270257692336e-14
+          },
+          "hull_drag": {
+            "mean_body_wrench_N_Nm": [
+              123.01351980922745,
+              -0.6175968794494929,
+              -17.25980566933245,
+              -0.5473857502539112,
+              -57.57747047382228,
+              -2.1768827713673935
+            ],
+            "mean_world_vertical_moment_Nm": -2.8983007696698713
+          },
+          "added_mass": {
+            "mean_body_wrench_N_Nm": [
+              9.456909126388951e-05,
+              0.01693572964865529,
+              -0.00021102073034742232,
+              0.008394955647830283,
+              -1.222495786458477,
+              0.10675859895016532
+            ],
+            "mean_world_vertical_moment_Nm": 0.09182793342186121
+          },
+          "air": {
+            "mean_body_wrench_N_Nm": [
+              0.19188520489262528,
+              -3.0989159713755406e-06,
+              8.258571235729428e-20,
+              1.281829861002362e-08,
+              0.0007937104064383357,
+              -0.0026001659876117426
+            ],
+            "mean_world_vertical_moment_Nm": -0.002589565426875542
+          },
+          "thrust": {
+            "mean_body_wrench_N_Nm": [
+              -124.20608815005637,
+              5.236261831876294e-10,
+              4.3064510291124236e-16,
+              3.3452569023129714e-10,
+              79.35075174784293,
+              1.6813846777782908
+            ],
+            "mean_world_vertical_moment_Nm": 2.659656090913789
+          },
+          "water_couple": {
+            "mean_body_wrench_N_Nm": [
+              0.0,
+              0.0,
+              0.0,
+              9.480520488221465,
+              -3.996782707130624e-11,
+              -3.0658828099728986e-17
+            ],
+            "mean_world_vertical_moment_Nm": 0.20567604072664222
+          },
+          "appendages": {
+            "mean_body_wrench_N_Nm": [
+              0.6254010548658484,
+              0.01572099170706608,
+              -3.566196937484439e-18,
+              0.007233716026321004,
+              -0.3576131943085377,
+              -0.0520319777958318
+            ],
+            "mean_world_vertical_moment_Nm": -0.05627001456311319
+          }
+        },
+        "total_external_world_vertical_moment_Nm": -2.845975365281266e-07,
+        "note": "Gravity has zero resultant moment about whole-vessel COM; joint motor/servo torques are internal. Water-couple overrides are diagnostic counter-couples, not physical propulsion modes."
+      }
+    },
+    "reverse_40": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "reverse_throttle_tracks": true,
+        "reverse_servo_tracks": true,
+        "reverse_astern": true,
+        "reverse_directional_quality": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.002742628910889816,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "reverse": {
+          "duration_s": 100.00800000000001,
+          "tail_surge_m_s": -1.1240269972341073,
+          "tail_speed_std_m_s": 1.0096653137622842e-08,
+          "tail_yaw_deg_s": 0.13750792221923394,
+          "heading_change_deg": 14.282499098044077,
+          "distance_m": 107.84064086867528
+        }
+      },
+      "force_audit": {
+        "window_sim_s": [
+          86.22,
+          101.04
+        ],
+        "yaw_rate_deg_s": 0.13750802567550438,
+        "speed_km_h": -4.046497189694854,
+        "roll_deg": 0.7647211095433581,
+        "pitch_deg": -1.2342798326649147,
+        "components": {
+          "pressure": {
+            "mean_body_wrench_N_Nm": [
+              325.9883386475817,
+              201.93492064923842,
+              15128.824757339944,
+              -26.23402090392199,
+              -54.70159420786128,
+              1.295417673917983
+            ],
+            "mean_world_vertical_moment_Nm": -4.260018264072111e-14
+          },
+          "hull_drag": {
+            "mean_body_wrench_N_Nm": [
+              360.3301024886357,
+              -4.732830804098035,
+              -34.84245230162827,
+              -2.859903992564781,
+              -171.80377541152765,
+              -7.9920367266231755
+            ],
+            "mean_world_vertical_moment_Nm": -10.34352260224084
+          },
+          "added_mass": {
+            "mean_body_wrench_N_Nm": [
+              0.00444424927519233,
+              0.18912343861865083,
+              -0.0026201352907859574,
+              0.09374399717872788,
+              -4.881085682889147,
+              1.6017240449562364
+            ],
+            "mean_world_vertical_moment_Nm": 1.5380987556864452
+          },
+          "air": {
+            "mean_body_wrench_N_Nm": [
+              0.7738329255699241,
+              -0.00015707659678934345,
+              -1.0209570457571833e-18,
+              6.49728724783008e-07,
+              0.003200868176434708,
+              -0.010607478760399598
+            ],
+            "mean_world_vertical_moment_Nm": -0.01056134849772455
+          },
+          "thrust": {
+            "mean_body_wrench_N_Nm": [
+              -364.4075902901117,
+              7.409790446854464e-07,
+              5.74463316422364e-15,
+              4.7338455866506744e-07,
+              232.80675418427305,
+              4.933003626744789
+            ],
+            "mean_world_vertical_moment_Nm": 8.037855341755984
+          },
+          "water_couple": {
+            "mean_body_wrench_N_Nm": [
+              0.0,
+              0.0,
+              0.0,
+              29.034093995068083,
+              -5.903734105480112e-08,
+              -4.520882125448445e-16
+            ],
+            "mean_world_vertical_moment_Nm": 0.6254112477464966
+          },
+          "appendages": {
+            "mean_body_wrench_N_Nm": [
+              2.5216904377818623,
+              -0.07460647522617825,
+              -1.7244837887922216e-17,
+              -0.03389363124318232,
+              -1.4421259958832284,
+              0.17256350657824063
+            ],
+            "mean_world_vertical_moment_Nm": 0.15253513668844965
+          }
+        },
+        "total_external_world_vertical_moment_Nm": -0.00018346886123124647,
+        "note": "Gravity has zero resultant moment about whole-vessel COM; joint motor/servo torques are internal. Water-couple overrides are diagnostic counter-couples, not physical propulsion modes."
+      }
+    },
+    "reverse_60": {
+      "passed": false,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "reverse_throttle_tracks": true,
+        "reverse_servo_tracks": true,
+        "reverse_astern": true,
+        "reverse_directional_quality": false
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.002742628910889816,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "reverse": {
+          "duration_s": 100.012,
+          "tail_surge_m_s": -1.881541719294708,
+          "tail_speed_std_m_s": 3.636424849471691e-06,
+          "tail_yaw_deg_s": 2.482442437830988,
+          "heading_change_deg": 199.73552307699293,
+          "distance_m": 183.506548176572
+        }
+      },
+      "force_audit": {
+        "window_sim_s": [
+          86.324,
+          101.144
+        ],
+        "yaw_rate_deg_s": 2.4824391931517042,
+        "speed_km_h": -6.773550307385241,
+        "roll_deg": 0.7045533887032758,
+        "pitch_deg": -1.2129075279067183,
+        "components": {
+          "pressure": {
+            "mean_body_wrench_N_Nm": [
+              320.8270262905095,
+              186.32937886770867,
+              15151.937484562737,
+              -7.874923965134276,
+              -129.87401686808653,
+              1.7638558333489143
+            ],
+            "mean_world_vertical_moment_Nm": -3.313707333221474e-15
+          },
+          "hull_drag": {
+            "mean_body_wrench_N_Nm": [
+              858.2478714768224,
+              -126.83805727779696,
+              -55.840997741904786,
+              -64.3862063365994,
+              -415.33450350273273,
+              -80.00310202252861
+            ],
+            "mean_world_vertical_moment_Nm": -86.44803641637212
+          },
+          "added_mass": {
+            "mean_body_wrench_N_Nm": [
+              1.647820120050677,
+              5.712258946633548,
+              -0.10513269491242774,
+              2.831076895491734,
+              -13.646523659804638,
+              52.81113367083047
+            ],
+            "mean_world_vertical_moment_Nm": 52.687469779094585
+          },
+          "air": {
+            "mean_body_wrench_N_Nm": [
+              2.1677583135251055,
+              -0.059535620155970595,
+              -5.782411586589357e-19,
+              0.0002462620361898013,
+              0.00896667532575498,
+              -0.07939870067173078
+            ],
+            "mean_world_vertical_moment_Nm": -0.07925946256366175
+          },
+          "thrust": {
+            "mean_body_wrench_N_Nm": [
+              -879.8408771191049,
+              -0.00011573789471359181,
+              2.0403432030333432e-14,
+              -7.394073099546089e-05,
+              562.0983323582019,
+              11.91077651315412
+            ],
+            "mean_world_vertical_moment_Nm": 18.817480563096222
+          },
+          "water_couple": {
+            "mean_body_wrench_N_Nm": [
+              0.0,
+              0.0,
+              0.0,
+              71.69643619690513,
+              9.43124780774148e-06,
+              -1.6730444190531873e-15
+            ],
+            "mean_world_vertical_moment_Nm": 1.5176450977846008
+          },
+          "appendages": {
+            "mean_body_wrench_N_Nm": [
+              7.027011368730567,
+              -4.947116066943627,
+              -1.6046192152785466e-17,
+              -2.2610807702470144,
+              -4.025266892212573,
+              13.612211217664273
+            ],
+            "mean_world_vertical_moment_Nm": 13.510785123192456
+          }
+        },
+        "total_external_world_vertical_moment_Nm": 0.006084684232079664,
+        "note": "Gravity has zero resultant moment about whole-vessel COM; joint motor/servo torques are internal. Water-couple overrides are diagnostic counter-couples, not physical propulsion modes."
+      }
+    },
+    "reverse_60_no_couple": {
+      "passed": false,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "reverse_throttle_tracks": true,
+        "reverse_servo_tracks": true,
+        "reverse_astern": true,
+        "reverse_directional_quality": false
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.002742628910889816,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "reverse": {
+          "duration_s": 100.016,
+          "tail_surge_m_s": -1.8828025824786405,
+          "tail_speed_std_m_s": 9.385046224366697e-06,
+          "tail_yaw_deg_s": 2.323785937536893,
+          "heading_change_deg": 178.721093119813,
+          "distance_m": 183.42693662143205
+        }
+      },
+      "force_audit": {
+        "window_sim_s": [
+          86.528,
+          101.352
+        ],
+        "yaw_rate_deg_s": 2.3237766585737916,
+        "speed_km_h": -6.778089610229908,
+        "roll_deg": 0.48091461251537787,
+        "pitch_deg": -1.212796656902176,
+        "components": {
+          "pressure": {
+            "mean_body_wrench_N_Nm": [
+              320.8071905258349,
+              127.1903338519059,
+              15152.998050414513,
+              59.74227850241087,
+              -129.52248104260192,
+              -0.1776377852672756
+            ],
+            "mean_world_vertical_moment_Nm": 4.795161181705667e-15
+          },
+          "hull_drag": {
+            "mean_body_wrench_N_Nm": [
+              859.2719783605841,
+              -118.30140776895011,
+              -56.89971738528762,
+              -60.12018399420996,
+              -415.3233483737578,
+              -75.31586795789846
+            ],
+            "mean_world_vertical_moment_Nm": -80.05404266324632
+          },
+          "added_mass": {
+            "mean_body_wrench_N_Nm": [
+              1.4613324005288741,
+              5.348867779586659,
+              -0.07582452486368481,
+              2.6512789887187203,
+              -13.801711739958089,
+              50.01582625471518
+            ],
+            "mean_world_vertical_moment_Nm": 49.9431585853807
+          },
+          "air": {
+            "mean_body_wrench_N_Nm": [
+              2.1708868949494105,
+              -0.05317255912186767,
+              -2.264777871414165e-18,
+              0.00021994198841749355,
+              0.008979616331994235,
+              -0.07409140810886654
+            ],
+            "mean_world_vertical_moment_Nm": -0.07399219265172531
+          },
+          "thrust": {
+            "mean_body_wrench_N_Nm": [
+              -879.6266529361,
+              -0.0003041078537569951,
+              -4.803564953211511e-14,
+              -0.00019428344590576173,
+              561.961472320041,
+              11.908400519726916
+            ],
+            "mean_world_vertical_moment_Nm": 16.62104529105156
+          },
+          "water_couple": {
+            "mean_body_wrench_N_Nm": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean_world_vertical_moment_Nm": 0.0
+          },
+          "appendages": {
+            "mean_body_wrench_N_Nm": [
+              7.0362066100017016,
+              -4.966615563795426,
+              -7.565321825787741e-18,
+              -2.270599607014856,
+              -4.03051611213918,
+              13.666185363546601
+            ],
+            "mean_world_vertical_moment_Nm": 13.580761390883858
+          }
+        },
+        "total_external_world_vertical_moment_Nm": 0.016930411418081496,
+        "note": "Gravity has zero resultant moment about whole-vessel COM; joint motor/servo torques are internal. Water-couple overrides are diagnostic counter-couples, not physical propulsion modes."
+      }
+    },
+    "reverse_60_symmetric": {
+      "passed": false,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "reverse_throttle_tracks": true,
+        "reverse_servo_tracks": true,
+        "reverse_astern": true,
+        "reverse_directional_quality": false
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.0032953464888036883,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "reverse": {
+          "duration_s": 100.00800000000001,
+          "tail_surge_m_s": -1.8826730424673688,
+          "tail_speed_std_m_s": 2.0969097560740287e-05,
+          "tail_yaw_deg_s": 2.335342811579209,
+          "heading_change_deg": 159.85240859243487,
+          "distance_m": 183.3973905368531
+        }
+      },
+      "force_audit": {
+        "window_sim_s": [
+          86.22,
+          101.04
+        ],
+        "yaw_rate_deg_s": 2.3353222063831933,
+        "speed_km_h": -6.77762365066639,
+        "roll_deg": 0.04183347705348461,
+        "pitch_deg": -1.2124856432197193,
+        "components": {
+          "pressure": {
+            "mean_body_wrench_N_Nm": [
+              320.7407818141,
+              11.064624174301228,
+              15154.27832129897,
+              -12.646991548020305,
+              -130.030239918961,
+              0.3626131892003887
+            ],
+            "mean_world_vertical_moment_Nm": -3.734666896725179e-15
+          },
+          "hull_drag": {
+            "mean_body_wrench_N_Nm": [
+              859.2055208747255,
+              -118.55051260707675,
+              -58.58978479141844,
+              -59.47633796124991,
+              -414.45652255970305,
+              -63.95263030528263
+            ],
+            "mean_world_vertical_moment_Nm": -65.49937058466402
+          },
+          "added_mass": {
+            "mean_body_wrench_N_Nm": [
+              1.4738211344022223,
+              5.37134929938427,
+              -0.03509162175705293,
+              2.6634488548365054,
+              -14.185399976978083,
+              50.11624663500268
+            ],
+            "mean_world_vertical_moment_Nm": 50.15101650731909
+          },
+          "air": {
+            "mean_body_wrench_N_Nm": [
+              2.1709465180223453,
+              -0.05340085364551547,
+              -1.4937896598689173e-18,
+              0.00022088630165548016,
+              0.008979862955768844,
+              -0.04489592569719049
+            ],
+            "mean_world_vertical_moment_Nm": -0.0448746323240942
+          },
+          "thrust": {
+            "mean_body_wrench_N_Nm": [
+              -879.6568490565367,
+              -0.0006897958705667722,
+              3.783393351694839e-14,
+              -0.0004406854905209596,
+              561.9807635230111,
+              0.001918740919600401
+            ],
+            "mean_world_vertical_moment_Nm": 0.41213715838824616
+          },
+          "water_couple": {
+            "mean_body_wrench_N_Nm": [
+              0.0,
+              0.0,
+              0.0,
+              71.69643622048727,
+              5.6221914660703476e-05,
+              -3.085494822604081e-15
+            ],
+            "mean_world_vertical_moment_Nm": 1.5171172209949546
+          },
+          "appendages": {
+            "mean_body_wrench_N_Nm": [
+              7.036102149537545,
+              -4.892123369417586,
+              5.300543954373577e-18,
+              -2.2363528647462245,
+              -4.030280822655774,
+              13.55501215281724
+            ],
+            "mean_world_vertical_moment_Nm": 13.501709673205905
+          }
+        },
+        "total_external_world_vertical_moment_Nm": 0.03773534292007512,
+        "note": "Gravity has zero resultant moment about whole-vessel COM; joint motor/servo torques are internal. Water-couple overrides are diagnostic counter-couples, not physical propulsion modes."
+      }
+    }
+  }
+}

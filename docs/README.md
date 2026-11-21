@@ -1,12 +1,15 @@
 # 文档入口
 
-- [安装与运行](getting_started/README.md)
+- [ROS 2 / VRX 启动与操船](getting_started/README.md)
+- [分布式横流阻力、实体配重与操纵复验](validation/distributed_drag_2026-11-21/README.md)
+- [接入前版本绑定与严格操纵验收](validation/preflight_2026-11-21/README.md)
 - [模块与控制边界](architecture/README.md)
 - [原始模型与导出](modeling/README.md)
 - [参数的权威来源](parameters/README.md)
 - [科学依据与证据地图](parameters/evidence_map.md)
 - [公开历史测试附件与来源](validation/evidence/README.md)
 - [未来 ArduPilot / Nav2 集成](integration/README.md)
+- [零舵受力归因、镜像几何与操纵验收](validation/force_maneuvers_2026-11-21/README.md)
 - [高速零舵方向稳定性修复](validation/directional_stability_2026-11-21/README.md)
 - [公开发布记录](history/2026-11-21_公开发布与方向稳定性修复.md)
 - [当前已知问题](validation/known_issues.md)

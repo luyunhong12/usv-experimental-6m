@@ -1,0 +1,26 @@
+{
+  "status": "PREDECLARED_ENGINEERING_REGRESSION_NOT_IMO_CERTIFICATION",
+  "length_reference_m": 6,
+  "max_roll_pitch_deg": 20,
+  "max_neutral_yaw_deg_s": 0.172,
+  "max_tail_speed_std_m_s": 0.12,
+  "min_turn_radius_lengths": 0.1,
+  "max_turn_radius_lengths": 20,
+  "max_port_starboard_radius_relative_difference": 0.2,
+  "max_coast_stop_distance_lengths": 100,
+  "max_reverse_brake_stop_distance_lengths": 20,
+  "max_zigzag_overshoot_deg": 25,
+  "max_reverse_yaw_deg_s": 0.5,
+  "max_recovered_yaw_deg_s": 0.172,
+  "max_servo_error_deg": 1,
+  "notes": [
+    "Bounds are regression/consistency checks, not a calibrated vessel performance envelope.",
+    "Zigzag uses heading-triggered discrete rudder reversals, no heading-hold controller.",
+    "Coast stopping: horizontal speed <0.1 m/s for 1 s. Reverse-braking: first nonpositive surge, with remaining sway explicitly reported; not necessarily zero ground speed.",
+    "Version 3 quality targets declared before final preflight runs: zigzag overshoot <25 deg, zero-rudder recovery excursion <30 deg and settling <20 s, continuous astern yaw <0.5 deg/s. Engineering screening targets, not measured vessel limits or IMO certification; failures stay failures."
+  ],
+  "schema": 3,
+  "servo_rate_source": "Actual joint velocity limit and reference trajectory rate read separately from each generated boat.sdf; numerical tolerance 1e-6 rad/s",
+  "max_recovery_heading_deg": 30,
+  "max_recovery_time_s": 20
+}

@@ -23,7 +23,6 @@
   "report_vessel_performance.py": "tools/analysis/report_vessel_performance.py",
   "summarize_integration.py": "tools/analysis/summarize_integration.py",
   "analyze_navigation_run.py": "tools/analysis/analyze_navigation_run.py",
-  "summarize_sydney.py": "tools/analysis/summarize_sydney.py",
   "report_wamv_upgrade.py": "tools/analysis/report_wamv_upgrade.py",
   "audit_load_matrix.py": "tools/analysis/audit_load_matrix.py",
   "analyze_platform_design.py": "tools/analysis/analyze_platform_design.py",
@@ -31,7 +30,6 @@
   "analyze_platform_energy.py": "tools/analysis/analyze_platform_energy.py",
   "summarize_fuel_mass.py": "tools/analysis/summarize_fuel_mass.py",
   "analyze_performance_run.py": "tools/analysis/analyze_performance_run.py",
-  "summarize_platform.py": "tools/analysis/summarize_platform.py",
   "summarize_energy.py": "tools/analysis/summarize_energy.py",
   "report_load_matrix.py": "tools/analysis/report_load_matrix.py",
   "mass_properties.py": "tools/lib/mass_properties.py",
@@ -80,5 +78,6 @@
   "drive_ros.py": "tools/control/drive_ros.py",
   "validate_public_cli.py": "tests/integration/validate_public_cli.py",
   "export_appendages.py": "tools/modeling/export_appendages.py",
-  "assess_directional_stability.py": "tests/regression/assess_directional_stability.py"
+  "assess_directional_stability.py": "tests/regression/assess_directional_stability.py",
+  "review.sh": "tools/analysis/review.sh"
 }

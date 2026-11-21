@@ -4,7 +4,7 @@
 
 固定兼容版本：ROS Jazzy 环境实际加载的 gz-sim **8.15.0**、gz-physics **7.8.0**、DART vendor 6.13 系列。系统 apt 另有 gz-physics 7.9，不能据其版本推断实际加载版本。CMake 固定前两者，DART 使用 `/opt/ros/jazzy/opt/gz_dartsim_vendor`，运行日志和链接检查确认来源。
 
-上游 Physics 系统源码保存在 `../../vendor/gz-sim-physics/`，实际修改副本为 `src/Physics.cc`，差异为 `../../patches/gz-sim8-runtime-inertia.patch`。DART 的 RetrieveWorld 原生接口头文件与许可保存在 `../../vendor/gz-physics7-dartsim/`。不另建物理后端，不通过符号注入或修改系统库绕过接口。
+上游 Physics 系统源码保存在 `../../../dependencies/vendor/gz-sim-physics/`，实际修改副本为 `src/Physics.cc`，差异为 `../../../dependencies/patches/gz-sim8-runtime-inertia.patch`。DART 的 RetrieveWorld 原生接口头文件与许可保存在 `../../../dependencies/vendor/gz-physics7-dartsim/`。不另建物理后端，不通过符号注入或修改系统库绕过接口。
 
 物理步顺序：
 
@@ -17,6 +17,6 @@
 
 更新不改写广义位置与速度，不重建船、重置关节或强制瞬移。耗油采用低流率、随船速度离开系统的质量流假设，不加虚假的火箭推力。准静态油面变化没有动态液体相对运动量模型，不能作为大幅晃荡或高速操纵流体模型。
 
-验证脚本 `scripts/validate_inertia_backend.py --mode force/torque` 使用独立无重力测试体检查 F=ma、力矩/角加速度、真实重心读回与更新时速度连续性。`UsvInertiaResponseProbe` 仅用于这些测试，不加载到生产船模。
+验证脚本 `tests/integration/validate_inertia_backend.py --mode force/torque（从项目根目录执行）` 使用独立无重力测试体检查 F=ma、力矩/角加速度、真实重心读回与更新时速度连续性。`UsvInertiaResponseProbe` 仅用于这些测试，不加载到生产船模。
 
 本轮附加质量由 HullHydrostatics 的力级分区耦合实现，并不设置 SDF `fluid_added_mass` 或改变刚体重量；因此不改变上述运行时燃油惯性适配边界。默认参数及 4/2 ms 收敛和敏感性记录见 WAMV 差距完善文档。

@@ -1,12 +1,29 @@
+/** @file Sensors.hh
+ * @brief 无人艇Sensors接口与实现；工程模型边界见项目文档。
+ */
 #pragma once
 #include "EnergyModel.hh"
 #include <random>
 namespace usv::energy {
+
+/** @brief 模拟能源传感器采样、滤波与显式误差假设。
+ */
 class Sensors {
  std::mt19937 random{20261119};std::normal_distribution<double> normal{0,1};double lastAttempt=-1,lastFilter=0;
  public:double time=-1,voltage=0,current=0,soc=0,fuel=0,temperature=0;bool valid=false,initialized=false;
- void Reset(){*this=Sensors{};}
- void Update(double now,const Model&m,double roll,double pitch,bool healthy){
+
+/** @brief 将模型或插件状态恢复到配置规定的初始状态。
+ */
+void Reset(){*this=Sensors{};}
+
+/** @brief 按采样周期更新能源传感器状态。
+ * @param now 当前仿真时间，s。
+ * @param m 用于读取真值与参数的能源模型。
+ * @param roll 横摇角，rad。
+ * @param pitch 纵摇角，rad。
+ * @param healthy 传感器健康输入。
+ */
+void Update(double now,const Model&m,double roll,double pitch,bool healthy){
   if(lastAttempt>=0 && now-lastAttempt<m.p.sensor_period_s)return;
   lastAttempt=now;valid=healthy && m.s.auxW>=1;
   if(!valid)return;

@@ -1,0 +1,47 @@
+{
+  "ready": true,
+  "wall_s": 4.857770253001945,
+  "sim_s": 1.44,
+  "health": {
+    "gz_partition": "usv_perf_reverse_60_low_fuel_c5f1738e",
+    "sim_s": 1.44,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  "transport_retries": [
+    {
+      "wall_s": 3.008921274999011,
+      "topic": "propulsion/state"
+    },
+    {
+      "wall_s": 3.008921274999011,
+      "topic": "energy/truth"
+    },
+    {
+      "wall_s": 3.008921274999011,
+      "topic": "actuators/state"
+    },
+    {
+      "wall_s": 3.008921274999011,
+      "topic": "fuel_mass/state"
+    },
+    {
+      "wall_s": 3.008921274999011,
+      "topic": "audit/propulsion"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "reverse_symmetric": {
+    "passed": false,
+    "runtime_passed": true,
+    "checks": {
+      "servo_rate": true,
+      "reference_rate": true,
+      "runtime": true,
+      "evidence_bound": true,
+      "direct_only": true,
+      "attitude": true,
+      "reverse_throttle_tracks": true,
+      "reverse_servo_tracks": true,
+      "reverse_astern": true,
+      "reverse_directional_quality": false
+    },
+    "metrics": {
+      "servo": {
+        "actual_peak_rad_s": 0.0032922977083389127,
+        "actual_limit_rad_s": 0.2,
+        "reference_peak_rad_s": 0.0,
+        "reference_limit_rad_s": 0.15
+      },
+      "reverse": {
+        "duration_s": 100.012,
+        "tail_surge_m_s": -1.8920817137450494,
+        "tail_speed_std_m_s": 1.8146093463638887e-06,
+        "tail_yaw_deg_s": 0.5948571149643799,
+        "heading_change_deg": 45.390769828788684,
+        "distance_m": 183.59532372718826
+      }
+    }
+  },
+  "reverse_no_couple": {
+    "passed": false,
+    "runtime_passed": true,
+    "checks": {
+      "servo_rate": true,
+      "reference_rate": true,
+      "runtime": true,
+      "evidence_bound": true,
+      "direct_only": true,
+      "attitude": true,
+      "reverse_throttle_tracks": true,
+      "reverse_servo_tracks": true,
+      "reverse_astern": true,
+      "reverse_directional_quality": false
+    },
+    "metrics": {
+      "servo": {
+        "actual_peak_rad_s": 0.0027426264046137953,
+        "actual_limit_rad_s": 0.2,
+        "reference_peak_rad_s": 0.0,
+        "reference_limit_rad_s": 0.15
+      },
+      "reverse": {
+        "duration_s": 100.012,
+        "tail_surge_m_s": -1.8921425238182679,
+        "tail_speed_std_m_s": 7.541123346374171e-07,
+        "tail_yaw_deg_s": 0.5776040819880117,
+        "heading_change_deg": 50.18376499479179,
+        "distance_m": 183.63277531567024
+      }
+    }
+  },
+  "reverse_symmetric_no_couple": {
+    "passed": true,
+    "runtime_passed": true,
+    "checks": {
+      "servo_rate": true,
+      "reference_rate": true,
+      "runtime": true,
+      "evidence_bound": true,
+      "direct_only": true,
+      "attitude": true,
+      "reverse_throttle_tracks": true,
+      "reverse_servo_tracks": true,
+      "reverse_astern": true,
+      "reverse_directional_quality": true
+    },
+    "metrics": {
+      "servo": {
+        "actual_peak_rad_s": 0.0032922976736232644,
+        "actual_limit_rad_s": 0.2,
+        "reference_peak_rad_s": 0.0,
+        "reference_limit_rad_s": 0.15
+      },
+      "reverse": {
+        "duration_s": 100.012,
+        "tail_surge_m_s": -1.8928086037420533,
+        "tail_speed_std_m_s": 6.997068603111236e-06,
+        "tail_yaw_deg_s": 0.12098293903404396,
+        "heading_change_deg": 4.607507886535923,
+        "distance_m": 183.60904755656574
+      }
+    }
+  }
+}

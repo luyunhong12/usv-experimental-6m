@@ -1,29 +1,29 @@
 {
   "profile": "ENGINEERING_ESTIMATE_NOT_MEASURED",
   "sealed_envelope_watertight": true,
-  "max_source_vertex_distance_m": 6.967255752582623e-08,
-  "sealed_envelope_volume_m3": 8.34690545,
+  "max_source_vertex_distance_m": 6.967255752501893e-08,
+  "sealed_envelope_volume_m3": 8.358237950000001,
   "triangles": 106,
-  "total_trial_mass_kg": 1193.5579401134448,
+  "total_trial_mass_kg": 1225.6120300420835,
   "trial_total_cg_m": [
-    -0.7087639846071212,
-    -0.017456344391320246,
-    0.5016625071491722
+    -0.6575353776968095,
+    -2.8966917250641853e-18,
+    0.4963883192488034
   ],
   "equilibrium_pose_z_roll_pitch": [
-    -0.21088824981986115,
-    0.014955876900652013,
-    -0.004797416682887176
+    -0.21363254902601697,
+    1.3467291256688056e-17,
+    -0.0028573985460690356
   ],
-  "displaced_volume_m3": 1.1935579401134448,
+  "displaced_volume_m3": 1.2256120300420834,
   "residual": [
-    -4.0611958240788226e-13,
-    1.6288081994275672e-12,
-    1.0220990720455347e-14
+    -1.7208456881689926e-13,
+    4.505618100836273e-12,
+    -1.5538774923869623e-17
   ],
   "roll_pitch_restoring_stiffness_Nm_rad": [
-    17479.33463492663,
-    166987.08060597873
+    17520.34019523544,
+    174224.76900136904
   ],
   "limitations": [
     "station envelope sealed deck; no flooding",

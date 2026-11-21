@@ -3790,7 +3790,124 @@
         }
       },
       "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "fixed_trim_ballast",
+      "name": "Fixed lateral trim steel plate (simulation design)",
+      "link": "hull",
+      "mass_kg": 32.054089928638575,
+      "cg_m": [
+        1.25,
+        0.65,
+        0.3
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.11380601422827204,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.4343469135146578,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.5342348321439764
+        ]
+      ],
+      "basis": "Fixed plate mass = -sum(original dry mass*y)/0.65 m. Balances nominal lateral first moment, not tuned to yaw results. Steel density 7850 kg/m3 engineering assumption; no measured or original-CAD claim. Same fixed plate in all loads/fuel levels, never auto-trimmed. Forward position selected on 0.25 m grid to reduce stern-heavy static trim while preserving >=0.05 m clearance to hull convex envelope; see docs/validation/distributed_drag_2026-11-21.",
+      "quality": "ADDED_SIMULATION_DESIGN_NOT_MEASURED",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_range_kg": [
+        31.73354902935219,
+        32.37463082792496
+      ],
+      "cg_uncertainty_m": 0.005,
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "New explicitly modelled plate, added once to dry hull ledger; not fuel or hidden residual",
+      "geometry": {
+        "type": "box",
+        "size_m": [
+          0.4,
+          0.2,
+          0.05104154447235442
+        ],
+        "material_density_kg_m3": 7850
+      }
+    },
+    {
+      "id": "fixed_fore_trim_ballast",
+      "name": "Fixed longitudinal trim steel plate (simulation design)",
+      "link": "hull",
+      "mass_kg": 167.85922625681135,
+      "cg_m": [
+        1.8,
+        0,
+        0.3
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          2.3491663801799207,
+          0,
+          0
+        ],
+        [
+          0,
+          5.146820151126776,
+          0
+        ],
+        [
+          0,
+          0,
+          7.273899804461825
+        ]
+      ],
+      "basis": "Nominal speed15_concept with 60 L fuel and no payload: independently solve Archimedes displacement and longitudinal buoyancy/weight balance at zero static pitch. Fixed 167.859 kg design plate, not tuned against yaw metrics, not measured hardware. Steel density 7850 kg/m3 engineering assumption. No automatic trim at other loads or fuel levels. See docs/validation/distributed_drag_2026-11-21 and longitudinal_trim_design.json.",
+      "quality": "ADDED_SIMULATION_DESIGN_NOT_MEASURED",
+      "profiles": [
+        "speed15_concept"
+      ],
+      "mass_range_kg": [
+        166.18063399424324,
+        169.53781851937947
+      ],
+      "cg_uncertainty_m": 0.005,
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "New explicitly modelled plate, added once to dry hull ledger; not fuel or hidden residual",
+      "geometry": {
+        "type": "box",
+        "size_m": [
+          0.6,
+          0.4,
+          0.08909725385181069
+        ],
+        "material_density_kg_m3": 7850
+      }
     }
   ],
-  "coverage_note": "69 accounting items in upgraded profile; structural assemblies and distributed wiring remain grouped. Not a fabrication BOM, measured weight certificate, or verified installation clearance."
+  "coverage_note": "71 accounting items in upgraded profile, including explicit fixed trim plates; structural assemblies and distributed wiring remain grouped. Not a fabrication BOM, measured weight certificate, or verified installation clearance."
 }

@@ -1749,12 +1749,12 @@
       <water_level>0</water_level>
       <linear_damping>120 600 1400</linear_damping>
       <angular_damping>800 1600 900</angular_damping>
-      <quadratic_damping>180 1500 1800</quadratic_damping>
+      <quadratic_damping>178.002166055 1500 1800</quadratic_damping>
       <angular_quadratic_damping>1200 2500 2200</angular_quadratic_damping>
       <triangles_file>/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/config/hull_triangles.txt</triangles_file>
       <geometry_resistance>true</geometry_resistance>
-      <reference_wet_area>10.336297195730799</reference_wet_area>
-      <reference_projected_area>0.360344048993 1.24372964714 4.4933240956</reference_projected_area>
+      <reference_wet_area>10.330756862389416</reference_wet_area>
+      <reference_projected_area>0.357016952265 1.23285511366 4.4932188352</reference_projected_area>
       <added_linear>70 250 250</added_linear>
       <added_angular>30 200 200</added_angular>
       <pressure_max_edge>0.35</pressure_max_edge>
@@ -1841,6 +1841,7 @@
         <fuel_bias_l>0.2</fuel_bias_l>
       </energy>
       <steering>
+        <reference_velocity_feedforward>true</reference_velocity_feedforward>
         <kp>300.0</kp>
         <ki>100.0</ki>
         <kd>80.0</kd>

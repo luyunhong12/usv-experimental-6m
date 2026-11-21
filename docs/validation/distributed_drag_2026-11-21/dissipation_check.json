@@ -1,0 +1,112 @@
+{
+  "reverse_60_long": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "reverse_60_low_fuel": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "reverse_60_loaded": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "reverse_60_step2ms": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "reverse_60_mesh": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "neutral_035": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "neutral_065": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "neutral_100": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "turn_055_left": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "turn_055_right": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "turn_100_left": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "turn_100_right": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "coast_100": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "brake_100": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "astern_left": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "astern_right": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "zigzag_10_10": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "loaded_low_fuel": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "zigzag_10_10_low_speed": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "reverse_25": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "reverse_40": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  },
+  "reverse_60": {
+    "minimum_dissipated_power_w": -0.0,
+    "finite": true,
+    "nonnegative_with_roundoff": true
+  }
+}

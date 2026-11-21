@@ -1,0 +1,1197 @@
+[
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/suite_binding.json",
+    "published": "maneuvers/suite_binding.json",
+    "sha256": "f6a7c18e252f07a5c19b516eead0aa02ab007e61e5111a7bb9eef04959044c11"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/summary.json",
+    "published": "maneuvers/summary.json",
+    "sha256": "bcf911bfecaa6b4501ffaa24dc8d6aac37a46cffc1a5b878e90d656d000c9233"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/astern_left/case_binding.json",
+    "published": "maneuvers/astern_left/case_binding.json",
+    "sha256": "a2bb7dec086be998258d6f7ec0ce17186a16f1fee5115d2dcc633356ab060e42"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/astern_left/result.json",
+    "published": "maneuvers/astern_left/result.json",
+    "sha256": "ff0288d86be9f51be5e0c6bd2fa5d0e20e32e56cd7a57a4116bab4ee37f3baae"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/astern_left/stages.json",
+    "published": "maneuvers/astern_left/stages.json",
+    "sha256": "5d273c04ec84ab669535f84938cacf64df49cf3e343764f015b5f75f8851df2d"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/astern_left/run_status.json",
+    "published": "maneuvers/astern_left/run_status.json",
+    "sha256": "9a0e66db840ad37f72b6a42ee58a08a9fe4f3869c1a28d1a143ce8cd6973fb1b"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/astern_left/source_versions.json",
+    "published": "maneuvers/astern_left/source_versions.json",
+    "sha256": "8e103a9ca1162d751b58ff227b254426c4fb7d996225a5b59fc5bd812663f817"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/astern_left/propulsion_state.csv",
+    "published": "maneuvers/astern_left/propulsion_state.csv",
+    "sha256": "dd500543db162129a247c0437a3e935afa5e836de5d0bedf02681c6475dae65b"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/astern_left/actuators_state.csv",
+    "published": "maneuvers/astern_left/actuators_state.csv",
+    "sha256": "e18d0e8b719cd671f62df9954f14d79246f32f72c733270d18cec7df84299791"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/astern_right/case_binding.json",
+    "published": "maneuvers/astern_right/case_binding.json",
+    "sha256": "9870340aa5b4d6218466286c1eb8f3acc758cf6890a684ea055db8db5108e5c5"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/astern_right/result.json",
+    "published": "maneuvers/astern_right/result.json",
+    "sha256": "3f796b31fb81c2081300fe8b72d4e9632586fce90ec896aabbadac12108abb2a"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/astern_right/stages.json",
+    "published": "maneuvers/astern_right/stages.json",
+    "sha256": "f03cd2aeb23d9629fc4d51772f893253766de78213fdac4017fee0d334008fba"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/astern_right/run_status.json",
+    "published": "maneuvers/astern_right/run_status.json",
+    "sha256": "2821175b21a73fc1a8dda2693bda1da632bad4b6575f4c0dd7a9ee2218e06e68"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/astern_right/source_versions.json",
+    "published": "maneuvers/astern_right/source_versions.json",
+    "sha256": "63bd8c8256097c5e31a8c08aba384304cb958911eaf0b78423a099f356dafb7c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/astern_right/propulsion_state.csv",
+    "published": "maneuvers/astern_right/propulsion_state.csv",
+    "sha256": "287b9fe758f32b22e70554a8caf3c295f40c24de2fd79bb02429679b56f5f13c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/astern_right/actuators_state.csv",
+    "published": "maneuvers/astern_right/actuators_state.csv",
+    "sha256": "73d677e1b4c2be3bcf19fa9e2008d95e89bf9122b506929a30a507eab8b07dd5"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/brake_100/case_binding.json",
+    "published": "maneuvers/brake_100/case_binding.json",
+    "sha256": "8c2e64543c3145ca80b3fb7d5aae24c19c4729cc1c5a528a233ed6a49f018a10"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/brake_100/result.json",
+    "published": "maneuvers/brake_100/result.json",
+    "sha256": "a907e52341fc9a5f208dbc5f5d3385c66a3a200f32f50bb8eb989a592c038ea1"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/brake_100/stages.json",
+    "published": "maneuvers/brake_100/stages.json",
+    "sha256": "81745fa37be5934cf3571de1bb667853dce346bc68a9c54c66042ea497f8ae78"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/brake_100/run_status.json",
+    "published": "maneuvers/brake_100/run_status.json",
+    "sha256": "4c8bbe7ed0f017d51592cf835b48cd88f4962feb889d50d78ad98aba13110e48"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/brake_100/source_versions.json",
+    "published": "maneuvers/brake_100/source_versions.json",
+    "sha256": "37d044e5bb97669304d79284f256b0cb6e854661a6247326f324ff1e68ac7ef2"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/brake_100/propulsion_state.csv",
+    "published": "maneuvers/brake_100/propulsion_state.csv",
+    "sha256": "ad90cd6374ec9a32cb87cf646b99455733d67ab9298b67cbc3e0eaeaf57e29f5"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/brake_100/actuators_state.csv",
+    "published": "maneuvers/brake_100/actuators_state.csv",
+    "sha256": "9dc798dc97f90f17793c4c29fdde7bc974039ecaa2722e57610c37e20885df86"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/coast_100/case_binding.json",
+    "published": "maneuvers/coast_100/case_binding.json",
+    "sha256": "2a08fbdc381ccd113181f7156008a6562e47b9075430a486b07bb7b6308894f7"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/coast_100/result.json",
+    "published": "maneuvers/coast_100/result.json",
+    "sha256": "6650d853da3cb724f7737738afdcdd514187f603e4494924511a30931011444d"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/coast_100/stages.json",
+    "published": "maneuvers/coast_100/stages.json",
+    "sha256": "d7760f151674173f68e51d79a4a7e1a9ae73faadec83e7933bebb48f0d843f6c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/coast_100/run_status.json",
+    "published": "maneuvers/coast_100/run_status.json",
+    "sha256": "bcf1441160635a9abca2ddbdfeec02e9e48e5bf3c1324d1abd70cad8137740b8"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/coast_100/source_versions.json",
+    "published": "maneuvers/coast_100/source_versions.json",
+    "sha256": "56b8b10d5da8b00fb478e8da4f08ea23792caaa00e4f37c15fa0704739455c70"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/coast_100/propulsion_state.csv",
+    "published": "maneuvers/coast_100/propulsion_state.csv",
+    "sha256": "b2d9b1cfe59caeb8b568457cd98119a661475e3f9e319099c449f95c266fa761"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/coast_100/actuators_state.csv",
+    "published": "maneuvers/coast_100/actuators_state.csv",
+    "sha256": "67f0883afddc87eb4213a9128217cf91c26dfde113defc63199a4c1c1ad67a3c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/loaded_low_fuel/case_binding.json",
+    "published": "maneuvers/loaded_low_fuel/case_binding.json",
+    "sha256": "a7b9c3196990c2a0c04367630ea5e41dad1823175007ed560469f744cb15ac47"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/loaded_low_fuel/result.json",
+    "published": "maneuvers/loaded_low_fuel/result.json",
+    "sha256": "8d64ee111680e2792e383c4cb5e489509bdbdac092eb06730daaab905906986c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/loaded_low_fuel/stages.json",
+    "published": "maneuvers/loaded_low_fuel/stages.json",
+    "sha256": "1006db899dfcd34a8dcb4af6461d4b1434b2cd6b46dd85d351d0c247e08567a5"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/loaded_low_fuel/run_status.json",
+    "published": "maneuvers/loaded_low_fuel/run_status.json",
+    "sha256": "4983689512a4b5b2db4d5b97765cff57ae76d8a057d036e8ac989d0199bc8241"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/loaded_low_fuel/source_versions.json",
+    "published": "maneuvers/loaded_low_fuel/source_versions.json",
+    "sha256": "7d7274e961c9ef30449436cc30830ddb1280a2c166dc6f0eb21bddd5f9860f89"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/loaded_low_fuel/propulsion_state.csv",
+    "published": "maneuvers/loaded_low_fuel/propulsion_state.csv",
+    "sha256": "106812a57c40a083c6aa2da347e7fbfdd1647d977f79c870525a0eefc3d32671"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/loaded_low_fuel/actuators_state.csv",
+    "published": "maneuvers/loaded_low_fuel/actuators_state.csv",
+    "sha256": "a15b621ecf833b48df1ffdcd518c3f6f8916dae281357ee4daa2c75872f4ed9c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_035/case_binding.json",
+    "published": "maneuvers/neutral_035/case_binding.json",
+    "sha256": "41575c9f5d1dc4b09bd360db7af2234c675b5b1c8d94a09401497e6f48cb60ba"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_035/result.json",
+    "published": "maneuvers/neutral_035/result.json",
+    "sha256": "990f26565e7e8b76ddf656d9950526ad39273065c550aed24dfefca76016d570"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_035/stages.json",
+    "published": "maneuvers/neutral_035/stages.json",
+    "sha256": "fa406968d000d5d60a098a44050d6a8c93c307b87c66d1812c8a95f303e78c99"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_035/run_status.json",
+    "published": "maneuvers/neutral_035/run_status.json",
+    "sha256": "075cb65ff73269d99202e823592a6f1a4cea91e5aac7a5a39f9098283c63bcbc"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_035/source_versions.json",
+    "published": "maneuvers/neutral_035/source_versions.json",
+    "sha256": "aed6119232dd8cf02d38c2be237ec01ace90eacdb2b50e36975900a3aacbf87b"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_035/propulsion_state.csv",
+    "published": "maneuvers/neutral_035/propulsion_state.csv",
+    "sha256": "e8c948f62bf487f38b19d6543a3976b61dd01a56f4074414aecebc47983cd19d"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_035/actuators_state.csv",
+    "published": "maneuvers/neutral_035/actuators_state.csv",
+    "sha256": "2b11d9b77c02311330990d74eee341d78378853fae7e242d616706e0fc5380a2"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_065/case_binding.json",
+    "published": "maneuvers/neutral_065/case_binding.json",
+    "sha256": "a7b4c2f652a5e5eb29b79251df91e745a0c48e7192b55ccf362b6d7196ce5c31"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_065/result.json",
+    "published": "maneuvers/neutral_065/result.json",
+    "sha256": "81810259bbe1337029b817daaeb8abce49b40939cc6e559fc848318f872c0fb1"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_065/stages.json",
+    "published": "maneuvers/neutral_065/stages.json",
+    "sha256": "d8891de26d63def79152694de6fb1f6a1fac717d4a1bd66fa03b51ec7b913964"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_065/run_status.json",
+    "published": "maneuvers/neutral_065/run_status.json",
+    "sha256": "13fe3e708326a5d908144f0429f3a368b34775f03ebd7c313476815ebf7c6635"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_065/source_versions.json",
+    "published": "maneuvers/neutral_065/source_versions.json",
+    "sha256": "40eb63b0a34a741ce7da52eb550d3db7db9f28636147c58f8f0b28f563982129"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_065/propulsion_state.csv",
+    "published": "maneuvers/neutral_065/propulsion_state.csv",
+    "sha256": "6583fd8d9b73fa5289eb5f8b1d600f77223a6c4d89717bf277f2f70324086b47"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_065/actuators_state.csv",
+    "published": "maneuvers/neutral_065/actuators_state.csv",
+    "sha256": "4b83090512d72c7ed40cbef2dd4a7b98c28d2f8013922fb150a5b8a4302080cb"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_100/case_binding.json",
+    "published": "maneuvers/neutral_100/case_binding.json",
+    "sha256": "f5e5ef7bc4d34cb5f9148a0fcc2fbd379883d3720f027bfd577087c7602da901"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_100/result.json",
+    "published": "maneuvers/neutral_100/result.json",
+    "sha256": "953f334fd06a2f4bbc6988f66b39f532fbae32925cdf89c56b1d85e40cb76784"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_100/stages.json",
+    "published": "maneuvers/neutral_100/stages.json",
+    "sha256": "7dfe9d6be0c28011706a10906ade6d6d78ba54abadec90f021fd3478d532cbcb"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_100/run_status.json",
+    "published": "maneuvers/neutral_100/run_status.json",
+    "sha256": "ebff0279aeba8e5874783b3353a981a3b82144e86da53c3c6f9233babcd4d6cd"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_100/source_versions.json",
+    "published": "maneuvers/neutral_100/source_versions.json",
+    "sha256": "023c9cf03eda60e4cdd2a975be1ce0832ae17ce0c3f1fbfed557482d97157de4"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_100/propulsion_state.csv",
+    "published": "maneuvers/neutral_100/propulsion_state.csv",
+    "sha256": "65a4bffb70ee9267a9a6ebee96ed3edfd67c7a1cf2e8f03fbd27dde780290487"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/neutral_100/actuators_state.csv",
+    "published": "maneuvers/neutral_100/actuators_state.csv",
+    "sha256": "dbc2d41a963c63dffe08b630460c12e9c68fb5243254e3dacec173573112325c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_25/case_binding.json",
+    "published": "maneuvers/reverse_25/case_binding.json",
+    "sha256": "3e019c0c7b19e664e4ede48b249a8ce4cf4213a02eb51949cbb91eb7d78ea89a"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_25/result.json",
+    "published": "maneuvers/reverse_25/result.json",
+    "sha256": "59b2ec0339d3b0cb59426d8844ba2489d9bd1550a28b0447e502f0aa194e0883"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_25/stages.json",
+    "published": "maneuvers/reverse_25/stages.json",
+    "sha256": "fc3af006b0e1cbea283836553fa559b6b90a0746ff2915125b8158efdeeb71c3"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_25/run_status.json",
+    "published": "maneuvers/reverse_25/run_status.json",
+    "sha256": "f7951744198b38fdd73d8880568ba260640b333845ee312ad337bdfd4ab1862e"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_25/source_versions.json",
+    "published": "maneuvers/reverse_25/source_versions.json",
+    "sha256": "e7481fef71e329416d2d8c75fa1f4e34c8b47861f02d8cc10d04cbc5f84331ed"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_25/propulsion_state.csv",
+    "published": "maneuvers/reverse_25/propulsion_state.csv",
+    "sha256": "dc85d3c00a6416c3c8b05ec95f878e2a3a7f0614c08e2c633c4226555894009c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_25/actuators_state.csv",
+    "published": "maneuvers/reverse_25/actuators_state.csv",
+    "sha256": "2cb31edc9e7003fb78e7f0f4928a0ee03e1c1ce5d6de6f2dae86a7d99cba0993"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_40/case_binding.json",
+    "published": "maneuvers/reverse_40/case_binding.json",
+    "sha256": "92b225748072e15b6d1dd92a689ebacf3d2b6f30f6ab1e67c0a29adafc4518e6"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_40/result.json",
+    "published": "maneuvers/reverse_40/result.json",
+    "sha256": "f34a1c1ace4082805f7b625660b1623f63449f112fa19d4840e72d1faae483fc"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_40/stages.json",
+    "published": "maneuvers/reverse_40/stages.json",
+    "sha256": "63956587efa473e8592bd2b1e8cc3ec7aad39fd1532ae973d068953c8eab95b5"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_40/run_status.json",
+    "published": "maneuvers/reverse_40/run_status.json",
+    "sha256": "a99693e210b857ea6779a69741ce0dd0bdb2789cf1a9f21e3c93e99f61ca6133"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_40/source_versions.json",
+    "published": "maneuvers/reverse_40/source_versions.json",
+    "sha256": "f6ce83bcdca5cd66de8f80ef9706eb034a1bfa7ec92225ba5b1cb89095ea806b"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_40/propulsion_state.csv",
+    "published": "maneuvers/reverse_40/propulsion_state.csv",
+    "sha256": "82e33c68ecf0b1f8c29026695b96c08652ea89ceff78474f298763250afa5c5b"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_40/actuators_state.csv",
+    "published": "maneuvers/reverse_40/actuators_state.csv",
+    "sha256": "dd28d26c35ac9f00fd77676575014f41c0e1ebb9f494fb20e991630326f925ca"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_60/case_binding.json",
+    "published": "maneuvers/reverse_60/case_binding.json",
+    "sha256": "dc7a17fa7d44d4410d7f821b9d19c92cb0f166d8eb2491b2664115442bda237b"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_60/result.json",
+    "published": "maneuvers/reverse_60/result.json",
+    "sha256": "d2ffe85b91b86deb9404382c4507272be63e4d9d6919852d5514e0d625a31f43"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_60/stages.json",
+    "published": "maneuvers/reverse_60/stages.json",
+    "sha256": "86ed5c84bd1190e6822a0aa7e10a5da57661fa7eaaede7ee8a1369425616f88b"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_60/run_status.json",
+    "published": "maneuvers/reverse_60/run_status.json",
+    "sha256": "23c9c8f9a3377e799262ba911f01373add49233e06ddea6ea7799e00f832190f"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_60/source_versions.json",
+    "published": "maneuvers/reverse_60/source_versions.json",
+    "sha256": "40abf2b3dff679fd5277f00e16927c8ab9647f3c687e9f644e8c8137fefa1168"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_60/propulsion_state.csv",
+    "published": "maneuvers/reverse_60/propulsion_state.csv",
+    "sha256": "b810fa305531403a447790c61305b194d309e433979a74dee831b28c81f9d962"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/reverse_60/actuators_state.csv",
+    "published": "maneuvers/reverse_60/actuators_state.csv",
+    "sha256": "47b9e857d392ee87a3a251dac9269b6bc2db1716f2ab323bb065b5b39647189c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_055_left/case_binding.json",
+    "published": "maneuvers/turn_055_left/case_binding.json",
+    "sha256": "bce8e23e078034febe92418ace69bd031fc32d1195665e2607057ccfca77414c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_055_left/result.json",
+    "published": "maneuvers/turn_055_left/result.json",
+    "sha256": "2949af2660477bca3cf3793a39ad0f92860400692c201deffc6a8c6b544dcbd0"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_055_left/stages.json",
+    "published": "maneuvers/turn_055_left/stages.json",
+    "sha256": "d5623a75aca314ee31fcf99357cf2261112fd95e14b846cb6ef058da2dba3875"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_055_left/run_status.json",
+    "published": "maneuvers/turn_055_left/run_status.json",
+    "sha256": "365468f492b7412e1b42b2f947348b6db044a5fd203092a986d34aa5a55eb6ee"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_055_left/source_versions.json",
+    "published": "maneuvers/turn_055_left/source_versions.json",
+    "sha256": "92eb11aeba7305bec02a773f6402afc2088779980f055bba2b1a6e9ec03a443a"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_055_left/propulsion_state.csv",
+    "published": "maneuvers/turn_055_left/propulsion_state.csv",
+    "sha256": "1175f99ee081f9a9fc10a22f07dad7620449e834713eae74ffbef6120137a7e6"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_055_left/actuators_state.csv",
+    "published": "maneuvers/turn_055_left/actuators_state.csv",
+    "sha256": "508ce73266674eeb1c3dd366ffe0101a83eb91788741748f6b8d6711e2a97d8e"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_055_right/case_binding.json",
+    "published": "maneuvers/turn_055_right/case_binding.json",
+    "sha256": "1b7e416ed7685c498a96b046c8deff8b27c116cdf38d61e357eb25e2ed474a54"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_055_right/result.json",
+    "published": "maneuvers/turn_055_right/result.json",
+    "sha256": "ec6b13ecd58d4f379e3fc02a9d636dfc0db99295a7960e062c91be6fa5495511"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_055_right/stages.json",
+    "published": "maneuvers/turn_055_right/stages.json",
+    "sha256": "18764be1341c8df57f70dd3bbb2280e788af5471270f8853da13faf2ca090ff0"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_055_right/run_status.json",
+    "published": "maneuvers/turn_055_right/run_status.json",
+    "sha256": "0a4bf9fab19c3fc5b0eb5f276f85f372a30372b68656199a7343d44bcdf934b3"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_055_right/source_versions.json",
+    "published": "maneuvers/turn_055_right/source_versions.json",
+    "sha256": "0c779ab887778fef5fd80c3ef43ea075983c5942be85b45f8a605592bf71a632"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_055_right/propulsion_state.csv",
+    "published": "maneuvers/turn_055_right/propulsion_state.csv",
+    "sha256": "be7b733b8fc2170c6c52acc466a63666a74e1d6d02d194cbedc0a7f3c86bb236"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_055_right/actuators_state.csv",
+    "published": "maneuvers/turn_055_right/actuators_state.csv",
+    "sha256": "dafb42e05663b8e4a60303917e60a90e8d81503fa2553bd5ac96375ae8912f9c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_100_left/case_binding.json",
+    "published": "maneuvers/turn_100_left/case_binding.json",
+    "sha256": "3ce1e21fec4007d42078410d7af23cbadfd8c03c72f809418277cf9cd1ad64cc"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_100_left/result.json",
+    "published": "maneuvers/turn_100_left/result.json",
+    "sha256": "56779a15c2af532aa76ead71f999c386fd78e05fb3baafc3547fa9b445788e48"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_100_left/stages.json",
+    "published": "maneuvers/turn_100_left/stages.json",
+    "sha256": "fcab069d3fef58d2903aa3d945ad3d687be3c4795e5bfca18a6439bb0440ce0b"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_100_left/run_status.json",
+    "published": "maneuvers/turn_100_left/run_status.json",
+    "sha256": "7ff891089681fa5edfcddd7d096f7c0cca2069f7c5d99dfa1467e232e1f54c94"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_100_left/source_versions.json",
+    "published": "maneuvers/turn_100_left/source_versions.json",
+    "sha256": "017fdbe21ac4fa19633a584caa0c000b6c1156bb462aba584a66739bde26fb71"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_100_left/propulsion_state.csv",
+    "published": "maneuvers/turn_100_left/propulsion_state.csv",
+    "sha256": "21875faa505de5b47026d4b36e8a9e2e67991a4cc41febe2bc883c059a2c513b"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_100_left/actuators_state.csv",
+    "published": "maneuvers/turn_100_left/actuators_state.csv",
+    "sha256": "d0237403d37da0de380ed65b739634c6ea68278b66b2a1101b3595f2ee6725bc"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_100_right/case_binding.json",
+    "published": "maneuvers/turn_100_right/case_binding.json",
+    "sha256": "fc40d34b4369d714a1c6022f4b4d430ef7404c6820b6b5d5d425e59b651e7b7c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_100_right/result.json",
+    "published": "maneuvers/turn_100_right/result.json",
+    "sha256": "ca3c93cbbf811c0a3e753a9bdb01918c2e47979444348ad6c6f9ea25864f0d35"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_100_right/stages.json",
+    "published": "maneuvers/turn_100_right/stages.json",
+    "sha256": "75e092089faee3ca57e762916a276361797f568fca84274fd92548a81b9696c5"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_100_right/run_status.json",
+    "published": "maneuvers/turn_100_right/run_status.json",
+    "sha256": "97c4ca5ef6bef06b949ab14d536af8426cbe82fbc2661c400b3c8d33b5590103"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_100_right/source_versions.json",
+    "published": "maneuvers/turn_100_right/source_versions.json",
+    "sha256": "d8117d58974e053c55502f68236ea1e7169fb16c475d7b60050f202f5dd52eee"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_100_right/propulsion_state.csv",
+    "published": "maneuvers/turn_100_right/propulsion_state.csv",
+    "sha256": "494b33a2f76cfc0ee64866088346796d3ab420446933fb2e20f91c3d97eff63e"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/turn_100_right/actuators_state.csv",
+    "published": "maneuvers/turn_100_right/actuators_state.csv",
+    "sha256": "96918420c4735918199f191a04c605a9bac5f96a94fe5174bd7674bdf006670a"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/zigzag_10_10/case_binding.json",
+    "published": "maneuvers/zigzag_10_10/case_binding.json",
+    "sha256": "da5fbc319f7672edff61ffe3429076594958cd3e8534a3f07d6fe6e4b04e7019"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/zigzag_10_10/result.json",
+    "published": "maneuvers/zigzag_10_10/result.json",
+    "sha256": "3c3c1b378991ffaae0efd268ba6fefcbe2690f3bfcd3059cd8ef3a839ba2a288"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/zigzag_10_10/stages.json",
+    "published": "maneuvers/zigzag_10_10/stages.json",
+    "sha256": "e154be764250862a7dd1ca15bc4189032fd427adb9a06098a76f55a772634032"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/zigzag_10_10/run_status.json",
+    "published": "maneuvers/zigzag_10_10/run_status.json",
+    "sha256": "123e84c0e34c2d7c7e51c075566de63f72f95f996fe6f969e626e09ce602182f"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/zigzag_10_10/source_versions.json",
+    "published": "maneuvers/zigzag_10_10/source_versions.json",
+    "sha256": "501d8bd087ca8f40fda22a725fdc4b7f54d480a2ba8f46ee0fd3503b359645b2"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/zigzag_10_10/propulsion_state.csv",
+    "published": "maneuvers/zigzag_10_10/propulsion_state.csv",
+    "sha256": "27792116af273869338fe23a53e07637d96c05ae86164cc20259ef66e5cbc638"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/zigzag_10_10/actuators_state.csv",
+    "published": "maneuvers/zigzag_10_10/actuators_state.csv",
+    "sha256": "f03ac022162bc2ce0c899b2f4813b8c9be93eca5fee679147a42c8409ae17d22"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/zigzag_10_10_low_speed/case_binding.json",
+    "published": "maneuvers/zigzag_10_10_low_speed/case_binding.json",
+    "sha256": "15146b786132e80e7ed41c2c573830e1b52368dfa0e29068ebec613a224bc3db"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/zigzag_10_10_low_speed/result.json",
+    "published": "maneuvers/zigzag_10_10_low_speed/result.json",
+    "sha256": "3da7f6e7f9b5547a43ff97545726c8d236a91ab3677a50d54e939ae4ea3a70bf"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/zigzag_10_10_low_speed/stages.json",
+    "published": "maneuvers/zigzag_10_10_low_speed/stages.json",
+    "sha256": "c474378e2ae2d5a0f94b35a7445dc121e535628639c0261cb5b6c6ed57d3a6a0"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/zigzag_10_10_low_speed/run_status.json",
+    "published": "maneuvers/zigzag_10_10_low_speed/run_status.json",
+    "sha256": "8bb496db3ce32af75568c8e567a114e0d97e0ed900ab12c099a4ec0e0deeeecc"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/zigzag_10_10_low_speed/source_versions.json",
+    "published": "maneuvers/zigzag_10_10_low_speed/source_versions.json",
+    "sha256": "f2ed1371a4b63946e549cd4f478c965151b4611700a49716e8fd6c00724487ec"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/zigzag_10_10_low_speed/propulsion_state.csv",
+    "published": "maneuvers/zigzag_10_10_low_speed/propulsion_state.csv",
+    "sha256": "da35148e0544ef0e21a0e99c5bb2eff0361edf27c6d71955aafa2593473aef62"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/zigzag_10_10_low_speed/actuators_state.csv",
+    "published": "maneuvers/zigzag_10_10_low_speed/actuators_state.csv",
+    "sha256": "9e2461726c17726b8c4ed919305407bb5562f61b3d350edb41e65c495fcb7667"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/suite_binding.json",
+    "published": "diagnostics/suite_binding.json",
+    "sha256": "c6c0c740618f0c278a654aab7c4378832bd8eddb51289f76b104f0ecaf1af3e0"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/summary.json",
+    "published": "diagnostics/summary.json",
+    "sha256": "00373ef5b77d7b33930e55eaa506049924e74e7d5ed1e8bc3a7e6f3e9e65f55c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_25/case_binding.json",
+    "published": "diagnostics/reverse_25/case_binding.json",
+    "sha256": "749935a23b7840327f9b556d15ce226538a75a073913c276ca5dcf163d2d8de9"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_25/result.json",
+    "published": "diagnostics/reverse_25/result.json",
+    "sha256": "a28f7cf8239336a101dce01d02bc9253b54ea5b30c262449e9bfe18c6d44a4c6"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_25/stages.json",
+    "published": "diagnostics/reverse_25/stages.json",
+    "sha256": "1810d4e28cd2508b01bc17b88d97b731d23328982da5b0184de4aa2884abd2d1"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_25/run_status.json",
+    "published": "diagnostics/reverse_25/run_status.json",
+    "sha256": "3503a98b0dde27a81a95c590a0b2a8449905a5a4f634afa73dd448c095655b9f"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_25/source_versions.json",
+    "published": "diagnostics/reverse_25/source_versions.json",
+    "sha256": "4fe1c0bec48f920890bd8a99ea20d7075e22d941d0d74a2f59ecb543a3253f3b"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_25/propulsion_state.csv",
+    "published": "diagnostics/reverse_25/propulsion_state.csv",
+    "sha256": "d78b184d82e2e2fd96bda6e90a1c3c485b349c10973492ad27ae15fdd2997667"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_25/actuators_state.csv",
+    "published": "diagnostics/reverse_25/actuators_state.csv",
+    "sha256": "e10c2ca99ba45fb241b73e913f0188c3a471d763d1eb905022c8575b6ba63357"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_25/audit_hull.csv",
+    "published": "diagnostics/reverse_25/audit_hull.csv",
+    "sha256": "ea96bb5d1a2cb21bc96f39b5837c7cdb05ecf1bea85afa99a33a0cde38e60f0e"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_25/audit_propulsion.csv",
+    "published": "diagnostics/reverse_25/audit_propulsion.csv",
+    "sha256": "d3e434e7d20255a025bf2d6075d4b11875485a12a92b007683b8fb76d76cd7d7"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_25/audit_appendages.csv",
+    "published": "diagnostics/reverse_25/audit_appendages.csv",
+    "sha256": "2cb47b417d0e95d166ae49503580b72f40cb9154ae9eb046d8ff48801c826108"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_40/case_binding.json",
+    "published": "diagnostics/reverse_40/case_binding.json",
+    "sha256": "c5c9f9d5dcedc57e9f2898801c6884825ebbd1d0b1f1c688c9f9d783696935fb"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_40/result.json",
+    "published": "diagnostics/reverse_40/result.json",
+    "sha256": "51ccf572891f2bde739eb60e547d0551becf70e895298d7c45b2d2118ac36070"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_40/stages.json",
+    "published": "diagnostics/reverse_40/stages.json",
+    "sha256": "955e988a65b91bda3b7be7f87d9026a17a4e8ea0e0906677805d223e327344b2"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_40/run_status.json",
+    "published": "diagnostics/reverse_40/run_status.json",
+    "sha256": "1db3ff8f1f60e023a4a676ac9833e800bdf612244bf0fcdae47d16656c7d9cf1"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_40/source_versions.json",
+    "published": "diagnostics/reverse_40/source_versions.json",
+    "sha256": "be0b8ae19aab018a15e270720869cb163a30539ca2319980591f65640f0456d9"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_40/propulsion_state.csv",
+    "published": "diagnostics/reverse_40/propulsion_state.csv",
+    "sha256": "241f1b8a30bfa5a8ff1c04c0226d782ffad1c53d1a66518ce3e3960009e16663"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_40/actuators_state.csv",
+    "published": "diagnostics/reverse_40/actuators_state.csv",
+    "sha256": "42f15a9c5cea33f7b86855044dc5567eea8a1619e4cb7406b17829ee0f906003"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_40/audit_hull.csv",
+    "published": "diagnostics/reverse_40/audit_hull.csv",
+    "sha256": "fe3fa5fc9afc9c3cdea450ed9e4f519e2cfd97568619aa7d9c95f4151cf3a4ec"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_40/audit_propulsion.csv",
+    "published": "diagnostics/reverse_40/audit_propulsion.csv",
+    "sha256": "264aef5ebdb4199206ed91a18421472ce36bffb5d35febc4e9b3c3845cffc058"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_40/audit_appendages.csv",
+    "published": "diagnostics/reverse_40/audit_appendages.csv",
+    "sha256": "72a28b03925a041e895ab092cc6ffbdc67db79794f21f07faa387e366a2f6b2a"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60/case_binding.json",
+    "published": "diagnostics/reverse_60/case_binding.json",
+    "sha256": "b3c470bb45011b84af2a4654c59796780b79c7bb27257a2198aed4916cafab26"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60/result.json",
+    "published": "diagnostics/reverse_60/result.json",
+    "sha256": "a8759def423788da4780eb2ff038a7e336b26b28b291ccdc3b0fa4866f55e69c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60/stages.json",
+    "published": "diagnostics/reverse_60/stages.json",
+    "sha256": "e29e701e0893591a54423e2985fb50ac02440c9187562f9853e45d857b708767"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60/run_status.json",
+    "published": "diagnostics/reverse_60/run_status.json",
+    "sha256": "98085f1be2428945ed994ffc220a679dff417d9c94658dee2fdac40fa826a8b5"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60/source_versions.json",
+    "published": "diagnostics/reverse_60/source_versions.json",
+    "sha256": "5d72367eb5331a778d04108619d10021eda424fd1648c9bf69be994f0d789caa"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60/propulsion_state.csv",
+    "published": "diagnostics/reverse_60/propulsion_state.csv",
+    "sha256": "5e89e8003b67bf8af625071da800a329a895bbdf85b4fcead2f9727b14567960"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60/actuators_state.csv",
+    "published": "diagnostics/reverse_60/actuators_state.csv",
+    "sha256": "90eb9590f7f9234320a8fdb71cc40ed668174c720921931974b47783da188ea8"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60/audit_hull.csv",
+    "published": "diagnostics/reverse_60/audit_hull.csv",
+    "sha256": "9efe0b511d5af04f751bd2f238868dfcfcfed994f61afe0345e5553c4e1e9f37"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60/audit_propulsion.csv",
+    "published": "diagnostics/reverse_60/audit_propulsion.csv",
+    "sha256": "303fa388b05666d4d79da17f1d4b375fd8b7b4118aa93f1c8fc2356b131e3b81"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60/audit_appendages.csv",
+    "published": "diagnostics/reverse_60/audit_appendages.csv",
+    "sha256": "995a7a42192aec6c64175ada1293f626c3a0aafdd3fd82cc75754cd56c2dc6dc"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_no_couple/case_binding.json",
+    "published": "diagnostics/reverse_60_no_couple/case_binding.json",
+    "sha256": "0e756cfe2b786bfd599950bf23af68048d8a4b1d75f04d62eb0d3d9803e21c5d"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_no_couple/result.json",
+    "published": "diagnostics/reverse_60_no_couple/result.json",
+    "sha256": "9272f7ca5c638e35c2a21ce65b13c2370df8d64e96c18e0d6fa8a41dbd2312ce"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_no_couple/stages.json",
+    "published": "diagnostics/reverse_60_no_couple/stages.json",
+    "sha256": "a2e74d35977132585cd1c970cbcea38c07864a1b4a1cb3f74c029998d6a2bf8f"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_no_couple/run_status.json",
+    "published": "diagnostics/reverse_60_no_couple/run_status.json",
+    "sha256": "e07206e392ccc05899b359549c9bd0e10b50d9c8c79d3f2d810262c0383ac596"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_no_couple/source_versions.json",
+    "published": "diagnostics/reverse_60_no_couple/source_versions.json",
+    "sha256": "85c37dd62f65d15badbf628c85edb65eaf8be67d2a14392abe54bf3d5e579bc4"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_no_couple/propulsion_state.csv",
+    "published": "diagnostics/reverse_60_no_couple/propulsion_state.csv",
+    "sha256": "10d49f19faacf8709b3ed3a6e69d0f4dd225f228da5f34ada1ac36a59469d2d9"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_no_couple/actuators_state.csv",
+    "published": "diagnostics/reverse_60_no_couple/actuators_state.csv",
+    "sha256": "392c514318758171ceec667e9eb3e89d096d61a95d6ddc51bff645b3b99e434b"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_no_couple/audit_hull.csv",
+    "published": "diagnostics/reverse_60_no_couple/audit_hull.csv",
+    "sha256": "156f78017c4689e8a77cceb65176e632440efa99b5a8ddde3325aaf74026b18a"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_no_couple/audit_propulsion.csv",
+    "published": "diagnostics/reverse_60_no_couple/audit_propulsion.csv",
+    "sha256": "95d5f9d729bdf83769333ec2f20b9843060ace4b1b0e6596463a70355890ec2c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_no_couple/audit_appendages.csv",
+    "published": "diagnostics/reverse_60_no_couple/audit_appendages.csv",
+    "sha256": "704d9be7404ac7843b8e78bf30c1035e615de9ea2358bb18dea494cb2013b2bd"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_symmetric/case_binding.json",
+    "published": "diagnostics/reverse_60_symmetric/case_binding.json",
+    "sha256": "70e528c7e8aeaa35b0c74a2738a75957d423878adcb728576fcb7f5d46048da0"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_symmetric/result.json",
+    "published": "diagnostics/reverse_60_symmetric/result.json",
+    "sha256": "41027a120b5981d29dafaf3379b211e61747fa6044706788ac84ef68d8d42d7b"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_symmetric/stages.json",
+    "published": "diagnostics/reverse_60_symmetric/stages.json",
+    "sha256": "beed5f7fff6d1d69c03a8b6a2f7c0f02fa34854ab517a99d23d49fd6274a9895"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_symmetric/run_status.json",
+    "published": "diagnostics/reverse_60_symmetric/run_status.json",
+    "sha256": "75c61d2fe8035f20702f118a56118bf3386be61cbf3d873bf7d03abc6c985607"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_symmetric/source_versions.json",
+    "published": "diagnostics/reverse_60_symmetric/source_versions.json",
+    "sha256": "ddac404d72218c5945a10206ee9f91db09601f6531b7e8634b95a49de08e8480"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_symmetric/propulsion_state.csv",
+    "published": "diagnostics/reverse_60_symmetric/propulsion_state.csv",
+    "sha256": "596797ad4ec66523463f99ca9294c2a3153b6924bb14c9b9808f55d792951c5d"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_symmetric/actuators_state.csv",
+    "published": "diagnostics/reverse_60_symmetric/actuators_state.csv",
+    "sha256": "97f520ade7ea4fba5dd15260eb07ce0be26306db18b6e6e40846a2c361a0b155"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_symmetric/audit_hull.csv",
+    "published": "diagnostics/reverse_60_symmetric/audit_hull.csv",
+    "sha256": "efac36146a44c457b4d0ab1a7a8e70f33735904d8ed0431284488ff6fcbdb7c9"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_symmetric/audit_propulsion.csv",
+    "published": "diagnostics/reverse_60_symmetric/audit_propulsion.csv",
+    "sha256": "07ccb24ca35f4568dc2bcf87b2f7eeaa4a94dbc913b86a23ef776b35a9697375"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/reverse_60_symmetric/audit_appendages.csv",
+    "published": "diagnostics/reverse_60_symmetric/audit_appendages.csv",
+    "sha256": "15067878fab6c8437c65fc1e4d9e6af4c534eca4459be2c5615840a13156ba09"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/zigzag_feedforward/case_binding.json",
+    "published": "diagnostics/zigzag_feedforward/case_binding.json",
+    "sha256": "42cea6072ac6352d464f8ab6c642c1159e6a06cdfbfb4a10c4e224d56764627d"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/zigzag_feedforward/result.json",
+    "published": "diagnostics/zigzag_feedforward/result.json",
+    "sha256": "b5f70eea2db5e6b04a558cd0e8d7a8820661d19c55b1c1056c3ff801f8d16ef1"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/zigzag_feedforward/stages.json",
+    "published": "diagnostics/zigzag_feedforward/stages.json",
+    "sha256": "a18e99077a71f60fe0dc6815458df30891fe4f3f3e674046e9dd3faf1bba7e7d"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/zigzag_feedforward/run_status.json",
+    "published": "diagnostics/zigzag_feedforward/run_status.json",
+    "sha256": "de10b67fec2688afaf75505f591305dffb4c5871df3461fbe2141e2a4ab11c14"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/zigzag_feedforward/source_versions.json",
+    "published": "diagnostics/zigzag_feedforward/source_versions.json",
+    "sha256": "cadd8baee0b612890034156c145c568318f991bc99e175fafaf38a43edc5db39"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/zigzag_feedforward/propulsion_state.csv",
+    "published": "diagnostics/zigzag_feedforward/propulsion_state.csv",
+    "sha256": "536b3df647398ef27631d56d9d8a8363be1a86afa4eb0e3a12b4c6af17fe31a4"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/zigzag_feedforward/actuators_state.csv",
+    "published": "diagnostics/zigzag_feedforward/actuators_state.csv",
+    "sha256": "2930eea845119d668878228b890b5c3c19f5dce89d42d80395d21b5e79db1aee"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/zigzag_legacy/case_binding.json",
+    "published": "diagnostics/zigzag_legacy/case_binding.json",
+    "sha256": "5ded599e15cf898fea8848c1fb64154f08a6aabe58cbcb04e8e168ade29b5181"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/zigzag_legacy/result.json",
+    "published": "diagnostics/zigzag_legacy/result.json",
+    "sha256": "80f4177338211fe6bfa7ba1ea2174ff13452cf76bd7fe88b70176466e575781c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/zigzag_legacy/stages.json",
+    "published": "diagnostics/zigzag_legacy/stages.json",
+    "sha256": "f92a87f212b1d3f2c6870046c9f78fe33165905f71fac9f1205c3d7ee0be70bc"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/zigzag_legacy/run_status.json",
+    "published": "diagnostics/zigzag_legacy/run_status.json",
+    "sha256": "c34d52a1d3056da3325982df453ea3097acd976a4534a6e2df0b8ea73f898bb3"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/zigzag_legacy/source_versions.json",
+    "published": "diagnostics/zigzag_legacy/source_versions.json",
+    "sha256": "706851107664bc1b9b1c0d0ac8482e4c19fa3e9006a5a1b14c2be5ad282462be"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/zigzag_legacy/propulsion_state.csv",
+    "published": "diagnostics/zigzag_legacy/propulsion_state.csv",
+    "sha256": "bc951d39d22e6f195eccb406b0a82b15613bcdad1f9a9074ee62fe2ef57ec4c5"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/zigzag_legacy/actuators_state.csv",
+    "published": "diagnostics/zigzag_legacy/actuators_state.csv",
+    "sha256": "52b11de3553e40c15fed797625664c29ad6513e3c14efb8d0b50f3e4f9b28e20"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/suite_binding.json",
+    "published": "reverse_sensitivity/suite_binding.json",
+    "sha256": "db156c0b77fdc1119b5bab32e6866046ae2c49bf70f40699e2400caa770200f2"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/summary.json",
+    "published": "reverse_sensitivity/summary.json",
+    "sha256": "42c8d37fa82dff6b50b7d7b2edda22db719a68e00b7f49c4ce264bd2cfe24698"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_080/case_binding.json",
+    "published": "reverse_sensitivity/reverse_60_appendage_080/case_binding.json",
+    "sha256": "ab9bbe6993db0a2963a5dd51a9cf74fd5b41a40fc7d35c12f68077d2eb08bafc"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_080/result.json",
+    "published": "reverse_sensitivity/reverse_60_appendage_080/result.json",
+    "sha256": "455d25d0a9e6294cd7a90ba650191cc020da1b520e65bfe3cf8eb09ddd1e6926"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_080/stages.json",
+    "published": "reverse_sensitivity/reverse_60_appendage_080/stages.json",
+    "sha256": "e29e701e0893591a54423e2985fb50ac02440c9187562f9853e45d857b708767"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_080/run_status.json",
+    "published": "reverse_sensitivity/reverse_60_appendage_080/run_status.json",
+    "sha256": "c9bcb6e4648778b85d77cac301e05f34e59ef8b497ad7f047179f95b49f483e1"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_080/source_versions.json",
+    "published": "reverse_sensitivity/reverse_60_appendage_080/source_versions.json",
+    "sha256": "91643c13cae1de71601f4908be7133a1c543e154578bc71d8e845d044f255dc4"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_080/propulsion_state.csv",
+    "published": "reverse_sensitivity/reverse_60_appendage_080/propulsion_state.csv",
+    "sha256": "a35bf1fb3b4b85f536eb1d07300b21eb1624830e37bb00b9d6f9f0f0d6f028f0"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_080/actuators_state.csv",
+    "published": "reverse_sensitivity/reverse_60_appendage_080/actuators_state.csv",
+    "sha256": "0a21488cc459de4956b78cbfa8ae7299c416953616c47c7e34f176539df22838"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_080/audit_hull.csv",
+    "published": "reverse_sensitivity/reverse_60_appendage_080/audit_hull.csv",
+    "sha256": "0fcd0146e5b11af5e7bcc53bddc6651bc4e5a25873f81713286f5a7078249720"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_080/audit_propulsion.csv",
+    "published": "reverse_sensitivity/reverse_60_appendage_080/audit_propulsion.csv",
+    "sha256": "e72a64cc10d46a7c44137d716952baf8ad21bbb8f62eed6df81eb722ce49011c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_080/audit_appendages.csv",
+    "published": "reverse_sensitivity/reverse_60_appendage_080/audit_appendages.csv",
+    "sha256": "3e6c6a4e4e3e4ed6683971aebdd775250061a74e1a5b9864ce78069b01c05382"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_120/case_binding.json",
+    "published": "reverse_sensitivity/reverse_60_appendage_120/case_binding.json",
+    "sha256": "845374be3a9fb6f251e7ba9acac34451016c96b0a7783db8af47c8ab0a32b520"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_120/result.json",
+    "published": "reverse_sensitivity/reverse_60_appendage_120/result.json",
+    "sha256": "7b4ce2b246f3fcdf231adae856c83dc181bee60d36cad51cbe4e30bdd07c16f7"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_120/stages.json",
+    "published": "reverse_sensitivity/reverse_60_appendage_120/stages.json",
+    "sha256": "03003eb51ebdc549e695bdfd2b9f3a2a5ba8baef2d0680d1297b682891c11713"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_120/run_status.json",
+    "published": "reverse_sensitivity/reverse_60_appendage_120/run_status.json",
+    "sha256": "d4503d1eebc825b0d3fdc2c3079116dda103834fee9f46695d8e43258f14a14e"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_120/source_versions.json",
+    "published": "reverse_sensitivity/reverse_60_appendage_120/source_versions.json",
+    "sha256": "33c276d46efda0e46b78422bf17bca0bf67cb5e44bc7ff15b4a19adccdecca4a"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_120/propulsion_state.csv",
+    "published": "reverse_sensitivity/reverse_60_appendage_120/propulsion_state.csv",
+    "sha256": "1aeb9b502dc7d00cf262416f3465f8fc7b6e00a94ed1f3850cbe8f2b007a4d58"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_120/actuators_state.csv",
+    "published": "reverse_sensitivity/reverse_60_appendage_120/actuators_state.csv",
+    "sha256": "44a1c7652924d4345cbc25d2c653cd2e63013bb0a834fc1f43874fae5f25785d"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_120/audit_hull.csv",
+    "published": "reverse_sensitivity/reverse_60_appendage_120/audit_hull.csv",
+    "sha256": "c2bca3bb87d792ebf5dc580fc2484dfbe4027c9fd9f1de255750c0186011ff6f"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_120/audit_propulsion.csv",
+    "published": "reverse_sensitivity/reverse_60_appendage_120/audit_propulsion.csv",
+    "sha256": "126d405725d4908605be2def46683e18640848ede0bc097665c25c0f5b7eae0e"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_appendage_120/audit_appendages.csv",
+    "published": "reverse_sensitivity/reverse_60_appendage_120/audit_appendages.csv",
+    "sha256": "ee6b6f0dba7e88a272621a8b323cd3f58b0153e12e177edaa19ec264d60f91ee"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_symmetric_no_couple/case_binding.json",
+    "published": "reverse_sensitivity/reverse_60_symmetric_no_couple/case_binding.json",
+    "sha256": "066c69b7349945def0120fa7a26cce8f322bd3679d1676a883fc8e157c27661f"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_symmetric_no_couple/result.json",
+    "published": "reverse_sensitivity/reverse_60_symmetric_no_couple/result.json",
+    "sha256": "f66a8d2fe5592a07b5ffeafe25fc642553082d18e573f3e27de818ed190efd9d"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_symmetric_no_couple/stages.json",
+    "published": "reverse_sensitivity/reverse_60_symmetric_no_couple/stages.json",
+    "sha256": "e29e701e0893591a54423e2985fb50ac02440c9187562f9853e45d857b708767"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_symmetric_no_couple/run_status.json",
+    "published": "reverse_sensitivity/reverse_60_symmetric_no_couple/run_status.json",
+    "sha256": "f025601eefd3a86f1bee972cc55b36598ac8997ede82bcc104444339f214f51c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_symmetric_no_couple/source_versions.json",
+    "published": "reverse_sensitivity/reverse_60_symmetric_no_couple/source_versions.json",
+    "sha256": "bba5513854f111be305393a56673ff15f6ed5157d55a0e833147d2ba914304ed"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_symmetric_no_couple/propulsion_state.csv",
+    "published": "reverse_sensitivity/reverse_60_symmetric_no_couple/propulsion_state.csv",
+    "sha256": "2b224482822c562611296c77b61987b5b2f1fafeec6e45fb26153dcd3030f502"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_symmetric_no_couple/actuators_state.csv",
+    "published": "reverse_sensitivity/reverse_60_symmetric_no_couple/actuators_state.csv",
+    "sha256": "614cb31108f053a13b75d98941f81e2bbf319b7f92a9b32a63f32b926def27ed"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_symmetric_no_couple/audit_hull.csv",
+    "published": "reverse_sensitivity/reverse_60_symmetric_no_couple/audit_hull.csv",
+    "sha256": "985aa3e1a8d8f849729abc1597e664cf1559e294423e981a327eeb079c984c08"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_symmetric_no_couple/audit_propulsion.csv",
+    "published": "reverse_sensitivity/reverse_60_symmetric_no_couple/audit_propulsion.csv",
+    "sha256": "dd591837ed883dcd41930dada43301e8af819f21a60b2ad4fc436c39730ed541"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/reverse_60_symmetric_no_couple/audit_appendages.csv",
+    "published": "reverse_sensitivity/reverse_60_symmetric_no_couple/audit_appendages.csv",
+    "sha256": "dd77dccdb3aada88c849547a44a9c81b41f49602d76dc579df58830c6c67f76c"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/maneuvers_v3/maneuver_assessment.json",
+    "published": "maneuver_assessment.json",
+    "sha256": "34de0661ddceeb8906a84d62f516dd97defc10549f948f12a5e926e011a63b31"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/diagnostics_v3/diagnostic_assessment.json",
+    "published": "diagnostic_assessment.json",
+    "sha256": "a68d03d33328d6dcdbbd5bdc4a48d79ba8ec31c9794e245cceeb8d2f25f1e101"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/reverse_sensitivity/diagnostic_assessment.json",
+    "published": "reverse_sensitivity_assessment.json",
+    "sha256": "b77f66e9d2dc8281002c1638f30d11860aae8dce90ded53a63d075653ad9a406"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/public_cli_v2/result.json",
+    "published": "public_cli.json",
+    "sha256": "d0e7a673ebeaf2d3bf60428cbf916cf5e214a249c793086b1e8c26da0a36381b"
+  },
+  {
+    "source": "artifacts/preflight_2026-11-21/public_cli_v2/execution_binding.json",
+    "published": "public_cli_binding.json",
+    "sha256": "2bb60ba2d7b7a8eaa78c85152b3517fc8081d53ed83872de262ec5ee9a937f4b"
+  },
+  {
+    "source": "tests/scenarios/maneuver_acceptance.json",
+    "published": "maneuver_acceptance.json",
+    "sha256": "dd879d54a66b50f8e4440e88107e25ae005104d71827333ea0ff5e37d6b1e353"
+  },
+  {
+    "source": "tests/scenarios/maneuver_audit.json",
+    "published": "maneuver_audit.json",
+    "sha256": "772c8ed531a46288cfc37b3bbc2c56827c1820b9d933b9716f2ba239ffce8fc7"
+  },
+  {
+    "source": "tests/scenarios/preflight_diagnostics.json",
+    "published": "preflight_diagnostics.json",
+    "sha256": "e6c35a8f5bcd7f478663da2b7e19a3d12ab621b53b5eb375738a15577f924bd2"
+  },
+  {
+    "source": "tests/scenarios/reverse_sensitivity.json",
+    "published": "reverse_sensitivity.json",
+    "sha256": "2f3a64a80e6a61634d920bb8f6524e5cf00f230e46fbce09c8173a9a7ec49b6e"
+  },
+  {
+    "source": "tests/regression/assess_maneuvers.py",
+    "published": "assess_maneuvers.py.txt",
+    "sha256": "4afc37069e14174b5e588340f173a879a73df7a0fe6dcff3ba88fabb0b332ae1"
+  },
+  {
+    "published": "environment.json",
+    "sha256": "cd2bc963e8ad3fa9da9dc3409e651a4cb952ff5a15dfe6a296959dca4a098ac9",
+    "kind": "additional_report_or_snapshot"
+  },
+  {
+    "published": "final_runner_binding.json",
+    "sha256": "d4a58e9ccd59c707eedea587506400ab592abdd11959b827d663b4a1a88ea32c",
+    "kind": "additional_report_or_snapshot"
+  },
+  {
+    "published": "final_runner_delta.json",
+    "sha256": "739993708ae0e8b8b06ac464c54819c16fd904b9016f38a643ac2e2ca4508922",
+    "kind": "additional_report_or_snapshot"
+  },
+  {
+    "published": "final_runner_spec.json",
+    "sha256": "1db28eaa4576bb383a7e35f92290ae0ecbc510f2eed6b3ebea99ba1913161335",
+    "kind": "additional_report_or_snapshot"
+  },
+  {
+    "published": "final_runner_summary.json",
+    "sha256": "39bbe096f2c678db8c8a17864596704a20c8ec2fefc78809db4b8987d8a1cb2d",
+    "kind": "additional_report_or_snapshot"
+  },
+  {
+    "published": "maneuver_quality.png",
+    "sha256": "26b926b887e70a06aaa9754a1d7111de030c494c4d5bb3b0a160041cb975392e",
+    "kind": "additional_report_or_snapshot"
+  },
+  {
+    "published": "run_performance_suite.tested.py.txt",
+    "sha256": "3675f730d4e537895f6a418d5a617a9a9202bf34f86f6ada104c03b5683e657a",
+    "kind": "additional_report_or_snapshot"
+  },
+  {
+    "published": "supervisor-full.json",
+    "sha256": "1830dcb276421eca9f74b8ee7efae3310767351bfcfe047f743b00e8dae0fc26",
+    "kind": "additional_report_or_snapshot"
+  },
+  {
+    "published": "supervisor-full.txt",
+    "sha256": "a26dfc54c89f7ea9e67b2f6dde2985b678a9f6a7db5ad905fe80eb8ca324a559",
+    "kind": "additional_report_or_snapshot"
+  },
+  {
+    "published": "unit-tests.log",
+    "sha256": "9a2ed385799cb80452f92faf9d030171500aad4ba37ad8323e5f6bf62b6d2710",
+    "kind": "additional_report_or_snapshot"
+  }
+]

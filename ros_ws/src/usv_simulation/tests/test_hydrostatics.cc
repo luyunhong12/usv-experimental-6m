@@ -1,8 +1,19 @@
+/** @file test_hydrostatics.cc
+ * @brief 当前模块的解析回归验证。
+ */
 #include "Hydrostatics.hh"
 #include <iostream>
 #include <cmath>
 #include <stdexcept>
+
+/** @brief 验证两个解析结果在规定容差内一致。
+ * @param a 实际计算结果。
+ * @param b 解析参考结果。
+ */
 void close(double a,double b){if(std::abs(a-b)>1e-8)throw std::runtime_error("Analytic hydrostatics mismatch");}
+
+/** @brief 执行该文件定义的解析或场景回归验证。
+ */
 int main(){
  using namespace usv;
  std::vector<V> v={{-1,-1,-1},{1,-1,-1},{1,1,-1},{-1,1,-1},{-1,-1,1},{1,-1,1},{1,1,1},{-1,1,1}};

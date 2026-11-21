@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-11-21T03:41:30.861205+00:00",
+  "reason": "V1 confused command-reference rate 0.15 rad/s with existing physical joint velocity limit 0.20 rad/s and imposed an unsupported 0.16 limit. V2 checks both independently from generated SDF, without changing physical parameters, traces or other thresholds. V1 retained and assessed separately.",
+  "sha256": {
+    "tests/scenarios/maneuver_audit.json": "faeb5f7f0752bb52f50e06652ae3c2f41aaafc8cb845599164313833a5d30fb7",
+    "tests/scenarios/maneuver_acceptance.json": "74818b34f6921a9aa7dcfcc63ac0c1dcf42a1e643c177c1b541e49653e0e6ee2",
+    "tests/regression/assess_maneuvers.py": "0ebc86a7f533a0b6d5a16985b565c2a30f5f202b538ae0c4312f1bb4bbaae9fe"
+  }
+}

@@ -1,0 +1,228 @@
+PBR assets current
+{
+  "profile": "ENGINEERING_ESTIMATE_NOT_MEASURED",
+  "sealed_envelope_watertight": true,
+  "max_source_vertex_distance_m": 6.967255752501893e-08,
+  "sealed_envelope_volume_m3": 8.358237950000001,
+  "triangles": 106,
+  "total_trial_mass_kg": 1225.6120300420835,
+  "trial_total_cg_m": [
+    -0.6575353776968095,
+    -2.8966917250641853e-18,
+    0.4963883192488034
+  ],
+  "equilibrium_pose_z_roll_pitch": [
+    -0.21363254902601697,
+    1.3467291256688056e-17,
+    -0.0028573985460690356
+  ],
+  "displaced_volume_m3": 1.2256120300420834,
+  "residual": [
+    -1.7208456881689926e-13,
+    4.505618100836273e-12,
+    -1.5538774923869623e-17
+  ],
+  "roll_pitch_restoring_stiffness_Nm_rad": [
+    17520.34019523544,
+    174224.76900136904
+  ],
+  "limitations": [
+    "station envelope sealed deck; no flooding",
+    "appendage displacement omitted",
+    "estimated aggregate/mesh inertia; no measured mass distribution",
+    "linear/quadratic damping uncalibrated; constant diagonal added mass trial; VRX distributed hull pressure and deep-water orbital flow; relative current/wind enabled",
+    "propulsion and energy are engineering proxies; fuel inertia uses a quasi-static unbaffled box tank"
+  ]
+}
+Starting >>> vrx_gazebo
+Starting >>> usv_description
+Finished <<< usv_description [0.07s]
+Starting >>> vrx_ros
+Finished <<< vrx_ros [0.09s]
+Starting >>> usv_energy
+Finished <<< usv_energy [0.07s]
+Starting >>> usv_physics
+Finished <<< usv_physics [0.09s]
+Starting >>> usv_control
+Finished <<< vrx_gazebo [0.34s]
+Starting >>> wamv_description
+Finished <<< wamv_description [0.08s]
+Starting >>> wamv_gazebo
+Finished <<< wamv_gazebo [0.07s]
+Starting >>> vrx_gz
+Finished <<< usv_control [0.43s]
+Starting >>> usv_ardupilot
+Finished <<< usv_ardupilot [0.06s]
+Finished <<< vrx_gz [0.36s]
+Starting >>> usv_simulation
+Finished <<< usv_simulation [0.10s]
+Starting >>> usv_bringup
+Finished <<< usv_bringup [0.07s]
+
+Summary: 12 packages finished [1.11s]
+运行时证据：/home/yh/Project/usv-experimental-6m/artifacts/validation/deep-runtime/20261121T085423Z-1HOWhL
+{
+  "mode": "force",
+  "passed": true,
+  "samples": 226,
+  "checks": {
+    "force_or_torque_response": true,
+    "native_readback": true,
+    "no_velocity_impulse": true,
+    "finite": true
+  },
+  "measured_accelerations": [
+    0.9999999999999405,
+    1.99999999999978
+  ],
+  "expected_accelerations": [
+    1,
+    2
+  ],
+  "boundary_velocity_step": 0.039999999999995595
+}
+{
+  "mode": "torque",
+  "passed": true,
+  "samples": 224,
+  "checks": {
+    "force_or_torque_response": true,
+    "native_readback": true,
+    "no_velocity_impulse": true,
+    "finite": true
+  },
+  "measured_accelerations": [
+    0.33333333333334075,
+    0.6666666666665967
+  ],
+  "expected_accelerations": [
+    0.3333333333333333,
+    0.6666666666666666
+  ],
+  "boundary_velocity_step": 0.013333333333334085
+}
+{
+  "case": "forward",
+  "passed": true,
+  "samples": 391,
+  "checks": {
+    "coast_slowdown": true,
+    "finite": true,
+    "power_limited": true,
+    "torque_limited": true,
+    "attitude_bounded": true,
+    "watchdog_off": true,
+    "motion_direction": true
+  },
+  "driven_speed_m_s": 1.3306951128378721,
+  "driven_yaw_deg": 0.019146356367867816,
+  "max_abs_power_W": 2479.9533852140294,
+  "final_speed_m_s": 0.24420442250423532,
+  "max_abs_roll_pitch_deg": [
+    0.06648398140658004,
+    0.25923191020176484
+  ],
+  "final_sim_s": 40.036
+}
+{
+  "case": "reverse",
+  "passed": true,
+  "samples": 391,
+  "checks": {
+    "coast_slowdown": true,
+    "finite": true,
+    "power_limited": true,
+    "torque_limited": true,
+    "attitude_bounded": true,
+    "watchdog_off": true,
+    "motion_direction": true
+  },
+  "driven_speed_m_s": -1.0334501119705268,
+  "driven_yaw_deg": 0.10463268921600143,
+  "max_abs_power_W": 2479.953365852631,
+  "final_speed_m_s": -0.2143515179773662,
+  "max_abs_roll_pitch_deg": [
+    0.06586450226026375,
+    0.24209726091411346
+  ],
+  "final_sim_s": 40.036
+}
+{
+  "case": "left",
+  "passed": true,
+  "samples": 391,
+  "driven_steering_deg": -20.00003417643549,
+  "checks": {
+    "coast_slowdown": true,
+    "finite": true,
+    "power_limited": true,
+    "torque_limited": true,
+    "attitude_bounded": true,
+    "watchdog_off": true,
+    "motion_direction": true,
+    "steering_tracks": true,
+    "turn_direction": true
+  },
+  "driven_speed_m_s": 1.1601814774760946,
+  "driven_yaw_deg": 207.59555387329382,
+  "max_abs_power_W": 2479.9534243408084,
+  "final_speed_m_s": 0.2150501353653852,
+  "max_abs_roll_pitch_deg": [
+    0.6069247889036159,
+    0.24894461163034606
+  ],
+  "final_sim_s": 40.036
+}
+{
+  "case": "right",
+  "passed": true,
+  "samples": 391,
+  "driven_steering_deg": 20.000034910900418,
+  "checks": {
+    "coast_slowdown": true,
+    "finite": true,
+    "power_limited": true,
+    "torque_limited": true,
+    "attitude_bounded": true,
+    "watchdog_off": true,
+    "motion_direction": true,
+    "steering_tracks": true,
+    "turn_direction": true
+  },
+  "driven_speed_m_s": 1.1603079239742309,
+  "driven_yaw_deg": -207.65917051072213,
+  "max_abs_power_W": 2479.953413317232,
+  "final_speed_m_s": 0.2147855658738025,
+  "max_abs_roll_pitch_deg": [
+    0.5400593846327865,
+    0.25276356597158944
+  ],
+  "final_sim_s": 40.036
+}
+{
+  "case": "reversal",
+  "passed": true,
+  "samples": 391,
+  "reverse_rpm_delay_s": 0.5239999999999991,
+  "reverse_motion_delay_s": 4.216000000000001,
+  "checks": {
+    "coast_slowdown": true,
+    "finite": true,
+    "power_limited": true,
+    "torque_limited": true,
+    "attitude_bounded": true,
+    "watchdog_off": true,
+    "motion_direction": true,
+    "both_directions": true,
+    "finite_reversal_delay": true
+  },
+  "driven_speed_m_s": -0.9206202200006823,
+  "driven_yaw_deg": 0.08011167653052301,
+  "max_abs_power_W": 2479.953553243031,
+  "final_speed_m_s": -0.2107540372649712,
+  "max_abs_roll_pitch_deg": [
+    0.06892198129524055,
+    0.25898943740635033
+  ],
+  "final_sim_s": 40.036
+}

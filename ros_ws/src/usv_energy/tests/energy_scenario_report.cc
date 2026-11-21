@@ -1,7 +1,13 @@
+/** @file energy_scenario_report.cc
+ * @brief 当前模块的解析回归验证。
+ */
 #include <usv_energy/EnergyModel.hh>
 #include <iostream>
 #include <iomanip>
 using namespace usv::energy;
+
+/** @brief 执行该文件定义的解析或场景回归验证。
+ */
 int main(){std::cout<<"case,time_s,soc,fuel_l,current_a,voltage_v,motor_w,charger_w,generator_w,temperature_c,battery_wh,loss_wh\n"<<std::setprecision(12);
  for(int scenario=0;scenario<4;++scenario){Model m;const char*names[]={"standby","motor_3000W","motor_3000W_generator","charging"};
   for(int t=0;t<=3600;++t){if(t%60==0)std::cout<<names[scenario]<<","<<t<<","<<m.s.soc<<","<<m.s.fuel<<","<<m.s.current<<","<<m.s.voltage<<","<<m.s.motorW<<","<<m.s.chargerW<<","<<m.s.generatorW<<","<<m.s.temperature<<","<<m.s.batteryWh<<","<<m.s.lossWh<<"\n";

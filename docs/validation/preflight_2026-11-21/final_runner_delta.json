@@ -1,0 +1,13 @@
+{
+  "changes_since_17_case_trial": {
+    "build.inputs": [],
+    "build.binaries": [],
+    "runtime": [
+      "tests/regression/run_performance_suite.py"
+    ]
+  },
+  "physics_and_installed_artifacts_unchanged": true,
+  "old_runner_sha256": "3675f730d4e537895f6a418d5a617a9a9202bf34f86f6ada104c03b5683e657a",
+  "final_runner_sha256": "46ebe693e9f4a26b92b27fa35292e62e22e84d53651cb76ced5610efe74bdf44",
+  "reason": "Final runner records subprocess exit codes and refuses passing summary on nonzero exit even if result JSON says passed. No physics, config or command-generation changes. Seven failure-binding unit tests and a final native case + explicit resume validate this branch/dispatch change."
+}

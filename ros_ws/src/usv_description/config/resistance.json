@@ -3,26 +3,42 @@
   "enabled": true,
   "reference_profile": "speed15_concept nominal / 60 L / zero payload / static equilibrium",
   "reference_pose_z_roll_pitch": [
-    -0.24203522295743862,
-    0.01474090814935639,
-    -0.020753535876355603
+    -0.23991658019639914,
+    0.011809959507880292,
+    -0.021771980354587904
   ],
-  "reference_wet_area_m2": 10.336297195730799,
+  "reference_wet_area_m2": 10.330756862389416,
   "reference_projected_area_m2": [
-    0.36034404899294414,
-    1.2437296471375594,
-    4.493324095600857
+    0.3570169522652326,
+    1.2328551136577626,
+    4.4932188352041
   ],
-  "geometry_sha256": "5c523f945dfda2699420fab718bb2b2dbc0e7ceed911e78e88a81c266d67d9d1",
+  "geometry_sha256": "1e811c99cccd4dd2c5966aa0fc6fe964d3c155a2534a0ee4fdf2e6d1aeaf7ccc",
   "law": "linear translation and angular damping scale by wet_area/reference; quadratic translation scales by half-integral(abs(body normal_i))*wet_area divided by same reference directional area",
   "basis": "Quadratic drag is proportional to a reference area for fixed coefficient; preserve existing nominal damping coefficients, explicitly add geometric immersion dependence. This is a surrogate, not resistance identification or a wave-making prediction.",
   "sources": [
-    "https://ittc.info/media/1816/75-02-02-01.pdf"
+    "https://ittc.info/media/1816/75-02-02-01.pdf",
+    "https://github.com/cybergalactic/MSS/blob/master/LIBRARY/modeling/crossFlowDrag.m"
   ],
   "limitations": [
     "Projected area uses a half normal integral of the wetted hull, not a measured drag coefficient",
     "Linear/angular area scaling is an engineering assumption; no frequency-dependent radiation",
     "No separate ITTC skin friction is added: existing lumped drag already includes unknown friction/form/wave contributions",
-    "Reference remains fixed across load and fuel cases; never normalize each case back to itself"
-  ]
+    "Reference remains fixed across load and fuel cases; never normalize each case back to itself",
+    "This axial allocation is an explicit engineering convention, not measured separation. Linear/lateral/angular legacy terms cannot yet be uniquely decomposed; no speculative subtraction of lift or yaw damping."
+  ],
+  "legacy_quadratic_drag_N_s2_m2": [
+    180.0,
+    1500.0,
+    1800.0
+  ],
+  "hull_quadratic_rotational_drag_Nm_s2_rad2": [
+    1200.0,
+    2500.0,
+    2200.0
+  ],
+  "allocation_policy": "Legacy axial coefficient is treated as a total reference budget. Allocate full-wet zero-incidence appendage profile drag to explicit appendages; hull receives the positive remainder. No fitted speed or heading correction.",
+  "reference_scene": "artifacts/force_audit_2026-11-21/reference/scene.json",
+  "distributed_lateral_drag": true,
+  "lateral_distribution_policy": "Replace lumped Y and independent N damping by integration of existing lateral budgets: linear term distributed over clipped wetted surface, quadratic term over clipped lateral projected area; local velocity v+x*r. Normalize by respective fixed reference areas; geometry generates yaw moments. Legacy angular Z entries used only when distributed mode is disabled."
 }

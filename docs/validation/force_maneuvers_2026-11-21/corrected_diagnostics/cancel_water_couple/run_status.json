@@ -1,0 +1,23 @@
+{
+  "case": "cancel_water_couple",
+  "spec": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "duration": 65,
+        "throttle": 1,
+        "steering_deg": 0
+      }
+    ],
+    "propulsion_overrides": {
+      "diagnostic_water_torque_scale": 0
+    }
+  },
+  "finished_stages": 1,
+  "start_sim": 1.336,
+  "failure": null,
+  "bridge_resumed": false
+}

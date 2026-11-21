@@ -1,0 +1,25 @@
+{
+  "design_target": "Nominal speed15_concept, 60 L, zero payload, zero static roll/pitch; independently solve Archimedes volume and longitudinal moment balance, no yaw metric used.",
+  "fore_ballast_center_m": [
+    1.8,
+    0,
+    0.3
+  ],
+  "fore_ballast_mass_kg": 167.85922625681135,
+  "level_draft_pose_z_m": -0.2706551995530573,
+  "existing_mass_with_fuel_kg": 1571.1745300420835,
+  "existing_longitudinal_first_moment_kg_m": -1253.923710718726,
+  "residual": [
+    1.5543122344752192e-15,
+    -9.592326932761353e-14
+  ],
+  "success": true,
+  "size_m": [
+    0.6,
+    0.4,
+    0.08909725385181069
+  ],
+  "convex_envelope_clearance_m": 0.11123992626911422,
+  "mass_penalty_kg": 167.85922625681135,
+  "total_added_ballast_kg": 199.91331618544993
+}

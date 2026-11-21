@@ -1,17 +1,36 @@
+/** @file PropulsionModel.hh
+ * @brief 受轴功率与转矩限制的工程推进代理模型。
+ */
 #pragma once
 #include <algorithm>
 #include <cmath>
 namespace usv {
+/** @brief 保存推进模型参数；默认值为工程代理，不是实测效率图。
+ */
 struct PropulsionParameters {
  double maxOmega=1500*2*M_PI/60,staticThrust=1000,reverseRatio=.6;
  double shaftPower=5040,stallTorque=60,gain=.3,tau=.6,deadband=.05,advanceSpeed=5.;
 };
+/** @brief 计算圆盘在水平水面下的面积比例。
+ * @param depth 圆盘中心在水面下的深度，m；水下为正。
+ * @param verticalRadius 圆盘垂向投影半径，m。
+ */
 inline double WetFraction(double depth,double verticalRadius) {
  if(verticalRadius<1e-8)return depth>=0?1:0;
  double x=std::clamp(depth/verticalRadius,-1.,1.);
  return .5+(std::asin(x)+x*std::sqrt(std::max(0.,1-x*x)))/M_PI;
 }
+/** @brief 保存电机转矩、水阻转矩、推力与轴功率。
+ */
 struct PropulsionOutput {double motorTorque=0,waterTorque=0,thrust=0,shaftPower=0;};
+/** @brief 计算受转矩和功率限制的电机及桨水动力输出。
+ * @param p 工程推进参数。
+ * @param command 有符号归一化油门请求。
+ * @param omega 实际桨轴角速度，rad/s。
+ * @param reference 目标桨轴角速度，rad/s。
+ * @param axialVelocity 沿桨轴的相对水流速度，m/s。
+ * @param wet 桨盘浸水比例。
+ */
 inline PropulsionOutput PropellerForces(const PropulsionParameters&p,double command,double omega,double reference,double axialVelocity,double wet) {
  PropulsionOutput out;
  double kq=p.shaftPower/std::pow(p.maxOmega,3);

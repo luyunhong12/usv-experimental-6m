@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "case": "reverse_60",
+  "spec": {
+    "kind": "maneuver_audit",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "reverse",
+        "duration": 100,
+        "mode": "direct",
+        "throttle": -0.6,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "fingerprint": "1065331bcd85854a02523ae9f2159b0c98c9c4d7bc167b272049d5c7d74d3750",
+  "files": {
+    "actuators_state.csv": "47b9e857d392ee87a3a251dac9269b6bc2db1716f2ab323bb065b5b39647189c",
+    "audit_appendages.csv": "9f1dd0051c59c292d14f49d41a92ddb9140bc5424c30ece0b3223cc1d568fb4f",
+    "audit_hull.csv": "f610c985515f18bbb6b36034a33bd327b24ce5df5d0574b9e907c99dc83bd2e6",
+    "audit_propulsion.csv": "a0d7498b01b4ae241abfd5972185de3dc3d1233ffe765824b474a8abc1fd5793",
+    "boat.sdf": "ff2dda94c6c5ed7d5cae6e6aad28b30c8e19e4b973da9f58a09227687a87f442",
+    "energy_truth.csv": "c4752ee36e5312f48a1f070eaa041a9135070a8eaf4fe9c4f85d39c0bc8be9e9",
+    "environment_state.csv": "643b937fe8d2fc4bb1f9bff2a96d90070dc8189cb9c2b2cfbd867afec7ef6acb",
+    "fuel_mass_state.csv": "7e92273fe0e28c8a1c00a567734bc0a497cd55aa64806977a87c2e2d8b1c9576",
+    "health.json": "71d7eb8ecf5c6693da41cd9385d69256140313e137153b78fdb232978d45c7ff",
+    "hydrodynamics_appendages.csv": "6ab0e649630959d7a5eab98e46f9c612eac8c6068e134a57d01270e96ac48f82",
+    "hydrodynamics_resistance.csv": "875cbe2d714867aad32dfa75756f04ebb3d6954e4e6405afc69449dee686b816",
+    "models/usv/usv_azimuth_trial.sdf": "daef5f7f500402eb13d6a68b9306b89e041c7f574c10f382d2d573d55425d3aa",
+    "propulsion_state.csv": "b810fa305531403a447790c61305b194d309e433979a74dee831b28c81f9d962",
+    "result.json": "d2ffe85b91b86deb9404382c4507272be63e4d9d6919852d5514e0d625a31f43",
+    "run_status.json": "23c9c8f9a3377e799262ba911f01373add49233e06ddea6ea7799e00f832190f",
+    "scene.json": "3c39fe6135fc30072ab18fab8b755270daf0dd83f7ff357214832989cf763422",
+    "source_versions.json": "40abf2b3dff679fd5277f00e16927c8ab9647f3c687e9f644e8c8137fefa1168",
+    "stages.json": "86ed5c84bd1190e6822a0aa7e10a5da57661fa7eaaede7ee8a1369425616f88b",
+    "startup.json": "3e08110bf7ed8b0079779fa9a0007a345ef30079d65dee38d1428c59c56e72d6",
+    "world.sdf": "98fb11dd7f19b6c3bfc52a036a1a4ea0d7e50d0ca1dc610c75ccfa0ca1fb90d9"
+  }
+}

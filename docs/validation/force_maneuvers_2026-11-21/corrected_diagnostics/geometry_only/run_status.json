@@ -1,0 +1,25 @@
+{
+  "case": "geometry_only",
+  "spec": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "duration": 65,
+        "throttle": 1,
+        "steering_deg": 0
+      }
+    ],
+    "hydro_overrides": {
+      "quadratic_damping": "180 1500 1800",
+      "reference_wet_area": 10.336297195730799,
+      "reference_projected_area": "0.36034404899294414 1.2437296471375594 4.493324095600857"
+    }
+  },
+  "finished_stages": 1,
+  "start_sim": 1.236,
+  "failure": null,
+  "bridge_resumed": false
+}

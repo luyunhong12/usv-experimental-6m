@@ -1,0 +1,24 @@
+{
+  "legacy_quadratic_drag_N_s2_m2": [
+    180.0,
+    1500.0,
+    1800.0
+  ],
+  "hull_quadratic_drag_N_s2_m2": [
+    178.00216605541337,
+    1500.0,
+    1800.0
+  ],
+  "appendage_reference_axial_N_s2_m2": {
+    "strut": 0.6131546827820955,
+    "skeg": 0.10530229410420588,
+    "motor_pod": 1.2793769677003297
+  },
+  "allocated_axial_N_s2_m2": 1.997833944586631,
+  "hull_quadratic_rotational_drag_Nm_s2_rad2": [
+    1200.0,
+    2500.0,
+    2200.0
+  ],
+  "scope": "Full-wet zero-incidence reference bookkeeping; local runtime appendage lift/drag remains independent. Lateral/angular overlap remains unidentified."
+}

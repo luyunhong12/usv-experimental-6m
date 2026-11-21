@@ -1,0 +1,47 @@
+{
+  "ready": true,
+  "wall_s": 4.71693385299659,
+  "sim_s": 1.336,
+  "health": {
+    "gz_partition": "usv_perf_turn_055_right_d1273124",
+    "sim_s": 1.336,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  "transport_retries": [
+    {
+      "wall_s": 3.009104890999879,
+      "topic": "propulsion/state"
+    },
+    {
+      "wall_s": 3.009104890999879,
+      "topic": "energy/truth"
+    },
+    {
+      "wall_s": 3.009104890999879,
+      "topic": "actuators/state"
+    },
+    {
+      "wall_s": 3.009104890999879,
+      "topic": "fuel_mass/state"
+    },
+    {
+      "wall_s": 3.009104890999879,
+      "topic": "audit/propulsion"
+    }
+  ]
+}

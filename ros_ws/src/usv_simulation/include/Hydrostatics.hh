@@ -1,3 +1,6 @@
+/** @file Hydrostatics.hh
+ * @brief 封闭定向三角网格的水平水面裁切与排水体积积分。
+ */
 #pragma once
 #include <gz/math/Vector3.hh>
 #include <array>
@@ -5,9 +8,16 @@
 namespace usv {
 using V=gz::math::Vector3d;
 using Triangle=std::array<V,3>;
+/** @brief 保存排水体积 m³ 与浮心位置 m。
+ */
 struct Volume { double volume=0; V centroid{0,0,0}; };
 // Oriented closed mesh clipped against a horizontal free surface. Cap lies in
 // reference plane, so its signed tetrahedral volume and first moment are zero.
+/** @brief 积分水面下封闭网格的有向体积与浮心。
+ * @param tris 同坐标系中的有向三角面片，顶点单位 m。
+ * @param level 水平水面的 z 高度，m。
+ * @param reference 积分参考位置，其水平分量用于构造水面上的参考点，m。
+ */
 inline Volume submerged(const std::vector<Triangle>& tris,double level,const V& reference) {
   Volume result; V moment(0,0,0); V ref(reference.X(),reference.Y(),level);
   for(const auto& t:tris) {

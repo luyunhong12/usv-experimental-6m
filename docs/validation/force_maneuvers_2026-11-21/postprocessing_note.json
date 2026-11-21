@@ -1,0 +1,5 @@
+{
+  "initial_error": "numpy.bool_ check value not JSON serializable; all native runs completed",
+  "fix": "Convert numpy bool check values to builtin bool and radius/comparison metrics to float. V1 uses equivalent numpy-scalar JSON conversion only. No criteria or telemetry changed.",
+  "final_assessor_sha256": "c8c51d39b1b426247a6aef057df0c95e4354233e2ba3e187a72b3488d5b51b45"
+}

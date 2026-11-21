@@ -1,7 +1,18 @@
+/** @file test_fuel_mass.cc
+ * @brief 当前模块的解析回归验证。
+ */
 #include "FuelMass.hh"
 #include <iostream>
 using namespace usv::fuel;
+
+/** @brief 校验测试判据，失败时终止本项验证。
+ * @param ok 应为真的测试判据。
+ * @param what 失败时输出的测试项说明。
+ */
 void check(bool ok,const char*what){if(!ok)throw std::runtime_error(what);}
+
+/** @brief 执行该文件定义的解析或场景回归验证。
+ */
 int main(){Tank t;
  for(double l:{0.,1.,6.,30.,60.}){
   auto p=t.Fuel(l,V::UnitZ());check(std::abs(p.mass-l*.84)<1e-10,"fuel density");if(l==0)continue;

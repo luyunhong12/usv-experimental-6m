@@ -1,0 +1,24 @@
+{
+  "case": "symmetric_mass_no_couple",
+  "spec": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "duration": 65,
+        "throttle": 1,
+        "steering_deg": 0
+      }
+    ],
+    "symmetric_mass_diagnostic": true,
+    "propulsion_overrides": {
+      "diagnostic_water_torque_scale": 0
+    }
+  },
+  "finished_stages": 1,
+  "start_sim": 1.236,
+  "failure": null,
+  "bridge_resumed": false
+}

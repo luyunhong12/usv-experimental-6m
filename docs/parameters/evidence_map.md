@@ -1,5 +1,9 @@
 # 科学依据与证据地图
 
+最新补充：[分布式横流阻力与固定实体配平](../validation/distributed_drag_2026-11-21/README.md)。
+
+历史专项：[零舵受力归因、镜像剖分修复、阻力分账及直接操纵](../validation/force_maneuvers_2026-11-21/README.md)。历史约 0.058°/秒和旧参考几何不再代表当前版本。
+
 本项目没有实船测量，目标是建立物理关系可解释、参数可替换、试验可重复的工程平台。以下依据支持模型的方法选择，不构成真实船舶精度认证。最后整理：2026-11-21。
 
 ## 怎样阅读证据
@@ -18,6 +22,7 @@
 |---|---|---|
 | [Fossen：Marine Craft Model](https://www.fossen.biz/html/marineCraftModel.html) | 六自由度惯性、科氏项、阻尼和恢复力的统一框架；检查惯性对称、科氏项与耗散的物理一致性 | 本船具体附加质量、阻尼值和航速。原文 BODY/NED 与本项目 ROS 坐标约定需要转换，不能直接复制符号 |
 | [Fossen MSS：coeffLiftDrag](https://github.com/cybergalactic/MSS/blob/master/LIBRARY/modeling/coeffLiftDrag.m) | 有限展弦比升力斜率、诱导阻力和大攻角混合的工程方法 | 本船附体的真实升阻力。当前效率因子、零升阻力、失速过渡由工程假设给定；不是源程序默认值或实测识别结果 |
+| [Fossen MSS：crossFlowDrag](https://github.com/cybergalactic/MSS/blob/master/LIBRARY/modeling/crossFlowDrag.m) | 沿船长按局部横向速度 v+x·r 积分阻力及其偏航力矩；本项目使用湿面片分配既有工程预算并检验耗散 | 本船具体阻力系数、反向稳定性或配重的制造可行性；本实现并非直接采用实测横流系数 |
 | [ITTC 7.5-02-02-01，2002 Rev.01](https://ittc.info/media/1816/75-02-02-01.pdf) | 总阻力系数以动态压强、湿面积归一化的定义，以及记录工况和不确定性的思路 | 这里引用的是明确版本的历史文件，不宣称最新标准；项目没有按其程序做拖曳水池试验，不能称 ITTC 认证或完成实船外推 |
 | [官方 VRX 源码](https://github.com/osrf/vrx) 与 [本项目固定版本清单](../../dependencies/sources.repos) | 悉尼场景、波场及 ROS/Gazebo 集成的上游实现参考 | 自定义船与 WAM-V 具有相同水动力，或水下地形、海况与现实完全一致 |
 
@@ -66,3 +71,9 @@
 [证据目录](../validation/evidence/README.md) 提供历史摘要和逐文件来源校验；[当前专项](../validation/directional_stability_2026-11-21/README.md) 提供工况、判定、曲线和部分遥测。完整原始日志仍保留在本地 artifacts，尚未全部发布。历史文档中引用本地附件的链接可能无法在 GitHub 打开，不能因此声称全部可在线复现。
 
 后续优先补充可测量的参数、独立数值/CFD 对照、更广工况及完整数据发布；获得实船时，再通过称重、静水姿态、拖曳/滑行减速、推力和操纵试验识别参数。[当前问题清单](../validation/known_issues.md)。
+
+## 最新接入前操纵证据
+
+见 [版本绑定、舵机轨迹跟踪、倒车受力和操纵品质](../validation/preflight_2026-11-21/README.md)。工程品质门槛与物理方程来源分开陈述：门槛不是 IMO 认证，Fossen 模型支持动力学结构但不证明本船系数；失败工况和参数敏感性均保留。
+
+固定配重按横向质量矩平衡、纵向静水浮心—重心平衡独立计算，外形、碰撞、质量与惯性共用台账。新增配重是仿真设计方案，不是原始 CAD 中已有设备；密度、可安装性和承载能力仍有工程假设。见 [推导与复验](../validation/distributed_drag_2026-11-21/README.md)。
