@@ -16,7 +16,7 @@ from readiness import ReadinessWindow
 p=argparse.ArgumentParser();p.add_argument('--case',required=True);p.add_argument('--spec',type=Path,required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args();all_specs=json.loads(a.spec.read_text());spec=all_specs[a.case]
 w=WORKSPACE;out=a.output.resolve();out.mkdir(parents=True,exist_ok=True)
 os.environ.update(GZ_PARTITION='usv_perf_'+a.case+'_'+uuid.uuid4().hex[:8],GZ_IP='127.0.0.1',ROS_DOMAIN_ID=str(30+list(all_specs).index(a.case)))
-(out/'source_versions.json').write_text(json.dumps({'partition':os.environ['GZ_PARTITION'],'ros_domain':os.environ['ROS_DOMAIN_ID'],'sha256':{str(f.resolve().relative_to(PROJECT_ROOT)):hashlib.sha256(f.read_bytes()).hexdigest() for f in [w/'src/usv_control/scripts/boat_control.py',w/'src/usv_simulation/src/HullHydrostatics.cc',w/'src/usv_simulation/src/AzimuthPropulsion.cc',w/'src/usv_description/config/resistance.json',w/'src/usv_description/config/trial_load.json']}},indent=2))
+(out/'source_versions.json').write_text(json.dumps({'partition':os.environ['GZ_PARTITION'],'ros_domain':os.environ['ROS_DOMAIN_ID'],'sha256':{str(f.resolve().relative_to(PROJECT_ROOT)):hashlib.sha256(f.read_bytes()).hexdigest() for f in [w/'src/usv_control/scripts/boat_control.py',w/'src/usv_simulation/src/HullHydrostatics.cc',w/'src/usv_simulation/src/AzimuthPropulsion.cc',w/'src/usv_description/config/resistance.json',w/'src/usv_description/config/trial_load.json',w/'src/usv_simulation/src/AppendageHydrodynamics.cc',w/'src/usv_simulation/include/AppendageHydrodynamics.hh',w/'src/usv_description/config/appendage_hydrodynamics.json']}},indent=2))
 from gz.transport13 import Node
 from gz.msgs10.double_v_pb2 import Double_V
 from gz.msgs10.boolean_pb2 import Boolean
@@ -26,16 +26,33 @@ from std_msgs.msg import Float64,String
 from geometry_msgs.msg import Twist
 world=out/'world.sdf';subprocess.run(['python3',str(tool_path('prepare_sydney.py')),'--profile','speed15_concept','--payload-kg',str(spec.get('payload_kg',0)),'--fuel-l',str(spec.get('fuel_l',60)),'--wave-gain',str(spec.get('wave_gain',0)),'--power-mode',spec.get('power_mode','normal'),'--output',str(world)],check=True,stdout=subprocess.DEVNULL)
 tree=E.parse(world);inc=tree.find("world/include[name='usv']");bt=E.parse(inc.findtext('uri'));bm=bt.find('model')
+if spec.get('isolated_water'):
+ for el in list(tree.find('world')):
+  if el.tag=='include' and el is not inc and el.findtext('name')!='Coast Waves':tree.find('world').remove(el)
+  elif el.tag=='model':tree.find('world').remove(el)
+if spec.get('disable_appendages'):
+ for el in list(bm.findall("plugin[@name='usv::AppendageHydrodynamics']")):bm.remove(el)
+if 'appendage_coefficient_scale' in spec:
+ ap=bm.find("plugin[@name='usv::AppendageHydrodynamics']");E.SubElement(ap,'coefficient_scale').text=str(spec['appendage_coefficient_scale'])
+if 'initial_yaw' in spec:
+ pose=inc.findtext('pose').split();pose[5]=str(spec['initial_yaw']);inc.find('pose').text=' '.join(pose)
+
 for link in bm.findall('link'):
  for sensor in list(link.findall('sensor')):
   if sensor.get('type') in ['camera','gpu_lidar']:link.remove(sensor)
 hydro=bm.find("plugin[@name='usv::HullHydrostatics']")
 for tag in ['linear_damping','quadratic_damping','angular_damping','angular_quadratic_damping']:
  el=hydro.find(tag);el.text=' '.join(str(float(v)*spec.get('drag_scale',1)) for v in el.text.split())
+for key,value in spec.get('hydro_overrides',{}).items():
+ el=hydro.find(key)
+ if el is None:el=E.SubElement(hydro,key)
+ el.text=str(value)
+if 'step_size' in spec:tree.find('world/physics/max_step_size').text=str(spec['step_size'])
 energy=bm.find("plugin[@name='usv::AzimuthPropulsion']/energy")
 for key,value in spec.get('energy_overrides',{}).items():energy.find(key).text=str(value)
 boat=out/'boat.sdf';bt.write(boat,encoding='utf-8',xml_declaration=True);inc.find('uri').text=str(boat);tree.write(world,encoding='utf-8',xml_declaration=True)
 node=Node();rows={k:[] for k in ['propulsion/state','energy/truth','actuators/state','environment/state','fuel_mass/state','hydrodynamics/resistance']}
+if bm.find("plugin[@name='usv::AppendageHydrodynamics']") is not None:rows['hydrodynamics/appendages']=[]
 for topic in rows:node.subscribe(Double_V,'/usv/'+topic,lambda msg,k=topic:rows[k].append(list(msg.data)))
 gen=node.advertise('/usv/energy/generator_enable',Boolean);wind=node.advertise('/vrx/wind/velocity',Vector3d);current=node.advertise('/vrx/current/velocity',Vector3d)
 rclpy.init();ros=rclpy.create_node('vessel_performance_test');held_throttle=ros.create_publisher(Float64,'/usv/actuators/heading_hold_throttle',10);th=ros.create_publisher(Float64,'/usv/actuators/throttle',10);steer=ros.create_publisher(Float64,'/usv/actuators/steering',10);vel=ros.create_publisher(Twist,'/usv/cmd_vel',10)

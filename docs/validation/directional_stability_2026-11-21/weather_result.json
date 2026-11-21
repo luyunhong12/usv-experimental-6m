@@ -1,0 +1,90 @@
+{
+  "case": "waves",
+  "spec": {
+    "kind": "weather",
+    "isolated_water": true,
+    "wave_gain": 0.3,
+    "payload_kg": 150,
+    "fuel_l": 30,
+    "wind": [
+      0,
+      6,
+      0
+    ],
+    "current": [
+      0.15,
+      0.1,
+      0
+    ],
+    "stages": [
+      {
+        "name": "weather",
+        "mode": "direct",
+        "throttle": 0.7,
+        "steering_deg": 0,
+        "duration": 60
+      },
+      {
+        "name": "coast",
+        "mode": "direct",
+        "throttle": 0.0,
+        "duration": 15
+      }
+    ]
+  },
+  "checks": {
+    "startup_ready": true,
+    "completed": true,
+    "no_failure": true,
+    "finite": true,
+    "attitude_bounded": true,
+    "power_limited": true,
+    "energy_balance": true,
+    "fuel_mass_consistent": true,
+    "resistance_dissipative": true,
+    "command_reached_physics": true,
+    "health_command_observed": true,
+    "initial_soc_matches": true
+  },
+  "passed": true,
+  "failure": null,
+  "start_sim": 1.336,
+  "metrics": {
+    "weather": {
+      "tail_speed_m_s": 2.9660974886350324,
+      "tail_speed_std_m_s": 0.05047892637941695,
+      "mean_motor_w": 13343.742439266214,
+      "distance_m": 170.48902261325333,
+      "heading_change_rad": 0.6671401592410013,
+      "mean_wet_area_m2": 10.578933051155317,
+      "mean_projected_x_m2": 0.3843272517364093,
+      "mean_surge_drag_n": 1837.533436051404
+    },
+    "coast": {
+      "tail_speed_m_s": 0.5989068521961617,
+      "tail_speed_std_m_s": 0.11891746143509783,
+      "mean_motor_w": 0.0,
+      "distance_m": 15.287962954975505,
+      "heading_change_rad": 0.25015384555908093,
+      "mean_wet_area_m2": 10.602917471095495,
+      "mean_projected_x_m2": 0.38501151438464104,
+      "mean_surge_drag_n": 88.33480945961443,
+      "time_to_abs_speed_0_1_s": null
+    }
+  },
+  "summary": {
+    "max_roll_pitch_deg": [
+      1.4835513709826926,
+      1.7349098005429608
+    ],
+    "soc_start_end": [
+      0.8999999963443217,
+      0.8956790934348077
+    ],
+    "temperature_max_c": 25.040833350833616,
+    "fuel_consumed_l": 0.0,
+    "sim_end": 76.58
+  },
+  "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+  "postprocess_recovered": false
+}

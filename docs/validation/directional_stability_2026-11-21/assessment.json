@@ -1,0 +1,310 @@
+{
+  "passed": true,
+  "criteria": {
+    "tail_window_s": 15,
+    "max_abs_yaw_rate_rad_s": 0.003,
+    "max_abs_sideslip_deg": 1.0,
+    "min_forward_speed_m_s": 3.8,
+    "max_actual_rudder_deg": 0.1,
+    "step_and_heading_rate_difference_rad_s": 0.0002,
+    "step_and_heading_speed_difference_m_s": 0.03
+  },
+  "cases": {
+    "nominal": {
+      "passed": true,
+      "checks": {
+        "runtime": true,
+        "passive_rate_bounded": true,
+        "sideslip_bounded": true,
+        "speed_retained": true,
+        "actual_zero_rudder": true,
+        "full_direct_throttle": true,
+        "no_heading_control": true,
+        "appendages_dissipative": true
+      },
+      "metrics": {
+        "tail_yaw_rate_rad_s": -0.0010197466075424382,
+        "tail_speed_m_s": 4.208376092080012,
+        "tail_sideslip_deg": 0.055857454172112825,
+        "tail_servo_max_deg": 1.061475373251512e-10,
+        "tail_command_min_max": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "step_1ms": {
+      "passed": true,
+      "checks": {
+        "runtime": true,
+        "passive_rate_bounded": true,
+        "sideslip_bounded": true,
+        "speed_retained": true,
+        "actual_zero_rudder": true,
+        "full_direct_throttle": true,
+        "no_heading_control": true,
+        "appendages_dissipative": true
+      },
+      "metrics": {
+        "tail_yaw_rate_rad_s": -0.0010197466322893563,
+        "tail_speed_m_s": 4.208376087346153,
+        "tail_sideslip_deg": 0.05585745554380697,
+        "tail_servo_max_deg": 1.1242670979681949e-10,
+        "tail_command_min_max": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "step_4ms": {
+      "passed": true,
+      "checks": {
+        "runtime": true,
+        "passive_rate_bounded": true,
+        "sideslip_bounded": true,
+        "speed_retained": true,
+        "actual_zero_rudder": true,
+        "full_direct_throttle": true,
+        "no_heading_control": true,
+        "appendages_dissipative": true
+      },
+      "metrics": {
+        "tail_yaw_rate_rad_s": -0.0010197466075452103,
+        "tail_speed_m_s": 4.208376092080036,
+        "tail_sideslip_deg": 0.055857454172903234,
+        "tail_servo_max_deg": 1.0117064296631858e-10,
+        "tail_command_min_max": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "payload_300": {
+      "passed": true,
+      "checks": {
+        "runtime": true,
+        "passive_rate_bounded": true,
+        "sideslip_bounded": true,
+        "speed_retained": true,
+        "actual_zero_rudder": true,
+        "full_direct_throttle": true,
+        "no_heading_control": true,
+        "appendages_dissipative": true
+      },
+      "metrics": {
+        "tail_yaw_rate_rad_s": -0.0006979340563833038,
+        "tail_speed_m_s": 3.9654897388028862,
+        "tail_sideslip_deg": 0.04822205043479308,
+        "tail_servo_max_deg": 4.3915029020416706e-11,
+        "tail_command_min_max": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "fuel_6": {
+      "passed": true,
+      "checks": {
+        "runtime": true,
+        "passive_rate_bounded": true,
+        "sideslip_bounded": true,
+        "speed_retained": true,
+        "actual_zero_rudder": true,
+        "full_direct_throttle": true,
+        "no_heading_control": true,
+        "appendages_dissipative": true
+      },
+      "metrics": {
+        "tail_yaw_rate_rad_s": -0.0010967154652528808,
+        "tail_speed_m_s": 4.249264340875663,
+        "tail_sideslip_deg": 0.05776123506886799,
+        "tail_servo_max_deg": 1.2155682606216503e-10,
+        "tail_command_min_max": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "heading_90": {
+      "passed": true,
+      "checks": {
+        "runtime": true,
+        "passive_rate_bounded": true,
+        "sideslip_bounded": true,
+        "speed_retained": true,
+        "actual_zero_rudder": true,
+        "full_direct_throttle": true,
+        "no_heading_control": true,
+        "appendages_dissipative": true
+      },
+      "metrics": {
+        "tail_yaw_rate_rad_s": -0.0010197466075333882,
+        "tail_speed_m_s": 4.20837609208003,
+        "tail_sideslip_deg": 0.055857454174391856,
+        "tail_servo_max_deg": 1.0573596142052078e-10,
+        "tail_command_min_max": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "coeff_075": {
+      "passed": true,
+      "checks": {
+        "runtime": true,
+        "passive_rate_bounded": true,
+        "sideslip_bounded": true,
+        "speed_retained": true,
+        "actual_zero_rudder": true,
+        "full_direct_throttle": true,
+        "no_heading_control": true,
+        "appendages_dissipative": true
+      },
+      "metrics": {
+        "tail_yaw_rate_rad_s": -0.0015747778493170673,
+        "tail_speed_m_s": 4.21253131721927,
+        "tail_sideslip_deg": 0.10897189354180413,
+        "tail_servo_max_deg": 5.777629724762387e-10,
+        "tail_command_min_max": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "coeff_125": {
+      "passed": true,
+      "checks": {
+        "runtime": true,
+        "passive_rate_bounded": true,
+        "sideslip_bounded": true,
+        "speed_retained": true,
+        "actual_zero_rudder": true,
+        "full_direct_throttle": true,
+        "no_heading_control": true,
+        "appendages_dissipative": true
+      },
+      "metrics": {
+        "tail_yaw_rate_rad_s": -0.0008010008296364905,
+        "tail_speed_m_s": 4.204230190178147,
+        "tail_sideslip_deg": 0.034675655477162094,
+        "tail_servo_max_deg": 6.664291821259105e-11,
+        "tail_command_min_max": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "kick_left": {
+      "passed": true,
+      "checks": {
+        "runtime": true,
+        "passive_rate_bounded": true,
+        "sideslip_bounded": true,
+        "speed_retained": true,
+        "actual_zero_rudder": true,
+        "full_direct_throttle": true,
+        "no_heading_control": true,
+        "appendages_dissipative": true,
+        "perturbation_was_effective": true,
+        "yaw_rate_recovered": true
+      },
+      "metrics": {
+        "tail_yaw_rate_rad_s": -0.0010197464908452327,
+        "tail_speed_m_s": 4.208376092082002,
+        "tail_sideslip_deg": 0.05585742447255805,
+        "tail_servo_max_deg": 2.2038556358114906e-08,
+        "tail_command_min_max": [
+          1.0,
+          1.0
+        ],
+        "kick_yaw_rate_rad_s": 0.1467774626171075
+      }
+    },
+    "kick_right": {
+      "passed": true,
+      "checks": {
+        "runtime": true,
+        "passive_rate_bounded": true,
+        "sideslip_bounded": true,
+        "speed_retained": true,
+        "actual_zero_rudder": true,
+        "full_direct_throttle": true,
+        "no_heading_control": true,
+        "appendages_dissipative": true,
+        "perturbation_was_effective": true,
+        "yaw_rate_recovered": true
+      },
+      "metrics": {
+        "tail_yaw_rate_rad_s": -0.0010197467010314865,
+        "tail_speed_m_s": 4.2083760920781055,
+        "tail_sideslip_deg": 0.05585747796616736,
+        "tail_servo_max_deg": 1.766877341844639e-08,
+        "tail_command_min_max": [
+          1.0,
+          1.0
+        ],
+        "kick_yaw_rate_rad_s": -0.1504816034727367
+      }
+    },
+    "curve_0_100": {
+      "passed": true,
+      "checks": {
+        "runtime": true
+      },
+      "metrics": {}
+    },
+    "brake_0": {
+      "passed": true,
+      "checks": {
+        "runtime": true
+      },
+      "metrics": {}
+    },
+    "turn_0_left": {
+      "passed": true,
+      "checks": {
+        "runtime": true
+      },
+      "metrics": {}
+    },
+    "turn_0_right": {
+      "passed": true,
+      "checks": {
+        "runtime": true
+      },
+      "metrics": {}
+    },
+    "step_2ms": {
+      "passed": true,
+      "checks": {
+        "runtime": true,
+        "passive_rate_bounded": true,
+        "sideslip_bounded": true,
+        "speed_retained": true,
+        "actual_zero_rudder": true,
+        "full_direct_throttle": true,
+        "no_heading_control": true,
+        "appendages_dissipative": true
+      },
+      "metrics": {
+        "tail_yaw_rate_rad_s": -0.0010197466240529935,
+        "tail_speed_m_s": 4.208376088923811,
+        "tail_sideslip_deg": 0.05585745508958659,
+        "tail_servo_max_deg": 1.0521251158589155e-10,
+        "tail_command_min_max": [
+          1.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "comparisons": {
+    "step_1ms": true,
+    "step_2ms": true,
+    "step_4ms": true,
+    "heading_90": true,
+    "kick_left_returns_to_same_trim": true,
+    "kick_right_returns_to_same_trim": true
+  },
+  "limitation": "Bounds allow small physical trim drift; zero commanded rudder does not guarantee mathematically zero yaw rate. No heading controller is used in neutral/recovery cases."
+}

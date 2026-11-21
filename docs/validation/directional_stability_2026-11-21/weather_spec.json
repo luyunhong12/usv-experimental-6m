@@ -1,0 +1,34 @@
+{
+  "waves": {
+    "kind": "weather",
+    "isolated_water": true,
+    "wave_gain": 0.3,
+    "payload_kg": 150,
+    "fuel_l": 30,
+    "wind": [
+      0,
+      6,
+      0
+    ],
+    "current": [
+      0.15,
+      0.1,
+      0
+    ],
+    "stages": [
+      {
+        "name": "weather",
+        "mode": "direct",
+        "throttle": 0.7,
+        "steering_deg": 0,
+        "duration": 60
+      },
+      {
+        "name": "coast",
+        "mode": "direct",
+        "throttle": 0.0,
+        "duration": 15
+      }
+    ]
+  }
+}

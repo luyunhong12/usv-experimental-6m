@@ -1862,6 +1862,55 @@
         </wave>
       </wavefield>
     </plugin>
+    <plugin filename="libUsvAppendageHydrodynamics.so" name="usv::AppendageHydrodynamics">
+      <link_name>azimuth</link_name>
+      <density>1000</density>
+      <water_level>0</water_level>
+      <surface name="strut">
+        <cd0>0.03</cd0>
+        <efficiency>0.7</efficiency>
+        <point>0.0733878612518 0 -0.463976204395</point>
+        <point>0.0462398529053 0 -0.129999995232</point>
+        <point>-0.0391347408295 0 -0.129999995232</point>
+        <point>-0.0216403007507 0 -0.463976204395</point>
+        <point>-0.00848269462585 0 -0.592999994755</point>
+        <point>0.0631539821625 0 -0.592999994755</point>
+      </surface>
+      <surface name="skeg">
+        <cd0>0.02</cd0>
+        <efficiency>0.7</efficiency>
+        <point>0.0658905506134 0 -0.627999961376</point>
+        <point>-0.07093501091 0 -0.627999961376</point>
+        <point>-0.0672371387482 0 -0.683121025562</point>
+        <point>-0.0542941093445 0 -0.75046890974</point>
+        <point>-0.0284080505371 0 -0.75046890974</point>
+        <point>0.0289106369019 0 -0.683121025562</point>
+      </surface>
+      <surface name="motor_pod">
+        <cd0>0.1</cd0>
+        <efficiency>0.7</efficiency>
+        <point>-0.121971607208 0 -0.64200001955</point>
+        <point>-0.00942611694336 0 -0.647000014782</point>
+        <point>0.0726656913757 0 -0.638000011444</point>
+        <point>0.13357257843 0 -0.616999983788</point>
+        <point>0.152109622955 0 -0.596000015736</point>
+        <point>0.152109622955 0 -0.589999973774</point>
+        <point>0.13357257843 0 -0.569000005722</point>
+        <point>0.0726656913757 0 -0.547999978065</point>
+        <point>-0.00942611694336 0 -0.538999974728</point>
+        <point>-0.121971607208 0 -0.543999969959</point>
+        <point>-0.136536359787 0 -0.561999976635</point>
+        <point>-0.136536359787 0 -0.624000012875</point>
+      </surface>
+      <topic_namespace>usv</topic_namespace>
+      <wavefield>
+        <topic>/vrx/wavefield/parameters</topic>
+        <wave>
+          <gain>0.0</gain>
+          <steepness>0</steepness>
+        </wave>
+      </wavefield>
+    </plugin>
     <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
       <publish_link_pose>true</publish_link_pose>
       <use_pose_vector_msg>true</use_pose_vector_msg>

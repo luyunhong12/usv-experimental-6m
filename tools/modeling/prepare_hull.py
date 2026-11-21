@@ -178,8 +178,14 @@ ec=child(p,'energy')
 for k,energy_value in energy['parameters'].items():child(ec,k,energy_value)
 sc=child(p,'steering')
 for k,x in dict(kp=cfg['steering_kp'],ki=cfg.get('steering_ki',0),kd=cfg['steering_kd'],limit=math.radians(cfg['steering_limit_deg']),rate=cfg.get('steering_reference_rate_rad_s',.15),acceleration=cfg.get('steering_reference_acceleration_rad_s2',.3),effort=cfg['steering_effort_limit_Nm'],**integration['steering']).items():child(sc,k,x)
+appendage_cfg=json.loads((D/'config/appendage_hydrodynamics.json').read_text())
+ap=child(model,'plugin',filename='libUsvAppendageHydrodynamics.so',name='usv::AppendageHydrodynamics')
+child(ap,'link_name',appendage_cfg['link']);child(ap,'density',appendage_cfg['density_kg_m3']);child(ap,'water_level',0)
+for surface in appendage_cfg['surfaces']:
+ sf=child(ap,'surface',name=surface['name']);child(sf,'cd0',surface['profile_drag_coefficient']);child(sf,'efficiency',surface['oswald_efficiency'])
+ for x,z in surface['outline_xz_m']:child(sf,'point',nums([x,0,z]))
 for plug in model.findall('plugin'):
- if plug.get('filename') in ['libUsvHullHydrostatics.so','libUsvAzimuthPropulsion.so']:
+ if plug.get('filename') in ['libUsvHullHydrostatics.so','libUsvAzimuthPropulsion.so','libUsvAppendageHydrodynamics.so']:
   child(plug,'topic_namespace','usv');field=child(plug,'wavefield');child(field,'topic','/vrx/wavefield/parameters');wave=child(field,'wave');child(wave,'gain',0);child(wave,'steepness',0)
 # Sensor poses are geometric/engineering mounting references; device mass is
 # already part of the aggregate equipment ledger, not added a second time.

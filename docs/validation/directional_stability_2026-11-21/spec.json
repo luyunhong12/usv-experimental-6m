@@ -1,0 +1,351 @@
+{
+  "nominal": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "duration": 90
+      },
+      {
+        "name": "coast",
+        "mode": "direct",
+        "throttle": 0.0,
+        "duration": 15
+      }
+    ]
+  },
+  "step_1ms": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "duration": 90
+      },
+      {
+        "name": "coast",
+        "mode": "direct",
+        "throttle": 0.0,
+        "duration": 15
+      }
+    ],
+    "step_size": 0.001
+  },
+  "step_4ms": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "duration": 90
+      },
+      {
+        "name": "coast",
+        "mode": "direct",
+        "throttle": 0.0,
+        "duration": 15
+      }
+    ],
+    "step_size": 0.004
+  },
+  "payload_300": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "duration": 90
+      },
+      {
+        "name": "coast",
+        "mode": "direct",
+        "throttle": 0.0,
+        "duration": 15
+      }
+    ],
+    "payload_kg": 300
+  },
+  "fuel_6": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "duration": 90
+      },
+      {
+        "name": "coast",
+        "mode": "direct",
+        "throttle": 0.0,
+        "duration": 15
+      }
+    ],
+    "fuel_l": 6
+  },
+  "heading_90": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "duration": 90
+      },
+      {
+        "name": "coast",
+        "mode": "direct",
+        "throttle": 0.0,
+        "duration": 15
+      }
+    ],
+    "initial_yaw": 1.5707963267948966
+  },
+  "coeff_075": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "duration": 90
+      },
+      {
+        "name": "coast",
+        "mode": "direct",
+        "throttle": 0.0,
+        "duration": 15
+      }
+    ],
+    "appendage_coefficient_scale": 0.75
+  },
+  "coeff_125": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "duration": 90
+      },
+      {
+        "name": "coast",
+        "mode": "direct",
+        "throttle": 0.0,
+        "duration": 15
+      }
+    ],
+    "appendage_coefficient_scale": 1.25
+  },
+  "kick_left": {
+    "kind": "recovery",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "accelerate",
+        "mode": "direct",
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "duration": 20
+      },
+      {
+        "name": "kick",
+        "mode": "direct",
+        "throttle": 1.0,
+        "steering_deg": -5,
+        "duration": 4
+      },
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "duration": 75
+      },
+      {
+        "name": "coast",
+        "mode": "direct",
+        "throttle": 0.0,
+        "duration": 15
+      }
+    ]
+  },
+  "kick_right": {
+    "kind": "recovery",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "accelerate",
+        "mode": "direct",
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "duration": 20
+      },
+      {
+        "name": "kick",
+        "mode": "direct",
+        "throttle": 1.0,
+        "steering_deg": 5,
+        "duration": 4
+      },
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "duration": 75
+      },
+      {
+        "name": "coast",
+        "mode": "direct",
+        "throttle": 0.0,
+        "duration": 15
+      }
+    ]
+  },
+  "curve_0_100": {
+    "kind": "curve",
+    "payload_kg": 0,
+    "stages": [
+      {
+        "name": "fixed",
+        "duration": 45,
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ],
+    "isolated_water": true
+  },
+  "brake_0": {
+    "kind": "brake",
+    "payload_kg": 0,
+    "stages": [
+      {
+        "name": "approach",
+        "duration": 35,
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "reverse_brake",
+        "duration": 18,
+        "throttle": -0.6,
+        "steering_deg": 0
+      },
+      {
+        "name": "reverse",
+        "duration": 25,
+        "throttle": -0.6,
+        "steering_deg": 0
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ],
+    "isolated_water": true
+  },
+  "turn_0_left": {
+    "kind": "turn",
+    "payload_kg": 0,
+    "stages": [
+      {
+        "name": "approach",
+        "duration": 20,
+        "throttle": 0.55,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "turn",
+        "duration": 60,
+        "throttle": 0.55,
+        "steering_deg": -20
+      },
+      {
+        "name": "coast",
+        "duration": 15,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ],
+    "isolated_water": true
+  },
+  "turn_0_right": {
+    "kind": "turn",
+    "payload_kg": 0,
+    "stages": [
+      {
+        "name": "approach",
+        "duration": 20,
+        "throttle": 0.55,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "turn",
+        "duration": 60,
+        "throttle": 0.55,
+        "steering_deg": 20
+      },
+      {
+        "name": "coast",
+        "duration": 15,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ],
+    "isolated_water": true
+  },
+  "step_2ms": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "duration": 90
+      },
+      {
+        "name": "coast",
+        "mode": "direct",
+        "throttle": 0.0,
+        "duration": 15
+      }
+    ],
+    "step_size": 0.002
+  }
+}

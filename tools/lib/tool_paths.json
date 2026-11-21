@@ -78,5 +78,7 @@
   "run_interfaces.sh": "ros_ws/src/usv_bringup/scripts/run_interfaces.sh",
   "wait_control_ready.py": "ros_ws/src/usv_bringup/scripts/wait_control_ready.py",
   "drive_ros.py": "tools/control/drive_ros.py",
-  "validate_public_cli.py": "tests/integration/validate_public_cli.py"
+  "validate_public_cli.py": "tests/integration/validate_public_cli.py",
+  "export_appendages.py": "tools/modeling/export_appendages.py",
+  "assess_directional_stability.py": "tests/regression/assess_directional_stability.py"
 }

@@ -16,3 +16,5 @@ USV_COLLISION_EXPORT=1 blender -b --python-exit-code 1 --python tools/modeling/e
 ```
 
 导出会更新运行网格和参考输入，不应覆盖历史测试目录。可选 Blender 连接工具单独保留，不是仿真运行依赖。
+
+原船模型中的支腿、底鳍和水下电机的水动力轮廓由 `tools/modeling/export_appendages.py` 导出；更新原模型后，先完成外观/碰撞导出，再用 Blender 运行此脚本，最后重新构建。运行时按波面裁切，不能直接用固定全浸面积代替。

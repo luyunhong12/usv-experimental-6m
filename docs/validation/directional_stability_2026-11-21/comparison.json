@@ -1,0 +1,17 @@
+{
+  "before_open_water": {
+    "heading_change_deg": -1927.9885669927398,
+    "tail_yaw_rate_deg_s": -36.95150323471644,
+    "tail_speed_kmh": 12.139549704286797
+  },
+  "without_added_open_water": {
+    "heading_change_deg": -424.47700472552924,
+    "tail_yaw_rate_deg_s": -10.195811339566628,
+    "tail_speed_kmh": 14.869475074304788
+  },
+  "with_appendages": {
+    "heading_change_deg": -4.842734082609764,
+    "tail_yaw_rate_deg_s": -0.05842724633316633,
+    "tail_speed_kmh": 15.150153932138734
+  }
+}
