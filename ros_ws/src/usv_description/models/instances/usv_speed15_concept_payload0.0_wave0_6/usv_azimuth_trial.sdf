@@ -1,0 +1,461 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.9">
+  <model name="usv">
+    <self_collide>true</self_collide>
+    <link name="hull">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.5670190077923865 -0.02510477202011756 0.4891730369890392 0 0 0</pose>
+        <mass>1688.1689168383</mass>
+        <inertia>
+          <ixx>490.71957109707887</ixx>
+          <iyy>4352.96915763533</iyy>
+          <izz>4628.325150466451</izz>
+          <ixy>10.989491413911402</ixy>
+          <ixz>-31.90305010524786</ixz>
+          <iyz>0.3421519963048797</iyz>
+        </inertia>
+      </inertial>
+      <visual name="hull_visual">
+        <geometry>
+          <mesh>
+            <uri>/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/hull.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="sealed_hull">
+        <geometry>
+          <mesh>
+            <uri>/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/hull_collision.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="hull_detailed_external">
+        <geometry>
+          <mesh>
+            <uri>/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/collision_hull.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <sensor name="sealed_hull_contact" type="contact">
+        <always_on>true</always_on>
+        <update_rate>50</update_rate>
+        <topic>/usv/contacts/sealed_hull</topic>
+        <contact>
+          <collision>sealed_hull</collision>
+          <topic>/usv/contacts/sealed_hull</topic>
+        </contact>
+      </sensor>
+      <sensor name="hull_detailed_external_contact" type="contact">
+        <always_on>true</always_on>
+        <update_rate>50</update_rate>
+        <topic>/usv/contacts/hull_detailed_external</topic>
+        <contact>
+          <collision>hull_detailed_external</collision>
+          <topic>/usv/contacts/hull_detailed_external</topic>
+        </contact>
+      </sensor>
+      <sensor name="imu" type="imu">
+        <pose>0 0 0.5 0 0 0</pose>
+        <always_on>true</always_on>
+        <update_rate>100</update_rate>
+        <topic>/usv/sensors/imu</topic>
+        <gz_frame_id>usv/imu</gz_frame_id>
+        <imu>
+          <enable_orientation>true</enable_orientation>
+          <angular_velocity>
+            <x>
+              <noise type="gaussian">
+                <mean>0</mean>
+                <stddev>0.0002</stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0</mean>
+                <stddev>0.0002</stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0</mean>
+                <stddev>0.0002</stddev>
+              </noise>
+            </z>
+          </angular_velocity>
+          <linear_acceleration>
+            <x>
+              <noise type="gaussian">
+                <mean>0</mean>
+                <stddev>0.01</stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0</mean>
+                <stddev>0.01</stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0</mean>
+                <stddev>0.01</stddev>
+              </noise>
+            </z>
+          </linear_acceleration>
+        </imu>
+      </sensor>
+      <sensor name="gps" type="navsat">
+        <pose>0.5 0 0.9 0 0 0</pose>
+        <always_on>true</always_on>
+        <update_rate>10</update_rate>
+        <topic>/usv/sensors/gps</topic>
+        <gz_frame_id>usv/gps</gz_frame_id>
+        <navsat>
+          <position_sensing>
+            <horizontal>
+              <noise type="gaussian">
+                <mean>0</mean>
+                <stddev>0.15</stddev>
+              </noise>
+            </horizontal>
+            <vertical>
+              <noise type="gaussian">
+                <mean>0</mean>
+                <stddev>0.3</stddev>
+              </noise>
+            </vertical>
+          </position_sensing>
+          <velocity_sensing>
+            <horizontal>
+              <noise type="gaussian">
+                <mean>0</mean>
+                <stddev>0.02</stddev>
+              </noise>
+            </horizontal>
+            <vertical>
+              <noise type="gaussian">
+                <mean>0</mean>
+                <stddev>0.03</stddev>
+              </noise>
+            </vertical>
+          </velocity_sensing>
+        </navsat>
+      </sensor>
+      <sensor name="magnetometer" type="magnetometer">
+        <pose>0 0 1 0 0 0</pose>
+        <always_on>true</always_on>
+        <update_rate>50</update_rate>
+        <topic>/usv/sensors/magnetometer</topic>
+        <gz_frame_id>usv/magnetometer</gz_frame_id>
+        <magnetometer>
+          <x>
+            <noise type="gaussian">
+              <mean>0</mean>
+              <stddev>1e-07</stddev>
+            </noise>
+          </x>
+          <y>
+            <noise type="gaussian">
+              <mean>0</mean>
+              <stddev>1e-07</stddev>
+            </noise>
+          </y>
+          <z>
+            <noise type="gaussian">
+              <mean>0</mean>
+              <stddev>1e-07</stddev>
+            </noise>
+          </z>
+        </magnetometer>
+      </sensor>
+      <sensor name="camera" type="camera">
+        <pose>1.5 0 1 0 0.10 0</pose>
+        <always_on>true</always_on>
+        <update_rate>5</update_rate>
+        <topic>/usv/sensors/camera</topic>
+        <gz_frame_id>usv/camera</gz_frame_id>
+        <camera>
+          <camera_info_topic>/usv/sensors/camera_info</camera_info_topic>
+          <horizontal_fov>1.05</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>360</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>500</far>
+          </clip>
+        </camera>
+      </sensor>
+      <sensor name="lidar" type="gpu_lidar">
+        <pose>0 0 1 0 0 0</pose>
+        <always_on>true</always_on>
+        <update_rate>5</update_rate>
+        <topic>/usv/sensors/lidar</topic>
+        <gz_frame_id>usv/lidar</gz_frame_id>
+        <lidar>
+          <scan>
+            <horizontal>
+              <samples>360</samples>
+              <resolution>1</resolution>
+              <min_angle>-3.141592653589793</min_angle>
+              <max_angle>3.141592653589793</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.2</min>
+            <max>100</max>
+            <resolution>0.02</resolution>
+          </range>
+          <noise type="gaussian">
+            <mean>0</mean>
+            <stddev>0.02</stddev>
+          </noise>
+        </lidar>
+      </sensor>
+    </link>
+    <link name="azimuth">
+      <pose>-3.62400007248 0 0.449999988079 0 0 0</pose>
+      <inertial>
+        <pose>0.0281521572118 4.33309066213e-20 0.0544062695134 0 0 0</pose>
+        <mass>87.54445112984854</mass>
+        <inertia>
+          <ixx>6.947911420400069</ixx>
+          <iyy>7.461223510432251</iyy>
+          <izz>1.2835661392339135</izz>
+          <ixy>6.337631754648488e-16</ixy>
+          <ixz>0.3312527234651075</ixz>
+          <iyz>-9.888223196678034e-18</iyz>
+        </inertia>
+      </inertial>
+      <visual name="azimuth_visual">
+        <geometry>
+          <mesh>
+            <uri>/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/azimuth.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="azimuth_detailed_external">
+        <geometry>
+          <mesh>
+            <uri>/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/collision_azimuth.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <sensor name="azimuth_detailed_external_contact" type="contact">
+        <always_on>true</always_on>
+        <update_rate>50</update_rate>
+        <topic>/usv/contacts/azimuth_detailed_external</topic>
+        <contact>
+          <collision>azimuth_detailed_external</collision>
+          <topic>/usv/contacts/azimuth_detailed_external</topic>
+        </contact>
+      </sensor>
+    </link>
+    <link name="propeller">
+      <pose>-3.79521107674 0 -0.143000006676 0 0 0</pose>
+      <inertial>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <mass>5.0625</mass>
+        <inertia>
+          <ixx>0.12814453125</ixx>
+          <iyy>0.064072265625</iyy>
+          <izz>0.064072265625</izz>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyz>0.0</iyz>
+        </inertia>
+      </inertial>
+      <visual name="propeller_visual">
+        <geometry>
+          <mesh>
+            <uri>/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/propeller.dae</uri>
+            <scale>1.5 1.5 1.5</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="propeller_detailed_external">
+        <geometry>
+          <mesh>
+            <uri>/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/collision_propeller.dae</uri>
+            <scale>1.5 1.5 1.5</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <sensor name="propeller_detailed_external_contact" type="contact">
+        <always_on>true</always_on>
+        <update_rate>50</update_rate>
+        <topic>/usv/contacts/propeller_detailed_external</topic>
+        <contact>
+          <collision>propeller_detailed_external</collision>
+          <topic>/usv/contacts/propeller_detailed_external</topic>
+        </contact>
+      </sensor>
+    </link>
+    <joint name="steering" type="revolute">
+      <parent>hull</parent>
+      <child>azimuth</child>
+      <pose relative_to="azimuth">0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.6108652381980153</lower>
+          <upper>0.6108652381980153</upper>
+          <effort>100.0</effort>
+          <velocity>0.2</velocity>
+        </limit>
+        <dynamics>
+          <damping>5</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <joint name="propeller_spin" type="revolute">
+      <parent>azimuth</parent>
+      <child>propeller</child>
+      <pose relative_to="propeller">0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+          <effort>400.0</effort>
+          <velocity>188.4955592153876</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <plugin filename="libUsvHullHydrostatics.so" name="usv::HullHydrostatics">
+      <link_name>hull</link_name>
+      <density>1000.0</density>
+      <water_level>0</water_level>
+      <linear_damping>120 600 1400</linear_damping>
+      <angular_damping>800 1600 900</angular_damping>
+      <quadratic_damping>180 1500 1800</quadratic_damping>
+      <angular_quadratic_damping>1200 2500 2200</angular_quadratic_damping>
+      <triangles_file>/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/config/hull_triangles.txt</triangles_file>
+      <pressure_max_edge>0.35</pressure_max_edge>
+      <drag_center>-0.642065682056 0 0</drag_center>
+      <air_center>0 0 0.5</air_center>
+      <air_cd_area>1 3 0</air_cd_area>
+      <topic_namespace>usv</topic_namespace>
+      <wavefield>
+        <topic>/vrx/wavefield/parameters</topic>
+        <wave>
+          <gain>0.6</gain>
+          <steepness>0</steepness>
+        </wave>
+      </wavefield>
+    </plugin>
+    <plugin filename="libUsvAzimuthPropulsion.so" name="usv::AzimuthPropulsion">
+      <reference_rpm>1500.0</reference_rpm>
+      <static_thrust>6000.0</static_thrust>
+      <reverse_ratio>0.6</reverse_ratio>
+      <shaft_power>33600.0</shaft_power>
+      <stall_torque>400.0</stall_torque>
+      <speed_gain>0.3</speed_gain>
+      <reference_tau>0.6</reference_tau>
+      <deadband>0.05</deadband>
+      <advance_speed>12.0</advance_speed>
+      <command_timeout>1.0</command_timeout>
+      <water_level>0.0</water_level>
+      <radius>0.22499999999999998</radius>
+      <fuel_mass>
+        <dry_mass>1637.7689168383</dry_mass>
+        <dry_cg>-0.5869300939398079 -0.025877335534301566 0.4933020206293577</dry_cg>
+        <dry_inertia>488.8170863414515 11.833345063181811 -36.413045527877635 11.833345063181811 4328.510986006549 0.16716114513466995 -36.413045527877635 0.16716114513466995 4604.359979416704</dry_inertia>
+        <tank_size>0.6 0.4 0.25</tank_size>
+        <tank_center>0.08 0 0.355</tank_center>
+        <density>840.0</density>
+      </fuel_mass>
+      <energy>
+        <capacity_ah>978.0</capacity_ah>
+        <nominal_voltage_v>51.2</nominal_voltage_v>
+        <initial_soc>0.9</initial_soc>
+        <resistance_ohm>0.004333333333333333</resistance_ohm>
+        <max_discharge_a>900.0</max_discharge_a>
+        <cutoff_voltage_v>41.6</cutoff_voltage_v>
+        <charge_voltage_v>57.6</charge_voltage_v>
+        <reserve_soc>0.02</reserve_soc>
+        <restart_soc>0.07</restart_soc>
+        <derate_soc>0.15</derate_soc>
+        <low_soc>0.2</low_soc>
+        <charge_efficiency>0.995</charge_efficiency>
+        <ambient_c>25.0</ambient_c>
+        <initial_temperature_c>25.0</initial_temperature_c>
+        <thermal_capacity_j_k>410400.0</thermal_capacity_j_k>
+        <thermal_conductance_w_k>45.0</thermal_conductance_w_k>
+        <derate_temperature_c>45.0</derate_temperature_c>
+        <cutoff_temperature_c>55.0</cutoff_temperature_c>
+        <aux_output_w>243.0</aux_output_w>
+        <aux_efficiency>0.87</aux_efficiency>
+        <motor_limit_w>40000.0</motor_limit_w>
+        <motor_efficiency>0.84</motor_efficiency>
+        <motor_idle_w>30.0</motor_idle_w>
+        <motor_copper_w_per_nm2>0.05</motor_copper_w_per_nm2>
+        <tank_capacity_l>60.0</tank_capacity_l>
+        <initial_fuel_l>60.0</initial_fuel_l>
+        <unusable_fuel_l>1.0</unusable_fuel_l>
+        <low_fuel_l>6.0</low_fuel_l>
+        <diesel_kg_l>0.84</diesel_kg_l>
+        <generator_ac_limit_w>4000.0</generator_ac_limit_w>
+        <fuel_idle_l_h>0.25</fuel_idle_l_h>
+        <fuel_l_kwh>0.35</fuel_l_kwh>
+        <crank_s>3.0</crank_s>
+        <warmup_s>10.0</warmup_s>
+        <generator_ramp_s>5.0</generator_ramp_s>
+        <charger_current_a>25.0</charger_current_a>
+        <charger_efficiency>0.9</charger_efficiency>
+        <starter_capacity_ah>60.0</starter_capacity_ah>
+        <starter_initial_soc>0.9</starter_initial_soc>
+        <starter_crank_a>180.0</starter_crank_a>
+        <starter_min_soc>0.2</starter_min_soc>
+        <starter_charge_a>7.0</starter_charge_a>
+        <sensor_period_s>1.0</sensor_period_s>
+        <sensor_filter_s>2.0</sensor_filter_s>
+        <fuel_filter_s>5.0</fuel_filter_s>
+        <soc_bias>0.003</soc_bias>
+        <fuel_bias_l>0.2</fuel_bias_l>
+      </energy>
+      <steering>
+        <kp>300.0</kp>
+        <kd>80.0</kd>
+        <limit>0.6108652381980153</limit>
+        <rate>0.15</rate>
+        <acceleration>0.3</acceleration>
+        <effort>100.0</effort>
+        <efficiency>0.7</efficiency>
+        <idle_w>8.0</idle_w>
+        <copper_w_per_nm2>0.002</copper_w_per_nm2>
+        <max_w>150.0</max_w>
+      </steering>
+      <topic_namespace>usv</topic_namespace>
+      <wavefield>
+        <topic>/vrx/wavefield/parameters</topic>
+        <wave>
+          <gain>0.6</gain>
+          <steepness>0</steepness>
+        </wave>
+      </wavefield>
+    </plugin>
+    <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+      <publish_link_pose>true</publish_link_pose>
+      <use_pose_vector_msg>true</use_pose_vector_msg>
+      <update_frequency>10</update_frequency>
+    </plugin>
+    <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
+      <topic>/usv/joint_state</topic>
+    </plugin>
+    <plugin filename="gz-sim-odometry-publisher-system" name="gz::sim::systems::OdometryPublisher">
+      <odom_frame>world</odom_frame>
+      <robot_base_frame>usv/base_link</robot_base_frame>
+      <odom_topic>/usv/ground_truth/odometry</odom_topic>
+      <tf_topic>/usv/ground_truth/tf</tf_topic>
+      <dimensions>3</dimensions>
+      <odom_publish_frequency>20</odom_publish_frequency>
+    </plugin>
+  </model>
+</sdf>

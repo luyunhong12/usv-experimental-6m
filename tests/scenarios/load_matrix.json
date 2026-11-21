@@ -1,0 +1,327 @@
+{
+  "load0_fuel6": {
+    "payload_kg": 0,
+    "fuel_l": 6,
+    "wave_gain": 0,
+    "current": [
+      0,
+      0,
+      0
+    ],
+    "wind": [
+      0,
+      0,
+      0
+    ]
+  },
+  "load0_fuel30": {
+    "payload_kg": 0,
+    "fuel_l": 30,
+    "wave_gain": 0,
+    "current": [
+      0,
+      0,
+      0
+    ],
+    "wind": [
+      0,
+      0,
+      0
+    ]
+  },
+  "load0_fuel60": {
+    "payload_kg": 0,
+    "fuel_l": 60,
+    "wave_gain": 0,
+    "current": [
+      0,
+      0,
+      0
+    ],
+    "wind": [
+      0,
+      0,
+      0
+    ]
+  },
+  "load100_fuel6": {
+    "payload_kg": 100,
+    "fuel_l": 6,
+    "wave_gain": 0,
+    "current": [
+      0,
+      0,
+      0
+    ],
+    "wind": [
+      0,
+      0,
+      0
+    ]
+  },
+  "load100_fuel30": {
+    "payload_kg": 100,
+    "fuel_l": 30,
+    "wave_gain": 0,
+    "current": [
+      0,
+      0,
+      0
+    ],
+    "wind": [
+      0,
+      0,
+      0
+    ]
+  },
+  "load100_fuel60": {
+    "payload_kg": 100,
+    "fuel_l": 60,
+    "wave_gain": 0,
+    "current": [
+      0,
+      0,
+      0
+    ],
+    "wind": [
+      0,
+      0,
+      0
+    ]
+  },
+  "load300_fuel6": {
+    "payload_kg": 300,
+    "fuel_l": 6,
+    "wave_gain": 0,
+    "current": [
+      0,
+      0,
+      0
+    ],
+    "wind": [
+      0,
+      0,
+      0
+    ]
+  },
+  "load300_fuel30": {
+    "payload_kg": 300,
+    "fuel_l": 30,
+    "wave_gain": 0,
+    "current": [
+      0,
+      0,
+      0
+    ],
+    "wind": [
+      0,
+      0,
+      0
+    ]
+  },
+  "load300_fuel60": {
+    "payload_kg": 300,
+    "fuel_l": 60,
+    "wave_gain": 0,
+    "current": [
+      0,
+      0,
+      0
+    ],
+    "wind": [
+      0,
+      0,
+      0
+    ]
+  },
+  "port": {
+    "payload_kg": 150,
+    "fuel_l": 30,
+    "wave_gain": 0,
+    "current": [
+      0,
+      0,
+      0
+    ],
+    "wind": [
+      0,
+      0,
+      0
+    ],
+    "payload_center": [
+      0,
+      0.6,
+      0.6
+    ]
+  },
+  "starboard": {
+    "payload_kg": 150,
+    "fuel_l": 30,
+    "wave_gain": 0,
+    "current": [
+      0,
+      0,
+      0
+    ],
+    "wind": [
+      0,
+      0,
+      0
+    ],
+    "payload_center": [
+      0,
+      -0.6,
+      0.6
+    ]
+  },
+  "bow": {
+    "payload_kg": 150,
+    "fuel_l": 30,
+    "wave_gain": 0,
+    "current": [
+      0,
+      0,
+      0
+    ],
+    "wind": [
+      0,
+      0,
+      0
+    ],
+    "payload_center": [
+      1,
+      0,
+      0.6
+    ]
+  },
+  "stern": {
+    "payload_kg": 150,
+    "fuel_l": 30,
+    "wave_gain": 0,
+    "current": [
+      0,
+      0,
+      0
+    ],
+    "wind": [
+      0,
+      0,
+      0
+    ],
+    "payload_center": [
+      -1,
+      0,
+      0.6
+    ]
+  },
+  "combined": {
+    "payload_kg": 100,
+    "fuel_l": 30,
+    "wave_gain": 0.3,
+    "current": [
+      0.2,
+      0.15,
+      0
+    ],
+    "wind": [
+      0,
+      8,
+      0
+    ],
+    "power_mode": "survey",
+    "generator_on": true
+  },
+  "stress": {
+    "payload_kg": 300,
+    "fuel_l": 6,
+    "wave_gain": 0.6,
+    "current": [
+      0.3,
+      0.4,
+      0
+    ],
+    "wind": [
+      0,
+      10,
+      0
+    ],
+    "power_mode": "peak"
+  },
+  "light": {
+    "payload_kg": 0,
+    "fuel_l": 60,
+    "wave_gain": 0,
+    "current": [
+      0,
+      0,
+      0
+    ],
+    "wind": [
+      0,
+      0,
+      0
+    ],
+    "mass_case": "light"
+  },
+  "heavy": {
+    "payload_kg": 0,
+    "fuel_l": 60,
+    "wave_gain": 0,
+    "current": [
+      0,
+      0,
+      0
+    ],
+    "wind": [
+      0,
+      0,
+      0
+    ],
+    "mass_case": "heavy"
+  },
+  "wind_only": {
+    "payload_kg": 0,
+    "fuel_l": 60,
+    "wave_gain": 0,
+    "current": [
+      0,
+      0,
+      0
+    ],
+    "wind": [
+      -8,
+      0,
+      0
+    ]
+  },
+  "current_only": {
+    "payload_kg": 0,
+    "fuel_l": 60,
+    "wave_gain": 0,
+    "current": [
+      0,
+      0.3,
+      0
+    ],
+    "wind": [
+      0,
+      0,
+      0
+    ]
+  },
+  "waves_only": {
+    "payload_kg": 0,
+    "fuel_l": 60,
+    "wave_gain": 0.3,
+    "current": [
+      0,
+      0,
+      0
+    ],
+    "wind": [
+      0,
+      0,
+      0
+    ]
+  }
+}

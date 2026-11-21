@@ -1,0 +1,3796 @@
+{
+  "schema": 2,
+  "status": "ITEMIZED_ENGINEERING_ESTIMATE_NOT_MEASURED",
+  "accounting_coverage_complete": true,
+  "physical_measured_coverage_complete": false,
+  "coordinate_frame": "Model FLU metres; tensors in model axes about each component CG",
+  "active": true,
+  "normal_power_mode": "normal",
+  "replaces_legacy_residual_kg": 493.4222998547036,
+  "fuel_accounting": "Fuel is excluded from dry parts; tank_properties supplies variable fuel exactly once",
+  "propeller_accounting": "Baseline row multiplied by configured geometry scale cubed / fifth power in speed15 profile",
+  "power_exclusions": "Motor, steering, generator output, battery charging and starter cranking use existing dynamic models, not auxiliary double counting",
+  "parts": [
+    {
+      "name": "Hull/deck structural aggregate",
+      "link": "hull",
+      "mass_kg": 505.0378300094773,
+      "cg_m": [
+        -0.2650007083626737,
+        -0.027985007724651116,
+        0.5212232507620828
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          286.56774084817283,
+          -0.3192830158694939,
+          -31.44647938555073
+        ],
+        [
+          -0.3192830158694939,
+          1499.8188884892581,
+          0.08703226264062544
+        ],
+        [
+          -31.44647938555073,
+          0.08703226264062544,
+          1658.3895145481147
+        ]
+      ],
+      "basis": "Existing current-shell budget (not measured); inertia approximated by uniform mass on station-envelope surface. CG from budget; excludes real framing distribution.",
+      "quality": "STRUCTURAL_BUDGET_SURFACE_PROXY",
+      "id": "retained_1",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_range_kg": [
+        404.0302640075819,
+        606.0453960113728
+      ],
+      "cg_uncertainty_m": 0.05,
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
+    },
+    {
+      "name": "E163 battery 1",
+      "link": "hull",
+      "mass_kg": 76.0,
+      "cg_m": [
+        0.95,
+        0.158,
+        0.5175
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          2.102983333333333,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.950858333333333,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.9501916666666668
+        ]
+      ],
+      "basis": "Manufacturer EB-0163-01 76 kg; model installed position; uniform-box internal distribution assumption.",
+      "quality": "MANUFACTURER_MASS_GEOMETRIC_INERTIA",
+      "id": "retained_2",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_range_kg": [
+        75,
+        77
+      ],
+      "cg_uncertainty_m": 0.05,
+      "power": {
+        "class": "energy_storage",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual",
+      "source": "https://www.epropulsion.com/wp-content/uploads/2023/05/E-Series-Battery_E60-E163-User-Manual-EN-V1.2-20230530.pdf"
+    },
+    {
+      "name": "E163 battery 2",
+      "link": "hull",
+      "mass_kg": 76.0,
+      "cg_m": [
+        0.95,
+        -0.158,
+        0.5175
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          2.102983333333333,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.950858333333333,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.9501916666666668
+        ]
+      ],
+      "basis": "Manufacturer EB-0163-01 76 kg; model installed position; uniform-box internal distribution assumption.",
+      "quality": "MANUFACTURER_MASS_GEOMETRIC_INERTIA",
+      "id": "retained_3",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_range_kg": [
+        75,
+        77
+      ],
+      "cg_uncertainty_m": 0.05,
+      "power": {
+        "class": "energy_storage",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual",
+      "source": "https://www.epropulsion.com/wp-content/uploads/2023/05/E-Series-Battery_E60-E163-User-Manual-EN-V1.2-20230530.pdf"
+    },
+    {
+      "name": "V2 中央艉板外背板",
+      "link": "hull",
+      "mass_kg": 44.356044120233896,
+      "cg_m": [
+        -3.025000095367443,
+        1.7186601457570433e-18,
+        0.4799999883011293
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          2.523391206255002,
+          2.3454596346654328e-15,
+          -2.435551760271437e-13
+        ],
+        [
+          2.3454596346654328e-15,
+          1.613090341785428,
+          -8.721051314114237e-17
+        ],
+        [
+          -2.435551760271437e-13,
+          -8.721051314114237e-17,
+          0.9286604913156749
+        ]
+      ],
+      "basis": "Evaluated closed CAD solid x assumed 2700 kg/m3 (aluminium structure); no hollow sections inferred.",
+      "quality": "GEOMETRY_X_ASSUMED_MATERIAL",
+      "id": "retained_5",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_range_kg": [
+        35.48483529618712,
+        53.22725294428067
+      ],
+      "cg_uncertainty_m": 0.05,
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
+    },
+    {
+      "name": "V2 中央艉板内背板",
+      "link": "hull",
+      "mass_kg": 35.44747087177721,
+      "cg_m": [
+        -2.970000028610224,
+        9.462594618556094e-19,
+        0.47999998808034494
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          2.0145969649948205,
+          -5.056593572555858e-15,
+          9.367506770274758e-14
+        ],
+        [
+          -5.056593572555858e-15,
+          1.285334914076297,
+          -1.034328876549322e-16
+        ],
+        [
+          9.367506770274758e-14,
+          -1.034328876549322e-16,
+          0.7386412762363639
+        ]
+      ],
+      "basis": "Evaluated closed CAD solid x assumed 2700 kg/m3 (aluminium structure); no hollow sections inferred.",
+      "quality": "GEOMETRY_X_ASSUMED_MATERIAL",
+      "id": "retained_6",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_range_kg": [
+        28.357976697421773,
+        42.53696504613266
+      ],
+      "cg_uncertainty_m": 0.05,
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
+    },
+    {
+      "name": "V2 艉伸安装梁",
+      "link": "hull",
+      "mass_kg": 10.961286617435341,
+      "cg_m": [
+        -3.309999942774039,
+        -0.200000002979715,
+        0.4199999868858713
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.016169796748260426,
+          1.592476150946709e-12,
+          -3.416798094457718e-12
+        ],
+        [
+          1.592476150946709e-12,
+          0.30827572985123314,
+          -3.205443722953394e-13
+        ],
+        [
+          -3.416798094457718e-12,
+          -3.205443722953394e-13,
+          0.2985745119059399
+        ]
+      ],
+      "basis": "Evaluated closed CAD solid x assumed 2700 kg/m3 (aluminium structure); no hollow sections inferred.",
+      "quality": "GEOMETRY_X_ASSUMED_MATERIAL",
+      "id": "retained_7",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_range_kg": [
+        8.769029293948273,
+        13.15354394092241
+      ],
+      "cg_uncertainty_m": 0.05,
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
+    },
+    {
+      "name": "V2 舱内纵向补强概念",
+      "link": "hull",
+      "mass_kg": 17.802099668596824,
+      "cg_m": [
+        -2.74000000953674,
+        -0.20000000298023216,
+        0.3600000009354982
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.13705448819702348,
+          -1.1709383462843448e-14,
+          2.5760643618255585e-14
+        ],
+        [
+          -1.1709383462843448e-14,
+          0.42030787478858567,
+          1.1709383462843448e-15
+        ],
+        [
+          2.5760643618255585e-14,
+          1.1709383462843448e-15,
+          0.29065811759504057
+        ]
+      ],
+      "basis": "Evaluated closed CAD solid x assumed 2700 kg/m3 (aluminium structure); no hollow sections inferred.",
+      "quality": "GEOMETRY_X_ASSUMED_MATERIAL",
+      "id": "retained_8",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_range_kg": [
+        14.24167973487746,
+        21.362519602316187
+      ],
+      "cg_uncertainty_m": 0.05,
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
+    },
+    {
+      "name": "V2 艉伸安装梁.001",
+      "link": "hull",
+      "mass_kg": 10.961286617435341,
+      "cg_m": [
+        -3.309999942774039,
+        0.2000000029807494,
+        0.4199999868858713
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.016169796748260426,
+          1.595988965985562e-12,
+          -3.416798094457718e-12
+        ],
+        [
+          1.595988965985562e-12,
+          0.30827572985123314,
+          -3.2069073958862493e-13
+        ],
+        [
+          -3.416798094457718e-12,
+          -3.2069073958862493e-13,
+          0.2985745119059212
+        ]
+      ],
+      "basis": "Evaluated closed CAD solid x assumed 2700 kg/m3 (aluminium structure); no hollow sections inferred.",
+      "quality": "GEOMETRY_X_ASSUMED_MATERIAL",
+      "id": "retained_9",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_range_kg": [
+        8.769029293948273,
+        13.15354394092241
+      ],
+      "cg_uncertainty_m": 0.05,
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
+    },
+    {
+      "name": "V2 舱内纵向补强概念.001",
+      "link": "hull",
+      "mass_kg": 17.802099668596824,
+      "cg_m": [
+        -2.74000000953674,
+        0.20000000298023213,
+        0.3600000009354982
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.13705448819702348,
+          1.4051260155412137e-14,
+          2.5760643618255585e-14
+        ],
+        [
+          1.4051260155412137e-14,
+          0.42030787478858567,
+          -1.1709383462843448e-15
+        ],
+        [
+          2.5760643618255585e-14,
+          -1.1709383462843448e-15,
+          0.29065811759504057
+        ]
+      ],
+      "basis": "Evaluated closed CAD solid x assumed 2700 kg/m3 (aluminium structure); no hollow sections inferred.",
+      "quality": "GEOMETRY_X_ASSUMED_MATERIAL",
+      "id": "retained_10",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_range_kg": [
+        14.24167973487746,
+        21.362519602316187
+      ],
+      "cg_uncertainty_m": 0.05,
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
+    },
+    {
+      "name": "V2 轴承横梁",
+      "link": "hull",
+      "mass_kg": 17.532350478979723,
+      "cg_m": [
+        -3.6240000732422484,
+        2.374166061761802e-12,
+        0.4199999868866881
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.46871233725971795,
+          9.749085987372173e-12,
+          -1.5831086441764342e-12
+        ],
+        [
+          9.749085987372173e-12,
+          0.07252282587545261,
+          1.3779958174591267e-10
+        ],
+        [
+          -1.5831086441764342e-12,
+          1.3779958174591267e-10,
+          0.49954722199046786
+        ]
+      ],
+      "basis": "Evaluated closed CAD solid x assumed 2700 kg/m3 (aluminium structure); no hollow sections inferred.",
+      "quality": "GEOMETRY_X_ASSUMED_MATERIAL",
+      "id": "retained_11",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_range_kg": [
+        14.025880383183779,
+        21.038820574775666
+      ],
+      "cg_uncertainty_m": 0.05,
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
+    },
+    {
+      "name": "V2 回转轴",
+      "link": "azimuth",
+      "mass_kg": 24.54445112984854,
+      "cg_m": [
+        -3.6240000724792547,
+        1.0158928489737359e-19,
+        0.579999996177358
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.6073153316431994,
+          4.165130779835859e-16,
+          -8.170547571850761e-14
+        ],
+        [
+          4.165130779835859e-16,
+          0.60731532319462,
+          -6.3112072064839025e-18
+        ],
+        [
+          -8.170547571850761e-14,
+          -6.3112072064839025e-18,
+          0.02261902970762085
+        ]
+      ],
+      "basis": "Evaluated closed CAD solid x assumed 7850 kg/m3 (steel shaft); no hollow sections inferred.",
+      "quality": "GEOMETRY_X_ASSUMED_MATERIAL",
+      "id": "retained_12",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_range_kg": [
+        19.635560903878833,
+        29.453341355818246
+      ],
+      "cg_uncertainty_m": 0.05,
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
+    },
+    {
+      "name": "V2 执行器上托梁",
+      "link": "hull",
+      "mass_kg": 13.44614893106379,
+      "cg_m": [
+        -3.2979481961819004,
+        2.887252427886826e-11,
+        0.8299999833047196
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.024009636038076772,
+          1.3039887946077154e-10,
+          -2.725476094811441e-11
+        ],
+        [
+          1.3039887946077154e-10,
+          0.4036598221085492,
+          -1.3564437714259753e-12
+        ],
+        [
+          -2.725476094811441e-11,
+          -1.3564437714259753e-12,
+          0.41833585382640914
+        ]
+      ],
+      "basis": "Evaluated closed CAD solid x assumed 2700 kg/m3 (aluminium structure); no hollow sections inferred.",
+      "quality": "GEOMETRY_X_ASSUMED_MATERIAL",
+      "id": "retained_13",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_range_kg": [
+        10.756919144851032,
+        16.13537871727655
+      ],
+      "cg_uncertainty_m": 0.05,
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
+    },
+    {
+      "name": "Fixed bearings, gearbox casing, steering motor, cover",
+      "link": "hull",
+      "mass_kg": 15.0,
+      "cg_m": [
+        -3.624,
+        0.0,
+        0.83
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.6906249999999999,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.6906249999999999,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.15625
+        ]
+      ],
+      "basis": "Lumped installation estimate excluding exported structural solids and rotating shaft/fittings; 10-22 kg sensitivity.",
+      "quality": "ENGINEERING_ALLOWANCE",
+      "id": "retained_14",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_range_kg": [
+        12.0,
+        18.0
+      ],
+      "cg_uncertainty_m": 0.05,
+      "power": {
+        "class": "steering_dynamic",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
+    },
+    {
+      "name": "Single motor body (factory proxy minus prop)",
+      "link": "azimuth",
+      "mass_kg": 27.0,
+      "cg_m": [
+        -3.564000072479248,
+        0.0,
+        0.36999998807907103
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          2.72614725,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.0119624999999997,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.72949725
+        ]
+      ],
+      "basis": "2024 shortshaft 28.5 kg proxy including propeller, minus 1.5 kg assumed prop share. Real conversion changes mass; CG is engineering estimate.",
+      "quality": "MANUFACTURER_PROXY_WITH_ESTIMATED_SPLIT",
+      "id": "retained_15",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_range_kg": [
+        21.6,
+        32.4
+      ],
+      "cg_uncertainty_m": 0.05,
+      "power": {
+        "class": "propulsion_dynamic",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
+    },
+    {
+      "name": "Rotating couplings/bearing inner rings/carrier",
+      "link": "azimuth",
+      "mass_kg": 6.0,
+      "cg_m": [
+        -3.624,
+        0.0,
+        0.8
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.08124999999999999,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.08124999999999999,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.04000000000000001
+        ]
+      ],
+      "basis": "Lumped added rotating fittings; excludes 24 kg solid shaft and fixed actuator assembly.",
+      "quality": "ENGINEERING_ALLOWANCE",
+      "id": "retained_16",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_range_kg": [
+        4.800000000000001,
+        7.199999999999999
+      ],
+      "cg_uncertainty_m": 0.05,
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
+    },
+    {
+      "name": "Propeller allocation",
+      "link": "propeller",
+      "mass_kg": 1.5,
+      "cg_m": [
+        -3.79521107673645,
+        0.0,
+        -0.14300000667572021
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.016875,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0084375,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0084375
+        ]
+      ],
+      "basis": "1.5 kg allocated within the 28.5 kg motor proxy; disk inertia estimate, not measured prop mass.",
+      "quality": "ENGINEERING_SPLIT_DISK_INERTIA",
+      "id": "retained_17",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_range_kg": [
+        1.2000000000000002,
+        1.7999999999999998
+      ],
+      "cg_uncertainty_m": 0.05,
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
+    },
+    {
+      "id": "generator",
+      "name": "发电机本体（含隔声罩）",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 82,
+      "mass_range_kg": [
+        78,
+        90
+      ],
+      "cg_m": [
+        -0.65,
+        0,
+        0.46
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.6,
+        0.399,
+        0.406
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          2.2142528333333336,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.586379333333333,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.5478735
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; https://www.fischerpanda.co.uk/PANDA_5000i.html",
+      "source": "https://www.fischerpanda.co.uk/PANDA_5000i.html",
+      "power": {
+        "class": "generator_output_dynamic",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "inverter",
+      "name": "发电机逆变器",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 9.75,
+      "mass_range_kg": [
+        9.5,
+        10
+      ],
+      "cg_m": [
+        -0.35,
+        0.45,
+        0.55
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.4,
+        0.25,
+        0.15
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.0690625,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.14828125000000003,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.18078125000000003
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; https://www.fischerpanda.de/fileadmin/user_upload/downloads/iseries_2020_marine_yacht_deu_print.pdf",
+      "source": "https://www.fischerpanda.de/fileadmin/user_upload/downloads/iseries_2020_marine_yacht_deu_print.pdf",
+      "power": {
+        "class": "energy_conversion_dynamic",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "generator_mount",
+      "name": "机座与减振安装件",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 10,
+      "mass_range_kg": [
+        7.0,
+        13.0
+      ],
+      "cg_m": [
+        -0.65,
+        0,
+        0.24
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.7,
+        0.5,
+        0.1
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.21666666666666673,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.4166666666666667,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.6166666666666667
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "coolant",
+      "name": "封闭冷却液",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 5,
+      "mass_range_kg": [
+        3.5,
+        6.5
+      ],
+      "cg_m": [
+        -0.65,
+        0,
+        0.42
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.4,
+        0.25,
+        0.2
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.04270833333333335,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.08333333333333337,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.09270833333333336
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "cooling_hoses",
+      "name": "冷却软管与阀件",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 6,
+      "mass_range_kg": [
+        4.199999999999999,
+        7.800000000000001
+      ],
+      "cg_m": [
+        -0.6,
+        0.35,
+        0.4
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        1.0,
+        0.2,
+        0.2
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.040000000000000036,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.52,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.52
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "exhaust",
+      "name": "排气消声水锁与管件",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 10,
+      "mass_range_kg": [
+        7.0,
+        13.0
+      ],
+      "cg_m": [
+        -1.3,
+        0.35,
+        0.4
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        1.0,
+        0.3,
+        0.3
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.15000000000000013,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9083333333333334,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.9083333333333334
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "battery_trays",
+      "name": "原两块电池托架与固定件",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 8,
+      "mass_range_kg": [
+        5.6,
+        10.4
+      ],
+      "cg_m": [
+        0.95,
+        0,
+        0.28
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.6,
+        0.7,
+        0.1
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.33333333333333326,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.24666666666666662,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.5666666666666665
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "battery_protection",
+      "name": "电池外部接触器与保护件（不含内置BMS）",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 4,
+      "mass_range_kg": [
+        2.8,
+        5.2
+      ],
+      "cg_m": [
+        0.7,
+        -0.45,
+        0.5
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.3,
+        0.25,
+        0.2
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.034166666666666665,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.043333333333333335,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.05083333333333333
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "empty_tank",
+      "name": "空油箱及固定件",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 8,
+      "mass_range_kg": [
+        5.6,
+        10.4
+      ],
+      "cg_m": [
+        0.08,
+        0,
+        0.355
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.696,
+        0.49,
+        0.306
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.22249066666666667,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.385368,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.4830106666666666
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "fuel_fittings",
+      "name": "加注通气供回油管件",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 5,
+      "mass_range_kg": [
+        3.5,
+        6.5
+      ],
+      "cg_m": [
+        0.1,
+        0.2,
+        0.55
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.8,
+        0.3,
+        0.3
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.07499999999999998,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.3041666666666667,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.3041666666666667
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "starter_battery",
+      "name": "12V启动电池预算",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 18,
+      "mass_range_kg": [
+        12.6,
+        23.400000000000002
+      ],
+      "cg_m": [
+        -0.85,
+        -0.4,
+        0.3
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.26,
+        0.17,
+        0.22
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.11595000000000003,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.17400000000000004,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.14475000000000005
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "starter_storage_dynamic",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "charger",
+      "name": "主充电器及支架",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 4,
+      "mass_range_kg": [
+        2.8,
+        5.2
+      ],
+      "cg_m": [
+        0.35,
+        -0.55,
+        0.55
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.3,
+        0.2,
+        0.15
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.020833333333333332,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.03749999999999999,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.043333333333333335
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "energy_conversion_dynamic",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "maintenance_charger",
+      "name": "启动维护充电器",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 1.2,
+      "mass_range_kg": [
+        0.84,
+        1.56
+      ],
+      "cg_m": [
+        -0.85,
+        -0.493,
+        0.69
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.2,
+        0.12,
+        0.06
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.0017999999999999993,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004359999999999999,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0054399999999999995
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "energy_conversion_dynamic",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "power_enclosure",
+      "name": "主配电箱及安装板",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 10,
+      "mass_range_kg": [
+        7.0,
+        13.0
+      ],
+      "cg_m": [
+        0.5,
+        -0.65,
+        0.6
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.4,
+        0.25,
+        0.4
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.1854166666666667,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.2666666666666667,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.1854166666666667
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "switchgear",
+      "name": "断路器熔断器母排",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 5,
+      "mass_range_kg": [
+        3.5,
+        6.5
+      ],
+      "cg_m": [
+        0.5,
+        -0.65,
+        0.6
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.3,
+        0.2,
+        0.3
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.05416666666666667,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.075,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.05416666666666667
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "wiring",
+      "name": "全船线束与接头",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 18,
+      "mass_range_kg": [
+        12.6,
+        23.400000000000002
+      ],
+      "cg_m": [
+        0,
+        0,
+        0.6
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        4.0,
+        1.4,
+        0.3
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          3.075000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          24.134999999999998,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          26.94
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "electronic_box",
+      "name": "计算与通信电子箱",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 4,
+      "mass_range_kg": [
+        2.8,
+        5.2
+      ],
+      "cg_m": [
+        0.35,
+        0.55,
+        0.65
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.4,
+        0.3,
+        0.2
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.043333333333333335,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.06666666666666668,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.08333333333333333
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "fenders",
+      "name": "护舷组件",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 8,
+      "mass_range_kg": [
+        5.6,
+        10.4
+      ],
+      "cg_m": [
+        0,
+        0,
+        0.65
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        5.0,
+        2.0,
+        0.2
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          2.6933333333333325,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          16.69333333333333,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          19.333333333333332
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "mooring",
+      "name": "系泊件与紧固件",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 8,
+      "mass_range_kg": [
+        5.6,
+        10.4
+      ],
+      "cg_m": [
+        0,
+        0,
+        0.8
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        4.0,
+        1.6,
+        0.1
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          1.7133333333333358,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          10.673333333333336,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          12.373333333333335
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "bilge_plumbing",
+      "name": "舱底管路与滤网",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 3,
+      "mass_range_kg": [
+        2.0999999999999996,
+        3.9000000000000004
+      ],
+      "cg_m": [
+        -0.5,
+        0,
+        0.2
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        1.0,
+        0.4,
+        0.2
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.050000000000000044,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.26,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.29000000000000004
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "installation_fasteners",
+      "name": "设备紧固夹具预算",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 6,
+      "mass_range_kg": [
+        4.199999999999999,
+        7.800000000000001
+      ],
+      "cg_m": [
+        0,
+        0,
+        0.5
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        4.0,
+        1.5,
+        0.5
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          1.25,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          8.125,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          9.125
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "computer",
+      "name": "船载计算机",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 2,
+      "mass_range_kg": [
+        1.4,
+        2.6
+      ],
+      "cg_m": [
+        0.35,
+        0.55,
+        0.67
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.2,
+        0.15,
+        0.08
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.004816666666666665,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.007733333333333333,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.010416666666666666
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering embedded-computer envelope, 20 W idle / 70 W peak",
+      "source": "Engineering embedded-computer envelope, 20 W idle / 70 W peak",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 20,
+        "rated_w": 70,
+        "duty": {
+          "normal": 0.5,
+          "survey": 1,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "network_switch",
+      "name": "网络交换机",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.35,
+      "mass_range_kg": [
+        0.24499999999999997,
+        0.45499999999999996
+      ],
+      "cg_m": [
+        0.45,
+        0.55,
+        0.65
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.12,
+        0.09,
+        0.03
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.0002625,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00044625,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0006562499999999999
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 3,
+        "rated_w": 6,
+        "duty": {
+          "normal": 1,
+          "survey": 1,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "radio",
+      "name": "通信电台",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.6,
+      "mass_range_kg": [
+        0.42,
+        0.78
+      ],
+      "cg_m": [
+        0.25,
+        0.55,
+        0.65
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.15,
+        0.1,
+        0.05
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.0006250000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00125,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.001625
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 3,
+        "rated_w": 15,
+        "duty": {
+          "normal": 0.5,
+          "survey": 0.8,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "controller",
+      "name": "控制与IO板（不代表启用ArduPilot）",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.1,
+      "mass_range_kg": [
+        0.06999999999999999,
+        0.13
+      ],
+      "cg_m": [
+        0.4,
+        0.55,
+        0.7
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.08,
+        0.05,
+        0.025
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          2.6041666666666682e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.854166666666668e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          7.416666666666668e-05
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 1,
+        "rated_w": 3,
+        "duty": {
+          "normal": 1,
+          "survey": 1,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "plc",
+      "name": "冷却联锁PLC及扩展组件",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.325,
+      "mass_range_kg": [
+        0.22749999999999998,
+        0.42250000000000004
+      ],
+      "cg_m": [
+        0.321,
+        0,
+        0.72
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.15,
+        0.06,
+        0.09
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.0003168749999999999,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00082875,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0007068749999999999
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Local cooling-interlock manufacturer-weight budget 0.195 + 0.130 kg",
+      "source": "Local cooling-interlock manufacturer-weight budget 0.195 + 0.130 kg",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 2,
+        "rated_w": 5,
+        "duty": {
+          "normal": 1,
+          "survey": 1,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "interlock_mount",
+      "name": "联锁防护盒导轨与附件",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 1.5,
+      "mass_range_kg": [
+        1.0499999999999998,
+        1.9500000000000002
+      ],
+      "cg_m": [
+        0.33,
+        0,
+        0.72
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.23,
+        0.2,
+        0.12
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.0068000000000000005,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0084125,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.011612500000000001
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 0.5,
+        "rated_w": 1,
+        "duty": {
+          "normal": 1,
+          "survey": 1,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "camera",
+      "name": "camera 传感器",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.25,
+      "mass_range_kg": [
+        0.175,
+        0.325
+      ],
+      "cg_m": [
+        1.5,
+        0.1,
+        1.35
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.1,
+        0.075,
+        0.065
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.00020520833333333328,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00029635416666666666,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0003255208333333333
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering generic sensor allowance; not a selected hardware product",
+      "source": "Engineering generic sensor allowance; not a selected hardware product",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 2,
+        "rated_w": 5,
+        "duty": {
+          "normal": 1,
+          "survey": 1,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "camera_right",
+      "name": "camera_right 传感器",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.25,
+      "mass_range_kg": [
+        0.175,
+        0.325
+      ],
+      "cg_m": [
+        1.5,
+        -0.1,
+        1.35
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.1,
+        0.075,
+        0.065
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.00020520833333333328,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00029635416666666666,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0003255208333333333
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering generic sensor allowance; not a selected hardware product",
+      "source": "Engineering generic sensor allowance; not a selected hardware product",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 2,
+        "rated_w": 5,
+        "duty": {
+          "normal": 1,
+          "survey": 1,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "camera_side",
+      "name": "camera_side 传感器",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.25,
+      "mass_range_kg": [
+        0.175,
+        0.325
+      ],
+      "cg_m": [
+        0,
+        -0.65,
+        1.35
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.1,
+        0.075,
+        0.065
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.00020520833333333328,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00029635416666666666,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0003255208333333333
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering generic sensor allowance; not a selected hardware product",
+      "source": "Engineering generic sensor allowance; not a selected hardware product",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 2,
+        "rated_w": 5,
+        "duty": {
+          "normal": 1,
+          "survey": 1,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "lidar",
+      "name": "lidar 传感器",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.99,
+      "mass_range_kg": [
+        0.693,
+        1.287
+      ],
+      "cg_m": [
+        0,
+        0,
+        1.55
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.1,
+        0.1,
+        0.09
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.0014932500000000002,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0014932500000000002,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0016500000000000004
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; https://cdn.robosense.cn/20220629181832_42540.pdf",
+      "source": "https://cdn.robosense.cn/20220629181832_42540.pdf",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 8,
+        "rated_w": 11,
+        "duty": {
+          "normal": 1,
+          "survey": 1,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "gps",
+      "name": "gps 传感器",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.15,
+      "mass_range_kg": [
+        0.105,
+        0.195
+      ],
+      "cg_m": [
+        0.5,
+        0,
+        0.9
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.1,
+        0.1,
+        0.09
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.00022625,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00022625,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.00025
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering generic sensor allowance; not a selected hardware product",
+      "source": "Engineering generic sensor allowance; not a selected hardware product",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 1.5,
+        "rated_w": 3,
+        "duty": {
+          "normal": 1,
+          "survey": 1,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "imu",
+      "name": "imu 传感器",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.05,
+      "mass_range_kg": [
+        0.034999999999999996,
+        0.065
+      ],
+      "cg_m": [
+        0,
+        0,
+        0.5
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.1,
+        0.1,
+        0.09
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          7.541666666666667e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          7.541666666666667e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          8.333333333333334e-05
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering generic sensor allowance; not a selected hardware product",
+      "source": "Engineering generic sensor allowance; not a selected hardware product",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 0.5,
+        "rated_w": 1,
+        "duty": {
+          "normal": 1,
+          "survey": 1,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "magnetometer",
+      "name": "magnetometer 传感器",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.03,
+      "mass_range_kg": [
+        0.020999999999999998,
+        0.039
+      ],
+      "cg_m": [
+        0,
+        0,
+        1
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.1,
+        0.1,
+        0.09
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          4.525e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          4.525e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          5.000000000000001e-05
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering generic sensor allowance; not a selected hardware product",
+      "source": "Engineering generic sensor allowance; not a selected hardware product",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 0.1,
+        "rated_w": 0.3,
+        "duty": {
+          "normal": 1,
+          "survey": 1,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "camera_mount",
+      "name": "camera 支架与外壳连接",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.3377280000000001,
+      "mass_range_kg": [
+        0.23640960000000005,
+        0.4390464000000001
+      ],
+      "cg_m": [
+        1.435,
+        0.1,
+        1.17
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.045,
+        0.045,
+        0.3600000000000001
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.003704454000000003,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.003704454000000003,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.00011398319999999997
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; 30x30x2 mm aluminium tube (2700 kg/m3) + 0.12 kg bracket allowance; visual envelope is not a solid metal bar",
+      "source": "30x30x2 mm aluminium tube (2700 kg/m3) + 0.12 kg bracket allowance; visual envelope is not a solid metal bar",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "camera_right_mount",
+      "name": "camera_right 支架与外壳连接",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.3377280000000001,
+      "mass_range_kg": [
+        0.23640960000000005,
+        0.4390464000000001
+      ],
+      "cg_m": [
+        1.435,
+        -0.1,
+        1.17
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.045,
+        0.045,
+        0.3600000000000001
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.003704454000000003,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.003704454000000003,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.00011398319999999997
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; 30x30x2 mm aluminium tube (2700 kg/m3) + 0.12 kg bracket allowance; visual envelope is not a solid metal bar",
+      "source": "30x30x2 mm aluminium tube (2700 kg/m3) + 0.12 kg bracket allowance; visual envelope is not a solid metal bar",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "camera_side_mount",
+      "name": "camera_side 支架与外壳连接",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.3377280000000001,
+      "mass_range_kg": [
+        0.23640960000000005,
+        0.4390464000000001
+      ],
+      "cg_m": [
+        -3.980102097228898e-18,
+        -0.585,
+        1.17
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.045,
+        0.045,
+        0.3600000000000001
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.003704454000000003,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.003704454000000003,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.00011398319999999997
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; 30x30x2 mm aluminium tube (2700 kg/m3) + 0.12 kg bracket allowance; visual envelope is not a solid metal bar",
+      "source": "30x30x2 mm aluminium tube (2700 kg/m3) + 0.12 kg bracket allowance; visual envelope is not a solid metal bar",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "lidar_mount",
+      "name": "lidar 支架与外壳连接",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.4586880000000001,
+      "mass_range_kg": [
+        0.3210816,
+        0.5962944000000001
+      ],
+      "cg_m": [
+        0.0,
+        0.0,
+        1.27
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.045,
+        0.045,
+        0.56
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.012064450000000004,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.012064450000000004,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.00015480719999999996
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; 30x30x2 mm aluminium tube (2700 kg/m3) + 0.12 kg bracket allowance; visual envelope is not a solid metal bar",
+      "source": "30x30x2 mm aluminium tube (2700 kg/m3) + 0.12 kg bracket allowance; visual envelope is not a solid metal bar",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "cooling_pump",
+      "name": "冷却泵",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 1,
+      "mass_range_kg": [
+        0.7,
+        1.3
+      ],
+      "cg_m": [
+        -0.6,
+        0.35,
+        0.3
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.15,
+        0.1,
+        0.1
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.001666666666666667,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0027083333333333334,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0027083333333333334
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 0,
+        "rated_w": 40,
+        "duty": {
+          "normal": 0.75,
+          "survey": 1,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "bilge_pump",
+      "name": "舱底泵",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.5,
+      "mass_range_kg": [
+        0.35,
+        0.65
+      ],
+      "cg_m": [
+        -0.5,
+        0,
+        0.15
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.1,
+        0.08,
+        0.1
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.0006833333333333333,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0008333333333333335,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0006833333333333333
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 0,
+        "rated_w": 35,
+        "duty": {
+          "normal": 0.05,
+          "survey": 0.05,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "fan_0",
+      "name": "通风风扇 1",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.15,
+      "mass_range_kg": [
+        0.105,
+        0.195
+      ],
+      "cg_m": [
+        0.35,
+        0.42000000000000004,
+        0.72
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.08,
+        0.08,
+        0.025
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          8.78125e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          8.78125e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.00015999999999999999
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 0,
+        "rated_w": 5,
+        "duty": {
+          "normal": 0.5,
+          "survey": 1,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "fan_1",
+      "name": "通风风扇 2",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.15,
+      "mass_range_kg": [
+        0.105,
+        0.195
+      ],
+      "cg_m": [
+        0.35,
+        0.68,
+        0.72
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.08,
+        0.08,
+        0.025
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          8.78125e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          8.78125e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.00015999999999999999
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 0,
+        "rated_w": 5,
+        "duty": {
+          "normal": 0.5,
+          "survey": 1,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "lights",
+      "name": "航行及状态灯",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.4,
+      "mass_range_kg": [
+        0.27999999999999997,
+        0.52
+      ],
+      "cg_m": [
+        0.2,
+        0,
+        1
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.2,
+        0.1,
+        0.1
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.0006666666666666668,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.001666666666666667,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.001666666666666667
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 0,
+        "rated_w": 12,
+        "duty": {
+          "normal": 0.5,
+          "survey": 0.5,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "dcdc",
+      "name": "辅助DC/DC转换器",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 0.3,
+      "mass_range_kg": [
+        0.21,
+        0.39
+      ],
+      "cg_m": [
+        0.5,
+        -0.6,
+        0.6
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.12,
+        0.08,
+        0.05
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.00022250000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0004225,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.00052
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; 1 W quiescent; 87% common conversion efficiency modeled separately",
+      "source": "1 W quiescent; 87% common conversion efficiency modeled separately",
+      "power": {
+        "classification": "auxiliary",
+        "class": "auxiliary",
+        "idle_w": 1,
+        "rated_w": 1,
+        "duty": {
+          "normal": 1,
+          "survey": 1,
+          "peak": 1
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "extra_battery_0",
+      "name": "升级E163电池 3",
+      "link": "hull",
+      "profiles": [
+        "speed15_concept"
+      ],
+      "mass_kg": 76,
+      "mass_range_kg": [
+        75,
+        77
+      ],
+      "cg_m": [
+        -0.75,
+        0.65,
+        0.5
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.47,
+        0.295,
+        0.495
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          2.102983333333334,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.9508583333333336,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.950191666666667
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; https://www.epropulsion.com/wp-content/uploads/2023/05/E-Series-Battery_E60-E163-User-Manual-EN-V1.2-20230530.pdf",
+      "source": "https://www.epropulsion.com/wp-content/uploads/2023/05/E-Series-Battery_E60-E163-User-Manual-EN-V1.2-20230530.pdf",
+      "power": {
+        "class": "energy_storage",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "extra_tray_0",
+      "name": "升级电池托架 3",
+      "link": "hull",
+      "profiles": [
+        "speed15_concept"
+      ],
+      "mass_kg": 2,
+      "mass_range_kg": [
+        1.4,
+        2.6
+      ],
+      "cg_m": [
+        -0.75,
+        0.65,
+        0.23
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.5,
+        0.32,
+        0.03
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.017216666666666665,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.04181666666666667,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.05873333333333333
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "extra_battery_1",
+      "name": "升级E163电池 4",
+      "link": "hull",
+      "profiles": [
+        "speed15_concept"
+      ],
+      "mass_kg": 76,
+      "mass_range_kg": [
+        75,
+        77
+      ],
+      "cg_m": [
+        -0.75,
+        -0.65,
+        0.5
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.47,
+        0.295,
+        0.495
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          2.102983333333334,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.9508583333333336,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.950191666666667
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; https://www.epropulsion.com/wp-content/uploads/2023/05/E-Series-Battery_E60-E163-User-Manual-EN-V1.2-20230530.pdf",
+      "source": "https://www.epropulsion.com/wp-content/uploads/2023/05/E-Series-Battery_E60-E163-User-Manual-EN-V1.2-20230530.pdf",
+      "power": {
+        "class": "energy_storage",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "extra_tray_1",
+      "name": "升级电池托架 4",
+      "link": "hull",
+      "profiles": [
+        "speed15_concept"
+      ],
+      "mass_kg": 2,
+      "mass_range_kg": [
+        1.4,
+        2.6
+      ],
+      "cg_m": [
+        -0.75,
+        -0.65,
+        0.23
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.5,
+        0.32,
+        0.03
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.017216666666666665,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.04181666666666667,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.05873333333333333
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "extra_battery_2",
+      "name": "升级E163电池 5",
+      "link": "hull",
+      "profiles": [
+        "speed15_concept"
+      ],
+      "mass_kg": 76,
+      "mass_range_kg": [
+        75,
+        77
+      ],
+      "cg_m": [
+        -1.35,
+        0.65,
+        0.5
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.47,
+        0.295,
+        0.495
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          2.102983333333334,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.9508583333333336,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.950191666666667
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; https://www.epropulsion.com/wp-content/uploads/2023/05/E-Series-Battery_E60-E163-User-Manual-EN-V1.2-20230530.pdf",
+      "source": "https://www.epropulsion.com/wp-content/uploads/2023/05/E-Series-Battery_E60-E163-User-Manual-EN-V1.2-20230530.pdf",
+      "power": {
+        "class": "energy_storage",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "extra_tray_2",
+      "name": "升级电池托架 5",
+      "link": "hull",
+      "profiles": [
+        "speed15_concept"
+      ],
+      "mass_kg": 2,
+      "mass_range_kg": [
+        1.4,
+        2.6
+      ],
+      "cg_m": [
+        -1.35,
+        0.65,
+        0.23
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.5,
+        0.32,
+        0.03
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.017216666666666665,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.04181666666666667,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.05873333333333333
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "extra_battery_3",
+      "name": "升级E163电池 6",
+      "link": "hull",
+      "profiles": [
+        "speed15_concept"
+      ],
+      "mass_kg": 76,
+      "mass_range_kg": [
+        75,
+        77
+      ],
+      "cg_m": [
+        -1.35,
+        -0.65,
+        0.5
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.47,
+        0.295,
+        0.495
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          2.102983333333334,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.9508583333333336,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.950191666666667
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; https://www.epropulsion.com/wp-content/uploads/2023/05/E-Series-Battery_E60-E163-User-Manual-EN-V1.2-20230530.pdf",
+      "source": "https://www.epropulsion.com/wp-content/uploads/2023/05/E-Series-Battery_E60-E163-User-Manual-EN-V1.2-20230530.pdf",
+      "power": {
+        "class": "energy_storage",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "extra_tray_3",
+      "name": "升级电池托架 6",
+      "link": "hull",
+      "profiles": [
+        "speed15_concept"
+      ],
+      "mass_kg": 2,
+      "mass_range_kg": [
+        1.4,
+        2.6
+      ],
+      "cg_m": [
+        -1.35,
+        -0.65,
+        0.23
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.5,
+        0.32,
+        0.03
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.017216666666666665,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.04181666666666667,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.05873333333333333
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Engineering installation allowance",
+      "source": "Engineering installation allowance",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    },
+    {
+      "id": "upgrade_motor",
+      "name": "40 kW升级电机增量（不是再加一台电机）",
+      "link": "azimuth",
+      "profiles": [
+        "speed15_concept"
+      ],
+      "mass_kg": 30,
+      "mass_range_kg": [
+        20,
+        45
+      ],
+      "cg_m": [
+        -3.564000072479248,
+        0.0,
+        0.36999998807907103
+      ],
+      "cg_uncertainty_m": 0.1,
+      "size_m": [
+        0.475,
+        0.314,
+        1.055
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          3.0290525,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.3466250000000004,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.8105525000000002
+        ]
+      ],
+      "quality": "ENGINEERING_PROXY_NOT_MEASURED",
+      "basis": "Uniform box inertia about listed installed CG; Design-study increment, not OEM product mass",
+      "source": "Design-study increment, not OEM product mass",
+      "power": {
+        "class": "propulsion_dynamic",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "coverage": "Replacement for removed legacy equipment residual, unless profile-specific"
+    }
+  ],
+  "coverage_note": "69 accounting items in upgraded profile; structural assemblies and distributed wiring remain grouped. Not a fabrication BOM, measured weight certificate, or verified installation clearance."
+}

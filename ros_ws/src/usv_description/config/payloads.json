@@ -1,0 +1,82 @@
+{
+  "status": "ENGINEERING_PAYLOAD_LAYOUT_NOT_A_PURCHASE_SPEC",
+  "mass_basis": "Device envelopes and mounts represent the existing aggregate equipment allowance; no separately measured device masses. No extra mass is added twice.",
+  "poses": {
+    "imu": [
+      0,
+      0,
+      0.5,
+      0,
+      0,
+      0
+    ],
+    "gps": [
+      0.5,
+      0,
+      0.9,
+      0,
+      0,
+      0
+    ],
+    "magnetometer": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "camera": [
+      1.5,
+      0.1,
+      1.35,
+      0,
+      0.1,
+      0
+    ],
+    "camera_right": [
+      1.5,
+      -0.1,
+      1.35,
+      0,
+      0.1,
+      0
+    ],
+    "camera_side": [
+      0,
+      -0.65,
+      1.35,
+      0,
+      0.1,
+      -1.5707963267948966
+    ],
+    "lidar": [
+      0,
+      0,
+      1.55,
+      0,
+      0,
+      0
+    ]
+  },
+  "camera": {
+    "width": 640,
+    "height": 360,
+    "horizontal_fov_rad": 1.05,
+    "hz": 5,
+    "near_m": 0.1,
+    "far_m": 500,
+    "stereo_baseline_m": 0.2
+  },
+  "lidar": {
+    "horizontal_samples": 360,
+    "vertical_samples": 16,
+    "vertical_min_deg": -15,
+    "vertical_max_deg": 15,
+    "hz": 5,
+    "near_m": 0.2,
+    "far_m": 100
+  },
+  "advanced_sensors": true,
+  "power_basis": "Derived from component_mass_ledger.json per-device idle/rated watts and duty. No individual switching model; propulsion, steering and DC conversion are accounted separately."
+}

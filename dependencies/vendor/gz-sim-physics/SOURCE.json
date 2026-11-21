@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/gazebosim/gz-sim",
+  "tag": "gz-sim8_8.15.0",
+  "upstream_directory": "src/systems/physics",
+  "sha256": {
+    "EntityFeatureMap.hh": "0ad4936ca92f2d9a3157359330506c71fd3a35b3c8efd13bc733a699c97b08ac",
+    "CMakeLists.txt": "f11899941e6ff3ccdaaa37139e59849d9d4eeab07201c5e0c1111d062be25ef5",
+    "CanonicalLinkModelTracker.hh": "bdcc2cd67fcf25d77dee64fd9d94ef566e4000a85d04b9aa65c6b368bf3528d9",
+    "LICENSE": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+    "Physics.cc": "5d5c404151f8ae4f7825c43c571dc151c79b9a587c69db35996d7cabbc4e76e1",
+    "Physics.hh": "34acf8be55a25eabc29b52e892af0e520b1ee59cc7d49ab0398d9ac5f1dd58d1"
+  }
+}

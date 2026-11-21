@@ -1,0 +1,822 @@
+{
+  "status": "ENGINEERING_ESTIMATE_NOT_MEASURED",
+  "coverage_complete": false,
+  "coverage_note": "Bookkeeping complete via explicit retained-assembly residual; NOT complete measured/component-level physical coverage.",
+  "source_budget": "成品交付/04_依据与数据/冷却联锁重量与重心.json",
+  "source_sha256": "bdcf09c48d78144875e711ee5cb1c2b486d716d968554c89a371977d12234fa3",
+  "removed_old_assemblies": [
+    {
+      "name": "old twin drives",
+      "mass_kg": 57.0,
+      "cg_m": [
+        -3.374,
+        0,
+        0.3
+      ],
+      "basis": "2 x 28.5 kg manufacturer 2024 shortshaft proxy; CG estimated from installation"
+    },
+    {
+      "name": "old custom twin mounts",
+      "mass_kg": 16.0,
+      "cg_m": [
+        -3.25,
+        0,
+        0.48
+      ],
+      "basis": "earlier project installation budget; actual retired mount mass unknown"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Retained equipment/fittings residual",
+      "link": "hull",
+      "mass_kg": 493.4222998547036,
+      "cg_m": [
+        -0.31778719698943486,
+        -0.057248341275571074,
+        0.48216849476572354
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          159.53987695302087,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1054.27898068955,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1161.1871456580693
+        ]
+      ],
+      "basis": "Latest twin budget minus explicitly isolated shell, batteries, fuel, twin drives and mounts. Includes unchanged generator/electrics and unresolved old budget allocations. Inertia: box distribution proxy.",
+      "quality": "LEGACY_BUDGET_RESIDUAL_ESTIMATE"
+    },
+    {
+      "name": "Hull/deck structural aggregate",
+      "link": "hull",
+      "mass_kg": 505.0378300094773,
+      "cg_m": [
+        -0.2650007083626737,
+        -0.027985007724651116,
+        0.5212232507620828
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          286.56774084817283,
+          -0.3192830158694939,
+          -31.44647938555073
+        ],
+        [
+          -0.3192830158694939,
+          1499.8188884892581,
+          0.08703226264062544
+        ],
+        [
+          -31.44647938555073,
+          0.08703226264062544,
+          1658.3895145481147
+        ]
+      ],
+      "basis": "Existing current-shell budget (not measured); inertia approximated by uniform mass on station-envelope surface. CG from budget; excludes real framing distribution.",
+      "quality": "STRUCTURAL_BUDGET_SURFACE_PROXY"
+    },
+    {
+      "name": "E163 battery 1",
+      "link": "hull",
+      "mass_kg": 76.0,
+      "cg_m": [
+        0.95,
+        0.158,
+        0.5175
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          2.102983333333333,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.950858333333333,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.9501916666666668
+        ]
+      ],
+      "basis": "Manufacturer EB-0163-01 76 kg; model installed position; uniform-box internal distribution assumption.",
+      "quality": "MANUFACTURER_MASS_GEOMETRIC_INERTIA"
+    },
+    {
+      "name": "E163 battery 2",
+      "link": "hull",
+      "mass_kg": 76.0,
+      "cg_m": [
+        0.95,
+        -0.158,
+        0.5175
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          2.102983333333333,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.950858333333333,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.9501916666666668
+        ]
+      ],
+      "basis": "Manufacturer EB-0163-01 76 kg; model installed position; uniform-box internal distribution assumption.",
+      "quality": "MANUFACTURER_MASS_GEOMETRIC_INERTIA"
+    },
+    {
+      "name": "60 L diesel trial load",
+      "link": "hull",
+      "mass_kg": 50.4,
+      "cg_m": [
+        0.08,
+        0.0,
+        0.355
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.9345,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.7745,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.1839999999999997
+        ]
+      ],
+      "basis": "Project 60 L tank approximation, density 840 kg/m3; no sloshing/free-surface model.",
+      "quality": "PROJECT_FLUID_ASSUMPTION"
+    },
+    {
+      "name": "V2 中央艉板外背板",
+      "link": "hull",
+      "mass_kg": 44.356044120233896,
+      "cg_m": [
+        -3.025000095367443,
+        1.7186601457570433e-18,
+        0.4799999883011293
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          2.523391206255002,
+          2.3454596346654328e-15,
+          -2.435551760271437e-13
+        ],
+        [
+          2.3454596346654328e-15,
+          1.613090341785428,
+          -8.721051314114237e-17
+        ],
+        [
+          -2.435551760271437e-13,
+          -8.721051314114237e-17,
+          0.9286604913156749
+        ]
+      ],
+      "basis": "Evaluated closed CAD solid x assumed 2700 kg/m3 (aluminium structure); no hollow sections inferred.",
+      "quality": "GEOMETRY_X_ASSUMED_MATERIAL"
+    },
+    {
+      "name": "V2 中央艉板内背板",
+      "link": "hull",
+      "mass_kg": 35.44747087177721,
+      "cg_m": [
+        -2.970000028610224,
+        9.462594618556094e-19,
+        0.47999998808034494
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          2.0145969649948205,
+          -5.056593572555858e-15,
+          9.367506770274758e-14
+        ],
+        [
+          -5.056593572555858e-15,
+          1.285334914076297,
+          -1.034328876549322e-16
+        ],
+        [
+          9.367506770274758e-14,
+          -1.034328876549322e-16,
+          0.7386412762363639
+        ]
+      ],
+      "basis": "Evaluated closed CAD solid x assumed 2700 kg/m3 (aluminium structure); no hollow sections inferred.",
+      "quality": "GEOMETRY_X_ASSUMED_MATERIAL"
+    },
+    {
+      "name": "V2 艉伸安装梁",
+      "link": "hull",
+      "mass_kg": 10.961286617435341,
+      "cg_m": [
+        -3.309999942774039,
+        -0.200000002979715,
+        0.4199999868858713
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.016169796748260426,
+          1.592476150946709e-12,
+          -3.416798094457718e-12
+        ],
+        [
+          1.592476150946709e-12,
+          0.30827572985123314,
+          -3.205443722953394e-13
+        ],
+        [
+          -3.416798094457718e-12,
+          -3.205443722953394e-13,
+          0.2985745119059399
+        ]
+      ],
+      "basis": "Evaluated closed CAD solid x assumed 2700 kg/m3 (aluminium structure); no hollow sections inferred.",
+      "quality": "GEOMETRY_X_ASSUMED_MATERIAL"
+    },
+    {
+      "name": "V2 舱内纵向补强概念",
+      "link": "hull",
+      "mass_kg": 17.802099668596824,
+      "cg_m": [
+        -2.74000000953674,
+        -0.20000000298023216,
+        0.3600000009354982
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.13705448819702348,
+          -1.1709383462843448e-14,
+          2.5760643618255585e-14
+        ],
+        [
+          -1.1709383462843448e-14,
+          0.42030787478858567,
+          1.1709383462843448e-15
+        ],
+        [
+          2.5760643618255585e-14,
+          1.1709383462843448e-15,
+          0.29065811759504057
+        ]
+      ],
+      "basis": "Evaluated closed CAD solid x assumed 2700 kg/m3 (aluminium structure); no hollow sections inferred.",
+      "quality": "GEOMETRY_X_ASSUMED_MATERIAL"
+    },
+    {
+      "name": "V2 艉伸安装梁.001",
+      "link": "hull",
+      "mass_kg": 10.961286617435341,
+      "cg_m": [
+        -3.309999942774039,
+        0.2000000029807494,
+        0.4199999868858713
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.016169796748260426,
+          1.595988965985562e-12,
+          -3.416798094457718e-12
+        ],
+        [
+          1.595988965985562e-12,
+          0.30827572985123314,
+          -3.2069073958862493e-13
+        ],
+        [
+          -3.416798094457718e-12,
+          -3.2069073958862493e-13,
+          0.2985745119059212
+        ]
+      ],
+      "basis": "Evaluated closed CAD solid x assumed 2700 kg/m3 (aluminium structure); no hollow sections inferred.",
+      "quality": "GEOMETRY_X_ASSUMED_MATERIAL"
+    },
+    {
+      "name": "V2 舱内纵向补强概念.001",
+      "link": "hull",
+      "mass_kg": 17.802099668596824,
+      "cg_m": [
+        -2.74000000953674,
+        0.20000000298023213,
+        0.3600000009354982
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.13705448819702348,
+          1.4051260155412137e-14,
+          2.5760643618255585e-14
+        ],
+        [
+          1.4051260155412137e-14,
+          0.42030787478858567,
+          -1.1709383462843448e-15
+        ],
+        [
+          2.5760643618255585e-14,
+          -1.1709383462843448e-15,
+          0.29065811759504057
+        ]
+      ],
+      "basis": "Evaluated closed CAD solid x assumed 2700 kg/m3 (aluminium structure); no hollow sections inferred.",
+      "quality": "GEOMETRY_X_ASSUMED_MATERIAL"
+    },
+    {
+      "name": "V2 轴承横梁",
+      "link": "hull",
+      "mass_kg": 17.532350478979723,
+      "cg_m": [
+        -3.6240000732422484,
+        2.374166061761802e-12,
+        0.4199999868866881
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.46871233725971795,
+          9.749085987372173e-12,
+          -1.5831086441764342e-12
+        ],
+        [
+          9.749085987372173e-12,
+          0.07252282587545261,
+          1.3779958174591267e-10
+        ],
+        [
+          -1.5831086441764342e-12,
+          1.3779958174591267e-10,
+          0.49954722199046786
+        ]
+      ],
+      "basis": "Evaluated closed CAD solid x assumed 2700 kg/m3 (aluminium structure); no hollow sections inferred.",
+      "quality": "GEOMETRY_X_ASSUMED_MATERIAL"
+    },
+    {
+      "name": "V2 回转轴",
+      "link": "azimuth",
+      "mass_kg": 24.54445112984854,
+      "cg_m": [
+        -3.6240000724792547,
+        1.0158928489737359e-19,
+        0.579999996177358
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.6073153316431994,
+          4.165130779835859e-16,
+          -8.170547571850761e-14
+        ],
+        [
+          4.165130779835859e-16,
+          0.60731532319462,
+          -6.3112072064839025e-18
+        ],
+        [
+          -8.170547571850761e-14,
+          -6.3112072064839025e-18,
+          0.02261902970762085
+        ]
+      ],
+      "basis": "Evaluated closed CAD solid x assumed 7850 kg/m3 (steel shaft); no hollow sections inferred.",
+      "quality": "GEOMETRY_X_ASSUMED_MATERIAL"
+    },
+    {
+      "name": "V2 执行器上托梁",
+      "link": "hull",
+      "mass_kg": 13.44614893106379,
+      "cg_m": [
+        -3.2979481961819004,
+        2.887252427886826e-11,
+        0.8299999833047196
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.024009636038076772,
+          1.3039887946077154e-10,
+          -2.725476094811441e-11
+        ],
+        [
+          1.3039887946077154e-10,
+          0.4036598221085492,
+          -1.3564437714259753e-12
+        ],
+        [
+          -2.725476094811441e-11,
+          -1.3564437714259753e-12,
+          0.41833585382640914
+        ]
+      ],
+      "basis": "Evaluated closed CAD solid x assumed 2700 kg/m3 (aluminium structure); no hollow sections inferred.",
+      "quality": "GEOMETRY_X_ASSUMED_MATERIAL"
+    },
+    {
+      "name": "Fixed bearings, gearbox casing, steering motor, cover",
+      "link": "hull",
+      "mass_kg": 15.0,
+      "cg_m": [
+        -3.624,
+        0.0,
+        0.83
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.6906249999999999,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.6906249999999999,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.15625
+        ]
+      ],
+      "basis": "Lumped installation estimate excluding exported structural solids and rotating shaft/fittings; 10-22 kg sensitivity.",
+      "quality": "ENGINEERING_ALLOWANCE"
+    },
+    {
+      "name": "Single motor body (factory proxy minus prop)",
+      "link": "azimuth",
+      "mass_kg": 27.0,
+      "cg_m": [
+        -3.564000072479248,
+        0.0,
+        0.36999998807907103
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          2.72614725,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.0119624999999997,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.72949725
+        ]
+      ],
+      "basis": "2024 shortshaft 28.5 kg proxy including propeller, minus 1.5 kg assumed prop share. Real conversion changes mass; CG is engineering estimate.",
+      "quality": "MANUFACTURER_PROXY_WITH_ESTIMATED_SPLIT"
+    },
+    {
+      "name": "Rotating couplings/bearing inner rings/carrier",
+      "link": "azimuth",
+      "mass_kg": 6.0,
+      "cg_m": [
+        -3.624,
+        0.0,
+        0.8
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.08124999999999999,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.08124999999999999,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.04000000000000001
+        ]
+      ],
+      "basis": "Lumped added rotating fittings; excludes 24 kg solid shaft and fixed actuator assembly.",
+      "quality": "ENGINEERING_ALLOWANCE"
+    },
+    {
+      "name": "Propeller allocation",
+      "link": "propeller",
+      "mass_kg": 1.5,
+      "cg_m": [
+        -3.79521107673645,
+        0.0,
+        -0.14300000667572021
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.016875,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0084375,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0084375
+        ]
+      ],
+      "basis": "1.5 kg allocated within the 28.5 kg motor proxy; disk inertia estimate, not measured prop mass.",
+      "quality": "ENGINEERING_SPLIT_DISK_INERTIA"
+    }
+  ],
+  "links_model_frame": {
+    "hull": {
+      "mass_kg": 1384.1689168383,
+      "cg_m": [
+        -0.5158502372980347,
+        -0.030618442065207363,
+        0.4977764690556032
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          469.6502780376697,
+          8.820902850201582,
+          -28.5192233191636
+        ],
+        [
+          8.820902850201582,
+          4226.888285884691,
+          -0.02247088221952384
+        ],
+        [
+          -28.5192233191636,
+          -0.02247088221952384,
+          4490.419554351897
+        ]
+      ]
+    },
+    "azimuth": {
+      "mass_kg": 57.54445112984854,
+      "cg_m": [
+        -3.595847915267429,
+        4.3330906621272505e-20,
+        0.5044062575925176
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          4.566979905930447,
+          4.16583274071156e-16,
+          0.21773802806524134
+        ],
+        [
+          4.16583274071156e-16,
+          4.904388640556075,
+          -6.499696658767072e-18
+        ],
+        [
+          0.21773802806524134,
+          -6.499696658767072e-18,
+          0.8437097727818273
+        ]
+      ]
+    },
+    "propeller": {
+      "mass_kg": 1.5,
+      "cg_m": [
+        -3.79521107673645,
+        0.0,
+        -0.14300000667572021
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.016875,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0084375,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0084375
+        ]
+      ]
+    }
+  },
+  "links_local_frame": {
+    "hull": {
+      "mass_kg": 1384.1689168383,
+      "cg_m": [
+        -0.5158502372980347,
+        -0.030618442065207363,
+        0.4977764690556032
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          469.6502780376697,
+          8.820902850201582,
+          -28.5192233191636
+        ],
+        [
+          8.820902850201582,
+          4226.888285884691,
+          -0.02247088221952384
+        ],
+        [
+          -28.5192233191636,
+          -0.02247088221952384,
+          4490.419554351897
+        ]
+      ]
+    },
+    "azimuth": {
+      "mass_kg": 57.54445112984854,
+      "cg_m": [
+        0.028152157211819073,
+        4.3330906621272505e-20,
+        0.054406269513446515
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          4.566979905930447,
+          4.16583274071156e-16,
+          0.21773802806524134
+        ],
+        [
+          4.16583274071156e-16,
+          4.904388640556075,
+          -6.499696658767072e-18
+        ],
+        [
+          0.21773802806524134,
+          -6.499696658767072e-18,
+          0.8437097727818273
+        ]
+      ]
+    },
+    "propeller": {
+      "mass_kg": 1.5,
+      "cg_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.016875,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0084375,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0084375
+        ]
+      ]
+    }
+  },
+  "total": {
+    "mass_kg": 1443.2133679681485,
+    "cg_m": [
+      -0.6420656820562589,
+      -0.029365786604610814,
+      0.49737482562296975
+    ],
+    "inertia_at_cg_kg_m2": [
+      [
+        474.9054100912777,
+        14.170051704510014,
+        -30.205287180540452
+      ],
+      [
+        14.170051704510014,
+        4771.448592161185,
+        -0.005448793428191653
+      ],
+      [
+        -30.205287180540452,
+        -0.005448793428191653,
+        5030.35408243507
+      ]
+    ]
+  },
+  "sensitivity_cases": {
+    "light": {
+      "mass_kg": 1319.1320311713337,
+      "cg_m": [
+        -0.6209619496420752,
+        -0.028915214935640303,
+        0.4970627518798709
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          428.43374635015533,
+          11.94808715960934,
+          -27.162331236607965
+        ],
+        [
+          11.94808715960934,
+          4335.746828767354,
+          0.00699951039408055
+        ],
+        [
+          -27.162331236607965,
+          0.00699951039408055,
+          4568.891033977091
+        ]
+      ]
+    },
+    "nominal": {
+      "mass_kg": 1443.2133679681485,
+      "cg_m": [
+        -0.6420656820562589,
+        -0.029365786604610814,
+        0.49737482562296975
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          474.9054100912777,
+          14.170051704510014,
+          -30.205287180540452
+        ],
+        [
+          14.170051704510014,
+          4771.448592161185,
+          -0.005448793428191653
+        ],
+        [
+          -30.205287180540452,
+          -0.005448793428191653,
+          5030.35408243507
+        ]
+      ]
+    },
+    "heavy": {
+      "mass_kg": 1567.2947047649634,
+      "cg_m": [
+        -0.6598278867776699,
+        -0.029745015551834536,
+        0.49763748616112974
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          521.3763440303512,
+          16.415116744648792,
+          -33.26424292764046
+        ],
+        [
+          16.415116744648792,
+          5206.068145313114,
+          -0.018238698341441553
+        ],
+        [
+          -33.26424292764046,
+          -0.018238698341441553,
+          5490.734664046766
+        ]
+      ]
+    }
+  },
+  "sources": {
+    "battery": "https://www.epropulsion.com/parts-database/e163-battery",
+    "motor": "https://www.epropulsion.com/parts-database/NE-6000-S1--navy-6.0-evo-%282024%29-shortshaft"
+  },
+  "limitations": [
+    "Legacy source budget itself is estimated; removal mass and CG uncertain",
+    "50/40 mm backing plates and solid 86 mm shaft counted as drawn; not a fabrication recommendation",
+    "No free-surface/slosh or appended displacement",
+    "Manufacturer proxy does not certify the proposed steering conversion",
+    "Mass/inertia estimates do not calibrate hydrodynamic damping"
+  ],
+  "accounting_coverage_complete": true,
+  "physical_coverage_complete": false
+}

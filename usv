@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Stable entry point, usable from any working directory.
+set -eo pipefail
+ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+command="${1:-help}"
+if (($#)); then shift; fi
+case "$command" in
+  build) exec bash "$ROOT/tools/setup/build.sh" "$@" ;;
+  run) exec bash "$ROOT/ros_ws/src/usv_bringup/scripts/run_platform.sh" "$@" ;;
+  drive) source /opt/ros/jazzy/setup.bash; source "$ROOT/ros_ws/install/setup.bash"; export GZ_PARTITION="${GZ_PARTITION:-usv_platform15}"; exec python3 "$ROOT/tools/control/drive_ros.py" "$@" ;;
+  energy) source /opt/ros/jazzy/setup.bash; source "$ROOT/ros_ws/install/setup.bash"; export GZ_PARTITION="${GZ_PARTITION:-usv_platform15}"; exec python3 "$ROOT/tools/control/energy_console.py" "$@" ;;
+  test) exec bash "$ROOT/tools/setup/test.sh" "$@" ;;
+  help|--help|-h) printf '%s
+' 'Usage: ./usv {build|run|drive|energy|test}' '  ./usv build' '  ./usv run                    # Sydney GUI, ROS control' '  ./usv run headless:=True     # no GUI' '  ./usv drive --throttle 0.3 --duration 10' '  ./usv test                   # unit tests; native integration is documented separately' ;;
+  *) echo "Unknown command: $command" >&2; exit 2 ;;
+esac

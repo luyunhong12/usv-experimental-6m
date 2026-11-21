@@ -1,0 +1,35 @@
+{
+  "profile": "ENGINEERING_ESTIMATE_NOT_MEASURED",
+  "sealed_envelope_watertight": true,
+  "max_source_vertex_distance_m": 6.967255752582623e-08,
+  "sealed_envelope_volume_m3": 8.34690545,
+  "triangles": 106,
+  "total_trial_mass_kg": 1193.5579401134448,
+  "trial_total_cg_m": [
+    -0.7087639846071212,
+    -0.017456344391320246,
+    0.5016625071491722
+  ],
+  "equilibrium_pose_z_roll_pitch": [
+    -0.21088824981986115,
+    0.014955876900652013,
+    -0.004797416682887176
+  ],
+  "displaced_volume_m3": 1.1935579401134448,
+  "residual": [
+    -4.0611958240788226e-13,
+    1.6288081994275672e-12,
+    1.0220990720455347e-14
+  ],
+  "roll_pitch_restoring_stiffness_Nm_rad": [
+    17479.33463492663,
+    166987.08060597873
+  ],
+  "limitations": [
+    "station envelope sealed deck; no flooding",
+    "appendage displacement omitted",
+    "estimated aggregate/mesh inertia; no measured mass distribution",
+    "linear/quadratic damping uncalibrated; constant diagonal added mass trial; VRX distributed hull pressure and deep-water orbital flow; relative current/wind enabled",
+    "propulsion and energy are engineering proxies; fuel inertia uses a quasi-static unbaffled box tank"
+  ]
+}

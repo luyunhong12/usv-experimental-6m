@@ -1,0 +1,627 @@
+{
+  "schema": 2,
+  "source_hashes": {
+    "hull": "791c574784c5591bb7e7504f2f5b52960e4915fdaad7d5798fec1acbe2f0fedb",
+    "azimuth": "5cbb54df1e5d4b672c5163c7b49d0f2948113c588f911bb954a373fd6f27a02c",
+    "propeller": "7f1853a2382947ae028f237ec13b540df23ce30a437aad8d57840ac467eeea1f"
+  },
+  "basis": "CAD palette and named finish approximations, procedural microtexture; no measured BRDF; geometry unchanged",
+  "groups": {
+    "hull": [
+      {
+        "name": "hull_00",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_00.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_00_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_00_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 568
+      },
+      {
+        "name": "hull_01",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_01.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_01_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_01_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.6,
+        "triangles": 5871
+      },
+      {
+        "name": "hull_02",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_02.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_02_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_02_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 1876
+      },
+      {
+        "name": "hull_03",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_03.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_03_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_03_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 176
+      },
+      {
+        "name": "hull_04",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_04.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_04_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_04_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 12126
+      },
+      {
+        "name": "hull_05",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_05.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_05_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_05_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 11454
+      },
+      {
+        "name": "hull_06",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_06.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_06_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_06_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 440
+      },
+      {
+        "name": "hull_07",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_07.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_07_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_07_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 188
+      },
+      {
+        "name": "hull_08",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_08.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_08_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_08_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 13816
+      },
+      {
+        "name": "hull_09",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_09.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_09_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_09_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 5200
+      },
+      {
+        "name": "hull_10",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_10.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_10_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_10_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 472
+      },
+      {
+        "name": "hull_11",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_11.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_11_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_11_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 472
+      },
+      {
+        "name": "hull_12",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_12.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_12_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_12_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.8000000000000002,
+        "roughness": 0.24,
+        "triangles": 48
+      },
+      {
+        "name": "hull_13",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_13.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_13_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_13_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 12
+      },
+      {
+        "name": "hull_14",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_14.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_14_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_14_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 12
+      },
+      {
+        "name": "hull_15",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_15.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_15_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_15_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 36
+      },
+      {
+        "name": "hull_16",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_16.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_16_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_16_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 132
+      },
+      {
+        "name": "hull_17",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_17.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_17_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_17_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 2688
+      },
+      {
+        "name": "hull_18",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_18.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_18_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_18_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 36
+      },
+      {
+        "name": "hull_19",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_19.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_19_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_19_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 2328
+      },
+      {
+        "name": "hull_20",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_20.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_20_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_20_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 1920
+      },
+      {
+        "name": "hull_21",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_21.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_21_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_21_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 256
+      },
+      {
+        "name": "hull_22",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_22.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_22_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_22_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 384
+      },
+      {
+        "name": "hull_23",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_23.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_23_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_23_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 14364
+      },
+      {
+        "name": "hull_24",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_24.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_24_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_24_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 256
+      },
+      {
+        "name": "hull_25",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_25.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_25_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_25_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 256
+      },
+      {
+        "name": "hull_26",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_26.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_26_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_26_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 256
+      },
+      {
+        "name": "hull_27",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_27.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_27_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_27_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 112
+      },
+      {
+        "name": "hull_28",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_28.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_28_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_28_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 268
+      },
+      {
+        "name": "hull_29",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_29.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_29_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_29_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 17229
+      },
+      {
+        "name": "hull_30",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_30.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_30_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_30_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.7071067811865476,
+        "triangles": 188448
+      },
+      {
+        "name": "hull_31",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_31.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_31_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_31_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 133000
+      },
+      {
+        "name": "hull_32",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_32.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_32_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_32_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 38204
+      },
+      {
+        "name": "hull_33",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_33.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_33_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_33_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 17128
+      },
+      {
+        "name": "hull_34",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_34.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_34_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_34_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 5722
+      },
+      {
+        "name": "hull_35",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_35.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_35_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_35_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 5864
+      },
+      {
+        "name": "hull_36",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_36.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_36_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_36_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 490
+      },
+      {
+        "name": "hull_37",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_37.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_37_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_37_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 1166
+      },
+      {
+        "name": "hull_38",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_38.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_38_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_38_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 680
+      },
+      {
+        "name": "hull_39",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_39.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_39_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_39_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 109764
+      },
+      {
+        "name": "hull_40",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_40.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_40_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_40_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 71104
+      },
+      {
+        "name": "hull_41",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_41.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_41_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_41_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 13612
+      },
+      {
+        "name": "hull_42",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_42.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_42_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_42_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 560
+      },
+      {
+        "name": "hull_43",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_43.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_43_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_43_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 2852
+      },
+      {
+        "name": "hull_44",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_44.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_44_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_44_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 46988
+      },
+      {
+        "name": "hull_45",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_45.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_45_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_45_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 42020
+      },
+      {
+        "name": "hull_46",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_46.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_46_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_46_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 13272
+      },
+      {
+        "name": "hull_47",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_47.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_47_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_47_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 5512
+      },
+      {
+        "name": "hull_48",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_48.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_48_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_48_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 36480
+      },
+      {
+        "name": "hull_49",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_49.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_49_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_49_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.75,
+        "roughness": 0.32,
+        "triangles": 20108
+      },
+      {
+        "name": "hull_50",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_50.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_50_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_50_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 600
+      },
+      {
+        "name": "hull_51",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_51.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_51_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_51_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 3904
+      },
+      {
+        "name": "hull_52",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_52.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_52_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_52_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 4012
+      },
+      {
+        "name": "hull_53",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_53.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_53_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_53_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 4540
+      },
+      {
+        "name": "hull_54",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_54.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_54_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/hull_54_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 17280
+      }
+    ],
+    "azimuth": [
+      {
+        "name": "azimuth_00",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/azimuth_00.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/azimuth_00_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/azimuth_00_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 1132
+      },
+      {
+        "name": "azimuth_01",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/azimuth_01.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/azimuth_01_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/azimuth_01_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 7664
+      },
+      {
+        "name": "azimuth_02",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/azimuth_02.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/azimuth_02_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/azimuth_02_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 316
+      },
+      {
+        "name": "azimuth_03",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/azimuth_03.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/azimuth_03_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/azimuth_03_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.75,
+        "roughness": 0.32,
+        "triangles": 17844
+      },
+      {
+        "name": "azimuth_04",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/azimuth_04.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/azimuth_04_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/azimuth_04_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.0,
+        "roughness": 0.4,
+        "triangles": 188
+      }
+    ],
+    "propeller": [
+      {
+        "name": "propeller_00",
+        "mesh": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/propeller_00.obj",
+        "albedo": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/propeller_00_albedo.png",
+        "roughness_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/propeller_00_roughness.png",
+        "normal_map": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/pbr/micro_normal.png",
+        "metalness": 0.75,
+        "roughness": 0.32,
+        "triangles": 7164
+      }
+    ]
+  }
+}

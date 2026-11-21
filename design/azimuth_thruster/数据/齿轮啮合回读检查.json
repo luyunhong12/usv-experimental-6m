@@ -1,0 +1,289 @@
+{
+  "samples": [
+    {
+      "angle": -35,
+      "intersections": []
+    },
+    {
+      "angle": -34,
+      "intersections": []
+    },
+    {
+      "angle": -33,
+      "intersections": []
+    },
+    {
+      "angle": -32,
+      "intersections": []
+    },
+    {
+      "angle": -31,
+      "intersections": []
+    },
+    {
+      "angle": -30,
+      "intersections": []
+    },
+    {
+      "angle": -29,
+      "intersections": []
+    },
+    {
+      "angle": -28,
+      "intersections": []
+    },
+    {
+      "angle": -27,
+      "intersections": []
+    },
+    {
+      "angle": -26,
+      "intersections": []
+    },
+    {
+      "angle": -25,
+      "intersections": []
+    },
+    {
+      "angle": -24,
+      "intersections": []
+    },
+    {
+      "angle": -23,
+      "intersections": []
+    },
+    {
+      "angle": -22,
+      "intersections": []
+    },
+    {
+      "angle": -21,
+      "intersections": []
+    },
+    {
+      "angle": -20,
+      "intersections": []
+    },
+    {
+      "angle": -19,
+      "intersections": []
+    },
+    {
+      "angle": -18,
+      "intersections": []
+    },
+    {
+      "angle": -17,
+      "intersections": []
+    },
+    {
+      "angle": -16,
+      "intersections": []
+    },
+    {
+      "angle": -15,
+      "intersections": []
+    },
+    {
+      "angle": -14,
+      "intersections": []
+    },
+    {
+      "angle": -13,
+      "intersections": []
+    },
+    {
+      "angle": -12,
+      "intersections": []
+    },
+    {
+      "angle": -11,
+      "intersections": []
+    },
+    {
+      "angle": -10,
+      "intersections": []
+    },
+    {
+      "angle": -9,
+      "intersections": []
+    },
+    {
+      "angle": -8,
+      "intersections": []
+    },
+    {
+      "angle": -7,
+      "intersections": []
+    },
+    {
+      "angle": -6,
+      "intersections": []
+    },
+    {
+      "angle": -5,
+      "intersections": []
+    },
+    {
+      "angle": -4,
+      "intersections": []
+    },
+    {
+      "angle": -3,
+      "intersections": []
+    },
+    {
+      "angle": -2,
+      "intersections": []
+    },
+    {
+      "angle": -1,
+      "intersections": []
+    },
+    {
+      "angle": 0,
+      "intersections": []
+    },
+    {
+      "angle": 1,
+      "intersections": []
+    },
+    {
+      "angle": 2,
+      "intersections": []
+    },
+    {
+      "angle": 3,
+      "intersections": []
+    },
+    {
+      "angle": 4,
+      "intersections": []
+    },
+    {
+      "angle": 5,
+      "intersections": []
+    },
+    {
+      "angle": 6,
+      "intersections": []
+    },
+    {
+      "angle": 7,
+      "intersections": []
+    },
+    {
+      "angle": 8,
+      "intersections": []
+    },
+    {
+      "angle": 9,
+      "intersections": []
+    },
+    {
+      "angle": 10,
+      "intersections": []
+    },
+    {
+      "angle": 11,
+      "intersections": []
+    },
+    {
+      "angle": 12,
+      "intersections": []
+    },
+    {
+      "angle": 13,
+      "intersections": []
+    },
+    {
+      "angle": 14,
+      "intersections": []
+    },
+    {
+      "angle": 15,
+      "intersections": []
+    },
+    {
+      "angle": 16,
+      "intersections": []
+    },
+    {
+      "angle": 17,
+      "intersections": []
+    },
+    {
+      "angle": 18,
+      "intersections": []
+    },
+    {
+      "angle": 19,
+      "intersections": []
+    },
+    {
+      "angle": 20,
+      "intersections": []
+    },
+    {
+      "angle": 21,
+      "intersections": []
+    },
+    {
+      "angle": 22,
+      "intersections": []
+    },
+    {
+      "angle": 23,
+      "intersections": []
+    },
+    {
+      "angle": 24,
+      "intersections": []
+    },
+    {
+      "angle": 25,
+      "intersections": []
+    },
+    {
+      "angle": 26,
+      "intersections": []
+    },
+    {
+      "angle": 27,
+      "intersections": []
+    },
+    {
+      "angle": 28,
+      "intersections": []
+    },
+    {
+      "angle": 29,
+      "intersections": []
+    },
+    {
+      "angle": 30,
+      "intersections": []
+    },
+    {
+      "angle": 31,
+      "intersections": []
+    },
+    {
+      "angle": 32,
+      "intersections": []
+    },
+    {
+      "angle": 33,
+      "intersections": []
+    },
+    {
+      "angle": 34,
+      "intersections": []
+    },
+    {
+      "angle": 35,
+      "intersections": []
+    }
+  ],
+  "scope": "sampled involute mesh surface intersections, 71 poses; no load/contact stress validation"
+}

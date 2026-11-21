@@ -1,0 +1,14 @@
+{
+  "all_runtime_checks_passed": true,
+  "launcher_failure_cleanup_passed": true,
+  "suite_cancellation_cleanup_passed": true,
+  "abrupt_child_cleanup_passed": true,
+  "energy_2hour_passed": true,
+  "clock_failure_reproduced_before": true,
+  "clock_independent_after": true,
+  "passive_heading_stable": false,
+  "neutral_heading_change_deg": -1374.9621184777873,
+  "neutral_final_window_max_servo_error_deg": 6.480510404135086e-06,
+  "monotonic_speed_with_command": true,
+  "full_command_speed_decreases_with_payload": true
+}

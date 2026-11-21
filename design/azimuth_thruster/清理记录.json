@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-18",
+  "scope": "第二船体交付整理；第一船体文档资料、Blender连接环境、原版VRX源码保留",
+  "deleted_files": [
+    {
+      "path": "第二船体/图片/整体转向_三角度对照.png",
+      "bytes": 423714,
+      "sha256": "30ec3ae568602d61e5f5d1c929c942cf4ee9aa1f007bcd8956302a872614c305",
+      "reason": "旧外观的静态对照，已由当前动作演示替代"
+    },
+    {
+      "path": "第二船体/图片/转向机构_开罩检查.png",
+      "bytes": 1339149,
+      "sha256": "865896b656a741a4134dce5508c370292b8720561511eaca3d261b980c49df3b",
+      "reason": "齿轮仍为包络的旧图，已由联动齿轮检查图替代"
+    },
+    {
+      "path": "第二船体/数据/几何检查.json",
+      "bytes": 9615,
+      "sha256": "98317fab2f50b388a3728907d67a1ee8318cb16cf9c5779c75761cb130807cbc",
+      "reason": "初版艉板平面检查，后续安装架检查已替代"
+    },
+    {
+      "path": "第二船体/数据/保存回读验证.json",
+      "bytes": 285,
+      "sha256": "c5d85640e626d64c25c4ce2b9d0a0a5d3c4827a05af32d4e0b662947f521c045",
+      "reason": "初版模型回读，最终概念模型回读已替代"
+    },
+    {
+      "path": "第二船体/数据/细化版回读验证.json",
+      "bytes": 922,
+      "sha256": "a03cfe165b3408c5652b685384ed8c3a1915395e0fc7f0796d7953b725a82aee",
+      "reason": "中间模型回读，最终概念模型回读已替代"
+    },
+    {
+      "path": "第二船体/脚本/__pycache__/render_concept.cpython-312.pyc",
+      "bytes": 4582,
+      "reason": "可自动再生成的Python缓存"
+    },
+    {
+      "path": "第二船体/脚本/__pycache__/verify_concept.cpython-312.pyc",
+      "bytes": 5006,
+      "reason": "可自动再生成的Python缓存"
+    },
+    {
+      "path": "第二船体/脚本/__pycache__/complete_concept.cpython-312.pyc",
+      "bytes": 26128,
+      "reason": "可自动再生成的Python缓存"
+    },
+    {
+      "path": "第二船体/仿真接口/__pycache__/vector_thrust.cpython-312.pyc",
+      "bytes": 3958,
+      "reason": "可自动再生成的Python缓存"
+    },
+    {
+      "path": "第二船体/仿真接口/__pycache__/test_vector_thrust.cpython-312.pyc",
+      "bytes": 3212,
+      "reason": "可自动再生成的Python缓存"
+    }
+  ],
+  "deleted_count": 10,
+  "deleted_bytes": 1816571,
+  "protected_model_sha256": {
+    "成品交付/01_模型/无人船_最终总装.blend": "0060fdfe216c5537be1378a364c32860ec54d295125a8fc0a4c418a37519afaa",
+    "原船备份/第一船体_双固定推进器_2026-11-18.blend": "0060fdfe216c5537be1378a364c32860ec54d295125a8fc0a4c418a37519afaa",
+    "第二船体/模型/第二船体_中央单机整体转向.blend": "c586d30fa599f1b2184c7d0c5fb51cc906f328ca552d41d7653d46b4a9ba1bf3"
+  },
+  "protected_models_unchanged": true,
+  "script_cleanup": "保留重建流水线，仅删除中间阶段渲染旧图/输出初版报告的代码；最终预览仍由render_concept.py生成。"
+}

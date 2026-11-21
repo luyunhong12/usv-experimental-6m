@@ -1,0 +1,22 @@
+# Build and runtime products
+/ros_ws/build/
+/ros_ws/install/
+/ros_ws/log/
+/artifacts/
+/dependencies/src/
+/dependencies/vendor/python/
+/dependencies/vendor/fuel/
+**/__pycache__/
+*.py[cod]
+.venv/
+venv/
+# Host-owned agent/account state: never publish
+/.agents/
+/.codex/
+/.aws/
+# Third-party manuals: retain locally, do not redistribute by default.
+/design/twin_thruster/04_依据与数据/原始依据/
+# Generated optional addon build/cache
+/dependencies/vendor/blender-mcp/build/
+
+/dependencies/vendor/blender-mcp/

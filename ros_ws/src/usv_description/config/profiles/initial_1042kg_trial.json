@@ -1,0 +1,40 @@
+{
+  "status": "UNVALIDATED_TRIAL_ONLY",
+  "basis": "User authorized trial conditions without measured mass. These values are test inputs, not real vessel specifications.",
+  "fluid_density_kg_m3": 1000.0,
+  "hull_mass_kg": 1000.0,
+  "hull_cg_m": [
+    -0.25,
+    0.0,
+    0.48
+  ],
+  "hull_inertia_box_size_m": [
+    5.0,
+    1.8,
+    0.8
+  ],
+  "azimuth_mass_kg": 40.0,
+  "azimuth_inertia_box_size_m": [
+    0.4,
+    0.3,
+    1.0
+  ],
+  "propeller_mass_kg": 2.0,
+  "propeller_radius_m": 0.18,
+  "linear_damping_N_s_m": [
+    120.0,
+    600.0,
+    1400.0
+  ],
+  "angular_damping_Nm_s_rad": [
+    800.0,
+    1600.0,
+    900.0
+  ],
+  "steering_limit_deg": 35.0,
+  "steering_velocity_limit_rad_s": 0.2,
+  "steering_effort_limit_Nm": 100.0,
+  "steering_kp": 300.0,
+  "steering_kd": 80.0,
+  "note": "Inertia is a positive-definite box/disk test approximation. Damping and steering limits require identification. No propulsion force or fuel/battery model yet. All mass is accounted once across three links."
+}

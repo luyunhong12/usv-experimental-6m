@@ -1,0 +1,289 @@
+{
+  "scope": "71 poses; moving propulsion mesh surfaces against fixed external mount beams and outer backplate. Does not detect complete containment; excludes intentional shaft/bearing/gear contact, cables, hull internals. Not full assembly validation. Cable validation is recorded separately in 最终概念模型回读检查.json.",
+  "samples": [
+    {
+      "angle_deg": -35,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -34,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -33,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -32,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -31,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -30,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -29,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -28,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -27,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -26,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -25,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -24,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -23,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -22,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -21,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -20,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -19,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -18,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -17,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -16,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -15,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -14,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -13,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -12,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -11,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -10,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -9,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -8,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -7,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -6,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -5,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -4,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -3,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -2,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": -1,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 0,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 1,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 2,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 3,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 4,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 5,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 6,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 7,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 8,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 9,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 10,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 11,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 12,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 13,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 14,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 15,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 16,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 17,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 18,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 19,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 20,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 21,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 22,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 23,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 24,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 25,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 26,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 27,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 28,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 29,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 30,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 31,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 32,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 33,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 34,
+      "surface_intersections": []
+    },
+    {
+      "angle_deg": 35,
+      "surface_intersections": []
+    }
+  ]
+}

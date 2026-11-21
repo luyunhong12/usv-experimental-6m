@@ -1,0 +1,35 @@
+{
+  "status": "ENGINEERING_INTERFACE_AND_ENVIRONMENT_PROFILE_NOT_CALIBRATED",
+  "drag_center_m": [
+    -0.642065682056,
+    0.0,
+    0.0
+  ],
+  "drag_center_basis": "Fixed hull-centreline reference near full-load buoyancy x; y=0 follows symmetric hull, not asymmetric equipment CG. Hydrodynamic identification still required.",
+  "air_center_m": [
+    0.0,
+    0.0,
+    0.5
+  ],
+  "air_cd_area_m2": [
+    1.0,
+    3.0,
+    0.0
+  ],
+  "steering": {
+    "efficiency": 0.7,
+    "idle_w": 8.0,
+    "copper_w_per_nm2": 0.002,
+    "max_w": 150.0
+  },
+  "sensors": {
+    "imu_hz": 100,
+    "gps_hz": 10,
+    "magnetometer_hz": 50
+  },
+  "sensor_noise_status": "Engineering noise and positions, not hardware calibration",
+  "wave_model": "VRX PMS zero steepness/phase; refined-hull distributed pressure and linear deep-water orbital velocities; constant diagonal added mass; no radiation, slamming or breaking waves",
+  "sydney_wave_gain": 0.3,
+  "wave_pressure_max_edge_m": 0.35,
+  "payload_config": "payloads.json defines camera/lidar geometry, rates and optional advanced payloads"
+}

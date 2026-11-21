@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/gazebosim/gz-physics",
+  "tag": "gz-physics7_7.8.0",
+  "files": {
+    "World.hh": "dartsim/src/World.hh",
+    "LICENSE": "LICENSE"
+  },
+  "sha256": {
+    "World.hh": "d052c92e9d35214fe5f33fd1e82b9c6d4e1f64773b48d51e4ce9f98e9f324030",
+    "LICENSE": "e1925845017bf307c7d465af432e8bb20cbb6ce17b10cd323af59da717753075"
+  }
+}

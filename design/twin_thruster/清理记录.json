@@ -1,0 +1,5395 @@
+{
+  "date": "2026-11-18",
+  "authorization": "用户要求只留最后一版，删除无用中间生产资料",
+  "retained": "成品交付、05_Blender连接工具、docs/VRX停车与单机故障/vrx原版源码、受保护隐藏目录",
+  "deleted_files": 1344,
+  "deleted_bytes": 616223332,
+  "items": [
+    {
+      "path": "blender/艉座肘板焊缝载荷筛查.md",
+      "bytes": 1670
+    },
+    {
+      "path": "blender/停机许可静态验算.json",
+      "bytes": 1391
+    },
+    {
+      "path": "blender/候选电池线干涉.json",
+      "bytes": 334
+    },
+    {
+      "path": "blender/冷却联锁控制盒近景.png",
+      "bytes": 1493819
+    },
+    {
+      "path": "blender/艉横框折角R10试排.blend",
+      "bytes": 621350
+    },
+    {
+      "path": "blender/艉部左右检修口开盖近景.png",
+      "bytes": 870831
+    },
+    {
+      "path": "blender/艉座后移载荷路径核查.txt",
+      "bytes": 965
+    },
+    {
+      "path": "blender/充电配电开盖总装.接触.json",
+      "bytes": 5639
+    },
+    {
+      "path": "blender/模型管线核对开盖.blend",
+      "bytes": 7591145
+    },
+    {
+      "path": "blender/七项总装交付与未决条件.md",
+      "bytes": 11932
+    },
+    {
+      "path": "blender/50度宽根耳板与贯穿保险销.blend",
+      "bytes": 1192940
+    },
+    {
+      "path": "blender/冷却候选底部取水窗.json",
+      "bytes": 1382
+    },
+    {
+      "path": "blender/检修复核双盖打开.blend",
+      "bytes": 1950644
+    },
+    {
+      "path": "blender/双快接复核拆杯路径.json",
+      "bytes": 778
+    },
+    {
+      "path": "blender/开盖双电池与中线侧水锁.blend",
+      "bytes": 3457256
+    },
+    {
+      "path": "blender/全船安装完成闭盖.png",
+      "bytes": 966700
+    },
+    {
+      "path": "blender/左艉外后螺母操作剖视.png",
+      "bytes": 726116
+    },
+    {
+      "path": "blender/艉座连续搭接校核.blend",
+      "bytes": 616750
+    },
+    {
+      "path": "blender/双机肩线拆检测量剖视图.png",
+      "bytes": 223610
+    },
+    {
+      "path": "blender/码头横移偏航工作范围.json",
+      "bytes": 2953
+    },
+    {
+      "path": "blender/右桨平台前缘改前改后俯视.png",
+      "bytes": 610875
+    },
+    {
+      "path": "blender/候选电池垂直吊出障碍.json",
+      "bytes": 239
+    },
+    {
+      "path": "blender/双舱盖滤杯系缆座检修复核.md",
+      "bytes": 5569
+    },
+    {
+      "path": "blender/排气600毫米高差修订.md",
+      "bytes": 6954
+    },
+    {
+      "path": "blender/建模验证清单.md",
+      "bytes": 6199
+    },
+    {
+      "path": "blender/快速上手.md",
+      "bytes": 4451
+    },
+    {
+      "path": "blender/联合候选盖缝回读.json",
+      "bytes": 266
+    },
+    {
+      "path": "blender/排气高差修订闭盖.系统核查.json",
+      "bytes": 58029
+    },
+    {
+      "path": "blender/未决问题修订记录.md",
+      "bytes": 8334
+    },
+    {
+      "path": "blender/机组接口拆卸校核.blend",
+      "bytes": 156917
+    },
+    {
+      "path": "blender/燃油粗滤下拆近景.png",
+      "bytes": 591606
+    },
+    {
+      "path": "blender/最终电池舱与配电近景.png",
+      "bytes": 1505312
+    },
+    {
+      "path": "blender/三相机原总装质量预算.md",
+      "bytes": 4920
+    },
+    {
+      "path": "blender/艉部系缆座局部检修口.md",
+      "bytes": 4373
+    },
+    {
+      "path": "blender/未决水电预算.json",
+      "bytes": 2450
+    },
+    {
+      "path": "blender/全船安装完成闭盖.接触审查.json",
+      "bytes": 10095
+    },
+    {
+      "path": "blender/机组供液检修提位.blend",
+      "bytes": 1934109
+    },
+    {
+      "path": "blender/码头可调平台水位漂移与夹手复核.md",
+      "bytes": 6469
+    },
+    {
+      "path": "blender/整船总装说明.md",
+      "bytes": 17923
+    },
+    {
+      "path": "blender/七项候选重量与水路复算.json",
+      "bytes": 2567
+    },
+    {
+      "path": "blender/四项修订施工前总装.blend",
+      "bytes": 2753722
+    },
+    {
+      "path": "blender/冷却探头与状态灯近景.png",
+      "bytes": 1323482
+    },
+    {
+      "path": "blender/四项细化双盖打开总装.png",
+      "bytes": 801077
+    },
+    {
+      "path": "blender/安装收尾闭盖总装.blend",
+      "bytes": 5738136
+    },
+    {
+      "path": "blender/码头艉标与双艉缆俯视.png",
+      "bytes": 1028741
+    },
+    {
+      "path": "blender/冷却联锁选型开盖.blend",
+      "bytes": 7545366
+    },
+    {
+      "path": "blender/排气高差改前改后侧剖.png",
+      "bytes": 234895
+    },
+    {
+      "path": "blender/艉座连续焊段重算.md",
+      "bytes": 1152
+    },
+    {
+      "path": "blender/充电配电闭盖总装.接触.json",
+      "bytes": 5639
+    },
+    {
+      "path": "blender/全船安装完成闭盖.系统核查.json",
+      "bytes": 58929
+    },
+    {
+      "path": "blender/四项修订水位读数.json",
+      "bytes": 2659
+    },
+    {
+      "path": "blender/码头独立平台与右桨检修.blend",
+      "bytes": 1964690
+    },
+    {
+      "path": "blender/四项修订舱盖贴合.json",
+      "bytes": 266
+    },
+    {
+      "path": "blender/机组舱排水试排.blend",
+      "bytes": 215426
+    },
+    {
+      "path": "blender/管线补齐与模型余项.md",
+      "bytes": 4103
+    },
+    {
+      "path": "blender/横倾水锁移位干涉.json",
+      "bytes": 86
+    },
+    {
+      "path": "blender/集中收尾排气水面轨迹.json",
+      "bytes": 826159
+    },
+    {
+      "path": "blender/安装收尾开盖总装.png",
+      "bytes": 988827
+    },
+    {
+      "path": "blender/舱口两滤器开盖俯视.png",
+      "bytes": 517938
+    },
+    {
+      "path": "blender/机组隔舱试排.blend",
+      "bytes": 153690
+    },
+    {
+      "path": "blender/排气降位静态结果.json",
+      "bytes": 18241
+    },
+    {
+      "path": "blender/双机肩线实测判定.xlsx",
+      "bytes": 11249
+    },
+    {
+      "path": "blender/艉部壳板与横框连接复核.md",
+      "bytes": 2813
+    },
+    {
+      "path": "blender/冷却联锁选型闭盖.接触审查.json",
+      "bytes": 64746
+    },
+    {
+      "path": "blender/整船外观预览.png",
+      "bytes": 766103
+    },
+    {
+      "path": "blender/艉部双检修口航行总装.blend",
+      "bytes": 1642870
+    },
+    {
+      "path": "blender/七项联合水锁剖面与高差.png",
+      "bytes": 103775
+    },
+    {
+      "path": "blender/系缆座背面近景.png",
+      "bytes": 648146
+    },
+    {
+      "path": "blender/四项修订双杯撤出.json",
+      "bytes": 778
+    },
+    {
+      "path": "blender/船壳加厚对照.blend",
+      "bytes": 194536
+    },
+    {
+      "path": "blender/码头检修平台静态读数.json",
+      "bytes": 1734
+    },
+    {
+      "path": "blender/排气高差修订闭盖.blend",
+      "bytes": 7139590
+    },
+    {
+      "path": "blender/右艉移位与右桨可达性.png",
+      "bytes": 147535
+    },
+    {
+      "path": "blender/未决修订重量与重心.json",
+      "bytes": 189429
+    },
+    {
+      "path": "blender/双机机罩避让复核预览.jpg",
+      "bytes": 74872
+    },
+    {
+      "path": "blender/机组供液低位航行总装.blend",
+      "bytes": 1906203
+    },
+    {
+      "path": "blender/安装完成重量与重心.json",
+      "bytes": 185190
+    },
+    {
+      "path": "blender/可调平台手套与前缘最紧近景.png",
+      "bytes": 735228
+    },
+    {
+      "path": "blender/滤篮修订拆杯路径.json",
+      "bytes": 778
+    },
+    {
+      "path": "blender/50度自拟侧出与检修支撑.blend",
+      "bytes": 1095260
+    },
+    {
+      "path": "blender/接舷段应力施焊与排水复核.md",
+      "bytes": 3959
+    },
+    {
+      "path": "blender/排气关键点判定逻辑检查.json",
+      "bytes": 534
+    },
+    {
+      "path": "blender/舱底泵抽水演示.blend",
+      "bytes": 5147937
+    },
+    {
+      "path": "blender/码头检修平台定位与摆柄尺寸.png",
+      "bytes": 147692
+    },
+    {
+      "path": "blender/七项联合候选结果.json",
+      "bytes": 4589
+    },
+    {
+      "path": "blender/吸管支承检视.blend",
+      "bytes": 275828
+    },
+    {
+      "path": "blender/冷却联锁选型与接线交付.md",
+      "bytes": 8101
+    },
+    {
+      "path": "blender/短轴双机艉座与抬机试排.blend",
+      "bytes": 615215
+    },
+    {
+      "path": "blender/四项修订开盖检修.blend",
+      "bytes": 3407726
+    },
+    {
+      "path": "blender/艉部系缆三向近景.png",
+      "bytes": 962325
+    },
+    {
+      "path": "blender/R10双推进器整船.blend",
+      "bytes": 643961
+    },
+    {
+      "path": "blender/C方案整船总装.blend",
+      "bytes": 1534658
+    },
+    {
+      "path": "blender/右桨平台局部退让.blend",
+      "bytes": 1944306
+    },
+    {
+      "path": "blender/机组供液运行与检修对照.png",
+      "bytes": 481904
+    },
+    {
+      "path": "blender/集中收尾重量与重心.json",
+      "bytes": 67637
+    },
+    {
+      "path": "blender/管线补齐开盖总装.json",
+      "bytes": 1740
+    },
+    {
+      "path": "blender/平台漂移边界与手套尺寸.png",
+      "bytes": 155573
+    },
+    {
+      "path": "blender/排气降位水面轨迹.json",
+      "bytes": 826737
+    },
+    {
+      "path": "blender/E163配电柜近景.png",
+      "bytes": 1078267
+    },
+    {
+      "path": "blender/模型管线核对开盖.联锁补齐.json",
+      "bytes": 25622
+    },
+    {
+      "path": "blender/七项联合候选开盖.blend",
+      "bytes": 3564133
+    },
+    {
+      "path": "blender/舱底泵排水防虹吸.blend",
+      "bytes": 424361
+    },
+    {
+      "path": "blender/全船安装完成开盖.json",
+      "bytes": 95162
+    },
+    {
+      "path": "blender/艉部双推进器修订.blend",
+      "bytes": 634870
+    },
+    {
+      "path": "blender/安装收尾开盖姿态.json",
+      "bytes": 424809
+    },
+    {
+      "path": "blender/码头独立平台右桨检修复核.md",
+      "bytes": 5271
+    },
+    {
+      "path": "blender/分舱剖视.png",
+      "bytes": 422626
+    },
+    {
+      "path": "blender/四项修订桨几何.json",
+      "bytes": 237341
+    },
+    {
+      "path": "blender/双机厂图安装与持续航速复核.md",
+      "bytes": 10564
+    },
+    {
+      "path": "blender/双电池与中线侧水锁候选.blend",
+      "bytes": 2867575
+    },
+    {
+      "path": "blender/艉部双推进器预览.png",
+      "bytes": 620588
+    },
+    {
+      "path": "blender/艉座补板与肘板试排.blend",
+      "bytes": 615108
+    },
+    {
+      "path": "blender/检修舱口初版.blend",
+      "bytes": 94673
+    },
+    {
+      "path": "blender/艉横框圆弧避让对比.md",
+      "bytes": 2007
+    },
+    {
+      "path": "blender/管线补齐闭盖总装.png",
+      "bytes": 877670
+    },
+    {
+      "path": "blender/接舷段圆弧实尺度样板.svg",
+      "bytes": 5195
+    },
+    {
+      "path": "blender/横倾停机回正复核.md",
+      "bytes": 4533
+    },
+    {
+      "path": "blender/接舷圆弧局部计算与样件记录.md",
+      "bytes": 3075
+    },
+    {
+      "path": "blender/双桨出水与出线口检视.blend",
+      "bytes": 646941
+    },
+    {
+      "path": "blender/艉部纵骨退坡复核.md",
+      "bytes": 1409
+    },
+    {
+      "path": "blender/全船安装完成开盖.系统核查.json",
+      "bytes": 58929
+    },
+    {
+      "path": "blender/舱盖滤器与锁止静态复核.md",
+      "bytes": 5012
+    },
+    {
+      "path": "blender/冷却联锁缺失接口资料与核验表.md",
+      "bytes": 2544
+    },
+    {
+      "path": "blender/安装收尾开盖总装.json",
+      "bytes": 243628
+    },
+    {
+      "path": "blender/冷却联锁重量与重心.json",
+      "bytes": 57682
+    },
+    {
+      "path": "blender/加厚船壳骨架试排.blend",
+      "bytes": 201713
+    },
+    {
+      "path": "blender/吸管支承预览.png",
+      "bytes": 291122
+    },
+    {
+      "path": "blender/艉部三相机抬高近景.png",
+      "bytes": 959530
+    },
+    {
+      "path": "blender/四项修订检修销就位.json",
+      "bytes": 1288
+    },
+    {
+      "path": "blender/修订冷却管路几何.json",
+      "bytes": 1341
+    },
+    {
+      "path": "blender/充电配电开盖总装.blend",
+      "bytes": 6025272
+    },
+    {
+      "path": "blender/冷却联锁选型闭盖.json",
+      "bytes": 89374
+    },
+    {
+      "path": "blender/宽根耳板与贯穿保险销预览.jpg",
+      "bytes": 111983
+    },
+    {
+      "path": "blender/两舱开盖近景.png",
+      "bytes": 1083339
+    },
+    {
+      "path": "blender/四脚底排与短鹅颈改前改后侧剖.png",
+      "bytes": 140745
+    },
+    {
+      "path": "blender/E163并联与推进保护闭盖.接触.json",
+      "bytes": 18375
+    },
+    {
+      "path": "blender/双机肩线实尺度样板预览.png",
+      "bytes": 108862
+    },
+    {
+      "path": "blender/七项候选接口与干涉终检.json",
+      "bytes": 1508
+    },
+    {
+      "path": "blender/右桨平台局部退让复核.json",
+      "bytes": 379
+    },
+    {
+      "path": "blender/50度机罩肩线局部避让复核.md",
+      "bytes": 4480
+    },
+    {
+      "path": "blender/四项装配复核与定型条件.md",
+      "bytes": 7842
+    },
+    {
+      "path": "blender/机组吊出校核.blend",
+      "bytes": 155114
+    },
+    {
+      "path": "blender/全船安装完成闭盖.json",
+      "bytes": 95162
+    },
+    {
+      "path": "blender/三相机装配定位图.svg",
+      "bytes": 11979
+    },
+    {
+      "path": "blender/未决问题修订闭盖.json",
+      "bytes": 95268
+    },
+    {
+      "path": "blender/50度原厂护套与第一线卡样架.blend",
+      "bytes": 711822
+    },
+    {
+      "path": "blender/启动电源和双机控制近景.png",
+      "bytes": 1241082
+    },
+    {
+      "path": "blender/管线补齐闭盖总装.json",
+      "bytes": 771
+    },
+    {
+      "path": "blender/艉部甲板高架三相机.png",
+      "bytes": 999786
+    },
+    {
+      "path": "blender/50度双机肩线测点与追加避让.blend",
+      "bytes": 1200446
+    },
+    {
+      "path": "blender/平台水位漂移核对.json",
+      "bytes": 2030
+    },
+    {
+      "path": "blender/舱口带手套及前臂拆杯路径.json",
+      "bytes": 792
+    },
+    {
+      "path": "blender/51度附近机罩内侧与追加避让.md",
+      "bytes": 3985
+    },
+    {
+      "path": "blender/联合开盖滤杯取出回读.json",
+      "bytes": 372
+    },
+    {
+      "path": "blender/艉部双检修口开盖.blend",
+      "bytes": 1642916
+    },
+    {
+      "path": "blender/test_build.sh",
+      "bytes": 1783
+    },
+    {
+      "path": "blender/七项候选电池开盖近景.png",
+      "bytes": 977369
+    },
+    {
+      "path": "blender/双机控制安装近景.png",
+      "bytes": 829600
+    },
+    {
+      "path": "blender/E163并联电流与保护选配.md",
+      "bytes": 9285
+    },
+    {
+      "path": "blender/当前冷却修订整船.png",
+      "bytes": 810549
+    },
+    {
+      "path": "blender/艉部承踩盖重量与静水配平.md",
+      "bytes": 4543
+    },
+    {
+      "path": "blender/横倾停机回正读数.json",
+      "bytes": 7795
+    },
+    {
+      "path": "blender/冷却管夹工具校核.blend",
+      "bytes": 201882
+    },
+    {
+      "path": "blender/50度宽根固定叉与保险销复核.md",
+      "bytes": 8492
+    },
+    {
+      "path": "blender/冷却水启动与滤网堵塞压降.md",
+      "bytes": 10683
+    },
+    {
+      "path": "blender/未决问题修订闭盖.接触.json",
+      "bytes": 3295
+    },
+    {
+      "path": "blender/双舱盖打开近景.png",
+      "bytes": 737838
+    },
+    {
+      "path": "blender/右桨检修缆绳静态分隔.json",
+      "bytes": 189
+    },
+    {
+      "path": "blender/模型管线核对范围与增重.json",
+      "bytes": 12232
+    },
+    {
+      "path": "blender/集中收尾闭盖.系统核查.json",
+      "bytes": 57825
+    },
+    {
+      "path": "blender/四项细化航行总装.png",
+      "bytes": 692555
+    },
+    {
+      "path": "blender/底部取水检修支路回读.json",
+      "bytes": 293
+    },
+    {
+      "path": "blender/低矮水锁静态试排.blend",
+      "bytes": 2731789
+    },
+    {
+      "path": "blender/滤篮管路几何.json",
+      "bytes": 1346
+    },
+    {
+      "path": "blender/双短轴推进器桨深与抬机.md",
+      "bytes": 5916
+    },
+    {
+      "path": "blender/能源设备试排.blend",
+      "bytes": 101634
+    },
+    {
+      "path": "blender/排气降位保护对象检查.json",
+      "bytes": 88
+    },
+    {
+      "path": "blender/E163并联与推进保护开盖.json",
+      "bytes": 138730
+    },
+    {
+      "path": "blender/机组开盖纵剖.png",
+      "bytes": 587764
+    },
+    {
+      "path": "blender/三相机检修修订航行总装.blend",
+      "bytes": 1516976
+    },
+    {
+      "path": "blender/滤篮截面线.json",
+      "bytes": 36537
+    },
+    {
+      "path": "blender/艉盖修订后三油况双桨离水复核.md",
+      "bytes": 3127
+    },
+    {
+      "path": "blender/50度锁止受力与净距复核.md",
+      "bytes": 9298
+    },
+    {
+      "path": "blender/排气水锁降位剖视.blend",
+      "bytes": 7139057
+    },
+    {
+      "path": "blender/E163并联与推进保护开盖.blend",
+      "bytes": 6200729
+    },
+    {
+      "path": "blender/检修复核双盖打开.png",
+      "bytes": 802562
+    },
+    {
+      "path": "blender/未决修订物件清单.json",
+      "bytes": 81090
+    },
+    {
+      "path": "blender/双快接运行锁定总装几何核对.json",
+      "bytes": 246
+    },
+    {
+      "path": "blender/实验船_C方案_v01.blend",
+      "bytes": 195128
+    },
+    {
+      "path": "blender/排气高差修订闭盖.json",
+      "bytes": 35792
+    },
+    {
+      "path": "blender/艉横框接舷对照.blend",
+      "bytes": 618818
+    },
+    {
+      "path": "blender/安装收尾闭盖总装.json",
+      "bytes": 242529
+    },
+    {
+      "path": "blender/双快接运行锁定总装.blend",
+      "bytes": 2259723
+    },
+    {
+      "path": "blender/集中收尾闭盖.端点回读.json",
+      "bytes": 31840
+    },
+    {
+      "path": "blender/集中收尾闭盖.blend",
+      "bytes": 7267979
+    },
+    {
+      "path": "blender/双快接关阀检修总装几何核对.json",
+      "bytes": 247
+    },
+    {
+      "path": "blender/双机肩线拆检测量说明.md",
+      "bytes": 6751
+    },
+    {
+      "path": "blender/七项总装几何回读.json",
+      "bytes": 26126
+    },
+    {
+      "path": "blender/集中收尾开盖.blend",
+      "bytes": 7166779
+    },
+    {
+      "path": "blender/双快接质量预算底数.json",
+      "bytes": 18149
+    },
+    {
+      "path": "blender/甲板初版.blend",
+      "bytes": 91861
+    },
+    {
+      "path": "blender/船用配电柜近景.png",
+      "bytes": 1080229
+    },
+    {
+      "path": "blender/集中收尾开盖.png",
+      "bytes": 987584
+    },
+    {
+      "path": "blender/接舷样件恒水头通水验证.md",
+      "bytes": 2632
+    },
+    {
+      "path": "blender/全船安装完成闭盖.blend",
+      "bytes": 6469813
+    },
+    {
+      "path": "blender/模型管线核对开盖.png",
+      "bytes": 987178
+    },
+    {
+      "path": "blender/横倾停机回正检视.blend",
+      "bytes": 2752382
+    },
+    {
+      "path": "blender/管线补齐开盖总装.png",
+      "bytes": 922609
+    },
+    {
+      "path": "blender/纵骨退坡局部梁格计算.md",
+      "bytes": 3064
+    },
+    {
+      "path": "blender/安装完成逐舱物件清单.json",
+      "bytes": 80616
+    },
+    {
+      "path": "blender/检修姿态几何读数.txt",
+      "bytes": 2907
+    },
+    {
+      "path": "blender/模型零件与管线完成情况.md",
+      "bytes": 8241
+    },
+    {
+      "path": "blender/七项整船装配复核.blend",
+      "bytes": 2718355
+    },
+    {
+      "path": "blender/联合候选检修销回读.json",
+      "bytes": 1288
+    },
+    {
+      "path": "blender/低矮水锁停机回流复核.md",
+      "bytes": 5378
+    },
+    {
+      "path": "blender/四项修订整船外观.png",
+      "bytes": 796794
+    },
+    {
+      "path": "blender/排气降位剖面线.json",
+      "bytes": 118370
+    },
+    {
+      "path": "blender/低矮水锁试位.json",
+      "bytes": 32011
+    },
+    {
+      "path": "blender/安装收尾交付记录.md",
+      "bytes": 2917
+    },
+    {
+      "path": "blender/安装收尾闭盖总装.png",
+      "bytes": 969413
+    },
+    {
+      "path": "blender/舱底泵复启对照.blend",
+      "bytes": 728558
+    },
+    {
+      "path": "blender/艉部人员站位和检修水线.png",
+      "bytes": 157673
+    },
+    {
+      "path": "blender/充电配电闭盖总装.blend",
+      "bytes": 5588091
+    },
+    {
+      "path": "blender/R10双机厂图配准.blend",
+      "bytes": 646656
+    },
+    {
+      "path": "blender/50度自拟侧出与检修支撑.md",
+      "bytes": 5419
+    },
+    {
+      "path": "blender/集中收尾排气静态结果.json",
+      "bytes": 18237
+    },
+    {
+      "path": "blender/四项细化几何读数.json",
+      "bytes": 2936
+    },
+    {
+      "path": "blender/四项修订水锁横剖.png",
+      "bytes": 85578
+    },
+    {
+      "path": "blender/四项修订开盖近景.png",
+      "bytes": 952185
+    },
+    {
+      "path": "blender/C方案舱内总览.png",
+      "bytes": 1028531
+    },
+    {
+      "path": "blender/艉横框R10局部.png",
+      "bytes": 407666
+    },
+    {
+      "path": "blender/码头独立平台与船尾侧视.png",
+      "bytes": 823860
+    },
+    {
+      "path": "blender/冷却联锁固定部件检查.json",
+      "bytes": 44
+    },
+    {
+      "path": "blender/艉盖剖切采样.json",
+      "bytes": 36540
+    },
+    {
+      "path": "blender/修订启动托架近景.png",
+      "bytes": 954124
+    },
+    {
+      "path": "blender/右艉移位探身与拆桨可达性.md",
+      "bytes": 4387
+    },
+    {
+      "path": "blender/冷却滤器下拆近景.png",
+      "bytes": 615873
+    },
+    {
+      "path": "blender/斜靠码头右桨撤手最紧俯视.png",
+      "bytes": 652774
+    },
+    {
+      "path": "blender/未决问题修订闭盖.支架.json",
+      "bytes": 1498
+    },
+    {
+      "path": "blender/排气高差修订开盖.png",
+      "bytes": 987528
+    },
+    {
+      "path": "blender/排气高差修订开盖.json",
+      "bytes": 35792
+    },
+    {
+      "path": "blender/艉盖重量复算底数.json",
+      "bytes": 2927
+    },
+    {
+      "path": "blender/安装收尾开盖总装.blend",
+      "bytes": 6475168
+    },
+    {
+      "path": "blender/舱底泵低位吸入口.blend",
+      "bytes": 256117
+    },
+    {
+      "path": "blender/E163并联与推进保护闭盖.json",
+      "bytes": 138730
+    },
+    {
+      "path": "blender/冷却联锁选型开盖.png",
+      "bytes": 986949
+    },
+    {
+      "path": "blender/能源设备纵剖.png",
+      "bytes": 483952
+    },
+    {
+      "path": "blender/艉座检修逐颗读数.txt",
+      "bytes": 448
+    },
+    {
+      "path": "blender/未决问题修订开盖.png",
+      "bytes": 987302
+    },
+    {
+      "path": "blender/右桨检修横移偏航与撤手窗口.md",
+      "bytes": 11364
+    },
+    {
+      "path": "blender/三相机装配分件表.md",
+      "bytes": 8666
+    },
+    {
+      "path": "blender/接舷段界面载荷复核.md",
+      "bytes": 2267
+    },
+    {
+      "path": "blender/R10整船外观.png",
+      "bytes": 790399
+    },
+    {
+      "path": "blender/双快接关阀检修总装.blend",
+      "bytes": 2259570
+    },
+    {
+      "path": "blender/集中收尾开盖.json",
+      "bytes": 191022
+    },
+    {
+      "path": "blender/艉盖几何核对.txt",
+      "bytes": 1132
+    },
+    {
+      "path": "blender/停泵与再启动工况.md",
+      "bytes": 1133
+    },
+    {
+      "path": "blender/模型管线核对闭盖.接触审查.json",
+      "bytes": 19628
+    },
+    {
+      "path": "blender/艉部闭盖密封与承踩剖面.png",
+      "bytes": 103080
+    },
+    {
+      "path": "blender/四项总装细化与实测清单.md",
+      "bytes": 5810
+    },
+    {
+      "path": "blender/防虹吸阀检修与吸管变径.blend",
+      "bytes": 457213
+    },
+    {
+      "path": "blender/整船安装模型交付.md",
+      "bytes": 5504
+    },
+    {
+      "path": "blender/低矮水锁纵向侧剖.png",
+      "bytes": 173668
+    },
+    {
+      "path": "blender/检修复核航行总装.png",
+      "bytes": 692525
+    },
+    {
+      "path": "blender/艉板桨位侧剖对照.png",
+      "bytes": 41142
+    },
+    {
+      "path": "blender/双机肩线一比一样板.pdf",
+      "bytes": 62946
+    },
+    {
+      "path": "blender/三相机总装质量与重心.md",
+      "bytes": 614
+    },
+    {
+      "path": "blender/模型管线核对闭盖.blend",
+      "bytes": 7566326
+    },
+    {
+      "path": "blender/启动电源安装近景.png",
+      "bytes": 993583
+    },
+    {
+      "path": "blender/冷却管夹安装.png",
+      "bytes": 475657
+    },
+    {
+      "path": "blender/左艉检修口细节.png",
+      "bytes": 801042
+    },
+    {
+      "path": "blender/模型管线核对闭盖.全管线清单.json",
+      "bytes": 55408
+    },
+    {
+      "path": "blender/机舱综合校核.blend",
+      "bytes": 200654
+    },
+    {
+      "path": "blender/三油况艉部水线与双桨侧视.png",
+      "bytes": 212899
+    },
+    {
+      "path": "blender/能源舱外形初版.blend",
+      "bytes": 128154
+    },
+    {
+      "path": "blender/R10双机厂图配准.png",
+      "bytes": 803140
+    },
+    {
+      "path": "blender/项目进展.md",
+      "bytes": 5967
+    },
+    {
+      "path": "blender/横倾停机回正侧剖.png",
+      "bytes": 167873
+    },
+    {
+      "path": "blender/三相机版船尾近景.png",
+      "bytes": 974981
+    },
+    {
+      "path": "blender/全船安装完成开盖.png",
+      "bytes": 987581
+    },
+    {
+      "path": "blender/未决问题修订开盖.支架.json",
+      "bytes": 1498
+    },
+    {
+      "path": "blender/排气高差修订开盖.blend",
+      "bytes": 7122700
+    },
+    {
+      "path": "blender/艉部单人检修配平与双桨离水.md",
+      "bytes": 4372
+    },
+    {
+      "path": "blender/集中收尾闭盖.png",
+      "bytes": 966187
+    },
+    {
+      "path": "blender/R10整船外观.blend",
+      "bytes": 621203
+    },
+    {
+      "path": "blender/集中收尾闭盖.接触审查.json",
+      "bytes": 38265
+    },
+    {
+      "path": "blender/C方案整船总装.png",
+      "bytes": 865115
+    },
+    {
+      "path": "blender/艉部闭盖承踩密封收缆复核.md",
+      "bytes": 7164
+    },
+    {
+      "path": "blender/开盖底部取水支路回读.json",
+      "bytes": 293
+    },
+    {
+      "path": "blender/模型管线核对闭盖.联锁补齐.json",
+      "bytes": 25578
+    },
+    {
+      "path": "blender/充电器安装近景.png",
+      "bytes": 989422
+    },
+    {
+      "path": "blender/充电配电开盖总装.json",
+      "bytes": 8884
+    },
+    {
+      "path": "blender/可调码头平台与手套近景.blend",
+      "bytes": 1937230
+    },
+    {
+      "path": "blender/E163并联与推进保护闭盖.blend",
+      "bytes": 5733733
+    },
+    {
+      "path": "blender/排气高差修订闭盖.接触.json",
+      "bytes": 3754
+    },
+    {
+      "path": "blender/排气水锁降位近景.png",
+      "bytes": 841618
+    },
+    {
+      "path": "blender/艉座肘板内视.png",
+      "bytes": 516124
+    },
+    {
+      "path": "blender/七项联合候选总装.blend",
+      "bytes": 3046248
+    },
+    {
+      "path": "blender/冷却滤篮开盖检修.blend",
+      "bytes": 2705380
+    },
+    {
+      "path": "blender/R10双推进器整船.png",
+      "bytes": 811609
+    },
+    {
+      "path": "blender/未决问题修订开盖.blend",
+      "bytes": 6604375
+    },
+    {
+      "path": "blender/E163电池舱近景.png",
+      "bytes": 1161910
+    },
+    {
+      "path": "blender/艉座承踩密封盖总装.blend",
+      "bytes": 1978519
+    },
+    {
+      "path": "blender/四脚底排短鹅颈读数.json",
+      "bytes": 13239
+    },
+    {
+      "path": "blender/四项细化双盖打开总装.blend",
+      "bytes": 1913651
+    },
+    {
+      "path": "blender/斜靠撤手俯视标注.png",
+      "bytes": 528257
+    },
+    {
+      "path": "blender/双机肩线测点预览.jpg",
+      "bytes": 75852
+    },
+    {
+      "path": "blender/集中收尾范围检查.json",
+      "bytes": 258
+    },
+    {
+      "path": "blender/A点侧出假设检视.blend",
+      "bytes": 711806
+    },
+    {
+      "path": "blender/四项修订质量与桨位.json",
+      "bytes": 14946
+    },
+    {
+      "path": "blender/冷却滤篮截面与压降.png",
+      "bytes": 168936
+    },
+    {
+      "path": "blender/整船外观设计.blend",
+      "bytes": 150056
+    },
+    {
+      "path": "blender/码头艉标与双艉缆.blend",
+      "bytes": 1937782
+    },
+    {
+      "path": "blender/安装收尾重量记录.md",
+      "bytes": 1023
+    },
+    {
+      "path": "blender/双盖打开与检修空间.blend",
+      "bytes": 1491364
+    },
+    {
+      "path": "blender/充电配电闭盖总装.json",
+      "bytes": 8824
+    },
+    {
+      "path": "blender/充电配电两舱开盖.png",
+      "bytes": 1130716
+    },
+    {
+      "path": "blender/分舱试排.blend",
+      "bytes": 95350
+    },
+    {
+      "path": "blender/全船安装完成开盖.blend",
+      "bytes": 6590012
+    },
+    {
+      "path": "blender/冷却滤篮闭盖运行.blend",
+      "bytes": 2673287
+    },
+    {
+      "path": "blender/50度检修护套与第一线卡.md",
+      "bytes": 12568
+    },
+    {
+      "path": "blender/候选电池转接板孔位.svg",
+      "bytes": 1868
+    },
+    {
+      "path": "blender/冷却联锁选型闭盖.blend",
+      "bytes": 7479771
+    },
+    {
+      "path": "blender/艉部双推进器修订.png",
+      "bytes": 688009
+    },
+    {
+      "path": "blender/目录结构.txt",
+      "bytes": 555
+    },
+    {
+      "path": "blender/逆变器安装支架.png",
+      "bytes": 463331
+    },
+    {
+      "path": "blender/当前排水管路工况核算.txt",
+      "bytes": 654
+    },
+    {
+      "path": "blender/艉部双推进器试排.blend",
+      "bytes": 610794
+    },
+    {
+      "path": "blender/折角通水试验计算器.html",
+      "bytes": 3735
+    },
+    {
+      "path": "blender/双快接落座剖面与联锁.png",
+      "bytes": 181833
+    },
+    {
+      "path": "blender/建模变更对照.md",
+      "bytes": 17353
+    },
+    {
+      "path": "blender/未决问题修订闭盖.png",
+      "bytes": 966169
+    },
+    {
+      "path": "blender/未决问题修订开盖.json",
+      "bytes": 95268
+    },
+    {
+      "path": "blender/冷却滤器双快接与关阀联锁.md",
+      "bytes": 7348
+    },
+    {
+      "path": "blender/未决问题修订闭盖.接触审查.json",
+      "bytes": 14915
+    },
+    {
+      "path": "blender/未决问题静态复核.json",
+      "bytes": 12420
+    },
+    {
+      "path": "blender/双桨最小出水角与线缆净距.md",
+      "bytes": 5648
+    },
+    {
+      "path": "blender/能源舱开舱预览.png",
+      "bytes": 1015908
+    },
+    {
+      "path": "blender/甲板预览.png",
+      "bytes": 390416
+    },
+    {
+      "path": "blender/四脚底排与短鹅颈试排.blend",
+      "bytes": 2738108
+    },
+    {
+      "path": "blender/CHANGELOG.md",
+      "bytes": 5480
+    },
+    {
+      "path": "blender/机组冷却启动与燃油供给复核.md",
+      "bytes": 7364
+    },
+    {
+      "path": "blender/六相机高架选装存档.blend",
+      "bytes": 1360844
+    },
+    {
+      "path": "blender/集中收尾交付.md",
+      "bytes": 6218
+    },
+    {
+      "path": "blender/集中收尾闭盖.json",
+      "bytes": 191022
+    },
+    {
+      "path": "blender/README.md",
+      "bytes": 3051
+    },
+    {
+      "path": "blender/机组供液复核读数.json",
+      "bytes": 1994
+    },
+    {
+      "path": "blender/模型管线核对联锁近景.png",
+      "bytes": 819863
+    },
+    {
+      "path": "blender/四项装配读数.json",
+      "bytes": 20876
+    },
+    {
+      "path": "blender/集中收尾闭盖.充电器净空.json",
+      "bytes": 32
+    },
+    {
+      "path": "blender/50度检修支撑预览.jpg",
+      "bytes": 109072
+    },
+    {
+      "path": "blender/模型交付与工程定型总清单.md",
+      "bytes": 4281
+    },
+    {
+      "path": "blender/检修舱口预览.png",
+      "bytes": 399478
+    },
+    {
+      "path": "blender/50度双机机罩局部避让.blend",
+      "bytes": 1197150
+    },
+    {
+      "path": "blender/未决问题修订闭盖.blend",
+      "bytes": 6630376
+    },
+    {
+      "path": "blender/候选开盖电池线干涉.json",
+      "bytes": 334
+    },
+    {
+      "path": "blender/双机厂图抬机侧视.png",
+      "bytes": 73226
+    },
+    {
+      "path": "blender/四脚底排与短鹅颈停机回流.md",
+      "bytes": 5620
+    },
+    {
+      "path": "blender/E163并联与推进保护开盖.接触.json",
+      "bytes": 18375
+    },
+    {
+      "path": "blender/折角焊后通宽敏感性.md",
+      "bytes": 950
+    },
+    {
+      "path": "blender/艉后桨盘实物基准对照.blend",
+      "bytes": 615112
+    },
+    {
+      "path": "blender/管线补齐开盖总装.blend",
+      "bytes": 5777402
+    },
+    {
+      "path": "blender/管线补齐闭盖总装.blend",
+      "bytes": 5272795
+    },
+    {
+      "path": "blender/平台对准与艉缆俯视标注.png",
+      "bytes": 721911
+    },
+    {
+      "path": "blender/集中收尾维护充电近景.png",
+      "bytes": 926404
+    },
+    {
+      "path": "blender/四项细化航行总装.blend",
+      "bytes": 1973099
+    },
+    {
+      "path": "blender/中线侧水锁增容尺寸.json",
+      "bytes": 309
+    },
+    {
+      "path": "blender/双E163托板与预敷线试装.blend",
+      "bytes": 2870983
+    },
+    {
+      "path": "blender/防虹吸阀近舱口检修.blend",
+      "bytes": 494571
+    },
+    {
+      "path": "blender/充电与船用配电交付.md",
+      "bytes": 5640
+    },
+    {
+      "path": "blender/吸入口姿态复核.md",
+      "bytes": 941
+    },
+    {
+      "path": "blender/📦_交付说明.md",
+      "bytes": 6291
+    },
+    {
+      "path": "blender/码头横移偏航检修俯视.blend",
+      "bytes": 1937391
+    },
+    {
+      "path": "blender/艉座承踩盖闭合近景.png",
+      "bytes": 897467
+    },
+    {
+      "path": "blender/检修复核航行总装.blend",
+      "bytes": 1951103
+    },
+    {
+      "path": "blender/短鹅颈停机静态结果.json",
+      "bytes": 2136
+    },
+    {
+      "path": "blender/双E163开盖检修试装.blend",
+      "bytes": 3456451
+    },
+    {
+      "path": "blender/排气关键点原厂核查与测量.md",
+      "bytes": 7347
+    },
+    {
+      "path": "blender/exports/实验船_完整布局_v01.glb",
+      "bytes": 786848
+    },
+    {
+      "path": "blender/exports/实验船_船体_v01.glb",
+      "bytes": 3872
+    },
+    {
+      "path": "blender/scripts/reinforce_start_battery.py",
+      "bytes": 4988
+    },
+    {
+      "path": "blender/scripts/build_dock_platform.py",
+      "bytes": 3996
+    },
+    {
+      "path": "blender/scripts/waterlock_low_trial.py",
+      "bytes": 3074
+    },
+    {
+      "path": "blender/scripts/compare_stern_installation.py",
+      "bytes": 1252
+    },
+    {
+      "path": "blender/scripts/study_hull_frames.py",
+      "bytes": 3914
+    },
+    {
+      "path": "blender/scripts/study_valve_reach.py",
+      "bytes": 4272
+    },
+    {
+      "path": "blender/scripts/stern_cover_report.py",
+      "bytes": 10168
+    },
+    {
+      "path": "blender/scripts/check_side_toe.py",
+      "bytes": 420
+    },
+    {
+      "path": "blender/scripts/fit_interlock_sensor_heads.py",
+      "bytes": 6644
+    },
+    {
+      "path": "blender/scripts/check_relief_coupon.py",
+      "bytes": 3763
+    },
+    {
+      "path": "blender/scripts/export_prop_profiles.py",
+      "bytes": 857
+    },
+    {
+      "path": "blender/scripts/extract_exhaust_sections.py",
+      "bytes": 1081
+    },
+    {
+      "path": "blender/scripts/render_final_details.py",
+      "bytes": 1828
+    },
+    {
+      "path": "blender/scripts/low_profile_waterlock.py",
+      "bytes": 10426
+    },
+    {
+      "path": "blender/scripts/solve_stern_shell.py",
+      "bytes": 6236
+    },
+    {
+      "path": "blender/scripts/assess_batch_static.py",
+      "bytes": 2934
+    },
+    {
+      "path": "blender/scripts/check_knee_runout.py",
+      "bytes": 5726
+    },
+    {
+      "path": "blender/scripts/check_current_pump_route.py",
+      "bytes": 3050
+    },
+    {
+      "path": "blender/scripts/embed_connection_status.py",
+      "bytes": 886
+    },
+    {
+      "path": "blender/scripts/seven_intake_mockup.py",
+      "bytes": 8228
+    },
+    {
+      "path": "blender/scripts/check_prop_service_tilt.py",
+      "bytes": 6107
+    },
+    {
+      "path": "blender/scripts/build_exhaust_measurement.py",
+      "bytes": 8294
+    },
+    {
+      "path": "blender/scripts/embed_delivery_status.py",
+      "bytes": 681
+    },
+    {
+      "path": "blender/scripts/finalize_interlock.py",
+      "bytes": 3900
+    },
+    {
+      "path": "blender/scripts/review_engine_bay.py",
+      "bytes": 5282
+    },
+    {
+      "path": "blender/scripts/study_bilge_discharge.py",
+      "bytes": 4988
+    },
+    {
+      "path": "blender/scripts/dock_alignment_marks.py",
+      "bytes": 5516
+    },
+    {
+      "path": "blender/scripts/check_exhaust_righting.py",
+      "bytes": 2745
+    },
+    {
+      "path": "blender/scripts/batch_mass_delta.py",
+      "bytes": 2809
+    },
+    {
+      "path": "blender/scripts/dock_edge_relief.py",
+      "bytes": 2725
+    },
+    {
+      "path": "blender/scripts/check_chine_access_drain.py",
+      "bytes": 3672
+    },
+    {
+      "path": "blender/scripts/compare_chine_relief.py",
+      "bytes": 3220
+    },
+    {
+      "path": "blender/scripts/report_relief_transfer.py",
+      "bytes": 2700
+    },
+    {
+      "path": "blender/scripts/assembly_schedule.py",
+      "bytes": 4499
+    },
+    {
+      "path": "blender/scripts/add_cooling_sample.py",
+      "bytes": 3140
+    },
+    {
+      "path": "blender/scripts/audit_lowered_exhaust.py",
+      "bytes": 2191
+    },
+    {
+      "path": "blender/scripts/check_outboard_mount.py",
+      "bytes": 3338
+    },
+    {
+      "path": "blender/scripts/check_cooling_screen.py",
+      "bytes": 2856
+    },
+    {
+      "path": "blender/scripts/final_mass_and_manifest.py",
+      "bytes": 4100
+    },
+    {
+      "path": "blender/scripts/plot_exhaust_righting.py",
+      "bytes": 2800
+    },
+    {
+      "path": "blender/scripts/check_hull.py",
+      "bytes": 1965
+    },
+    {
+      "path": "blender/scripts/render_lowered_exhaust.py",
+      "bytes": 1847
+    },
+    {
+      "path": "blender/scripts/check_relief_transfer.py",
+      "bytes": 280
+    },
+    {
+      "path": "blender/scripts/complete_installation.py",
+      "bytes": 10905
+    },
+    {
+      "path": "blender/scripts/cooling_pressure_figure.py",
+      "bytes": 1656
+    },
+    {
+      "path": "blender/scripts/study_bilge_drainage.py",
+      "bytes": 2586
+    },
+    {
+      "path": "blender/scripts/solve_stern_grillage.py",
+      "bytes": 7365
+    },
+    {
+      "path": "blender/scripts/interlock_static_budget.py",
+      "bytes": 1604
+    },
+    {
+      "path": "blender/scripts/complete_sensor_tails.py",
+      "bytes": 7779
+    },
+    {
+      "path": "blender/scripts/service_mass_trim.py",
+      "bytes": 3338
+    },
+    {
+      "path": "blender/scripts/dock_platform_check.py",
+      "bytes": 4723
+    },
+    {
+      "path": "blender/scripts/relieve_service_cowls.py",
+      "bytes": 4588
+    },
+    {
+      "path": "blender/scripts/add_bulkhead.py",
+      "bytes": 1402
+    },
+    {
+      "path": "blender/scripts/stop_permissive_reference.py",
+      "bytes": 3262
+    },
+    {
+      "path": "blender/scripts/filter_removal_path.py",
+      "bytes": 5749
+    },
+    {
+      "path": "blender/scripts/render_parallel_bank.py",
+      "bytes": 1308
+    },
+    {
+      "path": "blender/scripts/cooling_screen_layout.py",
+      "bytes": 8850
+    },
+    {
+      "path": "blender/scripts/check_interlock_fixed_parts.py",
+      "bytes": 894
+    },
+    {
+      "path": "blender/scripts/check_coords.py",
+      "bytes": 964
+    },
+    {
+      "path": "blender/scripts/study_frame_to_side.py",
+      "bytes": 1732
+    },
+    {
+      "path": "blender/scripts/seven_candidate_check.py",
+      "bytes": 2455
+    },
+    {
+      "path": "blender/scripts/stern_access_ports.py",
+      "bytes": 6818
+    },
+    {
+      "path": "blender/scripts/prop_clearance_geometry.py",
+      "bytes": 1384
+    },
+    {
+      "path": "blender/scripts/add_inverter_mount.py",
+      "bytes": 2346
+    },
+    {
+      "path": "blender/scripts/short_exhaust_trial.py",
+      "bytes": 8409
+    },
+    {
+      "path": "blender/scripts/verify_exhaust_revision.py",
+      "bytes": 1327
+    },
+    {
+      "path": "blender/scripts/service_fork_fe.py",
+      "bytes": 5259
+    },
+    {
+      "path": "blender/scripts/study_stern_knees.py",
+      "bytes": 4330
+    },
+    {
+      "path": "blender/scripts/dock_yaw_window.py",
+      "bytes": 7736
+    },
+    {
+      "path": "blender/scripts/complete_visible_plumbing.py",
+      "bytes": 10925
+    },
+    {
+      "path": "blender/scripts/cooling_pressure_budget.py",
+      "bytes": 1757
+    },
+    {
+      "path": "blender/scripts/finish_installation.py",
+      "bytes": 4905
+    },
+    {
+      "path": "blender/scripts/stern_mass_extract.py",
+      "bytes": 3809
+    },
+    {
+      "path": "blender/scripts/stern_cover_review.py",
+      "bytes": 11587
+    },
+    {
+      "path": "blender/scripts/strainer_key_interlock.py",
+      "bytes": 11977
+    },
+    {
+      "path": "blender/scripts/build_all.py",
+      "bytes": 1791
+    },
+    {
+      "path": "blender/scripts/revise_filter_station.py",
+      "bytes": 6415
+    },
+    {
+      "path": "blender/scripts/make_interlock_open_view.py",
+      "bytes": 1832
+    },
+    {
+      "path": "blender/scripts/extract_revised_cooling.py",
+      "bytes": 1009
+    },
+    {
+      "path": "blender/scripts/build_cooling_interlock.py",
+      "bytes": 17990
+    },
+    {
+      "path": "blender/scripts/make_connection_open_view.py",
+      "bytes": 2067
+    },
+    {
+      "path": "blender/scripts/build_hull_full.py",
+      "bytes": 5052
+    },
+    {
+      "path": "blender/scripts/assembly_mass.py",
+      "bytes": 7104
+    },
+    {
+      "path": "blender/scripts/check_ratchet_access.py",
+      "bytes": 2965
+    },
+    {
+      "path": "blender/scripts/update_installation_mass.py",
+      "bytes": 1890
+    },
+    {
+      "path": "blender/scripts/check_longitudinal_transition.py",
+      "bytes": 2444
+    },
+    {
+      "path": "blender/scripts/check_finished_assembly.py",
+      "bytes": 2040
+    },
+    {
+      "path": "blender/scripts/write_batch_delivery.py",
+      "bytes": 7388
+    },
+    {
+      "path": "blender/scripts/audit_completed_installation.py",
+      "bytes": 1417
+    },
+    {
+      "path": "blender/scripts/finish_installation_batch.py",
+      "bytes": 7830
+    },
+    {
+      "path": "blender/scripts/stern_trim_budget.py",
+      "bytes": 8953
+    },
+    {
+      "path": "blender/scripts/seven_balance.py",
+      "bytes": 3408
+    },
+    {
+      "path": "blender/scripts/check_generator_lift.py",
+      "bytes": 2456
+    },
+    {
+      "path": "blender/scripts/check_relief_water_margin.py",
+      "bytes": 2326
+    },
+    {
+      "path": "blender/scripts/screen_service_support.py",
+      "bytes": 8294
+    },
+    {
+      "path": "blender/scripts/study_shell_thickness.py",
+      "bytes": 3062
+    },
+    {
+      "path": "blender/scripts/dock_window_report.py",
+      "bytes": 8538
+    },
+    {
+      "path": "blender/scripts/dock_window.py",
+      "bytes": 4526
+    },
+    {
+      "path": "blender/scripts/seven_battery_fit.py",
+      "bytes": 8355
+    },
+    {
+      "path": "blender/scripts/revise_service_fork.py",
+      "bytes": 7673
+    },
+    {
+      "path": "blender/scripts/show_exhaust_righting.py",
+      "bytes": 2624
+    },
+    {
+      "path": "blender/scripts/fit_parallel_bank.py",
+      "bytes": 21436
+    },
+    {
+      "path": "blender/scripts/prop_waterline_report.py",
+      "bytes": 7698
+    },
+    {
+      "path": "blender/scripts/service_hardware_review.py",
+      "bytes": 2078
+    },
+    {
+      "path": "blender/scripts/check_low_waterlock.py",
+      "bytes": 1959
+    },
+    {
+      "path": "blender/scripts/check_generator_service.py",
+      "bytes": 3964
+    },
+    {
+      "path": "blender/scripts/study_twin_propulsion.py",
+      "bytes": 5777
+    },
+    {
+      "path": "blender/scripts/dock_platform_drawing.py",
+      "bytes": 2641
+    },
+    {
+      "path": "blender/scripts/waterlock_return_budget.py",
+      "bytes": 4326
+    },
+    {
+      "path": "blender/scripts/resolve_final_static.py",
+      "bytes": 5292
+    },
+    {
+      "path": "blender/scripts/register_navy_2024.py",
+      "bytes": 5250
+    },
+    {
+      "path": "blender/scripts/person_stern_trim.py",
+      "bytes": 7789
+    },
+    {
+      "path": "blender/scripts/audit_batch_installation.py",
+      "bytes": 1409
+    },
+    {
+      "path": "blender/scripts/dock_yaw_report.py",
+      "bytes": 7491
+    },
+    {
+      "path": "blender/scripts/compare_short_exhaust.py",
+      "bytes": 3621
+    },
+    {
+      "path": "blender/scripts/simulate_bilge_pump.py",
+      "bytes": 6187
+    },
+    {
+      "path": "blender/scripts/check_first_cable_clip.py",
+      "bytes": 2651
+    },
+    {
+      "path": "blender/scripts/add_generator_bulkhead.py",
+      "bytes": 2394
+    },
+    {
+      "path": "blender/scripts/right_stern_stance.py",
+      "bytes": 10168
+    },
+    {
+      "path": "blender/scripts/study_service_support.py",
+      "bytes": 12641
+    },
+    {
+      "path": "blender/scripts/inspect_camera_layout.py",
+      "bytes": 3528
+    },
+    {
+      "path": "blender/scripts/plot_seven_waterway.py",
+      "bytes": 1748
+    },
+    {
+      "path": "blender/scripts/add_hatches.py",
+      "bytes": 2612
+    },
+    {
+      "path": "blender/scripts/assemble_vessel.py",
+      "bytes": 32291
+    },
+    {
+      "path": "blender/scripts/check_strainer_interlock.py",
+      "bytes": 2009
+    },
+    {
+      "path": "blender/scripts/service_access.py",
+      "bytes": 13886
+    },
+    {
+      "path": "blender/scripts/lower_exhaust_waterlock.py",
+      "bytes": 5347
+    },
+    {
+      "path": "blender/scripts/check_charger_clearance.py",
+      "bytes": 1469
+    },
+    {
+      "path": "blender/scripts/seven_combined_assessment.py",
+      "bytes": 4415
+    },
+    {
+      "path": "blender/scripts/check_navy_drawing.py",
+      "bytes": 3190
+    },
+    {
+      "path": "blender/scripts/verify_batch_scope.py",
+      "bytes": 2066
+    },
+    {
+      "path": "blender/scripts/audit_batch_endpoints.py",
+      "bytes": 1362
+    },
+    {
+      "path": "blender/scripts/service_systems_budget.py",
+      "bytes": 2560
+    },
+    {
+      "path": "blender/scripts/audit_interlock_installation.py",
+      "bytes": 1415
+    },
+    {
+      "path": "blender/scripts/plot_exhaust_measurement.py",
+      "bytes": 2818
+    },
+    {
+      "path": "blender/scripts/check_model_systems.py",
+      "bytes": 2333
+    },
+    {
+      "path": "blender/scripts/detail_energy.py",
+      "bytes": 3132
+    },
+    {
+      "path": "blender/scripts/render_sensor_detail.py",
+      "bytes": 1243
+    },
+    {
+      "path": "blender/scripts/finish_service_assembly.py",
+      "bytes": 13950
+    },
+    {
+      "path": "blender/scripts/seven_intake_sites.py",
+      "bytes": 1080
+    },
+    {
+      "path": "blender/scripts/dock_adjustable_model.py",
+      "bytes": 7188
+    },
+    {
+      "path": "blender/scripts/seven_assembly_review.py",
+      "bytes": 5567
+    },
+    {
+      "path": "blender/scripts/review_installation.py",
+      "bytes": 846
+    },
+    {
+      "path": "blender/scripts/assess_lowered_exhaust.py",
+      "bytes": 2982
+    },
+    {
+      "path": "blender/scripts/style_exterior.py",
+      "bytes": 3451
+    },
+    {
+      "path": "blender/scripts/review_service_static.py",
+      "bytes": 3984
+    },
+    {
+      "path": "blender/scripts/render_revised_detail.py",
+      "bytes": 1342
+    },
+    {
+      "path": "blender/scripts/study_pickup_support.py",
+      "bytes": 3048
+    },
+    {
+      "path": "blender/scripts/check_pickup_attitude.py",
+      "bytes": 2277
+    },
+    {
+      "path": "blender/scripts/integrate_service_systems.py",
+      "bytes": 16004
+    },
+    {
+      "path": "blender/scripts/check_dock_edge_relief.py",
+      "bytes": 2305
+    },
+    {
+      "path": "blender/scripts/fit_charging_distribution.py",
+      "bytes": 22598
+    },
+    {
+      "path": "blender/scripts/fit_candidate_outboards.py",
+      "bytes": 7894
+    },
+    {
+      "path": "blender/scripts/integrated_open_view.py",
+      "bytes": 2812
+    },
+    {
+      "path": "blender/scripts/render_revised_whole.py",
+      "bytes": 577
+    },
+    {
+      "path": "blender/scripts/stern_access_geometry.py",
+      "bytes": 4622
+    },
+    {
+      "path": "blender/scripts/parallel_bank_budget.py",
+      "bytes": 1912
+    },
+    {
+      "path": "blender/scripts/audit_sensor_installation.py",
+      "bytes": 1409
+    },
+    {
+      "path": "blender/scripts/add_equipment.py",
+      "bytes": 4234
+    },
+    {
+      "path": "blender/scripts/check_exhaust_measurement.cjs",
+      "bytes": 1277
+    },
+    {
+      "path": "blender/scripts/export_hull.py",
+      "bytes": 1102
+    },
+    {
+      "path": "blender/scripts/check_stern_load_path.py",
+      "bytes": 2305
+    },
+    {
+      "path": "blender/scripts/export_completed_views.py",
+      "bytes": 3051
+    },
+    {
+      "path": "blender/scripts/study_valve_service.py",
+      "bytes": 4169
+    },
+    {
+      "path": "blender/scripts/check_side_exit_a.py",
+      "bytes": 2285
+    },
+    {
+      "path": "blender/scripts/filter_supply_revision.py",
+      "bytes": 9055
+    },
+    {
+      "path": "blender/scripts/screen_stern_knee_loads.py",
+      "bytes": 3161
+    },
+    {
+      "path": "blender/scripts/verify_connection_delivery.py",
+      "bytes": 3035
+    },
+    {
+      "path": "blender/scripts/study_bilge_pickup.py",
+      "bytes": 3601
+    },
+    {
+      "path": "blender/scripts/plot_lowered_exhaust.py",
+      "bytes": 3138
+    },
+    {
+      "path": "blender/scripts/write_interlock_delivery.py",
+      "bytes": 11307
+    },
+    {
+      "path": "blender/scripts/dock_mooring_clearance.py",
+      "bytes": 2816
+    },
+    {
+      "path": "blender/scripts/audit_model_connections.py",
+      "bytes": 2260
+    },
+    {
+      "path": "blender/scripts/estimate_twin_cruise.py",
+      "bytes": 4608
+    },
+    {
+      "path": "blender/scripts/shore_authority_review.py",
+      "bytes": 2231
+    },
+    {
+      "path": "blender/scripts/revised_service_budgets.py",
+      "bytes": 1489
+    },
+    {
+      "path": "blender/scripts/render_interlock_detail.py",
+      "bytes": 1253
+    },
+    {
+      "path": "blender/scripts/measure_stern_frame_end.py",
+      "bytes": 580
+    },
+    {
+      "path": "blender/scripts/render_batch_detail.py",
+      "bytes": 1170
+    },
+    {
+      "path": "blender/scripts/install_cable_supports.py",
+      "bytes": 5225
+    },
+    {
+      "path": "blender/scripts/seven_waterlock_fit.py",
+      "bytes": 3644
+    },
+    {
+      "path": "blender/环视布局/调整前.json",
+      "bytes": 37719
+    },
+    {
+      "path": "blender/环视布局/调整后.json",
+      "bytes": 37723
+    },
+    {
+      "path": "blender/环视布局/艉部甲板高架.json",
+      "bytes": 74328
+    },
+    {
+      "path": "blender/环视布局/俯视图.py",
+      "bytes": 1648
+    },
+    {
+      "path": "blender/环视布局/艉机抬高后.json",
+      "bytes": 74323
+    },
+    {
+      "path": "blender/环视布局/半米圈盲区对照.png",
+      "bytes": 174136
+    },
+    {
+      "path": "blender/环视布局/艉机抬高前.json",
+      "bytes": 74329
+    },
+    {
+      "path": "blender/环视布局/艉机抬高对照图.py",
+      "bytes": 2195
+    },
+    {
+      "path": "blender/环视布局/艉机抬高盲区对照.png",
+      "bytes": 222436
+    },
+    {
+      "path": "blender/环视布局/艉部甲板高架盲区对照.png",
+      "bytes": 225220
+    },
+    {
+      "path": "blender/scripts/archive/loft_hull.py",
+      "bytes": 2569
+    },
+    {
+      "path": "blender/scripts/archive/close_hull.py",
+      "bytes": 3357
+    },
+    {
+      "path": "blender/scripts/archive/build_hull_complete.py",
+      "bytes": 3350
+    },
+    {
+      "path": "blender/scripts/archive/create_hull_sections.py",
+      "bytes": 2797
+    },
+    {
+      "path": "blender/scripts/__pycache__/seven_balance.cpython-312.pyc",
+      "bytes": 8554
+    },
+    {
+      "path": "blender/scripts/__pycache__/stern_access_geometry.cpython-313.pyc",
+      "bytes": 14639
+    },
+    {
+      "path": "blender/scripts/__pycache__/stop_permissive_reference.cpython-312.pyc",
+      "bytes": 6281
+    },
+    {
+      "path": "blender/scripts/__pycache__/write_interlock_delivery.cpython-312.pyc",
+      "bytes": 13197
+    },
+    {
+      "path": "blender/scripts/__pycache__/seven_assembly_review.cpython-312.pyc",
+      "bytes": 13477
+    },
+    {
+      "path": "blender/scripts/__pycache__/seven_waterlock_fit.cpython-312.pyc",
+      "bytes": 10252
+    },
+    {
+      "path": "blender/scripts/__pycache__/finalize_interlock.cpython-312.pyc",
+      "bytes": 8987
+    },
+    {
+      "path": "blender/scripts/__pycache__/interlock_static_budget.cpython-312.pyc",
+      "bytes": 2792
+    },
+    {
+      "path": "blender/scripts/__pycache__/check_relief_coupon.cpython-312.pyc",
+      "bytes": 9332
+    },
+    {
+      "path": "blender/scripts/__pycache__/seven_combined_assessment.cpython-312.pyc",
+      "bytes": 9995
+    },
+    {
+      "path": "blender/scripts/__pycache__/solve_stern_shell.cpython-312.pyc",
+      "bytes": 14696
+    },
+    {
+      "path": "blender/scripts/__pycache__/shore_authority_review.cpython-312.pyc",
+      "bytes": 3716
+    },
+    {
+      "path": "blender/scripts/__pycache__/filter_removal_path.cpython-313.pyc",
+      "bytes": 13960
+    },
+    {
+      "path": "blender/scripts/__pycache__/check_chine_access_drain.cpython-313.pyc",
+      "bytes": 7743
+    },
+    {
+      "path": "blender/scripts/__pycache__/seven_candidate_check.cpython-312.pyc",
+      "bytes": 7323
+    },
+    {
+      "path": "blender/scripts/__pycache__/service_hardware_review.cpython-313.pyc",
+      "bytes": 4980
+    },
+    {
+      "path": "blender/scripts/__pycache__/seven_battery_fit.cpython-312.pyc",
+      "bytes": 18196
+    },
+    {
+      "path": "blender/scripts/__pycache__/service_systems_budget.cpython-312.pyc",
+      "bytes": 6711
+    },
+    {
+      "path": "blender/scripts/__pycache__/stern_trim_budget.cpython-312.pyc",
+      "bytes": 16341
+    },
+    {
+      "path": "blender/scripts/__pycache__/cooling_pressure_budget.cpython-312.pyc",
+      "bytes": 4595
+    },
+    {
+      "path": "blender/scripts/__pycache__/seven_intake_sites.cpython-312.pyc",
+      "bytes": 3382
+    },
+    {
+      "path": "blender/scripts/__pycache__/dock_platform_check.cpython-312.pyc",
+      "bytes": 9574
+    },
+    {
+      "path": "blender/scripts/__pycache__/fit_interlock_sensor_heads.cpython-312.pyc",
+      "bytes": 12359
+    },
+    {
+      "path": "blender/scripts/__pycache__/seven_intake_mockup.cpython-312.pyc",
+      "bytes": 21092
+    },
+    {
+      "path": "blender/scripts/__pycache__/prop_clearance_geometry.cpython-312.pyc",
+      "bytes": 3695
+    },
+    {
+      "path": "blender/scripts/__pycache__/check_exhaust_righting.cpython-312.pyc",
+      "bytes": 7255
+    },
+    {
+      "path": "blender/scripts/__pycache__/build_cooling_interlock.cpython-312.pyc",
+      "bytes": 32693
+    },
+    {
+      "path": "06_问题/问题清单.md",
+      "bytes": 2954
+    },
+    {
+      "path": "docs/VRX停车与单机故障/batch.py",
+      "bytes": 1781
+    },
+    {
+      "path": "docs/VRX停车与单机故障/sensitivity.py",
+      "bytes": 1406
+    },
+    {
+      "path": "docs/VRX停车与单机故障/confirm.py",
+      "bytes": 1554
+    },
+    {
+      "path": "docs/VRX停车与单机故障/入流加密工况.json",
+      "bytes": 942
+    },
+    {
+      "path": "docs/VRX停车与单机故障/查看.sh",
+      "bytes": 321
+    },
+    {
+      "path": "docs/VRX停车与单机故障/甲板积水/90秒积水结果.csv",
+      "bytes": 2515
+    },
+    {
+      "path": "docs/VRX停车与单机故障/甲板积水/results.py",
+      "bytes": 2576
+    },
+    {
+      "path": "docs/VRX停车与单机故障/甲板积水/积水与横倾.png",
+      "bytes": 151758
+    },
+    {
+      "path": "docs/VRX停车与单机故障/甲板积水/replay.py",
+      "bytes": 1137
+    },
+    {
+      "path": "docs/VRX停车与单机故障/甲板积水/DeckWater.cc",
+      "bytes": 4445
+    },
+    {
+      "path": "docs/VRX停车与单机故障/甲板积水/__pycache__/replay.cpython-312.pyc",
+      "bytes": 2884
+    },
+    {
+      "path": "docs/VRX停车与单机故障/敏感性工况.json",
+      "bytes": 1590
+    },
+    {
+      "path": "docs/VRX停车与单机故障/浸水修正工况.json",
+      "bytes": 10501
+    },
+    {
+      "path": "docs/VRX停车与单机故障/验证报告.md",
+      "bytes": 11670
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_B_180_3000.csv",
+      "bytes": 775120
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix1_90.csv",
+      "bytes": 714450
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/H_D1_F45.csv",
+      "bytes": 396964
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix4_90.csv",
+      "bytes": 711432
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_10_6000_100.csv",
+      "bytes": 772732
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_flow6.csv",
+      "bytes": 713883
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_D_45_6000.csv",
+      "bytes": 770854
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/entry_7.5.csv",
+      "bytes": 725715
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/H_D1_F85.csv",
+      "bytes": 397241
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_D_180_3000.csv",
+      "bytes": 776672
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_180_3000_100.csv",
+      "bytes": 776672
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/L_D0_F65.csv",
+      "bytes": 397029
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/flow2.csv",
+      "bytes": 718456
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_C_90_6000.csv",
+      "bytes": 771660
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_Dfine_0_10_3000.csv",
+      "bytes": 772810
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix3_90.csv",
+      "bytes": 712256
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_intact_45.csv",
+      "bytes": 709286
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/between_45_0.75.csv",
+      "bytes": 711283
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_0_6000_25.csv",
+      "bytes": 774300
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/repeat_mix3.csv",
+      "bytes": 711264
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_B_0_0.csv",
+      "bytes": 775478
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_0_3000_100.csv",
+      "bytes": 774219
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_45_37_3000_25.csv",
+      "bytes": 770201
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_180_3000_100_water.csv",
+      "bytes": 95101
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_wave1.5.csv",
+      "bytes": 719009
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/between_0_0.5.csv",
+      "bytes": 717438
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_10_0_25_water.csv",
+      "bytes": 975215
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_fine_flat.csv",
+      "bytes": 402021
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_A_45_6000.csv",
+      "bytes": 777582
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/fine_seed37_0.csv",
+      "bytes": 714476
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/H_coast.csv",
+      "bytes": 1918139
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/L_D3_F45.csv",
+      "bytes": 396586
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix2_45.csv",
+      "bytes": 717452
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_37_6000_25_water.csv",
+      "bytes": 932731
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_intact_0.csv",
+      "bytes": 713419
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_entry_7.csv",
+      "bytes": 726554
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/L_D1_F65.csv",
+      "bytes": 396889
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_45_37_3000_25_water.csv",
+      "bytes": 191601
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_calm_0_6000.csv",
+      "bytes": 790392
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_flow7.csv",
+      "bytes": 713946
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_B_0_3000.csv",
+      "bytes": 777914
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_C_90_0.csv",
+      "bytes": 775818
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix4_45.csv",
+      "bytes": 710708
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_between_0_0.25.csv",
+      "bytes": 717378
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/L_D1_F45.csv",
+      "bytes": 396454
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_C_0_6000.csv",
+      "bytes": 778659
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_entry8.csv",
+      "bytes": 726003
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/H_D0_F85.csv",
+      "bytes": 397278
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_between_45_0.25.csv",
+      "bytes": 711797
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/entry_8.5.csv",
+      "bytes": 727655
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_A_180_0.csv",
+      "bytes": 785143
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mesh_0.csv",
+      "bytes": 716360
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_D_-90_3000.csv",
+      "bytes": 776173
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/single_from_rest.csv",
+      "bytes": 724419
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_C_-90_6000.csv",
+      "bytes": 782883
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_10_0_25.csv",
+      "bytes": 777048
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_37_3000_100.csv",
+      "bytes": 776134
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_entry4.csv",
+      "bytes": 728770
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_D_-90_0.csv",
+      "bytes": 775983
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/fine_0.csv",
+      "bytes": 716933
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_fine_45.csv",
+      "bytes": 710492
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_37_6000_100.csv",
+      "bytes": 774199
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/fine_45.csv",
+      "bytes": 710073
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_0_3000_25_water.csv",
+      "bytes": 484223
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_37_6000_25.csv",
+      "bytes": 773667
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/H_D3_F45.csv",
+      "bytes": 396903
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_entry_10.csv",
+      "bytes": 726434
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_45_37_6000_100_water.csv",
+      "bytes": 191601
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix3_180.csv",
+      "bytes": 718799
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_cross90.csv",
+      "bytes": 715549
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_wind40.csv",
+      "bytes": 716837
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_D_90_0.csv",
+      "bytes": 773947
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cross90.csv",
+      "bytes": 714139
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/entry_7.csv",
+      "bytes": 726721
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_10_6000_100_water.csv",
+      "bytes": 958599
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/fine_flat.csv",
+      "bytes": 402092
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_C_45_6000.csv",
+      "bytes": 770701
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix1_0.csv",
+      "bytes": 721973
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix3_-90.csv",
+      "bytes": 720314
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix1_45.csv",
+      "bytes": 718030
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_calm_0_3000.csv",
+      "bytes": 791122
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_A_0_0.csv",
+      "bytes": 781760
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_B_45_0.csv",
+      "bytes": 779353
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_10_6000_25_water.csv",
+      "bytes": 953052
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_flow4.csv",
+      "bytes": 715382
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_A_45_3000.csv",
+      "bytes": 777734
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_45_37_6000_25.csv",
+      "bytes": 770888
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_D_45_3000.csv",
+      "bytes": 770277
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_37_0_25.csv",
+      "bytes": 774872
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/flow1.csv",
+      "bytes": 720841
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_180_3000_25_water.csv",
+      "bytes": 95101
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_cross-90.csv",
+      "bytes": 711561
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wave25.csv",
+      "bytes": 718576
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/entry4.csv",
+      "bytes": 728593
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wave2.0.csv",
+      "bytes": 718640
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/entry6.csv",
+      "bytes": 726977
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/entry_fine_10.csv",
+      "bytes": 729451
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_0_0_100_water.csv",
+      "bytes": 484616
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_calm_0_0.csv",
+      "bytes": 832030
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_A_0_3000.csv",
+      "bytes": 778616
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_B_90_6000.csv",
+      "bytes": 773205
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/flow8.csv",
+      "bytes": 717031
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_Dfine_45_37_3000.csv",
+      "bytes": 770201
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/H_D1_F65.csv",
+      "bytes": 397303
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_45_37_0_25_water.csv",
+      "bytes": 191601
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix4_90.csv",
+      "bytes": 713171
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/flow4.csv",
+      "bytes": 715378
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mesh_45.csv",
+      "bytes": 710697
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/speed_low.csv",
+      "bytes": 517224
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix1_-90.csv",
+      "bytes": 716671
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_C_0_0.csv",
+      "bytes": 777760
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_fine_0.csv",
+      "bytes": 712864
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_0_3000_25.csv",
+      "bytes": 774271
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_C_180_0.csv",
+      "bytes": 784959
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_single_from_rest.csv",
+      "bytes": 725265
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_entry_fine_10.csv",
+      "bytes": 726532
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_repeat_mix3.csv",
+      "bytes": 711331
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/single_calm.csv",
+      "bytes": 730257
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_10_3000_100.csv",
+      "bytes": 772524
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mesh_0.csv",
+      "bytes": 713080
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wave1.5.csv",
+      "bytes": 719285
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wind10.csv",
+      "bytes": 721348
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_Dfine_0_37_0.csv",
+      "bytes": 776945
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_45_37_6000_100.csv",
+      "bytes": 770888
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/between_45_0.5.csv",
+      "bytes": 711281
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_wind30.csv",
+      "bytes": 717503
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wave0.5.csv",
+      "bytes": 719263
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_37_0_100_water.csv",
+      "bytes": 954867
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix1_90.csv",
+      "bytes": 714498
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_B_45_6000.csv",
+      "bytes": 776784
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wind50.csv",
+      "bytes": 718619
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/entry_fine_9.csv",
+      "bytes": 728664
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_entry_9.csv",
+      "bytes": 726242
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_calm_torque34.csv",
+      "bytes": 731830
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_A_90_6000.csv",
+      "bytes": 773857
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_C_45_0.csv",
+      "bytes": 771464
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_calm_0_6000_100_water.csv",
+      "bytes": 95101
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_180_6000_100_water.csv",
+      "bytes": 178948
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix1_180.csv",
+      "bytes": 721394
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_0_0_25.csv",
+      "bytes": 772295
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/H_D3_F65.csv",
+      "bytes": 396947
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_10_6000_25.csv",
+      "bytes": 774056
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_45_37_0_100.csv",
+      "bytes": 768739
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix1_180.csv",
+      "bytes": 720072
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_D_45_0.csv",
+      "bytes": 770326
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/L_D1_F85.csv",
+      "bytes": 397031
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_A_90_0.csv",
+      "bytes": 775730
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix3_0.csv",
+      "bytes": 717742
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_B_90_3000.csv",
+      "bytes": 772857
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_0_3000_100_water.csv",
+      "bytes": 482599
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_wave30.csv",
+      "bytes": 720015
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_wave2.0.csv",
+      "bytes": 718467
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix4_180.csv",
+      "bytes": 716959
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_B_180_6000.csv",
+      "bytes": 776434
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_C_180_6000.csv",
+      "bytes": 776739
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_C_-90_3000.csv",
+      "bytes": 780674
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_10_0_100_water.csv",
+      "bytes": 963439
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_entry_fine_9.csv",
+      "bytes": 726347
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_fine_seed37_0.csv",
+      "bytes": 714433
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix2_45.csv",
+      "bytes": 717151
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_180_6000_25_water.csv",
+      "bytes": 173163
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_between_45_0.5.csv",
+      "bytes": 711128
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wind40.csv",
+      "bytes": 715884
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_180_6000_25.csv",
+      "bytes": 777117
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/entry_fine_8.csv",
+      "bytes": 727699
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_C_-90_0.csv",
+      "bytes": 777374
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_entry_fine_8.csv",
+      "bytes": 726161
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/calm_torque-34.csv",
+      "bytes": 731490
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_wind60.csv",
+      "bytes": 727339
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_calm_torque-34.csv",
+      "bytes": 731853
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_B_180_0.csv",
+      "bytes": 783354
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/between_0_0.75.csv",
+      "bytes": 715495
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_45_37_0_100_water.csv",
+      "bytes": 191601
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_A_180_3000.csv",
+      "bytes": 778995
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_0_6000_25_water.csv",
+      "bytes": 481271
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_Dfine_0_37_3000.csv",
+      "bytes": 773841
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/L_D0_F85.csv",
+      "bytes": 397218
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_37_3000_25.csv",
+      "bytes": 774741
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_37_3000_100_water.csv",
+      "bytes": 954008
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_180_0_100.csv",
+      "bytes": 780685
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_Dfine_45_37_6000.csv",
+      "bytes": 770888
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_B_90_0.csv",
+      "bytes": 778222
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_C_90_3000.csv",
+      "bytes": 769914
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_D_180_0.csv",
+      "bytes": 780685
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_180_0_100_water.csv",
+      "bytes": 95101
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/entry8.csv",
+      "bytes": 727455
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_wave1.0.csv",
+      "bytes": 717266
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_37_0_25_water.csv",
+      "bytes": 943408
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix4_45.csv",
+      "bytes": 710985
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_calm_0_6000_100.csv",
+      "bytes": 790392
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_180_0_25_water.csv",
+      "bytes": 95101
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix4_-90.csv",
+      "bytes": 720029
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/H_D0_F65.csv",
+      "bytes": 397051
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_37_0_100.csv",
+      "bytes": 777608
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_A_-90_0.csv",
+      "bytes": 777074
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_single_calm.csv",
+      "bytes": 731339
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_entry_8.5.csv",
+      "bytes": 726230
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_A_0_6000.csv",
+      "bytes": 779077
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_fine_flow8.csv",
+      "bytes": 713744
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix2_180.csv",
+      "bytes": 716967
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_37_3000_25_water.csv",
+      "bytes": 940080
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_D_90_6000.csv",
+      "bytes": 770290
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_D_0_6000.csv",
+      "bytes": 772488
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_between_0_0.75.csv",
+      "bytes": 715292
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_45_37_0_25.csv",
+      "bytes": 768739
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_A_45_0.csv",
+      "bytes": 777732
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/entry_6.5.csv",
+      "bytes": 726259
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_0_6000_100_water.csv",
+      "bytes": 482520
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_A_90_3000.csv",
+      "bytes": 774215
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_entry_7.5.csv",
+      "bytes": 726420
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/L_coast.csv",
+      "bytes": 1918819
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/L_D3_F65.csv",
+      "bytes": 396874
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_fault_now_flow6.csv",
+      "bytes": 716268
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_Dfine_0_10_0.csv",
+      "bytes": 777084
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_Dfine_0_37_6000.csv",
+      "bytes": 774031
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/flow7.csv",
+      "bytes": 717194
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cross-90.csv",
+      "bytes": 712806
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_Dfine_45_10_6000.csv",
+      "bytes": 770494
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix4_-90.csv",
+      "bytes": 718701
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_0_6000_100.csv",
+      "bytes": 773789
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_10_3000_25.csv",
+      "bytes": 773002
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_B_-90_0.csv",
+      "bytes": 779280
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_A_-90_3000.csv",
+      "bytes": 775688
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_10_3000_25_water.csv",
+      "bytes": 971466
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/entry_9.csv",
+      "bytes": 728393
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix2_90.csv",
+      "bytes": 714706
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_fine_seed37_45.csv",
+      "bytes": 711045
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix4_0.csv",
+      "bytes": 712861
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix3_-90.csv",
+      "bytes": 722257
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_0_0_100.csv",
+      "bytes": 777801
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_37_6000_100_water.csv",
+      "bytes": 952151
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_A_-90_6000.csv",
+      "bytes": 776603
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_flow8.csv",
+      "bytes": 713757
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wind30.csv",
+      "bytes": 717424
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_B_-90_3000.csv",
+      "bytes": 778616
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix3_90.csv",
+      "bytes": 712157
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix3_45.csv",
+      "bytes": 711628
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wave1.0.csv",
+      "bytes": 716090
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_C_180_3000.csv",
+      "bytes": 777254
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_flow1.csv",
+      "bytes": 720861
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_A_180_6000.csv",
+      "bytes": 779886
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix1_-90.csv",
+      "bytes": 716993
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix3_45.csv",
+      "bytes": 711371
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/flow6.csv",
+      "bytes": 716766
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix3_0.csv",
+      "bytes": 719230
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/fine_seed37_45.csv",
+      "bytes": 709557
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix4_0.csv",
+      "bytes": 718975
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_Dfine_45_10_0.csv",
+      "bytes": 770413
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_45_37_6000_25_water.csv",
+      "bytes": 191601
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_0_0_25_water.csv",
+      "bytes": 484484
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/between_45_0.25.csv",
+      "bytes": 711589
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/intact_0.csv",
+      "bytes": 717168
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/between_0_0.25.csv",
+      "bytes": 716561
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/fine_flow8.csv",
+      "bytes": 717229
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_180_6000_100.csv",
+      "bytes": 777086
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wind20.csv",
+      "bytes": 719860
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix2_-90.csv",
+      "bytes": 721593
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_10_3000_100_water.csv",
+      "bytes": 959196
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_45_37_3000_100_water.csv",
+      "bytes": 191601
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/speed_high.csv",
+      "bytes": 517172
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mesh_45.csv",
+      "bytes": 710509
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/calm_torque34.csv",
+      "bytes": 731755
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_Dfine_45_37_0.csv",
+      "bytes": 768739
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix2_90.csv",
+      "bytes": 713869
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix1_45.csv",
+      "bytes": 717270
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_45_37_3000_100.csv",
+      "bytes": 770201
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_wave25.csv",
+      "bytes": 717647
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/fault_now_flow6.csv",
+      "bytes": 716357
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_D_0_3000.csv",
+      "bytes": 773713
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_180_0_25.csv",
+      "bytes": 780685
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix2_0.csv",
+      "bytes": 719081
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_D_0_0.csv",
+      "bytes": 771744
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_D_-90_6000.csv",
+      "bytes": 777841
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix1_0.csv",
+      "bytes": 719851
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/intact_45.csv",
+      "bytes": 710821
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix2_-90.csv",
+      "bytes": 721051
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_Dfine_0_10_6000.csv",
+      "bytes": 772342
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_C_0_3000.csv",
+      "bytes": 778336
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix2_0.csv",
+      "bytes": 718289
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/speed_peak.csv",
+      "bytes": 516733
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_wave0.5.csv",
+      "bytes": 719688
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_B_0_6000.csv",
+      "bytes": 778526
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_C_45_3000.csv",
+      "bytes": 772582
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_wind20.csv",
+      "bytes": 720299
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_between_45_0.75.csv",
+      "bytes": 711467
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_flow2.csv",
+      "bytes": 718454
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_entry6.csv",
+      "bytes": 727168
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix4_180.csv",
+      "bytes": 717967
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_B_45_3000.csv",
+      "bytes": 775651
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_Dfine_0_10_0_100.csv",
+      "bytes": 777077
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wave30.csv",
+      "bytes": 719064
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/entry_10.csv",
+      "bytes": 729341
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wind60.csv",
+      "bytes": 727292
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_mix3_180.csv",
+      "bytes": 717252
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_Dfine_45_10_3000.csv",
+      "bytes": 769926
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_wind50.csv",
+      "bytes": 724388
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_wind10.csv",
+      "bytes": 721509
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/mix2_180.csv",
+      "bytes": 717829
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_between_0_0.5.csv",
+      "bytes": 715261
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/wet_entry_6.5.csv",
+      "bytes": 726770
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_D_90_3000.csv",
+      "bytes": 775326
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_D_180_6000.csv",
+      "bytes": 777440
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/cmp_B_-90_6000.csv",
+      "bytes": 780408
+    },
+    {
+      "path": "docs/VRX停车与单机故障/记录/deck_D_180_3000_25.csv",
+      "bytes": 776672
+    },
+    {
+      "path": "docs/VRX停车与单机故障/entry.py",
+      "bytes": 1113
+    },
+    {
+      "path": "docs/VRX停车与单机故障/右机策略对照/对照报告.md",
+      "bytes": 4273
+    },
+    {
+      "path": "docs/VRX停车与单机故障/右机策略对照/summarize.py",
+      "bytes": 3847
+    },
+    {
+      "path": "docs/VRX停车与单机故障/右机策略对照/静水航速.csv",
+      "bytes": 172
+    },
+    {
+      "path": "docs/VRX停车与单机故障/右机策略对照/paired.py",
+      "bytes": 1678
+    },
+    {
+      "path": "docs/VRX停车与单机故障/右机策略对照/强组合三策略.png",
+      "bytes": 190129
+    },
+    {
+      "path": "docs/VRX停车与单机故障/右机策略对照/工况.json",
+      "bytes": 12554
+    },
+    {
+      "path": "docs/VRX停车与单机故障/右机策略对照/90秒配对结果.csv",
+      "bytes": 7233
+    },
+    {
+      "path": "docs/VRX停车与单机故障/停车与故障对照.png",
+      "bytes": 194393
+    },
+    {
+      "path": "docs/VRX停车与单机故障/build.sh",
+      "bytes": 700
+    },
+    {
+      "path": "docs/VRX停车与单机故障/report.py",
+      "bytes": 4254
+    },
+    {
+      "path": "docs/VRX停车与单机故障/可视水面/wet_mix4_0/model.config",
+      "symlink": true,
+      "bytes": 0
+    },
+    {
+      "path": "docs/VRX停车与单机故障/可视水面/wet_mix4_0/materials",
+      "symlink": true,
+      "bytes": 0
+    },
+    {
+      "path": "docs/VRX停车与单机故障/可视水面/wet_mix4_0/model.sdf",
+      "bytes": 1337
+    },
+    {
+      "path": "docs/VRX停车与单机故障/可视水面/wet_mix4_0/meshes",
+      "symlink": true,
+      "bytes": 0
+    },
+    {
+      "path": "docs/VRX停车与单机故障/可视水面/deck_D_180_6000_100/model.config",
+      "symlink": true,
+      "bytes": 0
+    },
+    {
+      "path": "docs/VRX停车与单机故障/可视水面/deck_D_180_6000_100/materials",
+      "symlink": true,
+      "bytes": 0
+    },
+    {
+      "path": "docs/VRX停车与单机故障/可视水面/deck_D_180_6000_100/model.sdf",
+      "bytes": 1351
+    },
+    {
+      "path": "docs/VRX停车与单机故障/可视水面/deck_D_180_6000_100/meshes",
+      "symlink": true,
+      "bytes": 0
+    },
+    {
+      "path": "docs/VRX停车与单机故障/可视水面/mix3_0/model.config",
+      "symlink": true,
+      "bytes": 0
+    },
+    {
+      "path": "docs/VRX停车与单机故障/可视水面/mix3_0/materials",
+      "symlink": true,
+      "bytes": 0
+    },
+    {
+      "path": "docs/VRX停车与单机故障/可视水面/mix3_0/model.sdf",
+      "bytes": 1323
+    },
+    {
+      "path": "docs/VRX停车与单机故障/可视水面/mix3_0/meshes",
+      "symlink": true,
+      "bytes": 0
+    },
+    {
+      "path": "docs/VRX停车与单机故障/__pycache__/run.cpython-312.pyc",
+      "bytes": 17285
+    },
+    {
+      "path": "docs/VRX停车与单机故障/补充工况.json",
+      "bytes": 2025
+    },
+    {
+      "path": "docs/VRX停车与单机故障/工况.json",
+      "bytes": 6140
+    },
+    {
+      "path": "docs/VRX停车与单机故障/TrialDrive.cc",
+      "bytes": 7547
+    },
+    {
+      "path": "docs/VRX停车与单机故障/view_world.py",
+      "bytes": 2149
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix4_90.sdf",
+      "bytes": 81002
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_single_calm.sdf",
+      "bytes": 80149
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_Dfine_0_10_0_100.sdf",
+      "bytes": 324885
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix3_45.sdf",
+      "bytes": 81018
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wind40.sdf",
+      "bytes": 80263
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_C_45_0.sdf",
+      "bytes": 81044
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_D_180_3000_25.sdf",
+      "bytes": 81703
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_wave1.5.sdf",
+      "bytes": 80345
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mesh_45.sdf",
+      "bytes": 324224
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/fine_flat.sdf",
+      "bytes": 323233
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix3_180.sdf",
+      "bytes": 81016
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_D_180_0_100.sdf",
+      "bytes": 81699
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wave30.sdf",
+      "bytes": 80184
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_Dfine_45_37_3000_25.sdf",
+      "bytes": 324950
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_cross-90.sdf",
+      "bytes": 81009
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix1_0.sdf",
+      "bytes": 80957
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_D_0_0_100.sdf",
+      "bytes": 81641
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wave0.5.sdf",
+      "bytes": 79801
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/flow2.sdf",
+      "bytes": 79605
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_calm_torque-34.sdf",
+      "bytes": 80155
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix3_45.sdf",
+      "bytes": 80474
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_Dfine_0_10_6000.sdf",
+      "bytes": 324229
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix2_180.sdf",
+      "bytes": 80457
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_wind40.sdf",
+      "bytes": 80807
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix2_0.sdf",
+      "bytes": 80427
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_Dfine_0_37_3000.sdf",
+      "bytes": 324229
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mesh_0.sdf",
+      "bytes": 324200
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/L_coast.sdf",
+      "bytes": 79613
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix3_-90.sdf",
+      "bytes": 80477
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_B_180_0.sdf",
+      "bytes": 81026
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_wave2.0.sdf",
+      "bytes": 80344
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_entry4.sdf",
+      "bytes": 323393
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_B_45_3000.sdf",
+      "bytes": 81031
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_wind20.sdf",
+      "bytes": 80807
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_Dfine_45_10_6000.sdf",
+      "bytes": 324275
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_Dfine_0_37_3000_100.sdf",
+      "bytes": 324888
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wind30.sdf",
+      "bytes": 80278
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/fault_now_flow6.sdf",
+      "bytes": 79982
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/L_D0_F85.sdf",
+      "bytes": 79613
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_C_0_0.sdf",
+      "bytes": 80998
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_D_90_3000.sdf",
+      "bytes": 81031
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_calm_0_6000.sdf",
+      "bytes": 80148
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_wave0.5.sdf",
+      "bytes": 80345
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix2_45.sdf",
+      "bytes": 81002
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_flow6.sdf",
+      "bytes": 80149
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/entry4.sdf",
+      "bytes": 323371
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_flow8.sdf",
+      "bytes": 80149
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_B_90_0.sdf",
+      "bytes": 81028
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/H_D0_F65.sdf",
+      "bytes": 79613
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix1_180.sdf",
+      "bytes": 81001
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/L_D1_F65.sdf",
+      "bytes": 79613
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/between_0_0.5.sdf",
+      "bytes": 80816
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_Dfine_0_10_3000_25.sdf",
+      "bytes": 324889
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix4_-90.sdf",
+      "bytes": 81006
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/fine_0.sdf",
+      "bytes": 324055
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_D_180_6000_100.sdf",
+      "bytes": 81702
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/L_D0_F65.sdf",
+      "bytes": 79613
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_D_90_6000.sdf",
+      "bytes": 81031
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wind50.sdf",
+      "bytes": 80647
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_entry_7.5.sdf",
+      "bytes": 323393
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix1_90.sdf",
+      "bytes": 80459
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_wave25.sdf",
+      "bytes": 80345
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix2_180.sdf",
+      "bytes": 81000
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/L_D3_F65.sdf",
+      "bytes": 79613
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mesh_45.sdf",
+      "bytes": 324246
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/可视_wet_mix4_0.sdf",
+      "bytes": 91367
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/speed_low.sdf",
+      "bytes": 80177
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix2_90.sdf",
+      "bytes": 80458
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix4_0.sdf",
+      "bytes": 80427
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix3_90.sdf",
+      "bytes": 81018
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_D_0_3000.sdf",
+      "bytes": 80985
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/entry_fine_8.sdf",
+      "bytes": 323371
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix2_45.sdf",
+      "bytes": 80458
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_entry_8.5.sdf",
+      "bytes": 323393
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/between_0_0.25.sdf",
+      "bytes": 80820
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix3_180.sdf",
+      "bytes": 80473
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_B_45_0.sdf",
+      "bytes": 81028
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/fine_seed37_0.sdf",
+      "bytes": 324178
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_C_90_3000.sdf",
+      "bytes": 81047
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/calm_torque34.sdf",
+      "bytes": 80132
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/H_coast.sdf",
+      "bytes": 79613
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_between_45_0.25.sdf",
+      "bytes": 81011
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix4_0.sdf",
+      "bytes": 80956
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_D_180_6000_25.sdf",
+      "bytes": 81703
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_C_45_3000.sdf",
+      "bytes": 81047
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_flow4.sdf",
+      "bytes": 80149
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_entry_6.5.sdf",
+      "bytes": 323393
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/entry_9.sdf",
+      "bytes": 323371
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/flow6.sdf",
+      "bytes": 79605
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/speed_high.sdf",
+      "bytes": 80177
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_wind10.sdf",
+      "bytes": 80807
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_Dfine_45_37_0_25.sdf",
+      "bytes": 324947
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix3_90.sdf",
+      "bytes": 80474
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_fine_seed37_45.sdf",
+      "bytes": 324246
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wave1.0.sdf",
+      "bytes": 79800
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_calm_0_0.sdf",
+      "bytes": 80145
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/H_D3_F45.sdf",
+      "bytes": 79613
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_A_45_6000.sdf",
+      "bytes": 81032
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_B_180_6000.sdf",
+      "bytes": 81029
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_D_180_0.sdf",
+      "bytes": 81026
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_A_180_6000.sdf",
+      "bytes": 81030
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/H_D1_F85.sdf",
+      "bytes": 79613
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/H_D3_F65.sdf",
+      "bytes": 79613
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix3_-90.sdf",
+      "bytes": 81022
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_A_0_3000.sdf",
+      "bytes": 80986
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix4_90.sdf",
+      "bytes": 80458
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_fine_seed37_0.sdf",
+      "bytes": 324200
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix1_45.sdf",
+      "bytes": 81003
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_B_90_3000.sdf",
+      "bytes": 81031
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_B_0_3000.sdf",
+      "bytes": 80985
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_D_0_0_25.sdf",
+      "bytes": 81642
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_Dfine_45_10_0.sdf",
+      "bytes": 324272
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/between_45_0.25.sdf",
+      "bytes": 80851
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_entry_fine_9.sdf",
+      "bytes": 323393
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_C_180_3000.sdf",
+      "bytes": 81045
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_D_0_3000_100.sdf",
+      "bytes": 81644
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_Dfine_45_10_3000.sdf",
+      "bytes": 324275
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix4_180.sdf",
+      "bytes": 81000
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_Dfine_45_37_6000_25.sdf",
+      "bytes": 324950
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_D_180_3000_100.sdf",
+      "bytes": 81702
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/H_D1_F65.sdf",
+      "bytes": 79613
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_D_45_0.sdf",
+      "bytes": 81028
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix4_-90.sdf",
+      "bytes": 80461
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/between_45_0.5.sdf",
+      "bytes": 80847
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_Dfine_45_37_3000.sdf",
+      "bytes": 324275
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_Dfine_0_37_6000_25.sdf",
+      "bytes": 324889
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix4_45.sdf",
+      "bytes": 81002
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/fine_flow8.sdf",
+      "bytes": 323371
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_wind50.sdf",
+      "bytes": 80807
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_C_0_3000.sdf",
+      "bytes": 81001
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_calm_torque34.sdf",
+      "bytes": 80154
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_entry_10.sdf",
+      "bytes": 323394
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wind10.sdf",
+      "bytes": 80263
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cross90.sdf",
+      "bytes": 80986
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/entry_10.sdf",
+      "bytes": 323372
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_Dfine_0_10_0.sdf",
+      "bytes": 324226
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_C_-90_3000.sdf",
+      "bytes": 81051
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/L_D3_F45.sdf",
+      "bytes": 79613
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_wind60.sdf",
+      "bytes": 80821
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_Dfine_0_10_3000_100.sdf",
+      "bytes": 324888
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_D_0_6000_25.sdf",
+      "bytes": 81645
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/entry_7.sdf",
+      "bytes": 323371
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix2_90.sdf",
+      "bytes": 81002
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_fine_0.sdf",
+      "bytes": 324200
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_intact_45.sdf",
+      "bytes": 81003
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_D_180_6000.sdf",
+      "bytes": 81029
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/flow1.sdf",
+      "bytes": 79605
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_D_90_0.sdf",
+      "bytes": 81028
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/between_0_0.75.sdf",
+      "bytes": 80820
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_D_0_6000.sdf",
+      "bytes": 80985
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_D_0_0.sdf",
+      "bytes": 80982
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_flow2.sdf",
+      "bytes": 80149
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/L_D1_F45.sdf",
+      "bytes": 79613
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_C_-90_6000.sdf",
+      "bytes": 81051
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_C_45_6000.sdf",
+      "bytes": 81047
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_A_-90_6000.sdf",
+      "bytes": 81036
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/entry_6.5.sdf",
+      "bytes": 323371
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_flow1.sdf",
+      "bytes": 80149
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_Dfine_45_37_6000.sdf",
+      "bytes": 324275
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_B_180_3000.sdf",
+      "bytes": 81029
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix1_0.sdf",
+      "bytes": 80428
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_B_-90_6000.sdf",
+      "bytes": 81035
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_Dfine_0_37_6000_100.sdf",
+      "bytes": 324888
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_entry8.sdf",
+      "bytes": 323393
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/calm_torque-34.sdf",
+      "bytes": 80133
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_single_from_rest.sdf",
+      "bytes": 80142
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix1_-90.sdf",
+      "bytes": 81007
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/intact_45.sdf",
+      "bytes": 80843
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_D_-90_6000.sdf",
+      "bytes": 81035
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_C_90_6000.sdf",
+      "bytes": 81047
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_D_-90_3000.sdf",
+      "bytes": 81035
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_A_45_3000.sdf",
+      "bytes": 81032
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/entry6.sdf",
+      "bytes": 323371
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/H_D1_F45.sdf",
+      "bytes": 79613
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/entry_7.5.sdf",
+      "bytes": 323371
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/fine_45.sdf",
+      "bytes": 324086
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/L_D1_F85.sdf",
+      "bytes": 79613
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/flow7.sdf",
+      "bytes": 79989
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix3_0.sdf",
+      "bytes": 80972
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/H_D0_F85.sdf",
+      "bytes": 79613
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_D_45_3000.sdf",
+      "bytes": 81031
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix2_-90.sdf",
+      "bytes": 81006
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_C_90_0.sdf",
+      "bytes": 81044
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_entry_fine_10.sdf",
+      "bytes": 323394
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_D_45_6000.sdf",
+      "bytes": 81031
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_Dfine_45_37_0_100.sdf",
+      "bytes": 324946
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_A_-90_0.sdf",
+      "bytes": 81033
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_D_-90_0.sdf",
+      "bytes": 81032
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_A_0_0.sdf",
+      "bytes": 80983
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/entry_fine_10.sdf",
+      "bytes": 323372
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_between_0_0.25.sdf",
+      "bytes": 80965
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/entry_fine_9.sdf",
+      "bytes": 323371
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_Dfine_45_37_0.sdf",
+      "bytes": 324272
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_between_45_0.5.sdf",
+      "bytes": 81007
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mesh_0.sdf",
+      "bytes": 324178
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_B_0_6000.sdf",
+      "bytes": 80985
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_fine_flat.sdf",
+      "bytes": 323393
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cross-90.sdf",
+      "bytes": 80987
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_Dfine_0_37_3000_25.sdf",
+      "bytes": 324889
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_Dfine_0_10_6000_25.sdf",
+      "bytes": 324889
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_A_90_6000.sdf",
+      "bytes": 81032
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_A_90_3000.sdf",
+      "bytes": 81032
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_entry6.sdf",
+      "bytes": 323393
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wind60.sdf",
+      "bytes": 80661
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_fault_now_flow6.sdf",
+      "bytes": 80142
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix1_45.sdf",
+      "bytes": 80459
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_wave30.sdf",
+      "bytes": 80344
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/intact_0.sdf",
+      "bytes": 80812
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_fine_45.sdf",
+      "bytes": 324246
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_A_-90_3000.sdf",
+      "bytes": 81036
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_fine_flow8.sdf",
+      "bytes": 323393
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_entry_9.sdf",
+      "bytes": 323393
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_Dfine_0_37_0.sdf",
+      "bytes": 324226
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix1_180.sdf",
+      "bytes": 80458
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_A_45_0.sdf",
+      "bytes": 81029
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix2_-90.sdf",
+      "bytes": 80461
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix1_90.sdf",
+      "bytes": 81003
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_Dfine_0_37_0_100.sdf",
+      "bytes": 324885
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/可视_mix3_0.sdf",
+      "bytes": 90850
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_D_0_3000_25.sdf",
+      "bytes": 81645
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wind20.sdf",
+      "bytes": 80263
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/fine_seed37_45.sdf",
+      "bytes": 324224
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/repeat_mix3.sdf",
+      "bytes": 80474
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_A_0_6000.sdf",
+      "bytes": 80986
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_between_0_0.5.sdf",
+      "bytes": 80961
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_A_180_0.sdf",
+      "bytes": 81027
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_D_0_6000_100.sdf",
+      "bytes": 81644
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/single_calm.sdf",
+      "bytes": 79605
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/flow4.sdf",
+      "bytes": 79605
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_C_0_6000.sdf",
+      "bytes": 81001
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/entry8.sdf",
+      "bytes": 323371
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_B_45_6000.sdf",
+      "bytes": 81031
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix3_0.sdf",
+      "bytes": 80443
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_C_180_6000.sdf",
+      "bytes": 81045
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_Dfine_0_37_0_25.sdf",
+      "bytes": 324886
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_cross90.sdf",
+      "bytes": 81008
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_between_45_0.75.sdf",
+      "bytes": 81011
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_Dfine_45_37_3000_100.sdf",
+      "bytes": 324949
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/entry_8.5.sdf",
+      "bytes": 323371
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_intact_0.sdf",
+      "bytes": 80957
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wave1.5.sdf",
+      "bytes": 79801
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_B_-90_3000.sdf",
+      "bytes": 81035
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_B_0_0.sdf",
+      "bytes": 80982
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wave25.sdf",
+      "bytes": 80185
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_D_180_0_25.sdf",
+      "bytes": 81700
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_flow7.sdf",
+      "bytes": 80149
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_mix2_0.sdf",
+      "bytes": 80956
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_entry_fine_8.sdf",
+      "bytes": 323393
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/single_from_rest.sdf",
+      "bytes": 79598
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_wind30.sdf",
+      "bytes": 80822
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_Dfine_0_10_3000.sdf",
+      "bytes": 324229
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_C_180_0.sdf",
+      "bytes": 81042
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_B_90_6000.sdf",
+      "bytes": 81031
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_entry_7.sdf",
+      "bytes": 323393
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/speed_peak.sdf",
+      "bytes": 80177
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix4_45.sdf",
+      "bytes": 80458
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix4_180.sdf",
+      "bytes": 80457
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_repeat_mix3.sdf",
+      "bytes": 81018
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/flow8.sdf",
+      "bytes": 79989
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_between_0_0.75.sdf",
+      "bytes": 80965
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_calm_0_6000_100.sdf",
+      "bytes": 80807
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wet_wave1.0.sdf",
+      "bytes": 80344
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_B_-90_0.sdf",
+      "bytes": 81032
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/between_45_0.75.sdf",
+      "bytes": 80851
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/wave2.0.sdf",
+      "bytes": 79800
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_calm_0_3000.sdf",
+      "bytes": 80148
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_Dfine_0_10_6000_100.sdf",
+      "bytes": 324888
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/可视_deck_D_180_6000_100.sdf",
+      "bytes": 92198
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/mix1_-90.sdf",
+      "bytes": 80462
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_A_90_0.sdf",
+      "bytes": 81029
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_Dfine_0_37_6000.sdf",
+      "bytes": 324229
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_A_180_3000.sdf",
+      "bytes": 81030
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_Dfine_0_10_0_25.sdf",
+      "bytes": 324886
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_C_-90_0.sdf",
+      "bytes": 81048
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/deck_Dfine_45_37_6000_100.sdf",
+      "bytes": 324949
+    },
+    {
+      "path": "docs/VRX停车与单机故障/场景/cmp_D_180_3000.sdf",
+      "bytes": 81029
+    },
+    {
+      "path": "docs/VRX停车与单机故障/停车对照.csv",
+      "bytes": 1291
+    },
+    {
+      "path": "docs/VRX停车与单机故障/稳定性逐项.csv",
+      "bytes": 13112
+    },
+    {
+      "path": "docs/VRX停车与单机故障/七项联合候选复跑参数.json",
+      "bytes": 1740
+    },
+    {
+      "path": "docs/VRX停车与单机故障/run.py",
+      "bytes": 8683
+    },
+    {
+      "path": "docs/VRX停车与单机故障/lib/libWaveVisual.so",
+      "bytes": 349744
+    },
+    {
+      "path": "docs/VRX停车与单机故障/lib/libDeckWater.so",
+      "bytes": 138496
+    },
+    {
+      "path": "docs/VRX停车与单机故障/lib/libPolyhedraBuoyancyDrag.so",
+      "bytes": 353336
+    },
+    {
+      "path": "docs/VRX停车与单机故障/lib/libTrialDrive.so",
+      "bytes": 147464
+    },
+    {
+      "path": "docs/VRX停车与单机故障/lib/libUSVWind.so",
+      "bytes": 259512
+    },
+    {
+      "path": "docs/VRX停车与单机故障/wet.py",
+      "bytes": 1060
+    },
+    {
+      "path": "docs/Gazebo双机操纵/pivot.sdf",
+      "bytes": 486714
+    },
+    {
+      "path": "docs/Gazebo双机操纵/turn_port.csv",
+      "bytes": 60048
+    },
+    {
+      "path": "docs/Gazebo双机操纵/turn_port.sdf",
+      "bytes": 486712
+    },
+    {
+      "path": "docs/Gazebo双机操纵/pivot.csv",
+      "bytes": 60845
+    },
+    {
+      "path": "docs/Gazebo双机操纵/turn_starboard.csv",
+      "bytes": 60669
+    },
+    {
+      "path": "docs/Gazebo双机操纵/汇总.py",
+      "bytes": 2405
+    },
+    {
+      "path": "docs/Gazebo双机操纵/build.sh",
+      "bytes": 153
+    },
+    {
+      "path": "docs/Gazebo双机操纵/libTwinDrive.so",
+      "bytes": 124408
+    },
+    {
+      "path": "docs/Gazebo双机操纵/turn_starboard.sdf",
+      "bytes": 486712
+    },
+    {
+      "path": "docs/Gazebo双机操纵/满油双机操纵.md",
+      "bytes": 5802
+    },
+    {
+      "path": "docs/Gazebo双机操纵/cruise_low.csv",
+      "bytes": 65087
+    },
+    {
+      "path": "docs/Gazebo双机操纵/cruise_high.csv",
+      "bytes": 65356
+    },
+    {
+      "path": "docs/Gazebo双机操纵/reverse.sdf",
+      "bytes": 486715
+    },
+    {
+      "path": "docs/Gazebo双机操纵/reverse.csv",
+      "bytes": 65859
+    },
+    {
+      "path": "docs/Gazebo双机操纵/满油双机航迹.png",
+      "bytes": 106198
+    },
+    {
+      "path": "docs/Gazebo双机操纵/TwinDrive.cc",
+      "bytes": 3407
+    },
+    {
+      "path": "docs/Gazebo双机操纵/run.py",
+      "bytes": 3550
+    },
+    {
+      "path": "docs/Gazebo双机操纵/cruise_high.sdf",
+      "bytes": 486713
+    },
+    {
+      "path": "docs/Gazebo双机操纵/cruise_low.sdf",
+      "bytes": 486713
+    },
+    {
+      "path": "docs/Gazebo静水验证/float_base_40.sdf",
+      "bytes": 110956
+    },
+    {
+      "path": "docs/Gazebo静水验证/float_60_80.sdf",
+      "bytes": 450387
+    },
+    {
+      "path": "docs/Gazebo静水验证/静水吃水与配平.md",
+      "bytes": 5701
+    },
+    {
+      "path": "docs/Gazebo静水验证/float_base_40.csv",
+      "bytes": 19598
+    },
+    {
+      "path": "docs/Gazebo静水验证/float_60_40.csv",
+      "bytes": 19696
+    },
+    {
+      "path": "docs/Gazebo静水验证/float_6_40.sdf",
+      "bytes": 110952
+    },
+    {
+      "path": "docs/Gazebo静水验证/vessel.obj",
+      "bytes": 882528
+    },
+    {
+      "path": "docs/Gazebo静水验证/静浮.py",
+      "bytes": 4747
+    },
+    {
+      "path": "docs/Gazebo静水验证/质量增量.json",
+      "bytes": 266
+    },
+    {
+      "path": "docs/Gazebo静水验证/float_30_40.sdf",
+      "bytes": 110955
+    },
+    {
+      "path": "docs/Gazebo静水验证/float_60_40.sdf",
+      "bytes": 110955
+    },
+    {
+      "path": "docs/Gazebo静水验证/提取整船.py",
+      "bytes": 2520
+    },
+    {
+      "path": "docs/Gazebo静水验证/float_60_80.csv",
+      "bytes": 19718
+    },
+    {
+      "path": "docs/Gazebo静水验证/float_30_40.csv",
+      "bytes": 19426
+    },
+    {
+      "path": "docs/Gazebo静水验证/对照.py",
+      "bytes": 1700
+    },
+    {
+      "path": "docs/Gazebo静水验证/满油静浮姿态.png",
+      "bytes": 552911
+    },
+    {
+      "path": "docs/Gazebo静水验证/float_6_40.csv",
+      "bytes": 19281
+    },
+    {
+      "path": "docs/机罩肩线检修/肩线样板与示例复核.md",
+      "bytes": 3014
+    },
+    {
+      "path": "docs/机罩肩线检修/50度机罩肩线局部避让复核.md",
+      "bytes": 4536
+    },
+    {
+      "path": "docs/机罩肩线检修/51度附近机罩内侧与追加避让.md",
+      "bytes": 4041
+    },
+    {
+      "path": "docs/机罩肩线检修/50度宽根固定叉与保险销复核.md",
+      "bytes": 8576
+    },
+    {
+      "path": "docs/机罩肩线检修/双机肩线拆检测量说明.md",
+      "bytes": 6804
+    },
+    {
+      "path": "docs/机罩肩线检修/示例演算/模拟2_差一点.xlsx",
+      "bytes": 11623
+    },
+    {
+      "path": "docs/机罩肩线检修/示例演算/模拟1_刚好够.xlsx",
+      "bytes": 11619
+    },
+    {
+      "path": "docs/机罩肩线检修/示例演算/模拟3_漏测.xlsx",
+      "bytes": 11625
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/排气降位后关键点测量判定.html",
+      "bytes": 5848
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/双机肩线拆检测量剖视图.png",
+      "bytes": 223610
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/双机肩线实测判定.xlsx",
+      "bytes": 11249
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/船上接口尺寸实测表.md",
+      "bytes": 2726
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/排气关键点判定.js",
+      "bytes": 864471
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/双机肩线实尺度样板预览.png",
+      "bytes": 108862
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/联合候选弯头高差判定.html",
+      "bytes": 154977
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/未决问题修订确认表.md",
+      "bytes": 2476
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/机内弯头测量与高差判定.html",
+      "bytes": 45066
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/平台对准标记与艉缆检查表.md",
+      "bytes": 2947
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/双快接联锁与整船实测表.md",
+      "bytes": 10587
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/模型端接必须实测表.md",
+      "bytes": 2087
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/机组供液现场检查表.md",
+      "bytes": 1666
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/双机肩线一比一样板.pdf",
+      "bytes": 62946
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/排气降位实测表.md",
+      "bytes": 1778
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/整船安装完成实物确认表.md",
+      "bytes": 2923
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/排气关键点测量示意.png",
+      "bytes": 137999
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/E163并联与动力端头实测表.md",
+      "bytes": 3058
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/充电与配电端头实测表.md",
+      "bytes": 3008
+    },
+    {
+      "path": "docs/机罩肩线检修/现场实测/双机肩线现场拆检检查单.pdf",
+      "bytes": 110131
+    },
+    {
+      "path": "docs/01_参考资料/冷却联锁选型/IY5029.pdf",
+      "bytes": 116112
+    },
+    {
+      "path": "docs/01_参考资料/冷却联锁选型/DDR-15.pdf",
+      "bytes": 690943
+    },
+    {
+      "path": "docs/01_参考资料/冷却联锁选型/MK5100.pdf",
+      "bytes": 163771
+    },
+    {
+      "path": "docs/01_参考资料/冷却联锁选型/MK5101.pdf",
+      "bytes": 210156
+    },
+    {
+      "path": "docs/01_参考资料/冷却联锁选型/来源.txt",
+      "bytes": 605
+    },
+    {
+      "path": "docs/01_参考资料/冷却联锁选型/XB5AVB3.pdf",
+      "bytes": 150199
+    },
+    {
+      "path": "docs/01_参考资料/冷却联锁选型/LOGO_system_manual.pdf",
+      "bytes": 32375562
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/36-C方案建模前综合复核与验证顺序.md",
+      "bytes": 4687
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/08-电池舱布置.md",
+      "bytes": 1197
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/09-主配电柜布置.md",
+      "bytes": 819
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/24-停车最小净距.md",
+      "bytes": 1237
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/27-停后速度超限判据.md",
+      "bytes": 1208
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/12-摄像头布置.md",
+      "bytes": 1626
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/30-退出通道畅通判据.md",
+      "bytes": 1506
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/32-设备重量与重心预算.md",
+      "bytes": 92044
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/35-油箱前移后的整船布置与三油况复核.md",
+      "bytes": 6444
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/25-停稳后观察时间.md",
+      "bytes": 1152
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/11-激光雷达布置.md",
+      "bytes": 891
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/20-入泊速度与横流分档.md",
+      "bytes": 1694
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/21-停车距离与侧向漂移判据.md",
+      "bytes": 1590
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/01-船底设计.md",
+      "bytes": 1240
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/04-推进装置布置.md",
+      "bytes": 1836
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/05-动力与能源方案.md",
+      "bytes": 1141
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/03-甲板设计.md",
+      "bytes": 1116
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/26-纵向停稳判据.md",
+      "bytes": 1116
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/06-油箱布置与靠港加油.md",
+      "bytes": 1099
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/13-GNSS天线布置.md",
+      "bytes": 915
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/22-测试泊位布置与净宽.md",
+      "bytes": 907
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/29-超时后的进泊处置.md",
+      "bytes": 1182
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/34-C方案第一版船壳线型与三处空间校核.md",
+      "bytes": 6666
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/18-视频中断与进泊暂停.md",
+      "bytes": 2029
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/15-电台与视频回传设备布置.md",
+      "bytes": 1191
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/07-发电机组布置.md",
+      "bytes": 1092
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/23-测试泊位净长与泊船朝向.md",
+      "bytes": 1276
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/00-船头设计.md",
+      "bytes": 1589
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/19-半船入泊横流测试.md",
+      "bytes": 2623
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/17-岸上接管链路.md",
+      "bytes": 1122
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/31-退出速度与停车视距.md",
+      "bytes": 2241
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/16-网络交换机布置.md",
+      "bytes": 901
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/02-船尾设计.md",
+      "bytes": 1143
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/10-飞控与船载工控机布置.md",
+      "bytes": 1043
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/泸州无人船船端工程说明.md",
+      "bytes": 1252
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/33-C方案整船总布置与第一版建模清单.md",
+      "bytes": 11586
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/28-未停稳超时判据.md",
+      "bytes": 1345
+    },
+    {
+      "path": "docs/01_参考资料/00-前期设计/14-岸船通信天线布置.md",
+      "bytes": 1681
+    }
+  ],
+  "status": "completed"
+}

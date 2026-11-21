@@ -1,0 +1,51 @@
+{
+  "status": "ENGINEERING_SIMULATION_PLATFORM_NOT_A_REAL_VESSEL_DIGITAL_TWIN",
+  "profile": "speed15_concept",
+  "design_speed_km_h": 15.0,
+  "speed_feedforward_m_s": 4.3,
+  "wave_gain_default": 0.3,
+  "validation_envelope": {
+    "drag_scale": [
+      0.75,
+      1.0,
+      1.25
+    ],
+    "wind_m_s": [
+      0.0,
+      8.0
+    ],
+    "current_m_s": [
+      0.0,
+      0.3
+    ],
+    "wave_gain": [
+      0.0,
+      0.3
+    ],
+    "maximum_test_roll_pitch_deg": 20.0,
+    "nominal_speed_tolerance_km_h": 0.5,
+    "fault_command_timeout_wall_s": 1.0,
+    "additional_payload_kg": [
+      0,
+      100
+    ],
+    "payload_center_m": [
+      0,
+      0,
+      0.6
+    ]
+  },
+  "basis": {
+    "design_speed": "User-specified design condition, not measured vessel performance",
+    "mass_inertia": "CAD-based baseline estimate plus explicit battery/motor/propeller proxies, parallel-axis combination and solved hydrostatics",
+    "drag_uncertainty": "Engineering sensitivity bracket +/-25%, not a statistical confidence interval",
+    "environment": "Bounded algorithm-test cases, not a certified sea-state operating envelope",
+    "propulsion": "Power-constrained engineering thrust/RPM/advance proxy; same equations in every scenario",
+    "fidelity": "Rigid body, sealed hull, distributed wave pressure and deep-water orbital flow, quasi-static tank, lumped energy; no claim of CFD, cavitation, planing, structural damage or liquid slosh"
+  },
+  "sources": {
+    "vrx": "https://github.com/osrf/vrx/wiki/wamv_params_tutorial",
+    "ittc_friction_reference": "https://www.ittc.info/media/10176/75-02-02-021.pdf",
+    "ardupilot_boat": "https://ardupilot.org/rover/docs/boat-configuration.html"
+  }
+}

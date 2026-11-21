@@ -1,0 +1,13 @@
+{
+  "steering_limit_deg": 35.0,
+  "sun_teeth": 30,
+  "planet_teeth": 30,
+  "ring_teeth": 90,
+  "gear_module_m": 0.002,
+  "pressure_angle_deg": 20.0,
+  "tooth_clearance_m": 0.00012,
+  "gear_face_width_m": 0.032,
+  "cable_path_length_m": 0.98,
+  "propeller_demo_rpm": 90.0,
+  "note": "概念模型参数，非实际选型。修改后运行 complete_concept.py；齿轮参数必须满足现有壳体空间及同轴行星关系。螺旋桨转速仅用于动画。"
+}

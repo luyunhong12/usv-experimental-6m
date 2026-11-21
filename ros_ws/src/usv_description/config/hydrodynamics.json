@@ -1,0 +1,10 @@
+{
+  "status": "CONSERVATIVE_ADDED_MASS_TRIAL_NOT_IDENTIFIED_COEFFICIENTS",
+  "added_linear_kg": [70,250,250],
+  "added_angular_kg_m2": [30,200,200],
+  "reference": "Fixed drag_center in hull frame; positive diagonal fluid inertia, skew-symmetric Coriolis coupling; force-level one-step partitioned integration",
+  "basis": "70/250/250 kg corresponds to 0.07/0.25/0.25 m3 of entrained fresh water. Lower longitudinal inertia reflects slender hull; these are conservative trial values, not strip-theory or measured results. Rotational radii sqrt(J/M) approximately 0.35 m roll and 0.89 m pitch/yaw. Sweep 0/0.5/1/2 times these coefficients; do not copy WAM-V coefficients.",
+  "source": "https://www.fossen.biz/html/marineCraftModel.html",
+  "max_step_s": 0.004,
+  "limitations": "One-step acceleration coupling, diagonal constant matrix; no radiation memory, frequency dependence or full fluid solver. Validate timestep convergence and maneuvering before accepting configuration. Added mass does not add weight or change fuel mass."
+}

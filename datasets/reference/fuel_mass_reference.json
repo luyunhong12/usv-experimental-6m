@@ -1,0 +1,67 @@
+{
+  "status": "ENGINEERING_TANK_INNER_GEOMETRY_NOT_MEASURED",
+  "inner_size_m": [
+    0.6,
+    0.4,
+    0.25
+  ],
+  "center_m": [
+    0.08,
+    0.0,
+    0.355
+  ],
+  "density_kg_m3": 840.0,
+  "reference_fuel": {
+    "mass_kg": 50.4,
+    "cg_m": [
+      0.08,
+      0.0,
+      0.355
+    ],
+    "inertia_kg_m2": [
+      [
+        0.9345,
+        0,
+        0
+      ],
+      [
+        0,
+        1.7745,
+        0
+      ],
+      [
+        0,
+        0,
+        2.184
+      ]
+    ]
+  },
+  "basis": "Preserves the existing 60 L reference fuel accounting exactly. Estimated internal box fits within visible 0.696 x 0.490 x 0.306 m tank envelope. Wall thickness, baffles, usable volume and as-built interior not measured.",
+  "surface_model": "Gravity-horizontal quasi-static free surface clipped against a rigid box; ignores dynamic slosh, acceleration-induced surface tilt, baffles and fluid momentum relative to the vessel.",
+  "mass_flux_model": "Slow consumed fuel exits carrying local vessel velocity; no exhaust jet reaction. Body generalized velocities remain continuous when inertia changes.",
+  "dry_hull": {
+    "mass_kg": 1084.1134889835962,
+    "cg_m": [
+      -0.5879172030653869,
+      -0.01921861379397553,
+      0.5092271178666761
+    ],
+    "inertia_kg_m2": [
+      [
+        344.88886004153517,
+        14.608570850456134,
+        -43.861826081216904
+      ],
+      [
+        14.608570850456134,
+        3280.5323373983383,
+        -0.0414061596428608
+      ],
+      [
+        -43.861826081216904,
+        -0.0414061596428608,
+        3457.626594899063
+      ]
+    ]
+  }
+}

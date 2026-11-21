@@ -1,0 +1,22 @@
+{
+  "status": "HYPOTHETICAL_HARDWARE_UPGRADE_NOT_PURCHASE_SPEC_OR_SPEED_GUARANTEE",
+  "target_km_h": 15.0,
+  "motor_electrical_w": 40000.0,
+  "motor_efficiency": 0.84,
+  "static_thrust_n": 6000.0,
+  "advance_zero_thrust_m_s": 12.0,
+  "reference_rpm": 1500.0,
+  "stall_torque_nm": 400.0,
+  "propeller_geometry_scale": 1.5,
+  "battery_pack_multiplier": 3.0,
+  "extra_battery_mass_kg": 304.0,
+  "extra_motor_mass_kg": 30.0,
+  "basis": "Power, static thrust, RPM, propeller, controller, battery layout and motor mass are design-study assumptions, NOT a selected real product. Four additional 76 kg battery proxies are included in dry mass/inertia. Hull geometry comes from CAD; damping is an explicit engineering proxy evaluated with +/-25% sensitivity, not measured high-speed calibration.",
+  "limitations": [
+    "Discrete propeller/hull surface sweep passed; no manufacturing fit or continuous minimum-clearance certification",
+    "No validated wave-making resistance, trim/planing or cavitation at target speed",
+    "Existing 4 kW generator cannot sustain 40 kW propulsion",
+    "Battery continuous-current, thermal, busbar, fuse, contactor and cooling design unverified"
+  ],
+  "mass_layout_source": "component_mass_ledger.json: individual batteries, trays and motor increment"
+}

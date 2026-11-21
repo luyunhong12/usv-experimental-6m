@@ -1,0 +1,13 @@
+{
+  "status": "EXPLICIT_MODEL_SCOPE_NOT_CLEARANCE_APPROVAL",
+  "rules": [
+    {"prefix": "自转行星轮_", "reason": "Internal gear motion is represented by the steering joint; tooth contact not simulated."},
+    {"prefix": "输入太阳轮", "reason": "Internal gear contact omitted; gearbox outer cover remains collidable."},
+    {"prefix": "固定内齿圈", "reason": "Internal gear contact omitted; gearbox outer cover remains collidable."},
+    {"prefix": "轴承滚动体", "reason": "Bearing rolling contact is represented by the revolute joint."},
+    {"prefix": "轴承内圈", "reason": "Bearing internal contact is represented by the revolute joint; housing retained."},
+    {"prefix": "中央推进恒长活动线束", "reason": "Flexible line is not a fixed rigid obstacle. Bending stiffness, routing and bend radius remain unvalidated."}
+  ],
+  "mating_pair": ["V2概念单机 · 桨毂.001", "V2概念单机 · 水下电机"],
+  "mating_pair_note": "Hub/motor shaft connection surfaces overlap in the concept geometry. Native connected links exclude this pair; this is not proof of manufacturing clearance. Blade-to-motor pairs are NOT excluded."
+}

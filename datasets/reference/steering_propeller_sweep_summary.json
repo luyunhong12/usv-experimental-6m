@@ -1,0 +1,55 @@
+{
+  "status": "DISCRETE_EXTERNAL_RIGID_SURFACE_SWEEP_PASS",
+  "steering_deg": [
+    -35,
+    35
+  ],
+  "steering_step_deg": 1,
+  "propeller_spin_deg": [
+    0,
+    355
+  ],
+  "spin_step_deg": 5,
+  "combinations": 5112,
+  "unexpected_pairs": [],
+  "blade_surface_intersections": 0,
+  "initial_pair_count": 17,
+  "mating_pair_observed": [
+    "V2概念单机 · 桨毂.001",
+    "V2概念单机 · 水下电机"
+  ],
+  "excluded_scope": [
+    {
+      "prefix": "自转行星轮_",
+      "reason": "Internal gear motion is represented by the steering joint; tooth contact not simulated."
+    },
+    {
+      "prefix": "输入太阳轮",
+      "reason": "Internal gear contact omitted; gearbox outer cover remains collidable."
+    },
+    {
+      "prefix": "固定内齿圈",
+      "reason": "Internal gear contact omitted; gearbox outer cover remains collidable."
+    },
+    {
+      "prefix": "轴承滚动体",
+      "reason": "Bearing rolling contact is represented by the revolute joint."
+    },
+    {
+      "prefix": "轴承内圈",
+      "reason": "Bearing internal contact is represented by the revolute joint; housing retained."
+    },
+    {
+      "prefix": "中央推进恒长活动线束",
+      "reason": "Flexible line is not a fixed rigid obstacle. Bending stiffness, routing and bend radius remain unvalidated."
+    }
+  ],
+  "limitations": [
+    "No continuous-motion clearance guarantee between sampled angles",
+    "Triangle-surface intersection does not certify closed-solid containment or minimum manufacturing gap",
+    "Bearing/gear contact, shaft fits, motor hub interface and flexible cable mechanics require separate validation",
+    "Self-collision remains disabled; linked joint regions are not being resolved through contact forces"
+  ],
+  "collision_manifest_sha256": "6057ec4d05540be853236ba374329a851e409b6d770bc079f8f7c379fb90d9d4",
+  "exclusion_policy_sha256": "1f76afb430fa88d105f81a62bf8e939b8a8c5475b0a21c362fdfc05a8694265a"
+}

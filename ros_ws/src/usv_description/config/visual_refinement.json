@@ -1,0 +1,13 @@
+{
+  "status": "RENDERING_SETTINGS_NOT_MATERIAL_TEST_DATA",
+  "blade_subdivision_levels": 2,
+  "hull_cosmetic_bevel_m": 0.002,
+  "hull_cosmetic_bevel_segments": 3,
+  "color_source": "Blender viewport diffuse_color; original CAD palette retained",
+  "material_overrides": [
+    {"contains": "缎面铝", "metallic": 0.75, "roughness": 0.32},
+    {"contains": "不锈钢", "metallic": 0.8, "roughness": 0.24},
+    {"contains": "橡胶", "metallic": 0.0, "roughness": 0.85}
+  ],
+  "basis": "Visual approximations by named finish. No measured BRDF; COLLADA Phong mapping is not a full PBR material graph. Hull hard chines and blade envelopes retained."
+}

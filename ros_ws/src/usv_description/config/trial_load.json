@@ -1,0 +1,106 @@
+{
+  "status": "ENGINEERING_ESTIMATE_NOT_MEASURED",
+  "basis": "component_mass_ledger.json; baseline nominal 60 L cached reference. prepare_hull derives current active ledger, and scenario_profiles recomputes each fuel/load case.",
+  "fluid_density_kg_m3": 1000.0,
+  "hull_mass_kg": 1134.5134889835963,
+  "hull_cg_m": [
+    -0.558245429779858,
+    -0.018364839780160895,
+    0.5023756817083945
+  ],
+  "hull_inertia_box_size_m": [
+    5.0,
+    1.8,
+    0.8
+  ],
+  "azimuth_mass_kg": 57.54445112984854,
+  "azimuth_inertia_box_size_m": [
+    0.4,
+    0.3,
+    1.0
+  ],
+  "propeller_mass_kg": 1.5,
+  "propeller_radius_m": 0.18,
+  "linear_damping_N_s_m": [
+    120.0,
+    600.0,
+    1400.0
+  ],
+  "angular_damping_Nm_s_rad": [
+    800.0,
+    1600.0,
+    900.0
+  ],
+  "steering_limit_deg": 35.0,
+  "steering_velocity_limit_rad_s": 0.2,
+  "steering_effort_limit_Nm": 100.0,
+  "steering_kp": 300.0,
+  "steering_kd": 80.0,
+  "note": "Full link inertia tensors from estimated assembly ledger replace old box/disk trial values. Damping and actuator limits remain uncalibrated. No measured-vessel claim.",
+  "mass_model": "itemized_engineering_ledger_v2",
+  "hull_inertia_matrix_kg_m2": [
+    [
+      346.9867066207261,
+      13.990354752452399,
+      -38.90071452364002
+    ],
+    [
+      13.990354752452399,
+      3304.9376686179903,
+      0.10134459834976503
+    ],
+    [
+      -38.90071452364002,
+      0.10134459834976503,
+      3481.3136565732475
+    ]
+  ],
+  "azimuth_cg_m": [
+    0.028152157211819073,
+    4.3330906621272505e-20,
+    0.054406269513446515
+  ],
+  "azimuth_inertia_matrix_kg_m2": [
+    [
+      4.566979905930447,
+      4.16583274071156e-16,
+      0.21773802806524134
+    ],
+    [
+      4.16583274071156e-16,
+      4.904388640556075,
+      -6.499696658767072e-18
+    ],
+    [
+      0.21773802806524134,
+      -6.499696658767072e-18,
+      0.8437097727818273
+    ]
+  ],
+  "propeller_cg_m": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "propeller_inertia_matrix_kg_m2": [
+    [
+      0.016875,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0084375,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0084375
+    ]
+  ],
+  "steering_reference_rate_rad_s": 0.15,
+  "steering_reference_acceleration_rad_s2": 0.3,
+  "steering_ki": 100.0,
+  "steering_integral_basis": "100 Nm/(rad*s) engineering servo integral gain; rejects sustained load offset, bounded by existing 100 Nm effort and energy limits; not OEM tuning"
+}

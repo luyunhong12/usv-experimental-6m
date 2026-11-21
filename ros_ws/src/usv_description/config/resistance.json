@@ -1,0 +1,28 @@
+{
+  "status": "GEOMETRY_SCALED_ENGINEERING_DAMPING_NOT_CALIBRATED",
+  "enabled": true,
+  "reference_profile": "speed15_concept nominal / 60 L / zero payload / static equilibrium",
+  "reference_pose_z_roll_pitch": [
+    -0.24203522295743862,
+    0.01474090814935639,
+    -0.020753535876355603
+  ],
+  "reference_wet_area_m2": 10.336297195730799,
+  "reference_projected_area_m2": [
+    0.36034404899294414,
+    1.2437296471375594,
+    4.493324095600857
+  ],
+  "geometry_sha256": "5c523f945dfda2699420fab718bb2b2dbc0e7ceed911e78e88a81c266d67d9d1",
+  "law": "linear translation and angular damping scale by wet_area/reference; quadratic translation scales by half-integral(abs(body normal_i))*wet_area divided by same reference directional area",
+  "basis": "Quadratic drag is proportional to a reference area for fixed coefficient; preserve existing nominal damping coefficients, explicitly add geometric immersion dependence. This is a surrogate, not resistance identification or a wave-making prediction.",
+  "sources": [
+    "https://ittc.info/media/1816/75-02-02-01.pdf"
+  ],
+  "limitations": [
+    "Projected area uses a half normal integral of the wetted hull, not a measured drag coefficient",
+    "Linear/angular area scaling is an engineering assumption; no frequency-dependent radiation",
+    "No separate ITTC skin friction is added: existing lumped drag already includes unknown friction/form/wave contributions",
+    "Reference remains fixed across load and fuel cases; never normalize each case back to itself"
+  ]
+}

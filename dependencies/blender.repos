@@ -1,0 +1,5 @@
+repositories:
+  blender-mcp:
+    type: git
+    url: https://github.com/ahujasid/blender-mcp.git
+    version: 8f40787fbde8e6d8fe51c5a3553e5635fff40d2b

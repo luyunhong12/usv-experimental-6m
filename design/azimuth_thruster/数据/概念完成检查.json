@@ -1,0 +1,584 @@
+{
+  "parameters": {
+    "steering_limit_deg": 35.0,
+    "sun_teeth": 30,
+    "planet_teeth": 30,
+    "ring_teeth": 90,
+    "gear_module_m": 0.002,
+    "pressure_angle_deg": 20.0,
+    "tooth_clearance_m": 0.00012,
+    "gear_face_width_m": 0.032,
+    "cable_path_length_m": 0.98,
+    "propeller_demo_rpm": 90.0,
+    "note": "概念模型参数，非实际选型。修改后运行 complete_concept.py；齿轮参数必须满足现有壳体空间及同轴行星关系。螺旋桨转速仅用于动画。"
+  },
+  "ratio": 4.0,
+  "gear_relation_ok": true,
+  "cable_pose_checks": [
+    {
+      "angle": -35.0,
+      "cable_length_m": 0.9800000119494763
+    },
+    {
+      "angle": -34.5,
+      "cable_length_m": 0.9799978198650462
+    },
+    {
+      "angle": -34.0,
+      "cable_length_m": 0.9799999962987495
+    },
+    {
+      "angle": -33.5,
+      "cable_length_m": 0.9799978055213585
+    },
+    {
+      "angle": -33.0,
+      "cable_length_m": 0.979999958684995
+    },
+    {
+      "angle": -32.5,
+      "cable_length_m": 0.979997757196416
+    },
+    {
+      "angle": -32.0,
+      "cable_length_m": 0.9799999935800547
+    },
+    {
+      "angle": -31.5,
+      "cable_length_m": 0.9799977973483496
+    },
+    {
+      "angle": -31.0,
+      "cable_length_m": 0.9800000207635652
+    },
+    {
+      "angle": -30.5,
+      "cable_length_m": 0.9799978223785615
+    },
+    {
+      "angle": -30.0,
+      "cable_length_m": 0.9799999924357484
+    },
+    {
+      "angle": -29.5,
+      "cable_length_m": 0.9799977576287104
+    },
+    {
+      "angle": -29.0,
+      "cable_length_m": 0.9799999838661518
+    },
+    {
+      "angle": -28.5,
+      "cable_length_m": 0.9799977926694792
+    },
+    {
+      "angle": -28.0,
+      "cable_length_m": 0.9800000252718714
+    },
+    {
+      "angle": -27.5,
+      "cable_length_m": 0.97999777316358
+    },
+    {
+      "angle": -27.0,
+      "cable_length_m": 0.9799999817367444
+    },
+    {
+      "angle": -26.5,
+      "cable_length_m": 0.9799977974303888
+    },
+    {
+      "angle": -26.0,
+      "cable_length_m": 0.9799999895662178
+    },
+    {
+      "angle": -25.5,
+      "cable_length_m": 0.979997712947392
+    },
+    {
+      "angle": -25.0,
+      "cable_length_m": 0.9799999867110498
+    },
+    {
+      "angle": -24.5,
+      "cable_length_m": 0.9799977437139274
+    },
+    {
+      "angle": -24.0,
+      "cable_length_m": 0.9800000081495255
+    },
+    {
+      "angle": -23.5,
+      "cable_length_m": 0.9799977323951338
+    },
+    {
+      "angle": -23.0,
+      "cable_length_m": 0.9799999751540743
+    },
+    {
+      "angle": -22.5,
+      "cable_length_m": 0.9799977114912181
+    },
+    {
+      "angle": -22.0,
+      "cable_length_m": 0.979999981662551
+    },
+    {
+      "angle": -21.5,
+      "cable_length_m": 0.9799977360873657
+    },
+    {
+      "angle": -21.0,
+      "cable_length_m": 0.9799999806817663
+    },
+    {
+      "angle": -20.5,
+      "cable_length_m": 0.9799976850476455
+    },
+    {
+      "angle": -20.0,
+      "cable_length_m": 0.980000023864564
+    },
+    {
+      "angle": -19.5,
+      "cable_length_m": 0.9799977272703247
+    },
+    {
+      "angle": -19.0,
+      "cable_length_m": 0.9799999987610737
+    },
+    {
+      "angle": -18.5,
+      "cable_length_m": 0.9799976428798798
+    },
+    {
+      "angle": -18.0,
+      "cable_length_m": 0.9799999586508967
+    },
+    {
+      "angle": -17.5,
+      "cable_length_m": 0.9799976406660122
+    },
+    {
+      "angle": -17.0,
+      "cable_length_m": 0.9799999814622906
+    },
+    {
+      "angle": -16.5,
+      "cable_length_m": 0.9799976027153993
+    },
+    {
+      "angle": -16.0,
+      "cable_length_m": 0.9799999673780573
+    },
+    {
+      "angle": -15.5,
+      "cable_length_m": 0.9799975736829029
+    },
+    {
+      "angle": -15.0,
+      "cable_length_m": 0.97999997168302
+    },
+    {
+      "angle": -14.5,
+      "cable_length_m": 0.9799976049904561
+    },
+    {
+      "angle": -14.0,
+      "cable_length_m": 0.9799999994595413
+    },
+    {
+      "angle": -13.5,
+      "cable_length_m": 0.9799976007930147
+    },
+    {
+      "angle": -13.0,
+      "cable_length_m": 0.9799999849447808
+    },
+    {
+      "angle": -12.5,
+      "cable_length_m": 0.9799975377075407
+    },
+    {
+      "angle": -12.0,
+      "cable_length_m": 0.979999979488078
+    },
+    {
+      "angle": -11.5,
+      "cable_length_m": 0.9799975302141634
+    },
+    {
+      "angle": -11.0,
+      "cable_length_m": 0.9799999870909462
+    },
+    {
+      "angle": -10.5,
+      "cable_length_m": 0.9799975027517653
+    },
+    {
+      "angle": -10.0,
+      "cable_length_m": 0.9799999991077011
+    },
+    {
+      "angle": -9.5,
+      "cable_length_m": 0.9799974750329266
+    },
+    {
+      "angle": -9.0,
+      "cable_length_m": 0.979999986217525
+    },
+    {
+      "angle": -8.5,
+      "cable_length_m": 0.9799974612407156
+    },
+    {
+      "angle": -8.0,
+      "cable_length_m": 0.9799999805362531
+    },
+    {
+      "angle": -7.5,
+      "cable_length_m": 0.9799974780805777
+    },
+    {
+      "angle": -7.0,
+      "cable_length_m": 0.980000004996071
+    },
+    {
+      "angle": -6.5,
+      "cable_length_m": 0.9799974316684288
+    },
+    {
+      "angle": -6.0,
+      "cable_length_m": 0.979999974155267
+    },
+    {
+      "angle": -5.5,
+      "cable_length_m": 0.979997423798932
+    },
+    {
+      "angle": -5.0,
+      "cable_length_m": 0.9800000066389559
+    },
+    {
+      "angle": -4.5,
+      "cable_length_m": 0.979997355735778
+    },
+    {
+      "angle": -4.0,
+      "cable_length_m": 0.9800000181705351
+    },
+    {
+      "angle": -3.5,
+      "cable_length_m": 0.9799973583141002
+    },
+    {
+      "angle": -3.0,
+      "cable_length_m": 0.9799999924426491
+    },
+    {
+      "angle": -2.5,
+      "cable_length_m": 0.979997317368095
+    },
+    {
+      "angle": -2.0,
+      "cable_length_m": 0.9799999811315725
+    },
+    {
+      "angle": -1.5,
+      "cable_length_m": 0.9799972750710388
+    },
+    {
+      "angle": -1.0,
+      "cable_length_m": 0.979999977227486
+    },
+    {
+      "angle": -0.5,
+      "cable_length_m": 0.979997238962427
+    },
+    {
+      "angle": 0.0,
+      "cable_length_m": 0.979999999352539
+    },
+    {
+      "angle": 0.5,
+      "cable_length_m": 0.9799972068101581
+    },
+    {
+      "angle": 1.0,
+      "cable_length_m": 0.97999999916981
+    },
+    {
+      "angle": 1.5,
+      "cable_length_m": 0.97999721727826
+    },
+    {
+      "angle": 2.0,
+      "cable_length_m": 0.9799999846139046
+    },
+    {
+      "angle": 2.5,
+      "cable_length_m": 0.9799971681189897
+    },
+    {
+      "angle": 3.0,
+      "cable_length_m": 0.9799999830433599
+    },
+    {
+      "angle": 3.5,
+      "cable_length_m": 0.9799971347143362
+    },
+    {
+      "angle": 4.0,
+      "cable_length_m": 0.9800000048965962
+    },
+    {
+      "angle": 4.5,
+      "cable_length_m": 0.9799970932628422
+    },
+    {
+      "angle": 5.0,
+      "cable_length_m": 0.9799999800665286
+    },
+    {
+      "angle": 5.5,
+      "cable_length_m": 0.9799970512132321
+    },
+    {
+      "angle": 6.0,
+      "cable_length_m": 0.9799999824477545
+    },
+    {
+      "angle": 6.5,
+      "cable_length_m": 0.9799970018875656
+    },
+    {
+      "angle": 7.0,
+      "cable_length_m": 0.9799999748286365
+    },
+    {
+      "angle": 7.5,
+      "cable_length_m": 0.9799969939310785
+    },
+    {
+      "angle": 8.0,
+      "cable_length_m": 0.9800000006634741
+    },
+    {
+      "angle": 8.5,
+      "cable_length_m": 0.9799969694381243
+    },
+    {
+      "angle": 9.0,
+      "cable_length_m": 0.9799999766504652
+    },
+    {
+      "angle": 9.5,
+      "cable_length_m": 0.9799968947761468
+    },
+    {
+      "angle": 10.0,
+      "cable_length_m": 0.9799999825736186
+    },
+    {
+      "angle": 10.5,
+      "cable_length_m": 0.9799968483249819
+    },
+    {
+      "angle": 11.0,
+      "cable_length_m": 0.9799999695299938
+    },
+    {
+      "angle": 11.5,
+      "cable_length_m": 0.9799968553377969
+    },
+    {
+      "angle": 12.0,
+      "cable_length_m": 0.9799999943228975
+    },
+    {
+      "angle": 12.5,
+      "cable_length_m": 0.9799967860962844
+    },
+    {
+      "angle": 13.0,
+      "cable_length_m": 0.9799999974806787
+    },
+    {
+      "angle": 13.5,
+      "cable_length_m": 0.9799967794794217
+    },
+    {
+      "angle": 14.0,
+      "cable_length_m": 0.9799999957912163
+    },
+    {
+      "angle": 14.5,
+      "cable_length_m": 0.9799967270425818
+    },
+    {
+      "angle": 15.0,
+      "cable_length_m": 0.98000000735714
+    },
+    {
+      "angle": 15.5,
+      "cable_length_m": 0.9799966880990887
+    },
+    {
+      "angle": 16.0,
+      "cable_length_m": 0.9799999922954431
+    },
+    {
+      "angle": 16.5,
+      "cable_length_m": 0.9799966459666067
+    },
+    {
+      "angle": 17.0,
+      "cable_length_m": 0.979999994857505
+    },
+    {
+      "angle": 17.5,
+      "cable_length_m": 0.9799966124394968
+    },
+    {
+      "angle": 18.0,
+      "cable_length_m": 0.979999981347568
+    },
+    {
+      "angle": 18.5,
+      "cable_length_m": 0.9799965380102531
+    },
+    {
+      "angle": 19.0,
+      "cable_length_m": 0.9799999984200315
+    },
+    {
+      "angle": 19.5,
+      "cable_length_m": 0.9799965514862834
+    },
+    {
+      "angle": 20.0,
+      "cable_length_m": 0.9800000048861814
+    },
+    {
+      "angle": 20.5,
+      "cable_length_m": 0.979996465641016
+    },
+    {
+      "angle": 21.0,
+      "cable_length_m": 0.9799999890250896
+    },
+    {
+      "angle": 21.5,
+      "cable_length_m": 0.9799964354482653
+    },
+    {
+      "angle": 22.0,
+      "cable_length_m": 0.9799999999605341
+    },
+    {
+      "angle": 22.5,
+      "cable_length_m": 0.9799964026689527
+    },
+    {
+      "angle": 23.0,
+      "cable_length_m": 0.9799999876181652
+    },
+    {
+      "angle": 23.5,
+      "cable_length_m": 0.9799963373418471
+    },
+    {
+      "angle": 24.0,
+      "cable_length_m": 0.9800000045683986
+    },
+    {
+      "angle": 24.5,
+      "cable_length_m": 0.9799962922582558
+    },
+    {
+      "angle": 25.0,
+      "cable_length_m": 0.9799999903970279
+    },
+    {
+      "angle": 25.5,
+      "cable_length_m": 0.979996255367293
+    },
+    {
+      "angle": 26.0,
+      "cable_length_m": 0.979999989114545
+    },
+    {
+      "angle": 26.5,
+      "cable_length_m": 0.9799962586042846
+    },
+    {
+      "angle": 27.0,
+      "cable_length_m": 0.9799999708700088
+    },
+    {
+      "angle": 27.5,
+      "cable_length_m": 0.9799960937103595
+    },
+    {
+      "angle": 28.0,
+      "cable_length_m": 0.9799999799871696
+    },
+    {
+      "angle": 28.5,
+      "cable_length_m": 0.9799960830623579
+    },
+    {
+      "angle": 29.0,
+      "cable_length_m": 0.9799999963110206
+    },
+    {
+      "angle": 29.5,
+      "cable_length_m": 0.9799960663252807
+    },
+    {
+      "angle": 30.0,
+      "cable_length_m": 0.9799999951586716
+    },
+    {
+      "angle": 30.5,
+      "cable_length_m": 0.9799960299972651
+    },
+    {
+      "angle": 31.0,
+      "cable_length_m": 0.979999986365399
+    },
+    {
+      "angle": 31.5,
+      "cable_length_m": 0.9799959536232972
+    },
+    {
+      "angle": 32.0,
+      "cable_length_m": 0.9799999723550017
+    },
+    {
+      "angle": 32.5,
+      "cable_length_m": 0.9799959017058519
+    },
+    {
+      "angle": 33.0,
+      "cable_length_m": 0.9799999821419548
+    },
+    {
+      "angle": 33.5,
+      "cable_length_m": 0.9799959009841501
+    },
+    {
+      "angle": 34.0,
+      "cable_length_m": 0.9800000127965628
+    },
+    {
+      "angle": 34.5,
+      "cable_length_m": 0.9799958298567718
+    },
+    {
+      "angle": 35.0,
+      "cable_length_m": 0.9800000039716911
+    }
+  ],
+  "limits": "No load rating, tooth stress, root fillet, tolerance, cable mechanics or whole-hull collision validation."
+}

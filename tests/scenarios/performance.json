@@ -1,0 +1,629 @@
+{
+  "endurance_10min": {
+    "kind": "endurance",
+    "payload_kg": 150,
+    "fuel_l": 30,
+    "wave_gain": 0.3,
+    "wind": [
+      0,
+      6,
+      0
+    ],
+    "current": [
+      0.15,
+      0.1,
+      0
+    ],
+    "power_mode": "survey",
+    "generator_cycle": true,
+    "stages": [
+      {
+        "name": "endurance",
+        "duration": 600,
+        "mode": "velocity",
+        "speed": 2.0,
+        "yaw_rate": 0.06
+      }
+    ]
+  },
+  "curve_0_25": {
+    "kind": "curve",
+    "payload_kg": 0,
+    "stages": [
+      {
+        "name": "fixed",
+        "duration": 45,
+        "throttle": 0.25,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "curve_0_50": {
+    "kind": "curve",
+    "payload_kg": 0,
+    "stages": [
+      {
+        "name": "fixed",
+        "duration": 45,
+        "throttle": 0.5,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "curve_0_75": {
+    "kind": "curve",
+    "payload_kg": 0,
+    "stages": [
+      {
+        "name": "fixed",
+        "duration": 45,
+        "throttle": 0.75,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "curve_0_100": {
+    "kind": "curve",
+    "payload_kg": 0,
+    "stages": [
+      {
+        "name": "fixed",
+        "duration": 45,
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "curve_150_25": {
+    "kind": "curve",
+    "payload_kg": 150,
+    "stages": [
+      {
+        "name": "fixed",
+        "duration": 45,
+        "throttle": 0.25,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "curve_150_50": {
+    "kind": "curve",
+    "payload_kg": 150,
+    "stages": [
+      {
+        "name": "fixed",
+        "duration": 45,
+        "throttle": 0.5,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "curve_150_75": {
+    "kind": "curve",
+    "payload_kg": 150,
+    "stages": [
+      {
+        "name": "fixed",
+        "duration": 45,
+        "throttle": 0.75,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "curve_150_100": {
+    "kind": "curve",
+    "payload_kg": 150,
+    "stages": [
+      {
+        "name": "fixed",
+        "duration": 45,
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "curve_300_25": {
+    "kind": "curve",
+    "payload_kg": 300,
+    "stages": [
+      {
+        "name": "fixed",
+        "duration": 45,
+        "throttle": 0.25,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "curve_300_50": {
+    "kind": "curve",
+    "payload_kg": 300,
+    "stages": [
+      {
+        "name": "fixed",
+        "duration": 45,
+        "throttle": 0.5,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "curve_300_75": {
+    "kind": "curve",
+    "payload_kg": 300,
+    "stages": [
+      {
+        "name": "fixed",
+        "duration": 45,
+        "throttle": 0.75,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "curve_300_100": {
+    "kind": "curve",
+    "payload_kg": 300,
+    "stages": [
+      {
+        "name": "fixed",
+        "duration": 45,
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "turn_0_left": {
+    "kind": "turn",
+    "payload_kg": 0,
+    "stages": [
+      {
+        "name": "approach",
+        "duration": 20,
+        "throttle": 0.55,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "turn",
+        "duration": 60,
+        "throttle": 0.55,
+        "steering_deg": -20
+      },
+      {
+        "name": "coast",
+        "duration": 15,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "turn_0_right": {
+    "kind": "turn",
+    "payload_kg": 0,
+    "stages": [
+      {
+        "name": "approach",
+        "duration": 20,
+        "throttle": 0.55,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "turn",
+        "duration": 60,
+        "throttle": 0.55,
+        "steering_deg": 20
+      },
+      {
+        "name": "coast",
+        "duration": 15,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "zigzag_0": {
+    "kind": "zigzag",
+    "payload_kg": 0,
+    "stages": [
+      {
+        "name": "approach",
+        "duration": 20,
+        "throttle": 0.55,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "zig0",
+        "duration": 18,
+        "throttle": 0.55,
+        "steering_deg": -15
+      },
+      {
+        "name": "zig1",
+        "duration": 18,
+        "throttle": 0.55,
+        "steering_deg": 15
+      },
+      {
+        "name": "zig2",
+        "duration": 18,
+        "throttle": 0.55,
+        "steering_deg": -15
+      },
+      {
+        "name": "zig3",
+        "duration": 18,
+        "throttle": 0.55,
+        "steering_deg": 15
+      },
+      {
+        "name": "coast",
+        "duration": 20,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "brake_0": {
+    "kind": "brake",
+    "payload_kg": 0,
+    "stages": [
+      {
+        "name": "approach",
+        "duration": 35,
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "reverse_brake",
+        "duration": 18,
+        "throttle": -0.6,
+        "steering_deg": 0
+      },
+      {
+        "name": "reverse",
+        "duration": 25,
+        "throttle": -0.6,
+        "steering_deg": 0
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "turn_300_left": {
+    "kind": "turn",
+    "payload_kg": 300,
+    "stages": [
+      {
+        "name": "approach",
+        "duration": 20,
+        "throttle": 0.55,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "turn",
+        "duration": 60,
+        "throttle": 0.55,
+        "steering_deg": -20
+      },
+      {
+        "name": "coast",
+        "duration": 15,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "turn_300_right": {
+    "kind": "turn",
+    "payload_kg": 300,
+    "stages": [
+      {
+        "name": "approach",
+        "duration": 20,
+        "throttle": 0.55,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "turn",
+        "duration": 60,
+        "throttle": 0.55,
+        "steering_deg": 20
+      },
+      {
+        "name": "coast",
+        "duration": 15,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "zigzag_300": {
+    "kind": "zigzag",
+    "payload_kg": 300,
+    "stages": [
+      {
+        "name": "approach",
+        "duration": 20,
+        "throttle": 0.55,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "zig0",
+        "duration": 18,
+        "throttle": 0.55,
+        "steering_deg": -15
+      },
+      {
+        "name": "zig1",
+        "duration": 18,
+        "throttle": 0.55,
+        "steering_deg": 15
+      },
+      {
+        "name": "zig2",
+        "duration": 18,
+        "throttle": 0.55,
+        "steering_deg": -15
+      },
+      {
+        "name": "zig3",
+        "duration": 18,
+        "throttle": 0.55,
+        "steering_deg": 15
+      },
+      {
+        "name": "coast",
+        "duration": 20,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "brake_300": {
+    "kind": "brake",
+    "payload_kg": 300,
+    "stages": [
+      {
+        "name": "approach",
+        "duration": 35,
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "reverse_brake",
+        "duration": 18,
+        "throttle": -0.6,
+        "steering_deg": 0
+      },
+      {
+        "name": "reverse",
+        "duration": 25,
+        "throttle": -0.6,
+        "steering_deg": 0
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "drag_low": {
+    "kind": "curve",
+    "drag_scale": 0.75,
+    "stages": [
+      {
+        "name": "fixed",
+        "duration": 45,
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "drag_high": {
+    "kind": "curve",
+    "drag_scale": 1.25,
+    "stages": [
+      {
+        "name": "fixed",
+        "duration": 45,
+        "throttle": 1.0,
+        "steering_deg": 0,
+        "mode": "fixed_heading"
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "sensor_dropout": {
+    "kind": "sensor_dropout",
+    "stages": [
+      {
+        "name": "dropout",
+        "duration": 50,
+        "mode": "velocity",
+        "speed": 1.5,
+        "yaw_rate": 0
+      }
+    ]
+  },
+  "low_soc": {
+    "kind": "low_soc",
+    "energy_overrides": {
+      "initial_soc": 0.155
+    },
+    "stages": [
+      {
+        "name": "derating",
+        "duration": 180,
+        "throttle": 1.0,
+        "steering_deg": 5
+      }
+    ]
+  },
+  "hot": {
+    "kind": "hot",
+    "energy_overrides": {
+      "initial_temperature_c": 44.8,
+      "ambient_c": 40
+    },
+    "stages": [
+      {
+        "name": "derating",
+        "duration": 180,
+        "throttle": 1.0,
+        "steering_deg": 5
+      }
+    ]
+  },
+  "fuel_reserve": {
+    "kind": "fuel_reserve",
+    "fuel_l": 1.005,
+    "generator_on": true,
+    "stages": [
+      {
+        "name": "reserve",
+        "duration": 120,
+        "mode": "velocity",
+        "speed": 1.5,
+        "yaw_rate": 0.04
+      }
+    ]
+  },
+  "neutral_rudder": {
+    "kind": "neutral",
+    "stages": [
+      {
+        "name": "neutral",
+        "duration": 45,
+        "throttle": 1.0,
+        "steering_deg": 0
+      },
+      {
+        "name": "coast",
+        "duration": 35,
+        "throttle": 0
+      }
+    ]
+  },
+  "clock_independent": {
+    "kind": "clock_independent",
+    "interfaces_args": [
+      "clock:=False"
+    ],
+    "startup_timeout": 10,
+    "stages": [
+      {
+        "name": "clock_test",
+        "mode": "velocity",
+        "speed": 1.5,
+        "duration": 20
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.16)
+project(usv_ardupilot)
+find_package(ament_cmake REQUIRED)
+install(FILES scripts/json_time.py DESTINATION lib/${PROJECT_NAME})
+install(PROGRAMS scripts/json_bridge.py DESTINATION lib/${PROJECT_NAME})
+install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
+ament_package()

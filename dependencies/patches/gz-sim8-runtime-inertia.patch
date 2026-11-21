@@ -1,0 +1,80 @@
+--- gz-sim8_8.15.0/Physics.cc
++++ usv_physics/Physics.cc
+@@ -16,6 +16,12 @@
+  */
+ 
+ #include "Physics.hh"
++#include <usv_physics/RuntimeInertia.hh>
++#include "World.hh"
++#include <dart/dynamics/Skeleton.hpp>
++#include <dart/dynamics/BodyNode.hpp>
++#include <dart/dynamics/Inertia.hpp>
++#include <stdexcept>
+ 
+ #include <gz/msgs/contact.pb.h>
+ #include <gz/msgs/contacts.pb.h>
+@@ -773,6 +779,7 @@
+ 
+   //////////////////////////////////////////////////
+   /// \brief World EntityFeatureMap
++  public: struct NativeDartFeatureList : physics::FeatureList<physics::dartsim::RetrieveWorld>{};
+   public: using WorldEntityMap = EntityFeatureMap3d<
+           physics::World,
+           MinimumFeatureList,
+@@ -785,7 +792,8 @@
+           CollisionDetectorFeatureList,
+           SolverFeatureList,
+           WorldModelFeatureList,
+-          CollisionPairMaxContactsFeatureList
++          CollisionPairMaxContactsFeatureList,
++          NativeDartFeatureList
+           >;
+ 
+   /// \brief A map between world entity ids in the ECM to World Entities in
+@@ -2206,6 +2214,46 @@
+ void PhysicsPrivate::UpdatePhysics(EntityComponentManager &_ecm)
+ {
+   GZ_PROFILE("PhysicsPrivate::UpdatePhysics");
++  // Workspace extension: update the native DART rigid body, not just ECM data.
++  // Scope deliberately excludes nested models, welded mirrors and fluid-added mass.
++  std::vector<Entity> appliedInertias;
++  _ecm.Each<usv::physics::RuntimeInertiaCmd, components::ParentEntity, components::Name>(
++    [&](const Entity &entity, const usv::physics::RuntimeInertiaCmd *cmd,
++        const components::ParentEntity *parent, const components::Name *name) {
++      auto modelParent=_ecm.Component<components::ParentEntity>(parent->Data());
++      auto modelName=_ecm.Component<components::Name>(parent->Data());
++      if(!modelParent || !modelName || !_ecm.Component<components::World>(modelParent->Data()))
++        throw std::runtime_error("Runtime inertial adapter requires a top-level model");
++      auto native=this->entityWorldMap.EntityCast<NativeDartFeatureList>(modelParent->Data());
++      if(!native)throw std::runtime_error("Runtime inertia requires the DART RetrieveWorld feature");
++      auto world=native->GetDartsimWorld();auto skeleton=world->getSkeleton(modelName->Data());
++      auto body=skeleton?skeleton->getBodyNode(name->Data()):nullptr;
++      if(!body)throw std::runtime_error("Runtime inertial body not found in DART");
++      const auto &value=cmd->Data();
++      if(!value.MassMatrix().IsValid() || value.FluidAddedMass())
++        throw std::runtime_error("Invalid runtime inertia or unsupported added mass");
++      for(std::size_t i=0;i<skeleton->getNumBodyNodes();++i)
++        if(skeleton->getBodyNode(i)->getName().find("_welded_mirror_")!=std::string::npos)
++          throw std::runtime_error("Runtime inertia does not support welded mirror nodes");
++      // Preserve generalized positions and velocities. Slow onboard fuel loss is
++      // assumed to leave with the local ship velocity; no artificial rocket impulse.
++      dart::dynamics::Inertia inertia;
++      inertia.setMass(value.MassMatrix().Mass());
++      inertia.setLocalCOM(math::eigen3::convert(value.Pose().Pos()));
++      inertia.setMoment(math::eigen3::convert(value.Moi()));
++      body->setInertia(inertia);
++      const auto &actual=body->getInertia();
++      math::MassMatrix3d matrix;matrix.SetMass(actual.getMass());
++      matrix.SetMoi(math::eigen3::convert(actual.getMoment()));
++      math::Inertiald verified(matrix,math::Pose3d(math::eigen3::convert(actual.getLocalCOM()),math::Quaterniond::Identity));
++      _ecm.SetComponentData<components::Inertial>(entity,verified);
++      if(!_ecm.Component<usv::physics::RuntimeInertiaApplied>(entity))
++        _ecm.CreateComponent(entity,usv::physics::RuntimeInertiaApplied(verified));
++      else _ecm.SetComponentData<usv::physics::RuntimeInertiaApplied>(entity,verified);
++      appliedInertias.push_back(entity);return true;
++    });
++  for(auto entity:appliedInertias)_ecm.RemoveComponent<usv::physics::RuntimeInertiaCmd>(entity);
++
+   // Gravity state
+   _ecm.Each<components::Gravity>(
+       [&](const Entity & _entity, const components::Gravity *_gravity)

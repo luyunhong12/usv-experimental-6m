@@ -1,0 +1,60 @@
+{
+  "status": "pass",
+  "poses": [
+    {
+      "frame": 1,
+      "azimuth_deg": 0.0,
+      "evaluated_cable_length_m": 0.9799999546506476,
+      "endpoint_error_m": 2.384185791015625e-07
+    },
+    {
+      "frame": 15,
+      "azimuth_deg": -16.595186233520508,
+      "evaluated_cable_length_m": 0.9799978745500928,
+      "endpoint_error_m": 5.274337520810327e-06
+    },
+    {
+      "frame": 30,
+      "azimuth_deg": -35.0,
+      "evaluated_cable_length_m": 0.9800000564552727,
+      "endpoint_error_m": 7.450580596923828e-09
+    },
+    {
+      "frame": 45,
+      "azimuth_deg": -24.0625,
+      "evaluated_cable_length_m": 0.9799995116108061,
+      "endpoint_error_m": 1.2302260065406736e-06
+    },
+    {
+      "frame": 60,
+      "azimuth_deg": 0.0,
+      "evaluated_cable_length_m": 0.9799999546506476,
+      "endpoint_error_m": 2.384185791015625e-07
+    },
+    {
+      "frame": 75,
+      "azimuth_deg": 24.0625,
+      "evaluated_cable_length_m": 0.9799990674695059,
+      "endpoint_error_m": 1.228781230931777e-06
+    },
+    {
+      "frame": 90,
+      "azimuth_deg": 35.0,
+      "evaluated_cable_length_m": 0.980000062660057,
+      "endpoint_error_m": 4.768953623117584e-07
+    },
+    {
+      "frame": 105,
+      "azimuth_deg": 17.5,
+      "evaluated_cable_length_m": 0.9799964430525916,
+      "endpoint_error_m": 5.279155661462868e-06
+    },
+    {
+      "frame": 120,
+      "azimuth_deg": 0.0,
+      "evaluated_cable_length_m": 0.9799999546506476,
+      "endpoint_error_m": 2.384185791015625e-07
+    }
+  ],
+  "cover_saved_closed": true
+}
