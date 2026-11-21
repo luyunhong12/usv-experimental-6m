@@ -183,7 +183,7 @@ ap=child(model,'plugin',filename='libUsvAppendageHydrodynamics.so',name='usv::Ap
 child(ap,'link_name',appendage_cfg['link']);child(ap,'density',appendage_cfg['density_kg_m3']);child(ap,'water_level',0)
 for surface in appendage_cfg['surfaces']:
  sf=child(ap,'surface',name=surface['name']);child(sf,'cd0',surface['profile_drag_coefficient']);child(sf,'efficiency',surface['oswald_efficiency'])
- for x,z in surface['outline_xz_m']:child(sf,'point',nums([x,0,z]))
+ for outline_x,outline_z in surface['outline_xz_m']:child(sf,'point',nums([outline_x,0,outline_z]))
 for plug in model.findall('plugin'):
  if plug.get('filename') in ['libUsvHullHydrostatics.so','libUsvAzimuthPropulsion.so','libUsvAppendageHydrodynamics.so']:
   child(plug,'topic_namespace','usv');field=child(plug,'wavefield');child(field,'topic','/vrx/wavefield/parameters');wave=child(field,'wave');child(wave,'gain',0);child(wave,'steepness',0)
@@ -230,7 +230,7 @@ for inc in list(ww.findall('include')):ww.remove(inc)
 for p in list(ww.findall('plugin')):
  if 'Wind' in p.get('name','') or 'Publisher' in p.get('name',''):ww.remove(p)
 water=child(ww,'model',name='flat_water');child(water,'static','true');l=child(water,'link',name='water');vis=child(l,'visual',name='surface');child(vis,'cast_shadows','false');plane=child(child(vis,'geometry'),'plane');child(plane,'normal','0 0 1');child(plane,'size','2000 2000');mat=child(vis,'material');child(mat,'ambient','0.02 0.15 0.2 1');child(mat,'diffuse','0.02 0.25 0.35 1');child(vis,'transparency',.3)
-inc=child(ww,'include');child(inc,'uri',str(D/'models/usv_azimuth_trial.sdf'));child(inc,'pose',nums([0,0,z,roll,pitch,0]))
+inc=child(ww,'include');child(inc,'uri',str(D/'models/usv_azimuth_trial.sdf'));child(inc,'pose',nums([0,0,*sol.x,0]))
 cam=ww.find("gui/plugin[@name='3D View']/camera_pose")
 if cam is not None:cam.text='-9 -9 6 0 0.4 0.8'
 E.indent(world);world.write(W/'src/usv_simulation/worlds/usv_hull_trial.sdf',encoding='utf-8',xml_declaration=True)

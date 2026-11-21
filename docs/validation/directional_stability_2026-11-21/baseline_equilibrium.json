@@ -1,0 +1,24 @@
+{
+  "case": "equilibrium",
+  "samples": 295,
+  "render_captured": true,
+  "passed": true,
+  "final_sim_time_s": 30.192,
+  "final_z_roll_pitch": [
+    -0.2108916484315633,
+    0.014955188962778716,
+    -0.0047881037531027635
+  ],
+  "target_z_roll_pitch": [
+    -0.21088824981986115,
+    0.014955876900652013,
+    -0.004797416682887176
+  ],
+  "final_displacement_m3": 1.1935499375817937,
+  "tail_max_pose_error": [
+    4.064266850373199e-06,
+    9.081056053603792e-07,
+    1.4121852248939575e-05
+  ],
+  "finite": true
+}
