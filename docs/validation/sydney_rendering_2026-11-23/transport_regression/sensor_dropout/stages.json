@@ -1,0 +1,20 @@
+[
+  {
+    "name": "dropout",
+    "duration": 50,
+    "mode": "velocity",
+    "speed": 1.5,
+    "yaw_rate": 0,
+    "index": 0,
+    "start_sim": 1.209,
+    "end_sim": 51.258,
+    "distance_triggered": false,
+    "stage_origin": [
+      -480.0,
+      180.0,
+      -8.462564201097866e-18
+    ],
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  }
+]

@@ -183,10 +183,11 @@ if "initial_yaw" in spec:
     pose[5] = str(spec["initial_yaw"])
     inc.find("pose").text = " ".join(pose)
 
-for link in bm.findall("link"):
-    for sensor in list(link.findall("sensor")):
-        if sensor.get("type") in ["camera", "gpu_lidar"]:
-            link.remove(sensor)
+if not spec.get("rendering_audit"):
+    for link in bm.findall("link"):
+        for sensor in list(link.findall("sensor")):
+            if sensor.get("type") in ["camera", "gpu_lidar"]:
+                link.remove(sensor)
 hydro = bm.find("plugin[@name='usv::HullHydrostatics']")
 for tag in [
     "linear_damping",
@@ -302,6 +303,20 @@ def on_health(msg):
 
 
 ros.create_subscription(String, "/usv/control/health", on_health, 10)
+rendering = None
+if spec.get("rendering_audit"):
+    from rendering_audit import RenderingAudit
+
+    if spec.get("isolated_water"):
+        raise ValueError("Rendering acceptance requires the complete Sydney scene")
+    rendering = RenderingAudit(
+        ros,
+        out,
+        json.loads((w / "src/usv_description/config/payloads.json").read_text()),
+        spec["rendering_audit"],
+    )
+if rendering:
+    rendering.observe_source(node, ros)
 procs = []
 files = []
 cleaned = False
@@ -355,7 +370,12 @@ signal.signal(signal.SIGINT, interrupted)
 for name, args in [
     (
         "gazebo",
-        ["bash", str(tool_path("run_hull_trial.sh")), "world:=" + str(world)],
+        [
+            "bash",
+            str(tool_path("run_hull_trial.sh")),
+            "world:=" + str(world),
+            *spec.get("gazebo_args", []),
+        ],
     ),
     (
         "interfaces",
@@ -389,11 +409,24 @@ resumed = False
 last_retry = wall
 transport_retries = []
 try:
-    while time.monotonic() - wall < sum(x["duration"] for x in stages) * 3 + 90:
+    while (
+        time.monotonic() - wall
+        < sum(x["duration"] for x in stages) * spec.get("wall_timeout_factor", 3) + 90
+    ):
         if any(x.poll() is not None for x in procs):
             raise RuntimeError("Launch process exited")
         rclpy.spin_once(ros, timeout_sec=0.01)
+        if rendering:
+            # 三路原始/公开图像等合计超过 50 Hz；不能被控制循环的 20 ms 休眠限流。
+            # 非阻塞且有上限，避免传感器洪泛饿死指令发布和健康检查。
+            for _ in range(8):
+                rclpy.spin_once(ros, timeout_sec=0.0)
         now = time.monotonic()
+        if rendering:
+            rendering.sample_resources(
+                rows["propulsion/state"][-1][0] if rows["propulsion/state"] else 0,
+                procs,
+            )
         gate.fresh(now)
         if now - last_progress > 1:
             (out / "progress.json").write_text(
@@ -408,6 +441,17 @@ try:
                         "wall_s": now - wall,
                         "health": health[-1] if health else None,
                         "missing_streams": [k for k, v in rows.items() if not v],
+                        "rendering_streams": (
+                            {
+                                k: {
+                                    "count": len(v),
+                                    "last_valid": v[-1]["valid"] if v else False,
+                                }
+                                for k, v in rendering.rows.items()
+                            }
+                            if rendering
+                            else None
+                        ),
                     }
                 )
             )
@@ -436,7 +480,12 @@ try:
                         transport_retries.append({"wall_s": now - wall, "topic": topic})
             if now - wall > spec.get("startup_timeout", 60):
                 raise RuntimeError("Readiness timeout; no timed trial was started")
-            if not (ready and gate.fresh(now) and all(rows.values())):
+            if not (
+                ready
+                and gate.fresh(now)
+                and all(rows.values())
+                and (rendering is None or rendering.ready())
+            ):
                 continue
             start_sim = rows["propulsion/state"][-1][0]
             stage_start = start_sim
@@ -593,6 +642,10 @@ def _load_runtime_dependencies_2():
 
 (analyze,) = _load_runtime_dependencies_2()
 
+if rendering:
+    rendering.finish(
+        start_sim, stage_log[-1]["end_sim"] if stage_log else rendering.sim
+    )
 r = analyze(out)
 print(json.dumps(r, indent=2))
 raise SystemExit(0 if r["passed"] else 1)

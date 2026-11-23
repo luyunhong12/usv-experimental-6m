@@ -1,0 +1,9 @@
+{
+  "full_report": "20261123T065429Z-8a75445c",
+  "supervisor_sources_unchanged": true,
+  "suite_execution_unchanged": true,
+  "complete_original_case_seals_verified": true,
+  "public_compressed_telemetry_matches_original": true,
+  "runtime_commit_base": "6331cab887c1dfa143ea8cd207a4e3de2b74e545",
+  "scope": "Public selection of original packets; case_binding describes complete local originals. File hashes identify final runtime changes before the documentation commit."
+}

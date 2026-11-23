@@ -1,0 +1,50 @@
+{
+  "limits": {
+    "warmup_s": 30,
+    "minimum_delivery_ratio": 0.95,
+    "max_gap_sim_s": 1.0,
+    "max_latency_sim_s": 1.0,
+    "minimum_mean_rtf": 0.5,
+    "maximum_rss_mib": 6144,
+    "maximum_rss_growth_mib": 512
+  },
+  "errors": [],
+  "streams": {
+    "camera": {
+      "passed": false
+    },
+    "camera_info": {
+      "passed": false
+    },
+    "camera_right": {
+      "passed": false
+    },
+    "camera_right_info": {
+      "passed": false
+    },
+    "camera_side": {
+      "passed": false
+    },
+    "camera_side_info": {
+      "passed": false
+    },
+    "lidar": {
+      "passed": false
+    },
+    "points": {
+      "passed": false
+    }
+  },
+  "checks": {
+    "camera": false,
+    "camera_info": false,
+    "camera_right": false,
+    "camera_right_info": false,
+    "camera_side": false,
+    "camera_side_info": false,
+    "lidar": false,
+    "points": false,
+    "resource_samples": false
+  },
+  "passed": false
+}

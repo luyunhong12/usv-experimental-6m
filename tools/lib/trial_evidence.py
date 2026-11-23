@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -65,6 +66,7 @@ def build_inputs():
                     ".h",
                     ".py",
                     ".json",
+                    ".xml",
                     ".sdf",
                     ".txt",
                     ".obj",
@@ -84,7 +86,8 @@ def binaries():
     paths = [
         p
         for p in (ROOT / "ros_ws/install").rglob("*")
-        if p.suffix in {".so", ".py", ".json", ".sdf", ".txt", ".obj", ".stl", ".dae"}
+        if p.suffix
+        in {".so", ".py", ".json", ".xml", ".sdf", ".txt", ".obj", ".stl", ".dae"}
         and "instances" not in p.parts
         and p.name != "usv_sydney.sdf"
     ]
@@ -131,7 +134,7 @@ def execution_snapshot():
             and "__pycache__" not in p.parts
             and "instances" not in p.parts
             and p.suffix
-            in {".py", ".sh", ".json", ".txt", ".sdf", ".obj", ".stl", ".dae"}
+            in {".py", ".sh", ".json", ".xml", ".txt", ".sdf", ".obj", ".stl", ".dae"}
         )
     # Generated Sydney world changes per launch; each trial seals its own world.
     paths = [p for p in paths if p.name != "usv_sydney.sdf"]
@@ -143,7 +146,30 @@ def execution_snapshot():
             "dependencies/sources.repos",
         ]
     )
-    return {"build": built, "runtime": hashes(paths)}
+    environment = {
+        key: os.environ.get(key)
+        for key in [
+            "RMW_IMPLEMENTATION",
+            "FASTRTPS_DEFAULT_PROFILES_FILE",
+            "FASTDDS_DEFAULT_PROFILES_FILE",
+            "FASTDDS_BUILTIN_TRANSPORTS",
+            "RMW_FASTRTPS_USE_QOS_FROM_XML",
+            "LIBGL_ALWAYS_SOFTWARE",
+            "__NV_PRIME_RENDER_OFFLOAD",
+            "__GLX_VENDOR_LIBRARY_NAME",
+            "DISPLAY",
+        ]
+    }
+    external_profiles = {}
+    for key in ["FASTRTPS_DEFAULT_PROFILES_FILE", "FASTDDS_DEFAULT_PROFILES_FILE"]:
+        if environment[key]:
+            external_profiles[key] = file_hash(Path(environment[key]))
+    return {
+        "build": built,
+        "runtime": hashes(paths),
+        "environment": environment,
+        "external_profiles": external_profiles,
+    }
 
 
 def initialize_suite(output, specs, snapshot, resume=False):
@@ -184,7 +210,7 @@ def seal_case(output, name, spec, fingerprint):
         p
         for p in output.rglob("*")
         if p.is_file()
-        and p.suffix in {".json", ".csv", ".sdf"}
+        and p.suffix in {".json", ".csv", ".sdf", ".xml", ".png", ".npz"}
         and p.name not in {"case_binding.json", "progress.json"}
     ]
     record = {

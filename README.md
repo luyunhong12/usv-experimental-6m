@@ -4,7 +4,7 @@
 
 > **项目定位：工程仿真平台，不是经过海试标定的实船数字孪生。** 没有完整实船数据时，使用明确标注来源和假设的参数。能够运行、画面精细、控制器能保持航向，都不能代替物理验证。
 >
-> **本轮用小型被动稳定鳍改善 60% 倒车受扰恢复，不使用航向保持。** 左右扰动后约 19.0 / 19.7 s 恢复，通过原 30 s 门槛；44 项固定版本工况通过。轻载全速约 15.03 km/h，仍有小幅配平偏航及工程参数边界。本轮未接 ArduPilot/Nav2。[原因、尺寸与结果](docs/validation/reverse_recovery_2026-11-23/README.md) · [ROS 操作指南](docs/getting_started/README.md)。
+> **当前使用小型被动稳定鳍改善 60% 倒车受扰恢复，不使用航向保持。** 左右扰动后约 19.0 / 19.7 s 恢复，通过原 30 s 门槛；44 项固定版本工况通过。轻载全速约 15.03 km/h，仍有小幅配平偏航及工程参数边界。本轮未接 ArduPilot/Nav2。[原因、尺寸与结果](docs/validation/reverse_recovery_2026-11-23/README.md) · [ROS 操作指南](docs/getting_started/README.md)。
 
 ## 船长什么样，结构是什么
 
@@ -59,10 +59,14 @@ flowchart LR
 | **推进与转向**：正反推、桨轴转矩/功率限制、舵角与速率约束 | [推进参数](ros_ws/src/usv_description/config/propulsion.json)、[厂家参考与建模假设](docs/history/2026-11-19_推进与操纵验证.md)、[当前操纵验收](docs/validation/reverse_recovery_2026-11-23/README.md) | 6 kW 厂家参考不证明 40 kW 概念方案；缺少真实桨的全工况性能图与空化数据 |
 | **油量、电量与保护**：能量平衡、电流积分、发电/充电限制、负载和保护状态 | [能源配置](ros_ws/src/usv_energy/config/energy.json)、[原理与设备来源](docs/history/2026-11-19_油电能源与感知验证.md)、[能源基线](docs/validation/baseline_2026-11-21/README.md)、[加鳍后 20 分钟与保护复验](docs/validation/contact_endurance_2026-11-23/README.md) | 电池内阻、热参数及油耗曲线有估算；两小时能源计算不等于实际续航 |
 | **燃油引起的动态质量**：准静态液面体积积分，更新质量、重心和完整惯性，回读物理后端 | [油箱参数](ros_ws/src/usv_description/config/fuel_tank.json)、[方法及后端验证](docs/history/2026-11-19_燃油质量重心惯性联动.md)、[公开测试摘要](docs/validation/evidence/fuel_mass_historical.json) | 未建模油液动态晃荡、进水及柔性结构 |
-| **传感器与运行接口**：IMU、GPS、相机、点云、TF、健康检测；就绪检测、失联停推及退出清理 | [WAM-V 差距与接口改进](docs/history/2026-11-20_WAMV差距完善.md)、[启动与运行验证](docs/history/2026-11-21_阻力操纵与启动可靠性改进.md)、[完整场景回归](docs/validation/directional_stability_2026-11-21/full_sydney_smoke.json) | 传感器噪声未实机标定；独立 amd64 容器复现已通过；其他平台和所有环境长期测试未覆盖 |
+| **传感器与运行接口**：IMU、GPS、相机、点云、TF、健康检测；就绪检测、失联停推及退出清理 | [WAM-V 差距与接口改进](docs/history/2026-11-20_WAMV差距完善.md)、[启动与运行验证](docs/history/2026-11-21_阻力操纵与启动可靠性改进.md)、[完整悉尼图像/点云长测及 DDS 修复](docs/validation/sydney_rendering_2026-11-23/README.md) | 传感器噪声未实机标定；独立 amd64 容器复现已通过；其他平台和所有环境长期测试未覆盖 |
 | **ArduPilot / Nav2**：保留历史适配，先完成船体物理，再验收控制所有权与导航 | [集成规划与当前边界](docs/integration/README.md) | 本阶段没有完成这两套自主航行系统的集成验收 |
 
 历史过程记录保留当时参数，不应与当前配置混用。当前参数入口是 [参数说明](docs/parameters/README.md)；已公开的历史附件及其校验值见 [证据清单](docs/validation/evidence/README.md)。
+
+## 完整悉尼场景与传感器运行
+
+完整官方悉尼地图、三路相机和二维/三维 GPU 雷达完成 GUI 90 s 与 EGL 20 分钟仿真验收。修复独立侧相机投影中的伪双目基线，以及本机 Fast DDS 大图像传输丢帧；保持原分辨率、5 Hz 仿真频率、sensor-data QoS 和 1 ms 物理步长。长测平均实时率 0.569，进程树 RSS 峰值约 2.10 GiB；尚未达到实时1.0。[参数依据、原失败、实测曲线与图片/点云证据](docs/validation/sydney_rendering_2026-11-23/README.md)。
 
 ## 当前受力审计与操纵验证
 
@@ -180,7 +184,7 @@ python3 tests/regression/run_performance_suite.py \
   --spec tests/scenarios/performance.json --output artifacts/my_performance_run
 ```
 
-每次试验使用新的输出目录，保留场景快照、遥测 CSV、健康日志及判定；复用必须显式 `--resume` 且版本、工况与证据一致。原生测试需要本机 ROS DDS / Gazebo Transport 通信权限。本轮 Code Supervisor full 与构建测试通过：12 项 C++、47 项 Python、5 项设计接口测试。相同生产 C++ 另通过 deep：选定核心头文件覆盖率 97.746%，12 个转向积分有限变异被杀死，ASan/UBSan 与原生回归通过；deep 当时 Python 为 46 项，之后新增受力分析反例测试。[检查范围、版本差异及证据](docs/validation/reverse_recovery_2026-11-23/README.md)。操纵品质另行核对原有门槛；这是本地验证，不是假称 GitHub CI 或实船验收。
+每次试验使用新的输出目录，保留场景快照、遥测 CSV、健康日志及判定；复用必须显式 `--resume` 且版本、工况与证据一致。原生测试需要本机 ROS DDS / Gazebo Transport 通信权限。本轮 Code Supervisor full 与构建测试通过：12 项 C++、55 项 Python、5 项设计接口测试，[最终检查与24项人工审查](docs/validation/sydney_rendering_2026-11-23/code-review.md)。相同生产 C++ 在此前通过 deep：选定核心头文件覆盖率 97.746%，12 个转向积分有限变异被杀死，ASan/UBSan 与原生回归通过；deep 当时 Python 为 46 项，之后新增受力分析反例测试。[检查范围、版本差异及证据](docs/validation/reverse_recovery_2026-11-23/README.md)。操纵品质另行核对原有门槛；这是本地验证，不是假称 GitHub CI 或实船验收。
 
 ## 已知问题与下一步
 
@@ -189,7 +193,7 @@ python3 tests/regression/run_performance_suite.py \
 3. **高速与复杂海况不足**：兴波、滑行、砰击、出水/空化及长时间大风浪尚未充分覆盖。
 4. **能源和实装边界**：40 kW 是概念动力方案；重载约 14.29 km/h。完整热管理、线长压降、安装强度及内部干涉仍待设计核查。
 5. **接触精度有限**：已修复薄鳍持续毫米级穿透，名义末段小于 0.01 mm；10 kg、约 4.37 m/s 探针仍有 2.87 mm 瞬态峰值，不代表零穿透、整船冲击或结构强度认证。
-6. **验证范围有限**：已补齐加鳍后 20 分钟物理航行与 10 分钟零舵长测；1 ms 有计算代价，完整悉尼地图与 GPU 传感器长测、加鳍后独立容器复验和其他平台仍待完成。
+6. **验证范围有限**：已补齐加鳍后 20 分钟物理航行与 10 分钟零舵长测；完整悉尼 + GPU 传感器长测已补齐，本机平均实时率 0.569，仍慢于实时；GUI 只验收90 s。加鳍后独立容器复验、跨机器及不同负载仍待完成。
 
 物理问题稳定后，再建立定位融合与 Nav2 船舶适配，重新验收 ArduPilot。两种控制模式必须明确执行器所有权，不能同时叠加控制。[集成规划](docs/integration/README.md) · [当前问题清单](docs/validation/known_issues.md)。
 
@@ -202,6 +206,7 @@ python3 tests/regression/run_performance_suite.py \
 | 为什么取这个质量、密度、功率、油量或水动力系数 | [参数入口](docs/parameters/README.md)、[科学依据地图](docs/parameters/evidence_map.md)、[逐件台账](ros_ws/src/usv_description/config/component_mass_ledger.json) |
 | 不随浪、漂浮姿态是否合理 | [静水试验](docs/history/2026-11-19_船体接入与静水试验.md)、[随浪试验](docs/history/2026-11-20_船体外观装配与随浪优化.md) |
 | 高速转圈、零舵偏航、倒车/转向和航速 | [当前操纵品质](docs/validation/reverse_recovery_2026-11-23/README.md)；[受力归因](docs/validation/force_maneuvers_2026-11-21/README.md)；对照旧版本看 [历史性能基线](docs/validation/baseline_2026-11-21/README.md) |
+| 相机掉帧、侧相机标定、点云、GPU 性能与内存 | [完整场景传感器报告](docs/validation/sydney_rendering_2026-11-23/README.md)、[运行指南](docs/getting_started/README.md) |
 | 油电消耗、质量重心变化是否真的接入 | [能源建模](docs/history/2026-11-19_油电能源与感知验证.md)、[动态惯性验证](docs/history/2026-11-19_燃油质量重心惯性联动.md) |
 | 还有什么没做好、下一步怎么接飞控/导航 | [已知问题](docs/validation/known_issues.md)、[集成规划](docs/integration/README.md) |
 | 如何核对测试结果，为什么有的历史附件打不开 | [公开证据及来源](docs/validation/evidence/README.md)、[全部文档索引](docs/README.md)；完整 artifacts 仍在本地，不假称已全部公开 |

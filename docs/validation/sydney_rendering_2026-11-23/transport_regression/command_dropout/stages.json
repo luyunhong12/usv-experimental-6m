@@ -1,0 +1,19 @@
+[
+  {
+    "name": "dropout",
+    "duration": 50,
+    "throttle": 0.5,
+    "steering_deg": 0,
+    "index": 0,
+    "start_sim": 1.109,
+    "end_sim": 51.158,
+    "distance_triggered": false,
+    "stage_origin": [
+      -480.0,
+      180.0,
+      -8.462564201097866e-18
+    ],
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  }
+]

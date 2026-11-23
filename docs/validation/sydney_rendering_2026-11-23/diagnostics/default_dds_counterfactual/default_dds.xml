@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dds xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles"><profiles><participant profile_name="upstream_default_control" is_default_profile="true"><rtps><useBuiltinTransports>true</useBuiltinTransports></rtps></participant></profiles></dds>

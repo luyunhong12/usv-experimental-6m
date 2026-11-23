@@ -1,0 +1,34 @@
+{
+  "case": "sydney_sensors_smoke",
+  "spec": {
+    "kind": "endurance",
+    "payload_kg": 150,
+    "fuel_l": 30,
+    "wave_gain": 0.3,
+    "power_mode": "survey",
+    "startup_timeout": 180,
+    "wall_timeout_factor": 8,
+    "rendering_audit": {
+      "warmup_s": 30,
+      "minimum_delivery_ratio": 0.95,
+      "max_gap_sim_s": 1.0,
+      "max_latency_sim_s": 1.0,
+      "minimum_mean_rtf": 0.5,
+      "maximum_rss_mib": 6144,
+      "maximum_rss_growth_mib": 512
+    },
+    "stages": [
+      {
+        "name": "endurance",
+        "duration": 60,
+        "mode": "direct",
+        "throttle": 0.35,
+        "steering_deg": 12
+      }
+    ]
+  },
+  "finished_stages": 1,
+  "start_sim": 0.908,
+  "failure": null,
+  "bridge_resumed": false
+}

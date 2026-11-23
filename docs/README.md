@@ -1,5 +1,7 @@
 # 文档入口
 
+- [完整悉尼场景、相机与点云长测](validation/sydney_rendering_2026-11-23/README.md)：相机投影、DDS 大消息传输、GUI 与连续运行性能。
+
 - [薄鳍接触精度与加鳍后长时运行](validation/contact_endurance_2026-11-23/README.md)：数值接触策略、测试隔离修正及固定版本回归。
 
 - [ROS 2 / VRX 启动与操船](getting_started/README.md)

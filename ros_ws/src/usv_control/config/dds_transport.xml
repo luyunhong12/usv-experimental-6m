@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    本机三路 RGB 图像与点云的 Fast DDS 2.14 传输预算，不改变传感器 QoS。
+    xmlns：Fast DDS 配置命名空间。
+-->
+<dds xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles">
+  <!-- 定义传输及默认参与者配置。 -->
+  <profiles>
+    <!-- 本机用共享内存；UDP 保留发现和非本机通信。 -->
+    <transport_descriptors>
+      <!-- 定义共享内存传输。 -->
+      <transport_descriptor>
+        <!-- 共享内存传输标识。 -->
+        <transport_id>usv_shm</transport_id>
+        <!-- Fast DDS 的共享内存类型。 -->
+        <type>SHM</type>
+        <!-- 单消息上限，字节；1 MiB 可容纳 691200 字节 RGB 加序列化元数据。 -->
+        <maxMessageSize>1048576</maxMessageSize>
+        <!-- 每个参与者共享段，字节；64 MiB 留多路并发与排队余量。 -->
+        <segment_size>67108864</segment_size>
+      </transport_descriptor>
+      <!-- 定义兼容 UDP 发现的传输，不修改系统网络配置。 -->
+      <transport_descriptor>
+        <!-- UDP 传输标识。 -->
+        <transport_id>usv_udp</transport_id>
+        <!-- IPv4 UDP 类型。 -->
+        <type>UDPv4</type>
+        <!-- 请求发送缓冲，字节；实际仍受系统上限约束。 -->
+        <sendBufferSize>4194304</sendBufferSize>
+        <!-- 请求接收缓冲，字节；实际仍受系统上限约束。 -->
+        <receiveBufferSize>4194304</receiveBufferSize>
+      </transport_descriptor>
+    </transport_descriptors>
+    <!--
+        为本文件加载者设置默认参与者。
+        profile_name：具名配置，便于诊断。
+        is_default_profile：作为未另行选择配置的参与者默认值。
+    -->
+    <participant profile_name="usv_local_payloads" is_default_profile="true">
+      <!-- 实时发布订阅传输配置。 -->
+      <rtps>
+        <!-- 使用上面明确分配预算的两种传输。 -->
+        <userTransports>
+          <!-- 使用共享内存传输。 -->
+          <transport_id>usv_shm</transport_id>
+          <!-- 使用 UDP 传输。 -->
+          <transport_id>usv_udp</transport_id>
+        </userTransports>
+        <!-- 不再额外创建默认的较小共享段；用户可用外部 XML 覆盖整个配置。 -->
+        <useBuiltinTransports>false</useBuiltinTransports>
+      </rtps>
+    </participant>
+  </profiles>
+</dds>

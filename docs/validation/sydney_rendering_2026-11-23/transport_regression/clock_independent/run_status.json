@@ -1,0 +1,24 @@
+{
+  "case": "clock_independent",
+  "spec": {
+    "kind": "clock_independent",
+    "interfaces_args": [
+      "clock:=False"
+    ],
+    "startup_timeout": 10,
+    "stages": [
+      {
+        "name": "clock_test",
+        "mode": "velocity",
+        "speed": 1.5,
+        "duration": 20
+      }
+    ],
+    "isolated_water": true,
+    "wave_gain": 0
+  },
+  "finished_stages": 1,
+  "start_sim": 0.908,
+  "failure": null,
+  "bridge_resumed": false
+}

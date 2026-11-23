@@ -1,0 +1,95 @@
+{
+  "smoke_initial": {
+    "passed": false,
+    "performance": null,
+    "camera_sim_hz": {
+      "camera": null,
+      "camera_right": null,
+      "camera_side": null
+    }
+  },
+  "smoke_projection_fixed": {
+    "passed": false,
+    "performance": {
+      "rtf_mean": 0.5518733971322917,
+      "rtf_p10_p50_p90": [
+        0.4951885860426368,
+        0.5900723978660642,
+        0.6005788942276894
+      ],
+      "rss_growth_mib": 3.9921875,
+      "rss_peak_mib": 1866.29296875,
+      "cpu_mean_percent_of_one_core": 204.6796296296296,
+      "gpu_mean_percent": 26.555555555555557,
+      "device_vram_peak_mib": 1986.0
+    },
+    "camera_sim_hz": {
+      "camera": 3.932153687227165,
+      "camera_right": 4.432003732213669,
+      "camera_side": 4.765237095538005
+    }
+  },
+  "smoke_large_data": {
+    "passed": false,
+    "performance": {
+      "rtf_mean": 0.5525618934473971,
+      "rtf_p10_p50_p90": [
+        0.49395737069669887,
+        0.5881394809313016,
+        0.6012121863867608
+      ],
+      "rss_growth_mib": 3.0078125,
+      "rss_peak_mib": 1828.0234375,
+      "cpu_mean_percent_of_one_core": 202.14339622641506,
+      "gpu_mean_percent": 23.830188679245282,
+      "device_vram_peak_mib": 2047.0
+    },
+    "camera_sim_hz": {
+      "camera": 4.698590422873138,
+      "camera_right": 4.465327068546102,
+      "camera_side": 4.665267086540704
+    }
+  },
+  "smoke_shm_buffers": {
+    "passed": true,
+    "performance": {
+      "rtf_mean": 0.54959459257421,
+      "rtf_p10_p50_p90": [
+        0.4941346443927496,
+        0.5885288179935472,
+        0.6002473729191445
+      ],
+      "rss_growth_mib": 3.216796875,
+      "rss_peak_mib": 2040.484375,
+      "cpu_mean_percent_of_one_core": 203.91111111111113,
+      "gpu_mean_percent": 23.944444444444443,
+      "device_vram_peak_mib": 1949.0
+    },
+    "camera_sim_hz": {
+      "camera": 4.99850044986504,
+      "camera_right": 4.99850044986504,
+      "camera_side": 4.99850044986504
+    }
+  },
+  "smoke_production_defaults": {
+    "passed": true,
+    "performance": {
+      "rtf_mean": 0.5444894673701185,
+      "rtf_p10_p50_p90": [
+        0.4939972292489049,
+        0.5029287485748736,
+        0.5993723807161331
+      ],
+      "rss_growth_mib": 3.103515625,
+      "rss_peak_mib": 1969.08203125,
+      "cpu_mean_percent_of_one_core": 207.9351851851852,
+      "gpu_mean_percent": 24.61111111111111,
+      "device_vram_peak_mib": 1950.0
+    },
+    "camera_sim_hz": {
+      "camera": 4.99850044986504,
+      "camera_right": 4.99850044986504,
+      "camera_side": 4.99850044986504
+    }
+  }
+}

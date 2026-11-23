@@ -1,0 +1,76 @@
+{
+  "case": "sydney_sensors_20min",
+  "spec": {
+    "kind": "endurance",
+    "payload_kg": 150,
+    "fuel_l": 30,
+    "wave_gain": 0.3,
+    "power_mode": "survey",
+    "startup_timeout": 180,
+    "wall_timeout_factor": 8,
+    "rendering_audit": {
+      "warmup_s": 30,
+      "minimum_delivery_ratio": 0.95,
+      "max_gap_sim_s": 1.0,
+      "max_latency_sim_s": 1.0,
+      "minimum_mean_rtf": 0.5,
+      "maximum_rss_mib": 6144,
+      "maximum_rss_growth_mib": 512
+    },
+    "stages": [
+      {
+        "name": "endurance",
+        "duration": 1200,
+        "mode": "direct",
+        "throttle": 0.35,
+        "steering_deg": 12
+      }
+    ]
+  },
+  "checks": {
+    "startup_ready": true,
+    "completed": true,
+    "no_failure": true,
+    "finite": true,
+    "attitude_bounded": true,
+    "power_limited": true,
+    "energy_balance": true,
+    "fuel_mass_consistent": true,
+    "resistance_dissipative": true,
+    "command_reached_physics": true,
+    "health_command_observed": true,
+    "initial_soc_matches": true,
+    "rendering_and_performance": true
+  },
+  "passed": true,
+  "failure": null,
+  "start_sim": 0.908,
+  "metrics": {
+    "endurance": {
+      "tail_speed_m_s": 1.0982497195442757,
+      "tail_speed_std_m_s": 0.029360939377573416,
+      "mean_motor_w": 1312.4089515913554,
+      "distance_m": 1327.967607498636,
+      "heading_change_rad": -108.60202904895732,
+      "mean_wet_area_m2": 10.766826290364175,
+      "mean_projected_x_m2": 0.38738770527905053,
+      "mean_surge_drag_n": 370.09607031753376,
+      "tail_turn_radius_m": 12.211576134821668
+    }
+  },
+  "summary": {
+    "max_roll_pitch_deg": [
+      1.41459005399255,
+      1.1292628843795802
+    ],
+    "soc_start_end": [
+      0.8999999988203634,
+      0.8902210127432533
+    ],
+    "temperature_max_c": 25.009776531138442,
+    "fuel_consumed_l": 0.0,
+    "sim_end": 1201.025
+  },
+  "scope": "Complete Sydney scene, GPU cameras/lidars and ROS payload output; no ArduPilot/Nav2",
+  "postprocess_recovered": false
+}

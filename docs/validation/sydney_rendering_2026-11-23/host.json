@@ -1,0 +1,22 @@
+{
+  "platform": "Linux-7.0.0-43-generic-x86_64-with-glibc2.39",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700H",
+  "cpu_logical": 20,
+  "meminfo": {
+    "MemTotal": "       15975520 kB",
+    "MemAvailable": "    8400892 kB",
+    "SwapTotal": "       4194300 kB",
+    "SwapFree": "        1363696 kB"
+  },
+  "unix_start": 1795415596.2652867,
+  "gpu": {
+    "exit_code": 0,
+    "stdout": "name, driver_version, memory.total [MiB], temperature.gpu, power.limit [W]\nNVIDIA GeForce RTX 3060 Laptop GPU, 595.99.02, 6144 MiB, 45, [N/A]\n",
+    "stderr": ""
+  },
+  "packages": {
+    "exit_code": 0,
+    "stdout": "ros-jazzy-fastrtps\t2.14.7-1noble.20260911.035053\nros-jazzy-gz-sim-vendor\t0.0.13-1noble.20260905.073557\nros-jazzy-rmw-fastrtps-cpp\t8.4.4-1noble.20260911.100940\nros-jazzy-ros-gz-bridge\t1.0.24-1noble.20260920.234644\n",
+    "stderr": ""
+  }
+}

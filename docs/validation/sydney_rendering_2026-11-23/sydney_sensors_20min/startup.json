@@ -1,0 +1,47 @@
+{
+  "ready": true,
+  "wall_s": 9.42025160400226,
+  "sim_s": 0.908,
+  "health": {
+    "gz_partition": "usv_perf_sydney_sensors_20min_59b5ba2a",
+    "sim_s": 0.908,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 3,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  "transport_retries": [
+    {
+      "wall_s": 3.0112219450020348,
+      "topic": "propulsion/state"
+    },
+    {
+      "wall_s": 3.0112219450020348,
+      "topic": "energy/truth"
+    },
+    {
+      "wall_s": 3.0112219450020348,
+      "topic": "actuators/state"
+    },
+    {
+      "wall_s": 3.0112219450020348,
+      "topic": "fuel_mass/state"
+    },
+    {
+      "wall_s": 3.0112219450020348,
+      "topic": "audit/propulsion"
+    }
+  ]
+}

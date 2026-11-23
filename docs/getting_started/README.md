@@ -39,7 +39,7 @@
 ```bash
 # 小油门前进 10 秒
 ./usv drive --throttle 0.3 --duration 10
-# 低速倒车；尚不能把大油门持续倒车当作已验收能力
+# 低速倒车；60% 倒车已有仿真验收，仍不自动保持航向
 ./usv drive --throttle -0.25 --duration 10
 # 前进左转：当前安装坐标下负舵角
 ./usv drive --throttle 0.3 --steering-deg -10 --duration 10
@@ -94,7 +94,7 @@ python3 tests/regression/assess_maneuvers.py \
 
 ## 固定配重与当前方案
 
-基准方案保留约 32.05 kg 横向板；`speed15_concept` 采用升级电池前后重布置，取消上一版约 167.86 kg 纵向板。满油总质量约 1571.17 kg，静水轻载全速约 15.10 km/h。显示、碰撞、质量与惯性由台账同步生成；实际安装、线缆与承载能力尚需核实。倒车仍有配平回转，详见 [布置复验](../validation/layout_2026-11-21/README.md)。
+基准方案保留约 32.05 kg 横向板；`speed15_concept` 采用升级电池前后重布置，取消上一版约 167.86 kg 纵向板。上述布置加上当前约 5.17 kg 的稳定鳍后，满油总质量约 1576.34 kg，静水轻载全速约 15.03 km/h。显示、碰撞、质量与惯性由台账同步生成；实际安装、线缆与承载能力尚需核实。倒车仍有配平回转，详见 [布置复验](../validation/layout_2026-11-21/README.md)。
 
 
 ## 当前接触精度与运行成本
@@ -107,3 +107,17 @@ python3 tests/regression/assess_maneuvers.py \
 外部手动 ROS 节点不要占用该范围；这不是对任意其他主机或独立容器的域协调。
 碰撞验证建议通过 `validate_contact_directions.py --case stabilizer_side --output artifacts/my_contact_side`
 逐位置执行；按每次实际源码、插件回读、仿真时间和完整采样判定结果。
+
+
+## 相机、点云与本机传输
+
+完整悉尼场景默认包含三路 640×360 RGB 相机，以及 360×16 三维点云和二维扫描，均为 5 Hz **仿真时间**频率。无 GUI 的 `headless:=True` 仍启用 EGL/OGRE2 渲染这些载荷；它不等于删除传感器。
+
+公开话题：
+
+- `/usv/sensors/cameras/camera/image_raw`、`/usv/sensors/cameras/camera_right/image_raw`、`/usv/sensors/cameras/camera_side/image_raw`；对应 `camera_info` 在同一相机目录。
+- `/usv/sensors/lidars/lidar/points` 与 `/usv/sensors/lidars/lidar/scan`。
+
+使用 sensor-data / best-effort QoS 订阅。侧相机是独立单目，不能将其投影矩阵当成左右双目的一部分。桥接/控制入口默认使用项目的 Fast DDS 大消息缓冲配置，普通同机订阅无需额外设置；自定义 `FASTRTPS_DEFAULT_PROFILES_FILE` 会覆盖此默认值。改完这些源码后先运行 `./usv build`。
+
+帧率、ROS 链路分段、内存/显存和实时率测量见 [完整场景渲染验收](../validation/sydney_rendering_2026-11-23/README.md)。同一张 GPU 上不要同时启动多个性能试验来代表单船性能；多机网络和其他 RMW 需要另验。

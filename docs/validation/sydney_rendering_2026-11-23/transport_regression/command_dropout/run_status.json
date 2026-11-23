@@ -1,0 +1,20 @@
+{
+  "case": "command_dropout",
+  "spec": {
+    "kind": "command_dropout",
+    "isolated_water": true,
+    "wave_gain": 0,
+    "stages": [
+      {
+        "name": "dropout",
+        "duration": 50,
+        "throttle": 0.5,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "finished_stages": 1,
+  "start_sim": 1.109,
+  "failure": null,
+  "bridge_resumed": false
+}

@@ -4,6 +4,7 @@ WAM-V-style payload names; physical single-azimuth actuation is retained.
 """
 
 import json
+import os
 from pathlib import Path
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
@@ -96,10 +97,21 @@ def setup(context):
     if clock:
         args.append("/world/" + world + "/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock")
         remaps.append(("/world/" + world + "/clock", "/clock"))
+    # 只作用于本次桥接/控制子进程；保留调用方显式指定的 Fast DDS 配置。
+    dds_environment = {
+        "FASTRTPS_DEFAULT_PROFILES_FILE": os.environ.get(
+            "FASTRTPS_DEFAULT_PROFILES_FILE",
+            str(
+                Path(get_package_share_directory("usv_control"))
+                / "config/dds_transport.xml"
+            ),
+        )
+    }
     bridge = Node(
         package="ros_gz_bridge",
         executable="parameter_bridge",
         name=name + "_bridge",
+        additional_env=dds_environment,
         arguments=args,
         remappings=remaps,
         output="screen",
@@ -108,6 +120,7 @@ def setup(context):
         package="usv_control",
         executable="boat_control.py",
         name=name + "_controller",
+        additional_env=dds_environment,
         parameters=[
             {
                 "boat_name": name,

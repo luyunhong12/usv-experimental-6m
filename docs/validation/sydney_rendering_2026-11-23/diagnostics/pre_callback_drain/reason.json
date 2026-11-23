@@ -1,0 +1,4 @@
+{
+  "reason": "Observer processed one ROS callback per loop, bounded by 20 ms sleep. This can bottleneck faster hosts; preserve partial run and rerun after bounded callback draining.",
+  "not_counted_as_20min_pass": true
+}

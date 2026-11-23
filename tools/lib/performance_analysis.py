@@ -233,6 +233,9 @@ def analyze(out):
         }
     else:
         summary = {}
+    if spec.get("rendering_audit"):
+        rendering = json.loads((out / "rendering_result.json").read_text())
+        checks["rendering_and_performance"] = rendering["passed"]
     checks = {k: bool(v) for k, v in checks.items()}
     r = {
         "case": a.case,
@@ -243,7 +246,11 @@ def analyze(out):
         "start_sim": start_sim,
         "metrics": metrics,
         "summary": summary,
-        "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+        "scope": (
+            "Complete Sydney scene, GPU cameras/lidars and ROS payload output; no ArduPilot/Nav2"
+            if spec.get("rendering_audit")
+            else "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot"
+        ),
     }
     r["postprocess_recovered"] = meta.get("postprocess_recovered", False)
     (out / "result.json").write_text(json.dumps(r, indent=2))

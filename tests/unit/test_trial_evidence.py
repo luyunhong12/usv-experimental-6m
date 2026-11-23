@@ -61,6 +61,15 @@ class EvidenceTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             verify_case(self.case, "case", self.spec)
 
+    def test_rendered_sample_modification_rejected(self):
+        """公开渲染样本也必须绑定，不能只封存计数结果。"""
+        sample = self.case / "camera.png"
+        sample.write_bytes(b"original-rendered-sample")
+        seal_case(self.case, "case", self.spec, self.binding["fingerprint"])
+        sample.write_bytes(b"changed-rendered-sample")
+        with self.assertRaises(ValueError):
+            verify_case(self.case, "case", self.spec)
+
     def test_legacy_and_incomplete_outputs_rejected(self):
         """无版本清单的历史输出不能直接标记为新版本验收。"""
         (self.root / "suite_binding.json").unlink()

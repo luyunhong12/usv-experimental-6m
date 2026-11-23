@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="12"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="0"
+	timestamp="2026-11-23T14:54:49"
+	>
+	<testcase name="energy_conservation_and_faults" classname="energy_conservation_and_faults" time="0.0104494" status="run">
+		<properties/>
+		<system-out>PASS conservation, charge/discharge, reserve, thermal, fuel, starter, cooling, sensor, reset
+</system-out>
+	</testcase>
+	<testcase name="wrench_audit" classname="wrench_audit" time="0.0190748" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="appendages" classname="appendages" time="0.00211682" status="run">
+		<properties/>
+		<system-out>Wet clipping, center, force passivity, mirror/reverse symmetry and restoring moment passed
+</system-out>
+	</testcase>
+	<testcase name="steering_integral" classname="steering_integral" time="0.00357573" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="resistance" classname="resistance" time="0.00221324" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="added_mass" classname="added_mass" time="0.00186718" status="run">
+		<properties/>
+		<system-out>Added inertia signs, zero-speed acceleration, skew power and timestep convergence passed
+</system-out>
+	</testcase>
+	<testcase name="fuel_mass" classname="fuel_mass" time="0.0856404" status="run">
+		<properties/>
+		<system-out>PASS analytic levels, tilted complementary volumes, tensors and bounds
+</system-out>
+	</testcase>
+	<testcase name="propulsion" classname="propulsion" time="0.00211369" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="steering_reference" classname="steering_reference" time="0.00263389" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="wave_kinematics" classname="wave_kinematics" time="0.00184381" status="run">
+		<properties/>
+		<system-out>Shared surface height/slopes, startup derivative, orbital depth decay, divergence and calm current passed
+</system-out>
+	</testcase>
+	<testcase name="wave_pressure" classname="wave_pressure" time="0.00908419" status="run">
+		<properties/>
+		<system-out>Flat/tilted surfaces, dry/full immersion, exact moments, translation and curved-wave convergence passed
+</system-out>
+	</testcase>
+	<testcase name="hydrostatics" classname="hydrostatics" time="0.00196474" status="run">
+		<properties/>
+		<system-out>dry, partial, full, translated and rotated analytic cases passed
+</system-out>
+	</testcase>
+</testsuite>

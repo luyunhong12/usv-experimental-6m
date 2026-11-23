@@ -406,8 +406,14 @@ class BoatControl(Node):
             msg.header.frame_id = self.boat + "/" + frame
             if name == "gps_velocity":
                 msg.header.frame_id = "world"
-        if name == "camera_right_info":
-            msg.p[3] = -msg.k[0] * self.payload_cfg["camera"]["stereo_baseline_m"]
+        if name.endswith("_info") and name.startswith("camera"):
+            # Gazebo 可能把所有相机相对首相机的平移写成双目 Tx；侧相机是独立单目。
+            baseline = (
+                self.payload_cfg["camera"]["stereo_baseline_m"]
+                if name == "camera_right_info"
+                else 0.0
+            )
+            msg.p[3] = -msg.k[0] * baseline
         pub.publish(msg)
 
     def cmd_vel(self, msg):
