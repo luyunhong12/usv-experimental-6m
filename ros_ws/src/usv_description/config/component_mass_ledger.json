@@ -164,7 +164,7 @@
       "source": "https://www.epropulsion.com/wp-content/uploads/2023/05/E-Series-Battery_E60-E163-User-Manual-EN-V1.2-20230530.pdf"
     },
     {
-      "name": "V2 中央艉板外背板",
+      "name": "V2 \u4e2d\u592e\u8249\u677f\u5916\u80cc\u677f",
       "link": "hull",
       "mass_kg": 44.356044120233896,
       "cg_m": [
@@ -214,7 +214,7 @@
       "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
     },
     {
-      "name": "V2 中央艉板内背板",
+      "name": "V2 \u4e2d\u592e\u8249\u677f\u5185\u80cc\u677f",
       "link": "hull",
       "mass_kg": 35.44747087177721,
       "cg_m": [
@@ -264,7 +264,7 @@
       "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
     },
     {
-      "name": "V2 艉伸安装梁",
+      "name": "V2 \u8249\u4f38\u5b89\u88c5\u6881",
       "link": "hull",
       "mass_kg": 10.961286617435341,
       "cg_m": [
@@ -314,7 +314,7 @@
       "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
     },
     {
-      "name": "V2 舱内纵向补强概念",
+      "name": "V2 \u8231\u5185\u7eb5\u5411\u8865\u5f3a\u6982\u5ff5",
       "link": "hull",
       "mass_kg": 17.802099668596824,
       "cg_m": [
@@ -364,7 +364,7 @@
       "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
     },
     {
-      "name": "V2 艉伸安装梁.001",
+      "name": "V2 \u8249\u4f38\u5b89\u88c5\u6881.001",
       "link": "hull",
       "mass_kg": 10.961286617435341,
       "cg_m": [
@@ -414,7 +414,7 @@
       "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
     },
     {
-      "name": "V2 舱内纵向补强概念.001",
+      "name": "V2 \u8231\u5185\u7eb5\u5411\u8865\u5f3a\u6982\u5ff5.001",
       "link": "hull",
       "mass_kg": 17.802099668596824,
       "cg_m": [
@@ -464,7 +464,7 @@
       "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
     },
     {
-      "name": "V2 轴承横梁",
+      "name": "V2 \u8f74\u627f\u6a2a\u6881",
       "link": "hull",
       "mass_kg": 17.532350478979723,
       "cg_m": [
@@ -514,7 +514,7 @@
       "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
     },
     {
-      "name": "V2 回转轴",
+      "name": "V2 \u56de\u8f6c\u8f74",
       "link": "azimuth",
       "mass_kg": 24.54445112984854,
       "cg_m": [
@@ -564,7 +564,7 @@
       "coverage": "Existing explicitly isolated structure or drive; not inside replaced residual"
     },
     {
-      "name": "V2 执行器上托梁",
+      "name": "V2 \u6267\u884c\u5668\u4e0a\u6258\u6881",
       "link": "hull",
       "mass_kg": 13.44614893106379,
       "cg_m": [
@@ -815,7 +815,7 @@
     },
     {
       "id": "generator",
-      "name": "发电机本体（含隔声罩）",
+      "name": "\u53d1\u7535\u673a\u672c\u4f53\uff08\u542b\u9694\u58f0\u7f69\uff09",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -871,7 +871,7 @@
     },
     {
       "id": "inverter",
-      "name": "发电机逆变器",
+      "name": "\u53d1\u7535\u673a\u9006\u53d8\u5668",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -927,7 +927,7 @@
     },
     {
       "id": "generator_mount",
-      "name": "机座与减振安装件",
+      "name": "\u673a\u5ea7\u4e0e\u51cf\u632f\u5b89\u88c5\u4ef6",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -983,7 +983,7 @@
     },
     {
       "id": "coolant",
-      "name": "封闭冷却液",
+      "name": "\u5c01\u95ed\u51b7\u5374\u6db2",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -1039,7 +1039,7 @@
     },
     {
       "id": "cooling_hoses",
-      "name": "冷却软管与阀件",
+      "name": "\u51b7\u5374\u8f6f\u7ba1\u4e0e\u9600\u4ef6",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -1095,7 +1095,7 @@
     },
     {
       "id": "exhaust",
-      "name": "排气消声水锁与管件",
+      "name": "\u6392\u6c14\u6d88\u58f0\u6c34\u9501\u4e0e\u7ba1\u4ef6",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -1151,7 +1151,7 @@
     },
     {
       "id": "battery_trays",
-      "name": "原两块电池托架与固定件",
+      "name": "\u539f\u4e24\u5757\u7535\u6c60\u6258\u67b6\u4e0e\u56fa\u5b9a\u4ef6",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -1207,7 +1207,7 @@
     },
     {
       "id": "battery_protection",
-      "name": "电池外部接触器与保护件（不含内置BMS）",
+      "name": "\u7535\u6c60\u5916\u90e8\u63a5\u89e6\u5668\u4e0e\u4fdd\u62a4\u4ef6\uff08\u4e0d\u542b\u5185\u7f6eBMS\uff09",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -1263,7 +1263,7 @@
     },
     {
       "id": "empty_tank",
-      "name": "空油箱及固定件",
+      "name": "\u7a7a\u6cb9\u7bb1\u53ca\u56fa\u5b9a\u4ef6",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -1319,7 +1319,7 @@
     },
     {
       "id": "fuel_fittings",
-      "name": "加注通气供回油管件",
+      "name": "\u52a0\u6ce8\u901a\u6c14\u4f9b\u56de\u6cb9\u7ba1\u4ef6",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -1375,7 +1375,7 @@
     },
     {
       "id": "starter_battery",
-      "name": "12V启动电池预算",
+      "name": "12V\u542f\u52a8\u7535\u6c60\u9884\u7b97",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -1431,7 +1431,7 @@
     },
     {
       "id": "charger",
-      "name": "主充电器及支架",
+      "name": "\u4e3b\u5145\u7535\u5668\u53ca\u652f\u67b6",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -1487,7 +1487,7 @@
     },
     {
       "id": "maintenance_charger",
-      "name": "启动维护充电器",
+      "name": "\u542f\u52a8\u7ef4\u62a4\u5145\u7535\u5668",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -1543,7 +1543,7 @@
     },
     {
       "id": "power_enclosure",
-      "name": "主配电箱及安装板",
+      "name": "\u4e3b\u914d\u7535\u7bb1\u53ca\u5b89\u88c5\u677f",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -1599,7 +1599,7 @@
     },
     {
       "id": "switchgear",
-      "name": "断路器熔断器母排",
+      "name": "\u65ad\u8def\u5668\u7194\u65ad\u5668\u6bcd\u6392",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -1655,7 +1655,7 @@
     },
     {
       "id": "wiring",
-      "name": "全船线束与接头",
+      "name": "\u5168\u8239\u7ebf\u675f\u4e0e\u63a5\u5934",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -1711,7 +1711,7 @@
     },
     {
       "id": "electronic_box",
-      "name": "计算与通信电子箱",
+      "name": "\u8ba1\u7b97\u4e0e\u901a\u4fe1\u7535\u5b50\u7bb1",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -1767,7 +1767,7 @@
     },
     {
       "id": "fenders",
-      "name": "护舷组件",
+      "name": "\u62a4\u8237\u7ec4\u4ef6",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -1823,7 +1823,7 @@
     },
     {
       "id": "mooring",
-      "name": "系泊件与紧固件",
+      "name": "\u7cfb\u6cca\u4ef6\u4e0e\u7d27\u56fa\u4ef6",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -1879,7 +1879,7 @@
     },
     {
       "id": "bilge_plumbing",
-      "name": "舱底管路与滤网",
+      "name": "\u8231\u5e95\u7ba1\u8def\u4e0e\u6ee4\u7f51",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -1935,7 +1935,7 @@
     },
     {
       "id": "installation_fasteners",
-      "name": "设备紧固夹具预算",
+      "name": "\u8bbe\u5907\u7d27\u56fa\u5939\u5177\u9884\u7b97",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -1991,7 +1991,7 @@
     },
     {
       "id": "computer",
-      "name": "船载计算机",
+      "name": "\u8239\u8f7d\u8ba1\u7b97\u673a",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -2048,7 +2048,7 @@
     },
     {
       "id": "network_switch",
-      "name": "网络交换机",
+      "name": "\u7f51\u7edc\u4ea4\u6362\u673a",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -2105,7 +2105,7 @@
     },
     {
       "id": "radio",
-      "name": "通信电台",
+      "name": "\u901a\u4fe1\u7535\u53f0",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -2162,7 +2162,7 @@
     },
     {
       "id": "controller",
-      "name": "控制与IO板（不代表启用ArduPilot）",
+      "name": "\u63a7\u5236\u4e0eIO\u677f\uff08\u4e0d\u4ee3\u8868\u542f\u7528ArduPilot\uff09",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -2219,7 +2219,7 @@
     },
     {
       "id": "plc",
-      "name": "冷却联锁PLC及扩展组件",
+      "name": "\u51b7\u5374\u8054\u9501PLC\u53ca\u6269\u5c55\u7ec4\u4ef6",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -2276,7 +2276,7 @@
     },
     {
       "id": "interlock_mount",
-      "name": "联锁防护盒导轨与附件",
+      "name": "\u8054\u9501\u9632\u62a4\u76d2\u5bfc\u8f68\u4e0e\u9644\u4ef6",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -2333,7 +2333,7 @@
     },
     {
       "id": "camera",
-      "name": "camera 传感器",
+      "name": "camera \u4f20\u611f\u5668",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -2390,7 +2390,7 @@
     },
     {
       "id": "camera_right",
-      "name": "camera_right 传感器",
+      "name": "camera_right \u4f20\u611f\u5668",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -2447,7 +2447,7 @@
     },
     {
       "id": "camera_side",
-      "name": "camera_side 传感器",
+      "name": "camera_side \u4f20\u611f\u5668",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -2504,7 +2504,7 @@
     },
     {
       "id": "lidar",
-      "name": "lidar 传感器",
+      "name": "lidar \u4f20\u611f\u5668",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -2561,7 +2561,7 @@
     },
     {
       "id": "gps",
-      "name": "gps 传感器",
+      "name": "gps \u4f20\u611f\u5668",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -2618,7 +2618,7 @@
     },
     {
       "id": "imu",
-      "name": "imu 传感器",
+      "name": "imu \u4f20\u611f\u5668",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -2675,7 +2675,7 @@
     },
     {
       "id": "magnetometer",
-      "name": "magnetometer 传感器",
+      "name": "magnetometer \u4f20\u611f\u5668",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -2732,7 +2732,7 @@
     },
     {
       "id": "camera_mount",
-      "name": "camera 支架与外壳连接",
+      "name": "camera \u652f\u67b6\u4e0e\u5916\u58f3\u8fde\u63a5",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -2788,7 +2788,7 @@
     },
     {
       "id": "camera_right_mount",
-      "name": "camera_right 支架与外壳连接",
+      "name": "camera_right \u652f\u67b6\u4e0e\u5916\u58f3\u8fde\u63a5",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -2844,7 +2844,7 @@
     },
     {
       "id": "camera_side_mount",
-      "name": "camera_side 支架与外壳连接",
+      "name": "camera_side \u652f\u67b6\u4e0e\u5916\u58f3\u8fde\u63a5",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -2900,7 +2900,7 @@
     },
     {
       "id": "lidar_mount",
-      "name": "lidar 支架与外壳连接",
+      "name": "lidar \u652f\u67b6\u4e0e\u5916\u58f3\u8fde\u63a5",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -2956,7 +2956,7 @@
     },
     {
       "id": "cooling_pump",
-      "name": "冷却泵",
+      "name": "\u51b7\u5374\u6cf5",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -3013,7 +3013,7 @@
     },
     {
       "id": "bilge_pump",
-      "name": "舱底泵",
+      "name": "\u8231\u5e95\u6cf5",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -3070,7 +3070,7 @@
     },
     {
       "id": "fan_0",
-      "name": "通风风扇 1",
+      "name": "\u901a\u98ce\u98ce\u6247 1",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -3127,7 +3127,7 @@
     },
     {
       "id": "fan_1",
-      "name": "通风风扇 2",
+      "name": "\u901a\u98ce\u98ce\u6247 2",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -3184,7 +3184,7 @@
     },
     {
       "id": "lights",
-      "name": "航行及状态灯",
+      "name": "\u822a\u884c\u53ca\u72b6\u6001\u706f",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -3241,7 +3241,7 @@
     },
     {
       "id": "dcdc",
-      "name": "辅助DC/DC转换器",
+      "name": "\u8f85\u52a9DC/DC\u8f6c\u6362\u5668",
       "link": "hull",
       "profiles": [
         "baseline",
@@ -3298,7 +3298,7 @@
     },
     {
       "id": "extra_battery_0",
-      "name": "升级E163电池 3",
+      "name": "\u5347\u7ea7E163\u7535\u6c60 3",
       "link": "hull",
       "profiles": [
         "speed15_concept"
@@ -3361,7 +3361,7 @@
     },
     {
       "id": "extra_tray_0",
-      "name": "升级电池托架 3",
+      "name": "\u5347\u7ea7\u7535\u6c60\u6258\u67b6 3",
       "link": "hull",
       "profiles": [
         "speed15_concept"
@@ -3424,7 +3424,7 @@
     },
     {
       "id": "extra_battery_1",
-      "name": "升级E163电池 4",
+      "name": "\u5347\u7ea7E163\u7535\u6c60 4",
       "link": "hull",
       "profiles": [
         "speed15_concept"
@@ -3487,7 +3487,7 @@
     },
     {
       "id": "extra_tray_1",
-      "name": "升级电池托架 4",
+      "name": "\u5347\u7ea7\u7535\u6c60\u6258\u67b6 4",
       "link": "hull",
       "profiles": [
         "speed15_concept"
@@ -3550,7 +3550,7 @@
     },
     {
       "id": "extra_battery_2",
-      "name": "升级E163电池 5",
+      "name": "\u5347\u7ea7E163\u7535\u6c60 5",
       "link": "hull",
       "profiles": [
         "speed15_concept"
@@ -3613,7 +3613,7 @@
     },
     {
       "id": "extra_tray_2",
-      "name": "升级电池托架 5",
+      "name": "\u5347\u7ea7\u7535\u6c60\u6258\u67b6 5",
       "link": "hull",
       "profiles": [
         "speed15_concept"
@@ -3676,7 +3676,7 @@
     },
     {
       "id": "extra_battery_3",
-      "name": "升级E163电池 6",
+      "name": "\u5347\u7ea7E163\u7535\u6c60 6",
       "link": "hull",
       "profiles": [
         "speed15_concept"
@@ -3739,7 +3739,7 @@
     },
     {
       "id": "extra_tray_3",
-      "name": "升级电池托架 6",
+      "name": "\u5347\u7ea7\u7535\u6c60\u6258\u67b6 6",
       "link": "hull",
       "profiles": [
         "speed15_concept"
@@ -3802,7 +3802,7 @@
     },
     {
       "id": "upgrade_motor",
-      "name": "40 kW升级电机增量（不是再加一台电机）",
+      "name": "40 kW\u5347\u7ea7\u7535\u673a\u589e\u91cf\uff08\u4e0d\u662f\u518d\u52a0\u4e00\u53f0\u7535\u673a\uff09",
       "link": "azimuth",
       "profiles": [
         "speed15_concept"
@@ -3912,6 +3912,78 @@
           0.05104154447235442
         ],
         "material_density_kg_m3": 7850
+      }
+    },
+    {
+      "id": "passive_stabilizer",
+      "name": "Compact passive centreline stabilizer",
+      "link": "hull",
+      "profiles": [
+        "baseline",
+        "speed15_concept"
+      ],
+      "mass_kg": 5.168541826718059,
+      "cg_m": [
+        0.5000000000000002,
+        -3.949501395356928e-19,
+        -0.18688709677419352
+      ],
+      "inertia_at_cg_kg_m2": [
+        [
+          0.06505085256153886,
+          9.170848053798798e-20,
+          -1.463672932855431e-16
+        ],
+        [
+          9.170848053798798e-20,
+          0.10385707985840976,
+          -4.173128058157222e-20
+        ],
+        [
+          -1.463672932855431e-16,
+          -4.173128058157222e-20,
+          0.03901204869623225
+        ]
+      ],
+      "mass_range_kg": [
+        4.910114735382155,
+        5.426968918053962
+      ],
+      "cg_uncertainty_m": 0.005,
+      "basis": "Uniform solid aluminium engineering proxy, 2700 kg/m3; oriented mesh tetrahedral volume and inertia. Added hardware, not original measured vessel. Elliptical chord section, tapered last 30 mm. Root overlaps keel by less than 4 mm; attachment strength not certified.",
+      "quality": "GEOMETRY_DERIVED_CONCEPT_NOT_MEASURED",
+      "coverage": "Additional hardware mass; not subtracted from prior hull budget. No electrical demand.",
+      "power": {
+        "class": "passive",
+        "idle_w": 0,
+        "rated_w": 0,
+        "duty": {
+          "normal": 0,
+          "survey": 0,
+          "peak": 0
+        }
+      },
+      "geometry": {
+        "type": "elliptic_fin",
+        "size_m": [
+          0.35,
+          0.018,
+          0.4
+        ],
+        "material_density_kg_m3": 2700,
+        "root_center_m": [
+          0.5,
+          0.0,
+          0.007
+        ],
+        "tip_taper_m": 0.03,
+        "tip_scale": 0.5,
+        "sections": 64
+      },
+      "hydrodynamics": {
+        "profile_drag_coefficient": 0.03,
+        "oswald_efficiency": 0.7,
+        "basis": "Finite-aspect-ratio symmetric lift and induced drag, same law as existing appendages; no reverse-only gain. CD0=.03, e=.7 engineering assumptions; sensitivity required."
       }
     }
   ],

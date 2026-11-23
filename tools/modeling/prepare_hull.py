@@ -686,13 +686,32 @@ def _load_runtime_dependencies_2():
     from payload_geometry import add_mounts, add_ledger_solids
     from equipment_ledger import rows
 
-    return (add_mounts, add_ledger_solids, rows)
+    from passive_stabilizer import (
+        add_stabilizer,
+        configuration as stabilizer_configuration,
+    )
+
+    return (
+        add_mounts,
+        add_ledger_solids,
+        rows,
+        add_stabilizer,
+        stabilizer_configuration,
+    )
 
 
-(add_mounts, add_ledger_solids, ledger_rows) = _load_runtime_dependencies_2()
+(
+    add_mounts,
+    add_ledger_solids,
+    ledger_rows,
+    add_stabilizer,
+    stabilizer_configuration,
+) = _load_runtime_dependencies_2()
 
 add_mounts(hull, payloads)
 add_ledger_solids(hull, ledger_rows())
+
+add_stabilizer(model, stabilizer_configuration(), D / "meshes/passive_stabilizer")
 
 
 def sensor(name, kind, pose, hz):

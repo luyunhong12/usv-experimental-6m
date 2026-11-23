@@ -301,3 +301,5 @@
 | `/sdf[*]/model[*]/plugin[*]/tf_topic[*]` | 坐标变换发布主题。 |
 | `/sdf[*]/model[*]/plugin[*]/dimensions[*]` | 里程计处理的空间维度。 |
 | `/sdf[*]/model[*]/plugin[*]/odom_publish_frequency[*]` | 里程计发布频率，单位 Hz。 |
+| `/sdf[*]/model[*]/plugin[*]/buoyancy_triangles_file[*]` | 可选闭合浮力网格，坐标为所属 link 的 m；只有新增实体鳍使用，原推进附体不重复添加浮力。 |
+| `/sdf[*]/model[*]/plugin[*]/telemetry_group[*]` | 附体遥测可选子组，仅允许英文字母、数字及下划线；不改变船名命名空间。 |

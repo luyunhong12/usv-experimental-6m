@@ -169,6 +169,13 @@ if "appendage_coefficient_scale" in spec:
     E.SubElement(ap, "coefficient_scale").text = str(
         spec["appendage_coefficient_scale"]
     )
+if "stabilizer_coefficient_scale" in spec:
+    fin = bm.find("plugin[@name='usv::PassiveStabilizer']")
+    if fin is None:
+        raise ValueError("Stabilizer sensitivity requested without stabilizer")
+    E.SubElement(fin, "coefficient_scale").text = str(
+        spec["stabilizer_coefficient_scale"]
+    )
 if "initial_yaw" in spec:
     pose = inc.findtext("pose").split()
     pose[5] = str(spec["initial_yaw"])
@@ -247,6 +254,9 @@ rows = {
 if bm.find("plugin[@name='usv::AppendageHydrodynamics']") is not None:
     rows["hydrodynamics/appendages"] = []
     rows["audit/appendages"] = []
+if bm.find("plugin[@name='usv::PassiveStabilizer']") is not None:
+    rows["stabilizer/hydrodynamics/appendages"] = []
+    rows["stabilizer/audit/appendages"] = []
 for topic in rows:
 
     def record_message_1(msg, k=topic):

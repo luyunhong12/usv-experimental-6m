@@ -100,6 +100,9 @@ cases = [
     ("starboard", [-math.pi / 2, 0, 0], [0, 0.5], 0.9, 1.2),
     ("stern", [0, math.pi / 2, 0], [0.5, 0], 3.0, 3.8),
     ("propeller_hub", [0, math.pi / 2, 0], [-0.143, 0], 3.7, 3.95),
+    # 新鳍位于船底外：翻转后探针应落在鳍端，而非穿透后落到船壳。
+    ("stabilizer_tip", [math.pi, 0, 0], [0.5, 0], 0.393, 0.393),
+    ("stabilizer_side", [math.pi / 2, 0, 0], [0.5, 0.2], 0.009, 0.009),
 ]
 node = Node()
 rows = {}

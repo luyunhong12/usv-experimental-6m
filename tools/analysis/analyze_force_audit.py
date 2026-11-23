@@ -9,16 +9,17 @@ from pathlib import Path
 import numpy as np
 
 
-def analyze(folder):
+def analyze(folder, stage_index=0):
     """将记录的各类外力矩换算到整船重心并进行收支审计。
 
     Args:
         folder: 含推进状态、阶段及各分项受力 CSV 的结果目录
+        stage_index: 审计阶段索引；负数按 Python 规则从末尾计数。
     """
     p = Path(folder)
     d = np.loadtxt(p / "propulsion_state.csv", delimiter=",", ndmin=2)
     stages = json.loads((p / "stages.json").read_text())
-    end = stages[0]["end_sim"]
+    end = stages[stage_index]["end_sim"]
     selected = d[(d[:, 0] > end - 15) & (d[:, 0] < end)]
     t = selected[:, 0]
     roll = selected[:, 15]
@@ -28,12 +29,20 @@ def analyze(folder):
     )
     components = {}
     total = np.zeros((len(t), 6))
-    for topic, names in [
+    topics = [
         ("hull", ["pressure", "hull_drag", "added_mass", "air"]),
         ("propulsion", ["thrust", "water_couple"]),
         ("appendages", ["appendages"]),
-    ]:
-        a = np.loadtxt(p / ("audit_" + topic + ".csv"), delimiter=",", ndmin=2)
+    ]
+    if (p / "stabilizer_audit_appendages.csv").exists():
+        topics.append(("stabilizer", ["stabilizer_lift_drag_buoyancy"]))
+    for topic, names in topics:
+        filename = (
+            "stabilizer_audit_appendages.csv"
+            if topic == "stabilizer"
+            else "audit_" + topic + ".csv"
+        )
+        a = np.loadtxt(p / filename, delimiter=",", ndmin=2)
         if a.shape[1] != 4 + 6 * len(names) or a[0, 0] > t[0] or a[-1, 0] < t[-1] - 0.2:
             raise ValueError("Incomplete audit: " + topic)
         for j, name in enumerate(names):
@@ -66,11 +75,19 @@ def analyze(folder):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("root", type=Path)
+    ap.add_argument("--stage", type=int, default=0)
     args = ap.parse_args()
     results = {
-        p.name: analyze(p)
+        p.name: analyze(p, args.stage)
         for p in sorted(args.root.iterdir())
         if p.is_dir() and (p / "result.json").exists()
     }
-    (args.root / "force_audit.json").write_text(json.dumps(results, indent=2) + "\n")
+    (
+        args.root
+        / (
+            "force_audit.json"
+            if args.stage == 0
+            else f"force_audit_stage_{args.stage}.json"
+        )
+    ).write_text(json.dumps(results, indent=2) + "\n")
     print(json.dumps(results, indent=2))

@@ -5,15 +5,15 @@
     <link name="hull">
       <pose>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>-0.508559785616 -3.04544180982e-18 0.496814950879 0 0 0</pose>
-        <mass>1166.567578912235</mass>
+        <pose>-0.504111016525 -3.03375045985e-18 0.493799133095 0 0 0</pose>
+        <mass>1171.736120738953</mass>
         <inertia>
-          <ixx>362.3027323240834</ixx>
-          <iyy>3408.5777951100044</iyy>
-          <izz>3597.7024259780524</izz>
-          <ixy>-23.684725300036234</ixy>
-          <ixz>-27.4929929392003</ixz>
-          <iyz>4.317873993902541</iyz>
+          <ixx>364.77315312499877</ixx>
+          <iyy>3416.3212354137668</iyy>
+          <izz>3602.9756513022962</izz>
+          <ixy>-23.68472530003624</ixy>
+          <ixz>-23.944723034545383</ixz>
+          <iyz>4.317873993902542</iyz>
         </inertia>
       </inertial>
       <visual name="hull_00">
@@ -1312,6 +1312,23 @@
           </box>
         </geometry>
       </collision>
+      <visual name="passive_stabilizer_visual">
+        <geometry>
+          <mesh>
+            <uri>/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/passive_stabilizer/passive_stabilizer.obj</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>.28 .30 .32 1</diffuse>
+        </material>
+      </visual>
+      <collision name="passive_stabilizer_collision">
+        <geometry>
+          <mesh>
+            <uri>/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/passive_stabilizer/passive_stabilizer.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
       <sensor name="imu" type="imu">
         <pose>0 0 0.5 0 0 0</pose>
         <always_on>true</always_on>
@@ -1802,9 +1819,9 @@
       <water_level>0.0</water_level>
       <radius>0.15</radius>
       <fuel_mass>
-        <dry_mass>1116.1675789122348</dry_mass>
-        <dry_cg>-0.535135914286 -3.18295724219e-18 0.503218535483</dry_cg>
-        <dry_inertia>360.308844266 -23.6847253 -31.8896606004 -23.6847253 3387.49687626 4.3178739939 -31.8896606004 4.3178739939 3577.27139518</dry_inertia>
+        <dry_mass>1121.336120738953</dry_mass>
+        <dry_cg>-0.530364692553 -3.17010656249e-18 0.500037651751</dry_cg>
+        <dry_inertia>362.824045668 -23.6847253 -28.2145147805 -23.6847253 3395.56348261 4.3178739939 -28.2145147805 4.3178739939 3582.82300595</dry_inertia>
         <tank_size>0.6 0.4 0.25</tank_size>
         <tank_center>0.08 0 0.355</tank_center>
         <density>840.0</density>
@@ -1922,6 +1939,31 @@
         <point>-0.136536359787 0 -0.624000012875</point>
       </surface>
       <topic_namespace>usv</topic_namespace>
+      <wavefield>
+        <topic>/vrx/wavefield/parameters</topic>
+        <wave>
+          <gain>0</gain>
+          <steepness>0</steepness>
+        </wave>
+      </wavefield>
+    </plugin>
+    <plugin name="usv::PassiveStabilizer" filename="libUsvAppendageHydrodynamics.so">
+      <link_name>hull</link_name>
+      <density>1000</density>
+      <water_level>0</water_level>
+      <topic_namespace>usv</topic_namespace>
+      <telemetry_group>stabilizer</telemetry_group>
+      <buoyancy_triangles_file>/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/passive_stabilizer/passive_stabilizer_triangles.txt</buoyancy_triangles_file>
+      <surface name="passive_stabilizer">
+        <cd0>0.03</cd0>
+        <efficiency>0.7</efficiency>
+        <point>0.325 0 0.007</point>
+        <point>0.325 0 -0.363</point>
+        <point>0.4125 0 -0.393</point>
+        <point>0.5875 0 -0.393</point>
+        <point>0.675 0 -0.363</point>
+        <point>0.675 0 0.007</point>
+      </surface>
       <wavefield>
         <topic>/vrx/wavefield/parameters</topic>
         <wave>

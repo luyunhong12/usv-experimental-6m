@@ -36,12 +36,20 @@ from scipy.optimize import root
 from scipy.spatial.transform import Rotation
 from fuel_mass import configuration, tank_properties, combine, W
 
+from passive_stabilizer import (
+    configuration as stabilizer_configuration,
+    geometry as stabilizer_geometry,
+)
+
 cfg = json.loads((W / "src/usv_description/config/trial_load.json").read_text())
 orig = json.loads((W / "../datasets/reference/boat_export.json").read_text())["origins"]
 tank = configuration()
 triangles = np.loadtxt(W / "src/usv_description/config/hull_triangles.txt").reshape(
     -1, 3, 3
 )
+
+fin_vertices, fin_faces, _ = stabilizer_geometry(stabilizer_configuration())
+triangles = np.concatenate((triangles, fin_vertices[fin_faces]))
 
 
 def displaced(q):

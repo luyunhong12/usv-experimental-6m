@@ -110,6 +110,8 @@ def add_ledger_solids(hull, parts):
         geometry = part.get("geometry")
         if part["link"] != "hull" or geometry is None:
             continue
+        if geometry["type"] == "elliptic_fin":
+            continue  # 同源网格与水动力由 passive_stabilizer 生成。
         if geometry["type"] != "box":
             raise ValueError("Unsupported ledger solid")
         for kind in ["visual", "collision"]:

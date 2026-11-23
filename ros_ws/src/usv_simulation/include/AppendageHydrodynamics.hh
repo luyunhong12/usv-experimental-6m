@@ -5,29 +5,85 @@
 #include "Hydrostatics.hh"
 #include <algorithm>
 #include <cmath>
+#include <istream>
+#include <stdexcept>
+#include <string>
 #include <vector>
 namespace usv {
 
+/** @brief 校验可选遥测子组，保持原船名命名空间规则不变。
+ * @param group 空串或仅含英文字母、数字和下划线的子组名。
+ * @return 空串或以斜杠开头的子组路径；非法字符抛出异常。
+ */
+inline std::string AppendageTopicSuffix(const std::string &group) {
+  if (group.empty())
+    return "";
+  if (group.find_first_not_of(
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_") !=
+      std::string::npos)
+    throw std::runtime_error("Invalid appendage telemetry group");
+  return "/" + group;
+}
+
+/** @brief 读取定向三角网格，拒绝空数据、截断记录及非有限坐标。
+ * @param input 输入文本流；每个三角形九个坐标值，单位 m。
+ * @return 按输入顺序保存的三角面片；闭合性由几何生成端验证。
+ */
+inline std::vector<Triangle> ReadAppendageBuoyancyMesh(std::istream &input) {
+  std::vector<Triangle> mesh;
+  while (input >> std::ws && input.peek() != std::char_traits<char>::eof()) {
+    Triangle t;
+    for (auto &v : t) {
+      if (!(input >> v.X() >> v.Y() >> v.Z()) || !v.IsFinite())
+        throw std::runtime_error("Invalid appendage buoyancy triangle");
+    }
+    mesh.push_back(t);
+  }
+  if (mesh.empty() || input.bad())
+    throw std::runtime_error("Empty or unreadable appendage buoyancy mesh");
+  return mesh;
+}
+
 /** @brief 保存附体裁切后的浸水几何属性。
  */
-struct WetSurface {double area=0,span=0;V center=V::Zero;};
+struct WetSurface {
+  double area = 0, span = 0;
+  V center = V::Zero;
+};
 // Convex x-z outline clipped against the (linearly sampled) local free surface.
 
 /** @brief 按各轮廓点的浸水深度裁切附体轮廓。
  * @param points 附体轮廓顶点，m。
  * @param depth 各顶点浸水深度，m；水下为正。
  */
-inline WetSurface ClipAppendage(const std::vector<V>&points,const std::vector<double>&depth){
- std::vector<V> p;
- for(size_t i=0;i<points.size();++i){size_t j=(i+1)%points.size();
-  if(depth[i]>=0)p.push_back(points[i]);
-  if((depth[i]>=0)!=(depth[j]>=0))p.push_back(points[i]+(points[j]-points[i])*(depth[i]/(depth[i]-depth[j])));
- }
- WetSurface out;if(p.size()<3)return out;
- double lo=p[0].Z(),hi=lo;
- for(auto&v:p){lo=std::min(lo,v.Z());hi=std::max(hi,v.Z());}
- for(size_t i=1;i+1<p.size();++i){double a=.5*(p[i]-p[0]).Cross(p[i+1]-p[0]).Length();out.area+=a;out.center+=(p[0]+p[i]+p[i+1])*(a/3);}
- if(out.area>1e-12)out.center/=out.area;out.span=hi-lo;return out;
+inline WetSurface ClipAppendage(const std::vector<V> &points,
+                                const std::vector<double> &depth) {
+  std::vector<V> p;
+  for (size_t i = 0; i < points.size(); ++i) {
+    size_t j = (i + 1) % points.size();
+    if (depth[i] >= 0)
+      p.push_back(points[i]);
+    if ((depth[i] >= 0) != (depth[j] >= 0))
+      p.push_back(points[i] +
+                  (points[j] - points[i]) * (depth[i] / (depth[i] - depth[j])));
+  }
+  WetSurface out;
+  if (p.size() < 3)
+    return out;
+  double lo = p[0].Z(), hi = lo;
+  for (auto &v : p) {
+    lo = std::min(lo, v.Z());
+    hi = std::max(hi, v.Z());
+  }
+  for (size_t i = 1; i + 1 < p.size(); ++i) {
+    double a = .5 * (p[i] - p[0]).Cross(p[i + 1] - p[0]).Length();
+    out.area += a;
+    out.center += (p[0] + p[i] + p[i + 1]) * (a / 3);
+  }
+  if (out.area > 1e-12)
+    out.center /= out.area;
+  out.span = hi - lo;
+  return out;
 }
 // Lift perpendicular to relative water velocity; drag always removes relative
 // kinetic energy. Independent of heading, commanded rudder and desired path.
@@ -40,16 +96,24 @@ inline WetSurface ClipAppendage(const std::vector<V>&points,const std::vector<do
  * @param e 有限展弦比模型的效率系数。
  * @param velocity 部件相对水流的速度向量，m/s。
  */
-inline V AppendageForce(double rho,double area,double span,double cd0,double e,const V&velocity){
- double u=velocity.X(),v=velocity.Y(),speed=std::hypot(u,v);
- if(area<=1e-12||span<=1e-12||speed<=1e-9)return V::Zero;
- double ar=span*span/area;
- double slope=M_PI*ar/(1+std::sqrt(1+ar*ar/4));
- double alpha=std::atan2(v,std::abs(u));
- double blend=std::clamp((std::abs(alpha)-M_PI/12)/(M_PI/12),0.,1.);blend=blend*blend*(3-2*blend);
- double cl=(1-blend)*slope*alpha+blend*2*std::copysign(1.,alpha)*std::sin(alpha)*std::sin(alpha)*std::cos(alpha);
- double cd=cd0+cl*cl/(M_PI*e*ar)+blend*2*std::sin(alpha)*std::sin(alpha);
- double q=.5*rho*speed*speed*area,sign=u>=0?1.:-1.;
- return q*(cl*V(sign*v/speed,-std::abs(u)/speed,0)-cd*V(u/speed,v/speed,0));
+inline V AppendageForce(double rho, double area, double span, double cd0,
+                        double e, const V &velocity) {
+  double u = velocity.X(), v = velocity.Y(), speed = std::hypot(u, v);
+  if (area <= 1e-12 || span <= 1e-12 || speed <= 1e-9)
+    return V::Zero;
+  double ar = span * span / area;
+  double slope = M_PI * ar / (1 + std::sqrt(1 + ar * ar / 4));
+  double alpha = std::atan2(v, std::abs(u));
+  double blend =
+      std::clamp((std::abs(alpha) - M_PI / 12) / (M_PI / 12), 0., 1.);
+  blend = blend * blend * (3 - 2 * blend);
+  double cl = (1 - blend) * slope * alpha +
+              blend * 2 * std::copysign(1., alpha) * std::sin(alpha) *
+                  std::sin(alpha) * std::cos(alpha);
+  double cd = cd0 + cl * cl / (M_PI * e * ar) +
+              blend * 2 * std::sin(alpha) * std::sin(alpha);
+  double q = .5 * rho * speed * speed * area, sign = u >= 0 ? 1. : -1.;
+  return q * (cl * V(sign * v / speed, -std::abs(u) / speed, 0) -
+              cd * V(u / speed, v / speed, 0));
 }
-}
+} // namespace usv

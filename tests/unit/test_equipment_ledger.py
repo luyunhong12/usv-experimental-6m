@@ -97,7 +97,7 @@ class LedgerTests(unittest.TestCase):
         self.assertEqual(sum("E163" in r["name"] for r in rows("speed15_concept")), 6)
 
     def test_nominal_fore_ballast_equilibrium(self):
-        """重布置后名义满油调平，两方案均不生成纵向配重。"""
+        """新增鳍后检验真实浮力平衡，两方案均不生成纵向配重。"""
         from pathlib import Path
         from scenario_profiles import apply_speed15
         import xml.etree.ElementTree as E
@@ -114,9 +114,14 @@ class LedgerTests(unittest.TestCase):
             )
             self.assertIsNone(solid)
             if profile == "speed15_concept":
-                np.testing.assert_allclose(
-                    result["pose_z_roll_pitch"][1:], [0, 0], atol=1e-8
-                )
+                from fuel_equilibrium import displaced
+
+                pose = result["pose_z_roll_pitch"]
+                volume, cb, rotation = displaced(pose)
+                cg = rotation @ np.array(result["ship_cg_m"])
+                np.testing.assert_allclose(cb[:2], cg[:2], atol=1e-8)
+                self.assertAlmostEqual(volume * 1000, result["ship_mass_kg"], places=5)
+                self.assertLess(max(abs(np.array(pose[1:]))), np.radians(0.05))
                 self.assertAlmostEqual(
                     result["ship_mass_kg"],
                     sum(p["mass_kg"] for p in rows(profile)) + 60 * 0.84,
@@ -164,7 +169,7 @@ class LedgerTests(unittest.TestCase):
             root / "ros_ws/src/usv_description/config/hull_triangles.txt"
         ).reshape(-1, 3)
         envelope = ConvexHull(triangles).equations
-        for ballast in (p for p in parts if "geometry" in p):
+        for ballast in (p for p in parts if p.get("geometry", {}).get("type") == "box"):
             size = np.array(ballast["geometry"]["size_m"])
             mass = ballast["mass_kg"]
             if "material_density_kg_m3" in ballast["geometry"]:
@@ -188,6 +193,93 @@ class LedgerTests(unittest.TestCase):
         self.assertEqual(len(hull.findall("visual")), 9)
         self.assertEqual(len(hull.findall("collision")), 9)
         self.assertIsNone(hull.find("inertial"))  # no duplicate mass from rendering
+
+
+class StabilizerTests(unittest.TestCase):
+    """以独立解析体积及几何记账检查新增小型被动鳍。"""
+
+    def test_solid_accounting(self):
+        """解析椭圆柱加相似截面棱台校验体积和台账质量惯性。"""
+        from passive_stabilizer import configuration, geometry, mass_properties
+
+        part = configuration()
+        g = part["geometry"]
+        chord, thickness, span = g["size_m"]
+        taper, scale = g["tip_taper_m"], g["tip_scale"]
+        exact = (
+            np.pi
+            * chord
+            * thickness
+            / 4
+            * (span - taper + taper * (1 + scale + scale**2) / 3)
+        )
+        volume, mass, cg, inertia = mass_properties(part)
+        self.assertLess(abs(volume / exact - 1), 0.002)
+        self.assertAlmostEqual(mass, part["mass_kg"], places=9)
+        np.testing.assert_allclose(cg, part["cg_m"], atol=1e-10)
+        np.testing.assert_allclose(inertia, part["inertia_at_cg_kg_m2"], atol=1e-10)
+        vertices, faces, _ = geometry(part)
+        self.assertGreater(
+            vertices[:, 2].min(), -0.5
+        )  # 高于原推进器，不增加整艇最深点。
+        edges = np.sort(
+            np.concatenate([faces[:, [0, 1]], faces[:, [1, 2]], faces[:, [2, 0]]]),
+            axis=1,
+        )
+        _, counts = np.unique(edges, axis=0, return_counts=True)
+        self.assertTrue(np.all(counts == 2))
+        self.assertEqual(part["power"]["rated_w"], 0)
+
+    def test_generation_idempotent(self):
+        """两次生成仍各有一个显示、碰撞及独立受力实例。"""
+        import tempfile
+        import xml.etree.ElementTree as E
+        from passive_stabilizer import add_stabilizer, configuration
+
+        model = E.fromstring('<model><link name="hull"/></model>')
+        with tempfile.TemporaryDirectory() as folder:
+            for _ in range(2):
+                add_stabilizer(model, configuration(), folder)
+            self.assertEqual(len(model.findall("link/visual")), 1)
+            self.assertEqual(len(model.findall("link/collision")), 1)
+            self.assertEqual(len(model.findall("plugin")), 1)
+            self.assertEqual(
+                model.findtext("link/visual/geometry/mesh/uri"),
+                model.findtext("link/collision/geometry/mesh/uri"),
+            )
+            self.assertEqual(model.findtext("plugin/topic_namespace"), "usv")
+            self.assertEqual(model.findtext("plugin/telemetry_group"), "stabilizer")
+            from pathlib import Path
+
+            lines = (
+                Path(model.findtext("link/collision/geometry/mesh/uri"))
+                .read_text()
+                .splitlines()
+            )
+            normals = [
+                list(map(float, line.split()[1:]))
+                for line in lines
+                if line.startswith("vn ")
+            ]
+            np.testing.assert_allclose(np.linalg.norm(normals, axis=1), 1, atol=1e-10)
+            for line in (line for line in lines if line.startswith("f ")):
+                for index in line.split()[1:]:
+                    self.assertTrue(1 <= int(index.split("//")[1]) <= len(normals))
+
+    def test_invalid_geometry(self):
+        """非法尺寸和截面数量在生成之前拒绝。"""
+        from passive_stabilizer import configuration, geometry
+
+        for key, value in [
+            ("tip_scale", 0),
+            ("tip_taper_m", 1),
+            ("sections", 17),
+            ("size_m", [1, float("nan"), 1]),
+        ]:
+            part = configuration()
+            part["geometry"][key] = value
+            with self.assertRaises(ValueError):
+                geometry(part)
 
 
 if __name__ == "__main__":

@@ -42,6 +42,14 @@
 | `/parts/*/power/classification` | 条目的来源或工程分类标识。 |
 | `/coverage_note` | 整体台账覆盖范围与未测量项说明。 |
 | `/parts/*/geometry` | 新增实体的显示及碰撞包络；质量已在所属刚体台账合并，不在几何生成时再加质量。 |
-| `/parts/*/geometry/type` | 包络形状，目前支持 box。 |
-| `/parts/*/geometry/size_m` | 长方体三轴尺寸，单位 m，用于质量—体积及惯性一致性验证。 |
+| `/parts/*/geometry/type` | 包络形状，支持 box 及椭圆截面收缩鳍 elliptic_fin。 |
+| `/parts/*/geometry/size_m` | 包络三轴尺寸，单位 m；椭圆鳍分别为弦长、最大厚度、跨度。 |
 | `/parts/*/geometry/material_density_kg_m3` | 工程材料密度，单位 kg/m³；与体积相乘应等于该部件名义质量。 |
+| `/parts/*/geometry/root_center_m` | 鳍根截面中心，模型 FLU 坐标，单位 m。 |
+| `/parts/*/geometry/tip_taper_m` | 下端线性收缩段长度，须大于零且小于跨度，单位 m。 |
+| `/parts/*/geometry/tip_scale` | 末端截面相对根部缩放比，范围 (0,1)。 |
+| `/parts/*/geometry/sections` | 椭圆截面周向离散数，16–256 且为 4 的倍数。 |
+| `/parts/*/hydrodynamics` | 新增被动鳍的水动力工程假设。 |
+| `/parts/*/hydrodynamics/profile_drag_coefficient` | 零升力型阻系数，无量纲且非负，新增阻力不从原船体预算扣除。 |
+| `/parts/*/hydrodynamics/oswald_efficiency` | 有限展弦比诱导阻力效率，范围 (0,1]。 |
+| `/parts/*/hydrodynamics/basis` | 水动力假设、来源与未经实测标定的限制。 |
