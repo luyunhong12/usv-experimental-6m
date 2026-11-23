@@ -1,0 +1,33 @@
+{
+  "case": "combined",
+  "spec": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 150,
+    "fuel_l": 30,
+    "wave_gain": 0.3,
+    "wind": [
+      0,
+      8,
+      0
+    ],
+    "current": [
+      0.2,
+      0.15,
+      0
+    ],
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "finished_stages": 1,
+  "start_sim": 1.032,
+  "failure": null,
+  "bridge_resumed": false
+}

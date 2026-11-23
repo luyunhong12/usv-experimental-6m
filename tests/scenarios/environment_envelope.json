@@ -1,0 +1,352 @@
+{
+  "calm_load0_fuel6": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 0,
+    "fuel_l": 6,
+    "wave_gain": 0,
+    "initial_yaw": 0,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 120,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "following_load0_fuel6": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 0,
+    "fuel_l": 6,
+    "wave_gain": 0.3,
+    "initial_yaw": 0,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "beam_load0_fuel6": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 0,
+    "fuel_l": 6,
+    "wave_gain": 0.3,
+    "initial_yaw": 1.5707963267948966,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "head_load0_fuel6": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 0,
+    "fuel_l": 6,
+    "wave_gain": 0.3,
+    "initial_yaw": 3.141592653589793,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "calm_load0_fuel60": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 0,
+    "fuel_l": 60,
+    "wave_gain": 0,
+    "initial_yaw": 0,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 120,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "following_load0_fuel60": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 0,
+    "fuel_l": 60,
+    "wave_gain": 0.3,
+    "initial_yaw": 0,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "beam_load0_fuel60": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 0,
+    "fuel_l": 60,
+    "wave_gain": 0.3,
+    "initial_yaw": 1.5707963267948966,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "head_load0_fuel60": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 0,
+    "fuel_l": 60,
+    "wave_gain": 0.3,
+    "initial_yaw": 3.141592653589793,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "calm_load300_fuel6": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 300,
+    "fuel_l": 6,
+    "wave_gain": 0,
+    "initial_yaw": 0,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 120,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "following_load300_fuel6": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 300,
+    "fuel_l": 6,
+    "wave_gain": 0.3,
+    "initial_yaw": 0,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "beam_load300_fuel6": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 300,
+    "fuel_l": 6,
+    "wave_gain": 0.3,
+    "initial_yaw": 1.5707963267948966,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "head_load300_fuel6": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 300,
+    "fuel_l": 6,
+    "wave_gain": 0.3,
+    "initial_yaw": 3.141592653589793,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "calm_load300_fuel60": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 300,
+    "fuel_l": 60,
+    "wave_gain": 0,
+    "initial_yaw": 0,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 120,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "following_load300_fuel60": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 300,
+    "fuel_l": 60,
+    "wave_gain": 0.3,
+    "initial_yaw": 0,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "beam_load300_fuel60": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 300,
+    "fuel_l": 60,
+    "wave_gain": 0.3,
+    "initial_yaw": 1.5707963267948966,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "head_load300_fuel60": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 300,
+    "fuel_l": 60,
+    "wave_gain": 0.3,
+    "initial_yaw": 3.141592653589793,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "cross_current": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 0,
+    "fuel_l": 60,
+    "wave_gain": 0,
+    "wind": [
+      0,
+      0,
+      0
+    ],
+    "current": [
+      0,
+      0.3,
+      0
+    ],
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "combined": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 150,
+    "fuel_l": 30,
+    "wave_gain": 0.3,
+    "wind": [
+      0,
+      8,
+      0
+    ],
+    "current": [
+      0.2,
+      0.15,
+      0
+    ],
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "stress": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 300,
+    "fuel_l": 6,
+    "wave_gain": 0.6,
+    "wind": [
+      0,
+      10,
+      0
+    ],
+    "current": [
+      0.3,
+      0.4,
+      0
+    ],
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  }
+}

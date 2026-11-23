@@ -1,0 +1,24 @@
+{
+  "case": "head_load300_fuel6",
+  "spec": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 300,
+    "fuel_l": 6,
+    "wave_gain": 0.3,
+    "initial_yaw": 3.141592653589793,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "finished_stages": 1,
+  "start_sim": 1.336,
+  "failure": null,
+  "bridge_resumed": false
+}

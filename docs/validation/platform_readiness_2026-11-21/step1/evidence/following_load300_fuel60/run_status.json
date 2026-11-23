@@ -1,0 +1,24 @@
+{
+  "case": "following_load300_fuel60",
+  "spec": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 300,
+    "fuel_l": 60,
+    "wave_gain": 0.3,
+    "initial_yaw": 0,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "finished_stages": 1,
+  "start_sim": 1.236,
+  "failure": null,
+  "bridge_resumed": false
+}

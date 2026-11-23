@@ -16,6 +16,35 @@ spec.loader.exec_module(m)
 class ManeuverMetricsTest(unittest.TestCase):
     """验证本模块的解析不变量与失败条件。"""
 
+    def test_environment_rejects_missing_motion_and_dry_propeller(self):
+        """有波高而无升沉不能通过，推进器浸水不足也必须被识别。"""
+        import tempfile
+
+        x = np.zeros((301, 17))
+        x[:, 0] = np.linspace(0, 30, len(x))
+        x[:, 8] = 1
+        wave = np.zeros((301, 7))
+        wave[:, 0] = x[:, 0]
+        wave[:, 1] = 0.1 * np.sin(x[:, 0])
+        criteria = dict(
+            environment_max_roll_deg=10,
+            environment_max_pitch_deg=10,
+            minimum_propeller_wet_fraction=0.8,
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp)
+            np.savetxt(path / "wave_response_state.csv", wave, delimiter=",")
+            checks, _ = m.environment_quality(path, x, {"wave_gain": 0.3}, criteria)
+            self.assertFalse(checks["heave_responds"])
+            wave[:, 6] = 0.08 * np.sin(x[:, 0])
+            np.savetxt(path / "wave_response_state.csv", wave, delimiter=",")
+            x[:, 8] = 0.7
+            x[:, 15] = np.radians(12)
+            checks, _ = m.environment_quality(path, x, {"wave_gain": 0.3}, criteria)
+            self.assertTrue(checks["heave_responds"])
+            self.assertFalse(checks["propeller_immersion"])
+            self.assertFalse(checks["roll_envelope"])
+
     def test_circle(self):
         """用解析圆轨迹验证回转指标。"""
         x = np.zeros((1001, 17))

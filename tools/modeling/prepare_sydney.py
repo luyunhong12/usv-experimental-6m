@@ -141,6 +141,8 @@ for uri in world.findall("include/uri"):
             "src/usv_description/models/coast_waves_gain_"
             + str(a.wave_gain).replace(".", "_")
         )
+        if a.output:
+            calm = a.output.resolve().parent / "models" / "coast_waves"
         calm.mkdir(parents=True, exist_ok=True)
         for folder in ["materials", "meshes"]:
             link = calm / folder

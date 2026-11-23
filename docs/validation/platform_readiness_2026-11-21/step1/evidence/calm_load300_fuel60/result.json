@@ -1,0 +1,64 @@
+{
+  "case": "calm_load300_fuel60",
+  "spec": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 300,
+    "fuel_l": 60,
+    "wave_gain": 0,
+    "initial_yaw": 0,
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 120,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "checks": {
+    "startup_ready": true,
+    "completed": true,
+    "no_failure": true,
+    "finite": true,
+    "attitude_bounded": true,
+    "power_limited": true,
+    "energy_balance": true,
+    "fuel_mass_consistent": true,
+    "resistance_dissipative": true,
+    "command_reached_physics": true,
+    "health_command_observed": true,
+    "initial_soc_matches": true
+  },
+  "passed": true,
+  "failure": null,
+  "start_sim": 1.136,
+  "metrics": {
+    "environment_run": {
+      "tail_speed_m_s": 0.9131974011881414,
+      "tail_speed_std_m_s": 1.3082308628135624e-14,
+      "mean_motor_w": 769.9409499893104,
+      "distance_m": 105.2108291212354,
+      "heading_change_rad": 0.0053133123090121585,
+      "mean_wet_area_m2": 11.056342651970077,
+      "mean_projected_x_m2": 0.4231017072616616,
+      "mean_surge_drag_n": 293.19846641387653
+    }
+  },
+  "summary": {
+    "max_roll_pitch_deg": [
+      0.04972224198296863,
+      0.30258016126826004
+    ],
+    "soc_start_end": [
+      0.8999999963443231,
+      0.8994032331722253
+    ],
+    "temperature_max_c": 25.00038603459978,
+    "fuel_consumed_l": 0.0,
+    "sim_end": 121.36
+  },
+  "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+  "postprocess_recovered": false
+}

@@ -309,6 +309,41 @@ def zigzag_checks(stages, traces, criteria):
     return checks, overshoots
 
 
+def environment_quality(folder, trace, expected, criteria):
+    """测量环境响应与浸水，按预先给定的使用范围门槛独立评估。
+
+    Args:
+        folder: 完整遥测目录。
+        trace: 按时间排序的推进遥测。
+        expected: 运行工况配置。
+        criteria: 预先声明的工程筛查门槛。
+    """
+    wave = np.loadtxt(folder / "wave_response_state.csv", delimiter=",", ndmin=2)
+    wave = wave[wave[:, 0] >= trace[0, 0] + 10]
+    active = trace[trace[:, 0] >= trace[0, 0] + 10]
+    roll, pitch = np.degrees(np.max(abs(active[:, 15:17]), axis=0))
+    metrics = {
+        "max_roll_deg": float(roll),
+        "max_pitch_deg": float(pitch),
+        "minimum_propeller_wet_fraction": float(active[:, 8].min()),
+        "partial_immersion_fraction": float(np.mean(active[:, 8] < 0.99)),
+        "wave_height_range_m": float(np.ptp(wave[:, 1])),
+        "heave_std_m": float(np.std(wave[:, 6])),
+        "heading_range_deg": float(np.degrees(np.ptp(np.unwrap(active[:, 14])))),
+    }
+    checks = {
+        "roll_envelope": roll < criteria["environment_max_roll_deg"],
+        "pitch_envelope": pitch < criteria["environment_max_pitch_deg"],
+        "propeller_immersion": metrics["minimum_propeller_wet_fraction"]
+        >= criteria["minimum_propeller_wet_fraction"],
+        "wave_trace_valid": valid_trace(wave),
+    }
+    if expected.get("wave_gain", 0) > 0:
+        checks["waves_present"] = metrics["wave_height_range_m"] > 0.02
+        checks["heave_responds"] = metrics["heave_std_m"] > 0.003
+    return checks, metrics
+
+
 def assess_case(folder, criteria, expected, fingerprint):
     """核对版本绑定后评估运行完整性与操纵品质。
 
@@ -360,6 +395,11 @@ def assess_case(folder, criteria, expected, fingerprint):
     checks.update(zig_checks)
     if overshoots:
         metrics["zigzag_overshoots_deg"] = overshoots
+    if expected.get("kind") == "environment":
+        env_checks, metrics["environment"] = environment_quality(
+            folder, trace, expected, criteria
+        )
+        checks.update(env_checks)
     checks = {key: bool(value) for key, value in checks.items()}
     return {
         "passed": all(checks.values()),
@@ -375,6 +415,9 @@ def main():
     ap.add_argument("--output", type=Path, required=True)
     ap.add_argument("--criteria", type=Path, required=True)
     ap.add_argument("--spec", type=Path, required=True)
+    ap.add_argument(
+        "--suite-kind", choices=["maneuvers", "environment"], default="maneuvers"
+    )
     args = ap.parse_args()
     c = json.loads(args.criteria.read_text())
     spec = json.loads(args.spec.read_text())
@@ -390,7 +433,7 @@ def main():
         except Exception as e:
             cases[name] = {"passed": False, "failure": str(e)}
     comparisons = {}
-    for label in ["055", "100"]:
+    for label in ["055", "100"] if args.suite_kind == "maneuvers" else []:
         try:
             left_radius = cases["turn_" + label + "_left"]["metrics"]["turn"][
                 "radius_m"
@@ -404,14 +447,18 @@ def main():
             }
         except (KeyError, TypeError):
             comparisons["turn_" + label] = {"passed": False}
-    try:
-        u = [
-            cases["neutral_" + k]["metrics"]["neutral"]["tail_surge_m_s"]
-            for k in ["035", "065", "100"]
-        ]
-        comparisons["speed_monotonic"] = {"passed": u[0] < u[1] < u[2], "speeds_m_s": u}
-    except KeyError:
-        comparisons["speed_monotonic"] = {"passed": False}
+    if args.suite_kind == "maneuvers":
+        try:
+            u = [
+                cases["neutral_" + k]["metrics"]["neutral"]["tail_surge_m_s"]
+                for k in ["035", "065", "100"]
+            ]
+            comparisons["speed_monotonic"] = {
+                "passed": u[0] < u[1] < u[2],
+                "speeds_m_s": u,
+            }
+        except KeyError:
+            comparisons["speed_monotonic"] = {"passed": False}
     out = {
         "passed": all(v["passed"] for v in [*cases.values(), *comparisons.values()]),
         "execution_fingerprint": binding["fingerprint"],

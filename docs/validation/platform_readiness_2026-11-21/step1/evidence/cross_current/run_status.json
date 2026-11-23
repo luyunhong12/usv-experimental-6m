@@ -1,0 +1,33 @@
+{
+  "case": "cross_current",
+  "spec": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 0,
+    "fuel_l": 60,
+    "wave_gain": 0,
+    "wind": [
+      0,
+      0,
+      0
+    ],
+    "current": [
+      0,
+      0.3,
+      0
+    ],
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "finished_stages": 1,
+  "start_sim": 1.336,
+  "failure": null,
+  "bridge_resumed": false
+}

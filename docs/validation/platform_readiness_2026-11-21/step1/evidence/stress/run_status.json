@@ -1,0 +1,33 @@
+{
+  "case": "stress",
+  "spec": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 300,
+    "fuel_l": 6,
+    "wave_gain": 0.6,
+    "wind": [
+      0,
+      10,
+      0
+    ],
+    "current": [
+      0.3,
+      0.4,
+      0
+    ],
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "finished_stages": 1,
+  "start_sim": 1.336,
+  "failure": null,
+  "bridge_resumed": false
+}

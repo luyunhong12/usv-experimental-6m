@@ -1,0 +1,884 @@
+{
+  "passed": true,
+  "execution_fingerprint": "95bb12335367679ebb3bd261a34cab217b2f5fc885e335ff9ad921446ba7881b",
+  "criteria": {
+    "status": "PREDECLARED_ENGINEERING_REGRESSION_NOT_IMO_CERTIFICATION",
+    "length_reference_m": 6,
+    "max_roll_pitch_deg": 20,
+    "max_neutral_yaw_deg_s": 0.172,
+    "max_tail_speed_std_m_s": 0.12,
+    "min_turn_radius_lengths": 0.1,
+    "max_turn_radius_lengths": 20,
+    "max_port_starboard_radius_relative_difference": 0.2,
+    "max_coast_stop_distance_lengths": 100,
+    "max_reverse_brake_stop_distance_lengths": 20,
+    "max_zigzag_overshoot_deg": 25,
+    "max_reverse_yaw_deg_s": 0.5,
+    "max_recovered_yaw_deg_s": 0.172,
+    "max_servo_error_deg": 1,
+    "notes": [
+      "Bounds are regression/consistency checks, not a calibrated vessel performance envelope.",
+      "Zigzag uses heading-triggered discrete rudder reversals, no heading-hold controller.",
+      "Coast stopping: horizontal speed <0.1 m/s for 1 s. Reverse-braking: first nonpositive surge, with remaining sway explicitly reported; not necessarily zero ground speed.",
+      "Version 3 quality targets declared before final preflight runs: zigzag overshoot <25 deg, zero-rudder recovery excursion <30 deg and settling <20 s, continuous astern yaw <0.5 deg/s. Engineering screening targets, not measured vessel limits or IMO certification; failures stay failures."
+    ],
+    "schema": 3,
+    "servo_rate_source": "Actual joint velocity limit and reference trajectory rate read separately from each generated boat.sdf; numerical tolerance 1e-6 rad/s",
+    "max_recovery_heading_deg": 30,
+    "max_recovery_time_s": 20,
+    "environment_max_roll_deg": 10,
+    "environment_max_pitch_deg": 10,
+    "minimum_propeller_wet_fraction": 0.8
+  },
+  "criteria_sha256": "68507767cc6dbb092d6878e59160e6588edcd4b36ce53f1f4e92dcd752cf62b8",
+  "assessor_sha256": "e3134a18d1c1c11caef7f4855acff6ea05a13eed84502811faaba5856f74f171",
+  "spec_sha256": "044f77e471a1c7a5423e2813a21ca621fae2c17a0efe46fc9b3c5088a485238c",
+  "cases": {
+    "calm_load0_fuel6": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 8.481597700305933e-05,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 120.02,
+          "tail_surge_m_s": 0.9740326211936982,
+          "tail_speed_std_m_s": 4.435305023524335e-14,
+          "tail_yaw_deg_s": 0.000403360850208744,
+          "heading_change_deg": 0.0572918094926943,
+          "distance_m": 112.80454482161389
+        },
+        "environment": {
+          "max_roll_deg": 0.04832674666876262,
+          "max_pitch_deg": 0.07951243924707399,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.0,
+          "heave_std_m": 5.6505418596925e-06,
+          "heading_range_deg": 0.04790600022734452
+        }
+      }
+    },
+    "following_load0_fuel6": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true,
+        "waves_present": true,
+        "heave_responds": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.0003856162495006526,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 180.032,
+          "tail_surge_m_s": 0.9807530647039837,
+          "tail_speed_std_m_s": 0.06139424733509964,
+          "tail_yaw_deg_s": 0.0056070622190338626,
+          "heading_change_deg": 0.42402082898678234,
+          "distance_m": 171.52133703519246
+        },
+        "environment": {
+          "max_roll_deg": 0.3338902972821661,
+          "max_pitch_deg": 1.096446105173323,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.22549800259304723,
+          "heave_std_m": 0.046248622958122015,
+          "heading_range_deg": 0.5012815134068557
+        }
+      }
+    },
+    "beam_load0_fuel6": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true,
+        "waves_present": true,
+        "heave_responds": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.00039124943888362994,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 180.036,
+          "tail_surge_m_s": 0.9733599896951758,
+          "tail_speed_std_m_s": 0.008732852269471457,
+          "tail_yaw_deg_s": 0.0015546260991444788,
+          "heading_change_deg": -0.1721940337282564,
+          "distance_m": 171.61235046090053
+        },
+        "environment": {
+          "max_roll_deg": 0.9931680988044197,
+          "max_pitch_deg": 0.36137956090970136,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.20196714061909937,
+          "heave_std_m": 0.047122150574862964,
+          "heading_range_deg": 0.3358682202107558
+        }
+      }
+    },
+    "head_load0_fuel6": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true,
+        "waves_present": true,
+        "heave_responds": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.0006624150511700007,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 180.036,
+          "tail_surge_m_s": 0.9698064490453687,
+          "tail_speed_std_m_s": 0.050845084662750055,
+          "tail_yaw_deg_s": 0.004017214505099376,
+          "heading_change_deg": 0.47448417190729236,
+          "distance_m": 171.03670044120236
+        },
+        "environment": {
+          "max_roll_deg": 0.33468192858014656,
+          "max_pitch_deg": 1.0636200716664441,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.2111147956219999,
+          "heave_std_m": 0.04727766731625161,
+          "heading_range_deg": 0.36525711297147145
+        }
+      }
+    },
+    "calm_load0_fuel60": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 8.085721915062607e-05,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 120.02,
+          "tail_surge_m_s": 0.9652570016688383,
+          "tail_speed_std_m_s": 3.0823703119282475e-14,
+          "tail_yaw_deg_s": 0.0007763172434725083,
+          "heading_change_deg": 0.10117815770752252,
+          "distance_m": 111.66782010340542
+        },
+        "environment": {
+          "max_roll_deg": 0.04805380930139452,
+          "max_pitch_deg": 0.019944248626587936,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.0,
+          "heave_std_m": 6.017221467609129e-06,
+          "heading_range_deg": 0.08965680829580046
+        }
+      }
+    },
+    "following_load0_fuel60": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true,
+        "waves_present": true,
+        "heave_responds": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.0003848147074947376,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 180.04,
+          "tail_surge_m_s": 0.9685041860714744,
+          "tail_speed_std_m_s": 0.06565806010037076,
+          "tail_yaw_deg_s": 0.007587668890803487,
+          "heading_change_deg": 0.46304842781536865,
+          "distance_m": 169.9085228396578
+        },
+        "environment": {
+          "max_roll_deg": 0.33283979831807564,
+          "max_pitch_deg": 1.033956244694225,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.22561277007353628,
+          "heave_std_m": 0.0463762354579331,
+          "heading_range_deg": 0.5606275759546447
+        }
+      }
+    },
+    "beam_load0_fuel60": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true,
+        "waves_present": true,
+        "heave_responds": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.0003907319947120446,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 180.048,
+          "tail_surge_m_s": 0.9637845799662512,
+          "tail_speed_std_m_s": 0.010036148325311838,
+          "tail_yaw_deg_s": -0.0002084243908705155,
+          "heading_change_deg": -0.12059192436880659,
+          "distance_m": 170.02886376900625
+        },
+        "environment": {
+          "max_roll_deg": 0.9967810280196711,
+          "max_pitch_deg": 0.30201652289452535,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.2025018727650954,
+          "heave_std_m": 0.04745134114006808,
+          "heading_range_deg": 0.314145727148064
+        }
+      }
+    },
+    "head_load0_fuel60": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true,
+        "waves_present": true,
+        "heave_responds": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.000662846881549048,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 180.036,
+          "tail_surge_m_s": 0.9621214107692457,
+          "tail_speed_std_m_s": 0.050641808484260205,
+          "tail_yaw_deg_s": 0.003931366471298078,
+          "heading_change_deg": 0.5281527913285828,
+          "distance_m": 169.46839009275593
+        },
+        "environment": {
+          "max_roll_deg": 0.3336933686249691,
+          "max_pitch_deg": 1.0025040366430198,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.2113901086762898,
+          "heave_std_m": 0.04731615408217145,
+          "heading_range_deg": 0.4217441366858129
+        }
+      }
+    },
+    "calm_load300_fuel6": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 7.381662677790441e-05,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 120.024,
+          "tail_surge_m_s": 0.9204874989696678,
+          "tail_speed_std_m_s": 1.3170413897488363e-14,
+          "tail_yaw_deg_s": 0.0022054200647832435,
+          "heading_change_deg": 0.2722798863156247,
+          "distance_m": 106.24192096165734
+        },
+        "environment": {
+          "max_roll_deg": 0.048821934424499225,
+          "max_pitch_deg": 0.2465416795550455,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.0,
+          "heave_std_m": 7.322956532406947e-06,
+          "heading_range_deg": 0.25062025171253294
+        }
+      }
+    },
+    "following_load300_fuel6": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true,
+        "waves_present": true,
+        "heave_responds": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.0003843233042443163,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 180.036,
+          "tail_surge_m_s": 0.9192122558512441,
+          "tail_speed_std_m_s": 0.07078442961632304,
+          "tail_yaw_deg_s": 0.007611460891735435,
+          "heading_change_deg": 0.6823621194016579,
+          "distance_m": 161.68979065367643
+        },
+        "environment": {
+          "max_roll_deg": 0.3351749463750586,
+          "max_pitch_deg": 1.2631645724611082,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.22578380410344046,
+          "heave_std_m": 0.04655449504788177,
+          "heading_range_deg": 0.8109468619890925
+        }
+      }
+    },
+    "beam_load300_fuel6": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true,
+        "waves_present": true,
+        "heave_responds": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.00041694984966270256,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 180.036,
+          "tail_surge_m_s": 0.9197132130732896,
+          "tail_speed_std_m_s": 0.01708854424579308,
+          "tail_yaw_deg_s": -0.0019095519528904874,
+          "heading_change_deg": 0.054087060791035424,
+          "distance_m": 161.86725817634107
+        },
+        "environment": {
+          "max_roll_deg": 1.00718887535177,
+          "max_pitch_deg": 0.524959349824929,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.20446943302540366,
+          "heave_std_m": 0.0479057382685087,
+          "heading_range_deg": 0.5319785736671083
+        }
+      }
+    },
+    "head_load300_fuel6": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true,
+        "waves_present": true,
+        "heave_responds": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.0006597112697488048,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 180.036,
+          "tail_surge_m_s": 0.92440938486179,
+          "tail_speed_std_m_s": 0.047917072466722464,
+          "tail_yaw_deg_s": 0.002871480025179277,
+          "heading_change_deg": 0.7072951092842383,
+          "distance_m": 161.40745739550317
+        },
+        "environment": {
+          "max_roll_deg": 0.33718190367283085,
+          "max_pitch_deg": 1.2008775807188472,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.21210817632170548,
+          "heave_std_m": 0.04739392914490849,
+          "heading_range_deg": 0.6473807099091499
+        }
+      }
+    },
+    "calm_load300_fuel60": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 7.325196737369387e-05,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 120.016,
+          "tail_surge_m_s": 0.9131974011881417,
+          "tail_speed_std_m_s": 1.3125725561026221e-14,
+          "tail_yaw_deg_s": 0.002480000977056529,
+          "heading_change_deg": 0.3046882906430039,
+          "distance_m": 105.30580287114158
+        },
+        "environment": {
+          "max_roll_deg": 0.048520515669688964,
+          "max_pitch_deg": 0.3004451825507004,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.0,
+          "heave_std_m": 7.306714560946341e-06,
+          "heading_range_deg": 0.28074326455869036
+        }
+      }
+    },
+    "following_load300_fuel60": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true,
+        "waves_present": true,
+        "heave_responds": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.00038361162676247163,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 180.036,
+          "tail_surge_m_s": 0.9106127786395111,
+          "tail_speed_std_m_s": 0.07099861469780008,
+          "tail_yaw_deg_s": 0.006966646598588278,
+          "heading_change_deg": 0.7260062064143197,
+          "distance_m": 160.38206768616965
+        },
+        "environment": {
+          "max_roll_deg": 0.33461988714527274,
+          "max_pitch_deg": 1.3145838231020541,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.22587899297669728,
+          "heave_std_m": 0.04657292015217632,
+          "heading_range_deg": 0.8573081628522674
+        }
+      }
+    },
+    "beam_load300_fuel60": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true,
+        "waves_present": true,
+        "heave_responds": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.00041778498869198406,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 180.036,
+          "tail_surge_m_s": 0.9124368954057696,
+          "tail_speed_std_m_s": 0.018430732377765616,
+          "tail_yaw_deg_s": -0.0022637204235969217,
+          "heading_change_deg": 0.0959626247507522,
+          "distance_m": 160.58715478681106
+        },
+        "environment": {
+          "max_roll_deg": 1.0080653378170463,
+          "max_pitch_deg": 0.5774231113108373,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.20499392905431535,
+          "heave_std_m": 0.0479521644497305,
+          "heading_range_deg": 0.5845463981998489
+        }
+      }
+    },
+    "head_load300_fuel60": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true,
+        "waves_present": true,
+        "heave_responds": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.0006597593149489012,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 180.036,
+          "tail_surge_m_s": 0.9179843993672091,
+          "tail_speed_std_m_s": 0.047135939327257965,
+          "tail_yaw_deg_s": 0.0028627375793685906,
+          "heading_change_deg": 0.7461967346995066,
+          "distance_m": 160.08106540579791
+        },
+        "environment": {
+          "max_roll_deg": 0.33663658201603547,
+          "max_pitch_deg": 1.256045218797579,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.2121360980890511,
+          "heave_std_m": 0.04739847894833734,
+          "heading_range_deg": 0.6917053088721195
+        }
+      }
+    },
+    "cross_current": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.03173501045534066,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 180.036,
+          "tail_surge_m_s": 0.9678069612878164,
+          "tail_speed_std_m_s": 3.988044637629153e-05,
+          "tail_yaw_deg_s": -0.0017589427725752135,
+          "heading_change_deg": 0.47484537867483967,
+          "distance_m": 178.4722697912127
+        },
+        "environment": {
+          "max_roll_deg": 0.04767158270144063,
+          "max_pitch_deg": 0.019074280998579177,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.0,
+          "heave_std_m": 5.125113209459311e-06,
+          "heading_range_deg": 0.30131388957879285
+        }
+      }
+    },
+    "combined": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true,
+        "waves_present": true,
+        "heave_responds": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.0018414122182800322,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 180.03199999999998,
+          "tail_surge_m_s": 1.1743365106983112,
+          "tail_speed_std_m_s": 0.012988737420701153,
+          "tail_yaw_deg_s": 0.08655183279555821,
+          "heading_change_deg": 78.83209548279656,
+          "distance_m": 210.96925750644374
+        },
+        "environment": {
+          "max_roll_deg": 0.9839001719223563,
+          "max_pitch_deg": 0.6831511540668612,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.22619668283229355,
+          "heave_std_m": 0.04801598459204241,
+          "heading_range_deg": 69.65645351021814
+        }
+      }
+    },
+    "stress": {
+      "passed": true,
+      "runtime_passed": true,
+      "checks": {
+        "servo_rate": true,
+        "reference_rate": true,
+        "runtime": true,
+        "evidence_bound": true,
+        "direct_only": true,
+        "attitude": true,
+        "environment_run_throttle_tracks": true,
+        "environment_run_servo_tracks": true,
+        "roll_envelope": true,
+        "pitch_envelope": true,
+        "propeller_immersion": true,
+        "wave_trace_valid": true,
+        "waves_present": true,
+        "heave_responds": true
+      },
+      "metrics": {
+        "servo": {
+          "actual_peak_rad_s": 0.004968309561472106,
+          "actual_limit_rad_s": 0.2,
+          "reference_peak_rad_s": 0.0,
+          "reference_limit_rad_s": 0.15
+        },
+        "environment_run": {
+          "duration_s": 180.036,
+          "tail_surge_m_s": 1.4278857961162588,
+          "tail_speed_std_m_s": 0.03722042078030643,
+          "tail_yaw_deg_s": 0.04416941736345649,
+          "heading_change_deg": 82.45736584998,
+          "distance_m": 256.36281675260216
+        },
+        "environment": {
+          "max_roll_deg": 1.8821630568588332,
+          "max_pitch_deg": 1.090124940742509,
+          "minimum_propeller_wet_fraction": 1.0,
+          "partial_immersion_fraction": 0.0,
+          "wave_height_range_m": 0.39893580464000766,
+          "heave_std_m": 0.09236483332423741,
+          "heading_range_deg": 71.16888078861425
+        }
+      }
+    }
+  },
+  "comparisons": {}
+}
