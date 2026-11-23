@@ -182,6 +182,17 @@ def analyze(out):
                     for h in health
                 ),
             )
+        if spec.get("kind") == "command_dropout":
+            gap = d[(d[:, 0] > start_sim + 16) & (d[:, 0] < start_sim + 24)]
+            recovered = d[d[:, 0] > start_sim + 35]
+            checks.update(
+                command_timeout_stops_throttle=bool(
+                    len(gap) and abs(gap[:, 1]).max() < 1e-8
+                ),
+                command_resumes_after_gap=bool(
+                    len(recovered) and recovered[:, 1].min() > 0.49
+                ),
+            )
         if spec.get("kind") == "low_soc":
             checks["soc_derating"] = bool(
                 e[-1, 1] < 0.15 and e[-1, 24] < e[e[:, 0] > start_sim + 5, 24][0]

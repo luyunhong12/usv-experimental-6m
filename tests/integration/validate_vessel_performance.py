@@ -470,7 +470,9 @@ try:
             if elapsed > 25 and bridge_pid is not None and not resumed:
                 os.kill(bridge_pid, signal.SIGCONT)
                 resumed = True
-        if s.get("mode") == "fixed_heading":
+        if spec.get("kind") == "command_dropout" and 12 < elapsed < 25:
+            pass  # Deliberately stop both manual publishers; keep observing health.
+        elif s.get("mode") == "fixed_heading":
             held_throttle.publish(Float64(data=float(s["throttle"])))
         elif s.get("mode", "direct") == "velocity":
             msg = Twist()

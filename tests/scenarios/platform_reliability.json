@@ -1,0 +1,123 @@
+{
+  "endurance_20min": {
+    "kind": "endurance",
+    "isolated_water": true,
+    "payload_kg": 150,
+    "fuel_l": 30,
+    "wave_gain": 0.3,
+    "wind": [
+      0,
+      6,
+      0
+    ],
+    "current": [
+      0.15,
+      0.1,
+      0
+    ],
+    "power_mode": "survey",
+    "generator_cycle": true,
+    "stages": [
+      {
+        "name": "endurance",
+        "duration": 1200,
+        "mode": "direct",
+        "throttle": 0.55,
+        "steering_deg": 5
+      }
+    ]
+  },
+  "sensor_dropout": {
+    "kind": "sensor_dropout",
+    "stages": [
+      {
+        "name": "dropout",
+        "duration": 50,
+        "mode": "velocity",
+        "speed": 1.5,
+        "yaw_rate": 0
+      }
+    ],
+    "isolated_water": true,
+    "wave_gain": 0
+  },
+  "low_soc": {
+    "kind": "low_soc",
+    "energy_overrides": {
+      "initial_soc": 0.155
+    },
+    "stages": [
+      {
+        "name": "derating",
+        "duration": 180,
+        "throttle": 1.0,
+        "steering_deg": 5
+      }
+    ],
+    "isolated_water": true,
+    "wave_gain": 0
+  },
+  "hot": {
+    "kind": "hot",
+    "energy_overrides": {
+      "initial_temperature_c": 44.8,
+      "ambient_c": 40
+    },
+    "stages": [
+      {
+        "name": "derating",
+        "duration": 180,
+        "throttle": 1.0,
+        "steering_deg": 5
+      }
+    ],
+    "isolated_water": true,
+    "wave_gain": 0
+  },
+  "fuel_reserve": {
+    "kind": "fuel_reserve",
+    "fuel_l": 1.005,
+    "generator_on": true,
+    "stages": [
+      {
+        "name": "reserve",
+        "duration": 120,
+        "mode": "velocity",
+        "speed": 1.5,
+        "yaw_rate": 0.04
+      }
+    ],
+    "isolated_water": true,
+    "wave_gain": 0
+  },
+  "clock_independent": {
+    "kind": "clock_independent",
+    "interfaces_args": [
+      "clock:=False"
+    ],
+    "startup_timeout": 10,
+    "stages": [
+      {
+        "name": "clock_test",
+        "mode": "velocity",
+        "speed": 1.5,
+        "duration": 20
+      }
+    ],
+    "isolated_water": true,
+    "wave_gain": 0
+  },
+  "command_dropout": {
+    "kind": "command_dropout",
+    "isolated_water": true,
+    "wave_gain": 0,
+    "stages": [
+      {
+        "name": "dropout",
+        "duration": 50,
+        "throttle": 0.5,
+        "steering_deg": 0
+      }
+    ]
+  }
+}
