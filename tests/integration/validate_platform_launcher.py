@@ -43,8 +43,11 @@ from pathlib import Path
 parser = argparse.ArgumentParser()
 parser.add_argument("--output", type=Path)
 parser.add_argument("--kill-controller", action="store_true")
+parser.add_argument("--startup-timeout", type=float, default=60)
 parser.add_argument("--control", choices=["ros", "ardupilot"], default="ros")
 args = parser.parse_args()
+if args.startup_timeout <= 0:
+    parser.error("Startup timeout must be positive")
 stem = "launcher_smoke" if args.control == "ros" else "launcher_ardupilot_smoke"
 if args.kill_controller:
     stem = "launcher_controller_exit"
@@ -106,6 +109,7 @@ children = set()
 start = time.monotonic()
 injected = False
 automatic_exit = False
+startup_complete = False
 
 
 def descend(pid):
@@ -126,16 +130,17 @@ def descend(pid):
 
 
 try:
-    while time.monotonic() - start < 60 and p.poll() is None:
+    while time.monotonic() - start < args.startup_timeout and p.poll() is None:
         descend(p.pid)
         if rows and rows[-1][0] > 5:
             rf = w / "log/platform-ready-usv_performance_launcher_test.json"
             if args.control != "ros" or (
                 rf.exists() and rf.stat().st_mtime >= started_epoch
             ):
+                startup_complete = True
                 break
         time.sleep(0.1)
-    if args.kill_controller:
+    if args.kill_controller and startup_complete:
         descend(p.pid)
         for child in children:
             try:
@@ -161,14 +166,30 @@ finally:
             os.killpg(p.pid, signal.SIGKILL)
             p.wait()
     f.close()
-live = []
-for child in children:
-    try:
-        status = Path(f"/proc/{child}/status").read_text()
-        if "\nState:\tZ" not in status:
-            live.append(child)
-    except FileNotFoundError:
-        pass
+
+
+def remaining_children(pids):
+    """识别仍可运行的子进程，不把已退出的僵尸当成活动进程。
+
+    Args:
+        pids: 本次启动链观测到的进程编号集合。
+    """
+    live = []
+    for child in pids:
+        try:
+            status = Path(f"/proc/{child}/status").read_text()
+            if "\nState:\tZ" not in status:
+                live.append(child)
+        except FileNotFoundError:
+            pass
+    return live
+
+
+cleanup_deadline = time.monotonic() + 1
+live = remaining_children(children)
+while live and time.monotonic() < cleanup_deadline:
+    time.sleep(0.05)
+    live = remaining_children(children)
 ready_file = w / "log/platform-ready-usv_performance_launcher_test.json"
 checks = {
     "startup_ready": (
@@ -192,6 +213,8 @@ if args.kill_controller:
 r = {
     "passed": all(checks.values()),
     "checks": checks,
+    "startup_timeout_wall_s": args.startup_timeout,
+    "cleanup_observation_grace_s": 1,
     "exit_code": p.returncode,
     "observed_children": len(children),
     "remaining_children": live,

@@ -38,6 +38,26 @@ import xml.etree.ElementTree as E
 import numpy as np
 
 
+def command_dropout_checks(trace, start_sim, end_sim):
+    """检查停发与恢复窗口，排除阶段结束后的主动清理停推。
+
+    Args:
+        trace: 第一列时间、第二列物理接收油门的遥测矩阵。
+        start_sim: 试验起始仿真时间，秒。
+        end_sim: 试验阶段结束时间，秒。
+    """
+    gap = trace[(trace[:, 0] > start_sim + 16) & (trace[:, 0] < start_sim + 24)]
+    recovered = trace[(trace[:, 0] > start_sim + 35) & (trace[:, 0] < end_sim)]
+    return {
+        "command_timeout_stops_throttle": bool(
+            len(gap) and abs(gap[:, 1]).max() < 1e-8
+        ),
+        "command_resumes_after_gap": bool(
+            len(recovered) and recovered[:, 1].min() > 0.49
+        ),
+    }
+
+
 def analyze(out):
     """读取性能记录并计算本轮工况指标。
 
@@ -183,15 +203,8 @@ def analyze(out):
                 ),
             )
         if spec.get("kind") == "command_dropout":
-            gap = d[(d[:, 0] > start_sim + 16) & (d[:, 0] < start_sim + 24)]
-            recovered = d[d[:, 0] > start_sim + 35]
             checks.update(
-                command_timeout_stops_throttle=bool(
-                    len(gap) and abs(gap[:, 1]).max() < 1e-8
-                ),
-                command_resumes_after_gap=bool(
-                    len(recovered) and recovered[:, 1].min() > 0.49
-                ),
+                command_dropout_checks(d, start_sim, stage_log[-1]["end_sim"])
             )
         if spec.get("kind") == "low_soc":
             checks["soc_derating"] = bool(

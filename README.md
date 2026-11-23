@@ -177,7 +177,7 @@ python3 tests/regression/run_performance_suite.py \
   --spec tests/scenarios/performance.json --output artifacts/my_performance_run
 ```
 
-每次试验使用新的输出目录，保留场景快照、遥测 CSV、健康日志及判定；复用必须显式 `--resume` 且版本、工况与证据一致。原生测试需要本机 ROS DDS / Gazebo Transport 通信权限。最新 Code Supervisor full 与构建测试通过：12 项 C++、42 项 Python、5 项设计接口测试。操纵品质另行核对原有门槛；这是本地验证，不是假称 GitHub CI 或实船验收。完整证据、已执行范围和复现说明见 [接入前报告](docs/validation/layout_2026-11-21/README.md)。
+每次试验使用新的输出目录，保留场景快照、遥测 CSV、健康日志及判定；复用必须显式 `--resume` 且版本、工况与证据一致。原生测试需要本机 ROS DDS / Gazebo Transport 通信权限。最新 Code Supervisor full 与构建测试通过：12 项 C++、43 项 Python、5 项设计接口测试。操纵品质另行核对原有门槛；这是本地验证，不是假称 GitHub CI 或实船验收。完整证据、已执行范围和复现说明见 [接入前报告](docs/validation/layout_2026-11-21/README.md)。
 
 ## 已知问题与下一步
 

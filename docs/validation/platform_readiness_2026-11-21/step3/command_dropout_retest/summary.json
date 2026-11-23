@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "exit_codes": {
+    "command_dropout": 0
+  },
+  "execution_unchanged": true,
+  "skipped": [],
+  "fingerprint": "6aa652327479faf008fbd5fdb75f801a6e1e5e6dc31ed92dbf7c802614424eb1",
+  "cases": {
+    "command_dropout": {
+      "case": "command_dropout",
+      "spec": {
+        "kind": "command_dropout",
+        "isolated_water": true,
+        "wave_gain": 0,
+        "stages": [
+          {
+            "name": "dropout",
+            "duration": 50,
+            "throttle": 0.5,
+            "steering_deg": 0
+          }
+        ]
+      },
+      "checks": {
+        "startup_ready": true,
+        "completed": true,
+        "no_failure": true,
+        "finite": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "fuel_mass_consistent": true,
+        "resistance_dissipative": true,
+        "command_reached_physics": true,
+        "health_command_observed": true,
+        "initial_soc_matches": true,
+        "command_timeout_stops_throttle": true,
+        "command_resumes_after_gap": true
+      },
+      "passed": true,
+      "failure": null,
+      "start_sim": 1.236,
+      "metrics": {
+        "dropout": {
+          "tail_speed_m_s": 1.9038100295212992,
+          "tail_speed_std_m_s": 2.5563341819201276e-05,
+          "mean_motor_w": 4396.525245981855,
+          "distance_m": 71.0403248364586,
+          "heading_change_rad": 0.00417797901037269,
+          "mean_wet_area_m2": 10.550255506229332,
+          "mean_projected_x_m2": 0.3612812343783685,
+          "mean_surge_drag_n": 886.1848063462678
+        }
+      },
+      "summary": {
+        "max_roll_pitch_deg": [
+          0.15789315335655593,
+          0.21806345406043648
+        ],
+        "soc_start_end": [
+          0.8999999963443231,
+          0.8991139378078448
+        ],
+        "temperature_max_c": 25.00272344665638,
+        "fuel_consumed_l": 0.0,
+        "sim_end": 51.42
+      },
+      "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+      "postprocess_recovered": false
+    }
+  }
+}

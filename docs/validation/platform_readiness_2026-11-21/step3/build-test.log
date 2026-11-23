@@ -36,38 +36,38 @@ PBR assets current
 }
 Starting >>> vrx_gazebo
 Starting >>> usv_description
-Finished <<< usv_description [0.08s]
+Finished <<< usv_description [0.11s]
 Starting >>> vrx_ros
-Finished <<< vrx_ros [0.08s]
+Finished <<< vrx_ros [0.12s]
 Starting >>> usv_energy
-Finished <<< usv_energy [0.07s]
+Finished <<< usv_energy [0.08s]
 Starting >>> usv_physics
-Finished <<< vrx_gazebo [0.30s]
+Finished <<< vrx_gazebo [0.37s]
 Starting >>> wamv_description
 Finished <<< usv_physics [0.10s]
 Starting >>> usv_control
 Finished <<< wamv_description [0.07s]
 Starting >>> wamv_gazebo
-Finished <<< wamv_gazebo [0.05s]
+Finished <<< wamv_gazebo [0.06s]
 Starting >>> vrx_gz
-Finished <<< usv_control [0.35s]
+Finished <<< usv_control [0.32s]
 Starting >>> usv_ardupilot
-Finished <<< usv_ardupilot [0.06s]
-Finished <<< vrx_gz [0.35s]
+Finished <<< usv_ardupilot [0.05s]
+Finished <<< vrx_gz [0.34s]
 Starting >>> usv_simulation
 Finished <<< usv_simulation [0.10s]
 Starting >>> usv_bringup
-Finished <<< usv_bringup [0.06s]
+Finished <<< usv_bringup [0.07s]
 
-Summary: 12 packages finished [1.05s]
-测试证据：/home/yh/Project/usv-experimental-6m/artifacts/validation/unit-tests/20261123T012439Z-rfM9Ps/tests.log
+Summary: 12 packages finished [1.13s]
+测试证据：/home/yh/Project/usv-experimental-6m/artifacts/validation/unit-tests/20261123T014555Z-2sEc3B/tests.log
 Starting >>> usv_energy
 UpdateCTestConfiguration  from :/home/yh/Project/usv-experimental-6m/ros_ws/build/usv_energy/CTestConfiguration.ini
 Parse Config file:/home/yh/Project/usv-experimental-6m/ros_ws/build/usv_energy/CTestConfiguration.ini
    Site: yh-cp
    Build name: (empty)
  Add coverage exclude regular expressions.
-Create new tag: 20261123-0124 - Experimental
+Create new tag: 20261123-0145 - Experimental
 UpdateCTestConfiguration  from :/home/yh/Project/usv-experimental-6m/ros_ws/build/usv_energy/CTestConfiguration.ini
 Parse Config file:/home/yh/Project/usv-experimental-6m/ros_ws/build/usv_energy/CTestConfiguration.ini
 Test project /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_energy
@@ -89,14 +89,14 @@ test 1
 100% tests passed, 0 tests failed out of 1
 
 Total Test time (real) =   0.01 sec
-Finished <<< usv_energy [0.03s]
+Finished <<< usv_energy [0.05s]
 Starting >>> usv_simulation
 UpdateCTestConfiguration  from :/home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/CTestConfiguration.ini
 Parse Config file:/home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/CTestConfiguration.ini
    Site: yh-cp
    Build name: (empty)
  Add coverage exclude regular expressions.
-Create new tag: 20261123-0124 - Experimental
+Create new tag: 20261123-0145 - Experimental
 UpdateCTestConfiguration  from :/home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/CTestConfiguration.ini
 Parse Config file:/home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/CTestConfiguration.ini
 Test project /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation
@@ -112,7 +112,7 @@ test 1
 1: Test command: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/test_wrench_audit
 1: Working Directory: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation
 1: Test timeout computed to be: 10000000
- 1/11 Test  #1: whole_vessel_wrench_transform ........   Passed    0.02 sec
+ 1/11 Test  #1: whole_vessel_wrench_transform ........   Passed    0.03 sec
 test 2
       Start  2: appendage_geometry_and_passivity
 
@@ -192,10 +192,10 @@ test 11
 
 100% tests passed, 0 tests failed out of 11
 
-Total Test time (real) =   0.11 sec
-Finished <<< usv_simulation [0.14s]
+Total Test time (real) =   0.13 sec
+Finished <<< usv_simulation [0.16s]
 
-Summary: 2 packages finished [0.27s]
+Summary: 2 packages finished [0.32s]
 Summary: 12 tests, 0 errors, 0 failures, 0 skipped
 test_battery_capacity_matches_count (test_equipment_ledger.LedgerTests.test_battery_capacity_matches_count)
 验证电池容量与所选电池数量一致。 ... ok
@@ -229,6 +229,8 @@ test_circle (test_maneuver_metrics.ManeuverMetricsTest.test_circle)
 用解析圆轨迹验证回转指标。 ... ok
 test_coasting_sway_is_not_stop (test_maneuver_metrics.ManeuverMetricsTest.test_coasting_sway_is_not_stop)
 验证仍有横向漂移时不会误报停止。 ... ok
+test_dropout_window_preserves_real_failures (test_maneuver_metrics.ManeuverMetricsTest.test_dropout_window_preserves_real_failures)
+结束停推应排除，阶段内失联或漏停推仍必须失败。 ... ok
 test_duplicate_time_rejected (test_maneuver_metrics.ManeuverMetricsTest.test_duplicate_time_rejected)
 重复采样时间不能进入速度微分或拟合。 ... ok
 test_environment_rejects_missing_motion_and_dry_propeller (test_maneuver_metrics.ManeuverMetricsTest.test_environment_rejects_missing_motion_and_dry_propeller)
@@ -290,7 +292,7 @@ test_trace_modification_rejected (test_trial_evidence.EvidenceTests.test_trace_m
 结果仍写 passed 时，修改过的遥测也必须被拒绝。 ... ok
 
 ----------------------------------------------------------------------
-Ran 42 tests in 0.460s
+Ran 43 tests in 0.487s
 
 OK
 test_actuator_rate_and_limits (test_vector_thrust.InterfaceTests.test_actuator_rate_and_limits)

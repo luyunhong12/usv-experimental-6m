@@ -15,7 +15,11 @@ import uuid
 r = next(p for p in Path(__file__).resolve().parents if (p / "project.toml").is_file())
 p = argparse.ArgumentParser()
 p.add_argument("--output", type=Path, required=True)
+p.add_argument("--drive-duration", type=float, default=4)
+p.add_argument("--ready-timeout", type=float, default=70)
 a = p.parse_args()
+if a.drive_duration <= 0 or a.ready_timeout <= 0:
+    p.error("Durations must be positive")
 o = a.output.resolve()
 o.mkdir(parents=True, exist_ok=True)
 partition = "usv_cli_" + uuid.uuid4().hex[:8]
@@ -78,7 +82,7 @@ failure = None
 stages = []
 try:
     ready = r / "ros_ws/log" / ("platform-ready-" + partition + ".json")
-    deadline = time.monotonic() + 70
+    deadline = time.monotonic() + a.ready_timeout
     while time.monotonic() < deadline:
         if proc.poll() is not None:
             raise RuntimeError("Platform exited before readiness")
@@ -110,13 +114,13 @@ try:
                 "--steering-deg",
                 str(angle),
                 "--duration",
-                "4",
+                str(a.drive_duration),
             ],
             cwd="/tmp",
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             text=True,
-            timeout=20,
+            timeout=max(20, a.drive_duration + 15),
         )
         (o / (name + ".log")).write_text(result.stdout)
         pr = prop[start:]
@@ -164,6 +168,8 @@ result = {
     "stages": stages,
     "partition": partition,
     "cwd": "/tmp",
+    "drive_duration_wall_s": a.drive_duration,
+    "ready_timeout_wall_s": a.ready_timeout,
     "scope": "Public command routing and steering response, not steady maneuver performance",
 }
 (o / "result.json").write_text(json.dumps(result, indent=2))

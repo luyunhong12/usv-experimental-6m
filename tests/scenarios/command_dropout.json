@@ -1,0 +1,15 @@
+{
+  "command_dropout": {
+    "kind": "command_dropout",
+    "isolated_water": true,
+    "wave_gain": 0,
+    "stages": [
+      {
+        "name": "dropout",
+        "duration": 50,
+        "throttle": 0.5,
+        "steering_deg": 0
+      }
+    ]
+  }
+}

@@ -101,6 +101,25 @@ class ManeuverMetricsTest(unittest.TestCase):
             ]
         )
 
+    def test_dropout_window_preserves_real_failures(self):
+        """结束停推应排除，阶段内失联或漏停推仍必须失败。"""
+        from performance_analysis import command_dropout_checks
+
+        trace = np.zeros((512, 17))
+        trace[:, 0] = np.arange(len(trace)) / 10
+        trace[:, 1] = 0.5
+        trace[(trace[:, 0] > 12) & (trace[:, 0] < 25), 1] = 0
+        trace[trace[:, 0] >= 50, 1] = 0
+        self.assertTrue(all(command_dropout_checks(trace, 0, 50).values()))
+        trace[450, 1] = 0
+        self.assertFalse(
+            command_dropout_checks(trace, 0, 50)["command_resumes_after_gap"]
+        )
+        trace[200, 1] = 0.5
+        self.assertFalse(
+            command_dropout_checks(trace, 0, 50)["command_timeout_stops_throttle"]
+        )
+
     def test_circle(self):
         """用解析圆轨迹验证回转指标。"""
         x = np.zeros((1001, 17))
