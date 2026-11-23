@@ -1,0 +1,431 @@
+{
+  "limits": {
+    "warmup_s": 30,
+    "minimum_delivery_ratio": 0.95,
+    "max_gap_sim_s": 1.0,
+    "max_latency_sim_s": 1.0,
+    "minimum_mean_rtf": 0.5,
+    "maximum_rss_mib": 6144,
+    "maximum_rss_growth_mib": 512
+  },
+  "errors": [],
+  "streams": {
+    "camera": {
+      "passed": true,
+      "checks": {
+        "monotonic_stamps": true,
+        "delivery_ratio": true,
+        "no_long_gap": true,
+        "valid_payloads": true,
+        "latency": true,
+        "not_future": true,
+        "content_changes": true
+      },
+      "frames": 300,
+      "delivered_sim_hz": 4.9942566049043595,
+      "delivered_wall_hz": 2.867442458645479,
+      "delivery_ratio": 0.9988513209808719,
+      "maximum_gap_sim_s": 0.20000000000000284,
+      "latency_sim_s_min_p95_max": [
+        -0.12199999999999989,
+        -0.0029499999999998638,
+        0.009000000000000341
+      ],
+      "unique_payloads": 300,
+      "content_min_median_max": [
+        47.27554251974742,
+        61.63785584677356,
+        74.78447040660808
+      ]
+    },
+    "camera_info": {
+      "passed": true,
+      "checks": {
+        "monotonic_stamps": true,
+        "delivery_ratio": true,
+        "no_long_gap": true,
+        "valid_payloads": true,
+        "latency": true,
+        "not_future": true
+      },
+      "frames": 300,
+      "delivered_sim_hz": 4.9942566049043595,
+      "delivered_wall_hz": 2.8667300833798275,
+      "delivery_ratio": 0.9988513209808719,
+      "maximum_gap_sim_s": 0.20000000000000284,
+      "latency_sim_s_min_p95_max": [
+        -0.12699999999999534,
+        -0.013999999999995794,
+        -0.001999999999995339
+      ],
+      "unique_payloads": 1,
+      "content_min_median_max": [
+        552.4670028686523,
+        552.4670028686523,
+        552.4670028686523
+      ]
+    },
+    "camera_right": {
+      "passed": true,
+      "checks": {
+        "monotonic_stamps": true,
+        "delivery_ratio": true,
+        "no_long_gap": true,
+        "valid_payloads": true,
+        "latency": true,
+        "not_future": true,
+        "content_changes": true
+      },
+      "frames": 300,
+      "delivered_sim_hz": 4.9942566049043595,
+      "delivered_wall_hz": 2.8680063160772065,
+      "delivery_ratio": 0.9988513209808719,
+      "maximum_gap_sim_s": 0.20000000000000284,
+      "latency_sim_s_min_p95_max": [
+        -0.11299999999999955,
+        0.006050000000000478,
+        0.020000000000003126
+      ],
+      "unique_payloads": 300,
+      "content_min_median_max": [
+        47.32579732008332,
+        61.60260526935194,
+        74.77184181584184
+      ]
+    },
+    "camera_right_info": {
+      "passed": true,
+      "checks": {
+        "monotonic_stamps": true,
+        "delivery_ratio": true,
+        "no_long_gap": true,
+        "valid_payloads": true,
+        "latency": true,
+        "not_future": true
+      },
+      "frames": 300,
+      "delivered_sim_hz": 4.9942566049043595,
+      "delivered_wall_hz": 2.8672929868591575,
+      "delivery_ratio": 0.9988513209808719,
+      "maximum_gap_sim_s": 0.20000000000000284,
+      "latency_sim_s_min_p95_max": [
+        -0.11299999999999955,
+        -0.0029499999999998638,
+        0.009000000000000341
+      ],
+      "unique_payloads": 1,
+      "content_min_median_max": [
+        552.4670028686523,
+        552.4670028686523,
+        552.4670028686523
+      ]
+    },
+    "camera_side": {
+      "passed": true,
+      "checks": {
+        "monotonic_stamps": true,
+        "delivery_ratio": true,
+        "no_long_gap": true,
+        "valid_payloads": true,
+        "latency": true,
+        "not_future": true,
+        "content_changes": true
+      },
+      "frames": 300,
+      "delivered_sim_hz": 4.9942566049043595,
+      "delivered_wall_hz": 2.8679007076977627,
+      "delivery_ratio": 0.9988513209808719,
+      "maximum_gap_sim_s": 0.20000000000000284,
+      "latency_sim_s_min_p95_max": [
+        -0.10300000000000153,
+        0.011000000000002785,
+        0.026000000000003354
+      ],
+      "unique_payloads": 300,
+      "content_min_median_max": [
+        50.813174824049675,
+        60.72580603395856,
+        70.5799958421897
+      ]
+    },
+    "camera_side_info": {
+      "passed": true,
+      "checks": {
+        "monotonic_stamps": true,
+        "delivery_ratio": true,
+        "no_long_gap": true,
+        "valid_payloads": true,
+        "latency": true,
+        "not_future": true
+      },
+      "frames": 300,
+      "delivered_sim_hz": 4.9942566049043595,
+      "delivered_wall_hz": 2.8680968284867565,
+      "delivery_ratio": 0.9988513209808719,
+      "maximum_gap_sim_s": 0.20000000000000284,
+      "latency_sim_s_min_p95_max": [
+        -0.11299999999999955,
+        0.006050000000000478,
+        0.020000000000003126
+      ],
+      "unique_payloads": 1,
+      "content_min_median_max": [
+        552.4670028686523,
+        552.4670028686523,
+        552.4670028686523
+      ]
+    },
+    "lidar": {
+      "passed": true,
+      "checks": {
+        "monotonic_stamps": true,
+        "delivery_ratio": true,
+        "no_long_gap": true,
+        "valid_payloads": true,
+        "latency": true,
+        "not_future": true
+      },
+      "frames": 300,
+      "delivered_sim_hz": 4.9942566049043595,
+      "delivered_wall_hz": 2.8679202345154504,
+      "delivery_ratio": 0.9988513209808719,
+      "maximum_gap_sim_s": 0.20000000000000284,
+      "latency_sim_s_min_p95_max": [
+        -0.08800000000000097,
+        0.025999999999996602,
+        0.03999999999999204
+      ],
+      "unique_payloads": 300,
+      "content_min_median_max": [
+        0.375,
+        0.5180555555555556,
+        0.7555555555555555
+      ]
+    },
+    "points": {
+      "passed": true,
+      "checks": {
+        "monotonic_stamps": true,
+        "delivery_ratio": true,
+        "no_long_gap": true,
+        "valid_payloads": true,
+        "latency": true,
+        "not_future": true,
+        "content_changes": true
+      },
+      "frames": 300,
+      "delivered_sim_hz": 4.9942566049043595,
+      "delivered_wall_hz": 2.868551125207032,
+      "delivery_ratio": 0.9988513209808719,
+      "maximum_gap_sim_s": 0.20000000000000284,
+      "latency_sim_s_min_p95_max": [
+        -0.08800000000000097,
+        0.03999999999999275,
+        0.05299999999999727
+      ],
+      "unique_payloads": 300,
+      "content_min_median_max": [
+        0.6154513888888888,
+        0.6420138888888889,
+        0.6699652777777778
+      ]
+    },
+    "native_camera": {
+      "passed": true,
+      "checks": {
+        "monotonic_stamps": true,
+        "delivery_ratio": true,
+        "no_long_gap": true,
+        "valid_payloads": true,
+        "latency": true,
+        "not_future": true
+      },
+      "frames": 300,
+      "delivered_sim_hz": 4.9942566049043595,
+      "delivered_wall_hz": 2.8675610305533583,
+      "delivery_ratio": 0.9988513209808719,
+      "maximum_gap_sim_s": 0.20000000000000284,
+      "latency_sim_s_min_p95_max": [
+        -0.12199999999999989,
+        -0.0029499999999998638,
+        0.009000000000000341
+      ],
+      "unique_payloads": 1,
+      "content_min_median_max": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "raw_camera": {
+      "passed": true,
+      "checks": {
+        "monotonic_stamps": true,
+        "delivery_ratio": true,
+        "no_long_gap": true,
+        "valid_payloads": true,
+        "latency": true,
+        "not_future": true
+      },
+      "frames": 300,
+      "delivered_sim_hz": 4.9942566049043595,
+      "delivered_wall_hz": 2.867285954883764,
+      "delivery_ratio": 0.9988513209808719,
+      "maximum_gap_sim_s": 0.20000000000000284,
+      "latency_sim_s_min_p95_max": [
+        -0.12199999999999989,
+        -0.0029499999999998638,
+        0.009000000000000341
+      ],
+      "unique_payloads": 1,
+      "content_min_median_max": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "native_camera_right": {
+      "passed": true,
+      "checks": {
+        "monotonic_stamps": true,
+        "delivery_ratio": true,
+        "no_long_gap": true,
+        "valid_payloads": true,
+        "latency": true,
+        "not_future": true
+      },
+      "frames": 300,
+      "delivered_sim_hz": 4.9942566049043595,
+      "delivered_wall_hz": 2.8678409801035456,
+      "delivery_ratio": 0.9988513209808719,
+      "maximum_gap_sim_s": 0.20000000000000284,
+      "latency_sim_s_min_p95_max": [
+        -0.11299999999999955,
+        0.006000000000000227,
+        0.020000000000003126
+      ],
+      "unique_payloads": 1,
+      "content_min_median_max": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "raw_camera_right": {
+      "passed": true,
+      "checks": {
+        "monotonic_stamps": true,
+        "delivery_ratio": true,
+        "no_long_gap": true,
+        "valid_payloads": true,
+        "latency": true,
+        "not_future": true
+      },
+      "frames": 300,
+      "delivered_sim_hz": 4.9942566049043595,
+      "delivered_wall_hz": 2.868088423238684,
+      "delivery_ratio": 0.9988513209808719,
+      "maximum_gap_sim_s": 0.20000000000000284,
+      "latency_sim_s_min_p95_max": [
+        -0.11299999999999955,
+        0.006000000000000227,
+        0.020000000000003126
+      ],
+      "unique_payloads": 1,
+      "content_min_median_max": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "native_camera_side": {
+      "passed": true,
+      "checks": {
+        "monotonic_stamps": true,
+        "delivery_ratio": true,
+        "no_long_gap": true,
+        "valid_payloads": true,
+        "latency": true,
+        "not_future": true
+      },
+      "frames": 300,
+      "delivered_sim_hz": 4.9942566049043595,
+      "delivered_wall_hz": 2.868067620009441,
+      "delivery_ratio": 0.9988513209808719,
+      "maximum_gap_sim_s": 0.20000000000000284,
+      "latency_sim_s_min_p95_max": [
+        -0.10300000000000153,
+        0.010999999999996036,
+        0.026000000000003354
+      ],
+      "unique_payloads": 1,
+      "content_min_median_max": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "raw_camera_side": {
+      "passed": true,
+      "checks": {
+        "monotonic_stamps": true,
+        "delivery_ratio": true,
+        "no_long_gap": true,
+        "valid_payloads": true,
+        "latency": true,
+        "not_future": true
+      },
+      "frames": 300,
+      "delivered_sim_hz": 4.9942566049043595,
+      "delivered_wall_hz": 2.867307609972149,
+      "delivery_ratio": 0.9988513209808719,
+      "maximum_gap_sim_s": 0.20000000000000284,
+      "latency_sim_s_min_p95_max": [
+        -0.10300000000000153,
+        0.01300000000000523,
+        0.04700000000000415
+      ],
+      "unique_payloads": 1,
+      "content_min_median_max": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "checks": {
+    "camera": true,
+    "camera_info": true,
+    "camera_right": true,
+    "camera_right_info": true,
+    "camera_side": true,
+    "camera_side_info": true,
+    "lidar": true,
+    "points": true,
+    "native_camera": true,
+    "raw_camera": true,
+    "native_camera_right": true,
+    "raw_camera_right": true,
+    "native_camera_side": true,
+    "raw_camera_side": true,
+    "resource_samples_finite": true,
+    "usable_rtf": true,
+    "bounded_rss": true,
+    "bounded_growth": true,
+    "vram_headroom": true
+  },
+  "performance": {
+    "rtf_mean": 0.5733952205433133,
+    "rtf_p10_p50_p90": [
+      0.49418750164469577,
+      0.5939829963815446,
+      0.6027808292076298
+    ],
+    "rss_growth_mib": 7.1796875,
+    "rss_peak_mib": 1982.84375,
+    "cpu_mean_percent_of_one_core": 215.373786407767,
+    "gpu_mean_percent": 21.174757281553397,
+    "device_vram_peak_mib": 1951.0
+  },
+  "passed": true
+}

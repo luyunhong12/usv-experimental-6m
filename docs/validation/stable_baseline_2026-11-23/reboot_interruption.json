@@ -1,0 +1,8 @@
+{
+  "container_exit_code": 143,
+  "container_oom_killed": false,
+  "container_finished_utc": "2026-11-23T08:53:04.625148056Z",
+  "host_boot_local": "2026-11-23 16:53:36",
+  "contacts_completed": 12,
+  "action": "Preserve interrupted records. Resume same clean container build; rerun two incomplete heavy contacts in new directories."
+}

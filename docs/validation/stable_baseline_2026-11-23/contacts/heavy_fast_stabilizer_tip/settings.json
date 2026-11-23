@@ -1,0 +1,12 @@
+{
+  "output": "artifacts/baseline_2026-11-23/contact_matrix/heavy_fast_stabilizer_tip_after_reboot",
+  "profile": "speed15_concept",
+  "step_size": null,
+  "collision_detector": null,
+  "free_probes": false,
+  "drop_height": 1.0,
+  "probe_mass": 10.0,
+  "contact_erp": null,
+  "correction_velocity": null,
+  "case": "stabilizer_tip"
+}

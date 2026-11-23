@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "case": "isolated_physics",
+  "spec": {
+    "kind": "endurance",
+    "payload_kg": 150,
+    "fuel_l": 30,
+    "wave_gain": 0.3,
+    "power_mode": "survey",
+    "startup_timeout": 180,
+    "wall_timeout_factor": 8,
+    "stages": [
+      {
+        "name": "endurance",
+        "duration": 90,
+        "mode": "direct",
+        "throttle": 0.35,
+        "steering_deg": 12
+      }
+    ],
+    "isolated_water": true
+  },
+  "fingerprint": "cc97de340692903b90598a7dd0dd7fd1377675bae45bfcdfef7a3d5b3bed8753",
+  "files": {
+    "actuators_state.csv": "3fcf3f8b91df841a882e686bf38911cdebe7f29fcc6cff584e2e634931510485",
+    "audit_appendages.csv": "fa9e6c001c2c05cb76de52b678e2e27e8c08d57d98833e61ccd63b6ba4a8eab6",
+    "audit_hull.csv": "06f602ab053dcd4c487696ce95e78bf919f8fc1585d2770893232d8913fc8332",
+    "audit_propulsion.csv": "661089e71d991f4ba737d76ce2dec7f97e4e79226a5ed10b5432c53707d4e1ef",
+    "boat.sdf": "78337e1a5f20f70919472234042a90154efefed481823c2e5a080d0818f27c4d",
+    "energy_truth.csv": "e258a653e781a0a5adde0e546549df4d9fd0cb2d1d822b025349e7387bffd6f4",
+    "environment_state.csv": "1cf9679779726f49e0798ad634215094db619862243d49b96dfdfb365ee6def5",
+    "fuel_mass_state.csv": "584cfaeb852ce4c8747e8c2f20e4cf6021d1a6f8a274c5f55e06ff4643b32760",
+    "health.json": "830f11b551349d17502151d0354c42e2c4ef967e76cdccdc7378751ac546245c",
+    "hydrodynamics_appendages.csv": "1fc0e4fd875b19d8040e66110b57072c660e3a0fc40b89405808a5fcf29feb4f",
+    "hydrodynamics_resistance.csv": "a884473a2b685fa62635c2a7b74f43aaf104e6ca0926a41f21c66caacffd3ebf",
+    "hydrostatics.csv": "ed0e8d02a156304382384af4d9c34a34e1edbcb4a223597e25af4d3b5cbcca9f",
+    "models/coast_waves/model.sdf": "4a58cae8da24192f95a654779a49a598ff3c9e08635389d645afc14bbf39a0f0",
+    "models/usv/usv_azimuth_trial.sdf": "e6a5b5871d5cab09563153c4c53c291b90589f379cea55dacbd4f4beae440a0a",
+    "propulsion_state.csv": "45cf3faca98b245556da61368d20a254b53cd0128635bfebbac3ce1912ae65bd",
+    "result.json": "f4eee2c77455841dafc448f39fa9fc36814f61cc431e9751a04f514415b4f5ea",
+    "run_status.json": "37dee2592d8627fc0e8aa7d5870cc928d19ee1d0d8f2c7171b69a590fd1d19d7",
+    "scene.json": "776024c30dcd0995d234c33485c8a9a4bb6689f5850f9fe99d5fd23d1ebe7d8c",
+    "source_versions.json": "e18447b5d54d4c68a56a69e1a8a161f12ef670d216dcc6bc6ce6e3e9ffa82e7a",
+    "stabilizer_audit_appendages.csv": "926733d93f1d9668a6b20462a01a0d10ea6c67af9cf2d1679de15d15734c2c29",
+    "stabilizer_hydrodynamics_appendages.csv": "a1d98c25e3f4d0d0d237f5543aafabe7386f8a564c6fad9256a504f063fbb892",
+    "stages.json": "4cd6ed564e873a815323f62ace77419cd8b7bd93ed845d1060f5c2e7e66e1bc7",
+    "startup.json": "e0d41df1b9fc0a31ecbc5578a387872dd9654bc554f96d579e0971227e335ab5",
+    "wave_response_state.csv": "e9d8ca5110ddf5f1a35dc73c7c95d59755d8e973769ce56f63c531cb7bb21f93",
+    "world.sdf": "606b5ba334bcb6e56ab2aa9b43cc858d1ce966fb28936e0fcce944ffe74cb896"
+  }
+}

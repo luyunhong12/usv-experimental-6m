@@ -1,0 +1,26 @@
+{
+  "case": "isolated_physics",
+  "spec": {
+    "kind": "endurance",
+    "payload_kg": 150,
+    "fuel_l": 30,
+    "wave_gain": 0.3,
+    "power_mode": "survey",
+    "startup_timeout": 180,
+    "wall_timeout_factor": 8,
+    "stages": [
+      {
+        "name": "endurance",
+        "duration": 90,
+        "mode": "direct",
+        "throttle": 0.35,
+        "steering_deg": 12
+      }
+    ],
+    "isolated_water": true
+  },
+  "finished_stages": 1,
+  "start_sim": 1.209,
+  "failure": null,
+  "bridge_resumed": false
+}

@@ -1,0 +1,11 @@
+{
+  "ros_ws/src/usv_description/config/pbr_visuals.json": {
+    "normalized_equal": true
+  },
+  "ros_ws/src/usv_description/models/usv_azimuth_trial.sdf": {
+    "normalized_equal": true
+  },
+  "ros_ws/src/usv_simulation/worlds/usv_hull_trial.sdf": {
+    "normalized_equal": true
+  }
+}

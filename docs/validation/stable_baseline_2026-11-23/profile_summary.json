@@ -1,0 +1,132 @@
+{
+  "unoptimized": {
+    "full_sensors": {
+      "rtf": 0.5735418740086421,
+      "samples": 53,
+      "cpu_mean_percent_one_core": {
+        "gazebo": 146.8924528301887,
+        "bridge": 7.415094339622642,
+        "controller": 43.3754716981132,
+        "observer": 13.562264150943397
+      },
+      "system_cpu_mean_percent": 12.290566037735848,
+      "warmup_sim_s": 30,
+      "interval_sim_s": [
+        30.734,
+        90.775
+      ],
+      "interval_wall_s": [
+        59.90696893099812,
+        164.59156602999792
+      ],
+      "timing_source": "Test observer sim_s/wall_s progress; avoids filesystem polling and final cleanup delay"
+    },
+    "full_physics": {
+      "rtf": 0.585528274242703,
+      "samples": 52,
+      "cpu_mean_percent_one_core": {
+        "gazebo": 114.21153846153845,
+        "bridge": 6.413461538461538,
+        "controller": 41.8826923076923,
+        "observer": 3.951923076923077
+      },
+      "system_cpu_mean_percent": 10.313461538461539,
+      "warmup_sim_s": 30,
+      "interval_sim_s": [
+        31.036,
+        90.674
+      ],
+      "interval_wall_s": [
+        55.02314647300227,
+        156.87646871800098
+      ],
+      "timing_source": "Test observer sim_s/wall_s progress; avoids filesystem polling and final cleanup delay"
+    },
+    "isolated_physics": {
+      "rtf": 0.7929632345822254,
+      "samples": 39,
+      "cpu_mean_percent_one_core": {
+        "gazebo": 119.19487179487179,
+        "bridge": 7.564102564102564,
+        "controller": 54.04615384615384,
+        "observer": 4.076923076923077
+      },
+      "system_cpu_mean_percent": 12.128205128205128,
+      "warmup_sim_s": 30,
+      "interval_sim_s": [
+        30.533,
+        90.271
+      ],
+      "interval_wall_s": [
+        41.75278535100006,
+        117.08793002699895
+      ],
+      "timing_source": "Test observer sim_s/wall_s progress; avoids filesystem polling and final cleanup delay"
+    }
+  },
+  "optimized": {
+    "full_sensors": {
+      "rtf": 0.994142285107545,
+      "samples": 30,
+      "cpu_mean_percent_one_core": {
+        "gazebo": 155.20000000000002,
+        "bridge": 12.523333333333333,
+        "controller": 70.19666666666667,
+        "observer": 16.586666666666666
+      },
+      "system_cpu_mean_percent": 13.713333333333333,
+      "warmup_sim_s": 30,
+      "interval_sim_s": [
+        31.942,
+        90.473
+      ],
+      "interval_wall_s": [
+        39.6418699120004,
+        98.51774802
+      ],
+      "timing_source": "Test observer sim_s/wall_s progress; avoids filesystem polling and final cleanup delay"
+    },
+    "full_physics": {
+      "rtf": 0.9977722203239829,
+      "samples": 32,
+      "cpu_mean_percent_one_core": {
+        "gazebo": 108.66875,
+        "bridge": 10.41875,
+        "controller": 69.534375,
+        "observer": 4.109375
+      },
+      "system_cpu_mean_percent": 10.934375,
+      "warmup_sim_s": 30,
+      "interval_sim_s": [
+        30.231,
+        91.078
+      ],
+      "interval_wall_s": [
+        33.61476820199823,
+        94.59762457000033
+      ],
+      "timing_source": "Test observer sim_s/wall_s progress; avoids filesystem polling and final cleanup delay"
+    },
+    "isolated_physics": {
+      "rtf": 0.9986949973432129,
+      "samples": 31,
+      "cpu_mean_percent_one_core": {
+        "gazebo": 71.18387096774194,
+        "bridge": 10.025806451612903,
+        "controller": 68.90645161290323,
+        "observer": 3.9838709677419355
+      },
+      "system_cpu_mean_percent": 9.890322580645162,
+      "warmup_sim_s": 30,
+      "interval_sim_s": [
+        31.439,
+        90.473
+      ],
+      "interval_wall_s": [
+        34.590372356000444,
+        93.70151255100063
+      ],
+      "timing_source": "Test observer sim_s/wall_s progress; avoids filesystem polling and final cleanup delay"
+    }
+  }
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "name": "approach",
+    "duration": 25,
+    "mode": "direct",
+    "throttle": 0.55,
+    "steering_deg": 0,
+    "index": 0,
+    "start_sim": 1.31,
+    "end_sim": 26.408,
+    "distance_triggered": false,
+    "stage_origin": [
+      -480.0,
+      180.0,
+      -8.462564201097866e-18
+    ],
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  },
+  {
+    "name": "execute_1",
+    "duration": 40,
+    "mode": "direct",
+    "throttle": 0.55,
+    "steering_deg": -10,
+    "until_heading_deg": 10,
+    "index": 1,
+    "start_sim": 26.408,
+    "end_sim": 29.326,
+    "distance_triggered": false,
+    "stage_origin": [
+      -432.41930586425127,
+      180.09295791955495,
+      0.0037516033243992094
+    ],
+    "heading_triggered": true,
+    "heading_reference_rad": 0.0037516033243992094
+  },
+  {
+    "name": "execute_2",
+    "duration": 40,
+    "mode": "direct",
+    "throttle": 0.55,
+    "steering_deg": 10,
+    "until_heading_deg": -10,
+    "index": 2,
+    "start_sim": 29.326,
+    "end_sim": 36.67,
+    "distance_triggered": false,
+    "stage_origin": [
+      -426.23001358840287,
+      180.1816371456885,
+      0.190732029223735
+    ],
+    "heading_triggered": true,
+    "heading_reference_rad": 0.0037516033243992094
+  },
+  {
+    "name": "execute_3",
+    "duration": 40,
+    "mode": "direct",
+    "throttle": 0.55,
+    "steering_deg": -10,
+    "until_heading_deg": 10,
+    "index": 3,
+    "start_sim": 36.67,
+    "end_sim": 44.014,
+    "distance_triggered": false,
+    "stage_origin": [
+      -411.44808213272967,
+      183.8308738073817,
+      -0.1848810074571633
+    ],
+    "heading_triggered": true,
+    "heading_reference_rad": 0.0037516033243992094
+  },
+  {
+    "name": "execute_4",
+    "duration": 40,
+    "mode": "direct",
+    "throttle": 0.55,
+    "steering_deg": 10,
+    "until_heading_deg": -10,
+    "index": 4,
+    "start_sim": 44.014,
+    "end_sim": 51.359,
+    "distance_triggered": false,
+    "stage_origin": [
+      -396.7226355280297,
+      180.28636709574002,
+      0.18439028806881586
+    ],
+    "heading_triggered": true,
+    "heading_reference_rad": 0.0037516033243992094
+  },
+  {
+    "name": "recover",
+    "duration": 45,
+    "mode": "direct",
+    "throttle": 0.55,
+    "steering_deg": 0,
+    "index": 5,
+    "start_sim": 51.359,
+    "end_sim": 96.426,
+    "distance_triggered": false,
+    "stage_origin": [
+      -381.9975020830564,
+      183.83343201593595,
+      -0.18344129888180744
+    ],
+    "heading_triggered": false,
+    "heading_reference_rad": 0.0037516033243992094
+  }
+]

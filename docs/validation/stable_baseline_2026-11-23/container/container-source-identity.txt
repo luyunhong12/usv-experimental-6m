@@ -1,0 +1,10 @@
+1bf459e0918b94a9318e7dfb040c977856da35cf
+ M datasets/reference/sydney_scene.json
+ M ros_ws/src/usv_description/config/pbr_visuals.json
+ M ros_ws/src/usv_description/models/coast_waves_gain_0_0/model.sdf
+ M ros_ws/src/usv_description/models/instances/usv_speed15_concept_payload0.0_wave0_0/usv_azimuth_trial.sdf
+ M ros_ws/src/usv_description/models/usv_azimuth_trial.sdf
+ M ros_ws/src/usv_simulation/worlds/usv_hull_trial.sdf
+ M ros_ws/src/usv_simulation/worlds/usv_sydney.sdf
+7609d1bd90ce7edb29d040a082f949e8b089c864
+Git LFS fsck OK

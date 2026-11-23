@@ -1,0 +1,20 @@
+{
+  "mode": "force",
+  "passed": true,
+  "samples": 224,
+  "checks": {
+    "force_or_torque_response": true,
+    "native_readback": true,
+    "no_velocity_impulse": true,
+    "finite": true
+  },
+  "measured_accelerations": [
+    0.9999999999999405,
+    1.99999999999978
+  ],
+  "expected_accelerations": [
+    1,
+    2
+  ],
+  "boundary_velocity_step": 0.039999999999995595
+}

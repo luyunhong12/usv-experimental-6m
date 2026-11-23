@@ -1,0 +1,205 @@
+{
+  "passed": true,
+  "exit_codes": {
+    "clock_independent": 0,
+    "sensor_dropout": 0,
+    "command_dropout": 0
+  },
+  "execution_unchanged": true,
+  "skipped": [],
+  "fingerprint": "b1d0293b69b236611e35196d0a10c4d61e9cd4838c470ae3669407cf825a7bcf",
+  "cases": {
+    "clock_independent": {
+      "case": "clock_independent",
+      "spec": {
+        "kind": "clock_independent",
+        "interfaces_args": [
+          "clock:=False"
+        ],
+        "startup_timeout": 10,
+        "stages": [
+          {
+            "name": "clock_test",
+            "mode": "velocity",
+            "speed": 1.5,
+            "duration": 20
+          }
+        ],
+        "isolated_water": true,
+        "wave_gain": 0
+      },
+      "checks": {
+        "startup_ready": true,
+        "completed": true,
+        "no_failure": true,
+        "finite": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "fuel_mass_consistent": true,
+        "resistance_dissipative": true,
+        "command_reached_physics": true,
+        "health_command_observed": true,
+        "initial_soc_matches": true,
+        "moves_without_ros_clock_bridge": true
+      },
+      "passed": true,
+      "failure": null,
+      "start_sim": 1.411,
+      "metrics": {
+        "clock_test": {
+          "tail_speed_m_s": 1.5104197164934134,
+          "tail_speed_std_m_s": 0.006111821393727264,
+          "mean_motor_w": 2386.6464721203097,
+          "distance_m": 29.412402981624226,
+          "heading_change_rad": 5.813514068667026e-05,
+          "mean_wet_area_m2": 10.557216842023431,
+          "mean_projected_x_m2": 0.3619656430531964,
+          "mean_surge_drag_n": 596.9410500696574
+        }
+      },
+      "summary": {
+        "max_roll_pitch_deg": [
+          0.4320550823945979,
+          0.6837933944979014
+        ],
+        "soc_start_end": [
+          0.8999999990860809,
+          0.8996376833736958
+        ],
+        "temperature_max_c": 25.001504347307453,
+        "fuel_consumed_l": 0.0,
+        "sim_end": 21.68
+      },
+      "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+      "postprocess_recovered": false
+    },
+    "sensor_dropout": {
+      "case": "sensor_dropout",
+      "spec": {
+        "kind": "sensor_dropout",
+        "stages": [
+          {
+            "name": "dropout",
+            "duration": 50,
+            "mode": "velocity",
+            "speed": 1.5,
+            "yaw_rate": 0
+          }
+        ],
+        "isolated_water": true,
+        "wave_gain": 0
+      },
+      "checks": {
+        "startup_ready": true,
+        "completed": true,
+        "no_failure": true,
+        "finite": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "fuel_mass_consistent": true,
+        "resistance_dissipative": true,
+        "command_reached_physics": true,
+        "health_command_observed": true,
+        "initial_soc_matches": true,
+        "dropout_paused_and_resumed": true,
+        "dropout_stops_throttle": true,
+        "recovers_after_dropout": true,
+        "health_reports_dropout": true
+      },
+      "passed": true,
+      "failure": null,
+      "start_sim": 1.209,
+      "metrics": {
+        "dropout": {
+          "tail_speed_m_s": 1.5031908924773567,
+          "tail_speed_std_m_s": 0.003601678314577172,
+          "mean_motor_w": 2362.586606517664,
+          "distance_m": 62.80073753818794,
+          "heading_change_rad": -0.0005507842990640447,
+          "mean_wet_area_m2": 10.55723179633693,
+          "mean_projected_x_m2": 0.3619699282676829,
+          "mean_surge_drag_n": 592.0617252798532
+        }
+      },
+      "summary": {
+        "max_roll_pitch_deg": [
+          0.4325567126516278,
+          0.693533499726085
+        ],
+        "soc_start_end": [
+          0.8999999990860809,
+          0.8993266836026912
+        ],
+        "temperature_max_c": 25.002477767570905,
+        "fuel_consumed_l": 0.0,
+        "sim_end": 52.365
+      },
+      "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+      "postprocess_recovered": false
+    },
+    "command_dropout": {
+      "case": "command_dropout",
+      "spec": {
+        "kind": "command_dropout",
+        "isolated_water": true,
+        "wave_gain": 0,
+        "stages": [
+          {
+            "name": "dropout",
+            "duration": 50,
+            "throttle": 0.5,
+            "steering_deg": 0
+          }
+        ]
+      },
+      "checks": {
+        "startup_ready": true,
+        "completed": true,
+        "no_failure": true,
+        "finite": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "fuel_mass_consistent": true,
+        "resistance_dissipative": true,
+        "command_reached_physics": true,
+        "health_command_observed": true,
+        "initial_soc_matches": true,
+        "command_timeout_stops_throttle": true,
+        "command_resumes_after_gap": true
+      },
+      "passed": true,
+      "failure": null,
+      "start_sim": 1.209,
+      "metrics": {
+        "dropout": {
+          "tail_speed_m_s": 1.8955041768947567,
+          "tail_speed_std_m_s": 2.6880407647073273e-05,
+          "mean_motor_w": 4396.525244527631,
+          "distance_m": 70.55209641325374,
+          "heading_change_rad": 0.004434099992888985,
+          "mean_wet_area_m2": 10.5562427042937,
+          "mean_projected_x_m2": 0.36195876538122274,
+          "mean_surge_drag_n": 880.8283888966537
+        }
+      },
+      "summary": {
+        "max_roll_pitch_deg": [
+          0.15774395667128108,
+          0.22362944690473166
+        ],
+        "soc_start_end": [
+          0.8999999990860809,
+          0.8991162690191837
+        ],
+        "temperature_max_c": 25.00271559947284,
+        "fuel_consumed_l": 0.0,
+        "sim_end": 51.459
+      },
+      "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+      "postprocess_recovered": false
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "stern": {
+    "samples": 8026,
+    "final_z_m": 3.7729920459843123,
+    "last_50_z_range_m": 9.54902040639638e-06,
+    "expected_contact_surface_range_m": [
+      3.0,
+      3.8
+    ],
+    "passed": true
+  },
+  "physics_backend": {
+    "passed": true,
+    "requirement": "Production UsvPhysics loaded and explicit DART settings read back"
+  },
+  "version_binding": {
+    "passed": true,
+    "requirement": "Runtime inputs, installed binaries and validation sources unchanged"
+  }
+}

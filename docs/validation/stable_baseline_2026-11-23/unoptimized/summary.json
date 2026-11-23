@@ -1,0 +1,222 @@
+{
+  "passed": true,
+  "exit_codes": {
+    "full_sensors": 0,
+    "full_physics": 0,
+    "isolated_physics": 0
+  },
+  "execution_unchanged": true,
+  "skipped": [],
+  "fingerprint": "cf5abd3477a88a2251077bbd162c2c569b8ca23cba105f56d33a92ef756da41e",
+  "cases": {
+    "full_sensors": {
+      "case": "full_sensors",
+      "spec": {
+        "kind": "endurance",
+        "payload_kg": 150,
+        "fuel_l": 30,
+        "wave_gain": 0.3,
+        "power_mode": "survey",
+        "startup_timeout": 180,
+        "wall_timeout_factor": 8,
+        "rendering_audit": {
+          "warmup_s": 30,
+          "minimum_delivery_ratio": 0.95,
+          "max_gap_sim_s": 1.0,
+          "max_latency_sim_s": 1.0,
+          "minimum_mean_rtf": 0.5,
+          "maximum_rss_mib": 6144,
+          "maximum_rss_growth_mib": 512
+        },
+        "stages": [
+          {
+            "name": "endurance",
+            "duration": 90,
+            "mode": "direct",
+            "throttle": 0.35,
+            "steering_deg": 12
+          }
+        ]
+      },
+      "checks": {
+        "startup_ready": true,
+        "completed": true,
+        "no_failure": true,
+        "finite": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "fuel_mass_consistent": true,
+        "resistance_dissipative": true,
+        "command_reached_physics": true,
+        "health_command_observed": true,
+        "initial_soc_matches": true,
+        "rendering_and_performance": true
+      },
+      "passed": true,
+      "failure": null,
+      "start_sim": 0.908,
+      "metrics": {
+        "endurance": {
+          "tail_speed_m_s": 1.1033578713582537,
+          "tail_speed_std_m_s": 0.028880107039074072,
+          "mean_motor_w": 1312.4078855643907,
+          "distance_m": 95.55066609160636,
+          "heading_change_rad": -7.989029630335645,
+          "mean_wet_area_m2": 10.760663716198795,
+          "mean_projected_x_m2": 0.3863979636886379,
+          "mean_surge_drag_n": 369.98556969012463,
+          "tail_turn_radius_m": 12.3523601837559
+        }
+      },
+      "summary": {
+        "max_roll_pitch_deg": [
+          1.3501161406259166,
+          0.9258582625386971
+        ],
+        "soc_start_end": [
+          0.8999999988203634,
+          0.8992725905033576
+        ],
+        "temperature_max_c": 25.000767727922028,
+        "fuel_consumed_l": 0.0,
+        "sim_end": 91.078
+      },
+      "scope": "Complete Sydney scene, GPU cameras/lidars and ROS payload output; no ArduPilot/Nav2",
+      "postprocess_recovered": false
+    },
+    "full_physics": {
+      "case": "full_physics",
+      "spec": {
+        "kind": "endurance",
+        "payload_kg": 150,
+        "fuel_l": 30,
+        "wave_gain": 0.3,
+        "power_mode": "survey",
+        "startup_timeout": 180,
+        "wall_timeout_factor": 8,
+        "stages": [
+          {
+            "name": "endurance",
+            "duration": 90,
+            "mode": "direct",
+            "throttle": 0.35,
+            "steering_deg": 12
+          }
+        ]
+      },
+      "checks": {
+        "startup_ready": true,
+        "completed": true,
+        "no_failure": true,
+        "finite": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "fuel_mass_consistent": true,
+        "resistance_dissipative": true,
+        "command_reached_physics": true,
+        "health_command_observed": true,
+        "initial_soc_matches": true
+      },
+      "passed": true,
+      "failure": null,
+      "start_sim": 0.707,
+      "metrics": {
+        "endurance": {
+          "tail_speed_m_s": 1.1015981305744014,
+          "tail_speed_std_m_s": 0.02817669456408965,
+          "mean_motor_w": 1312.4072629849618,
+          "distance_m": 95.5329291773119,
+          "heading_change_rad": -7.9879578805836395,
+          "mean_wet_area_m2": 10.761823116132282,
+          "mean_projected_x_m2": 0.3865439429696337,
+          "mean_surge_drag_n": 369.94090128566097,
+          "tail_turn_radius_m": 12.320281447866444
+        }
+      },
+      "summary": {
+        "max_roll_pitch_deg": [
+          1.3455962142022921,
+          0.9303582484652034
+        ],
+        "soc_start_end": [
+          0.8999999988203634,
+          0.899272891586229
+        ],
+        "temperature_max_c": 25.000767615500738,
+        "fuel_consumed_l": 0.0,
+        "sim_end": 90.876
+      },
+      "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+      "postprocess_recovered": false
+    },
+    "isolated_physics": {
+      "case": "isolated_physics",
+      "spec": {
+        "kind": "endurance",
+        "payload_kg": 150,
+        "fuel_l": 30,
+        "wave_gain": 0.3,
+        "power_mode": "survey",
+        "startup_timeout": 180,
+        "wall_timeout_factor": 8,
+        "stages": [
+          {
+            "name": "endurance",
+            "duration": 90,
+            "mode": "direct",
+            "throttle": 0.35,
+            "steering_deg": 12
+          }
+        ],
+        "isolated_water": true
+      },
+      "checks": {
+        "startup_ready": true,
+        "completed": true,
+        "no_failure": true,
+        "finite": true,
+        "attitude_bounded": true,
+        "power_limited": true,
+        "energy_balance": true,
+        "fuel_mass_consistent": true,
+        "resistance_dissipative": true,
+        "command_reached_physics": true,
+        "health_command_observed": true,
+        "initial_soc_matches": true
+      },
+      "passed": true,
+      "failure": null,
+      "start_sim": 0.908,
+      "metrics": {
+        "endurance": {
+          "tail_speed_m_s": 1.1032583663497089,
+          "tail_speed_std_m_s": 0.028639650461657437,
+          "mean_motor_w": 1312.4078791729785,
+          "distance_m": 95.59439816824496,
+          "heading_change_rad": -7.99266516071946,
+          "mean_wet_area_m2": 10.76068404002154,
+          "mean_projected_x_m2": 0.38640165022334483,
+          "mean_surge_drag_n": 369.9795263336356,
+          "tail_turn_radius_m": 12.350999971241396
+        }
+      },
+      "summary": {
+        "max_roll_pitch_deg": [
+          1.349219631102194,
+          0.926394101099181
+        ],
+        "soc_start_end": [
+          0.8999999988203634,
+          0.899272178451472
+        ],
+        "temperature_max_c": 25.000768092272313,
+        "fuel_consumed_l": 0.0,
+        "sim_end": 91.179
+      },
+      "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+      "postprocess_recovered": false
+    }
+  }
+}

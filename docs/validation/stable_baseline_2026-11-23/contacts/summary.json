@@ -1,0 +1,180 @@
+{
+  "passed": true,
+  "completed": 14,
+  "cases": {
+    "nominal_deck": {
+      "argv": [
+        "python3",
+        "tests/integration/validate_contact_directions.py",
+        "--profile",
+        "speed15_concept",
+        "--case",
+        "deck",
+        "--output",
+        "/home/yh/Project/usv-experimental-6m/artifacts/baseline_2026-11-23/contact_matrix/nominal_deck"
+      ],
+      "exit_code": 0
+    },
+    "nominal_bottom": {
+      "argv": [
+        "python3",
+        "tests/integration/validate_contact_directions.py",
+        "--profile",
+        "speed15_concept",
+        "--case",
+        "bottom",
+        "--output",
+        "/home/yh/Project/usv-experimental-6m/artifacts/baseline_2026-11-23/contact_matrix/nominal_bottom"
+      ],
+      "exit_code": 0
+    },
+    "nominal_port": {
+      "argv": [
+        "python3",
+        "tests/integration/validate_contact_directions.py",
+        "--profile",
+        "speed15_concept",
+        "--case",
+        "port",
+        "--output",
+        "/home/yh/Project/usv-experimental-6m/artifacts/baseline_2026-11-23/contact_matrix/nominal_port"
+      ],
+      "exit_code": 0
+    },
+    "nominal_starboard": {
+      "argv": [
+        "python3",
+        "tests/integration/validate_contact_directions.py",
+        "--profile",
+        "speed15_concept",
+        "--case",
+        "starboard",
+        "--output",
+        "/home/yh/Project/usv-experimental-6m/artifacts/baseline_2026-11-23/contact_matrix/nominal_starboard"
+      ],
+      "exit_code": 0
+    },
+    "nominal_stern": {
+      "argv": [
+        "python3",
+        "tests/integration/validate_contact_directions.py",
+        "--profile",
+        "speed15_concept",
+        "--case",
+        "stern",
+        "--output",
+        "/home/yh/Project/usv-experimental-6m/artifacts/baseline_2026-11-23/contact_matrix/nominal_stern"
+      ],
+      "exit_code": 0
+    },
+    "nominal_propeller_hub": {
+      "argv": [
+        "python3",
+        "tests/integration/validate_contact_directions.py",
+        "--profile",
+        "speed15_concept",
+        "--case",
+        "propeller_hub",
+        "--output",
+        "/home/yh/Project/usv-experimental-6m/artifacts/baseline_2026-11-23/contact_matrix/nominal_propeller_hub"
+      ],
+      "exit_code": 0
+    },
+    "nominal_stabilizer_tip": {
+      "argv": [
+        "python3",
+        "tests/integration/validate_contact_directions.py",
+        "--profile",
+        "speed15_concept",
+        "--case",
+        "stabilizer_tip",
+        "--output",
+        "/home/yh/Project/usv-experimental-6m/artifacts/baseline_2026-11-23/contact_matrix/nominal_stabilizer_tip"
+      ],
+      "exit_code": 0
+    },
+    "nominal_stabilizer_side": {
+      "argv": [
+        "python3",
+        "tests/integration/validate_contact_directions.py",
+        "--profile",
+        "speed15_concept",
+        "--case",
+        "stabilizer_side",
+        "--output",
+        "/home/yh/Project/usv-experimental-6m/artifacts/baseline_2026-11-23/contact_matrix/nominal_stabilizer_side"
+      ],
+      "exit_code": 0
+    },
+    "halfms_stabilizer_tip": {
+      "argv": [
+        "python3",
+        "tests/integration/validate_contact_directions.py",
+        "--profile",
+        "speed15_concept",
+        "--case",
+        "stabilizer_tip",
+        "--output",
+        "/home/yh/Project/usv-experimental-6m/artifacts/baseline_2026-11-23/contact_matrix/halfms_stabilizer_tip",
+        "--step-size",
+        "0.0005"
+      ],
+      "exit_code": 0
+    },
+    "halfms_stabilizer_side": {
+      "argv": [
+        "python3",
+        "tests/integration/validate_contact_directions.py",
+        "--profile",
+        "speed15_concept",
+        "--case",
+        "stabilizer_side",
+        "--output",
+        "/home/yh/Project/usv-experimental-6m/artifacts/baseline_2026-11-23/contact_matrix/halfms_stabilizer_side",
+        "--step-size",
+        "0.0005"
+      ],
+      "exit_code": 0
+    },
+    "light_stabilizer_tip": {
+      "argv": [
+        "python3",
+        "tests/integration/validate_contact_directions.py",
+        "--profile",
+        "speed15_concept",
+        "--case",
+        "stabilizer_tip",
+        "--output",
+        "/home/yh/Project/usv-experimental-6m/artifacts/baseline_2026-11-23/contact_matrix/light_stabilizer_tip",
+        "--probe-mass",
+        "0.1"
+      ],
+      "exit_code": 0
+    },
+    "light_stabilizer_side": {
+      "argv": [
+        "python3",
+        "tests/integration/validate_contact_directions.py",
+        "--profile",
+        "speed15_concept",
+        "--case",
+        "stabilizer_side",
+        "--output",
+        "/home/yh/Project/usv-experimental-6m/artifacts/baseline_2026-11-23/contact_matrix/light_stabilizer_side",
+        "--probe-mass",
+        "0.1"
+      ],
+      "exit_code": 0
+    },
+    "heavy_fast_stabilizer_tip": {
+      "exit_code": 0,
+      "output": "artifacts/baseline_2026-11-23/contact_matrix/heavy_fast_stabilizer_tip_after_reboot",
+      "restart_reason": "host reboot interrupted first attempt"
+    },
+    "heavy_fast_stabilizer_side": {
+      "exit_code": 0,
+      "output": "artifacts/baseline_2026-11-23/contact_matrix/heavy_fast_stabilizer_side_after_reboot",
+      "restart_reason": "host reboot interrupted first attempt"
+    }
+  }
+}

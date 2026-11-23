@@ -1,0 +1,20 @@
+{
+  "propeller_hub": {
+    "samples": 8023,
+    "final_z_m": 3.8834698058295576,
+    "last_50_z_range_m": 9.536773692531142e-06,
+    "expected_contact_surface_range_m": [
+      3.7,
+      3.95
+    ],
+    "passed": true
+  },
+  "physics_backend": {
+    "passed": true,
+    "requirement": "Production UsvPhysics loaded and explicit DART settings read back"
+  },
+  "version_binding": {
+    "passed": true,
+    "requirement": "Runtime inputs, installed binaries and validation sources unchanged"
+  }
+}

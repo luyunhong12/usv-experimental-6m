@@ -1,0 +1,79 @@
+{
+  "case": "sydney_gui_90s",
+  "spec": {
+    "kind": "endurance",
+    "payload_kg": 150,
+    "fuel_l": 30,
+    "wave_gain": 0.3,
+    "power_mode": "survey",
+    "startup_timeout": 180,
+    "wall_timeout_factor": 8,
+    "rendering_audit": {
+      "warmup_s": 30,
+      "minimum_delivery_ratio": 0.95,
+      "max_gap_sim_s": 1.0,
+      "max_latency_sim_s": 1.0,
+      "minimum_mean_rtf": 0.5,
+      "maximum_rss_mib": 6144,
+      "maximum_rss_growth_mib": 512
+    },
+    "stages": [
+      {
+        "name": "endurance",
+        "duration": 90,
+        "mode": "direct",
+        "throttle": 0.35,
+        "steering_deg": 12
+      }
+    ],
+    "gazebo_args": [
+      "headless:=False"
+    ]
+  },
+  "checks": {
+    "startup_ready": true,
+    "completed": true,
+    "no_failure": true,
+    "finite": true,
+    "attitude_bounded": true,
+    "power_limited": true,
+    "energy_balance": true,
+    "fuel_mass_consistent": true,
+    "resistance_dissipative": true,
+    "command_reached_physics": true,
+    "health_command_observed": true,
+    "initial_soc_matches": true,
+    "rendering_and_performance": true
+  },
+  "passed": true,
+  "failure": null,
+  "start_sim": 1.411,
+  "metrics": {
+    "endurance": {
+      "tail_speed_m_s": 1.106289012960956,
+      "tail_speed_std_m_s": 0.03230580931411215,
+      "mean_motor_w": 1312.409892740759,
+      "distance_m": 95.59920437701675,
+      "heading_change_rad": -7.991466581305687,
+      "mean_wet_area_m2": 10.760558210080042,
+      "mean_projected_x_m2": 0.38642853130507593,
+      "mean_surge_drag_n": 370.17101383636896,
+      "tail_turn_radius_m": 12.416259381209032
+    }
+  },
+  "summary": {
+    "max_roll_pitch_deg": [
+      1.359147848883972,
+      0.9160854463555407
+    ],
+    "soc_start_end": [
+      0.8999999988203634,
+      0.8992707985597455
+    ],
+    "temperature_max_c": 25.000768329198454,
+    "fuel_consumed_l": 0.0,
+    "sim_end": 92.289
+  },
+  "scope": "Complete Sydney scene, GPU cameras/lidars and ROS payload output; no ArduPilot/Nav2",
+  "postprocess_recovered": false
+}

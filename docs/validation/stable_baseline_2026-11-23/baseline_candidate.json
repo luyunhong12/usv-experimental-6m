@@ -1,0 +1,38 @@
+{
+  "observed_utc": "2026-11-23T09:11:22.996521+00:00",
+  "runtime_commit": "1bf459e0918b94a9318e7dfb040c977856da35cf",
+  "previous_commit": "91f6ade41ea2f7aa599964fe079a49f6c5d9eeec",
+  "container_image_identity": "sha256:b959261cd4ce0029f23e1ebfa32aafe9c3c54d025b8ea670f070c8b77eb34fee [] bridge 268435456",
+  "container_lp_num_threads": 4,
+  "runtime_changes": {
+    "inputs": [
+      "ros_ws/src/usv_physics/CMakeLists.txt",
+      "ros_ws/src/usv_simulation/CMakeLists.txt"
+    ],
+    "binaries": [
+      "ros_ws/install/usv_physics/lib/libUsvPhysics.so",
+      "ros_ws/install/usv_simulation/lib/libUsvAppendageHydrodynamics.so"
+    ],
+    "runtime_changes": [
+      "ros_ws/src/usv_physics/CMakeLists.txt",
+      "ros_ws/src/usv_simulation/CMakeLists.txt"
+    ],
+    "environment_equal": true
+  },
+  "ardupilot_integrated": false,
+  "nav2_integrated": false,
+  "physics_equations_or_parameters_changed": false,
+  "gui_capture": {
+    "partition": "usv_perf_sydney_gui_90s_25571874",
+    "pose_xyz_rpy": [
+      -510,
+      160,
+      25,
+      0,
+      0.65,
+      0.5
+    ],
+    "method": "tools/analysis/capture_gazebo_view.py uses actual /gui/screenshot",
+    "sha256": "daac1bb967a007f36773fb154920199c6ad0baede6acb1d63dd9fd1a407e9fc7"
+  }
+}

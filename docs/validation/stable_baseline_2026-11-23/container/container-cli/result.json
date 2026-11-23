@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "checks": {
+    "ready": true,
+    "forward": true,
+    "reverse": true,
+    "left": true,
+    "right": true,
+    "zero_after_release": true
+  },
+  "failure": null,
+  "stages": [
+    {
+      "name": "forward",
+      "exit_code": 0,
+      "propulsion_samples": 44,
+      "actuator_samples": 44
+    },
+    {
+      "name": "reverse",
+      "exit_code": 0,
+      "propulsion_samples": 46,
+      "actuator_samples": 46
+    },
+    {
+      "name": "left",
+      "exit_code": 0,
+      "propulsion_samples": 46,
+      "actuator_samples": 46
+    },
+    {
+      "name": "right",
+      "exit_code": 0,
+      "propulsion_samples": 45,
+      "actuator_samples": 45
+    }
+  ],
+  "partition": "usv_cli_8c31c465",
+  "cwd": "/tmp",
+  "drive_duration_wall_s": 20.0,
+  "ready_timeout_wall_s": 180.0,
+  "scope": "Public command routing and steering response, not steady maneuver performance"
+}

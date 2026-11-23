@@ -1,0 +1,19 @@
+{
+  "runtime_commit": "1bf459e0918b94a9318e7dfb040c977856da35cf",
+  "tag": "sim-baseline-2026-11-23",
+  "execution_digest": "7aad0862aa0eadc28bfab59881290d22d3194f31c4e7e3090721a06bc78b18db",
+  "verified_runtime_case_counts": {
+    "optimized": 3,
+    "maneuvers": 11,
+    "protection": 3,
+    "final_sensors": 2
+  },
+  "maneuver_quality_passed": true,
+  "contacts_passed": 14,
+  "inertia_modes_passed": 2,
+  "container_cli_and_exit_passed": true,
+  "source_and_installed_binaries_unchanged": true,
+  "supervisor_source_hashes_match": true,
+  "public_compressed_telemetry_matches_original": true,
+  "scope": "Documented engineering baseline, not calibrated real vessel. Public selection; complete original case seals verified locally."
+}

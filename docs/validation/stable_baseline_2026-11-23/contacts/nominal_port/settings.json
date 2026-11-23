@@ -1,0 +1,12 @@
+{
+  "output": "/home/yh/Project/usv-experimental-6m/artifacts/baseline_2026-11-23/contact_matrix/nominal_port",
+  "profile": "speed15_concept",
+  "step_size": null,
+  "collision_detector": null,
+  "free_probes": false,
+  "drop_height": 0.6,
+  "probe_mass": 1.0,
+  "contact_erp": null,
+  "correction_velocity": null,
+  "case": "port"
+}

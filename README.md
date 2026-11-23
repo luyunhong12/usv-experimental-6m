@@ -6,6 +6,8 @@
 >
 > **当前使用小型被动稳定鳍改善 60% 倒车受扰恢复，不使用航向保持。** 左右扰动后约 19.0 / 19.7 s 恢复，通过原 30 s 门槛；44 项固定版本工况通过。轻载全速约 15.03 km/h，仍有小幅配平偏航及工程参数边界。本轮未接 ArduPilot/Nav2。[原因、尺寸与结果](docs/validation/reverse_recovery_2026-11-23/README.md) · [ROS 操作指南](docs/getting_started/README.md)。
 
+当前工程验证基线为 **`sim-baseline-2026-11-23`**：独立容器安装/操船/退出清理通过；两项物理热路径补齐标准编译优化，完整悉尼传感器长测平均实时率由约0.569升至**0.993**，没有改变物理步长、碰撞或传感器精度。[基线范围、前后对照、原始证据与剩余问题](docs/validation/stable_baseline_2026-11-23/README.md)。
+
 ## 船长什么样，结构是什么
 
 **以下是设计渲染图和 Gazebo 仿真截图，目前没有实船照片。** 设计图用于说明结构；历史截图用于展示外观，不作为最新物理测试的证明。
@@ -66,7 +68,7 @@ flowchart LR
 
 ## 完整悉尼场景与传感器运行
 
-完整官方悉尼地图、三路相机和二维/三维 GPU 雷达完成 GUI 90 s 与 EGL 20 分钟仿真验收。修复独立侧相机投影中的伪双目基线，以及本机 Fast DDS 大图像传输丢帧；保持原分辨率、5 Hz 仿真频率、sensor-data QoS 和 1 ms 物理步长。长测平均实时率 0.569，进程树 RSS 峰值约 2.10 GiB；尚未达到实时1.0。[参数依据、原失败、实测曲线与图片/点云证据](docs/validation/sydney_rendering_2026-11-23/README.md)。
+完整官方悉尼地图、三路相机和二维/三维 GPU 雷达完成 GUI 90 s 与 EGL 20 分钟仿真验收。早期修复侧相机投影和DDS大图丢帧，随后只优化两个C++目标；最新长测平均实时率 0.993，进程树RSS峰值约 2.06 GiB。[最新稳定基线](docs/validation/stable_baseline_2026-11-23/README.md) · [传输修复与原始失败对照](docs/validation/sydney_rendering_2026-11-23/README.md)。本机接近实时，不保证其他硬件或任意负载。
 
 ## 当前受力审计与操纵验证
 
@@ -184,7 +186,7 @@ python3 tests/regression/run_performance_suite.py \
   --spec tests/scenarios/performance.json --output artifacts/my_performance_run
 ```
 
-每次试验使用新的输出目录，保留场景快照、遥测 CSV、健康日志及判定；复用必须显式 `--resume` 且版本、工况与证据一致。原生测试需要本机 ROS DDS / Gazebo Transport 通信权限。本轮 Code Supervisor full 与构建测试通过：12 项 C++、55 项 Python、5 项设计接口测试，[最终检查与24项人工审查](docs/validation/sydney_rendering_2026-11-23/code-review.md)。相同生产 C++ 在此前通过 deep：选定核心头文件覆盖率 97.746%，12 个转向积分有限变异被杀死，ASan/UBSan 与原生回归通过；deep 当时 Python 为 46 项，之后新增受力分析反例测试。[检查范围、版本差异及证据](docs/validation/reverse_recovery_2026-11-23/README.md)。操纵品质另行核对原有门槛；这是本地验证，不是假称 GitHub CI 或实船验收。
+每次试验使用新的输出目录，保留场景快照、遥测 CSV、健康日志及判定；复用必须显式 `--resume` 且版本、工况与证据一致。原生测试需要本机 ROS DDS / Gazebo Transport 通信权限。本轮 Code Supervisor full 与构建测试通过：12 项 C++、55 项 Python、5 项设计接口测试，[最新检查与24项人工审查](docs/validation/stable_baseline_2026-11-23/code-review.md)。相同生产 C++ 在此前通过 deep：选定核心头文件覆盖率 97.746%，12 个转向积分有限变异被杀死，ASan/UBSan 与原生回归通过；deep 当时 Python 为 46 项，之后新增受力分析反例测试。[检查范围、版本差异及证据](docs/validation/reverse_recovery_2026-11-23/README.md)。操纵品质另行核对原有门槛；这是本地验证，不是假称 GitHub CI 或实船验收。
 
 ## 已知问题与下一步
 
@@ -193,7 +195,7 @@ python3 tests/regression/run_performance_suite.py \
 3. **高速与复杂海况不足**：兴波、滑行、砰击、出水/空化及长时间大风浪尚未充分覆盖。
 4. **能源和实装边界**：40 kW 是概念动力方案；重载约 14.29 km/h。完整热管理、线长压降、安装强度及内部干涉仍待设计核查。
 5. **接触精度有限**：已修复薄鳍持续毫米级穿透，名义末段小于 0.01 mm；10 kg、约 4.37 m/s 探针仍有 2.87 mm 瞬态峰值，不代表零穿透、整船冲击或结构强度认证。
-6. **验证范围有限**：已补齐加鳍后 20 分钟物理航行与 10 分钟零舵长测；完整悉尼 + GPU 传感器长测已补齐，本机平均实时率 0.569，仍慢于实时；GUI 只验收90 s。加鳍后独立容器复验、跨机器及不同负载仍待完成。
+6. **验证范围有限**：已补齐加鳍后 20 分钟物理航行与 10 分钟零舵长测；最新独立容器与完整GPU长测已通过，本机平均实时率 0.993、接近实时；GUI只验收90 s。跨机器、跨RMW、多船和不同传感器负载仍待验证。
 
 物理问题稳定后，再建立定位融合与 Nav2 船舶适配，重新验收 ArduPilot。两种控制模式必须明确执行器所有权，不能同时叠加控制。[集成规划](docs/integration/README.md) · [当前问题清单](docs/validation/known_issues.md)。
 

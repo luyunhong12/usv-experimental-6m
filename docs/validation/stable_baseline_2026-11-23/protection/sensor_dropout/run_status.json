@@ -1,0 +1,21 @@
+{
+  "case": "sensor_dropout",
+  "spec": {
+    "kind": "sensor_dropout",
+    "stages": [
+      {
+        "name": "dropout",
+        "duration": 50,
+        "mode": "velocity",
+        "speed": 1.5,
+        "yaw_rate": 0
+      }
+    ],
+    "isolated_water": true,
+    "wave_gain": 0
+  },
+  "finished_stages": 1,
+  "start_sim": 1.209,
+  "failure": null,
+  "bridge_resumed": true
+}

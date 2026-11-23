@@ -1,0 +1,15 @@
+{
+  "inputs": [
+    "ros_ws/src/usv_physics/CMakeLists.txt",
+    "ros_ws/src/usv_simulation/CMakeLists.txt"
+  ],
+  "binaries": [
+    "ros_ws/install/usv_physics/lib/libUsvPhysics.so",
+    "ros_ws/install/usv_simulation/lib/libUsvAppendageHydrodynamics.so"
+  ],
+  "runtime_changes": [
+    "ros_ws/src/usv_physics/CMakeLists.txt",
+    "ros_ws/src/usv_simulation/CMakeLists.txt"
+  ],
+  "environment_equal": true
+}

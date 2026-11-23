@@ -14,17 +14,25 @@ docker build --build-arg HTTP_PROXY= --build-arg HTTPS_PROXY= \
   --build-arg ALL_PROXY= --build-arg all_proxy= \
   -t usv-repro:jazzy tools/setup
 
-docker run --init -it --name usv-clean usv-repro:jazzy bash
+docker run --init -it --shm-size=256m --name usv-clean usv-repro:jazzy bash
 ```
+
+本轮容器 `/dev/shm` 上限为256 MiB，给多参与者图像传输段留出预算；该设置不改变传感器频率或QoS。
 
 下面命令均在容器内执行。宿主机代理若需使用，应自行配置容器可达的代理地址；不在镜像中保存认证凭据。
 
 ## 固定源码和资源
 
+本轮测试使用直接联网。若容器继承了不可达的宿主代理，可先在当前容器终端执行下面命令；需要有效代理的网络应保留正确配置，不要照搬清空：
+
+```bash
+unset HTTP_PROXY HTTPS_PROXY ALL_PROXY http_proxy https_proxy all_proxy
+```
+
 ```bash
 GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/luyunhong12/usv-experimental-6m.git /work/usv
 cd /work/usv
-git checkout 7e337232c498a66e36702e31c864103c136bcc50
+git checkout 1bf459e0918b94a9318e7dfb040c977856da35cf
 git lfs pull
 git lfs fsck
 mkdir -p dependencies/src
@@ -45,7 +53,7 @@ done
 source ros_ws/install/setup.bash
 ```
 
-Sydney 下载器核对官方 v3 ZIP 的 SHA-256 和 ZIP CRC。其他 Fuel 模型按上述版本下载，保留各模型许可；镜像配方不内嵌这些素材。历史源码与最终测试脚本版本的对应关系见 [复现报告](../validation/platform_readiness_2026-11-21/step4/README.md)。
+Sydney 下载器核对官方 v3 ZIP 的 SHA-256 和 ZIP CRC。其他 Fuel 模型按上述版本下载，保留各模型许可；镜像配方不内嵌这些素材。当前稳定基线运行源码的安装过程和验收状态见 [稳定基线复现报告](../validation/stable_baseline_2026-11-23/README.md)；旧版本证据保留在 [历史复现报告](../validation/platform_readiness_2026-11-21/step4/README.md)。
 
 ## 启动与验收
 
@@ -62,6 +70,8 @@ Sydney 下载器核对官方 v3 ZIP 的 SHA-256 和 ZIP CRC。其他 Fuel 模型
 ```bash
 source /opt/ros/jazzy/setup.bash
 source ros_ws/install/setup.bash
+# 本轮无硬件GPU时限制 llvmpipe 线程，避免软件渲染占满整机。
+export LP_NUM_THREADS=4
 python3 tests/integration/validate_public_cli.py \
   --drive-duration 20 --ready-timeout 180 --output artifacts/clean_cli
 python3 tests/integration/validate_platform_launcher.py \
@@ -76,4 +86,4 @@ python3 tests/integration/validate_platform_launcher.py \
 
 快照使用独立签名密钥。配方从 Ubuntu HTTPS 密钥服务器取得密钥，核对完整指纹 `4B63CF8FDE49746E98FA01DDAD19BAB3CBF125EA`，再由 APT 验证仓库签名；没有使用 `trusted=yes`、`--allow-unauthenticated` 或关闭证书验证。密钥区别与快照安装背景可查 [Open Robotics 说明](https://discourse.openrobotics.org/t/security-issue-on-ros-build-farm/9342) 和 [OSRF 镜像问题记录](https://github.com/osrf/docker_images/issues/897)。
 
-其余 Ubuntu/ROS 包仍来自实时源，完整实测版本清单保存在复现报告。本配方不是永久冻结整个操作系统；未来源变化时应重新验收，不能简单删除 EXACT 约束来绕过 ABI 不兼容。
+其余 Ubuntu/ROS 包仍来自实时源，完整实测版本清单保存在复现报告。本配方不是永久冻结整个操作系统；软件源变化时应重新验收，不能简单删除 EXACT 约束来绕过 ABI 不兼容。

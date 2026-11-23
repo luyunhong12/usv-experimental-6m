@@ -1,0 +1,20 @@
+{
+  "case": "neutral_100",
+  "spec": {
+    "kind": "maneuver_audit",
+    "isolated_water": true,
+    "stages": [
+      {
+        "name": "neutral",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 1,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "finished_stages": 1,
+  "start_sim": 1.109,
+  "failure": null,
+  "bridge_resumed": false
+}
