@@ -45,6 +45,62 @@ class ManeuverMetricsTest(unittest.TestCase):
             self.assertFalse(checks["propeller_immersion"])
             self.assertFalse(checks["roll_envelope"])
 
+    def test_reverse_distance_uses_initial_frame(self):
+        """旋转坐标系下区分纵向进距、横漂和累计路径。"""
+        x = np.zeros((101, 17))
+        x[:, 0] = np.linspace(0, 10, len(x))
+        x[:, 12] = 3 - 0.2 * x[:, 0]
+        x[:, 13] = 4 - x[:, 0]
+        x[:, 14] = np.pi / 2
+        result = m.reverse_task_metrics(x, [3, 4, np.pi / 2])
+        self.assertAlmostEqual(result["along_m"], -10)
+        self.assertAlmostEqual(result["max_cross_track_m"], 2)
+        stage = {
+            "name": "distance_task",
+            "stage_origin": [3, 4, np.pi / 2],
+            "until_along_m": -30,
+            "distance_triggered": True,
+        }
+        checks, _ = m.reverse_task_checks(
+            [stage],
+            [x],
+            {"reverse_corridors": {"30": {"cross_track_m": 1, "heading_deg": 10}}},
+        )
+        self.assertFalse(checks["distance_reached"])
+        self.assertFalse(checks["cross_track"])
+
+    def test_reverse_recovery_retains_equilibrium_yaw(self):
+        """恢复到非零配平偏航不等于回到原航向。"""
+        x = np.zeros((501, 17))
+        t = np.linspace(0, 50, len(x))
+        x[:, 0] = t
+        x[:, 14] = np.radians(0.4 * t + 2 * (1 - np.exp(-t)))
+        result = m.recovery_metrics(x, 0.05, 0.4)
+        self.assertLess(result["settling_time_s"], 5)
+        self.assertGreater(result["extra_heading_deg"], 20)
+        self.assertIsNone(m.recovery_metrics(x, 0.05)["settling_time_s"])
+
+    def test_short_pulse_excludes_previous_stage(self):
+        """短脉冲舵角验收不能混入此前的零舵样本。"""
+        trace = np.zeros((51, 17))
+        trace[:, 0] = np.linspace(0, 5, len(trace))
+        trace[:, 1] = -0.4
+        actuators = np.zeros((51, 4))
+        actuators[:, 0] = trace[:, 0]
+        actuators[actuators[:, 0] > 3.5, 1] = np.radians(5)
+        stage = {"start_sim": 3, "end_sim": 5, "throttle": -0.4, "steering_deg": 5}
+        self.assertTrue(
+            m.held_stage_checks(stage, trace, actuators, {"max_servo_error_deg": 0.5})[
+                "servo_tracks"
+            ]
+        )
+        actuators[-1, 1] = 0
+        self.assertFalse(
+            m.held_stage_checks(stage, trace, actuators, {"max_servo_error_deg": 0.5})[
+                "servo_tracks"
+            ]
+        )
+
     def test_circle(self):
         """用解析圆轨迹验证回转指标。"""
         x = np.zeros((1001, 17))

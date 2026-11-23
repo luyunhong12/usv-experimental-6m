@@ -1,0 +1,94 @@
+{
+  "source": "/home/yh/Project/usv-experimental-6m/ros_ws/../dependencies/src/vrx/vrx_gz/worlds/sydney_regatta.sdf",
+  "source_sha256": "da0bf4ff3939578303b78ee3b99ea55022f229159bbf4f34713964df83d671bf",
+  "world": "/home/yh/Project/usv-experimental-6m/artifacts/platform_readiness_2026-11-21/step2_final/reverse_60_60m/world.sdf",
+  "profile": "speed15_concept",
+  "task": "none",
+  "profile_details": {
+    "usv": {
+      "payload_kg": 0.0,
+      "payload_center_m": [
+        0.0,
+        0.0,
+        0.6
+      ],
+      "mass_case": "nominal",
+      "power_mode": "normal",
+      "status": "HYPOTHETICAL_HARDWARE_UPGRADE_NOT_PURCHASE_SPEC_OR_SPEED_GUARANTEE",
+      "pose_z_roll_pitch": [
+        -0.25261623933268323,
+        3.0309750897732186e-11,
+        -4.120460008501467e-12
+      ],
+      "ship_mass_kg": 1571.1745300420835,
+      "ship_cg_m": [
+        -0.5660579922343726,
+        -2.2595963450775448e-18,
+        0.49186773524236943
+      ],
+      "hardware": {
+        "status": "HYPOTHETICAL_HARDWARE_UPGRADE_NOT_PURCHASE_SPEC_OR_SPEED_GUARANTEE",
+        "target_km_h": 15.0,
+        "motor_electrical_w": 40000.0,
+        "motor_efficiency": 0.84,
+        "static_thrust_n": 6000.0,
+        "advance_zero_thrust_m_s": 12.0,
+        "reference_rpm": 1500.0,
+        "stall_torque_nm": 400.0,
+        "propeller_geometry_scale": 1.5,
+        "battery_pack_multiplier": 3.0,
+        "extra_battery_mass_kg": 304.0,
+        "extra_motor_mass_kg": 30.0,
+        "basis": "Power, static thrust, RPM, propeller, controller, battery layout and motor mass are design-study assumptions, NOT a selected real product. Four additional 76 kg battery proxies are included in dry mass/inertia. Hull geometry comes from CAD; damping is an explicit engineering proxy evaluated with +/-25% sensitivity, not measured high-speed calibration.",
+        "limitations": [
+          "Discrete propeller/hull surface sweep passed; no manufacturing fit or continuous minimum-clearance certification",
+          "No validated wave-making resistance, trim/planing or cavitation at target speed",
+          "Existing 4 kW generator cannot sustain 40 kW propulsion",
+          "Battery continuous-current, thermal, busbar, fuse, contactor and cooling design unverified"
+        ],
+        "mass_layout_source": "component_mass_ledger.json: individual batteries, trays and motor increment"
+      }
+    }
+  },
+  "spawn_pose": [
+    -480.0,
+    180.0,
+    -0.25261623933268323,
+    3.0309750897732186e-11,
+    -4.120460008501467e-12,
+    0.0
+  ],
+  "boats": {
+    "usv": [
+      -480.0,
+      180.0,
+      -0.25261623933268323,
+      3.0309750897732186e-11,
+      -4.120460008501467e-12,
+      0.0
+    ]
+  },
+  "wind_m_s": 0,
+  "initial_fuel_l": 60.0,
+  "payload_center_m": [
+    0.0,
+    0.0,
+    0.6
+  ],
+  "mass_case": "nominal",
+  "power_mode": "normal",
+  "wave_gain": 0.0,
+  "assets": {
+    "sydney_regatta": "/home/yh/Project/usv-experimental-6m/ros_ws/../dependencies/vendor/fuel/sydney_regatta",
+    "mb_marker_buoy_red": "/home/yh/Project/usv-experimental-6m/ros_ws/../dependencies/vendor/fuel/mb_marker_buoy_red",
+    "mb_marker_buoy_black": "/home/yh/Project/usv-experimental-6m/ros_ws/../dependencies/vendor/fuel/mb_marker_buoy_black",
+    "mb_marker_buoy_green": "/home/yh/Project/usv-experimental-6m/ros_ws/../dependencies/vendor/fuel/mb_marker_buoy_green",
+    "mb_marker_buoy_white": "/home/yh/Project/usv-experimental-6m/ros_ws/../dependencies/vendor/fuel/mb_marker_buoy_white",
+    "mb_round_buoy_orange": "/home/yh/Project/usv-experimental-6m/ros_ws/../dependencies/vendor/fuel/mb_round_buoy_orange",
+    "mb_round_buoy_black": "/home/yh/Project/usv-experimental-6m/ros_ws/../dependencies/vendor/fuel/mb_round_buoy_black",
+    "post": "/home/yh/Project/usv-experimental-6m/ros_ws/../dependencies/vendor/fuel/post",
+    "antenna": "/home/yh/Project/usv-experimental-6m/ros_ws/../dependencies/vendor/fuel/antenna",
+    "ground_station": "/home/yh/Project/usv-experimental-6m/ros_ws/../dependencies/vendor/fuel/ground_station"
+  },
+  "limitation": "VRX wave-coupled distributed hull pressure, zero steepness/phase; deep-water orbital flow; constant diagonal added mass; no radiation/slamming, damping uncalibrated."
+}

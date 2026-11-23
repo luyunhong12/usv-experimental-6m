@@ -1,0 +1,22 @@
+{
+  "case": "reverse_40_10m",
+  "spec": {
+    "kind": "reverse_tasks",
+    "isolated_water": true,
+    "wave_gain": 0,
+    "stages": [
+      {
+        "name": "distance_task",
+        "mode": "direct",
+        "throttle": -0.4,
+        "steering_deg": 0,
+        "duration": 300,
+        "until_along_m": -10
+      }
+    ]
+  },
+  "finished_stages": 1,
+  "start_sim": 1.336,
+  "failure": null,
+  "bridge_resumed": false
+}

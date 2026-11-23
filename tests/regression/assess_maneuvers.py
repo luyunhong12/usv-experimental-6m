@@ -125,24 +125,27 @@ def stop_metrics(x, reverse=False):
     }
 
 
-def recovery_metrics(trace, yaw_limit):
+def recovery_metrics(trace, yaw_limit, reference_rate=0.0):
     """检查回零舵后转向停止所需时间及额外航向变化。
 
     Args:
         trace: 从回零舵指令开始的推进状态矩阵。
-        yaw_limit: 稳态允许的偏航角速度绝对值，度/秒。
+        yaw_limit: 相对参考偏航角速度的允许误差，度/秒。
+        reference_rate: 扰动前参考偏航角速度，默认零。
     """
     time = trace[:, 0]
     heading = np.degrees(np.unwrap(trace[:, 14]))
     rates = np.gradient(heading, time)
     settled = []
-    for index in np.flatnonzero(abs(rates) < yaw_limit):
+    for index in np.flatnonzero(abs(rates - reference_rate) < yaw_limit):
         window = (time >= time[index]) & (time <= time[index] + 5)
-        if time[-1] - time[index] >= 5 and np.all(abs(rates[window]) < yaw_limit):
+        if time[-1] - time[index] >= 5 and np.all(
+            abs(rates[window] - reference_rate) < yaw_limit
+        ):
             settled.append(index)
     return {
         "extra_heading_deg": float(np.max(abs(heading - heading[0]))),
-        "settling_time_s": float(time[settled[0]] - time[0]) if settled else None,
+        "settling_time_s": (float(time[settled[0]] - time[0]) if settled else None),
         "peak_yaw_deg_s": float(np.max(abs(rates))),
     }
 
@@ -204,7 +207,7 @@ def held_stage_checks(stage, trace, actuators, criteria):
     }
     if "until_heading_deg" not in stage:
         tail = actuators[
-            (actuators[:, 0] > stage["end_sim"] - 3)
+            (actuators[:, 0] > max(stage["start_sim"] + 1, stage["end_sim"] - 3))
             & (actuators[:, 0] <= stage["end_sim"])
         ]
         checks["servo_tracks"] = bool(
@@ -299,7 +302,10 @@ def zigzag_checks(stages, traces, criteria):
         if index and "until_heading_deg" in stages[index - 1]:
             previous = stages[index - 1]["until_heading_deg"]
             overshoots.append(
-                max(0.0, float(np.max(heading * np.sign(previous)) - abs(previous)))
+                max(
+                    0.0,
+                    float(np.max(heading * np.sign(previous)) - abs(previous)),
+                )
             )
     if overshoots:
         checks["zigzag_overshoots"] = (
@@ -307,6 +313,72 @@ def zigzag_checks(stages, traces, criteria):
             and max(overshoots) < criteria["max_zigzag_overshoot_deg"]
         )
     return checks, overshoots
+
+
+def reverse_task_metrics(trace, origin):
+    """在起始船首坐标系测量进距和横向偏差。
+
+    Args:
+        trace: 完整任务推进遥测。
+        origin: 起始世界 x、y 和航向。
+    """
+    x, y, yaw = origin
+    delta = trace[:, 12:14] - [x, y]
+    along = delta[:, 0] * np.cos(yaw) + delta[:, 1] * np.sin(yaw)
+    across = -delta[:, 0] * np.sin(yaw) + delta[:, 1] * np.cos(yaw)
+    return {
+        "along_m": float(along[-1]),
+        "max_cross_track_m": float(np.max(abs(across))),
+        "max_heading_error_deg": float(
+            np.degrees(np.max(abs(np.unwrap(trace[:, 14]) - yaw)))
+        ),
+        "elapsed_s": float(trace[-1, 0] - trace[0, 0]),
+    }
+
+
+def reverse_task_checks(stages, traces, criteria):
+    """独立核实距离触发与扰动恢复，不要求被动恢复原航向。
+
+    Args:
+        stages: 实际阶段记录。
+        traces: 对应遥测序列。
+        criteria: 预声明任务门槛。
+    """
+    checks, metrics = {}, {}
+    for index, (stage, trace) in enumerate(zip(stages, traces)):
+        if "until_along_m" in stage:
+            result = reverse_task_metrics(trace, stage["stage_origin"])
+            limits = criteria["reverse_corridors"][
+                str(int(abs(stage["until_along_m"])))
+            ]
+            checks.update(
+                distance_reached=bool(stage.get("distance_triggered"))
+                and result["along_m"] <= stage["until_along_m"] + 0.1,
+                cross_track=result["max_cross_track_m"] <= limits["cross_track_m"],
+                heading_deviation=result["max_heading_error_deg"]
+                <= limits["heading_deg"],
+            )
+            metrics["task"] = result
+        if stage["name"] == "disturbance_recover":
+            approach = traces[index - 2]
+            tail = approach[approach[:, 0] >= approach[-1, 0] - 15]
+            reference = math.degrees(speed_rate(tail))
+            result = recovery_metrics(
+                trace,
+                criteria["reverse_rate_recovery_tolerance_deg_s"],
+                reference,
+            )
+            result["reference_yaw_deg_s"] = reference
+            result["tail_yaw_deg_s"] = math.degrees(
+                speed_rate(trace[trace[:, 0] > trace[-1, 0] - 15])
+            )
+            checks["disturbance_recovery"] = (
+                result["settling_time_s"] is not None
+                and result["settling_time_s"]
+                <= criteria["reverse_rate_recovery_time_s"]
+            )
+            metrics["disturbance"] = result
+    return checks, metrics
 
 
 def environment_quality(folder, trace, expected, criteria):
@@ -395,6 +467,11 @@ def assess_case(folder, criteria, expected, fingerprint):
     checks.update(zig_checks)
     if overshoots:
         metrics["zigzag_overshoots_deg"] = overshoots
+    if expected.get("kind") == "reverse_tasks":
+        task_checks, metrics["reverse_tasks"] = reverse_task_checks(
+            stages, traces, criteria
+        )
+        checks.update(task_checks)
     if expected.get("kind") == "environment":
         env_checks, metrics["environment"] = environment_quality(
             folder, trace, expected, criteria
@@ -416,7 +493,9 @@ def main():
     ap.add_argument("--criteria", type=Path, required=True)
     ap.add_argument("--spec", type=Path, required=True)
     ap.add_argument(
-        "--suite-kind", choices=["maneuvers", "environment"], default="maneuvers"
+        "--suite-kind",
+        choices=["maneuvers", "environment", "reverse_tasks"],
+        default="maneuvers",
     )
     args = ap.parse_args()
     c = json.loads(args.criteria.read_text())

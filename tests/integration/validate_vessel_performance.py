@@ -341,7 +341,10 @@ def interrupted(signum, frame):
 signal.signal(signal.SIGTERM, interrupted)
 signal.signal(signal.SIGINT, interrupted)
 for name, args in [
-    ("gazebo", ["bash", str(tool_path("run_hull_trial.sh")), "world:=" + str(world)]),
+    (
+        "gazebo",
+        ["bash", str(tool_path("run_hull_trial.sh")), "world:=" + str(world)],
+    ),
     (
         "interfaces",
         [
@@ -365,6 +368,7 @@ stage_start = None
 start_sim = None
 stage_log = []
 zigzag_reference = None
+stage_origin = None
 wall = time.monotonic()
 failure = None
 last_progress = 0
@@ -439,6 +443,8 @@ try:
         t = rows["propulsion/state"][-1][0]
         elapsed = t - start_sim
         s = stages[stage]
+        if stage_origin is None:
+            stage_origin = rows["propulsion/state"][-1][12:15]
         if not gate.fresh(now):
             raise RuntimeError("Controller health stream became stale")
         if not health[-1]["ready"] and spec.get("kind") != "sensor_dropout":
@@ -498,17 +504,31 @@ try:
             )
             if t - stage_start >= s["duration"] and not reached_heading:
                 raise RuntimeError("Zigzag heading execution timed out: " + s["name"])
-        if t - stage_start >= s["duration"] or reached_heading:
+        reached_distance = False
+        if "until_along_m" in s:
+            x, y, yaw = stage_origin
+            position = rows["propulsion/state"][-1]
+            along = (position[12] - x) * math.cos(yaw) + (position[13] - y) * math.sin(
+                yaw
+            )
+            target = s["until_along_m"]
+            reached_distance = along * math.copysign(1, target) >= abs(target)
+            if t - stage_start >= s["duration"] and not reached_distance:
+                raise RuntimeError("Along-track distance timed out: " + s["name"])
+        if t - stage_start >= s["duration"] or reached_heading or reached_distance:
             stage_log.append(
                 dict(
                     s,
                     index=stage,
                     start_sim=stage_start,
                     end_sim=t,
+                    distance_triggered=reached_distance,
+                    stage_origin=stage_origin,
                     heading_triggered=reached_heading,
                     heading_reference_rad=zigzag_reference,
                 )
             )
+            stage_origin = None
             stage += 1
             stage_start = t
             if stage == len(stages):

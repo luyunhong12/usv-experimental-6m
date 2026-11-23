@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "case": "reverse_40_10m",
+  "spec": {
+    "kind": "reverse_tasks",
+    "isolated_water": true,
+    "wave_gain": 0,
+    "stages": [
+      {
+        "name": "distance_task",
+        "mode": "direct",
+        "throttle": -0.4,
+        "steering_deg": 0,
+        "duration": 300,
+        "until_along_m": -10
+      }
+    ]
+  },
+  "fingerprint": "179fa6c7a662c933c28f2df93767304327e664e0783c655510cf000487e0bdc9",
+  "files": {
+    "actuators_state.csv": "6876796db0c89d0c02c46a8cefbd14e2186c2d0fb8acdcee0b2af575eb476dc5",
+    "audit_appendages.csv": "7a9526c28bea60fe0282750289acc79afbe75d968aa0b9ff6a904be34f3eeef5",
+    "audit_hull.csv": "80ef95f1c9103d22e9f712e72d617a73c1ed03f32a85708ef3a9c2dd3662af18",
+    "audit_propulsion.csv": "b85bec11887d18892463ce3c591ae43cfe1dfd03dbd543d5ac6cf9d42d190251",
+    "boat.sdf": "16d9425fc4d704f8c43908c47c4fec06081da18e4004da3a160b8dea39cf6588",
+    "energy_truth.csv": "6ae665aa0b69a73714404fe5bae58f4381e1549f351551817a03df2b0a27ddc4",
+    "environment_state.csv": "a9e9b532030340088b4fff25736d8071b70438a63b67da16d30bb55a4cbcec75",
+    "fuel_mass_state.csv": "36a7ec272c2d4af9741e0512ce6ca13d460d82ef8f17567ac065f15d17405932",
+    "health.json": "86993820a20e32cacc9206f9a1e576b3aa8b48a8bef3dcbf176666fcede48391",
+    "hydrodynamics_appendages.csv": "c6f8769ecf81c82c1677df2a78654eff0549922cc25b7c9c9afc0bb60f2fdd7c",
+    "hydrodynamics_resistance.csv": "6fa867d24fa786b674b47f0aca6d5e0bc67c74be73f11c6b60adad1788f5d5ac",
+    "hydrostatics.csv": "92e567173a89a3bb73b663da6829a97e26cea25817361486a3c23a5cacdf94d1",
+    "models/coast_waves/model.sdf": "e5b69d4c4209382b2e92d0d4336ff8aa611a4131f7e52f6931f9f3a6b1eebdc8",
+    "models/usv/usv_azimuth_trial.sdf": "fb251b710b0fbd6b1b25964903152c18d42deac89507c797546b2d86639836f2",
+    "propulsion_state.csv": "e24a12f7feb72d5ccebb434ab23fc816c1dd49175730b06a950f5edb09fc3e13",
+    "result.json": "2f3176856faf29d4d83164870158450f79435def2d535c6f1028d8a3a6ec8189",
+    "run_status.json": "86d84aae52629b82ac7c2003a34a2027564d66a34127acd1a227ebb6259df2f7",
+    "scene.json": "4094d5bd97d5fdba050a82f26070d4a78797a90fc86d267e6dc03356d4d5196b",
+    "source_versions.json": "02b079f59fac26316b7f3e508bc2b3376ff9ac2ed4245ffd26780f0fa35b750c",
+    "stages.json": "c73c0dfa6d6c55d9bf1ca0c1066b6b552ad672d16e04dd5d3908a9da63ae7ba0",
+    "startup.json": "18ed226be909b26958dc55d70cdd0433fa3a25474b987c6792fb79cd7f9d24a5",
+    "wave_response_state.csv": "4018cd1e8338564645c2c2085bf0ce2b29a730aaed5e0d44c94da0657fed685f",
+    "world.sdf": "b29ce149a53d23c055559d9dc5a4e3caa679502a2cee8e9c8facaecd1c44a0ab"
+  }
+}

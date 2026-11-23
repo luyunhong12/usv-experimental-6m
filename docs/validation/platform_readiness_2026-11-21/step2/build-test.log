@@ -1,0 +1,310 @@
+PBR assets current
+{
+  "profile": "ENGINEERING_ESTIMATE_NOT_MEASURED",
+  "sealed_envelope_watertight": true,
+  "max_source_vertex_distance_m": 6.967255752501893e-08,
+  "sealed_envelope_volume_m3": 8.358237950000001,
+  "triangles": 106,
+  "total_trial_mass_kg": 1225.6120300420835,
+  "trial_total_cg_m": [
+    -0.6575353776968095,
+    -2.8966917250641853e-18,
+    0.4963883192488034
+  ],
+  "equilibrium_pose_z_roll_pitch": [
+    -0.21363254902601697,
+    1.3467291256688056e-17,
+    -0.0028573985460690356
+  ],
+  "displaced_volume_m3": 1.2256120300420834,
+  "residual": [
+    -1.7208456881689926e-13,
+    4.505618100836273e-12,
+    -1.5538774923869623e-17
+  ],
+  "roll_pitch_restoring_stiffness_Nm_rad": [
+    17520.34019523544,
+    174224.76900136904
+  ],
+  "limitations": [
+    "station envelope sealed deck; no flooding",
+    "appendage displacement omitted",
+    "estimated aggregate/mesh inertia; no measured mass distribution",
+    "linear/quadratic damping uncalibrated; constant diagonal added mass trial; VRX distributed hull pressure and deep-water orbital flow; relative current/wind enabled",
+    "propulsion and energy are engineering proxies; fuel inertia uses a quasi-static unbaffled box tank"
+  ]
+}
+Starting >>> vrx_gazebo
+Starting >>> usv_description
+Finished <<< usv_description [0.08s]
+Starting >>> vrx_ros
+Finished <<< vrx_ros [0.08s]
+Starting >>> usv_energy
+Finished <<< usv_energy [0.07s]
+Starting >>> usv_physics
+Finished <<< usv_physics [0.09s]
+Finished <<< vrx_gazebo [0.33s]
+Starting >>> usv_control
+Starting >>> wamv_description
+Finished <<< wamv_description [0.08s]
+Starting >>> wamv_gazebo
+Finished <<< wamv_gazebo [0.05s]
+Starting >>> vrx_gz
+Finished <<< usv_control [0.34s]
+Starting >>> usv_ardupilot
+Finished <<< usv_ardupilot [0.06s]
+Finished <<< vrx_gz [0.36s]
+Starting >>> usv_simulation
+Finished <<< usv_simulation [0.09s]
+Starting >>> usv_bringup
+Finished <<< usv_bringup [0.06s]
+
+Summary: 12 packages finished [1.09s]
+测试证据：/home/yh/Project/usv-experimental-6m/artifacts/validation/unit-tests/20261123T012337Z-uxxVc3/tests.log
+Starting >>> usv_energy
+UpdateCTestConfiguration  from :/home/yh/Project/usv-experimental-6m/ros_ws/build/usv_energy/CTestConfiguration.ini
+Parse Config file:/home/yh/Project/usv-experimental-6m/ros_ws/build/usv_energy/CTestConfiguration.ini
+   Site: yh-cp
+   Build name: (empty)
+ Add coverage exclude regular expressions.
+Create new tag: 20261123-0123 - Experimental
+UpdateCTestConfiguration  from :/home/yh/Project/usv-experimental-6m/ros_ws/build/usv_energy/CTestConfiguration.ini
+Parse Config file:/home/yh/Project/usv-experimental-6m/ros_ws/build/usv_energy/CTestConfiguration.ini
+Test project /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_energy
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: energy_conservation_and_faults
+
+1: Test command: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_energy/test_energy
+1: Working Directory: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_energy
+1: Test timeout computed to be: 10000000
+1: PASS conservation, charge/discharge, reserve, thermal, fuel, starter, cooling, sensor, reset
+1/1 Test #1: energy_conservation_and_faults ...   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.01 sec
+Finished <<< usv_energy [0.04s]
+Starting >>> usv_simulation
+UpdateCTestConfiguration  from :/home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/CTestConfiguration.ini
+Parse Config file:/home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/CTestConfiguration.ini
+   Site: yh-cp
+   Build name: (empty)
+ Add coverage exclude regular expressions.
+Create new tag: 20261123-0123 - Experimental
+UpdateCTestConfiguration  from :/home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/CTestConfiguration.ini
+Parse Config file:/home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/CTestConfiguration.ini
+Test project /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+      Start  1: whole_vessel_wrench_transform
+
+1: Test command: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/test_wrench_audit
+1: Working Directory: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation
+1: Test timeout computed to be: 10000000
+ 1/11 Test  #1: whole_vessel_wrench_transform ........   Passed    0.02 sec
+test 2
+      Start  2: appendage_geometry_and_passivity
+
+2: Test command: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/test_appendages
+2: Working Directory: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation
+2: Test timeout computed to be: 10000000
+2: Wet clipping, center, force passivity, mirror/reverse symmetry and restoring moment passed
+ 2/11 Test  #2: appendage_geometry_and_passivity .....   Passed    0.00 sec
+test 3
+      Start  3: steering_integral_load_rejection
+
+3: Test command: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/test_steering_integral
+3: Working Directory: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation
+3: Test timeout computed to be: 10000000
+ 3/11 Test  #3: steering_integral_load_rejection .....   Passed    0.00 sec
+test 4
+      Start  4: geometry_resistance_passivity
+
+4: Test command: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/test_resistance
+4: Working Directory: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation
+4: Test timeout computed to be: 10000000
+ 4/11 Test  #4: geometry_resistance_passivity ........   Passed    0.00 sec
+test 5
+      Start  5: added_mass_invariants
+
+5: Test command: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/test_added_mass
+5: Working Directory: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation
+5: Test timeout computed to be: 10000000
+5: Added inertia signs, zero-speed acceleration, skew power and timestep convergence passed
+ 5/11 Test  #5: added_mass_invariants ................   Passed    0.00 sec
+test 6
+      Start  6: fuel_volume_mass_inertia
+
+6: Test command: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/test_fuel_mass
+6: Working Directory: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation
+6: Test timeout computed to be: 10000000
+6: PASS analytic levels, tilted complementary volumes, tensors and bounds
+ 6/11 Test  #6: fuel_volume_mass_inertia .............   Passed    0.07 sec
+test 7
+      Start  7: propulsion_force_power_bounds
+
+7: Test command: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/test_propulsion
+7: Working Directory: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation
+7: Test timeout computed to be: 10000000
+ 7/11 Test  #7: propulsion_force_power_bounds ........   Passed    0.00 sec
+test 8
+      Start  8: steering_reference_bounds
+
+8: Test command: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/test_steering_reference
+8: Working Directory: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation
+8: Test timeout computed to be: 10000000
+ 8/11 Test  #8: steering_reference_bounds ............   Passed    0.00 sec
+test 9
+      Start  9: wave_kinematics_consistency
+
+9: Test command: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/test_wave_kinematics
+9: Working Directory: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation
+9: Test timeout computed to be: 10000000
+9: Shared surface height/slopes, startup derivative, orbital depth decay, divergence and calm current passed
+ 9/11 Test  #9: wave_kinematics_consistency ..........   Passed    0.00 sec
+test 10
+      Start 10: distributed_wave_pressure_analytic
+
+10: Test command: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/test_wave_pressure
+10: Working Directory: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation
+10: Test timeout computed to be: 10000000
+10: Flat/tilted surfaces, dry/full immersion, exact moments, translation and curved-wave convergence passed
+10/11 Test #10: distributed_wave_pressure_analytic ...   Passed    0.01 sec
+test 11
+      Start 11: hydrostatics_analytic
+
+11: Test command: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation/test_hydrostatics
+11: Working Directory: /home/yh/Project/usv-experimental-6m/ros_ws/build/usv_simulation
+11: Test timeout computed to be: 10000000
+11: dry, partial, full, translated and rotated analytic cases passed
+11/11 Test #11: hydrostatics_analytic ................   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 11
+
+Total Test time (real) =   0.12 sec
+Finished <<< usv_simulation [0.14s]
+
+Summary: 2 packages finished [0.28s]
+Summary: 12 tests, 0 errors, 0 failures, 0 skipped
+test_battery_capacity_matches_count (test_equipment_ledger.LedgerTests.test_battery_capacity_matches_count)
+验证电池容量与所选电池数量一致。 ... ok
+test_fixed_ballast_mass_geometry_and_balance (test_equipment_ledger.LedgerTests.test_fixed_ballast_mass_geometry_and_balance)
+配重来自横向质量矩，实体体积和惯性必须与台账一致。 ... ok
+test_fuel_exact_once (test_equipment_ledger.LedgerTests.test_fuel_exact_once)
+验证燃油质量只计入一次。 ... ok
+test_nominal_fore_ballast_equilibrium (test_equipment_ledger.LedgerTests.test_nominal_fore_ballast_equilibrium)
+重布置后名义满油调平，两方案均不生成纵向配重。 ... ok
+test_power_modes (test_equipment_ledger.LedgerTests.test_power_modes)
+验证不同模式的辅助功率预算。 ... ok
+test_profile_increment (test_equipment_ledger.LedgerTests.test_profile_increment)
+验证方案升级增加的质量与台账一致。 ... ok
+test_reject_duplicate (test_equipment_ledger.LedgerTests.test_reject_duplicate)
+验证重复台账标识被拒绝。 ... ok
+test_relocated_batteries_clear_equipment (test_equipment_ledger.LedgerTests.test_relocated_batteries_clear_equipment)
+电池与托架须避开集中设备包络，并保留至少 30 mm 船壳余量。 ... ok
+test_unique_and_physical (test_equipment_ledger.LedgerTests.test_unique_and_physical)
+验证标识唯一且质量惯性满足基本物理约束。 ... ok
+test_centerline_buoyancy (test_hull_symmetry.HullSymmetryTest.test_centerline_buoyancy)
+验证中线姿态下浮心横向对称。 ... ok
+test_heeled_mirror (test_hull_symmetry.HullSymmetryTest.test_heeled_mirror)
+验证左右横倾的体积与浮心镜像关系。 ... ok
+test_bounded_steps_and_quaternions (test_json_time.StepLimiterTests.test_bounded_steps_and_quaternions)
+一秒间隔分成五十步，保持单位四元数并到达目标位置。 ... ok
+test_clock_reset_rejected (test_json_time.StepLimiterTests.test_clock_reset_rejected)
+时间回退必须明确报错。 ... ok
+test_duplicate_suppressed (test_json_time.StepLimiterTests.test_duplicate_suppressed)
+相同时间戳不重复发送状态。 ... ok
+test_circle (test_maneuver_metrics.ManeuverMetricsTest.test_circle)
+用解析圆轨迹验证回转指标。 ... ok
+test_coasting_sway_is_not_stop (test_maneuver_metrics.ManeuverMetricsTest.test_coasting_sway_is_not_stop)
+验证仍有横向漂移时不会误报停止。 ... ok
+test_duplicate_time_rejected (test_maneuver_metrics.ManeuverMetricsTest.test_duplicate_time_rejected)
+重复采样时间不能进入速度微分或拟合。 ... ok
+test_environment_rejects_missing_motion_and_dry_propeller (test_maneuver_metrics.ManeuverMetricsTest.test_environment_rejects_missing_motion_and_dry_propeller)
+有波高而无升沉不能通过，推进器浸水不足也必须被识别。 ... ok
+test_recovery_counts_transient_not_only_tail (test_maneuver_metrics.ManeuverMetricsTest.test_recovery_counts_transient_not_only_tail)
+稳态已恢复也不能忽略此前的大幅超越。 ... ok
+test_reverse_crossing_reports_sway (test_maneuver_metrics.ManeuverMetricsTest.test_reverse_crossing_reports_sway)
+验证反推过零时保留横向速度。 ... ok
+test_reverse_distance_uses_initial_frame (test_maneuver_metrics.ManeuverMetricsTest.test_reverse_distance_uses_initial_frame)
+旋转坐标系下区分纵向进距、横漂和累计路径。 ... ok
+test_reverse_recovery_retains_equilibrium_yaw (test_maneuver_metrics.ManeuverMetricsTest.test_reverse_recovery_retains_equilibrium_yaw)
+恢复到非零配平偏航不等于回到原航向。 ... ok
+test_short_pulse_excludes_previous_stage (test_maneuver_metrics.ManeuverMetricsTest.test_short_pulse_excludes_previous_stage)
+短脉冲舵角验收不能混入此前的零舵样本。 ... ok
+test_trigger_requires_measured_heading (test_maneuver_metrics.ManeuverMetricsTest.test_trigger_requires_measured_heading)
+即使记录触发标记，也必须达到实际航向阈值。 ... ok
+test_missing_and_invalid (test_mass_properties.MassProperties.test_missing_and_invalid)
+验证缺失与非物理的质量属性被拒绝。 ... ok
+test_parallel_axis (test_mass_properties.MassProperties.test_parallel_axis)
+验证平行轴定理的惯性组合结果。 ... ok
+test_plate_mass (test_mass_properties.MassProperties.test_plate_mass)
+验证板面积、厚度与密度给出的质量。 ... ok
+<frozen importlib._bootstrap>:488: DeprecationWarning: Type google.protobuf.pyext._message.ScalarMapContainer uses PyType_Spec with a metaclass that has custom tp_new. This is deprecated and will no longer be allowed in Python 3.14.
+<frozen importlib._bootstrap>:488: DeprecationWarning: Type google.protobuf.pyext._message.MessageMapContainer uses PyType_Spec with a metaclass that has custom tp_new. This is deprecated and will no longer be allowed in Python 3.14.
+/usr/lib/python3/dist-packages/google/protobuf/internal/well_known_types.py:91: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  _EPOCH_DATETIME_NAIVE = datetime.datetime.utcfromtimestamp(0)
+test_missing_physical_subscriber (test_readiness.TestCommandReadiness.test_missing_physical_subscriber)
+只有两个物理订阅端都连接才能声明指令通道可用。 ... ok
+test_unacknowledged_command_and_recovery (test_readiness.TestCommandReadiness.test_unacknowledged_command_and_recovery)
+持续丢失油门反馈会失败，实际收到后才恢复。 ... ok
+test_missing_and_stale (test_readiness.TestReadiness.test_missing_and_stale)
+验证缺失和过期健康状态会清空窗口。 ... ok
+test_paused_and_reset (test_readiness.TestReadiness.test_paused_and_reset)
+验证暂停和时钟回退不被视为持续就绪。 ... ok
+test_window (test_readiness.TestReadiness.test_window)
+验证完整就绪时间窗口。 ... ok
+test_geometry_is_authoritative (test_resistance_budget.ResistanceBudgetTest.test_geometry_is_authoritative)
+验证轮廓几何优先于缓存面积。 ... ok
+test_overallocation_rejected (test_resistance_budget.ResistanceBudgetTest.test_overallocation_rejected)
+验证附体分配超过预算时被拒绝。 ... ok
+test_reference_conservation (test_resistance_budget.ResistanceBudgetTest.test_reference_conservation)
+验证原轴向阻力总预算守恒。 ... ok
+test_explicit_identical_resume (test_trial_evidence.EvidenceTests.test_explicit_identical_resume)
+只有显式恢复且源码、二进制、工况一致时才允许复用。 ... ok
+test_failed_process_cannot_be_masked_by_result_json (test_trial_evidence.EvidenceTests.test_failed_process_cannot_be_masked_by_result_json)
+子进程失败时，即使遗留结果写通过也必须使套件失败。 ... START case
+FAIL case: exit 1; evidence retained
+END case 1
+ok
+test_legacy_and_incomplete_outputs_rejected (test_trial_evidence.EvidenceTests.test_legacy_and_incomplete_outputs_rejected)
+无版本清单的历史输出不能直接标记为新版本验收。 ... ok
+test_missing_hash_rejected (test_trial_evidence.EvidenceTests.test_missing_hash_rejected)
+删去必需遥测摘要不能使不完整证据继续通过。 ... ok
+test_requested_spec_change_rejected (test_trial_evidence.EvidenceTests.test_requested_spec_change_rejected)
+同名工况不能用旧遥测证明新参数。 ... ok
+test_source_and_binary_change_rejected (test_trial_evidence.EvidenceTests.test_source_and_binary_change_rejected)
+源码或构建库内容变化均使旧缓存失效。 ... ok
+test_trace_modification_rejected (test_trial_evidence.EvidenceTests.test_trace_modification_rejected)
+结果仍写 passed 时，修改过的遥测也必须被拒绝。 ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 0.493s
+
+OK
+test_actuator_rate_and_limits (test_vector_thrust.InterfaceTests.test_actuator_rate_and_limits)
+验证执行器速率和角度限制。 ... ok
+test_cg_offset_moment (test_vector_thrust.InterfaceTests.test_cg_offset_moment)
+验证重心偏置产生的力矩。 ... ok
+test_invalid (test_vector_thrust.InterfaceTests.test_invalid)
+验证非法输入被拒绝。 ... ok
+test_right_turn_and_reverse (test_vector_thrust.InterfaceTests.test_right_turn_and_reverse)
+验证右转与反推的方向约定。 ... ok
+test_straight (test_vector_thrust.InterfaceTests.test_straight)
+验证零转角直推的力与力矩。 ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK

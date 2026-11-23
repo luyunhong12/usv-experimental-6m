@@ -65,7 +65,7 @@ flowchart LR
 
 ## 当前受力审计与操纵验证
 
-[当前布置的四步验证](docs/validation/platform_readiness_2026-11-21/README.md)：第一步 19 项载荷/油量/风浪流短时筛查通过，覆盖 30% 直接油门，不代表高速或任意海况适用。每步独立提交；本轮不接入 ArduPilot/Nav2。
+[当前布置的四步验证](docs/validation/platform_readiness_2026-11-21/README.md)：第一步 19 项载荷/油量/风浪流短时筛查通过，覆盖 30% 直接油门，不代表高速或任意海况适用。第二步 9 项倒车距离任务及 40% 扰动恢复通过，60% 扰动恢复仍不通过，详见 [倒车任务验收](docs/validation/platform_readiness_2026-11-21/step2/README.md)。每步独立提交；本轮不接入 ArduPilot/Nav2。
 
 最新 [配平复验](docs/validation/layout_2026-11-21/README.md) 给出分布式横流模型、实体配重推导、版本绑定、严格品质门槛及源码对应关系。初次人工操船建议 0.3 前进油门、-0.25 倒车油门；这不是自动限速或飞控航向保持。
 
@@ -177,7 +177,7 @@ python3 tests/regression/run_performance_suite.py \
   --spec tests/scenarios/performance.json --output artifacts/my_performance_run
 ```
 
-每次试验使用新的输出目录，保留场景快照、遥测 CSV、健康日志及判定；复用必须显式 `--resume` 且版本、工况与证据一致。原生测试需要本机 ROS DDS / Gazebo Transport 通信权限。最新 Code Supervisor full 与构建测试通过：12 项 C++、39 项 Python、5 项设计接口测试。操纵品质另行核对原有门槛；这是本地验证，不是假称 GitHub CI 或实船验收。完整证据、已执行范围和复现说明见 [接入前报告](docs/validation/layout_2026-11-21/README.md)。
+每次试验使用新的输出目录，保留场景快照、遥测 CSV、健康日志及判定；复用必须显式 `--resume` 且版本、工况与证据一致。原生测试需要本机 ROS DDS / Gazebo Transport 通信权限。最新 Code Supervisor full 与构建测试通过：12 项 C++、42 项 Python、5 项设计接口测试。操纵品质另行核对原有门槛；这是本地验证，不是假称 GitHub CI 或实船验收。完整证据、已执行范围和复现说明见 [接入前报告](docs/validation/layout_2026-11-21/README.md)。
 
 ## 已知问题与下一步
 
