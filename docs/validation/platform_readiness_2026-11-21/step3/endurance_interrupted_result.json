@@ -1,0 +1,66 @@
+{
+  "case": "endurance_20min",
+  "spec": {
+    "kind": "endurance",
+    "isolated_water": true,
+    "payload_kg": 150,
+    "fuel_l": 30,
+    "wave_gain": 0.3,
+    "wind": [
+      0,
+      6,
+      0
+    ],
+    "current": [
+      0.15,
+      0.1,
+      0
+    ],
+    "power_mode": "survey",
+    "generator_cycle": true,
+    "stages": [
+      {
+        "name": "endurance",
+        "duration": 1200,
+        "mode": "direct",
+        "throttle": 0.55,
+        "steering_deg": 5
+      }
+    ]
+  },
+  "checks": {
+    "startup_ready": true,
+    "completed": false,
+    "no_failure": false,
+    "finite": true,
+    "attitude_bounded": true,
+    "power_limited": true,
+    "energy_balance": true,
+    "fuel_mass_consistent": true,
+    "resistance_dissipative": true,
+    "command_reached_physics": true,
+    "health_command_observed": true,
+    "initial_soc_matches": true,
+    "two_generator_runs": true,
+    "fuel_consumed": true
+  },
+  "passed": false,
+  "failure": "Interrupted signal 15",
+  "start_sim": 2.048,
+  "metrics": {},
+  "summary": {
+    "max_roll_pitch_deg": [
+      1.5974069148772003,
+      1.0794212094461317
+    ],
+    "soc_start_end": [
+      0.8999999952814537,
+      0.8636403987565856
+    ],
+    "temperature_max_c": 25.142696026434127,
+    "fuel_consumed_l": 0.0521078773626833,
+    "sim_end": 1158.7
+  },
+  "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+  "postprocess_recovered": false
+}

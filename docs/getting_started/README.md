@@ -1,6 +1,6 @@
 # 用 ROS 2 在 VRX 中开船
 
-当前推荐入口是 **ROS 控制 + Gazebo/VRX 悉尼场景**，不需要安装或启动 ArduPilot、SITL 或 Nav2。本轮接入前验证见 [验收记录](../validation/layout_2026-11-21/README.md)，物理边界见 [已知问题](../validation/known_issues.md)。
+当前推荐入口是 **ROS 控制 + Gazebo/VRX 悉尼场景**，不需要安装或启动 ArduPilot、SITL 或 Nav2。本轮接入前验证见 [四步验收记录](../validation/platform_readiness_2026-11-21/README.md)，物理边界见 [已知问题](../validation/known_issues.md)。
 
 ## 环境与构建
 

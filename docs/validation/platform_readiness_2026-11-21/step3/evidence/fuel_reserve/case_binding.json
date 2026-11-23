@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "case": "fuel_reserve",
+  "spec": {
+    "kind": "fuel_reserve",
+    "fuel_l": 1.005,
+    "generator_on": true,
+    "stages": [
+      {
+        "name": "reserve",
+        "duration": 120,
+        "mode": "velocity",
+        "speed": 1.5,
+        "yaw_rate": 0.04
+      }
+    ],
+    "isolated_water": true,
+    "wave_gain": 0
+  },
+  "fingerprint": "75579633526f3867ba6da1d1b0119ff06555aa190362b4d76b5c55f53ac27668",
+  "files": {
+    "actuators_state.csv": "b4de1e08c6753b5fcaea2cd621f7a76499c4c3e23e50d41e0984a1b5ea5248d1",
+    "audit_appendages.csv": "6febfe422b592fb336588266099d6d5a6dc73d1972ee5226286b86a168b7f1f8",
+    "audit_hull.csv": "890e6a40f250f5a91e48a4b352afc779384e7c83db40a5ac8063e636742435b1",
+    "audit_propulsion.csv": "34688e39f535a137c420ef497f4d5dc84eccc6e13e88786ac8ed98d2719761ab",
+    "boat.sdf": "b7d337b3f2d2b8e83ebaf198507b1ad660fff522d1cae4e20a6f8b8f73e358de",
+    "energy_truth.csv": "b3b98066f71067b0d8c954ea6f5fa1bd663aa1fe347c7dc70efaea698a524756",
+    "environment_state.csv": "c4bc456f1c4c78b41977bb293d5f94385de409f437899e3efbef6bac4b3e6165",
+    "fuel_mass_state.csv": "398b05a01fa9f29241ca4afb5a360a6ab41b10054d4669e24c01a8e0e6bd5d79",
+    "health.json": "259cf04db16e7c00c60426f219778e477879dbd87d27ecbf56d60bf85aa92e83",
+    "hydrodynamics_appendages.csv": "a1ee85aa49349fa9b636ca163fca49ef8f139845bea411a5ce6ece8484adab45",
+    "hydrodynamics_resistance.csv": "23038e12015f887effdcf095f9c089cb6efc7b743353341a5ba1a6dae4740d2a",
+    "hydrostatics.csv": "7e2454e24237db1b679fb2d151f3c00b18a812d29c67a617d57d73220d00ad55",
+    "models/coast_waves/model.sdf": "191e493e236d9f01aedf0e52e017b6b459010350ee6131abd3ba26448a548e98",
+    "models/usv/usv_azimuth_trial.sdf": "3dc51cdbb098a7985bfb64a26c7e47b6f9bdc2f16c4b08598a8124f57ed18853",
+    "propulsion_state.csv": "23d07c6bfe2ac2b7d21ef35fb5542079d522f8f4dffb60be68ce2c9577cb47fa",
+    "result.json": "dc7c7d68895b5eb904e09aea3feb11725e2581f43cb7cdbec0e8f4d5555664e4",
+    "run_status.json": "7ae538acf17f252c376b289c50e367d810ffe7da3ca9ec1a008b521b1c642517",
+    "scene.json": "0acedbcc071f10f87074202dd2e7707b3821813fdd59af7f854bd1fcad61425a",
+    "source_versions.json": "36d726b009ee6899dfc7850257d40981498b6dad0fb8c19a6e1518e99faad3b9",
+    "stages.json": "ab200b5e7206e1a8c4e324e0bdc0d80681210030cd15644ea53e9127b1da8fd1",
+    "startup.json": "45502aa6907092e083db6e5887a334228b9e6a4cf845dd6dc1be170fa6f19f21",
+    "wave_response_state.csv": "c24d44bf0149aa98211ca6b77faf66378324cc0e6bf1d8232f7a3cde89acaa0d",
+    "world.sdf": "2a15725565ff961d84c4c6408183b2f0e433ef2ed8f09dc52c3f829f53b75063"
+  }
+}

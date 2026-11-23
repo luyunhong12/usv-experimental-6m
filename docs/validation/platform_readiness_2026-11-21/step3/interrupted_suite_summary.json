@@ -1,0 +1,35 @@
+{
+  "runner_interrupted": true,
+  "postprocess_only": true,
+  "note": "Derived from unchanged per-case result.json after runner received SIGTERM; not a successful suite completion.",
+  "cases": {
+    "command_dropout": {
+      "passed": false,
+      "failure": null
+    },
+    "low_soc": {
+      "passed": true,
+      "failure": null
+    },
+    "sensor_dropout": {
+      "passed": true,
+      "failure": null
+    },
+    "endurance_20min": {
+      "passed": false,
+      "failure": "Interrupted signal 15"
+    },
+    "hot": {
+      "passed": true,
+      "failure": null
+    },
+    "clock_independent": {
+      "passed": true,
+      "failure": null
+    },
+    "fuel_reserve": {
+      "passed": true,
+      "failure": null
+    }
+  }
+}

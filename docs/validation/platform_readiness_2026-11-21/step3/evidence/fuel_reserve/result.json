@@ -1,0 +1,64 @@
+{
+  "case": "fuel_reserve",
+  "spec": {
+    "kind": "fuel_reserve",
+    "fuel_l": 1.005,
+    "generator_on": true,
+    "stages": [
+      {
+        "name": "reserve",
+        "duration": 120,
+        "mode": "velocity",
+        "speed": 1.5,
+        "yaw_rate": 0.04
+      }
+    ],
+    "isolated_water": true,
+    "wave_gain": 0
+  },
+  "checks": {
+    "startup_ready": true,
+    "completed": true,
+    "no_failure": true,
+    "finite": true,
+    "attitude_bounded": true,
+    "power_limited": true,
+    "energy_balance": true,
+    "fuel_mass_consistent": true,
+    "resistance_dissipative": true,
+    "command_reached_physics": true,
+    "health_command_observed": true,
+    "initial_soc_matches": true,
+    "fuel_reserve_fault": true
+  },
+  "passed": true,
+  "failure": null,
+  "start_sim": 1.136,
+  "metrics": {
+    "reserve": {
+      "tail_speed_m_s": 1.4999799013443302,
+      "tail_speed_std_m_s": 0.0030673496258917525,
+      "mean_motor_w": 2288.2687553217347,
+      "distance_m": 179.5888552154271,
+      "heading_change_rad": 2.4875144286542707,
+      "mean_wet_area_m2": 10.463703918136185,
+      "mean_projected_x_m2": 0.351025758680963,
+      "mean_surge_drag_n": 576.0889752917329
+    }
+  },
+  "summary": {
+    "max_roll_pitch_deg": [
+      0.785581274678717,
+      0.7849897790420712
+    ],
+    "soc_start_end": [
+      0.8999999963443231,
+      0.8985328028871482
+    ],
+    "temperature_max_c": 25.00319908691176,
+    "fuel_consumed_l": 0.004999999999999893,
+    "sim_end": 121.36
+  },
+  "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+  "postprocess_recovered": false
+}

@@ -1,0 +1,34 @@
+{
+  "scope": "2-hour energy-only engineering simulation, constant requested motor input 40000.0 W; actual load reduces with protection. Not a vessel range prediction.",
+  "passed": true,
+  "cases": {
+    "0": {
+      "checks": {
+        "finite": true,
+        "balanced": true,
+        "soc_bounds": true,
+        "power_bounds": true,
+        "generator_consumes_fuel": true
+      },
+      "first_power_shortfall_min": 53.5,
+      "first_motor_zero_min": 99.66666666666667,
+      "max_temperature_c": 45.1673328264,
+      "final_soc": 0.02,
+      "fuel_consumed_l": 0.0
+    },
+    "1": {
+      "checks": {
+        "finite": true,
+        "balanced": true,
+        "soc_bounds": true,
+        "power_bounds": true,
+        "generator_consumes_fuel": true
+      },
+      "first_power_shortfall_min": 55.333333333333336,
+      "first_motor_zero_min": null,
+      "max_temperature_c": 44.3828405448,
+      "final_soc": 0.0231255550265,
+      "fuel_consumed_l": 0.9557082078000008
+    }
+  }
+}

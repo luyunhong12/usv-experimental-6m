@@ -1,0 +1,20 @@
+[
+  {
+    "name": "endurance",
+    "duration": 1200,
+    "mode": "direct",
+    "throttle": 0.55,
+    "steering_deg": 5,
+    "index": 0,
+    "start_sim": 1.336,
+    "end_sim": 1201.34,
+    "distance_triggered": false,
+    "stage_origin": [
+      -479.99544222823255,
+      179.9992692946528,
+      -0.0002890625688348744
+    ],
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  }
+]

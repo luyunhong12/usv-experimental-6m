@@ -1,0 +1,5 @@
+{
+  "dpkg_package_lists_identical": true,
+  "sha256": "ab123cf01625585d2553dfce61d4914364b26083b5b411b03d85d515bcb4f9ec",
+  "scope": "APT package versions in built Dockerfile image and independently exercised container; not filesystem or bit-for-bit equivalence."
+}

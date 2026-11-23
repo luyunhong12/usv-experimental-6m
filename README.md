@@ -56,7 +56,7 @@ flowchart LR
 | **浮力与随浪**：封闭体积静水浮力、浸水表面压力积分，使用 VRX 波场 | [静水推导与验证](docs/history/2026-11-19_船体接入与静水试验.md)、[随浪方法](docs/history/2026-11-20_船体外观装配与随浪优化.md)、[随浪结果](docs/validation/evidence/waves_2026-11-20.json) | 没有实船波浪响应标定；未完整覆盖破波、砰击、滑行 |
 | **阻力、附加质量与方向稳定性**：参考海洋航行器动力学框架，按几何求附体浸水面积及力臂，补全升阻力 | [理论与系数边界](docs/parameters/evidence_map.md)、[阻力配置](ros_ws/src/usv_description/config/resistance.json)、[附体参数](ros_ws/src/usv_description/config/appendage_hydrodynamics.json)、[15 项专项与对照数据](docs/validation/directional_stability_2026-11-21/README.md) | 系数未经 CFD/海试标定；仍有小幅配平偏航，附体阻力与集中船体阻力可能存在重复预算 |
 | **推进与转向**：正反推、桨轴转矩/功率限制、舵角与速率约束 | [推进参数](ros_ws/src/usv_description/config/propulsion.json)、[厂家参考与建模假设](docs/history/2026-11-19_推进与操纵验证.md)、[当前操纵验收](docs/validation/layout_2026-11-21/README.md) | 6 kW 厂家参考不证明 40 kW 概念方案；缺少真实桨的全工况性能图与空化数据 |
-| **油量、电量与保护**：能量平衡、电流积分、发电/充电限制、负载和保护状态 | [能源配置](ros_ws/src/usv_energy/config/energy.json)、[原理与设备来源](docs/history/2026-11-19_油电能源与感知验证.md)、[能源基线](docs/validation/baseline_2026-11-21/README.md) | 电池内阻、热参数及油耗曲线有估算；两小时能源计算不等于实际续航 |
+| **油量、电量与保护**：能量平衡、电流积分、发电/充电限制、负载和保护状态 | [能源配置](ros_ws/src/usv_energy/config/energy.json)、[原理与设备来源](docs/history/2026-11-19_油电能源与感知验证.md)、[能源基线](docs/validation/baseline_2026-11-21/README.md)、[当前长时与保护复验](docs/validation/platform_readiness_2026-11-21/step3/README.md) | 电池内阻、热参数及油耗曲线有估算；两小时能源计算不等于实际续航 |
 | **燃油引起的动态质量**：准静态液面体积积分，更新质量、重心和完整惯性，回读物理后端 | [油箱参数](ros_ws/src/usv_description/config/fuel_tank.json)、[方法及后端验证](docs/history/2026-11-19_燃油质量重心惯性联动.md)、[公开测试摘要](docs/validation/evidence/fuel_mass_historical.json) | 未建模油液动态晃荡、进水及柔性结构 |
 | **传感器与运行接口**：IMU、GPS、相机、点云、TF、健康检测；就绪检测、失联停推及退出清理 | [WAM-V 差距与接口改进](docs/history/2026-11-20_WAMV差距完善.md)、[启动与运行验证](docs/history/2026-11-21_阻力操纵与启动可靠性改进.md)、[完整场景回归](docs/validation/directional_stability_2026-11-21/full_sydney_smoke.json) | 传感器噪声未实机标定；独立 amd64 容器复现已通过；其他平台和所有环境长期测试未覆盖 |
 | **ArduPilot / Nav2**：保留历史适配，先完成船体物理，再验收控制所有权与导航 | [集成规划与当前边界](docs/integration/README.md) | 本阶段没有完成这两套自主航行系统的集成验收 |
@@ -65,7 +65,7 @@ flowchart LR
 
 ## 当前受力审计与操纵验证
 
-[当前布置的四步验证](docs/validation/platform_readiness_2026-11-21/README.md)：第一步 19 项载荷/油量/风浪流短时筛查通过，覆盖 30% 直接油门，不代表高速或任意海况适用。第二步 9 项倒车距离任务及 40% 扰动恢复通过，60% 扰动恢复仍不通过，详见 [倒车任务验收](docs/validation/platform_readiness_2026-11-21/step2/README.md)。[deep 与独立容器安装复现](docs/validation/platform_readiness_2026-11-21/step4/README.md) 已通过；20 分钟连续航行后台复验仍在进行。每步独立提交；本轮不接入 ArduPilot/Nav2。
+[当前布置的四步验证](docs/validation/platform_readiness_2026-11-21/README.md)：第一步 19 项载荷/油量/风浪流短时筛查通过，覆盖 30% 直接油门，不代表高速或任意海况适用。第二步 9 项倒车距离任务及 40% 扰动恢复通过，60% 扰动恢复仍不通过，详见 [倒车任务验收](docs/validation/platform_readiness_2026-11-21/step2/README.md)。[deep 与独立容器安装复现](docs/validation/platform_readiness_2026-11-21/step4/README.md) 已通过；[持续运行与故障保护](docs/validation/platform_readiness_2026-11-21/step3/README.md) 最终 7/7 通过，包含完整 20 分钟原生航行。每步独立提交；本轮不接入 ArduPilot/Nav2。
 
 最新 [配平复验](docs/validation/layout_2026-11-21/README.md) 给出分布式横流模型、实体配重推导、版本绑定、严格品质门槛及源码对应关系。初次人工操船建议 0.3 前进油门、-0.25 倒车油门；这不是自动限速或飞控航向保持。
 

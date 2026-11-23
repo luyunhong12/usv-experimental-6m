@@ -12,6 +12,7 @@
     "container/final-source-commit.txt": "0e837a28bcfe8053240d7859c33b66c4bcdce4c2bf5730699d072c631403cdf6",
     "container/test.log": "f5fee10d2262c4a30f41b2e04653e2246276936feeed6be370908b164a6dda07",
     "container/build-final.log": "e85edcad496a984a08d7d4a5d7a4db785ddff7e4f26274d31dab2105ece17a66",
+    "container/recipe-equivalence.json": "552615ff6ce4c24e79d994cd28c7b5b02e7825989e1900268817d0b81c1b70d1",
     "container/assets-download.log": "1aa3cc863fe771cad2ed8522d994d01a8a0ce1aa3f02c7b859c2c7babfca8215",
     "container/physics-pin.log": "1ddb5fc919c20c169c91ebc59dbaae4134e86c74724e0d1a1d5cfb488ca9bd26",
     "container/packages.tsv": "ab123cf01625585d2553dfce61d4914364b26083b5b411b03d85d515bcb4f9ec",
