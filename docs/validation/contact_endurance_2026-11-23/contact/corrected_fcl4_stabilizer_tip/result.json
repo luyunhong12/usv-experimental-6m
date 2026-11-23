@@ -1,0 +1,33 @@
+{
+  "stabilizer_tip": {
+    "passed": false,
+    "checks": {
+      "finite": true,
+      "duration": true,
+      "step_sampling": true,
+      "steady_gap": false,
+      "impact_penetration": true
+    },
+    "samples": 2029,
+    "duration_s": 8.112,
+    "maximum_sample_interval_s": 0.004000000000001336,
+    "tail_gap_min_max_m": [
+      -0.011781099749975078,
+      -0.011724456471314017
+    ],
+    "peak_penetration_m": 0.012187359999999738,
+    "peak_limit_m": 0.013713657706305192,
+    "steady_limit_m": 0.0005,
+    "impact_speed_m_s": 3.3587944265762975,
+    "step_s": 0.004,
+    "fixture": "frictionless normal guide; no normal support except collision"
+  },
+  "physics_backend": {
+    "passed": true,
+    "requirement": "Production UsvPhysics loaded and explicit DART settings read back"
+  },
+  "version_binding": {
+    "passed": true,
+    "requirement": "Runtime inputs, installed binaries and validation sources unchanged"
+  }
+}

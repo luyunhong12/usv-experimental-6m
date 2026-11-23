@@ -1,0 +1,25 @@
+{
+  "bottom": {
+    "samples": 8021,
+    "final_z_m": 0.02499868234506053,
+    "last_50_z_range_m": 9.540961039111728e-06,
+    "expected_contact_surface_range_m": [
+      0,
+      0.12
+    ],
+    "passed": true,
+    "criterion": "Rolling contact: last 50 samples sphere-centre distance to hull within radius +/- 5 mm; not rest on keel ridge",
+    "surface_distance_min_max_m": [
+      0.024990182706584263,
+      0.024999723667623375
+    ]
+  },
+  "physics_backend": {
+    "passed": true,
+    "requirement": "Production UsvPhysics loaded and explicit DART settings read back"
+  },
+  "version_binding": {
+    "passed": true,
+    "requirement": "Runtime inputs, installed binaries and validation sources unchanged"
+  }
+}

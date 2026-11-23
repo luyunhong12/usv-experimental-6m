@@ -1,0 +1,6873 @@
+[
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 0.0,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": false,
+      "actuator_feedback": false,
+      "physics_feedback": false,
+      "navigation_fresh": false,
+      "command_connected": false,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "energy_available",
+      "actuator_feedback",
+      "physics_feedback",
+      "navigation_fresh",
+      "command_connected"
+    ],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 0.0,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": false,
+      "actuator_feedback": false,
+      "physics_feedback": false,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "energy_available",
+      "actuator_feedback",
+      "physics_feedback",
+      "navigation_fresh"
+    ],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 0.0,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": false,
+      "actuator_feedback": false,
+      "physics_feedback": false,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "energy_available",
+      "actuator_feedback",
+      "physics_feedback",
+      "navigation_fresh"
+    ],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 0.0,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": false,
+      "actuator_feedback": false,
+      "physics_feedback": false,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "energy_available",
+      "actuator_feedback",
+      "physics_feedback",
+      "navigation_fresh"
+    ],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 0.0,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": false,
+      "actuator_feedback": false,
+      "physics_feedback": false,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "energy_available",
+      "actuator_feedback",
+      "physics_feedback",
+      "navigation_fresh"
+    ],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 0.0,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": false,
+      "actuator_feedback": false,
+      "physics_feedback": false,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "energy_available",
+      "actuator_feedback",
+      "physics_feedback",
+      "navigation_fresh"
+    ],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 0.0,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": false,
+      "actuator_feedback": false,
+      "physics_feedback": false,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "energy_available",
+      "actuator_feedback",
+      "physics_feedback",
+      "navigation_fresh"
+    ],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 0.0,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": false,
+      "actuator_feedback": false,
+      "physics_feedback": false,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "energy_available",
+      "actuator_feedback",
+      "physics_feedback",
+      "navigation_fresh"
+    ],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 0.0,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": false,
+      "actuator_feedback": false,
+      "physics_feedback": false,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "energy_available",
+      "actuator_feedback",
+      "physics_feedback",
+      "navigation_fresh"
+    ],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 0.0,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": false,
+      "actuator_feedback": false,
+      "physics_feedback": false,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "energy_available",
+      "actuator_feedback",
+      "physics_feedback",
+      "navigation_fresh"
+    ],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 0.002,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 0.103,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 0.304,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 0.505,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 0.606,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 0.807,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 1.009,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 0,
+    "command_mode": "idle",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 1.109,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 4,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 1.209,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 13,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 1.411,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 20,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 1.512,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 26,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 1.713,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 35,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 1.915,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 43,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 2.015,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 50,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 2.216,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 59,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 2.317,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 67,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 2.519,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 74,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 2.619,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 82,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 2.72,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 89,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 2.922,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 98,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 3.123,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 106,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 3.224,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 115,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 3.426,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 122,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 3.527,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 128,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 3.728,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 137,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 3.93,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 145,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 4.03,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 154,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 4.232,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 162,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 4.434,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 171,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 4.535,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 179,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 4.737,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 188,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 4.939,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 196,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 5.04,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 203,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 5.242,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 212,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 5.444,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 220,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 5.545,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 227,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 5.746,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 236,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 5.847,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 242,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 6.049,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 251,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 6.15,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 259,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 6.352,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 268,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 6.453,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 275,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 6.655,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 283,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 6.756,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 290,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 6.958,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 299,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 7.16,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 307,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 7.362,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 316,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 7.463,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 324,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 7.564,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 331,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 7.766,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 340,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 7.968,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 348,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 8.17,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 355,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 8.271,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 362,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 8.473,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 370,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 8.675,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 379,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 8.776,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 386,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 8.978,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 392,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 9.079,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 401,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 9.281,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 409,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 9.483,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 418,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 9.483,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 422,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 9.685,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 430,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 9.887,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 439,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 9.988,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 446,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 10.19,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 454,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 10.392,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 461,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 10.492,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 470,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 10.694,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 478,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 10.896,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 485,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 10.997,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 492,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 11.199,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 500,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 11.3,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 509,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 11.502,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 517,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 11.704,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 526,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 11.805,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 534,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 12.007,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 543,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 12.108,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 550,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 12.31,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 558,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 12.512,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 567,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 12.714,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 575,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 12.916,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 584,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 13.017,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 592,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 13.218,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 599,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 13.319,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 606,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -1.6068915420406248e-11
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 13.521,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 13.622,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 13.824,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 13.925,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 14.127,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 14.228,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 14.43,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 14.632,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 14.733,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 14.834,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 15.036,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 15.238,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 15.44,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 15.642,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 15.742,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 15.944,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 16.146,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 16.247,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 16.448,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 16.649,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 16.75,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 16.85,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 17.052,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 17.152,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 17.353,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 17.454,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 17.655,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 17.856,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 17.957,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 18.058,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 18.259,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 18.359,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 18.561,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 18.661,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 18.863,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 19.064,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 19.164,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 19.366,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 19.567,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 19.667,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 19.869,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 19.969,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 20.17,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 20.372,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 20.573,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 20.774,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 20.875,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 20.975,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 21.177,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 21.277,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 21.478,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 21.579,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 21.78,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 21.881,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 22.082,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 22.283,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 22.484,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 22.686,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 22.786,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 22.988,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 23.088,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 23.289,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 23.491,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 23.591,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 23.792,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 23.893,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 24.094,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 24.295,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 24.497,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 24.698,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 24.799,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 25.0,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 25.201,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 25.302,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 25.503,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 25.704,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 25.805,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 25.905,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 26.106,
+    "ready": false,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": false,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [
+      "navigation_fresh"
+    ],
+    "command_sequence": 612,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": null
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 26.207,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 617,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 26.408,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 625,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 26.509,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 632,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 26.71,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 641,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 26.811,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 647,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 27.012,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 656,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 27.213,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 663,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 27.314,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 671,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 27.414,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 678,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 27.616,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 687,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 27.817,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 695,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 28.018,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 704,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 28.119,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 710,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 28.219,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 717,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 28.42,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 726,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 28.521,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 733,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 28.722,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 741,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 28.924,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 748,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 29.024,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 757,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 29.125,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 763,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 29.326,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 772,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 29.527,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 780,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 29.628,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 787,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 29.829,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 796,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 30.03,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 802,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 30.131,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 811,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 30.332,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 819,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 30.433,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 826,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 30.533,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 833,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 30.634,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 837,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 30.835,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 846,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 30.936,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 854,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 31.137,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 861,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 31.238,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 868,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 31.439,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 876,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 31.539,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 883,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 31.64,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 890,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 31.841,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 898,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 31.942,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 905,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 32.042,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 912,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 32.243,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 920,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 32.343,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 927,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 32.545,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 934,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 32.645,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 941,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 32.746,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 948,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 32.947,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 956,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 33.148,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 965,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 33.249,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 972,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 33.45,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 980,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 33.551,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 987,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 33.752,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 995,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 33.953,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1004,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 34.054,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1011,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 34.255,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1018,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 34.356,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1026,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 34.557,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1033,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 34.758,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1042,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 34.859,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1050,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 35.06,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1059,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 35.261,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1067,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 35.362,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1074,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 35.563,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1083,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 35.664,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1089,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 35.865,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1098,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 36.066,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1106,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 36.267,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1115,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 36.468,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1123,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 36.569,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1132,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 36.77,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1140,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 36.871,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1147,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 37.072,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1156,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 37.173,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1164,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 37.374,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1171,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 37.475,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1178,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 37.575,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1185,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 37.776,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1193,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 37.978,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1202,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 38.078,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1210,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 38.279,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1217,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 38.38,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1226,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 38.581,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1234,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 38.682,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1241,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 38.883,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1249,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 38.984,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1253,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 39.185,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1262,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 39.386,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1270,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 39.487,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1277,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 39.688,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1286,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 39.789,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1292,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 39.99,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1299,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 40.09,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1308,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 40.191,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1314,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 40.392,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1323,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 40.493,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1330,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 40.694,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1336,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 40.795,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1345,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 40.996,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1352,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 41.097,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1358,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 41.298,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1367,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 41.398,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1374,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 41.6,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1380,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 41.7,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1389,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 41.901,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1398,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 42.103,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1406,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 42.203,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1415,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 42.404,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1423,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 42.505,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1430,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 42.706,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1437,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 42.908,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1445,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 43.008,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1454,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 43.209,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1462,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 43.411,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1471,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 43.511,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1479,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 43.712,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1488,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 43.914,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1496,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 44.115,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1505,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 44.215,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1512,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 44.417,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1520,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 44.517,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1529,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 44.718,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1536,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 44.819,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1544,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 45.02,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1553,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 45.121,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1559,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 45.322,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1568,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 45.423,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1575,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 45.624,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1583,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 45.725,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1592,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 45.926,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1599,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 46.026,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1605,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 46.228,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1614,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 46.429,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1622,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 46.529,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1631,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 46.63,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1638,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 46.831,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1646,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 47.033,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1655,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 47.133,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1663,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 47.334,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1670,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 47.435,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1679,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 47.636,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1687,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 47.837,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1696,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 47.938,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1702,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 48.139,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1711,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 48.24,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1716,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 48.441,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1724,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 48.542,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1732,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 48.743,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1741,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 48.944,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1748,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 49.045,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1754,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 49.246,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1763,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 49.447,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1772,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 49.648,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1780,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 49.749,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1787,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 49.95,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1795,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 50.051,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1802,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 50.252,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1811,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 50.353,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1818,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 50.554,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1824,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 50.654,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1833,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 50.856,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1841,
+    "command_mode": "velocity",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  },
+  {
+    "gz_partition": "usv_perf_sensor_dropout_2330f8cb",
+    "sim_s": 51.057,
+    "ready": true,
+    "checks": {
+      "control_enabled": true,
+      "energy_available": true,
+      "actuator_feedback": true,
+      "physics_feedback": true,
+      "navigation_fresh": true,
+      "command_connected": true,
+      "direct_command_confirmed": true
+    },
+    "missing": [],
+    "command_sequence": 1850,
+    "command_mode": "direct",
+    "transport_retries": 0,
+    "fixed_throttle_request": null,
+    "heading_reference_rad": -0.00033135509684536395
+  }
+]

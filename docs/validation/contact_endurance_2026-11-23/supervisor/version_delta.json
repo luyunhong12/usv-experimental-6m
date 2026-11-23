@@ -1,0 +1,18 @@
+{
+  "tests/integration/validate_vessel_performance.py": {
+    "deep": "4e8b7c756671f1ae5d8ccea3022ab1f544542cb0d205acab69a4730b8df14b8c",
+    "final": "18962f88e305669032314825785dfacd68b90d0a27105c1c0f1ab03f43845d44"
+  },
+  "tests/integration/validate_contact_directions.py": {
+    "deep": "4ece0e10ee3ca4802db996254aa5cfc58e6163d9147e9d92a6bd48101d5eca85",
+    "final": "d2168434ae480389a55a4dfc5102eff08a7331d534e288abdbb9eb8b58647d30"
+  },
+  "tools/lib/test_isolation.py": {
+    "deep": null,
+    "final": "8305a04492c4eeac8d54fa3382ae2787c1d6a25333d9456c4f9729587e6fb5b1"
+  },
+  "tests/unit/test_readiness.py": {
+    "deep": "12a35caebc74f86144bd6a2b146c3ddc1f88a0bd20072b41bcea0476f612a59e",
+    "final": "88ef5c3f88ad3ca38dde2cc85b08ebd29e8f0add1f5480c993802354f04880e8"
+  }
+}

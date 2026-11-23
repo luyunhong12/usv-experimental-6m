@@ -1,0 +1,19 @@
+[
+  {
+    "name": "derating",
+    "duration": 180,
+    "throttle": 1.0,
+    "steering_deg": 5,
+    "index": 0,
+    "start_sim": 1.009,
+    "end_sim": 181.013,
+    "distance_triggered": false,
+    "stage_origin": [
+      -480.0,
+      180.0,
+      -8.462564201097866e-18
+    ],
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  }
+]

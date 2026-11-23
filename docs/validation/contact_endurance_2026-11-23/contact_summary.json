@@ -1,0 +1,462 @@
+{
+  "production_passed": true,
+  "production_count": 14,
+  "diagnostic_count": 8,
+  "cases": {
+    "nominal_deck": {
+      "samples": 8121,
+      "final_z_m": 0.9270216289461501,
+      "last_50_z_range_m": 0.0,
+      "expected_contact_surface_range_m": [
+        0.85,
+        1.05
+      ],
+      "passed": true,
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "nominal_bottom": {
+      "samples": 8021,
+      "final_z_m": 0.02499868234506053,
+      "last_50_z_range_m": 9.540961039111728e-06,
+      "expected_contact_surface_range_m": [
+        0,
+        0.12
+      ],
+      "passed": true,
+      "criterion": "Rolling contact: last 50 samples sphere-centre distance to hull within radius +/- 5 mm; not rest on keel ridge",
+      "surface_distance_min_max_m": [
+        0.024990182706584263,
+        0.024999723667623375
+      ],
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "nominal_port": {
+      "samples": 8121,
+      "final_z_m": 1.0488709430239567,
+      "last_50_z_range_m": 0.0,
+      "expected_contact_surface_range_m": [
+        0.9,
+        1.2
+      ],
+      "passed": true,
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "nominal_starboard": {
+      "samples": 8023,
+      "final_z_m": 1.0488709430239587,
+      "last_50_z_range_m": 0.0,
+      "expected_contact_surface_range_m": [
+        0.9,
+        1.2
+      ],
+      "passed": true,
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "nominal_stern": {
+      "samples": 8021,
+      "final_z_m": 3.772999629891524,
+      "last_50_z_range_m": 9.54902040639638e-06,
+      "expected_contact_surface_range_m": [
+        3.0,
+        3.8
+      ],
+      "passed": true,
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "nominal_propeller_hub": {
+      "samples": 8020,
+      "final_z_m": 3.8623833813615844,
+      "last_50_z_range_m": 0.0,
+      "expected_contact_surface_range_m": [
+        3.7,
+        3.95
+      ],
+      "passed": true,
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "nominal_stabilizer_tip": {
+      "passed": true,
+      "checks": {
+        "finite": true,
+        "duration": true,
+        "step_sampling": true,
+        "steady_gap": true,
+        "impact_penetration": true
+      },
+      "samples": 8024,
+      "duration_s": 8.023,
+      "maximum_sample_interval_s": 0.0010000000000012221,
+      "tail_gap_min_max_m": [
+        -9.80940219173082e-06,
+        -2.698614325127857e-07
+      ],
+      "peak_penetration_m": 0.0003859300000005131,
+      "peak_limit_m": 0.0035636994265762978,
+      "steady_limit_m": 0.0005,
+      "impact_speed_m_s": 3.3587944265762975,
+      "step_s": 0.001,
+      "fixture": "frictionless normal guide; no normal support except collision",
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "nominal_stabilizer_side": {
+      "passed": true,
+      "checks": {
+        "finite": true,
+        "duration": true,
+        "step_sampling": true,
+        "steady_gap": true,
+        "impact_penetration": true
+      },
+      "samples": 8021,
+      "duration_s": 8.020000000000001,
+      "maximum_sample_interval_s": 0.0010000000000012221,
+      "tail_gap_min_max_m": [
+        -7.445927321797496e-07,
+        -7.445927321797496e-07
+      ],
+      "peak_penetration_m": 0.0003859300000004645,
+      "peak_limit_m": 0.0035636994265762978,
+      "steady_limit_m": 0.0005,
+      "impact_speed_m_s": 3.3587944265762975,
+      "step_s": 0.001,
+      "fixture": "frictionless normal guide; no normal support except collision",
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "halfms_stabilizer_tip": {
+      "passed": true,
+      "checks": {
+        "finite": true,
+        "duration": true,
+        "step_sampling": true,
+        "steady_gap": true,
+        "impact_penetration": true
+      },
+      "samples": 16200,
+      "duration_s": 8.099499999999999,
+      "maximum_sample_interval_s": 0.0005000000000006111,
+      "tail_gap_min_max_m": [
+        -2.4514573872883028e-06,
+        -2.045332715208681e-07
+      ],
+      "peak_penetration_m": 0.0012271374999977894,
+      "peak_limit_m": 0.001880623463288149,
+      "steady_limit_m": 0.0005,
+      "impact_speed_m_s": 3.3587944265762975,
+      "step_s": 0.0005,
+      "fixture": "frictionless normal guide; no normal support except collision",
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "halfms_stabilizer_side": {
+      "passed": true,
+      "checks": {
+        "finite": true,
+        "duration": true,
+        "step_sampling": true,
+        "steady_gap": true,
+        "impact_penetration": true
+      },
+      "samples": 16379,
+      "duration_s": 8.189,
+      "maximum_sample_interval_s": 0.0005000000000006111,
+      "tail_gap_min_max_m": [
+        -7.816020441281379e-07,
+        -7.816020441281379e-07
+      ],
+      "peak_penetration_m": 0.0012271374999977408,
+      "peak_limit_m": 0.001880623463288149,
+      "steady_limit_m": 0.0005,
+      "impact_speed_m_s": 3.3587944265762975,
+      "step_s": 0.0005,
+      "fixture": "frictionless normal guide; no normal support except collision",
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "light_stabilizer_tip": {
+      "passed": true,
+      "checks": {
+        "finite": true,
+        "duration": true,
+        "step_sampling": true,
+        "steady_gap": true,
+        "impact_penetration": true
+      },
+      "samples": 8020,
+      "duration_s": 8.019,
+      "maximum_sample_interval_s": 0.0010000000000012221,
+      "tail_gap_min_max_m": [
+        -9.80940219173082e-06,
+        -2.698614325127857e-07
+      ],
+      "peak_penetration_m": 0.0003859300000005131,
+      "peak_limit_m": 0.0035636994265762978,
+      "steady_limit_m": 0.0005,
+      "impact_speed_m_s": 3.3587944265762975,
+      "step_s": 0.001,
+      "fixture": "frictionless normal guide; no normal support except collision",
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "light_stabilizer_side": {
+      "passed": true,
+      "checks": {
+        "finite": true,
+        "duration": true,
+        "step_sampling": true,
+        "steady_gap": true,
+        "impact_penetration": true
+      },
+      "samples": 8020,
+      "duration_s": 8.019,
+      "maximum_sample_interval_s": 0.0010000000000012221,
+      "tail_gap_min_max_m": [
+        -7.445927321797496e-07,
+        -7.445927321797496e-07
+      ],
+      "peak_penetration_m": 0.0003859300000004645,
+      "peak_limit_m": 0.0035636994265762978,
+      "steady_limit_m": 0.0005,
+      "impact_speed_m_s": 3.3587944265762975,
+      "step_s": 0.001,
+      "fixture": "frictionless normal guide; no normal support except collision",
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "heavy_fast_stabilizer_tip": {
+      "passed": true,
+      "checks": {
+        "finite": true,
+        "duration": true,
+        "step_sampling": true,
+        "steady_gap": true,
+        "impact_penetration": true
+      },
+      "samples": 8019,
+      "duration_s": 8.018,
+      "maximum_sample_interval_s": 0.0010000000000012221,
+      "tail_gap_min_max_m": [
+        -9.80940219173082e-06,
+        -2.698614325127857e-07
+      ],
+      "peak_penetration_m": 0.0028706099999988646,
+      "peak_limit_m": 0.004578633386628507,
+      "steady_limit_m": 0.0005,
+      "impact_speed_m_s": 4.373728386628507,
+      "step_s": 0.001,
+      "fixture": "frictionless normal guide; no normal support except collision",
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "heavy_fast_stabilizer_side": {
+      "passed": true,
+      "checks": {
+        "finite": true,
+        "duration": true,
+        "step_sampling": true,
+        "steady_gap": true,
+        "impact_penetration": true
+      },
+      "samples": 8020,
+      "duration_s": 8.019,
+      "maximum_sample_interval_s": 0.0010000000000012221,
+      "tail_gap_min_max_m": [
+        -2.7548943230815137e-07,
+        -2.7548943230815137e-07
+      ],
+      "peak_penetration_m": 0.00287060999999892,
+      "peak_limit_m": 0.004578633386628507,
+      "steady_limit_m": 0.0005,
+      "impact_speed_m_s": 4.373728386628507,
+      "step_s": 0.001,
+      "fixture": "frictionless normal guide; no normal support except collision",
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "old_ode4_stabilizer_tip": {
+      "passed": false,
+      "checks": {
+        "finite": true,
+        "duration": true,
+        "step_sampling": true,
+        "steady_gap": false,
+        "impact_penetration": true
+      },
+      "samples": 2019,
+      "duration_s": 8.072000000000001,
+      "maximum_sample_interval_s": 0.004000000000001336,
+      "tail_gap_min_max_m": [
+        -0.005451498911593335,
+        -0.004455518453112407
+      ],
+      "peak_penetration_m": 0.012187359999999738,
+      "peak_limit_m": 0.013713657706305192,
+      "steady_limit_m": 0.0005,
+      "impact_speed_m_s": 3.3587944265762975,
+      "step_s": 0.004,
+      "fixture": "frictionless normal guide; no normal support except collision",
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "old_ode4_stabilizer_side": {
+      "passed": false,
+      "checks": {
+        "finite": true,
+        "duration": true,
+        "step_sampling": true,
+        "steady_gap": false,
+        "impact_penetration": true
+      },
+      "samples": 2018,
+      "duration_s": 8.068,
+      "maximum_sample_interval_s": 0.004000000000001336,
+      "tail_gap_min_max_m": [
+        -0.005459221638738167,
+        -0.004459218447151282
+      ],
+      "peak_penetration_m": 0.012187359999999684,
+      "peak_limit_m": 0.013713657706305192,
+      "steady_limit_m": 0.0005,
+      "impact_speed_m_s": 3.3587944265762975,
+      "step_s": 0.004,
+      "fixture": "frictionless normal guide; no normal support except collision",
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "corrected_ode4_stabilizer_tip": {
+      "passed": true,
+      "checks": {
+        "finite": true,
+        "duration": true,
+        "step_sampling": true,
+        "steady_gap": true,
+        "impact_penetration": true
+      },
+      "samples": 2019,
+      "duration_s": 8.072000000000001,
+      "maximum_sample_interval_s": 0.004000000000001336,
+      "tail_gap_min_max_m": [
+        -0.00015696052987877046,
+        -7.384866513651667e-07
+      ],
+      "peak_penetration_m": 0.012187359999999738,
+      "peak_limit_m": 0.013713657706305192,
+      "steady_limit_m": 0.0005,
+      "impact_speed_m_s": 3.3587944265762975,
+      "step_s": 0.004,
+      "fixture": "frictionless normal guide; no normal support except collision",
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "corrected_ode4_stabilizer_side": {
+      "passed": true,
+      "checks": {
+        "finite": true,
+        "duration": true,
+        "step_sampling": true,
+        "steady_gap": true,
+        "impact_penetration": true
+      },
+      "samples": 2022,
+      "duration_s": 8.084,
+      "maximum_sample_interval_s": 0.004000000000001336,
+      "tail_gap_min_max_m": [
+        -3.716381724999662e-07,
+        -3.716381724999662e-07
+      ],
+      "peak_penetration_m": 0.012187359999999684,
+      "peak_limit_m": 0.013713657706305192,
+      "steady_limit_m": 0.0005,
+      "impact_speed_m_s": 3.3587944265762975,
+      "step_s": 0.004,
+      "fixture": "frictionless normal guide; no normal support except collision",
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "corrected_fcl4_stabilizer_tip": {
+      "passed": false,
+      "checks": {
+        "finite": true,
+        "duration": true,
+        "step_sampling": true,
+        "steady_gap": false,
+        "impact_penetration": true
+      },
+      "samples": 2029,
+      "duration_s": 8.112,
+      "maximum_sample_interval_s": 0.004000000000001336,
+      "tail_gap_min_max_m": [
+        -0.011781099749975078,
+        -0.011724456471314017
+      ],
+      "peak_penetration_m": 0.012187359999999738,
+      "peak_limit_m": 0.013713657706305192,
+      "steady_limit_m": 0.0005,
+      "impact_speed_m_s": 3.3587944265762975,
+      "step_s": 0.004,
+      "fixture": "frictionless normal guide; no normal support except collision",
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "corrected_fcl4_stabilizer_side": {
+      "passed": true,
+      "checks": {
+        "finite": true,
+        "duration": true,
+        "step_sampling": true,
+        "steady_gap": true,
+        "impact_penetration": true
+      },
+      "samples": 2029,
+      "duration_s": 8.112,
+      "maximum_sample_interval_s": 0.004000000000001336,
+      "tail_gap_min_max_m": [
+        -3.712067998956625e-07,
+        -3.712067998956625e-07
+      ],
+      "peak_penetration_m": 0.012187359999999684,
+      "peak_limit_m": 0.013713657706305192,
+      "steady_limit_m": 0.0005,
+      "impact_speed_m_s": 3.3587944265762975,
+      "step_s": 0.004,
+      "fixture": "frictionless normal guide; no normal support except collision",
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "corrected_fcl1_stabilizer_tip": {
+      "passed": true,
+      "checks": {
+        "finite": true,
+        "duration": true,
+        "step_sampling": true,
+        "steady_gap": true,
+        "impact_penetration": true
+      },
+      "samples": 8022,
+      "duration_s": 8.021,
+      "maximum_sample_interval_s": 0.0010000000000012221,
+      "tail_gap_min_max_m": [
+        -7.375341098750376e-07,
+        -7.375341098750376e-07
+      ],
+      "peak_penetration_m": 0.0003859300000005131,
+      "peak_limit_m": 0.0035636994265762978,
+      "steady_limit_m": 0.0005,
+      "impact_speed_m_s": 3.3587944265762975,
+      "step_s": 0.001,
+      "fixture": "frictionless normal guide; no normal support except collision",
+      "rebound_height_exceeds_initial_m": 0.0
+    },
+    "corrected_fcl1_stabilizer_side": {
+      "passed": true,
+      "checks": {
+        "finite": true,
+        "duration": true,
+        "step_sampling": true,
+        "steady_gap": true,
+        "impact_penetration": true
+      },
+      "samples": 8025,
+      "duration_s": 8.024000000000001,
+      "maximum_sample_interval_s": 0.0010000000000012221,
+      "tail_gap_min_max_m": [
+        -7.441970056171199e-07,
+        -7.441970056171199e-07
+      ],
+      "peak_penetration_m": 0.0003859300000004645,
+      "peak_limit_m": 0.0035636994265762978,
+      "steady_limit_m": 0.0005,
+      "impact_speed_m_s": 3.3587944265762975,
+      "step_s": 0.001,
+      "fixture": "frictionless normal guide; no normal support except collision",
+      "rebound_height_exceeds_initial_m": 0.0
+    }
+  }
+}

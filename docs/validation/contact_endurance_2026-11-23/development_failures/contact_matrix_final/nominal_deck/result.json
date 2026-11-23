@@ -1,0 +1,20 @@
+{
+  "deck": {
+    "samples": 20,
+    "final_z_m": 1.6479399,
+    "last_50_z_range_m": null,
+    "expected_contact_surface_range_m": [
+      0.85,
+      1.05
+    ],
+    "passed": false
+  },
+  "physics_backend": {
+    "passed": true,
+    "requirement": "Production UsvPhysics loaded and explicit DART settings read back"
+  },
+  "version_binding": {
+    "passed": true,
+    "requirement": "Runtime inputs, installed binaries and validation sources unchanged"
+  }
+}

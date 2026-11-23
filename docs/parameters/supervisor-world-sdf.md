@@ -102,3 +102,6 @@
 | `/sdf[*]/world[*]/include[*]` | 包含外部模型资源。 |
 | `/sdf[*]/world[*]/include[*]/uri[*]` | 当前资源的 URI 或路径。 |
 | `/sdf[*]/world[*]/include[*]/pose[*]` | 位置与欧拉姿态，依次为 x、y、z（m）及滚转、俯仰、偏航（rad）；参考系见 relative_to。 |
+
+| `/sdf[*]/world[*]/plugin[*]/rigid_contact_erp[*]` | DART 进程级刚体接触误差修正比例，无量纲 (0,1]；采用 0.2，不是材料刚度。 |
+| `/sdf[*]/world[*]/plugin[*]/rigid_contact_max_correction_velocity[*]` | DART 进程级法向穿透回正速度上限，单位 m/s，范围 (0,1]，采用 0.1；不修改碰撞几何或水动力。 |

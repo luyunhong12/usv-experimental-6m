@@ -22,6 +22,9 @@
 #include <usv_physics/RuntimeInertia.hh>
 #include "World.hh"
 #include <dart/dynamics/Skeleton.hpp>
+#include <dart/constraint/ContactConstraint.hpp>
+#include <mutex>
+#include <optional>
 #include <dart/dynamics/BodyNode.hpp>
 #include <dart/dynamics/Inertia.hpp>
 #include <stdexcept>
@@ -3546,6 +3549,46 @@ Physics::Physics() : System(), dataPtr(std::make_unique<PhysicsPrivate>())
 
 //////////////////////////////////////////////////
 
+/** @brief 验证接触回正数值范围；不代表材料力学参数。
+ * @param erp 每步修正比例，范围 (0, 1]。
+ * @param velocity 最大法向回正速度，范围 (0, 1] m/s。
+ * @return 两个参数均有限且在范围内时为 true。
+ */
+bool ValidContactCorrection(double erp, double velocity)
+{
+  return std::isfinite(erp) && std::isfinite(velocity) &&
+         erp > 0 && erp <= 1 && velocity > 0 && velocity <= 1;
+}
+
+/** @brief 配置 DART 进程级接触数值回正；无显式配置时保持上游默认值。
+ * @param sdf 物理插件配置，两个数值必须同时给定且在有效范围内。
+ * @throws std::invalid_argument 非有限/越界设置或同进程的冲突设置。
+ * @note DART 6.13.2 只有静态设置接口，不能冒充逐材料刚度。
+ */
+void ConfigureContactCorrection(const std::shared_ptr<const sdf::Element> &sdf)
+{
+  if (!sdf->HasElement("rigid_contact_erp") &&
+      !sdf->HasElement("rigid_contact_max_correction_velocity")) return;
+  const double erp = sdf->Get<double>("rigid_contact_erp", -1).first;
+  const double velocity = sdf->Get<double>("rigid_contact_max_correction_velocity", -1).first;
+  if (!ValidContactCorrection(erp, velocity))
+    throw std::invalid_argument("Invalid explicit DART contact correction settings");
+  static std::mutex mutex;
+  static std::optional<std::pair<double, double>> configured;
+  const std::lock_guard<std::mutex> lock(mutex);
+  const auto requested = std::make_pair(erp, velocity);
+  if (configured && *configured != requested)
+    throw std::invalid_argument("Conflicting process-wide DART contact settings");
+  configured = requested;
+  dart::constraint::ContactConstraint::setErrorReductionParameter(erp);
+  dart::constraint::ContactConstraint::setMaxErrorReductionVelocity(velocity);
+  gzmsg << "DART rigid contact ERP="
+        << dart::constraint::ContactConstraint::getErrorReductionParameter()
+        << " correction_limit_m_s="
+        << dart::constraint::ContactConstraint::getMaxErrorReductionVelocity()
+        << " (process-wide numerical settings)" << std::endl;
+}
+
 /** @brief 加载物理后端并设置世界与事件接口。
  * @param _entity 当前操作的仿真实体标识。
  * @param _sdf 物理系统的 SDF 配置。
@@ -3599,6 +3642,7 @@ void Physics::Configure(const Entity &_entity,
   }
 
   if(!this->dataPtr->LoadEnginePlugin(pluginLib))return;
+  ConfigureContactCorrection(_sdf);
   this->dataPtr->eventManager = &_eventMgr;
 }
 

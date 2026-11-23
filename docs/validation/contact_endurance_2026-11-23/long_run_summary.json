@@ -1,0 +1,1182 @@
+{
+  "reliability_final": {
+    "passed": true,
+    "count": 7,
+    "fingerprint": "9795ef64c28c2eb5638f18741b2b00599a3f8bbe17072233003d03a445ed2556",
+    "cases": {
+      "endurance_20min": {
+        "passed": true,
+        "runtime_checks": {
+          "startup_ready": true,
+          "completed": true,
+          "no_failure": true,
+          "finite": true,
+          "attitude_bounded": true,
+          "power_limited": true,
+          "energy_balance": true,
+          "fuel_mass_consistent": true,
+          "resistance_dissipative": true,
+          "command_reached_physics": true,
+          "health_command_observed": true,
+          "initial_soc_matches": true,
+          "two_generator_runs": true,
+          "fuel_consumed": true
+        },
+        "summary": {
+          "max_roll_pitch_deg": [
+            1.7231315795962008,
+            1.1074033794269846
+          ],
+          "soc_start_end": [
+            0.8999999988203634,
+            0.8621654827114282
+          ],
+          "temperature_max_c": 25.148480381625056,
+          "fuel_consumed_l": 0.052112767731099296,
+          "sim_end": 1201.126
+        },
+        "quality": null
+      },
+      "sensor_dropout": {
+        "passed": true,
+        "runtime_checks": {
+          "startup_ready": true,
+          "completed": true,
+          "no_failure": true,
+          "finite": true,
+          "attitude_bounded": true,
+          "power_limited": true,
+          "energy_balance": true,
+          "fuel_mass_consistent": true,
+          "resistance_dissipative": true,
+          "command_reached_physics": true,
+          "health_command_observed": true,
+          "initial_soc_matches": true,
+          "dropout_paused_and_resumed": true,
+          "dropout_stops_throttle": true,
+          "recovers_after_dropout": true,
+          "health_reports_dropout": true
+        },
+        "summary": {
+          "max_roll_pitch_deg": [
+            0.42828373982893303,
+            0.6865531144930607
+          ],
+          "soc_start_end": [
+            0.8999999990860809,
+            0.8993273272553592
+          ],
+          "temperature_max_c": 25.002474340256825,
+          "fuel_consumed_l": 0.0,
+          "sim_end": 51.158
+        },
+        "quality": null
+      },
+      "low_soc": {
+        "passed": true,
+        "runtime_checks": {
+          "startup_ready": true,
+          "completed": true,
+          "no_failure": true,
+          "finite": true,
+          "attitude_bounded": true,
+          "power_limited": true,
+          "energy_balance": true,
+          "fuel_mass_consistent": true,
+          "resistance_dissipative": true,
+          "command_reached_physics": true,
+          "health_command_observed": true,
+          "initial_soc_matches": true,
+          "soc_derating": true
+        },
+        "summary": {
+          "max_roll_pitch_deg": [
+            2.3177617962361183,
+            0.7976408926621095
+          ],
+          "soc_start_end": [
+            0.1549999990330124,
+            0.11680524402246165
+          ],
+          "temperature_max_c": 26.06265919270248,
+          "fuel_consumed_l": 0.0,
+          "sim_end": 181.114
+        },
+        "quality": null
+      },
+      "hot": {
+        "passed": true,
+        "runtime_checks": {
+          "startup_ready": true,
+          "completed": true,
+          "no_failure": true,
+          "finite": true,
+          "attitude_bounded": true,
+          "power_limited": true,
+          "energy_balance": true,
+          "fuel_mass_consistent": true,
+          "resistance_dissipative": true,
+          "command_reached_physics": true,
+          "health_command_observed": true,
+          "initial_soc_matches": true,
+          "thermal_derating": true
+        },
+        "summary": {
+          "max_roll_pitch_deg": [
+            2.3174097419398265,
+            0.7973027710830646
+          ],
+          "soc_start_end": [
+            0.8999999990860809,
+            0.8607272318904878
+          ],
+          "temperature_max_c": 45.821256645816646,
+          "fuel_consumed_l": 0.0,
+          "sim_end": 181.114
+        },
+        "quality": null
+      },
+      "fuel_reserve": {
+        "passed": true,
+        "runtime_checks": {
+          "startup_ready": true,
+          "completed": true,
+          "no_failure": true,
+          "finite": true,
+          "attitude_bounded": true,
+          "power_limited": true,
+          "energy_balance": true,
+          "fuel_mass_consistent": true,
+          "resistance_dissipative": true,
+          "command_reached_physics": true,
+          "health_command_observed": true,
+          "initial_soc_matches": true,
+          "fuel_reserve_fault": true
+        },
+        "summary": {
+          "max_roll_pitch_deg": [
+            0.7801622012371516,
+            0.7686760002332425
+          ],
+          "soc_start_end": [
+            0.8999999990860809,
+            0.8985176390760672
+          ],
+          "temperature_max_c": 25.003190482503786,
+          "fuel_consumed_l": 0.004999999999999893,
+          "sim_end": 120.946
+        },
+        "quality": null
+      },
+      "clock_independent": {
+        "passed": true,
+        "runtime_checks": {
+          "startup_ready": true,
+          "completed": true,
+          "no_failure": true,
+          "finite": true,
+          "attitude_bounded": true,
+          "power_limited": true,
+          "energy_balance": true,
+          "fuel_mass_consistent": true,
+          "resistance_dissipative": true,
+          "command_reached_physics": true,
+          "health_command_observed": true,
+          "initial_soc_matches": true,
+          "moves_without_ros_clock_bridge": true
+        },
+        "summary": {
+          "max_roll_pitch_deg": [
+            0.42787767941846694,
+            0.6873941342921106
+          ],
+          "soc_start_end": [
+            0.8999999990860809,
+            0.8996375225375126
+          ],
+          "temperature_max_c": 25.00147538994059,
+          "fuel_consumed_l": 0.0,
+          "sim_end": 21.277
+        },
+        "quality": null
+      },
+      "command_dropout": {
+        "passed": true,
+        "runtime_checks": {
+          "startup_ready": true,
+          "completed": true,
+          "no_failure": true,
+          "finite": true,
+          "attitude_bounded": true,
+          "power_limited": true,
+          "energy_balance": true,
+          "fuel_mass_consistent": true,
+          "resistance_dissipative": true,
+          "command_reached_physics": true,
+          "health_command_observed": true,
+          "initial_soc_matches": true,
+          "command_timeout_stops_throttle": true,
+          "command_resumes_after_gap": true
+        },
+        "summary": {
+          "max_roll_pitch_deg": [
+            0.15771941014656554,
+            0.22423958795071997
+          ],
+          "soc_start_end": [
+            0.8999999990860809,
+            0.8991172919638369
+          ],
+          "temperature_max_c": 25.002713701020294,
+          "fuel_consumed_l": 0.0,
+          "sim_end": 50.956
+        },
+        "quality": null
+      }
+    },
+    "comparisons": {}
+  },
+  "maneuvers_final": {
+    "passed": true,
+    "count": 11,
+    "fingerprint": "e0f2eb7d7cde943aca2a99424d33adbed739a64f81a2f85241d564f2ee6812cf",
+    "cases": {
+      "recovery_40_right": {
+        "passed": true,
+        "runtime_checks": {
+          "startup_ready": true,
+          "completed": true,
+          "no_failure": true,
+          "finite": true,
+          "attitude_bounded": true,
+          "power_limited": true,
+          "energy_balance": true,
+          "fuel_mass_consistent": true,
+          "resistance_dissipative": true,
+          "command_reached_physics": true,
+          "health_command_observed": true,
+          "initial_soc_matches": true
+        },
+        "summary": {
+          "max_roll_pitch_deg": [
+            0.1823097562064525,
+            0.08454123203960712
+          ],
+          "soc_start_end": [
+            0.8999999990860809,
+            0.8980762815579485
+          ],
+          "temperature_max_c": 25.002970497824126,
+          "fuel_consumed_l": 0.0,
+          "sim_end": 163.143
+        },
+        "quality": {
+          "passed": true,
+          "runtime_passed": true,
+          "checks": {
+            "servo_rate": true,
+            "reference_rate": true,
+            "runtime": true,
+            "evidence_bound": true,
+            "direct_only": true,
+            "attitude": true,
+            "approach_throttle_tracks": true,
+            "approach_servo_tracks": true,
+            "pulse_throttle_tracks": true,
+            "pulse_servo_tracks": true,
+            "disturbance_recover_throttle_tracks": true,
+            "disturbance_recover_servo_tracks": true,
+            "disturbance_recovery": true
+          },
+          "metrics": {
+            "servo": {
+              "actual_peak_rad_s": 0.15258203559080366,
+              "actual_limit_rad_s": 0.2,
+              "reference_peak_rad_s": 0.14964771307916067,
+              "reference_limit_rad_s": 0.15
+            },
+            "approach": {
+              "duration_s": 100.059,
+              "tail_surge_m_s": -1.1128050217480892,
+              "tail_speed_std_m_s": 1.99740350826246e-12,
+              "tail_yaw_deg_s": 0.0022632581101699038,
+              "heading_change_deg": 0.237737914981121,
+              "distance_m": 106.71806130458808
+            },
+            "pulse": {
+              "duration_s": 2.0180000000000007,
+              "tail_surge_m_s": -1.1124478061300425,
+              "tail_speed_std_m_s": 0.00033571494577734785,
+              "tail_yaw_deg_s": -0.5160822642171787,
+              "heading_change_deg": -1.0847990620899008,
+              "distance_m": 2.2449356721278257
+            },
+            "disturbance_recover": {
+              "duration_s": 60.057,
+              "tail_surge_m_s": -1.1128050220898387,
+              "tail_speed_std_m_s": 3.6605964735664304e-10,
+              "tail_yaw_deg_s": 0.0022556642890020386,
+              "heading_change_deg": -5.104048253870532,
+              "distance_m": 66.82769725991793
+            },
+            "reverse_tasks": {
+              "disturbance": {
+                "extra_heading_deg": 5.171388495843605,
+                "settling_time_s": 12.108000000000004,
+                "peak_yaw_deg_s": 1.5327264087402828,
+                "reference_yaw_deg_s": 0.0022632581101699038,
+                "tail_yaw_deg_s": 0.0022556642890020386
+              }
+            }
+          }
+        }
+      },
+      "recovery_40_left": {
+        "passed": true,
+        "runtime_checks": {
+          "startup_ready": true,
+          "completed": true,
+          "no_failure": true,
+          "finite": true,
+          "attitude_bounded": true,
+          "power_limited": true,
+          "energy_balance": true,
+          "fuel_mass_consistent": true,
+          "resistance_dissipative": true,
+          "command_reached_physics": true,
+          "health_command_observed": true,
+          "initial_soc_matches": true
+        },
+        "summary": {
+          "max_roll_pitch_deg": [
+            0.09513466333802328,
+            0.08473805126455132
+          ],
+          "soc_start_end": [
+            0.8999999990860809,
+            0.8980760900433112
+          ],
+          "temperature_max_c": 25.002970666793875,
+          "fuel_consumed_l": 0.0,
+          "sim_end": 163.244
+        },
+        "quality": {
+          "passed": true,
+          "runtime_passed": true,
+          "checks": {
+            "servo_rate": true,
+            "reference_rate": true,
+            "runtime": true,
+            "evidence_bound": true,
+            "direct_only": true,
+            "attitude": true,
+            "approach_throttle_tracks": true,
+            "approach_servo_tracks": true,
+            "pulse_throttle_tracks": true,
+            "pulse_servo_tracks": true,
+            "disturbance_recover_throttle_tracks": true,
+            "disturbance_recover_servo_tracks": true,
+            "disturbance_recovery": true
+          },
+          "metrics": {
+            "servo": {
+              "actual_peak_rad_s": 0.15244398993336697,
+              "actual_limit_rad_s": 0.2,
+              "reference_peak_rad_s": 0.14910891089108816,
+              "reference_limit_rad_s": 0.15
+            },
+            "approach": {
+              "duration_s": 100.059,
+              "tail_surge_m_s": -1.1128050217480847,
+              "tail_speed_std_m_s": 1.9997606499634057e-12,
+              "tail_yaw_deg_s": 0.002263258110082649,
+              "heading_change_deg": 0.2377990211815195,
+              "distance_m": 106.74810707103804
+            },
+            "pulse": {
+              "duration_s": 2.0180000000000007,
+              "tail_surge_m_s": -1.1124616458094074,
+              "tail_speed_std_m_s": 0.00033102027389009513,
+              "tail_yaw_deg_s": 0.5204337803351283,
+              "heading_change_deg": 1.0936983564568021,
+              "distance_m": 2.244963746922069
+            },
+            "disturbance_recover": {
+              "duration_s": 60.057,
+              "tail_surge_m_s": -1.1128050213315575,
+              "tail_speed_std_m_s": 4.0182606928261476e-10,
+              "tail_yaw_deg_s": 0.002270800750830655,
+              "heading_change_deg": 5.433008830829958,
+              "distance_m": 66.82754871970923
+            },
+            "reverse_tasks": {
+              "disturbance": {
+                "extra_heading_deg": 5.433008830829957,
+                "settling_time_s": 12.108000000000004,
+                "peak_yaw_deg_s": 1.5469580973766472,
+                "reference_yaw_deg_s": 0.002263258110082649,
+                "tail_yaw_deg_s": 0.002270800750830655
+              }
+            }
+          }
+        }
+      },
+      "recovery_60_right": {
+        "passed": true,
+        "runtime_checks": {
+          "startup_ready": true,
+          "completed": true,
+          "no_failure": true,
+          "finite": true,
+          "attitude_bounded": true,
+          "power_limited": true,
+          "energy_balance": true,
+          "fuel_mass_consistent": true,
+          "resistance_dissipative": true,
+          "command_reached_physics": true,
+          "health_command_observed": true,
+          "initial_soc_matches": true
+        },
+        "summary": {
+          "max_roll_pitch_deg": [
+            0.4709516051199429,
+            0.1851141070015955
+          ],
+          "soc_start_end": [
+            0.8999999990860809,
+            0.8928936633177974
+          ],
+          "temperature_max_c": 25.04058508724812,
+          "fuel_consumed_l": 0.0,
+          "sim_end": 163.143
+        },
+        "quality": {
+          "passed": true,
+          "runtime_passed": true,
+          "checks": {
+            "servo_rate": true,
+            "reference_rate": true,
+            "runtime": true,
+            "evidence_bound": true,
+            "direct_only": true,
+            "attitude": true,
+            "approach_throttle_tracks": true,
+            "approach_servo_tracks": true,
+            "pulse_throttle_tracks": true,
+            "pulse_servo_tracks": true,
+            "disturbance_recover_throttle_tracks": true,
+            "disturbance_recover_servo_tracks": true,
+            "disturbance_recovery": true
+          },
+          "metrics": {
+            "servo": {
+              "actual_peak_rad_s": 0.15298837737758506,
+              "actual_limit_rad_s": 0.2,
+              "reference_peak_rad_s": 0.14948993269429722,
+              "reference_limit_rad_s": 0.15
+            },
+            "approach": {
+              "duration_s": 100.059,
+              "tail_surge_m_s": -1.8754930703033748,
+              "tail_speed_std_m_s": 2.518483299788965e-12,
+              "tail_yaw_deg_s": 0.01716059074911417,
+              "heading_change_deg": 1.6668955759901345,
+              "distance_m": 181.96002847015484
+            },
+            "pulse": {
+              "duration_s": 2.0180000000000007,
+              "tail_surge_m_s": -1.8746308046645876,
+              "tail_speed_std_m_s": 0.0008049909801403384,
+              "tail_yaw_deg_s": -1.2118266854517101,
+              "heading_change_deg": -2.5285449721023707,
+              "distance_m": 3.783116137454314
+            },
+            "disturbance_recover": {
+              "duration_s": 60.057,
+              "tail_surge_m_s": -1.8754931055802297,
+              "tail_speed_std_m_s": 2.2144001886166455e-08,
+              "tail_yaw_deg_s": 0.016799873586499762,
+              "heading_change_deg": -10.866178614038201,
+              "distance_m": 112.62668553207833
+            },
+            "reverse_tasks": {
+              "disturbance": {
+                "extra_heading_deg": 11.329612097946738,
+                "settling_time_s": 19.575000000000003,
+                "peak_yaw_deg_s": 3.4051780204969937,
+                "reference_yaw_deg_s": 0.01716059074911417,
+                "tail_yaw_deg_s": 0.016799873586499762
+              }
+            }
+          }
+        }
+      },
+      "recovery_60_left": {
+        "passed": true,
+        "runtime_checks": {
+          "startup_ready": true,
+          "completed": true,
+          "no_failure": true,
+          "finite": true,
+          "attitude_bounded": true,
+          "power_limited": true,
+          "energy_balance": true,
+          "fuel_mass_consistent": true,
+          "resistance_dissipative": true,
+          "command_reached_physics": true,
+          "health_command_observed": true,
+          "initial_soc_matches": true
+        },
+        "summary": {
+          "max_roll_pitch_deg": [
+            0.23295955622945697,
+            0.18549079705779464
+          ],
+          "soc_start_end": [
+            0.8999999990860809,
+            0.8928968796207607
+          ],
+          "temperature_max_c": 25.040568014841863,
+          "fuel_consumed_l": 0.0,
+          "sim_end": 162.84
+        },
+        "quality": {
+          "passed": true,
+          "runtime_passed": true,
+          "checks": {
+            "servo_rate": true,
+            "reference_rate": true,
+            "runtime": true,
+            "evidence_bound": true,
+            "direct_only": true,
+            "attitude": true,
+            "approach_throttle_tracks": true,
+            "approach_servo_tracks": true,
+            "pulse_throttle_tracks": true,
+            "pulse_servo_tracks": true,
+            "disturbance_recover_throttle_tracks": true,
+            "disturbance_recover_servo_tracks": true,
+            "disturbance_recovery": true
+          },
+          "metrics": {
+            "servo": {
+              "actual_peak_rad_s": 0.1528233199036492,
+              "actual_limit_rad_s": 0.2,
+              "reference_peak_rad_s": 0.14953828420477286,
+              "reference_limit_rad_s": 0.15
+            },
+            "approach": {
+              "duration_s": 100.058,
+              "tail_surge_m_s": -1.8754930703034138,
+              "tail_speed_std_m_s": 2.589819459161075e-12,
+              "tail_yaw_deg_s": 0.017160590674377425,
+              "heading_change_deg": 1.665762981948784,
+              "distance_m": 181.83624583898165
+            },
+            "pulse": {
+              "duration_s": 2.0180000000000007,
+              "tail_surge_m_s": -1.8746698377419806,
+              "tail_speed_std_m_s": 0.0007939212529221521,
+              "tail_yaw_deg_s": 1.2487638379242338,
+              "heading_change_deg": 2.60109518462928,
+              "distance_m": 3.7832118074742764
+            },
+            "disturbance_recover": {
+              "duration_s": 60.057,
+              "tail_surge_m_s": -1.8754930384608293,
+              "tail_speed_std_m_s": 2.0756953152898073e-08,
+              "tail_yaw_deg_s": 0.017470586097850592,
+              "heading_change_deg": 12.766671989578455,
+              "distance_m": 112.62600788195599
+            },
+            "reverse_tasks": {
+              "disturbance": {
+                "extra_heading_deg": 12.766671989578455,
+                "settling_time_s": 18.97,
+                "peak_yaw_deg_s": 3.4492400693566267,
+                "reference_yaw_deg_s": 0.017160590674377425,
+                "tail_yaw_deg_s": 0.017470586097850592
+              }
+            }
+          }
+        }
+      },
+      "neutral_100": {
+        "passed": true,
+        "runtime_checks": {
+          "startup_ready": true,
+          "completed": true,
+          "no_failure": true,
+          "finite": true,
+          "attitude_bounded": true,
+          "power_limited": true,
+          "energy_balance": true,
+          "fuel_mass_consistent": true,
+          "resistance_dissipative": true,
+          "command_reached_physics": true,
+          "health_command_observed": true,
+          "initial_soc_matches": true
+        },
+        "summary": {
+          "max_roll_pitch_deg": [
+            0.67219752855267,
+            0.7963085674215985
+          ],
+          "soc_start_end": [
+            0.8999999990860809,
+            0.8592068591779632
+          ],
+          "temperature_max_c": 26.203052414947997,
+          "fuel_consumed_l": 0.0,
+          "sim_end": 181.013
+        },
+        "quality": {
+          "passed": true,
+          "runtime_passed": true,
+          "checks": {
+            "servo_rate": true,
+            "reference_rate": true,
+            "runtime": true,
+            "evidence_bound": true,
+            "direct_only": true,
+            "attitude": true,
+            "neutral_throttle_tracks": true,
+            "neutral_servo_tracks": true,
+            "neutral_yaw": true,
+            "neutral_steady_speed": true,
+            "neutral_forward": true
+          },
+          "metrics": {
+            "servo": {
+              "actual_peak_rad_s": 0.004317446115668918,
+              "actual_limit_rad_s": 0.2,
+              "reference_peak_rad_s": 0.0,
+              "reference_limit_rad_s": 0.15
+            },
+            "neutral": {
+              "duration_s": 180.00400000000002,
+              "tail_surge_m_s": 4.1741349649703885,
+              "tail_speed_std_m_s": 4.481361239806481e-14,
+              "tail_yaw_deg_s": 0.06246154833685242,
+              "heading_change_deg": 10.91463690930055,
+              "distance_m": 743.8590154435924
+            }
+          }
+        }
+      },
+      "loaded_low_fuel": {
+        "passed": true,
+        "runtime_checks": {
+          "startup_ready": true,
+          "completed": true,
+          "no_failure": true,
+          "finite": true,
+          "attitude_bounded": true,
+          "power_limited": true,
+          "energy_balance": true,
+          "fuel_mass_consistent": true,
+          "resistance_dissipative": true,
+          "command_reached_physics": true,
+          "health_command_observed": true,
+          "initial_soc_matches": true
+        },
+        "summary": {
+          "max_roll_pitch_deg": [
+            0.6788959374851743,
+            0.551276754731307
+          ],
+          "soc_start_end": [
+            0.8999999990860809,
+            0.8728924971907802
+          ],
+          "temperature_max_c": 25.801024440769165,
+          "fuel_consumed_l": 0.0,
+          "sim_end": 120.946
+        },
+        "quality": {
+          "passed": true,
+          "runtime_passed": true,
+          "checks": {
+            "servo_rate": true,
+            "reference_rate": true,
+            "runtime": true,
+            "evidence_bound": true,
+            "direct_only": true,
+            "attitude": true,
+            "neutral_throttle_tracks": true,
+            "neutral_servo_tracks": true,
+            "neutral_yaw": true,
+            "neutral_steady_speed": true,
+            "neutral_forward": true
+          },
+          "metrics": {
+            "servo": {
+              "actual_peak_rad_s": 0.004341092488414393,
+              "actual_limit_rad_s": 0.2,
+              "reference_peak_rad_s": 0.0,
+              "reference_limit_rad_s": 0.15
+            },
+            "neutral": {
+              "duration_s": 120.038,
+              "tail_surge_m_s": 3.9686416074183604,
+              "tail_speed_std_m_s": 5.042668711140957e-14,
+              "tail_yaw_deg_s": 0.06611678560920722,
+              "heading_change_deg": 7.697453769108624,
+              "distance_m": 468.85635746073956
+            }
+          }
+        }
+      },
+      "turn_055_left": {
+        "passed": true,
+        "runtime_checks": {
+          "startup_ready": true,
+          "completed": true,
+          "no_failure": true,
+          "finite": true,
+          "attitude_bounded": true,
+          "power_limited": true,
+          "energy_balance": true,
+          "fuel_mass_consistent": true,
+          "resistance_dissipative": true,
+          "command_reached_physics": true,
+          "health_command_observed": true,
+          "initial_soc_matches": true,
+          "turn_direction": true
+        },
+        "summary": {
+          "max_roll_pitch_deg": [
+            1.6244841274575348,
+            0.23705575384709301
+          ],
+          "soc_start_end": [
+            0.8999999990860809,
+            0.8975073181839595
+          ],
+          "temperature_max_c": 25.01059756716256,
+          "fuel_consumed_l": 0.0,
+          "sim_end": 111.259
+        },
+        "quality": {
+          "passed": true,
+          "runtime_passed": true,
+          "checks": {
+            "servo_rate": true,
+            "reference_rate": true,
+            "runtime": true,
+            "evidence_bound": true,
+            "direct_only": true,
+            "attitude": true,
+            "approach_throttle_tracks": true,
+            "approach_servo_tracks": true,
+            "turn_throttle_tracks": true,
+            "turn_servo_tracks": true,
+            "turn_direction": true,
+            "turn_radius": true,
+            "turn_half_circle": true,
+            "turn_steady_speed": true,
+            "coast_throttle_tracks": true,
+            "coast_servo_tracks": true,
+            "coast_stop": true
+          },
+          "metrics": {
+            "servo": {
+              "actual_peak_rad_s": 0.15525041395267725,
+              "actual_limit_rad_s": 0.2,
+              "reference_peak_rad_s": 0.1500000000000126,
+              "reference_limit_rad_s": 0.15
+            },
+            "approach": {
+              "duration_s": 25.097,
+              "tail_surge_m_s": 2.130224087315814,
+              "tail_speed_std_m_s": 0.0009777678041548328,
+              "tail_yaw_deg_s": 0.008408220332224634,
+              "heading_change_deg": 0.21546459864458745,
+              "distance_m": 47.70873746690584
+            },
+            "turn": {
+              "duration_s": 50.038000000000004,
+              "tail_surge_m_s": 1.8286597397609512,
+              "tail_speed_std_m_s": 2.4685372031147508e-08,
+              "tail_yaw_deg_s": 13.840589181835028,
+              "heading_change_deg": 664.8472099352497,
+              "distance_m": 94.85410171161533,
+              "radius_m": 7.763014315266854,
+              "advance_90_m": 14.038220002618338,
+              "tactical_diameter_m": 15.662965891509948
+            },
+            "coast": {
+              "duration_s": 35.013999999999996,
+              "tail_surge_m_s": 0.07261445618462736,
+              "tail_speed_std_m_s": 0.025797447770336435,
+              "tail_yaw_deg_s": 0.003486492482268017,
+              "heading_change_deg": 25.61393419911531,
+              "distance_m": 11.150562402506639,
+              "stop_time_s": 22.905,
+              "stop_distance_m": 10.386838968091638,
+              "surge_at_detection_m_s": 0.09992702702412098,
+              "sway_at_detection_m_s": -0.0002410083610019523,
+              "definition": "horizontal speed <0.1 m/s sustained for 1 s"
+            }
+          }
+        }
+      },
+      "turn_055_right": {
+        "passed": true,
+        "runtime_checks": {
+          "startup_ready": true,
+          "completed": true,
+          "no_failure": true,
+          "finite": true,
+          "attitude_bounded": true,
+          "power_limited": true,
+          "energy_balance": true,
+          "fuel_mass_consistent": true,
+          "resistance_dissipative": true,
+          "command_reached_physics": true,
+          "health_command_observed": true,
+          "initial_soc_matches": true,
+          "turn_direction": true
+        },
+        "summary": {
+          "max_roll_pitch_deg": [
+            1.447838779985873,
+            0.24933019523735492
+          ],
+          "soc_start_end": [
+            0.8999999990860809,
+            0.8975075632920986
+          ],
+          "temperature_max_c": 25.010597680194465,
+          "fuel_consumed_l": 0.0,
+          "sim_end": 110.956
+        },
+        "quality": {
+          "passed": true,
+          "runtime_passed": true,
+          "checks": {
+            "servo_rate": true,
+            "reference_rate": true,
+            "runtime": true,
+            "evidence_bound": true,
+            "direct_only": true,
+            "attitude": true,
+            "approach_throttle_tracks": true,
+            "approach_servo_tracks": true,
+            "turn_throttle_tracks": true,
+            "turn_servo_tracks": true,
+            "turn_direction": true,
+            "turn_radius": true,
+            "turn_half_circle": true,
+            "turn_steady_speed": true,
+            "coast_throttle_tracks": true,
+            "coast_servo_tracks": true,
+            "coast_stop": true
+          },
+          "metrics": {
+            "servo": {
+              "actual_peak_rad_s": 0.15435521604968108,
+              "actual_limit_rad_s": 0.2,
+              "reference_peak_rad_s": 0.1500000000000126,
+              "reference_limit_rad_s": 0.15
+            },
+            "approach": {
+              "duration_s": 25.098,
+              "tail_surge_m_s": 2.1302221149555347,
+              "tail_speed_std_m_s": 0.0009819194079660114,
+              "tail_yaw_deg_s": 0.008407974523030323,
+              "heading_change_deg": 0.21543035604119554,
+              "distance_m": 47.700214690834386
+            },
+            "turn": {
+              "duration_s": 50.037,
+              "tail_surge_m_s": 1.829390079205879,
+              "tail_speed_std_m_s": 2.694528520225448e-08,
+              "tail_yaw_deg_s": -13.813004644124561,
+              "heading_change_deg": -663.618893421139,
+              "distance_m": 94.87953985716084,
+              "radius_m": 7.7813302981820405,
+              "advance_90_m": 14.038462133155845,
+              "tactical_diameter_m": 15.687380173934754
+            },
+            "coast": {
+              "duration_s": 35.013000000000005,
+              "tail_surge_m_s": 0.07268931274626647,
+              "tail_speed_std_m_s": 0.025826894615301136,
+              "tail_yaw_deg_s": -0.003484674170916942,
+              "heading_change_deg": -25.64962279368942,
+              "distance_m": 11.169788334063828,
+              "stop_time_s": 23.006,
+              "stop_distance_m": 10.415433980755445,
+              "surge_at_detection_m_s": 0.09919123688681127,
+              "sway_at_detection_m_s": 0.00021561688881259825,
+              "definition": "horizontal speed <0.1 m/s sustained for 1 s"
+            }
+          }
+        }
+      },
+      "zigzag_10_10": {
+        "passed": true,
+        "runtime_checks": {
+          "startup_ready": true,
+          "completed": true,
+          "no_failure": true,
+          "finite": true,
+          "attitude_bounded": true,
+          "power_limited": true,
+          "energy_balance": true,
+          "fuel_mass_consistent": true,
+          "resistance_dissipative": true,
+          "command_reached_physics": true,
+          "health_command_observed": true,
+          "initial_soc_matches": true
+        },
+        "summary": {
+          "max_roll_pitch_deg": [
+            1.0367913574926864,
+            0.22296433533572071
+          ],
+          "soc_start_end": [
+            0.8999999990860809,
+            0.8968882256239128
+          ],
+          "temperature_max_c": 25.013404089054553,
+          "fuel_consumed_l": 0.0,
+          "sim_end": 95.619
+        },
+        "quality": {
+          "passed": true,
+          "runtime_passed": true,
+          "checks": {
+            "servo_rate": true,
+            "reference_rate": true,
+            "runtime": true,
+            "evidence_bound": true,
+            "direct_only": true,
+            "attitude": true,
+            "approach_throttle_tracks": true,
+            "approach_servo_tracks": true,
+            "execute_1_throttle_tracks": true,
+            "execute_2_throttle_tracks": true,
+            "execute_3_throttle_tracks": true,
+            "execute_4_throttle_tracks": true,
+            "recover_throttle_tracks": true,
+            "recover_servo_tracks": true,
+            "recover_yaw": true,
+            "recover_steady_speed": true,
+            "recover_forward": true,
+            "recover_return_heading": true,
+            "recover_return_time": true,
+            "execute_1_trigger": true,
+            "execute_2_trigger": true,
+            "execute_3_trigger": true,
+            "execute_4_trigger": true,
+            "zigzag_overshoots": true
+          },
+          "metrics": {
+            "servo": {
+              "actual_peak_rad_s": 0.1519401176699484,
+              "actual_limit_rad_s": 0.2,
+              "reference_peak_rad_s": 0.15000000000000488,
+              "reference_limit_rad_s": 0.15
+            },
+            "approach": {
+              "duration_s": 25.098,
+              "tail_surge_m_s": 2.1301991251962056,
+              "tail_speed_std_m_s": 0.0010304306963678203,
+              "tail_yaw_deg_s": 0.008405068891681872,
+              "heading_change_deg": 0.21486543433797436,
+              "distance_m": 47.55958821364699
+            },
+            "execute_1": {
+              "duration_s": 2.817,
+              "tail_surge_m_s": 2.11882070830536,
+              "tail_speed_std_m_s": 0.013760909592098329,
+              "tail_yaw_deg_s": 3.548510764151313,
+              "heading_change_deg": 10.132925730390403,
+              "distance_m": 5.978327811834966
+            },
+            "execute_2": {
+              "duration_s": 7.243000000000002,
+              "tail_surge_m_s": 2.075283240671001,
+              "tail_speed_std_m_s": 0.02226927325513717,
+              "tail_yaw_deg_s": -3.7900408633398923,
+              "heading_change_deg": -20.972641645981035,
+              "distance_m": 15.129999121611373
+            },
+            "execute_3": {
+              "duration_s": 7.344000000000001,
+              "tail_surge_m_s": 2.0626756233751924,
+              "tail_speed_std_m_s": 0.024155983710142537,
+              "tail_yaw_deg_s": 3.869117022448134,
+              "heading_change_deg": 21.535702662081746,
+              "distance_m": 15.26082433930865
+            },
+            "execute_4": {
+              "duration_s": 7.244,
+              "tail_surge_m_s": 2.0626874247388356,
+              "tail_speed_std_m_s": 0.024033351869453948,
+              "tail_yaw_deg_s": -3.776539272804485,
+              "heading_change_deg": -20.71520606482493,
+              "distance_m": 15.05223265803102
+            },
+            "recover": {
+              "duration_s": 45.065,
+              "tail_surge_m_s": 2.130694263752284,
+              "tail_speed_std_m_s": 1.318067895344775e-08,
+              "tail_yaw_deg_s": 0.008568247646437457,
+              "heading_change_deg": -17.749586636354543,
+              "distance_m": 95.80654163794068,
+              "extra_heading_deg": 17.99040966831417,
+              "settling_time_s": 6.942,
+              "peak_yaw_deg_s": 8.374177243924224
+            },
+            "zigzag_overshoots_deg": [
+              13.20329583220867,
+              14.192476874140262,
+              14.024533578697316
+            ]
+          }
+        }
+      },
+      "reverse_60_long": {
+        "passed": true,
+        "runtime_checks": {
+          "startup_ready": true,
+          "completed": true,
+          "no_failure": true,
+          "finite": true,
+          "attitude_bounded": true,
+          "power_limited": true,
+          "energy_balance": true,
+          "fuel_mass_consistent": true,
+          "resistance_dissipative": true,
+          "command_reached_physics": true,
+          "health_command_observed": true,
+          "initial_soc_matches": true,
+          "reverses": true
+        },
+        "summary": {
+          "max_roll_pitch_deg": [
+            0.23291963516846714,
+            0.18537385662852704
+          ],
+          "soc_start_end": [
+            0.8999999990860809,
+            0.8735585479765337
+          ],
+          "temperature_max_c": 25.147805796178698,
+          "fuel_consumed_l": 0.0,
+          "sim_end": 600.811
+        },
+        "quality": {
+          "passed": true,
+          "runtime_passed": true,
+          "checks": {
+            "servo_rate": true,
+            "reference_rate": true,
+            "runtime": true,
+            "evidence_bound": true,
+            "direct_only": true,
+            "attitude": true,
+            "reverse_throttle_tracks": true,
+            "reverse_servo_tracks": true,
+            "reverse_astern": true,
+            "reverse_directional_quality": true
+          },
+          "metrics": {
+            "servo": {
+              "actual_peak_rad_s": 0.0006456288048912685,
+              "actual_limit_rad_s": 0.2,
+              "reference_peak_rad_s": 0.0,
+              "reference_limit_rad_s": 0.15
+            },
+            "reverse": {
+              "duration_s": 600.003,
+              "tail_surge_m_s": -1.8754930703025672,
+              "tail_speed_std_m_s": 2.6405400346470072e-14,
+              "tail_yaw_deg_s": 0.017160598101730876,
+              "heading_change_deg": 10.245341272817303,
+              "distance_m": 1119.5044737983787
+            }
+          }
+        }
+      },
+      "forward_100_long": {
+        "passed": true,
+        "runtime_checks": {
+          "startup_ready": true,
+          "completed": true,
+          "no_failure": true,
+          "finite": true,
+          "attitude_bounded": true,
+          "power_limited": true,
+          "energy_balance": true,
+          "fuel_mass_consistent": true,
+          "resistance_dissipative": true,
+          "command_reached_physics": true,
+          "health_command_observed": true,
+          "initial_soc_matches": true
+        },
+        "summary": {
+          "max_roll_pitch_deg": [
+            0.6721540146941736,
+            0.7955123799583109
+          ],
+          "soc_start_end": [
+            0.8999999990860809,
+            0.76305741486112
+          ],
+          "temperature_max_c": 28.964731317035366,
+          "fuel_consumed_l": 0.0,
+          "sim_end": 600.912
+        },
+        "quality": {
+          "passed": true,
+          "runtime_passed": true,
+          "checks": {
+            "servo_rate": true,
+            "reference_rate": true,
+            "runtime": true,
+            "evidence_bound": true,
+            "direct_only": true,
+            "attitude": true,
+            "neutral_throttle_tracks": true,
+            "neutral_servo_tracks": true,
+            "neutral_yaw": true,
+            "neutral_steady_speed": true,
+            "neutral_forward": true
+          },
+          "metrics": {
+            "servo": {
+              "actual_peak_rad_s": 0.004349091459830431,
+              "actual_limit_rad_s": 0.2,
+              "reference_peak_rad_s": 0.0,
+              "reference_limit_rad_s": 0.15
+            },
+            "neutral": {
+              "duration_s": 600.003,
+              "tail_surge_m_s": 4.174134964970388,
+              "tail_speed_std_m_s": 4.512313869504042e-14,
+              "tail_yaw_deg_s": 0.062461548336983704,
+              "heading_change_deg": 37.149049362902474,
+              "distance_m": 2497.0398836907734
+            }
+          }
+        }
+      }
+    },
+    "comparisons": {
+      "turn_055": {
+        "left_radius_m": 7.763014315266854,
+        "right_radius_m": 7.7813302981820405,
+        "relative_radius_difference": 0.0023566105063496825,
+        "limit": 0.2,
+        "passed": true
+      }
+    }
+  },
+  "criteria_sha256": "754dc727e9b26a23d472a6d6e91edd5977fb2650c98b9396d9abc24fbc65e5e5",
+  "assessor_sha256": "49a4f0be75fdcaa5c8acfa9571ea2b079a9001150fa19e3553a712ee482844df",
+  "scope": "Unchanged per-case assessor plus declared 55% port/starboard comparison. 35/65% speed monotonicity and 100% turn pair were not rerun."
+}

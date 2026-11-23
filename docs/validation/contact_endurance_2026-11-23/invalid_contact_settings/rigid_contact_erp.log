@@ -1,0 +1,36 @@
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid explicit DART contact correction settings
+Stack trace (most recent call last):
+#31   Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x79bb7102a1c9, in 
+#30   Object "gz sim -s -r --iterations 2 artifacts/contact_endurance_2026-11-23/invalid_contact_settings/rigid_contact_erp.sdf", at 0x5a620e33c186, in 
+#29   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x79bb714b9152, in ruby_run_node
+#28   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x79bb714b4e2b, in 
+#27   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x79bb71658599, in rb_vm_exec
+#26   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x79bb7165507b, in 
+#25   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x79bb71650b8e, in 
+#24   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x79bb7164e37f, in 
+#23   Object "/usr/lib/x86_64-linux-gnu/ruby/3.2.0/fiddle.so", at 0x79bb70e87b13, in 
+#22   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x79bb71616dcb, in rb_nogvl
+#21   Object "/usr/lib/x86_64-linux-gnu/ruby/3.2.0/fiddle.so", at 0x79bb70e8743b, in 
+#20   Object "/lib/x86_64-linux-gnu/libffi.so.8", at 0x79bb712b90bd, in ffi_call
+#19   Object "/lib/x86_64-linux-gnu/libffi.so.8", at 0x79bb712b63ee, in 
+#18   Object "/lib/x86_64-linux-gnu/libffi.so.8", at 0x79bb712b9b15, in 
+#17   Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8-gz.so.8.15.0", at 0x79bb6bf6e58e, in runServer
+#16   Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8", at 0x79bb6ad54e2a, in gz::sim::v8::Server::Server(gz::sim::v8::ServerConfig const&)
+#15   Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8", at 0x79bb6ad64d51, in gz::sim::v8::SimulationRunner::SimulationRunner(sdf::v14::World const&, std::shared_ptr<gz::sim::v8::SystemLoader> const&, gz::sim::v8::ServerConfig const&)
+#14   Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8", at 0x79bb6ad701f3, in gz::sim::v8::SimulationRunner::CreateEntities(sdf::v14::World const&)
+#13   Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8", at 0x79bb6ad2ce66, in gz::sim::v8::SdfEntityCreator::CreateEntities(sdf::v14::World const*, unsigned long)
+#12   Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8", at 0x79bb6ad3d00a, in 
+#11   Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8", at 0x79bb6ad6ad8c, in gz::sim::v8::SimulationRunner::LoadPlugins(unsigned long, std::vector<sdf::v14::Plugin, std::allocator<sdf::v14::Plugin> > const&)
+#10   Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8", at 0x79bb6ad77402, in gz::sim::v8::SystemManager::LoadPlugin(unsigned long, sdf::v14::Plugin const&)
+#9    Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8", at 0x79bb6ad76e70, in gz::sim::v8::SystemManager::AddSystemImpl(gz::sim::v8::SystemInternal, std::shared_ptr<sdf::v14::Element const>)
+#8    Object "/home/yh/Project/usv-experimental-6m/ros_ws/install/usv_physics/lib/libUsvPhysics.so", at 0x79bb5b2f97f1, in gz::sim::v8::systems::Physics::Configure(unsigned long const&, std::shared_ptr<sdf::v14::Element const> const&, gz::sim::v8::EntityComponentManager&, gz::sim::v8::EventManager&)
+#7    Object "/home/yh/Project/usv-experimental-6m/ros_ws/install/usv_physics/lib/libUsvPhysics.so", at 0x79bb5b2f8fa3, in ConfigureContactCorrection(std::shared_ptr<sdf::v14::Element const> const&)
+#6    Object "/lib/x86_64-linux-gnu/libstdc++.so.6", at 0x79bb6bcbb390, in __cxa_throw
+#5    Object "/lib/x86_64-linux-gnu/libstdc++.so.6", at 0x79bb6bca5a54, in std::terminate()
+#4    Object "/lib/x86_64-linux-gnu/libstdc++.so.6", at 0x79bb6bcbb0d9, in 
+#3    Object "/lib/x86_64-linux-gnu/libstdc++.so.6", at 0x79bb6bca5ff4, in 
+#2    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x79bb710288fe, in abort
+#1    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x79bb7104527d, in gsignal
+#0    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x79bb7109ebec, in pthread_kill
+Aborted (Signal sent by tkill() 196898 1000)

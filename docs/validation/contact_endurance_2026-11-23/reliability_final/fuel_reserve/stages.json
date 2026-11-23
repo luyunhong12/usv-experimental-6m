@@ -1,0 +1,20 @@
+[
+  {
+    "name": "reserve",
+    "duration": 120,
+    "mode": "velocity",
+    "speed": 1.5,
+    "yaw_rate": 0.04,
+    "index": 0,
+    "start_sim": 0.807,
+    "end_sim": 120.845,
+    "distance_triggered": false,
+    "stage_origin": [
+      -480.0,
+      180.0,
+      -3.3749792520005254e-17
+    ],
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  }
+]

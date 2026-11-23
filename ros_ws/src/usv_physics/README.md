@@ -20,3 +20,12 @@
 验证脚本 `tests/integration/validate_inertia_backend.py --mode force/torque（从项目根目录执行）` 使用独立无重力测试体检查 F=ma、力矩/角加速度、真实重心读回与更新时速度连续性。`UsvInertiaResponseProbe` 仅用于这些测试，不加载到生产船模。
 
 本轮附加质量由 HullHydrostatics 的力级分区耦合实现，并不设置 SDF `fluid_added_mass` 或改变刚体重量；因此不改变上述运行时燃油惯性适配边界。默认参数及 4/2 ms 收敛和敏感性记录见 WAMV 差距完善文档。
+
+## 刚体接触数值精度
+
+场景生成器显式配置 1 ms 步长、DART 的 ODE 碰撞检测器及
+`rigid_contact_erp=0.2`、`rigid_contact_max_correction_velocity=0.1 m/s`。
+本库使用 DART 6.13.2 原生静态接口设置并回读后两项；它们是进程级数值回正参数，
+不是逐材料刚度。同进程不同的显式设置会拒绝运行，不支持混合参数的多世界进程。
+未配置时沿用 DART 默认值，不对其他引擎保证支持。
+依据、接触精度与长时回归见 [本轮报告](../../../docs/validation/contact_endurance_2026-11-23/README.md)。

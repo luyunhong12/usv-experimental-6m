@@ -1,0 +1,56 @@
+[
+  {
+    "name": "approach",
+    "duration": 25,
+    "mode": "direct",
+    "throttle": 0.55,
+    "steering_deg": 0,
+    "index": 0,
+    "start_sim": 0.707,
+    "end_sim": 25.805,
+    "distance_triggered": false,
+    "stage_origin": [
+      -480.0,
+      180.0,
+      -8.462564201097866e-18
+    ],
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  },
+  {
+    "name": "turn",
+    "duration": 50,
+    "mode": "direct",
+    "throttle": 0.55,
+    "steering_deg": 20,
+    "index": 1,
+    "start_sim": 25.805,
+    "end_sim": 75.842,
+    "distance_triggered": false,
+    "stage_origin": [
+      -432.2999871207018,
+      180.09338551671922,
+      0.0037599690216625105
+    ],
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  },
+  {
+    "name": "coast",
+    "duration": 35,
+    "mode": "direct",
+    "throttle": 0,
+    "steering_deg": 0,
+    "index": 2,
+    "start_sim": 75.842,
+    "end_sim": 110.855,
+    "distance_triggered": false,
+    "stage_origin": [
+      -433.11758730359907,
+      174.78388985718084,
+      0.9877959147406233
+    ],
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  }
+]

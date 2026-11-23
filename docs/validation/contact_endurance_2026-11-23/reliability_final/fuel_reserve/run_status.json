@@ -1,0 +1,23 @@
+{
+  "case": "fuel_reserve",
+  "spec": {
+    "kind": "fuel_reserve",
+    "fuel_l": 1.005,
+    "generator_on": true,
+    "stages": [
+      {
+        "name": "reserve",
+        "duration": 120,
+        "mode": "velocity",
+        "speed": 1.5,
+        "yaw_rate": 0.04
+      }
+    ],
+    "isolated_water": true,
+    "wave_gain": 0
+  },
+  "finished_stages": 1,
+  "start_sim": 0.807,
+  "failure": null,
+  "bridge_resumed": false
+}

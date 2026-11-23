@@ -34,6 +34,7 @@ sys.path.insert(
 from project_paths import WORKSPACE
 from pathlib import Path
 import xml.etree.ElementTree as E
+from contact_physics import configure_contact_physics
 import json
 import hashlib
 import os
@@ -83,9 +84,7 @@ source = ROOT / "../dependencies/src/vrx/vrx_gz/worlds/sydney_regatta.sdf"
 tree = E.parse(source)
 world = tree.getroot().find("world")
 world.set("name", "usv_sydney")
-world.find("plugin[@name='gz::sim::systems::Physics']").set(
-    "filename", "libUsvPhysics.so"
-)
+configure_contact_physics(world)
 # Keep the initial visual wave spectrum and physical wave forcing consistent.
 publisher = world.find("plugin[@name='vrx::PublisherPlugin']/message")
 publisher.text = publisher.text.replace(

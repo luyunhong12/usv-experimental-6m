@@ -1,0 +1,23 @@
+{
+  "case": "low_soc",
+  "spec": {
+    "kind": "low_soc",
+    "energy_overrides": {
+      "initial_soc": 0.155
+    },
+    "stages": [
+      {
+        "name": "derating",
+        "duration": 180,
+        "throttle": 1.0,
+        "steering_deg": 5
+      }
+    ],
+    "isolated_water": true,
+    "wave_gain": 0
+  },
+  "finished_stages": 1,
+  "start_sim": 1.009,
+  "failure": null,
+  "bridge_resumed": false
+}

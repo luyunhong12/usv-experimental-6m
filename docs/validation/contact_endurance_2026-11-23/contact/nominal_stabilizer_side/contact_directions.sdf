@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.9">
+  <world name="contact_directions">
+    <physics name="1ms" type="dart">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <dart>
+        <collision_detector>ode</collision_detector>
+      </dart>
+    </physics>
+    <plugin filename="libUsvPhysics.so" name="gz::sim::systems::Physics">
+      <rigid_contact_erp>0.2</rigid_contact_erp>
+      <rigid_contact_max_correction_velocity>0.1</rigid_contact_max_correction_velocity>
+    </plugin>
+    <scene>
+      <sky />
+      <grid>false</grid>
+      <ambient>1.0 1.0 1.0</ambient>
+      <background>0.8 0.8 0.8</background>
+    </scene>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <world_frame_orientation>ENU</world_frame_orientation>
+      <latitude_deg>-33.724223</latitude_deg>
+      <longitude_deg>150.679736</longitude_deg>
+      <elevation>0.0</elevation>
+      <heading_deg>0.0</heading_deg>
+    </spherical_coordinates>
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <gravity>0 0 -9.81</gravity>
+    <model name="fixed_stabilizer_side">
+    <self_collide>true</self_collide>
+    <link name="hull">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.504111016525 -3.03375045985e-18 0.493799133095 0 0 0</pose>
+        <mass>1171.736120738953</mass>
+        <inertia>
+          <ixx>364.77315312499877</ixx>
+          <iyy>3416.3212354137668</iyy>
+          <izz>3602.9756513022962</izz>
+          <ixy>-23.68472530003624</ixy>
+          <ixz>-23.944723034545383</ixz>
+          <iyz>4.317873993902542</iyz>
+        </inertia>
+      </inertial>
+      <collision name="sealed_hull">
+        <geometry>
+          <mesh>
+            <uri>/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/hull_collision.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="hull_detailed_external">
+        <geometry>
+          <mesh>
+            <uri>/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/collision_hull.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="camera_housing_collision">
+        <pose>1.435 0.1 1.35 0 0.1 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.075 0.065</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="camera_bracket_collision">
+        <pose>1.435 0.1 1.17 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.035 0.035 0.3600000000000001</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="camera_right_housing_collision">
+        <pose>1.435 -0.1 1.35 0 0.1 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.075 0.065</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="camera_right_bracket_collision">
+        <pose>1.435 -0.1 1.17 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.035 0.035 0.3600000000000001</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="camera_side_housing_collision">
+        <pose>-3.980102097228898e-18 -0.585 1.35 0 0.1 -1.5707963267948966</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.075 0.065</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="camera_side_bracket_collision">
+        <pose>-3.980102097228898e-18 -0.585 1.17 0 0 -1.5707963267948966</pose>
+        <geometry>
+          <box>
+            <size>0.035 0.035 0.3600000000000001</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="lidar_mast_collision">
+        <pose>0 0 1.23 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.045 0.045 0.48</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="lidar_housing_collision">
+        <pose>0 0 1.55 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.09</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="fixed_trim_ballast_collision">
+        <pose>1.25 0.65 0.3 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 0.2 0.05104154447235442</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="passive_stabilizer_collision">
+        <geometry>
+          <mesh>
+            <uri>/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/passive_stabilizer/passive_stabilizer.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      </link>
+    <link name="azimuth">
+      <pose>-3.62400007248 0 0.449999988079 0 0 0</pose>
+      <inertial>
+        <pose>0.0281521572118 4.33309066213e-20 0.0544062695134 0 0 0</pose>
+        <mass>57.54445112984854</mass>
+        <inertia>
+          <ixx>4.566979905930447</ixx>
+          <iyy>4.904388640556075</iyy>
+          <izz>0.8437097727818273</izz>
+          <ixy>4.16583274071156e-16</ixy>
+          <ixz>0.21773802806524134</ixz>
+          <iyz>-6.499696658767072e-18</iyz>
+        </inertia>
+      </inertial>
+      <collision name="azimuth_detailed_external">
+        <geometry>
+          <mesh>
+            <uri>/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/collision_azimuth.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      </link>
+    <link name="propeller">
+      <pose>-3.79521107674 0 -0.143000006676 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>1.5</mass>
+        <inertia>
+          <ixx>0.016875</ixx>
+          <iyy>0.0084375</iyy>
+          <izz>0.0084375</izz>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyz>0.0</iyz>
+        </inertia>
+      </inertial>
+      <collision name="propeller_detailed_external">
+        <geometry>
+          <mesh>
+            <uri>/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/collision_propeller.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      </link>
+    <joint name="steering" type="revolute">
+      <parent>hull</parent>
+      <child>azimuth</child>
+      <pose relative_to="azimuth">0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.6108652381980153</lower>
+          <upper>0.6108652381980153</upper>
+          <effort>100.0</effort>
+          <velocity>0.2</velocity>
+        </limit>
+        <dynamics>
+          <damping>5</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <joint name="propeller_spin" type="revolute">
+      <parent>azimuth</parent>
+      <child>propeller</child>
+      <pose relative_to="propeller">0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+          <effort>60.0</effort>
+          <velocity>188.4955592153876</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <static>true</static><pose>0.0 0 0 1.5707963267948966 0 0</pose></model>
+<model name="probe_stabilizer_side"><pose>0.5 0.2 0.609 0 0 0</pose><link name="ball"><inertial><mass>1.0</mass><inertia><ixx>0.00025000000000000006</ixx><iyy>0.00025000000000000006</iyy><izz>0.00025000000000000006</izz></inertia></inertial><collision name="ball"><geometry><sphere><radius>.025</radius></sphere></geometry></collision></link><joint name="normal_guide" type="prismatic"><parent>world</parent><child>ball</child><axis><xyz>0 0 1</xyz><limit><lower>-1000</lower><upper>1000</upper></limit></axis></joint><plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher"><publish_model_pose>true</publish_model_pose><use_pose_vector_msg>true</use_pose_vector_msg><update_frequency>1000.0</update_frequency></plugin></model></world>
+</sdf>

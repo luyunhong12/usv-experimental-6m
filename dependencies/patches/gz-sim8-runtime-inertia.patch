@@ -7,20 +7,23 @@
  /*
   * Copyright (C) 2018 Open Source Robotics Foundation
   *
-@@ -16,6 +19,12 @@
+@@ -16,6 +19,15 @@
   */
  
  #include "Physics.hh"
 +#include <usv_physics/RuntimeInertia.hh>
 +#include "World.hh"
 +#include <dart/dynamics/Skeleton.hpp>
++#include <dart/constraint/ContactConstraint.hpp>
++#include <mutex>
++#include <optional>
 +#include <dart/dynamics/BodyNode.hpp>
 +#include <dart/dynamics/Inertia.hpp>
 +#include <stdexcept>
  
  #include <gz/msgs/contact.pb.h>
  #include <gz/msgs/contacts.pb.h>
-@@ -165,13 +174,19 @@
+@@ -165,13 +177,19 @@
  
  
  // Private data class.
@@ -41,7 +44,7 @@
            physics::FindFreeGroupFeature,
            physics::SetFreeGroupWorldPose,
            physics::FreeGroupFrameSemantics,
-@@ -208,64 +223,179 @@
+@@ -208,64 +226,179 @@
    /// \param[in] _ecm Constant reference to ECM.
    /// \param[in] _warnIfEntityExists True to emit warnings if the same entity
    /// already exists in the physics system
@@ -232,7 +235,7 @@
                const std::chrono::steady_clock::duration &_dt);
  
    /// \brief Get data of links that were updated in the latest physics step.
-@@ -278,7 +408,12 @@
+@@ -278,7 +411,12 @@
    /// std::map is used because canonical links must be in topological order
    /// to ensure that nested models with multiple canonical links are updated
    /// properly (models must be updated in topological order).
@@ -246,7 +249,7 @@
                EntityComponentManager &_ecm,
                const gz::physics::ForwardStep::Output &_updatedLinks);
  
-@@ -293,7 +428,14 @@
+@@ -293,7 +431,14 @@
    /// ensure that all of _model's nested models are marked as models to be
    /// updated (if a parent model's pose changes, all nested model poses must be
    /// updated since nested model poses are saved w.r.t. the parent model).
@@ -262,7 +265,7 @@
                const Entity _canonicalLink, EntityComponentManager &_ecm,
                std::map<Entity, physics::FrameData3d> &_linkFrameData);
  
-@@ -302,7 +444,12 @@
+@@ -302,7 +447,12 @@
    /// \param[in, out] _data The frame data to populate.
    /// \return True if _data was populated with frame data for _entity, false
    /// otherwise.
@@ -276,7 +279,7 @@
                physics::FrameData3d &_data);
  
    /// \brief Update components from physics simulation
-@@ -310,22 +457,40 @@
+@@ -310,22 +460,40 @@
    /// \param[in, out] _linkFrameData Links that experienced a pose change in the
    /// most recent physics step. The key is the entity of the link, and the
    /// value is the updated frame data corresponding to that entity.
@@ -321,7 +324,7 @@
        const LinkPtrType &_link, const math::Pose3d &_pose) const;
  
    /// \brief Get transform from one ancestor entity to a descendant entity
-@@ -333,24 +498,46 @@
+@@ -333,24 +501,46 @@
    /// \param[in] _from An ancestor of the _to entity.
    /// \param[in] _to A descendant of the _from entity.
    /// \return Pose transform between the two entities
@@ -373,7 +376,7 @@
  
    /// \brief Cache the top-level model for each entity.
    /// The key is an entity and the value is its top level model.
-@@ -461,7 +648,10 @@
+@@ -461,7 +651,10 @@
    //////////////////////////////////////////////////
  
    // Gravity
@@ -385,7 +388,7 @@
      : physics::FeatureList<
            MinimumFeatureList,
            physics::Gravity>{};
-@@ -469,7 +659,10 @@
+@@ -469,7 +662,10 @@
    // Slip Compliance
  
    /// \brief Feature list to process `FrictionPyramidSlipCompliance` components.
@@ -397,7 +400,7 @@
        : physics::FeatureList<
              MinimumFeatureList,
              physics::GetShapeFrictionPyramidSlipCompliance,
-@@ -478,7 +671,10 @@
+@@ -478,7 +674,10 @@
    // Joints
  
    /// \brief Feature list to handle joints.
@@ -409,7 +412,7 @@
              MinimumFeatureList,
              physics::GetJointFromModel,
              physics::GetBasicJointProperties,
-@@ -486,19 +682,28 @@
+@@ -486,19 +685,28 @@
              physics::SetBasicJointState>{};
  
    /// \brief Feature list to construct joints
@@ -441,7 +444,7 @@
              JointFeatureList,
              physics::AttachFixedJointFeature,
              physics::DetachJointFeature,
-@@ -507,29 +712,44 @@
+@@ -507,29 +715,44 @@
    //////////////////////////////////////////////////
    // Joint transmitted wrench
    /// \brief Feature list for getting joint transmitted wrenches.
@@ -491,7 +494,7 @@
              physics::FeatureList<
                ContactFeatureList,
                physics::SetContactPropertiesCallbackFeature>{};
-@@ -560,7 +780,12 @@
+@@ -560,7 +783,12 @@
              Entity, std::deque<ContactData>>;
  
    /// \brief msgs::Contacts equality comparison function.
@@ -505,7 +508,7 @@
                             const EntityContactMap &_map)
    {
      if (_msg.contact_size() != static_cast<int>(_map.size()))
-@@ -584,43 +809,12 @@
+@@ -584,43 +812,12 @@
          auto pos1 = _msg.contact(i).position(j);
          auto pos2 = contact.first->point;
  
@@ -551,7 +554,7 @@
        }
      }
      return true;
-@@ -630,7 +824,10 @@
+@@ -630,7 +827,10 @@
    // Collision filtering with bitmasks
  
    /// \brief Feature list to filter collisions with bitmasks.
@@ -563,7 +566,7 @@
            CollisionFeatureList,
            physics::CollisionFilterMaskFeature,
            physics::CategoryFilterMaskFeature>{};
-@@ -638,76 +835,109 @@
+@@ -638,76 +838,109 @@
    //////////////////////////////////////////////////
    // Link force
    /// \brief Feature list for applying forces to links.
@@ -684,7 +687,7 @@
              physics::FeatureList<
                physics::SetFreeGroupWorldVelocity>{};
  
-@@ -717,14 +947,20 @@
+@@ -717,14 +950,20 @@
    /// \brief Feature list for meshes.
    /// Include MinimumFeatureList so created collision can be automatically
    /// up-cast.
@@ -707,7 +710,7 @@
              MinimumFeatureList,
              gz::physics::sdf::ConstructSdfLink>{};
  
-@@ -733,27 +969,39 @@
+@@ -733,27 +972,39 @@
    /// \brief Feature list for heightmaps.
    /// Include MinimumFeatureList so created collision can be automatically
    /// up-cast.
@@ -751,7 +754,7 @@
              gz::physics::FeatureList<
              gz::physics::CollisionPairMaxContacts>{};
  
-@@ -761,18 +1009,28 @@
+@@ -761,18 +1012,28 @@
    // Nested Models
  
    /// \brief Feature list to construct nested models
@@ -782,7 +785,7 @@
    public: using WorldEntityMap = EntityFeatureMap3d<
            physics::World,
            MinimumFeatureList,
-@@ -785,7 +1043,8 @@
+@@ -785,7 +1046,8 @@
            CollisionDetectorFeatureList,
            SolverFeatureList,
            WorldModelFeatureList,
@@ -792,28 +795,11 @@
            >;
  
    /// \brief A map between world entity ids in the ECM to World Entities in
-@@ -891,66 +1150,1295 @@
+@@ -891,66 +1153,1295 @@
    /// \brief Flag to store whether the names of colliding entities should
    /// be populated in the contact points.
    public: bool contactsEntityNames = true;
 -};
--
--//////////////////////////////////////////////////
--Physics::Physics() : System(), dataPtr(std::make_unique<PhysicsPrivate>())
--{
--}
--
--//////////////////////////////////////////////////
--void Physics::Configure(const Entity &_entity,
--    const std::shared_ptr<const sdf::Element> &_sdf,
--    EntityComponentManager &_ecm,
--    EventManager &_eventMgr)
--{
--  std::string pluginLib;
--
--  // 1. Engine from component (from command line / ServerConfig)
--  auto engineComp = _ecm.Component<components::PhysicsEnginePlugin>(_entity);
--  if (engineComp && !engineComp->Data().empty())
 +  public:
 +/** @brief 应用关节位置限幅命令。
 + * @param _ecm 实体组件管理器。
@@ -829,7 +815,9 @@
 +        if (posLimits && !posLimits->Data().empty())
 +        {
 +          const auto& limits = posLimits->Data();
-+
+ 
+-//////////////////////////////////////////////////
+-Physics::Physics() : System(), dataPtr(std::make_unique<PhysicsPrivate>())
 +          if (limits.size() != jointPhys->GetDegreesOfFreedom())
 +          {
 +            gzwarn << "There is a mismatch in the degrees of freedom "
@@ -866,7 +854,7 @@
 + * @param jointVelLimitsFeature 速度限幅功能。
 + */
 +void ApplyJointVelocityLimits(EntityComponentManager& _ecm, const Entity& _entity, const components::Name* _name, const EntityJointMap::RequiredEntityPtr& jointPhys, const EntityJointMap::PhysicsEntityPtr<JointVelocityLimitsCommandFeatureList>& jointVelLimitsFeature)
-+{
+ {
 +        auto velLimits = _ecm.Component<components::JointVelocityLimitsCmd>(
 +            _entity);
 +        if (velLimits && !velLimits->Data().empty())
@@ -899,7 +887,7 @@
 +        }
 +
 +
-+}
+ }
 +  public:
 +/** @brief 应用关节力矩限幅命令。
 + * @param _ecm 实体组件管理器。
@@ -915,7 +903,12 @@
 +        if (effLimits && !effLimits->Data().empty())
 +        {
 +          const auto& limits = effLimits->Data();
-+
+ 
+-//////////////////////////////////////////////////
+-void Physics::Configure(const Entity &_entity,
+-    const std::shared_ptr<const sdf::Element> &_sdf,
+-    EntityComponentManager &_ecm,
+-    EventManager &_eventMgr)
 +          if (limits.size() != jointPhys->GetDegreesOfFreedom())
 +          {
 +            gzwarn << "There is a mismatch in the degrees of freedom "
@@ -952,12 +945,21 @@
 + * @param velReset 速度复位组件。
 + */
 +void ApplyJointResets(const Entity& _entity, const components::Name* _name, const EntityJointMap::RequiredEntityPtr& jointPhys, components::JointPositionReset* posReset, components::JointVelocityReset* velReset)
-+{
+ {
+-  std::string pluginLib;
 +        // Reset the velocity
 +        if (velReset)
 +        {
 +          auto& jointVelocity = velReset->Data();
-+
+ 
+-  // 1. Engine from component (from command line / ServerConfig)
+-  auto engineComp = _ecm.Component<components::PhysicsEnginePlugin>(_entity);
+-  if (engineComp && !engineComp->Data().empty())
+-  {
+-    pluginLib = engineComp->Data();
+-  }
+-  // 2. Engine from SDF
+-  else if (_sdf->HasElement("engine"))
 +          if (jointVelocity.size() != jointPhys->GetDegreesOfFreedom())
 +          {
 +            gzwarn << "There is a mismatch in the degrees of freedom "
@@ -1416,7 +1418,9 @@
 +
 +  for (const auto &[linkEntity, frameData] : _linkFrameData)
    {
--    pluginLib = engineComp->Data();
+-    auto sdfClone = _sdf->Clone();
+-    auto engineElem = sdfClone->GetElement("engine");
+-    pluginLib = engineElem->Get<std::string>("filename", pluginLib).first;
 +    // get a topological ordering of the models that have linkEntity as the
 +    // model's canonical link. If linkEntity isn't a canonical link for any
 +    // models, canonicalLinkModels will be empty
@@ -1437,10 +1441,10 @@
 +    for (auto &modelEnt : canonicalLinkModels)
 +      this->UpdateModelPose(modelEnt, linkEntity, _ecm, _linkFrameData);
    }
--  // 2. Engine from SDF
--  else if (_sdf->HasElement("engine"))
 +  GZ_PROFILE_END();
-+
+ 
+-  // 3. Use DART by default
+-  if (pluginLib.empty())
 +
 +}
 +  public:
@@ -1454,9 +1458,7 @@
 +  GZ_PROFILE_BEGIN("Links");
 +  for (const auto &[entity, frameData] : _linkFrameData)
    {
--    auto sdfClone = _sdf->Clone();
--    auto engineElem = sdfClone->GetElement("engine");
--    pluginLib = engineElem->Get<std::string>("filename", pluginLib).first;
+-    pluginLib = "gz-physics-dartsim-plugin";
 +    GZ_PROFILE_BEGIN("Local pose");
 +    auto canonicalLink =
 +        _ecm.Component<components::CanonicalLink>(entity);
@@ -1492,11 +1494,10 @@
 +  this->PublishLinkBodyMotion(_ecm, entity, frameData);
 +
    }
--
--  // 3. Use DART by default
--  if (pluginLib.empty())
 +  GZ_PROFILE_END();
-+
+ 
+-  // Update component
+-  if (!engineComp)
 +
 +}
 +  public:
@@ -1749,12 +1750,11 @@
 +
 +  for (const auto entity : entitiesPositionReset)
    {
--    pluginLib = "gz-physics-dartsim-plugin";
+-    _ecm.CreateComponent(_entity, components::PhysicsEnginePlugin(pluginLib));
 +    _ecm.RemoveComponent<components::JointPositionReset>(entity);
    }
- 
--  // Update component
--  if (!engineComp)
+-  else
++
 +  std::vector<Entity> entitiesVelocityReset;
 +  _ecm.Each<components::JointVelocityReset>(
 +      [&](const Entity &_entity, components::JointVelocityReset *) -> bool
@@ -1765,11 +1765,14 @@
 +
 +  for (const auto entity : entitiesVelocityReset)
    {
--    _ecm.CreateComponent(_entity, components::PhysicsEnginePlugin(pluginLib));
+-    engineComp->SetData(pluginLib,
+-        [](const std::string &_a, const std::string &_b){return _a == _b;});
 +    _ecm.RemoveComponent<components::JointVelocityReset>(entity);
    }
--  else
-+
+ 
+-  // Check if entity names should be populated in contact points.
+-  auto contactsElement = _sdf->FindElement("contacts");
+-  if (contactsElement)
 +  std::vector<Entity> entitiesCustomContactSurface;
 +  _ecm.Each<components::EnableContactSurfaceCustomization>(
 +      [&](const Entity &_entity,
@@ -1781,19 +1784,11 @@
 +
 +  for (const auto entity : entitiesCustomContactSurface)
    {
--    engineComp->SetData(pluginLib,
--        [](const std::string &_a, const std::string &_b){return _a == _b;});
+-    this->dataPtr->contactsEntityNames = contactsElement->Get<bool>(
+-      "include_entity_names", true).first;
 +    _ecm.RemoveComponent<components::EnableContactSurfaceCustomization>(entity);
    }
  
--  // Check if entity names should be populated in contact points.
--  auto contactsElement = _sdf->FindElement("contacts");
--  if (contactsElement)
--  {
--    this->dataPtr->contactsEntityNames = contactsElement->Get<bool>(
--      "include_entity_names", true).first;
--  }
--
 +
 +}
 +  public:
@@ -2131,7 +2126,7 @@
    systemPaths.AddPluginPaths(gz::physics::getEngineInstallDir());
  
    auto pathToLib = systemPaths.FindSharedLibrary(pluginLib);
-@@ -958,10 +2446,10 @@
+@@ -958,10 +2449,10 @@
    if (pathToLib.empty())
    {
      gzerr << "Failed to find plugin [" << pluginLib
@@ -2144,7 +2139,7 @@
    }
  
    // Load engine plugin
-@@ -970,7 +2458,7 @@
+@@ -970,7 +2461,7 @@
    if (plugins.empty())
    {
      gzerr << "Unable to load the [" << pathToLib << "] library.\n";
@@ -2153,7 +2148,7 @@
    }
  
    auto classNames = pluginLoader.PluginsImplementing<
-@@ -980,7 +2468,7 @@
+@@ -980,7 +2471,7 @@
    {
      gzerr << "No physics plugins found in library [" << pathToLib << "]."
             << std::endl;
@@ -2162,7 +2157,7 @@
    }
  
    // Get the first plugin that works
-@@ -995,11 +2483,11 @@
+@@ -995,11 +2486,11 @@
        continue;
      }
  
@@ -2176,7 +2171,7 @@
      {
        gzdbg << "Loaded [" << className << "] from library ["
               << pathToLib << "]" << std::endl;
-@@ -1020,103 +2508,24 @@
+@@ -1020,103 +2511,24 @@
      gzwarn << msg.str();
    }
  
@@ -2187,9 +2182,8 @@
             << "]."
             << std::endl;
 -    return;
-+    return false;
-   }
- 
+-  }
+-
 -  this->dataPtr->eventManager = &_eventMgr;
 -}
 -
@@ -2230,9 +2224,10 @@
 -  {
 -    gzdbg << "Resetting Physics\n";
 -    this->dataPtr->ResetPhysics(_ecm);
--  }
++    return false;
+   }
 -}
--
+ 
 -//////////////////////////////////////////////////
 -void PhysicsPrivate::CreatePhysicsEntities(const EntityComponentManager &_ecm,
 -                                           bool _warnIfEntityExists)
@@ -2240,7 +2235,8 @@
 -  // Clear the set of links that were added to a model.
 -  this->linkAddedToModel.clear();
 -  this->jointAddedToModel.clear();
--
++  return true;
+ 
 -  this->CreateWorldEntities(_ecm, _warnIfEntityExists);
 -  this->CreateModelEntities(_ecm, _warnIfEntityExists);
 -  this->CreateLinkEntities(_ecm, _warnIfEntityExists);
@@ -2248,12 +2244,18 @@
 -  this->CreateCollisionEntities(_ecm, _warnIfEntityExists);
 -  this->CreateJointEntities(_ecm, _warnIfEntityExists);
 -  this->CreateBatteryEntities(_ecm);
--}
+ }
 -
 -//////////////////////////////////////////////////
 -void PhysicsPrivate::CreateWorldEntities(const EntityComponentManager &_ecm,
 -                                         bool _warnIfEntityExists)
--{
++  public:
++/** @brief 设置世界碰撞检测器。
++ * @param _ecm 实体组件管理器。
++ * @param _entity 世界实体。
++ */
++void ConfigureCollisionDetector(const EntityComponentManager& _ecm, const Entity& _entity)
+ {
 -  // Get all the new worlds
 -  _ecm.EachNew<components::World, components::Name, components::Gravity>(
 -      [&](const Entity &_entity,
@@ -2279,20 +2281,10 @@
 -        auto worldPtrPhys = this->engine->ConstructWorld(world);
 -        this->entityWorldMap.AddEntity(_entity, worldPtrPhys);
 -
-+  return true;
-+
-+}
-+  public:
-+/** @brief 设置世界碰撞检测器。
-+ * @param _ecm 实体组件管理器。
-+ * @param _entity 世界实体。
-+ */
-+void ConfigureCollisionDetector(const EntityComponentManager& _ecm, const Entity& _entity)
-+{
          // Optional world features
          auto collisionDetectorComp =
              _ecm.Component<components::PhysicsCollisionDetector>(_entity);
-@@ -1144,6 +2553,15 @@
+@@ -1144,6 +2556,15 @@
            }
          }
  
@@ -2308,7 +2300,7 @@
          auto solverComp =
              _ecm.Component<components::PhysicsSolver>(_entity);
          if (solverComp)
-@@ -1169,6 +2587,15 @@
+@@ -1169,6 +2590,15 @@
            }
          }
  
@@ -2324,7 +2316,7 @@
          auto physicsComp =
              _ecm.Component<components::Physics>(_entity);
          if (physicsComp)
-@@ -1196,81 +2623,93 @@
+@@ -1196,81 +2626,93 @@
            }
          }
  
@@ -2336,15 +2328,23 @@
 -          auto modelPtrPhys = worldModelFeature->GetWorldModel();
 -          this->entityModelMap.AddEntity(_entity, modelPtrPhys);
 -        }
--
+ 
 -        return true;
 -      });
--}
+ }
 -
 -//////////////////////////////////////////////////
 -void PhysicsPrivate::CreateModelEntities(const EntityComponentManager &_ecm,
 -                                         bool _warnIfEntityExists)
--{
++  public:
++/** @brief 继承刚体静态状态并填充惯性和重力属性。
++ * @param _ecm 实体组件管理器。
++ * @param _entity 刚体实体。
++ * @param _parent 父模型组件。
++ * @param link 待构建的刚体描述。
++ */
++void PopulateLinkProperties(const EntityComponentManager& _ecm, const Entity& _entity, const components::ParentEntity* _parent, sdf::Link& link)
+ {
 -  _ecm.EachNew<components::Model, components::Name, components::Pose,
 -            components::ParentEntity>(
 -      [&](const Entity &_entity,
@@ -2355,10 +2355,18 @@
 -      {
 -        if (_ecm.EntityHasComponentType(_entity, components::Recreate::typeId))
 -          return true;
--
++        if (this->staticEntities.find(_parent->Data()) !=
++            this->staticEntities.end())
++        {
++          this->staticEntities.insert(_entity);
++        }
+ 
 -        // Check if model already exists
 -        if (this->entityModelMap.HasEntity(_entity))
--        {
++        // get link inertial
++        auto inertial = _ecm.Component<components::Inertial>(_entity);
++        if (inertial)
+         {
 -          if (_warnIfEntityExists)
 -          {
 -            gzwarn << "Model entity [" << _entity
@@ -2366,75 +2374,33 @@
 -                    << std::endl;
 -          }
 -          return true;
--        }
++          link.SetInertial(inertial->Data());
+         }
 -        // TODO(anyone) Don't load models unless they have collisions
--
+ 
 -        // Check if parent world / model exists
 -        sdf::Model model;
 -        if (const auto *modelSdfComp =
 -            _ecm.Component<components::ModelSdf>(_entity))
--        {
++        // get link gravity
++        const components::GravityEnabled *gravityEnabled =
++            _ecm.Component<components::GravityEnabled>(_entity);
++        if (nullptr != gravityEnabled)
+         {
 -          model = modelSdfComp->Data();
--        }
--
++          // gravityEnabled set in SdfEntityCreator::CreateEntities()
++          link.SetEnableGravity(gravityEnabled->Data());
+         }
+ 
 -        // Component values should override whatever values were put into the
 -        // ModelSdf component.
 -        model.SetName(_name->Data());
 -        model.SetRawPose(_pose->Data());
 -        model.SetPoseRelativeTo("");
--
+ 
 -        sdf::Root root;
 -        root.SetModel(model);
 -        root.UpdateGraphs();
--
--        auto staticComp = _ecm.Component<components::Static>(_entity);
--        if (staticComp && staticComp->Data())
--        {
--          model.SetStatic(staticComp->Data());
-+
-+}
-+  public:
-+/** @brief 继承刚体静态状态并填充惯性和重力属性。
-+ * @param _ecm 实体组件管理器。
-+ * @param _entity 刚体实体。
-+ * @param _parent 父模型组件。
-+ * @param link 待构建的刚体描述。
-+ */
-+void PopulateLinkProperties(const EntityComponentManager& _ecm, const Entity& _entity, const components::ParentEntity* _parent, sdf::Link& link)
-+{
-+        if (this->staticEntities.find(_parent->Data()) !=
-+            this->staticEntities.end())
-+        {
-           this->staticEntities.insert(_entity);
-         }
--        auto selfCollideComp = _ecm.Component<components::SelfCollide>(_entity);
--        if (selfCollideComp && selfCollideComp ->Data())
--        {
--          model.SetSelfCollide(selfCollideComp->Data());
--        }
--
--        // check if parent is a world
--        if (auto worldPtrPhys =
--                this->entityWorldMap.Get(_parent->Data()))
--        {
-+
-+        // get link inertial
-+        auto inertial = _ecm.Component<components::Inertial>(_entity);
-+        if (inertial)
-+        {
-+          link.SetInertial(inertial->Data());
-+        }
-+
-+        // get link gravity
-+        const components::GravityEnabled *gravityEnabled =
-+            _ecm.Component<components::GravityEnabled>(_entity);
-+        if (nullptr != gravityEnabled)
-+        {
-+          // gravityEnabled set in SdfEntityCreator::CreateEntities()
-+          link.SetEnableGravity(gravityEnabled->Data());
-+        }
-+
-+
 +}
 +  public:
 +/** @brief 安排主刚体不同的嵌套模型位姿更新。
@@ -2459,9 +2425,24 @@
 +        gzerr << "Model [" << nestedModel << "] has no canonical link\n";
 +      continue;
 +    }
-+
+ 
+-        auto staticComp = _ecm.Component<components::Static>(_entity);
+-        if (staticComp && staticComp->Data())
+-        {
+-          model.SetStatic(staticComp->Data());
+-          this->staticEntities.insert(_entity);
+-        }
+-        auto selfCollideComp = _ecm.Component<components::SelfCollide>(_entity);
+-        if (selfCollideComp && selfCollideComp ->Data())
+-        {
+-          model.SetSelfCollide(selfCollideComp->Data());
+-        }
 +    auto nestedCanonicalLink = nestedModelCanonicalLinkComp->Data();
-+
+ 
+-        // check if parent is a world
+-        if (auto worldPtrPhys =
+-                this->entityWorldMap.Get(_parent->Data()))
+-        {
 +    // skip links that are already marked as a link to be updated
 +    if (nestedCanonicalLink == _canonicalLink ||
 +        _linkFrameData.find(nestedCanonicalLink) != _linkFrameData.end())
@@ -2491,7 +2472,7 @@
            // Use the ConstructNestedModel feature for nested models
            if (model.ModelCount() > 0)
            {
-@@ -1289,7 +2728,7 @@
+@@ -1289,7 +2731,7 @@
                         << std::endl;
                  informed = true;
                }
@@ -2500,7 +2481,7 @@
              }
              auto modelPtrPhys =
                nestedModelFeature->ConstructNestedModel(*root.Model());
-@@ -1310,10 +2749,16 @@
+@@ -1310,10 +2752,16 @@
                    topLevelModel(_entity, _ecm)));
              }
            }
@@ -2521,7 +2502,7 @@
            if (auto parentPtrPhys = this->entityModelMap.Get(_parent->Data()))
            {
              auto nestedModelFeature =
-@@ -1331,7 +2776,7 @@
+@@ -1331,7 +2779,7 @@
                         << std::endl;
                  informed = true;
                }
@@ -2530,34 +2511,31 @@
              }
  
              // override static property only if parent is static.
-@@ -1361,458 +2806,27 @@
+@@ -1361,216 +2809,346 @@
            {
              gzwarn << "Model's parent entity [" << _parent->Data()
                      << "] not found on world / model map." << std::endl;
 -            return true;
--          }
++            return;
+           }
 -        }
 -
 -        return true;
 -      });
--}
+ }
 -
 -//////////////////////////////////////////////////
 -void PhysicsPrivate::CreateLinkEntities(const EntityComponentManager &_ecm,
 -                                        bool _warnIfEntityExists)
--{
--  _ecm.EachNew<components::Link, components::Name, components::Pose,
--            components::ParentEntity>(
-+            return;
-+          }
-+}
 +  public:
 +/** @brief 创建可拆卸固定关节。
 + * @param _ecm 实体组件管理器。
 + * @param _warnIfEntityExists 是否警告重复实体。
 + */
 +void CreateDetachableJoints(const EntityComponentManager& _ecm, bool _warnIfEntityExists)
-+{
+ {
+-  _ecm.EachNew<components::Link, components::Name, components::Pose,
+-            components::ParentEntity>(
 +  // Detachable joints
 +  _ecm.EachNew<components::DetachableJoint>(
        [&](const Entity &_entity,
@@ -2565,548 +2543,154 @@
 -        const components::Name *_name,
 -        const components::Pose *_pose,
 -        const components::ParentEntity *_parent)->bool
--      {
++          const components::DetachableJoint *_jointInfo) -> bool
+       {
 -        // If the parent model is scheduled for recreation, then do not
 -        // try to create a new link. This situation can occur when a link
 -        // is added to a model from the GUI model editor.
 -        if (_ecm.EntityHasComponentType(_parent->Data(),
 -              components::Recreate::typeId))
--        {
++        if (_jointInfo->Data().jointType != "fixed")
+         {
 -          // Add this entity to the set of newly added links to existing
 -          // models.
 -          this->linkAddedToModel.insert(_entity);
--          return true;
--        }
++          gzerr << "Detachable joint type [" << _jointInfo->Data().jointType
++                 << "] is currently not supported" << std::endl;
+           return true;
+         }
 -
 -        // Check if link already exists
 -        if (this->entityLinkMap.HasEntity(_entity))
--        {
--          if (_warnIfEntityExists)
--          {
++        // Check if joint already exists
++        if (this->entityJointMap.HasEntity(_entity))
+         {
+           if (_warnIfEntityExists)
+           {
 -            gzwarn << "Link entity [" << _entity
--                    << "] marked as new, but it's already on the map."
--                    << std::endl;
--          }
--          return true;
--        }
--
++            gzwarn << "Joint entity [" << _entity
+                     << "] marked as new, but it's already on the map."
+                     << std::endl;
+           }
+           return true;
+         }
+ 
 -        // TODO(anyone) Don't load links unless they have collisions
 -
 -        // Check if parent model exists
 -        if (!this->entityModelMap.HasEntity(_parent->Data()))
--        {
++        // Check if the link entities exist in the physics engine
++        auto parentLinkPhys =
++            this->entityLinkMap.Get(_jointInfo->Data().parentLink);
++        if (!parentLinkPhys)
+         {
 -          gzwarn << "Link's parent entity [" << _parent->Data()
 -                  << "] not found on model map." << std::endl;
--          return true;
--        }
++          gzerr << "DetachableJoint's parent link entity ["
++                << _jointInfo->Data().parentLink << "] not found in link map."
++                << std::endl;
+           return true;
+         }
 -        auto basicModelPtrPhys = this->entityModelMap.Get(_parent->Data());
--
+ 
 -        if (const auto existingLink = basicModelPtrPhys->GetLink(_name->Data()))
--        {
++        auto childLinkEntity = _jointInfo->Data().childLink;
++
++        // Get child link
++        auto childLinkPhys = this->entityLinkMap.Get(childLinkEntity);
++        if (!childLinkPhys)
+         {
 -          // No need to create this link because it was already created when
 -          // parsing the model (links in models are required to have unique
 -          // names). Instead we will register its existence and move along.
 -          this->entityLinkMap.AddEntity(_entity, existingLink);
 -          this->topLevelModelMap.insert(
 -            std::make_pair(_entity, topLevelModel(_entity, _ecm)));
--          return true;
--        }
--
++          gzerr << "Failed to find joint's child link [" << childLinkEntity
++                << "]." << std::endl;
+           return true;
+         }
+ 
 -        auto modelPtrPhys =
 -            this->entityModelMap
 -              .EntityCast<ConstructSdfLinkFeatureList>(_parent->Data());
 -
 -        if (!modelPtrPhys)
--        {
--          gzwarn << "Cannot create a new link [" << _name->Data() << "] "
--                 << "because the physics engine plugin does not support "
--                 << "link construction during runtime" << std::endl;
--          return true;
--        }
--
--        sdf::Link link;
--        link.SetName(_name->Data());
--        link.SetRawPose(_pose->Data());
--        link.SetPoseRelativeTo("");
--
--        if (this->staticEntities.find(_parent->Data()) !=
--            this->staticEntities.end())
--        {
--          this->staticEntities.insert(_entity);
--        }
--
--        // get link inertial
--        auto inertial = _ecm.Component<components::Inertial>(_entity);
--        if (inertial)
--        {
--          link.SetInertial(inertial->Data());
--        }
--
--        // get link gravity
--        const components::GravityEnabled *gravityEnabled =
--            _ecm.Component<components::GravityEnabled>(_entity);
--        if (nullptr != gravityEnabled)
--        {
--          // gravityEnabled set in SdfEntityCreator::CreateEntities()
--          link.SetEnableGravity(gravityEnabled->Data());
--        }
--
--        auto constructLinkFeature =
--          this->entityModelMap.EntityCast<ConstructSdfLinkFeatureList>(
--            _parent->Data());
--
--        if (!constructLinkFeature)
--        {
--            static bool informed{false};
--            if (!informed)
--            {
--              gzdbg << "Attempting to construct sdf link, but the "
--                     << "physics engine doesn't support feature "
--                     << "[ConstructSdfLinkFeature]." << std::endl;
--              informed = true;
--            }
--            return true;
--        }
--
--        auto linkPtrPhys = constructLinkFeature->ConstructLink(link);
--        this->entityLinkMap.AddEntity(_entity, linkPtrPhys);
--        this->topLevelModelMap.insert(std::make_pair(_entity,
--            topLevelModel(_entity, _ecm)));
--
--        return true;
--      });
--}
--
--//////////////////////////////////////////////////
--void PhysicsPrivate::CreateCollisionEntities(const EntityComponentManager &_ecm,
--                                             bool _warnIfEntityExists)
--{
--  _ecm.EachNew<components::Collision, components::Name, components::Pose,
--            components::Geometry, components::CollisionElement,
--            components::ParentEntity>(
--      [&](const Entity &_entity,
--          const components::Collision *,
--          const components::Name *_name,
--          const components::Pose *_pose,
--          const components::Geometry *_geom,
--          const components::CollisionElement *_collElement,
--          const components::ParentEntity *_parent) -> bool
--      {
--        // Check to see if this collision's parent is a link that was
--        // not created because the parent model is marked for recreation.
--        if (this->linkAddedToModel.find(_parent->Data()) !=
--            this->linkAddedToModel.end())
--        {
--          return true;
--        }
--
--        if (this->entityCollisionMap.HasEntity(_entity))
--        {
--          if (_warnIfEntityExists)
--          {
--            gzwarn << "Collision entity [" << _entity
--                    << "] marked as new, but it's already on the map."
--                    << std::endl;
--          }
--          return true;
--        }
--
--        // Check if parent link exists
--        if (!this->entityLinkMap.HasEntity(_parent->Data()))
--        {
--          gzwarn << "Collision's parent entity [" << _parent->Data()
--                  << "] not found on link map." << std::endl;
--          return true;
--        }
--        auto linkPtrPhys = this->entityLinkMap.Get(_parent->Data());
--
--        if (const auto existingShape = linkPtrPhys->GetShape(_name->Data()))
--        {
--          // No need to create this collision shape because it was already
--          // created when parsing the model.
--          auto linkCollisionFeature =
--              this->entityLinkMap.EntityCast<CollisionFeatureList>(
--                  _parent->Data());
--          this->entityCollisionMap.AddEntity(
--            _entity, linkCollisionFeature->GetShape(_name->Data()));
--          this->topLevelModelMap.insert(
--            std::make_pair(_entity, topLevelModel(_entity, _ecm)));
--          return true;
--        }
--
--        // Make a copy of the collision DOM so we can set its pose which has
--        // been resolved and is now expressed w.r.t the parent link of the
--        // collision.
--        sdf::Collision collision = _collElement->Data();
--        collision.SetRawPose(_pose->Data());
--        collision.SetPoseRelativeTo("");
--        auto collideBitmask = collision.Surface()->Contact()->CollideBitmask();
--
--        ShapePtrType collisionPtrPhys;
--        if (_geom->Data().Type() == sdf::GeometryType::MESH)
--        {
--          const sdf::Mesh *meshSdf = _geom->Data().MeshShape();
--          if (nullptr == meshSdf)
--          {
--            gzwarn << "Mesh geometry for collision [" << _name->Data()
--                    << "] missing mesh shape." << std::endl;
--            return true;
--          }
--
--          const common::Mesh *mesh = loadMesh(*meshSdf);
--          if (!mesh)
--            return true;
--
--          auto linkMeshFeature =
--              this->entityLinkMap.EntityCast<MeshFeatureList>(_parent->Data());
--          if (!linkMeshFeature)
--          {
--            static bool informed{false};
--            if (!informed)
--            {
--              gzdbg << "Attempting to process mesh geometries, but the physics"
--                     << " engine doesn't support feature "
--                     << "[AttachMeshShapeFeature]. Meshes will be ignored."
--                     << std::endl;
--              informed = true;
--            }
--            return true;
--          }
--
--          collisionPtrPhys = linkMeshFeature->AttachMeshShape(_name->Data(),
--              *mesh,
--              math::eigen3::convert(_pose->Data()),
--              math::eigen3::convert(meshSdf->Scale()));
--        }
--        else if (_geom->Data().Type() == sdf::GeometryType::HEIGHTMAP)
--        {
--          auto linkHeightmapFeature =
--              this->entityLinkMap.EntityCast<HeightmapFeatureList>(
--                  _parent->Data());
--          if (!linkHeightmapFeature)
--          {
--            static bool informed{false};
--            if (!informed)
--            {
--              gzdbg << "Attempting to process heightmap geometries, but the "
--                     << "physics engine doesn't support feature "
--                     << "[AttachHeightmapShapeFeature]. Heightmaps will be "
--                     << "ignored." << std::endl;
--              informed = true;
--            }
--            return true;
--          }
--
--          auto heightmapSdf = _geom->Data().HeightmapShape();
--          if (nullptr == heightmapSdf)
--          {
--            gzwarn << "Heightmap geometry for collision [" << _name->Data()
--                    << "] missing heightmap shape." << std::endl;
--            return true;
--          }
--
--          auto fullPath = common::findFile(asFullPath(heightmapSdf->Uri(),
--              heightmapSdf->FilePath()));
--          if (fullPath.empty())
--          {
--            gzerr << "Heightmap geometry missing URI" << std::endl;
--            return true;
--          }
--
--          std::shared_ptr<common::HeightmapData> data;
--          std::string lowerFullPath = common::lowercase(fullPath);
--          // check if heightmap is an image
--          if (common::EndsWith(lowerFullPath, ".png")
--              || common::EndsWith(lowerFullPath, ".jpg")
--              || common::EndsWith(lowerFullPath, ".jpeg"))
--          {
--            auto img = std::make_shared<common::ImageHeightmap>();
--            if (img->Load(fullPath) < 0)
--            {
--              gzerr << "Failed to load heightmap image data from ["
--                     << fullPath << "]" << std::endl;
--              return true;
--            }
--            data = img;
--          }
--          // DEM
--          else
--          {
--            auto worldEntity = _ecm.EntityByComponents(components::World());
--            auto sphericalCoordinatesComponent =
--              _ecm.Component<components::SphericalCoordinates>(
--                worldEntity);
--
--            auto dem = std::make_shared<common::Dem>();
--            if (sphericalCoordinatesComponent)
--            {
--              dem->SetSphericalCoordinates(
--                  sphericalCoordinatesComponent->Data());
--            }
--            if (dem->Load(fullPath) < 0)
--            {
--              gzerr << "Failed to load heightmap dem data from ["
--                     << fullPath << "]" << std::endl;
--              return true;
--            }
--            data = dem;
--          }
--
--          collisionPtrPhys = linkHeightmapFeature->AttachHeightmapShape(
--              _name->Data(),
--              *data,
--              math::eigen3::convert(_pose->Data()),
--              math::eigen3::convert(heightmapSdf->Size()),
--              heightmapSdf->Sampling());
--        }
--        else if (_geom->Data().Type() == sdf::GeometryType::POLYLINE)
--        {
--          auto polylineSdf = _geom->Data().PolylineShape();
--          if (polylineSdf.empty())
--          {
--            gzwarn << "Polyline geometry for collision [" << _name->Data()
--                    << "] missing polylines." << std::endl;
--            return true;
--          }
--
--          std::vector<std::vector<math::Vector2d>> vertices;
--          for (const auto &polyline : _geom->Data().PolylineShape())
--          {
--            vertices.push_back(polyline.Points());
--          }
--
--          std::string name("POLYLINE_" + common::Uuid().String());
--          auto meshManager = common::MeshManager::Instance();
--          meshManager->CreateExtrudedPolyline(name, vertices,
--              _geom->Data().PolylineShape()[0].Height());
--
--          auto polyline = meshManager->MeshByName(name);
--          if (nullptr == polyline)
--          {
--            gzwarn << "Failed to create polyline for collision ["
--                    << _name->Data() << "]." << std::endl;
--            return true;
--          }
--
--          auto linkMeshFeature =
--              this->entityLinkMap.EntityCast<MeshFeatureList>(_parent->Data());
--          if (!linkMeshFeature)
--          {
--            static bool informed{false};
--            if (!informed)
--            {
--              gzdbg << "Attempting to process polyline geometries, but the"
--                     << " physics engine doesn't support feature "
--                     << "[AttachMeshShapeFeature]. Polylines will be ignored."
--                     << std::endl;
--              informed = true;
--            }
--            return true;
--          }
--
--          collisionPtrPhys = linkMeshFeature->AttachMeshShape(_name->Data(),
--              *polyline,
--              math::eigen3::convert(_pose->Data()));
--        }
--        else
--        {
--          auto linkCollisionFeature =
--              this->entityLinkMap.EntityCast<CollisionFeatureList>(
--                  _parent->Data());
--          if (!linkCollisionFeature)
--          {
--            static bool informed{false};
--            if (!informed)
--            {
--              gzdbg << "Attempting to process collisions, but the physics "
--                     << "engine doesn't support feature "
--                     << "[ConstructSdfCollision]. Collisions will be ignored."
--                     << std::endl;
--              informed = true;
--            }
--            return true;
--          }
--
--          collisionPtrPhys =
--              linkCollisionFeature->ConstructCollision(collision);
--        }
--
--        if (nullptr == collisionPtrPhys)
--        {
--          gzdbg << "Failed to create collision [" << _name->Data()
--                 << "]. Does the physics engine support geometries of type ["
--                 << static_cast<int>(_geom->Data().Type()) << "]?" << std::endl;
--          return true;
--        }
--
--        this->entityCollisionMap.AddEntity(_entity, collisionPtrPhys);
--
--        // Check that the physics engine has a filter mask feature
--        // Set the collide_bitmask if it does
--        auto filterMaskFeature =
--            this->entityCollisionMap.EntityCast<CollisionMaskFeatureList>(
--                _entity);
--        if (filterMaskFeature)
--        {
--          filterMaskFeature->SetCollisionFilterMask(collideBitmask);
--        }
--        else
--        {
--          static bool informed{false};
--          if (!informed)
--          {
--            gzdbg << "Attempting to set collision bitmasks, but the physics "
--                   << "engine doesn't support feature [CollisionFilterMask]. "
--                   << "Collision bitmasks will be ignored." << std::endl;
--            informed = true;
--          }
--        }
--
--        this->topLevelModelMap.insert(std::make_pair(_entity,
--            topLevelModel(_entity, _ecm)));
--        return true;
--      });
--}
--
--//////////////////////////////////////////////////
--void PhysicsPrivate::CreateJointEntities(const EntityComponentManager &_ecm,
--                                         bool _warnIfEntityExists)
--{
--  _ecm.EachNew<components::Joint, components::Name, components::JointType,
--               components::Pose, components::ThreadPitch,
--               components::ParentEntity, components::ParentLinkName,
--               components::ChildLinkName>(
--      [&](const Entity &_entity,
--          const components::Joint * /* _joint */,
--          const components::Name *_name,
--          const components::JointType *_jointType,
--          const components::Pose *_pose,
--          const components::ThreadPitch *_threadPitch,
--          const components::ParentEntity *_parentModel,
--          const components::ParentLinkName *_parentLinkName,
--          const components::ChildLinkName *_childLinkName) -> bool
--      {
--        // If the parent model is scheduled for recreation, then do not
--        // try to create a new joint. This situation can occur when a joint
--        // is added to a model from the GUI model editor.
--        if (_ecm.EntityHasComponentType(_parentModel->Data(),
--              components::Recreate::typeId))
--        {
--          // Add this entity to the set of newly added joints to existing
--          // models.
--          this->jointAddedToModel.insert(_entity);
--          return true;
--        }
--
-+          const components::DetachableJoint *_jointInfo) -> bool
-+      {
-+        if (_jointInfo->Data().jointType != "fixed")
-+        {
-+          gzerr << "Detachable joint type [" << _jointInfo->Data().jointType
-+                 << "] is currently not supported" << std::endl;
-+          return true;
-+        }
-         // Check if joint already exists
-         if (this->entityJointMap.HasEntity(_entity))
-         {
-@@ -1825,41 +2839,127 @@
-           return true;
-         }
- 
--        // Check if parent model exists
--        if (!this->entityModelMap.HasEntity(_parentModel->Data()))
--        {
--          gzerr << "Joint's parent model entity [" << _parentModel->Data()
--                  << "] not found on model map." << std::endl;
--          return true;
--        }
--
--        auto basicModelPtrPhys = this->entityModelMap
--            .EntityCast<JointFeatureList>(_parentModel->Data());
--        if (!basicModelPtrPhys)
-+        // Check if the link entities exist in the physics engine
-+        auto parentLinkPhys =
-+            this->entityLinkMap.Get(_jointInfo->Data().parentLink);
-+        if (!parentLinkPhys)
-+        {
-+          gzerr << "DetachableJoint's parent link entity ["
-+                << _jointInfo->Data().parentLink << "] not found in link map."
-+                << std::endl;
-+          return true;
-+        }
-+
-+        auto childLinkEntity = _jointInfo->Data().childLink;
-+
-+        // Get child link
-+        auto childLinkPhys = this->entityLinkMap.Get(childLinkEntity);
-+        if (!childLinkPhys)
-+        {
-+          gzerr << "Failed to find joint's child link [" << childLinkEntity
-+                << "]." << std::endl;
-+          return true;
-+        }
-+
 +        auto childLinkDetachableJointFeature =
 +            this->entityLinkMap.EntityCast<DetachableJointFeatureList>(
 +                childLinkEntity);
 +        if (!childLinkDetachableJointFeature)
          {
-           static bool informed{false};
-           if (!informed)
-           {
--            gzerr << "Attempting to create a new joint [" <<_name->Data()
--                  << "] but the chosen physics engine does not support the "
--                  << "minimal joint features, so no joints will be created."
--                  << std::endl;
+-          gzwarn << "Cannot create a new link [" << _name->Data() << "] "
+-                 << "because the physics engine plugin does not support "
+-                 << "link construction during runtime" << std::endl;
+-          return true;
++          static bool informed{false};
++          if (!informed)
++          {
 +            gzerr << "Attempting to create a detachable joint, but the physics"
 +                   << " engine doesn't support feature "
 +                   << "[AttachFixedJointFeature]. Detachable joints will be "
 +                   << "ignored." << std::endl;
-             informed = true;
-           }
- 
--          // Skip all other attempts to create joints
++            informed = true;
++          }
++
 +          // Break Each call since no DetachableJoints can be processed
-           return false;
++          return false;
          }
  
--        if (const auto existingJoint =
--            basicModelPtrPhys->GetJoint(_name->Data()))
--        {
--          // No need to create this joint because it was already created when
--          // parsing the model.
--          this->entityJointMap.AddEntity(_entity, existingJoint);
--          this->topLevelModelMap.insert(
--            std::make_pair(_entity, topLevelModel(_entity, _ecm)));
--
+-        sdf::Link link;
+-        link.SetName(_name->Data());
+-        link.SetRawPose(_pose->Data());
+-        link.SetPoseRelativeTo("");
 +        const auto poseParent =
 +            parentLinkPhys->FrameDataRelativeToWorld().pose;
 +        const auto poseChild =
 +            childLinkDetachableJointFeature->FrameDataRelativeToWorld().pose;
-+
+ 
+-        if (this->staticEntities.find(_parent->Data()) !=
+-            this->staticEntities.end())
 +        // Pose of child relative to parent
 +        auto poseParentChild = poseParent.inverse() * poseChild;
 +        auto jointPtrPhys =
 +            childLinkDetachableJointFeature->AttachFixedJoint(parentLinkPhys);
 +        if (jointPtrPhys.Valid())
-+        {
+         {
+-          this->staticEntities.insert(_entity);
+-        }
 +          // We let the joint be at the origin of the child link.
 +          jointPtrPhys->SetTransformFromParent(poseParentChild);
-+
+ 
+-        // get link inertial
+-        auto inertial = _ecm.Component<components::Inertial>(_entity);
+-        if (inertial)
+-        {
+-          link.SetInertial(inertial->Data());
 +          gzdbg << "Creating detachable joint [" << _entity << "]"
 +                 << std::endl;
 +          this->entityJointMap.AddEntity(_entity, jointPtrPhys);
 +          this->topLevelModelMap.insert(std::make_pair(_entity,
 +              topLevelModel(_entity, _ecm)));
-+        }
+         }
+-
+-        // get link gravity
+-        const components::GravityEnabled *gravityEnabled =
+-            _ecm.Component<components::GravityEnabled>(_entity);
+-        if (nullptr != gravityEnabled)
 +        else
-+        {
+         {
+-          // gravityEnabled set in SdfEntityCreator::CreateEntities()
+-          link.SetEnableGravity(gravityEnabled->Data());
 +          gzerr << "DetachableJoint could not be created." << std::endl;
-+        }
+         }
 +        return true;
 +      });
-+
-+
+ 
+-        auto constructLinkFeature =
+-          this->entityModelMap.EntityCast<ConstructSdfLinkFeatureList>(
+-            _parent->Data());
+ 
+-        if (!constructLinkFeature)
 +}
 +  public:
 +/** @brief 处理接触面属性定制的启停组件。
@@ -3125,7 +2709,9 @@
 +      {
 +        const auto world = worldEntity(_entity, _ecm);
 +        if (_enable->Data())
-+        {
+         {
+-            static bool informed{false};
+-            if (!informed)
 +          if (this->customContactSurfaceEntities[world].empty())
 +          {
 +            this->EnableContactSurfaceCustomization(world);
@@ -3141,14 +2727,29 @@
 +            gzmsg << "Disabling contact surface customization for collision ["
 +                   << _name->Data() << "]" << std::endl;
 +            if (this->customContactSurfaceEntities[world].empty())
-+            {
+             {
+-              gzdbg << "Attempting to construct sdf link, but the "
+-                     << "physics engine doesn't support feature "
+-                     << "[ConstructSdfLinkFeature]." << std::endl;
+-              informed = true;
 +              this->DisableContactSurfaceCustomization(world);
-+            }
+             }
+-            return true;
 +          }
-+        }
-+        return true;
-+      });
-+}
+         }
+-
+-        auto linkPtrPhys = constructLinkFeature->ConstructLink(link);
+-        this->entityLinkMap.AddEntity(_entity, linkPtrPhys);
+-        this->topLevelModelMap.insert(std::make_pair(_entity,
+-            topLevelModel(_entity, _ecm)));
+-
+         return true;
+       });
+ }
+-
+-//////////////////////////////////////////////////
+-void PhysicsPrivate::CreateCollisionEntities(const EntityComponentManager &_ecm,
+-                                             bool _warnIfEntityExists)
 +  public:
 +/** @brief 配置已有关节轴的从动约束。
 + * @param _ecm 实体组件管理器。
@@ -3158,17 +2759,90 @@
 + * @param existingJoint 已存在的后端关节。
 + */
 +void ConfigureJointMimic(const EntityComponentManager& _ecm, const Entity& _entity, const components::Name* _name, const ModelEntityMap::PhysicsEntityPtr<JointFeatureList>& basicModelPtrPhys, const EntityJointMap::RequiredEntityPtr& existingJoint)
-+{
-           // Check if mimic constraint should be applied to this joint's axes.
-           using AxisIndex = std::size_t;
-           std::map<AxisIndex, sdf::JointAxis> jointAxisByIndex;
-@@ -1915,9 +3015,22 @@
-             }
-           }
- 
+ {
+-  _ecm.EachNew<components::Collision, components::Name, components::Pose,
+-            components::Geometry, components::CollisionElement,
+-            components::ParentEntity>(
+-      [&](const Entity &_entity,
+-          const components::Collision *,
+-          const components::Name *_name,
+-          const components::Pose *_pose,
+-          const components::Geometry *_geom,
+-          const components::CollisionElement *_collElement,
+-          const components::ParentEntity *_parent) -> bool
+-      {
+-        // Check to see if this collision's parent is a link that was
+-        // not created because the parent model is marked for recreation.
+-        if (this->linkAddedToModel.find(_parent->Data()) !=
+-            this->linkAddedToModel.end())
+-        {
 -          return true;
 -        }
--
++          // Check if mimic constraint should be applied to this joint's axes.
++          using AxisIndex = std::size_t;
++          std::map<AxisIndex, sdf::JointAxis> jointAxisByIndex;
++          auto jointAxis = _ecm.Component<components::JointAxis>(_entity);
++          auto jointAxis2 = _ecm.Component<components::JointAxis2>(_entity);
+ 
+-        if (this->entityCollisionMap.HasEntity(_entity))
+-        {
+-          if (_warnIfEntityExists)
++          if (jointAxis)
+           {
+-            gzwarn << "Collision entity [" << _entity
+-                    << "] marked as new, but it's already on the map."
+-                    << std::endl;
++            jointAxisByIndex[0] = jointAxis->Data();
+           }
+-          return true;
+-        }
+ 
+-        // Check if parent link exists
+-        if (!this->entityLinkMap.HasEntity(_parent->Data()))
++          if (jointAxis2)
++          {
++            jointAxisByIndex[1] = jointAxis2->Data();
++          }
++
++          for (const auto &[axisIndex, axis] : jointAxisByIndex)
++          {
++            if (auto mimic = axis.Mimic())
++            {
++              auto jointPtrMimic = this->entityJointMap
++                  .EntityCast<MimicConstraintJointFeatureList>(existingJoint);
++              if (jointPtrMimic)
++              {
++                const auto leaderJoint =
++                    basicModelPtrPhys->GetJoint(mimic->Joint());
++                std::size_t leaderAxis = 0;
++                if (mimic->Axis() == "axis2")
++                {
++                  leaderAxis = 1;
++                }
++                jointPtrMimic->SetMimicConstraint(axisIndex,
++                    leaderJoint,
++                    leaderAxis,
++                    mimic->Multiplier(),
++                    mimic->Offset(),
++                    mimic->Reference());
++              }
++              else
++              {
++                static bool informed{false};
++                if (!informed)
++                {
++                  gzerr << "Attempting to create a mimic constraint for joint ["
++                        << _name->Data()
++                        << "] but the chosen physics engine does not support "
++                        << "mimic constraints, so no constraint will be "
++                        << "created."
++                        << std::endl;
++                  informed = true;
++                }
++              }
++            }
++          }
++
 +
 +}
 +  public:
@@ -3185,25 +2859,76 @@
 + */
 +void ConstructRuntimeJoint(const EntityComponentManager& _ecm, const Entity& _entity, const components::Name* _name, const components::JointType* _jointType, const components::Pose* _pose, const components::ThreadPitch* _threadPitch, const components::ParentEntity* _parentModel, const components::ParentLinkName* _parentLinkName, const components::ChildLinkName* _childLinkName)
 +{
-         auto modelPtrPhys =
-             this->entityModelMap.EntityCast<ConstructSdfJointFeatureList>(
-                 _parentModel->Data());
-@@ -1926,7 +3039,7 @@
-           gzerr << "Attempting to create a new joint [" << _name->Data()
-                 << "], but the physics engine doesn't support constructing "
-                 << "joints at runtime." << std::endl;
++        auto modelPtrPhys =
++            this->entityModelMap.EntityCast<ConstructSdfJointFeatureList>(
++                _parentModel->Data());
++        if (!modelPtrPhys)
+         {
+-          gzwarn << "Collision's parent entity [" << _parent->Data()
+-                  << "] not found on link map." << std::endl;
 -          return true;
++          gzerr << "Attempting to create a new joint [" << _name->Data()
++                << "], but the physics engine doesn't support constructing "
++                << "joints at runtime." << std::endl;
 +          return;
          }
+-        auto linkPtrPhys = this->entityLinkMap.Get(_parent->Data());
  
-         sdf::Joint joint;
-@@ -1960,20 +3073,958 @@
-           this->topLevelModelMap.insert(std::make_pair(_entity,
-               topLevelModel(_entity, _ecm)));
+-        if (const auto existingShape = linkPtrPhys->GetShape(_name->Data()))
++        sdf::Joint joint;
++        joint.SetName(_name->Data());
++        joint.SetType(_jointType->Data());
++        joint.SetRawPose(_pose->Data());
++        joint.SetThreadPitch(_threadPitch->Data());
++
++        joint.SetParentName(_parentLinkName->Data());
++        joint.SetChildName(_childLinkName->Data());
++
++        auto jointAxis = _ecm.Component<components::JointAxis>(_entity);
++        auto jointAxis2 = _ecm.Component<components::JointAxis2>(_entity);
++
++        // Since we're making copies of the joint axes that were created using
++        // `Model::Load`, frame semantics should work for resolving their xyz
++        // axis
++        if (jointAxis)
++          joint.SetAxis(0, jointAxis->Data());
++        if (jointAxis2)
++          joint.SetAxis(1, jointAxis2->Data());
++
++        // Use the parent link's parent model as the model of this joint
++        auto jointPtrPhys = modelPtrPhys->ConstructJoint(joint);
++
++        if (jointPtrPhys.Valid())
+         {
+-          // No need to create this collision shape because it was already
+-          // created when parsing the model.
+-          auto linkCollisionFeature =
+-              this->entityLinkMap.EntityCast<CollisionFeatureList>(
+-                  _parent->Data());
+-          this->entityCollisionMap.AddEntity(
+-            _entity, linkCollisionFeature->GetShape(_name->Data()));
+-          this->topLevelModelMap.insert(
+-            std::make_pair(_entity, topLevelModel(_entity, _ecm)));
+-          return true;
++          // Some joints may not be supported, so only add them to the map if
++          // the physics entity is valid
++          this->entityJointMap.AddEntity(_entity, jointPtrPhys);
++          this->topLevelModelMap.insert(std::make_pair(_entity,
++              topLevelModel(_entity, _ecm)));
          }
-+
+ 
+-        // Make a copy of the collision DOM so we can set its pose which has
+-        // been resolved and is now expressed w.r.t the parent link of the
+-        // collision.
+-        sdf::Collision collision = _collElement->Data();
+-        collision.SetRawPose(_pose->Data());
+-        collision.SetPoseRelativeTo("");
+-        auto collideBitmask = collision.Surface()->Contact()->CollideBitmask();
 +}
-+
+ 
+-        ShapePtrType collisionPtrPhys;
+-        if (_geom->Data().Type() == sdf::GeometryType::MESH)
+-        {
 +  public:
 +/** @brief 读取高度图图像或带球面坐标的地形数据。
 + * @param _ecm 实体组件管理器。
@@ -3263,37 +2988,37 @@
 + */
 +bool AttachCollisionMesh(const components::Name* _name, const components::Pose* _pose, const components::Geometry* _geom, const components::ParentEntity* _parent, ShapePtrType& collisionPtrPhys)
 +{
-+          const sdf::Mesh *meshSdf = _geom->Data().MeshShape();
-+          if (nullptr == meshSdf)
-+          {
-+            gzwarn << "Mesh geometry for collision [" << _name->Data()
-+                    << "] missing mesh shape." << std::endl;
+           const sdf::Mesh *meshSdf = _geom->Data().MeshShape();
+           if (nullptr == meshSdf)
+           {
+             gzwarn << "Mesh geometry for collision [" << _name->Data()
+                     << "] missing mesh shape." << std::endl;
+-            return true;
 +            return false;
-+          }
-+
-+          const common::Mesh *mesh = loadMesh(*meshSdf);
-+          if (!mesh)
+           }
+ 
+           const common::Mesh *mesh = loadMesh(*meshSdf);
+           if (!mesh)
+-            return true;
 +            return false;
-+
-+          auto linkMeshFeature =
-+              this->entityLinkMap.EntityCast<MeshFeatureList>(_parent->Data());
-+          if (!linkMeshFeature)
-+          {
-+            static bool informed{false};
-+            if (!informed)
-+            {
-+              gzdbg << "Attempting to process mesh geometries, but the physics"
-+                     << " engine doesn't support feature "
-+                     << "[AttachMeshShapeFeature]. Meshes will be ignored."
-+                     << std::endl;
-+              informed = true;
-+            }
+ 
+           auto linkMeshFeature =
+               this->entityLinkMap.EntityCast<MeshFeatureList>(_parent->Data());
+@@ -1585,16 +3163,26 @@
+                      << std::endl;
+               informed = true;
+             }
+-            return true;
 +            return false;
-+          }
-+
-+          collisionPtrPhys = linkMeshFeature->AttachMeshShape(_name->Data(),
-+              *mesh,
-+              math::eigen3::convert(_pose->Data()),
+           }
+ 
+           collisionPtrPhys = linkMeshFeature->AttachMeshShape(_name->Data(),
+               *mesh,
+               math::eigen3::convert(_pose->Data()),
+-              math::eigen3::convert(meshSdf->Scale()));
+-        }
+-        else if (_geom->Data().Type() == sdf::GeometryType::HEIGHTMAP)
+-        {
 +              math::eigen3::convert(meshSdf->Scale())); return true;
 +
 +}
@@ -3308,46 +3033,84 @@
 + */
 +bool AttachCollisionHeightmap(const EntityComponentManager& _ecm, const components::Name* _name, const components::Pose* _pose, const components::Geometry* _geom, const components::ParentEntity* _parent, ShapePtrType& collisionPtrPhys)
 +{
-+          auto linkHeightmapFeature =
-+              this->entityLinkMap.EntityCast<HeightmapFeatureList>(
-+                  _parent->Data());
-+          if (!linkHeightmapFeature)
-+          {
-+            static bool informed{false};
-+            if (!informed)
-+            {
-+              gzdbg << "Attempting to process heightmap geometries, but the "
-+                     << "physics engine doesn't support feature "
-+                     << "[AttachHeightmapShapeFeature]. Heightmaps will be "
-+                     << "ignored." << std::endl;
-+              informed = true;
-+            }
+           auto linkHeightmapFeature =
+               this->entityLinkMap.EntityCast<HeightmapFeatureList>(
+                   _parent->Data());
+@@ -1609,7 +3197,7 @@
+                      << "ignored." << std::endl;
+               informed = true;
+             }
+-            return true;
 +            return false;
-+          }
-+
-+          auto heightmapSdf = _geom->Data().HeightmapShape();
-+          if (nullptr == heightmapSdf)
-+          {
-+            gzwarn << "Heightmap geometry for collision [" << _name->Data()
-+                    << "] missing heightmap shape." << std::endl;
+           }
+ 
+           auto heightmapSdf = _geom->Data().HeightmapShape();
+@@ -1617,7 +3205,7 @@
+           {
+             gzwarn << "Heightmap geometry for collision [" << _name->Data()
+                     << "] missing heightmap shape." << std::endl;
+-            return true;
 +            return false;
-+          }
-+
-+          auto fullPath = common::findFile(asFullPath(heightmapSdf->Uri(),
-+              heightmapSdf->FilePath()));
-+          if (fullPath.empty())
-+          {
-+            gzerr << "Heightmap geometry missing URI" << std::endl;
+           }
+ 
+           auto fullPath = common::findFile(asFullPath(heightmapSdf->Uri(),
+@@ -1625,63 +3213,35 @@
+           if (fullPath.empty())
+           {
+             gzerr << "Heightmap geometry missing URI" << std::endl;
+-            return true;
 +            return false;
-+          }
-+
-+          std::shared_ptr<common::HeightmapData> data;
+           }
+ 
+           std::shared_ptr<common::HeightmapData> data;
+-          std::string lowerFullPath = common::lowercase(fullPath);
+-          // check if heightmap is an image
+-          if (common::EndsWith(lowerFullPath, ".png")
+-              || common::EndsWith(lowerFullPath, ".jpg")
+-              || common::EndsWith(lowerFullPath, ".jpeg"))
+-          {
+-            auto img = std::make_shared<common::ImageHeightmap>();
+-            if (img->Load(fullPath) < 0)
+-            {
+-              gzerr << "Failed to load heightmap image data from ["
+-                     << fullPath << "]" << std::endl;
+-              return true;
+-            }
+-            data = img;
+-          }
+-          // DEM
+-          else
+-          {
+-            auto worldEntity = _ecm.EntityByComponents(components::World());
+-            auto sphericalCoordinatesComponent =
+-              _ecm.Component<components::SphericalCoordinates>(
+-                worldEntity);
+-
+-            auto dem = std::make_shared<common::Dem>();
+-            if (sphericalCoordinatesComponent)
+-            {
+-              dem->SetSphericalCoordinates(
+-                  sphericalCoordinatesComponent->Data());
+-            }
+-            if (dem->Load(fullPath) < 0)
+-            {
+-              gzerr << "Failed to load heightmap dem data from ["
+-                     << fullPath << "]" << std::endl;
+-              return true;
+-            }
+-            data = dem;
+-          }
+-
 +          if(!LoadCollisionHeightData(_ecm,fullPath,data))return false;
-+          collisionPtrPhys = linkHeightmapFeature->AttachHeightmapShape(
-+              _name->Data(),
-+              *data,
-+              math::eigen3::convert(_pose->Data()),
-+              math::eigen3::convert(heightmapSdf->Size()),
+           collisionPtrPhys = linkHeightmapFeature->AttachHeightmapShape(
+               _name->Data(),
+               *data,
+               math::eigen3::convert(_pose->Data()),
+               math::eigen3::convert(heightmapSdf->Size()),
+-              heightmapSdf->Sampling());
+-        }
+-        else if (_geom->Data().Type() == sdf::GeometryType::POLYLINE)
+-        {
 +              heightmapSdf->Sampling()); return true;
 +
 +}
@@ -3361,51 +3124,39 @@
 + */
 +bool AttachCollisionPolyline(const components::Name* _name, const components::Pose* _pose, const components::Geometry* _geom, const components::ParentEntity* _parent, ShapePtrType& collisionPtrPhys)
 +{
-+          auto polylineSdf = _geom->Data().PolylineShape();
-+          if (polylineSdf.empty())
-+          {
-+            gzwarn << "Polyline geometry for collision [" << _name->Data()
-+                    << "] missing polylines." << std::endl;
+           auto polylineSdf = _geom->Data().PolylineShape();
+           if (polylineSdf.empty())
+           {
+             gzwarn << "Polyline geometry for collision [" << _name->Data()
+                     << "] missing polylines." << std::endl;
+-            return true;
 +            return false;
-+          }
-+
-+          std::vector<std::vector<math::Vector2d>> vertices;
-+          for (const auto &polyline : _geom->Data().PolylineShape())
-+          {
-+            vertices.push_back(polyline.Points());
-+          }
-+
-+          std::string name("POLYLINE_" + common::Uuid().String());
-+          auto meshManager = common::MeshManager::Instance();
-+          meshManager->CreateExtrudedPolyline(name, vertices,
-+              _geom->Data().PolylineShape()[0].Height());
-+
-+          auto polyline = meshManager->MeshByName(name);
-+          if (nullptr == polyline)
-+          {
-+            gzwarn << "Failed to create polyline for collision ["
-+                    << _name->Data() << "]." << std::endl;
+           }
+ 
+           std::vector<std::vector<math::Vector2d>> vertices;
+@@ -1700,7 +3260,7 @@
+           {
+             gzwarn << "Failed to create polyline for collision ["
+                     << _name->Data() << "]." << std::endl;
+-            return true;
 +            return false;
-+          }
-+
-+          auto linkMeshFeature =
-+              this->entityLinkMap.EntityCast<MeshFeatureList>(_parent->Data());
-+          if (!linkMeshFeature)
-+          {
-+            static bool informed{false};
-+            if (!informed)
-+            {
-+              gzdbg << "Attempting to process polyline geometries, but the"
-+                     << " physics engine doesn't support feature "
-+                     << "[AttachMeshShapeFeature]. Polylines will be ignored."
-+                     << std::endl;
-+              informed = true;
-+            }
+           }
+ 
+           auto linkMeshFeature =
+@@ -1716,15 +3276,22 @@
+                      << std::endl;
+               informed = true;
+             }
+-            return true;
 +            return false;
-+          }
-+
-+          collisionPtrPhys = linkMeshFeature->AttachMeshShape(_name->Data(),
-+              *polyline,
+           }
+ 
+           collisionPtrPhys = linkMeshFeature->AttachMeshShape(_name->Data(),
+               *polyline,
+-              math::eigen3::convert(_pose->Data()));
+-        }
+-        else
+-        {
 +              math::eigen3::convert(_pose->Data())); return true;
 +
 +}
@@ -3417,24 +3168,19 @@
 + */
 +bool AttachPrimitiveCollision(const components::ParentEntity* _parent, const sdf::Collision& collision, ShapePtrType& collisionPtrPhys)
 +{
-+          auto linkCollisionFeature =
-+              this->entityLinkMap.EntityCast<CollisionFeatureList>(
-+                  _parent->Data());
-+          if (!linkCollisionFeature)
-+          {
-+            static bool informed{false};
-+            if (!informed)
-+            {
-+              gzdbg << "Attempting to process collisions, but the physics "
-+                     << "engine doesn't support feature "
-+                     << "[ConstructSdfCollision]. Collisions will be ignored."
-+                     << std::endl;
-+              informed = true;
-+            }
+           auto linkCollisionFeature =
+               this->entityLinkMap.EntityCast<CollisionFeatureList>(
+                   _parent->Data());
+@@ -1739,23 +3306,213 @@
+                      << std::endl;
+               informed = true;
+             }
+-            return true;
 +            return false;
-+          }
-+
-+          collisionPtrPhys =
+           }
+ 
+           collisionPtrPhys =
+-              linkCollisionFeature->ConstructCollision(collision);
 +              linkCollisionFeature->ConstructCollision(collision); return true;
 +
 +}
@@ -3465,8 +3211,9 @@
 +        else
 +        {
 +          if(!AttachPrimitiveCollision(_parent,collision,collisionPtrPhys))return false;
-+        }
-+
+         }
+ 
+-        if (nullptr == collisionPtrPhys)
 + return true;
 +
 +}
@@ -3509,7 +3256,10 @@
 +        // If contacts have changed, first clear data then add contacts
 +        _contacts->Data().Clear();
 +        for (const auto &[collEntity2, contactData] : contactMap)
-+        {
+         {
+-          gzdbg << "Failed to create collision [" << _name->Data()
+-                 << "]. Does the physics engine support geometries of type ["
+-                 << static_cast<int>(_geom->Data().Type()) << "]?" << std::endl;
 +          msgs::Contact *contactMsg = _contacts->Data().add_contact();
 +          contactMsg->mutable_collision1()->set_id(_collEntity1);
 +          contactMsg->mutable_collision2()->set_id(collEntity2);
@@ -3586,9 +3336,10 @@
 +            ComponentState::NoChange;
 +          _ecm.SetChanged(
 +            _collEntity1, components::ContactSensorData::typeId, state);
-+          return true;
-+        }
-+
+           return true;
+         }
+ 
+-        this->entityCollisionMap.AddEntity(_entity, collisionPtrPhys);
 +        const auto &contactMap = contactMapIt->second;
 +
 +        bool changed = !this->contactsEql(_contacts->Data(), contactMap);
@@ -3603,13 +3354,10 @@
 +        {
 +          return true;
 +        }
-+
+ 
 +  this->WriteContactMessages(_ecm, _collEntity1, _contacts, contactMap);
-         return true;
-       });
--
--  // Detachable joints
--  _ecm.EachNew<components::DetachableJoint>(
++        return true;
++      });
 +}
 +
 +  public:
@@ -3641,27 +3389,15 @@
 + */
 +void SetInitialCollisionMask(const Entity& _entity, uint16_t collideBitmask)
 +{
-+        // Check that the physics engine has a filter mask feature
-+        // Set the collide_bitmask if it does
-+        auto filterMaskFeature =
-+            this->entityCollisionMap.EntityCast<CollisionMaskFeatureList>(
-+                _entity);
-+        if (filterMaskFeature)
-+        {
-+          filterMaskFeature->SetCollisionFilterMask(collideBitmask);
-+        }
-+        else
-+        {
-+          static bool informed{false};
-+          if (!informed)
-+          {
-+            gzdbg << "Attempting to set collision bitmasks, but the physics "
-+                   << "engine doesn't support feature [CollisionFilterMask]. "
-+                   << "Collision bitmasks will be ignored." << std::endl;
-+            informed = true;
-+          }
-+        }
-+
+         // Check that the physics engine has a filter mask feature
+         // Set the collide_bitmask if it does
+         auto filterMaskFeature =
+@@ -1777,203 +3534,541 @@
+           }
+         }
+ 
+-        this->topLevelModelMap.insert(std::make_pair(_entity,
+-            topLevelModel(_entity, _ecm)));
 +
 +}
 +
@@ -3676,6 +3412,46 @@
 +}
 +
 +//////////////////////////////////////////////////
++
++/** @brief 验证接触回正数值范围；不代表材料力学参数。
++ * @param erp 每步修正比例，范围 (0, 1]。
++ * @param velocity 最大法向回正速度，范围 (0, 1] m/s。
++ * @return 两个参数均有限且在范围内时为 true。
++ */
++bool ValidContactCorrection(double erp, double velocity)
++{
++  return std::isfinite(erp) && std::isfinite(velocity) &&
++         erp > 0 && erp <= 1 && velocity > 0 && velocity <= 1;
++}
++
++/** @brief 配置 DART 进程级接触数值回正；无显式配置时保持上游默认值。
++ * @param sdf 物理插件配置，两个数值必须同时给定且在有效范围内。
++ * @throws std::invalid_argument 非有限/越界设置或同进程的冲突设置。
++ * @note DART 6.13.2 只有静态设置接口，不能冒充逐材料刚度。
++ */
++void ConfigureContactCorrection(const std::shared_ptr<const sdf::Element> &sdf)
++{
++  if (!sdf->HasElement("rigid_contact_erp") &&
++      !sdf->HasElement("rigid_contact_max_correction_velocity")) return;
++  const double erp = sdf->Get<double>("rigid_contact_erp", -1).first;
++  const double velocity = sdf->Get<double>("rigid_contact_max_correction_velocity", -1).first;
++  if (!ValidContactCorrection(erp, velocity))
++    throw std::invalid_argument("Invalid explicit DART contact correction settings");
++  static std::mutex mutex;
++  static std::optional<std::pair<double, double>> configured;
++  const std::lock_guard<std::mutex> lock(mutex);
++  const auto requested = std::make_pair(erp, velocity);
++  if (configured && *configured != requested)
++    throw std::invalid_argument("Conflicting process-wide DART contact settings");
++  configured = requested;
++  dart::constraint::ContactConstraint::setErrorReductionParameter(erp);
++  dart::constraint::ContactConstraint::setMaxErrorReductionVelocity(velocity);
++  gzmsg << "DART rigid contact ERP="
++        << dart::constraint::ContactConstraint::getErrorReductionParameter()
++        << " correction_limit_m_s="
++        << dart::constraint::ContactConstraint::getMaxErrorReductionVelocity()
++        << " (process-wide numerical settings)" << std::endl;
++}
 +
 +/** @brief 加载物理后端并设置世界与事件接口。
 + * @param _entity 当前操作的仿真实体标识。
@@ -3730,6 +3506,7 @@
 +  }
 +
 +  if(!this->dataPtr->LoadEnginePlugin(pluginLib))return;
++  ConfigureContactCorrection(_sdf);
 +  this->dataPtr->eventManager = &_eventMgr;
 +}
 +
@@ -3818,15 +3595,7 @@
 +{
 +  // Get all the new worlds
 +  _ecm.EachNew<components::World, components::Name, components::Gravity>(
-       [&](const Entity &_entity,
--          const components::DetachableJoint *_jointInfo) -> bool
--      {
--        if (_jointInfo->Data().jointType != "fixed")
--        {
--          gzerr << "Detachable joint type [" << _jointInfo->Data().jointType
--                 << "] is currently not supported" << std::endl;
--          return true;
--        }
++      [&](const Entity &_entity,
 +        const components::World * /* _world */,
 +        const components::Name *_name,
 +        const components::Gravity *_gravity)->bool
@@ -3861,25 +3630,36 @@
 +          this->entityModelMap.AddEntity(_entity, modelPtrPhys);
 +        }
 +
-+        return true;
-+      });
-+}
-+
-+//////////////////////////////////////////////////
+         return true;
+       });
+ }
+ 
+ //////////////////////////////////////////////////
+-void PhysicsPrivate::CreateJointEntities(const EntityComponentManager &_ecm,
 +
 +/** @brief 创建模型并建立实体与后端模型映射。
 + * @param _ecm 仿真实体组件管理器，读写权限由参数类型限定。
 + * @param _warnIfEntityExists 是否对已经存在的后端实体发出警告。
 + */
 +void PhysicsPrivate::CreateModelEntities(const EntityComponentManager &_ecm,
-+                                         bool _warnIfEntityExists)
-+{
+                                          bool _warnIfEntityExists)
+ {
+-  _ecm.EachNew<components::Joint, components::Name, components::JointType,
+-               components::Pose, components::ThreadPitch,
+-               components::ParentEntity, components::ParentLinkName,
+-               components::ChildLinkName>(
 +  _ecm.EachNew<components::Model, components::Name, components::Pose,
 +            components::ParentEntity>(
-+      [&](const Entity &_entity,
+       [&](const Entity &_entity,
+-          const components::Joint * /* _joint */,
 +          const components::Model *,
-+          const components::Name *_name,
-+          const components::Pose *_pose,
+           const components::Name *_name,
+-          const components::JointType *_jointType,
+           const components::Pose *_pose,
+-          const components::ThreadPitch *_threadPitch,
+-          const components::ParentEntity *_parentModel,
+-          const components::ParentLinkName *_parentLinkName,
+-          const components::ChildLinkName *_childLinkName) -> bool
 +          const components::ParentEntity *_parent)->bool
 +      {
 +        if (_ecm.EntityHasComponentType(_entity, components::Recreate::typeId))
@@ -3949,57 +3729,98 @@
 +        const components::Name *_name,
 +        const components::Pose *_pose,
 +        const components::ParentEntity *_parent)->bool
-+      {
-+        // If the parent model is scheduled for recreation, then do not
+       {
+         // If the parent model is scheduled for recreation, then do not
+-        // try to create a new joint. This situation can occur when a joint
 +        // try to create a new link. This situation can occur when a link
-+        // is added to a model from the GUI model editor.
+         // is added to a model from the GUI model editor.
+-        if (_ecm.EntityHasComponentType(_parentModel->Data(),
 +        if (_ecm.EntityHasComponentType(_parent->Data(),
-+              components::Recreate::typeId))
-+        {
+               components::Recreate::typeId))
+         {
+-          // Add this entity to the set of newly added joints to existing
 +          // Add this entity to the set of newly added links to existing
-+          // models.
+           // models.
+-          this->jointAddedToModel.insert(_entity);
 +          this->linkAddedToModel.insert(_entity);
-+          return true;
-+        }
-+
+           return true;
+         }
+ 
+-        // Check if joint already exists
+-        if (this->entityJointMap.HasEntity(_entity))
 +        // Check if link already exists
 +        if (this->entityLinkMap.HasEntity(_entity))
-+        {
-+          if (_warnIfEntityExists)
-+          {
+         {
+           if (_warnIfEntityExists)
+           {
+-            gzwarn << "Joint entity [" << _entity
 +            gzwarn << "Link entity [" << _entity
-+                    << "] marked as new, but it's already on the map."
-+                    << std::endl;
-+          }
-+          return true;
-+        }
-+
+                     << "] marked as new, but it's already on the map."
+                     << std::endl;
+           }
+           return true;
+         }
+ 
 +        // TODO(anyone) Don't load links unless they have collisions
 +
-+        // Check if parent model exists
+         // Check if parent model exists
+-        if (!this->entityModelMap.HasEntity(_parentModel->Data()))
 +        if (!this->entityModelMap.HasEntity(_parent->Data()))
-+        {
+         {
+-          gzerr << "Joint's parent model entity [" << _parentModel->Data()
 +          gzwarn << "Link's parent entity [" << _parent->Data()
-+                  << "] not found on model map." << std::endl;
-+          return true;
-+        }
+                   << "] not found on model map." << std::endl;
+           return true;
+         }
 +        auto basicModelPtrPhys = this->entityModelMap.Get(_parent->Data());
-+
+ 
+-        auto basicModelPtrPhys = this->entityModelMap
+-            .EntityCast<JointFeatureList>(_parentModel->Data());
+-        if (!basicModelPtrPhys)
+-        {
+-          static bool informed{false};
+-          if (!informed)
+-          {
+-            gzerr << "Attempting to create a new joint [" <<_name->Data()
+-                  << "] but the chosen physics engine does not support the "
+-                  << "minimal joint features, so no joints will be created."
+-                  << std::endl;
+-            informed = true;
+-          }
+-
+-          // Skip all other attempts to create joints
+-          return false;
+-        }
+-
+-        if (const auto existingJoint =
+-            basicModelPtrPhys->GetJoint(_name->Data()))
 +        if (const auto existingLink = basicModelPtrPhys->GetLink(_name->Data()))
-+        {
+         {
+-          // No need to create this joint because it was already created when
+-          // parsing the model.
+-          this->entityJointMap.AddEntity(_entity, existingJoint);
 +          // No need to create this link because it was already created when
 +          // parsing the model (links in models are required to have unique
 +          // names). Instead we will register its existence and move along.
 +          this->entityLinkMap.AddEntity(_entity, existingLink);
-+          this->topLevelModelMap.insert(
-+            std::make_pair(_entity, topLevelModel(_entity, _ecm)));
+           this->topLevelModelMap.insert(
+             std::make_pair(_entity, topLevelModel(_entity, _ecm)));
 +          return true;
 +        }
-+
+ 
+-          // Check if mimic constraint should be applied to this joint's axes.
+-          using AxisIndex = std::size_t;
+-          std::map<AxisIndex, sdf::JointAxis> jointAxisByIndex;
+-          auto jointAxis = _ecm.Component<components::JointAxis>(_entity);
+-          auto jointAxis2 = _ecm.Component<components::JointAxis2>(_entity);
 +        auto modelPtrPhys =
 +            this->entityModelMap
 +              .EntityCast<ConstructSdfLinkFeatureList>(_parent->Data());
-+
+ 
+-          if (jointAxis)
+-          {
+-            jointAxisByIndex[0] = jointAxis->Data();
+-          }
 +        if (!modelPtrPhys)
 +        {
 +          gzwarn << "Cannot create a new link [" << _name->Data() << "] "
@@ -4007,12 +3828,19 @@
 +                 << "link construction during runtime" << std::endl;
 +          return true;
 +        }
-+
+ 
+-          if (jointAxis2)
+-          {
+-            jointAxisByIndex[1] = jointAxis2->Data();
+-          }
 +        sdf::Link link;
 +        link.SetName(_name->Data());
 +        link.SetRawPose(_pose->Data());
 +        link.SetPoseRelativeTo("");
-+
+ 
+-          for (const auto &[axisIndex, axis] : jointAxisByIndex)
+-          {
+-            if (auto mimic = axis.Mimic())
 +  this->PopulateLinkProperties(_ecm, _entity, _parent, link);
 +        auto constructLinkFeature =
 +          this->entityModelMap.EntityCast<ConstructSdfLinkFeatureList>(
@@ -4022,15 +3850,48 @@
 +        {
 +            static bool informed{false};
 +            if (!informed)
-+            {
+             {
+-              auto jointPtrMimic = this->entityJointMap
+-                  .EntityCast<MimicConstraintJointFeatureList>(existingJoint);
+-              if (jointPtrMimic)
+-              {
+-                const auto leaderJoint =
+-                    basicModelPtrPhys->GetJoint(mimic->Joint());
+-                std::size_t leaderAxis = 0;
+-                if (mimic->Axis() == "axis2")
+-                {
+-                  leaderAxis = 1;
+-                }
+-                jointPtrMimic->SetMimicConstraint(axisIndex,
+-                    leaderJoint,
+-                    leaderAxis,
+-                    mimic->Multiplier(),
+-                    mimic->Offset(),
+-                    mimic->Reference());
+-              }
+-              else
+-              {
+-                static bool informed{false};
+-                if (!informed)
+-                {
+-                  gzerr << "Attempting to create a mimic constraint for joint ["
+-                        << _name->Data()
+-                        << "] but the chosen physics engine does not support "
+-                        << "mimic constraints, so no constraint will be "
+-                        << "created."
+-                        << std::endl;
+-                  informed = true;
+-                }
+-              }
 +              gzdbg << "Attempting to construct sdf link, but the "
 +                     << "physics engine doesn't support feature "
 +                     << "[ConstructSdfLinkFeature]." << std::endl;
 +              informed = true;
-+            }
+             }
+-          }
 +            return true;
 +        }
-+
+ 
 +        auto linkPtrPhys = constructLinkFeature->ConstructLink(link);
 +        this->entityLinkMap.AddEntity(_entity, linkPtrPhys);
 +        this->topLevelModelMap.insert(std::make_pair(_entity,
@@ -4065,20 +3926,38 @@
 +        if (this->linkAddedToModel.find(_parent->Data()) !=
 +            this->linkAddedToModel.end())
 +        {
-+          return true;
-+        }
-+
+           return true;
+         }
+ 
+-        auto modelPtrPhys =
+-            this->entityModelMap.EntityCast<ConstructSdfJointFeatureList>(
+-                _parentModel->Data());
+-        if (!modelPtrPhys)
 +        if (this->entityCollisionMap.HasEntity(_entity))
-+        {
+         {
+-          gzerr << "Attempting to create a new joint [" << _name->Data()
+-                << "], but the physics engine doesn't support constructing "
+-                << "joints at runtime." << std::endl;
 +          if (_warnIfEntityExists)
 +          {
 +            gzwarn << "Collision entity [" << _entity
 +                    << "] marked as new, but it's already on the map."
 +                    << std::endl;
 +          }
-+          return true;
-+        }
-+
+           return true;
+         }
+ 
+-        sdf::Joint joint;
+-        joint.SetName(_name->Data());
+-        joint.SetType(_jointType->Data());
+-        joint.SetRawPose(_pose->Data());
+-        joint.SetThreadPitch(_threadPitch->Data());
+-
+-        joint.SetParentName(_parentLinkName->Data());
+-        joint.SetChildName(_childLinkName->Data());
+-
+-        auto jointAxis = _ecm.Component<components::JointAxis>(_entity);
+-        auto jointAxis2 = _ecm.Component<components::JointAxis2>(_entity);
 +        // Check if parent link exists
 +        if (!this->entityLinkMap.HasEntity(_parent->Data()))
 +        {
@@ -4087,7 +3966,14 @@
 +          return true;
 +        }
 +        auto linkPtrPhys = this->entityLinkMap.Get(_parent->Data());
-+
+ 
+-        // Since we're making copies of the joint axes that were created using
+-        // `Model::Load`, frame semantics should work for resolving their xyz
+-        // axis
+-        if (jointAxis)
+-          joint.SetAxis(0, jointAxis->Data());
+-        if (jointAxis2)
+-          joint.SetAxis(1, jointAxis2->Data());
 +        if (const auto existingShape = linkPtrPhys->GetShape(_name->Data()))
 +        {
 +          // No need to create this collision shape because it was already
@@ -4101,7 +3987,9 @@
 +            std::make_pair(_entity, topLevelModel(_entity, _ecm)));
 +          return true;
 +        }
-+
+ 
+-        // Use the parent link's parent model as the model of this joint
+-        auto jointPtrPhys = modelPtrPhys->ConstructJoint(joint);
 +        // Make a copy of the collision DOM so we can set its pose which has
 +        // been resolved and is now expressed w.r.t the parent link of the
 +        // collision.
@@ -4109,26 +3997,34 @@
 +        collision.SetRawPose(_pose->Data());
 +        collision.SetPoseRelativeTo("");
 +        auto collideBitmask = collision.Surface()->Contact()->CollideBitmask();
-+
+ 
+-        if (jointPtrPhys.Valid())
 +        ShapePtrType collisionPtrPhys;
 +        if(!AttachCollisionGeometry(_ecm,_name,_pose,_geom,_parent,collision,collisionPtrPhys))return true;
 +        if (nullptr == collisionPtrPhys)
-+        {
+         {
+-          // Some joints may not be supported, so only add them to the map if
+-          // the physics entity is valid
+-          this->entityJointMap.AddEntity(_entity, jointPtrPhys);
+-          this->topLevelModelMap.insert(std::make_pair(_entity,
+-              topLevelModel(_entity, _ecm)));
 +          gzdbg << "Failed to create collision [" << _name->Data()
 +                 << "]. Does the physics engine support geometries of type ["
 +                 << static_cast<int>(_geom->Data().Type()) << "]?" << std::endl;
 +          return true;
-+        }
+         }
 +
 +        this->entityCollisionMap.AddEntity(_entity, collisionPtrPhys);
 +
 +  this->SetInitialCollisionMask(_entity, collideBitmask);
 +        this->topLevelModelMap.insert(std::make_pair(_entity,
 +            topLevelModel(_entity, _ecm)));
-+        return true;
-+      });
+         return true;
+       });
 +}
-+
+ 
+-  // Detachable joints
+-  _ecm.EachNew<components::DetachableJoint>(
 +//////////////////////////////////////////////////
 +
 +/** @brief 创建关节及其父子刚体连接。
@@ -4142,7 +4038,8 @@
 +               components::Pose, components::ThreadPitch,
 +               components::ParentEntity, components::ParentLinkName,
 +               components::ChildLinkName>(
-+      [&](const Entity &_entity,
+       [&](const Entity &_entity,
+-          const components::DetachableJoint *_jointInfo) -> bool
 +          const components::Joint * /* _joint */,
 +          const components::Name *_name,
 +          const components::JointType *_jointType,
@@ -4151,23 +4048,26 @@
 +          const components::ParentEntity *_parentModel,
 +          const components::ParentLinkName *_parentLinkName,
 +          const components::ChildLinkName *_childLinkName) -> bool
-+      {
+       {
+-        if (_jointInfo->Data().jointType != "fixed")
 +        // If the parent model is scheduled for recreation, then do not
 +        // try to create a new joint. This situation can occur when a joint
 +        // is added to a model from the GUI model editor.
 +        if (_ecm.EntityHasComponentType(_parentModel->Data(),
 +              components::Recreate::typeId))
-+        {
+         {
+-          gzerr << "Detachable joint type [" << _jointInfo->Data().jointType
+-                 << "] is currently not supported" << std::endl;
 +          // Add this entity to the set of newly added joints to existing
 +          // models.
 +          this->jointAddedToModel.insert(_entity);
-+          return true;
-+        }
+           return true;
+         }
 +
          // Check if joint already exists
          if (this->entityJointMap.HasEntity(_entity))
          {
-@@ -1986,111 +4037,59 @@
+@@ -1986,111 +4081,59 @@
            return true;
          }
  
@@ -4187,24 +4087,20 @@
 -        // Get child link
 -        auto childLinkPhys = this->entityLinkMap.Get(childLinkEntity);
 -        if (!childLinkPhys)
--        {
++        // Check if parent model exists
++        if (!this->entityModelMap.HasEntity(_parentModel->Data()))
+         {
 -          gzerr << "Failed to find joint's child link [" << childLinkEntity
 -                << "]." << std::endl;
--          return true;
--        }
--
++          gzerr << "Joint's parent model entity [" << _parentModel->Data()
++                  << "] not found on model map." << std::endl;
+           return true;
+         }
+ 
 -        auto childLinkDetachableJointFeature =
 -            this->entityLinkMap.EntityCast<DetachableJointFeatureList>(
 -                childLinkEntity);
 -        if (!childLinkDetachableJointFeature)
-+        // Check if parent model exists
-+        if (!this->entityModelMap.HasEntity(_parentModel->Data()))
-+        {
-+          gzerr << "Joint's parent model entity [" << _parentModel->Data()
-+                  << "] not found on model map." << std::endl;
-+          return true;
-+        }
-+
 +        auto basicModelPtrPhys = this->entityModelMap
 +            .EntityCast<JointFeatureList>(_parentModel->Data());
 +        if (!basicModelPtrPhys)
@@ -4238,10 +4134,17 @@
 -        auto jointPtrPhys =
 -            childLinkDetachableJointFeature->AttachFixedJoint(parentLinkPhys);
 -        if (jointPtrPhys.Valid())
--        {
++        if (const auto existingJoint =
++            basicModelPtrPhys->GetJoint(_name->Data()))
+         {
 -          // We let the joint be at the origin of the child link.
 -          jointPtrPhys->SetTransformFromParent(poseParentChild);
--
++          // No need to create this joint because it was already created when
++          // parsing the model.
++          this->entityJointMap.AddEntity(_entity, existingJoint);
++          this->topLevelModelMap.insert(
++            std::make_pair(_entity, topLevelModel(_entity, _ecm)));
+ 
 -          gzdbg << "Creating detachable joint [" << _entity << "]"
 -                 << std::endl;
 -          this->entityJointMap.AddEntity(_entity, jointPtrPhys);
@@ -4251,23 +4154,11 @@
 -        else
 -        {
 -          gzerr << "DetachableJoint could not be created." << std::endl;
--        }
-+        if (const auto existingJoint =
-+            basicModelPtrPhys->GetJoint(_name->Data()))
-+        {
-+          // No need to create this joint because it was already created when
-+          // parsing the model.
-+          this->entityJointMap.AddEntity(_entity, existingJoint);
-+          this->topLevelModelMap.insert(
-+            std::make_pair(_entity, topLevelModel(_entity, _ecm)));
-+
 +  this->ConfigureJointMimic(_ecm, _entity, _name, basicModelPtrPhys, existingJoint);
 +          return true;
-+        }
-+
-+  this->ConstructRuntimeJoint(_ecm, _entity, _name, _jointType, _pose, _threadPitch, _parentModel, _parentLinkName, _childLinkName);
-         return true;
-       });
+         }
+-        return true;
+-      });
  
 -  // The components are removed after each update, so we want to process all
 -  // components in every update.
@@ -4301,8 +4192,10 @@
 -            }
 -          }
 -        }
--        return true;
--      });
++  this->ConstructRuntimeJoint(_ecm, _entity, _name, _jointType, _pose, _threadPitch, _parentModel, _parentLinkName, _childLinkName);
+         return true;
+       });
++
 +  this->CreateDetachableJoints(_ecm, _warnIfEntityExists);
 +  this->ProcessContactCustomization(_ecm);
 +
@@ -4316,7 +4209,7 @@
  void PhysicsPrivate::CreateBatteryEntities(const EntityComponentManager &_ecm)
  {
    _ecm.EachNew<components::BatterySoC>(
-@@ -2104,6 +4103,10 @@
+@@ -2104,6 +4147,10 @@
  }
  
  //////////////////////////////////////////////////
@@ -4327,7 +4220,7 @@
  void PhysicsPrivate::RemovePhysicsEntities(const EntityComponentManager &_ecm)
  {
    // Assume the world will not be erased
-@@ -2167,45 +4170,57 @@
+@@ -2167,45 +4214,57 @@
          return true;
        });
  
@@ -4340,7 +4233,8 @@
 -                  << "]." << std::endl;
 -          return true;
 -        }
--
++  this->RemoveDetachableJoints(_ecm);
+ 
 -        auto castEntity =
 -            this->entityJointMap.EntityCast<DetachableJointFeatureList>(
 -                _entity);
@@ -4355,23 +4249,12 @@
 -                   << std::endl;
 -            informed = true;
 -          }
--
++}
+ 
 -          // Break Each call since no DetachableJoints can be processed
 -          return false;
 -        }
--
--        gzdbg << "Detaching joint [" << _entity << "]" << std::endl;
--        castEntity->Detach();
--        return true;
--      });
-+  this->RemoveDetachableJoints(_ecm);
-+
- }
- 
- //////////////////////////////////////////////////
--void PhysicsPrivate::UpdatePhysics(EntityComponentManager &_ecm)
--{
--  GZ_PROFILE("PhysicsPrivate::UpdatePhysics");
++//////////////////////////////////////////////////
 +
 +/** @brief 将当前组件命令与运行时惯性更新传递给物理后端。
 + * @param _ecm 仿真实体组件管理器，读写权限由参数类型限定。
@@ -4410,18 +4293,25 @@
 +      appliedInertias.push_back(entity);return true;
 +    });
 +  for(auto entity:appliedInertias)_ecm.RemoveComponent<usv::physics::RuntimeInertiaCmd>(entity);
-+
-+}
-+
+ 
+-        gzdbg << "Detaching joint [" << _entity << "]" << std::endl;
+-        castEntity->Detach();
+-        return true;
+-      });
+ }
+ 
+-//////////////////////////////////////////////////
+-void PhysicsPrivate::UpdatePhysics(EntityComponentManager &_ecm)
 +/** @brief 同步世界重力设置。
 + * @param _ecm 仿真实体组件管理器。
 + */
 +void PhysicsPrivate::UpdateWorldGravity(EntityComponentManager &_ecm)
-+{
+ {
+-  GZ_PROFILE("PhysicsPrivate::UpdatePhysics");
    // Gravity state
    _ecm.Each<components::Gravity>(
        [&](const Entity & _entity, const components::Gravity *_gravity)
-@@ -2230,6 +4245,13 @@
+@@ -2230,6 +4289,13 @@
          return true;
    });
  
@@ -4435,7 +4325,7 @@
    // Battery state
    _ecm.Each<components::BatterySoC>(
        [&](const Entity & _entity, const components::BatterySoC *_bat)
-@@ -2241,6 +4263,13 @@
+@@ -2241,6 +4307,13 @@
          return true;
        });
  
@@ -4449,7 +4339,7 @@
    // Update Collision Bitmasks
    auto olderCollideBitmaskCmdsToRemove =
        std::move(this->collideBitmaskCmdsToRemove);
-@@ -2277,6 +4306,13 @@
+@@ -2277,6 +4350,13 @@
      _ecm.RemoveComponent<components::CollideBitmaskCmd>(entity);
    }
  
@@ -4463,7 +4353,7 @@
    // Update Category Bitmasks
    auto olderCategoryBitmaskCmdsToRemove =
        std::move(this->categoryBitmaskCmdsToRemove);
-@@ -2313,6 +4349,13 @@
+@@ -2313,6 +4393,13 @@
      _ecm.RemoveComponent<components::CategoryBitmaskCmd>(entity);
    }
  
@@ -4477,7 +4367,7 @@
    // Handle joint state
    _ecm.Each<components::Joint, components::Name>(
        [&](const Entity &_entity, const components::Joint *,
-@@ -2363,217 +4406,25 @@
+@@ -2363,217 +4450,25 @@
            return true;
          }
  
@@ -4707,7 +4597,7 @@
    // Link wrenches
    _ecm.Each<components::ExternalWorldWrenchCmd>(
        [&](const Entity &_entity,
-@@ -2612,6 +4463,13 @@
+@@ -2612,6 +4507,13 @@
          return true;
        });
  
@@ -4721,7 +4611,7 @@
    // update Static State
    auto olderStaticStatesToRemove = std::move(this->staticCmdsToRemove);
    this->staticCmdsToRemove.clear();
-@@ -2648,58 +4506,7 @@
+@@ -2648,58 +4550,7 @@
            return true;
          }
  
@@ -4781,7 +4671,7 @@
          modelStaticStateFeature->SetStatic(_staticCmd->Data());
          return true;
        });
-@@ -2711,6 +4518,13 @@
+@@ -2711,6 +4562,13 @@
      _ecm.RemoveComponent<components::StaticCmd>(entity);
    }
  
@@ -4795,7 +4685,7 @@
    // update Gravity enabled
    auto olderGravityEnabledCmdsToRemove =
      std::move(this->gravityEnabledCmdsToRemove);
-@@ -2799,6 +4613,13 @@
+@@ -2799,6 +4657,13 @@
      _ecm.RemoveComponent<components::GravityEnabledCmd>(entity);
    }
  
@@ -4809,7 +4699,7 @@
    // update Collision enabled
    auto olderCollisionEnabledCmdsToRemove =
      std::move(this->collisionEnabledCmdsToRemove);
-@@ -2866,6 +4687,13 @@
+@@ -2866,6 +4731,13 @@
      _ecm.RemoveComponent<components::CollisionEnabledCmd>(entity);
    }
  
@@ -4823,7 +4713,7 @@
    // Update model pose
    auto olderWorldPoseCmdsToRemove = std::move(this->worldPoseCmdsToRemove);
    this->worldPoseCmdsToRemove.clear();
-@@ -2888,8 +4716,7 @@
+@@ -2888,8 +4760,7 @@
            return true;
          }
          math::Pose3d worldPoseCmd = _poseCmd->Data();
@@ -4833,7 +4723,7 @@
          {
            gzerr << "Unable to set world pose. Invalid pose value: "
                  << worldPoseCmd << std::endl;
-@@ -2917,20 +4744,7 @@
+@@ -2917,20 +4788,7 @@
          freeGroup->SetWorldPose(math::eigen3::convert(worldPoseCmd *
                                  linkPose));
  
@@ -4855,7 +4745,7 @@
          return true;
        });
  
-@@ -2941,6 +4755,13 @@
+@@ -2941,6 +4799,13 @@
      _ecm.RemoveComponent<components::WorldPoseCmd>(entity);
    }
  
@@ -4869,7 +4759,7 @@
    // Slip compliance on Collisions
    _ecm.Each<components::SlipComplianceCmd>(
        [&](const Entity &_entity,
-@@ -2977,6 +4798,13 @@
+@@ -2977,6 +4842,13 @@
          return true;
        });
  
@@ -4883,7 +4773,7 @@
    // Update model angular velocity
    _ecm.Each<components::Model, components::AngularVelocityCmd>(
        [&](const Entity &_entity, const components::Model *,
-@@ -3026,6 +4854,13 @@
+@@ -3026,6 +4898,13 @@
          return true;
        });
  
@@ -4897,7 +4787,7 @@
    // Update model linear velocity
    _ecm.Each<components::Model, components::LinearVelocityCmd>(
        [&](const Entity &_entity, const components::Model *,
-@@ -3077,6 +4912,13 @@
+@@ -3077,6 +4956,13 @@
          return true;
        });
  
@@ -4911,7 +4801,7 @@
    // Update link angular velocity
    _ecm.Each<components::Link, components::AngularVelocityCmd>(
        [&](const Entity &_entity, const components::Link *,
-@@ -3129,6 +4971,13 @@
+@@ -3129,6 +5015,13 @@
          return true;
        });
  
@@ -4925,7 +4815,7 @@
    // Update link linear velocity
    _ecm.Each<components::Link, components::LinearVelocityCmd>(
        [&](const Entity &_entity, const components::Link *,
-@@ -3182,6 +5031,30 @@
+@@ -3182,6 +5075,30 @@
        });
  
  
@@ -4956,7 +4846,7 @@
    // Populate bounding box info
    this->UpdateLinksBoundingBoxes(_ecm);
    this->UpdateModelsBoundingBoxes(_ecm);
-@@ -3189,6 +5062,10 @@
+@@ -3189,6 +5106,10 @@
  // TODO (azeey) Reduce size of function and remove the NOLINT above
  
  //////////////////////////////////////////////////
@@ -4967,7 +4857,7 @@
  void PhysicsPrivate::ResetPhysics(EntityComponentManager &_ecm)
  {
    GZ_PROFILE("PhysicsPrivate::ResetPhysics");
-@@ -3279,45 +5156,15 @@
+@@ -3279,45 +5200,15 @@
          return true;
        });
  
@@ -4981,7 +4871,8 @@
 -          gzwarn << "Failed to find joint [" << _entity << "]." << std::endl;
 -          return true;
 -        }
--
++  this->ResetJointStates(_ecm);
+ 
 -        // Assume initial joint position and velocities are zero
 -        // Reset the velocity
 -        for (std::size_t i = 0; i < jointPhys->GetDegreesOfFreedom(); ++i)
@@ -5007,8 +4898,6 @@
 -        this->modelWorldPoses[_entity] = sim::worldPose(_entity, _ecm);
 -        return true;
 -      });
-+  this->ResetJointStates(_ecm);
-+
  }
  
  //////////////////////////////////////////////////
@@ -5019,7 +4908,7 @@
  gz::physics::ForwardStep::Output PhysicsPrivate::Step(
      const std::chrono::steady_clock::duration &_dt)
  {
-@@ -3337,6 +5184,12 @@
+@@ -3337,6 +5228,12 @@
  }
  
  //////////////////////////////////////////////////
@@ -5032,7 +4921,7 @@
  math::Pose3d PhysicsPrivate::RelativePose(const Entity &_from,
    const Entity &_to, const EntityComponentManager &_ecm) const
  {
-@@ -3373,6 +5226,11 @@
+@@ -3373,6 +5270,11 @@
  }
  
  //////////////////////////////////////////////////
@@ -5044,7 +4933,7 @@
  std::map<Entity, physics::FrameData3d> PhysicsPrivate::ChangedLinks(
      EntityComponentManager &_ecm,
      const gz::physics::ForwardStep::Output &_updatedLinks)
-@@ -3385,28 +5243,7 @@
+@@ -3385,28 +5287,7 @@
    // will iterate through all of the links via the ECM to see which ones changed
    if (_updatedLinks.Has<gz::physics::ChangedWorldPoses>())
    {
@@ -5074,7 +4963,7 @@
    }
    else
    {
-@@ -3464,6 +5301,13 @@
+@@ -3464,6 +5345,13 @@
  }
  
  //////////////////////////////////////////////////
@@ -5088,7 +4977,7 @@
  void PhysicsPrivate::UpdateModelPose(const Entity _model,
      const Entity _canonicalLink, EntityComponentManager &_ecm,
      std::map<Entity, physics::FrameData3d> &_linkFrameData)
-@@ -3545,40 +5389,16 @@
+@@ -3545,40 +5433,16 @@
      _linkFrameData[childLink] = childLinkFrameData;
    }
  
@@ -5108,7 +4997,8 @@
 -    }
 -
 -    auto nestedCanonicalLink = nestedModelCanonicalLinkComp->Data();
--
++  this->ScheduleNestedModelFrames(_ecm, _linkFrameData, _canonicalLink, model);
+ 
 -    // skip links that are already marked as a link to be updated
 -    if (nestedCanonicalLink == _canonicalLink ||
 -        _linkFrameData.find(nestedCanonicalLink) != _linkFrameData.end())
@@ -5123,8 +5013,6 @@
 -
 -    _linkFrameData[nestedCanonicalLink] = canonicalLinkFrameData;
 -  }
-+  this->ScheduleNestedModelFrames(_ecm, _linkFrameData, _canonicalLink, model);
-+
  }
  
  //////////////////////////////////////////////////
@@ -5136,7 +5024,7 @@
  bool PhysicsPrivate::GetFrameDataRelativeToWorld(const Entity _entity,
      physics::FrameData3d &_data)
  {
-@@ -3599,244 +5419,19 @@
+@@ -3599,244 +5463,19 @@
  }
  
  //////////////////////////////////////////////////
@@ -5389,7 +5277,7 @@
    // pose/velocity/acceleration of non-link entities such as sensors /
    // collisions. These get updated only if another system has created
    // the component for the entity.
-@@ -3847,398 +5442,12 @@
+@@ -3847,398 +5486,12 @@
    // * LinearAcceleration
  
    GZ_PROFILE_BEGIN("Sensors / collisions");
@@ -5794,7 +5682,7 @@
    // TODO(louise) Skip this if there are no collision features
    this->UpdateCollisions(_ecm);
  
-@@ -4247,6 +5456,10 @@
+@@ -4247,6 +5500,10 @@
  // TODO (azeey) Reduce size of function and remove the NOLINT above
  
  //////////////////////////////////////////////////
@@ -5805,7 +5693,7 @@
  void PhysicsPrivate::UpdateCollisions(EntityComponentManager &_ecm)
  {
    GZ_PROFILE("PhysicsPrivate::UpdateCollisions");
-@@ -4309,118 +5522,16 @@
+@@ -4309,118 +5566,16 @@
    // until the end of this function.
    auto allContacts = worldCollisionFeature->GetContactsFromLastStep();
  
@@ -5818,7 +5706,9 @@
 -        contactPoint.collision1->EntityID());
 -    auto coll2Entity = this->entityCollisionMap.GetByPhysicsId(
 -        contactPoint.collision2->EntityID());
--
++  this->IndexContacts(allContacts, entityContactMap);
++  this->PublishContacts(_ecm, entityContactMap);
+ 
 -    if (coll1Entity != kNullEntity && coll2Entity != kNullEntity)
 -    {
 -      ContactData data = std::make_pair(&contactPoint, extraContactData);
@@ -5918,9 +5808,6 @@
 -        }
 -        return true;
 -      });
-+  this->IndexContacts(allContacts, entityContactMap);
-+  this->PublishContacts(_ecm, entityContactMap);
-+
  }
  
  //////////////////////////////////////////////////
@@ -5931,7 +5818,7 @@
  void PhysicsPrivate::UpdateRayIntersections(EntityComponentManager &_ecm)
  {
    GZ_PROFILE("PhysicsPrivate::UpdateRayIntersections");
-@@ -4512,6 +5623,11 @@
+@@ -4512,6 +5667,11 @@
  }
  
  //////////////////////////////////////////////////
@@ -5943,7 +5830,7 @@
  physics::FrameData3d PhysicsPrivate::LinkFrameDataAtOffset(
        const LinkPtrType &_link, const math::Pose3d &_pose) const
  {
-@@ -4522,6 +5638,10 @@
+@@ -4522,6 +5682,10 @@
  }
  
  //////////////////////////////////////////////////
@@ -5954,7 +5841,7 @@
  void PhysicsPrivate::EnableContactSurfaceCustomization(const Entity &_world)
  {
    // allow customization of contact joint surface parameters
-@@ -4588,6 +5708,10 @@
+@@ -4588,6 +5752,10 @@
  
  
  //////////////////////////////////////////////////
@@ -5965,7 +5852,7 @@
  void PhysicsPrivate::DisableContactSurfaceCustomization(const Entity &_world)
  {
    if (this->worldContactCallbackIDs.find(_world) ==
-@@ -4610,6 +5734,10 @@
+@@ -4610,6 +5778,10 @@
  }
  
  //////////////////////////////////////////////////
@@ -5976,7 +5863,7 @@
  void PhysicsPrivate::UpdateLinksBoundingBoxes(EntityComponentManager &_ecm)
  {
    // Only compute bounding box if component exists to avoid unnecessary
-@@ -4665,6 +5793,10 @@
+@@ -4665,6 +5837,10 @@
  }
  
  //////////////////////////////////////////////////

@@ -1,5 +1,7 @@
 # 文档入口
 
+- [薄鳍接触精度与加鳍后长时运行](validation/contact_endurance_2026-11-23/README.md)：数值接触策略、测试隔离修正及固定版本回归。
+
 - [ROS 2 / VRX 启动与操船](getting_started/README.md)
 - [60% 倒车受扰恢复与小型被动稳定鳍](validation/reverse_recovery_2026-11-23/README.md)
 - [升级电池重布置与减少配重](validation/layout_2026-11-21/README.md)

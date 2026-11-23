@@ -1,0 +1,32 @@
+代码督导队检查报告
+项目：/home/yh/Project/usv-experimental-6m
+模式：quick；文件数：127；退出码：0
+通过仅指本次已执行的规则子集，不是完整 Google/Doxygen 或业务正确性认证。
+
+python-docs：通过
+  中文文档存在性、引号、标签及 Python 语法；不代表完整 Google 指南认证
+black：通过
+  检查督导配置选中的全部 Python 文件；排除范围以 supervisor 配置为准
+ruff：通过
+  固定静态规则及文档分区子集；不检查完整 Google 导入、类型、契约规则
+cpp-docs：通过
+  Doxygen 文件和定义概述子集；复杂宏可能无法解析，需人工审查；非官方 Doxygen 完整验证
+usv-build-and-test：未执行
+  不属于本次模式
+usv-runtime-regression：未执行
+  不属于本次模式
+parameter-docs：通过
+  显式Python/C++函数形参、YAML映射键及XML内联注释及有逐路径Markdown说明的JSON参数；self/cls接收者、C++未命名形参单列；其他配置格式未实现时报告错误。注释单位、范围与真实性仍须语义审查。
+cpp-complexity：未执行
+  不属于本次模式
+cpp-duplicates：未执行
+  不属于本次模式
+cpp-coverage：未执行
+  不属于本次模式
+cpp-sanitizers：未执行
+  不属于本次模式
+cpp-mutation：未执行
+  不属于本次模式
+
+人工审查：参数单位、契约真实性、架构职责、物理判据仍须人工/AI结合证据审查。
+高级检查以各项实际状态与证据为准；未执行的模式不计为通过。

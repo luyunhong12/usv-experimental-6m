@@ -46,6 +46,7 @@ from pathlib import Path
 import xml.etree.ElementTree as E
 import numpy as np
 from readiness import ReadinessWindow
+from test_isolation import reserve_ros_domain
 
 p = argparse.ArgumentParser()
 p.add_argument("--case", required=True)
@@ -57,10 +58,11 @@ spec = all_specs[a.case]
 w = WORKSPACE
 out = a.output.resolve()
 out.mkdir(parents=True, exist_ok=True)
+ros_domain, ros_domain_lease = reserve_ros_domain()
 os.environ.update(
     GZ_PARTITION="usv_perf_" + a.case + "_" + uuid.uuid4().hex[:8],
     GZ_IP="127.0.0.1",
-    ROS_DOMAIN_ID=str(30 + list(all_specs).index(a.case)),
+    ROS_DOMAIN_ID=str(ros_domain),
 )
 (out / "source_versions.json").write_text(
     json.dumps(

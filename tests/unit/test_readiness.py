@@ -31,6 +31,41 @@ import unittest
 from readiness import ReadinessWindow
 
 
+class TestDomainIsolation(unittest.TestCase):
+    """验证并发套件不能获得同一个 ROS 域，以及租约释放行为。"""
+
+    def test_exclusive_domains_and_release(self):
+        """文件锁互斥应跨进程生效，关闭租约后域可以再次使用。"""
+        import json
+        import subprocess
+        import tempfile
+        from pathlib import Path
+        from test_isolation import reserve_ros_domain
+
+        with tempfile.TemporaryDirectory() as directory:
+            first, lease = reserve_ros_domain(directory)
+            second, other = reserve_ros_domain(directory)
+            self.addCleanup(lease.close)
+            self.addCleanup(other.close)
+            self.assertNotEqual(first, second)
+            code = "import sys;sys.path.insert(0,sys.argv[1]);from test_isolation import reserve_ros_domain;d,l=reserve_ros_domain(sys.argv[2]);print(d)"
+            child = subprocess.check_output(
+                [
+                    sys.executable,
+                    "-c",
+                    code,
+                    str(Path(__file__).resolve().parents[2] / "tools/lib"),
+                    directory,
+                ],
+                text=True,
+            )
+            self.assertNotIn(json.loads(child), [first, second])
+            lease.close()
+            reused, new_lease = reserve_ros_domain(directory)
+            self.addCleanup(new_lease.close)
+            self.assertEqual(reused, first)
+
+
 class TestReadiness(unittest.TestCase):
     """验证持续就绪与健康消息新鲜度。"""
 

@@ -1,0 +1,12 @@
+{
+  "rigid_contact_erp": {
+    "value": "1.2",
+    "exit_code": -6,
+    "passed": true
+  },
+  "rigid_contact_max_correction_velocity": {
+    "value": "0",
+    "exit_code": -6,
+    "passed": true
+  }
+}

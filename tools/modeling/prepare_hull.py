@@ -41,6 +41,7 @@ from scipy.optimize import root
 from scipy.spatial.transform import Rotation
 import trimesh
 import xml.etree.ElementTree as E
+from contact_physics import configure_contact_physics
 
 W = WORKSPACE
 R = W.parent
@@ -872,10 +873,7 @@ world = E.parse(W / "src/usv_simulation/worlds/usv_baseline_offline.sdf")
 ww = world.getroot().find("world")
 ww.set("name", "usv_hull_trial")
 child(ww, "gravity", "0 0 -9.81")
-child(child(ww.find("physics"), "dart"), "collision_detector", "fcl")
-physics_plugin = ww.find("plugin[@name='gz::sim::systems::Physics']")
-assert physics_plugin is not None
-physics_plugin.set("filename", "libUsvPhysics.so")
+configure_contact_physics(ww)
 # Pure still-water test: no wind, wave forcing or decorative projectile. Flat
 # local water visual prevents a moving rendered surface disagreeing with physics.
 for inc in list(ww.findall("include")):

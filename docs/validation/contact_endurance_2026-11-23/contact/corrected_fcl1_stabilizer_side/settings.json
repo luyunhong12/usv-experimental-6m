@@ -1,0 +1,12 @@
+{
+  "output": "artifacts/contact_endurance_2026-11-23/contact_matrix_verified/corrected_fcl1_stabilizer_side",
+  "profile": "baseline",
+  "step_size": null,
+  "collision_detector": "fcl",
+  "free_probes": false,
+  "drop_height": 0.6,
+  "probe_mass": 1.0,
+  "contact_erp": null,
+  "correction_velocity": null,
+  "case": "stabilizer_side"
+}

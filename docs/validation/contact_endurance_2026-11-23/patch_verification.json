@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "upstream": "dependencies/vendor/gz-sim-physics/Physics.cc",
+  "patch": "dependencies/patches/gz-sim8-runtime-inertia.patch",
+  "result_matches": "ros_ws/src/usv_physics/src/Physics.cc",
+  "sha256": "3979c367ffa0b4acfa6345bed30f7ad4c66e864f13b7aac4c2f145e1b6201bd3"
+}

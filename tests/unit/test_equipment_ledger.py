@@ -40,6 +40,38 @@ from mass_properties import aggregate
 from fuel_mass import combine, configuration, tank_properties
 
 
+class ContactPrecisionTest(unittest.TestCase):
+    """用解析立方体和人为失败轨迹验证接触误差判定。"""
+
+    def test_signed_gap_includes_inside_sphere(self):
+        """球心进入实体时不可把到表面的正距离误认为没有穿透。"""
+        import trimesh
+        from contact_checks import sphere_mesh_gaps
+
+        mesh = trimesh.creation.box(extents=[2, 2, 2])
+        gaps = sphere_mesh_gaps(
+            [[0, 0, 1.1], [0, 0, 0.9]], mesh.vertices, mesh.faces, 0.1
+        )
+        np.testing.assert_allclose(gaps, [0, -0.2], atol=1e-12)
+
+    def test_precision_rejects_penetration_and_sampling_gaps(self):
+        """稳态 6 mm 穿透、整球穿过及漏采样必须失败。"""
+        import trimesh
+        from contact_checks import evaluate_fin_precision
+
+        mesh = trimesh.creation.box(extents=[2, 2, 2])
+        times = np.arange(0, 8.002, 0.001)
+        rows = np.tile([0, 0, 1.025], (len(times), 1))
+        args = (0, [0, 0, 0], mesh.vertices, mesh.faces, 0.001, 0.6)
+        self.assertTrue(evaluate_fin_precision(rows, times, *args)["passed"])
+        rows[:, 2] -= 0.006
+        self.assertFalse(evaluate_fin_precision(rows, times, *args)["passed"])
+        rows[:, 2] = 0.9
+        self.assertFalse(evaluate_fin_precision(rows, times, *args)["passed"])
+        rows[:, 2] = 1.025
+        self.assertFalse(evaluate_fin_precision(rows[::3], times[::3], *args)["passed"])
+
+
 class LedgerTests(unittest.TestCase):
     """验证设备台账质量、功耗和燃油的独立记账。"""
 

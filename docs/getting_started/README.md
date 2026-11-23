@@ -95,3 +95,15 @@ python3 tests/regression/assess_maneuvers.py \
 ## 固定配重与当前方案
 
 基准方案保留约 32.05 kg 横向板；`speed15_concept` 采用升级电池前后重布置，取消上一版约 167.86 kg 纵向板。满油总质量约 1571.17 kg，静水轻载全速约 15.10 km/h。显示、碰撞、质量与惯性由台账同步生成；实际安装、线缆与承载能力尚需核实。倒车仍有配平回转，详见 [布置复验](../validation/layout_2026-11-21/README.md)。
+
+
+## 当前接触精度与运行成本
+
+当前生成场景使用 1 ms 物理步长，保留原船体和薄鳍几何；相比旧 4 ms 配置需要更多 CPU。
+仿真时间与墙钟时间可能不同，不能把运行 20 分钟墙钟当作已完成 20 分钟仿真。
+接触数值参数、精度边界及长时证据见 [接触与长时专项](../validation/contact_endurance_2026-11-23/README.md)。
+
+原生性能测试器会独占租用本机 ROS 测试域（120–159），避免不同 spec 相同工况索引串扰。
+外部手动 ROS 节点不要占用该范围；这不是对任意其他主机或独立容器的域协调。
+碰撞验证建议通过 `validate_contact_directions.py --case stabilizer_side --output artifacts/my_contact_side`
+逐位置执行；按每次实际源码、插件回读、仿真时间和完整采样判定结果。
