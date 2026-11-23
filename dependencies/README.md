@@ -13,6 +13,6 @@ Python 工具依赖见 `tools/setup/requirements.txt`；Gazebo Python bindings �
 
 悉尼资产保留在 `vendor/fuel`。缺失时先配置 Gazebo Fuel 缓存，或检查 `tools/setup/download_sydney_assets.py` 的下载来源和校验；资产不因复制到本地而自动获得开源许可。
 
-完整新机器安装尚未用容器重新验证。本轮验证的是现有安装环境下的新目录和干净 colcon 重建。不要把本地通过等同于任意机器开箱即用。
+已完成独立 Ubuntu 24.04 amd64 / ROS Jazzy 容器的 GitHub 检出、Git LFS、官方资源下载、全新构建和公开入口验收，见 [安装指南](../docs/getting_started/container.md) 与 [证据](../docs/validation/platform_readiness_2026-11-21/step4/README.md)。实时 ROS 源已提供 gz-physics 7.9，工程仍要求 7.8；配方通过官方签名快照固定依赖，不放宽 ABI 约束。其他架构、GUI/GPU 和未来软件源版本仍需验证。
 
 可选 Blender 连接源码本地保留但不嵌入主仓库。需要时执行 `vcs import dependencies/vendor < dependencies/blender.repos`。

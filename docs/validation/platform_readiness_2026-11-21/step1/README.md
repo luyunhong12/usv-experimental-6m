@@ -45,3 +45,5 @@
 python3 tests/regression/run_performance_suite.py --spec tests/scenarios/environment_envelope.json --output artifacts/my_environment_run --workers 4
 python3 tests/regression/assess_maneuvers.py --spec tests/scenarios/environment_envelope.json --criteria tests/scenarios/environment_acceptance.json --suite-kind environment --output artifacts/my_environment_run
 ```
+
+试验边界：本套原生物理工况采用 `isolated_water=true`，保留船与 VRX 波场、移除岸线/浮标等碰撞物，并省略 GPU 成像计算（设备质量和功耗仍保留）。它验证水面动力学和接口，不是完整悉尼地图避障、图像传感器或实时渲染验收；完整场景的公开入口另行测试。

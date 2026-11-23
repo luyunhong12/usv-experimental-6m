@@ -4,7 +4,7 @@
 
 ## 环境与构建
 
-验证环境为 Ubuntu、ROS 2 Jazzy、Gazebo Harmonic；自定义物理后端依赖 gz-sim **8.15.0**、gz-physics **7.8.0** 与系统 DART。其他版本不能直接视为兼容。首次克隆还需按 [依赖说明](../../dependencies/README.md) 获取固定版本 VRX、Sydney 素材和 Python 依赖，并取回 Git LFS 模型。本文不是已验证的全新系统一键安装器。
+验证环境为 Ubuntu、ROS 2 Jazzy、Gazebo Harmonic；自定义物理后端依赖 gz-sim **8.15.0**、gz-physics **7.8.0** 与系统 DART。其他版本不能直接视为兼容。首次克隆还需按 [依赖说明](../../dependencies/README.md) 获取固定版本 VRX、Sydney 素材和 Python 依赖，并取回 Git LFS 模型。已验证的独立容器安装见 [容器复现指南](container.md)；宿主机图形安装仍不是已验证的一键安装器。
 
 在项目根目录运行：
 

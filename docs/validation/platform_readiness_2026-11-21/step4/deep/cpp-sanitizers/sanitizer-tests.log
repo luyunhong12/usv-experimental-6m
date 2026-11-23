@@ -1,0 +1,30 @@
+Internal ctest changing into directory: /home/yh/Project/usv-experimental-6m/artifacts/validation/supervisor/20261123T014815Z-e82d913f/cpp-sanitizers/workspace/.build
+Test project /home/yh/Project/usv-experimental-6m/artifacts/validation/supervisor/20261123T014815Z-e82d913f/cpp-sanitizers/workspace/.build
+      Start  1: energy_conservation_and_faults
+ 1/12 Test  #1: energy_conservation_and_faults ...   Passed    0.07 sec
+      Start  2: wrench_audit
+ 2/12 Test  #2: wrench_audit .....................   Passed    0.20 sec
+      Start  3: appendages
+ 3/12 Test  #3: appendages .......................   Passed    0.15 sec
+      Start  4: steering_integral
+ 4/12 Test  #4: steering_integral ................   Passed    0.13 sec
+      Start  5: resistance
+ 5/12 Test  #5: resistance .......................   Passed    0.13 sec
+      Start  6: added_mass
+ 6/12 Test  #6: added_mass .......................   Passed    0.13 sec
+      Start  7: fuel_mass
+ 7/12 Test  #7: fuel_mass ........................   Passed    0.38 sec
+      Start  8: propulsion
+ 8/12 Test  #8: propulsion .......................   Passed    0.14 sec
+      Start  9: steering_reference
+ 9/12 Test  #9: steering_reference ...............   Passed    0.15 sec
+      Start 10: wave_kinematics
+10/12 Test #10: wave_kinematics ..................   Passed    0.13 sec
+      Start 11: wave_pressure
+11/12 Test #11: wave_pressure ....................   Passed    0.21 sec
+      Start 12: hydrostatics
+12/12 Test #12: hydrostatics .....................   Passed    0.14 sec
+
+100% tests passed, 0 tests failed out of 12
+
+Total Test time (real) =   1.95 sec

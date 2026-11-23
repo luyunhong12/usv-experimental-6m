@@ -1,0 +1,103 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.62kB done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/ros:jazzy-ros-base-noble
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/ros:jazzy-ros-base-noble@sha256:386d06ec6d4188f731bae5678e07b4cb64a4e4d4152090c0bd1f881dcf7706f5
+#4 resolve docker.io/library/ros:jazzy-ros-base-noble@sha256:386d06ec6d4188f731bae5678e07b4cb64a4e4d4152090c0bd1f881dcf7706f5 0.0s done
+#4 DONE 0.0s
+
+#5 [2/6] RUN apt-get update && apt-get install -y --no-install-recommends git git-lfs build-essential cmake python3-pip python3-venv python3-numpy python3-scipy python3-pil python3-matplotlib python3-requests python3-colcon-common-extensions python3-vcstool ros-jazzy-ros-gz ros-jazzy-xacro ros-jazzy-robot-state-publisher ros-jazzy-joint-state-publisher ros-jazzy-ament-cmake-gtest libgl1-mesa-dri && rm -rf /var/lib/apt/lists/*
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 101B done
+#6 DONE 0.1s
+
+#7 [3/6] COPY requirements.txt /tmp/usv-requirements.txt
+#7 DONE 0.1s
+
+#8 [4/6] RUN python3 -m venv --system-site-packages /opt/usv-venv && /opt/usv-venv/bin/pip install -r /tmp/usv-requirements.txt
+#8 2.498 Requirement already satisfied: numpy==1.26.4 in /usr/lib/python3/dist-packages (from -r /tmp/usv-requirements.txt (line 1)) (1.26.4)
+#8 2.499 Requirement already satisfied: scipy==1.11.4 in /usr/lib/python3/dist-packages (from -r /tmp/usv-requirements.txt (line 2)) (1.11.4)
+#8 9.075 Collecting trimesh==5.2.0 (from -r /tmp/usv-requirements.txt (line 3))
+#8 15.25   Downloading trimesh-5.2.0-py3-none-any.whl.metadata (13 kB)
+#8 15.52 Requirement already satisfied: Pillow==10.2.0 in /usr/lib/python3/dist-packages (from -r /tmp/usv-requirements.txt (line 4)) (10.2.0)
+#8 15.80 Downloading trimesh-5.2.0-py3-none-any.whl (751 kB)
+#8 16.54    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 751.5/751.5 kB 1.0 MB/s eta 0:00:00
+#8 16.80 Installing collected packages: trimesh
+#8 17.14 Successfully installed trimesh-5.2.0
+#8 DONE 17.2s
+
+#9 [5/6] WORKDIR /work
+#9 DONE 0.1s
+
+#10 [6/6] RUN curl -fsSL --retry 3 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x4B63CF8FDE49746E98FA01DDAD19BAB3CBF125EA' -o /tmp/usv-snapshot.asc  && gpg --show-keys --with-colons /tmp/usv-snapshot.asc | grep -q '^fpr:::::::::4B63CF8FDE49746E98FA01DDAD19BAB3CBF125EA:'  && gpg --dearmor --yes --output /usr/share/keyrings/usv-ros-snapshot.gpg /tmp/usv-snapshot.asc  && printf '%s\n' 'deb [signed-by=/usr/share/keyrings/usv-ros-snapshot.gpg] http://snapshots.ros.org/jazzy/2026-09-11/ubuntu noble main' > /etc/apt/sources.list.d/usv-physics-snapshot.list  && apt-get update  && apt-get install -y --allow-downgrades ros-jazzy-gz-physics-vendor=0.0.9-1noble.20260905.065116  && apt-mark hold ros-jazzy-gz-physics-vendor  && rm -rf /var/lib/apt/lists/*
+#10 6.537 gpg: directory '/root/.gnupg' created
+#10 6.537 gpg: keybox '/root/.gnupg/pubring.kbx' created
+#10 6.539 gpg: /root/.gnupg/trustdb.gpg: trustdb created
+#10 12.55 Get:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+#10 12.55 Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+#10 12.57 Get:3 http://packages.ros.org/ros2/ubuntu noble InRelease [4679 B]
+#10 12.61 Get:4 http://snapshots.ros.org/jazzy/2026-09-11/ubuntu noble InRelease [13.8 kB]
+#10 12.94 Get:5 http://packages.ros.org/ros2/ubuntu noble/main Sources [2277 kB]
+#10 13.12 Get:6 http://snapshots.ros.org/jazzy/2026-09-11/ubuntu noble/main amd64 Packages [1158 kB]
+#10 13.36 Get:7 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [2216 kB]
+#10 13.46 Get:8 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+#10 13.83 Get:9 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+#10 14.18 Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+#10 14.28 Get:11 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1560 kB]
+#10 14.41 Get:12 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1475 kB]
+#10 14.49 Get:13 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [55.6 kB]
+#10 14.55 Get:14 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+#10 15.48 Get:15 http://packages.ros.org/ros2/ubuntu noble/main amd64 Packages [2153 kB]
+#10 15.85 Get:16 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+#10 15.87 Get:17 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+#10 15.87 Get:18 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2184 kB]
+#10 16.05 Get:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1822 kB]
+#10 16.39 Get:20 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [61.7 kB]
+#10 16.40 Get:21 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [2371 kB]
+#10 16.73 Get:22 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [669 B]
+#10 16.74 Get:23 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.0 kB]
+#10 16.74 Get:24 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [36.0 kB]
+#10 17.43 Fetched 39.6 MB in 11s (3651 kB/s)
+#10 17.43 Reading package lists...
+#10 18.13 Reading package lists...
+#10 18.76 Building dependency tree...
+#10 18.89 Reading state information...
+#10 19.05 The following packages will be DOWNGRADED:
+#10 19.05   ros-jazzy-gz-physics-vendor
+#10 25.09 0 upgraded, 0 newly installed, 1 downgraded, 0 to remove and 199 not upgraded.
+#10 25.09 Need to get 730 kB of archives.
+#10 25.09 After this operation, 394 kB disk space will be freed.
+#10 25.09 Get:1 http://snapshots.ros.org/jazzy/2026-09-11/ubuntu noble/main amd64 ros-jazzy-gz-physics-vendor amd64 0.0.9-1noble.20260905.065116 [730 kB]
+#10 26.32 debconf: delaying package configuration, since apt-utils is not installed
+#10 26.35 Fetched 730 kB in 7s (103 kB/s)
+#10 26.38 dpkg: warning: downgrading ros-jazzy-gz-physics-vendor from 0.0.10-1noble.20261031.122410 to 0.0.9-1noble.20260905.065116
+#10 26.38 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 109880 files and directories currently installed.)
+#10 26.52 Preparing to unpack .../ros-jazzy-gz-physics-vendor_0.0.9-1noble.20260905.065116_amd64.deb ...
+#10 26.54 Unpacking ros-jazzy-gz-physics-vendor (0.0.9-1noble.20260905.065116) over (0.0.10-1noble.20261031.122410) ...
+#10 27.04 Setting up ros-jazzy-gz-physics-vendor (0.0.9-1noble.20260905.065116) ...
+#10 27.06 Processing triggers for libc-bin (2.39-0ubuntu8.8) ...
+#10 27.96 ros-jazzy-gz-physics-vendor set on hold.
+#10 DONE 28.0s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.7s done
+#11 exporting manifest sha256:ae66916f2dc891521485aae54ae21e4f58178405cebb720e4819b0ac053424a7 0.0s done
+#11 exporting config sha256:4a46955b92cfce257eb58003f88d9393623e1b7cf04274522b02dfc481b8834a 0.0s done
+#11 exporting attestation manifest sha256:98bb296a294263e002bbe609d0dc899f882a6b0fe4665a16c0e4731d107b70cd 0.0s done
+#11 exporting manifest list sha256:15000010fb9019903ca0545cec5a6e18cf5e6b8204b5e532e81b598dac6b51d5 0.0s done
+#11 naming to docker.io/library/usv-repro:20261123 done
+#11 unpacking to docker.io/library/usv-repro:20261123
+#11 unpacking to docker.io/library/usv-repro:20261123 0.3s done
+#11 DONE 1.1s

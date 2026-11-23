@@ -1,0 +1,30 @@
+gpg: directory '/root/.gnupg' created
+gpg: keybox '/root/.gnupg/pubring.kbx' created
+gpg: /root/.gnupg/trustdb.gpg: trustdb created
+Hit:1 http://packages.ros.org/ros2/ubuntu noble InRelease
+Get:2 http://snapshots.ros.org/jazzy/2026-09-11/ubuntu noble InRelease [13.8 kB]
+Hit:3 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble InRelease
+Get:5 http://snapshots.ros.org/jazzy/2026-09-11/ubuntu noble/main amd64 Packages [1158 kB]
+Hit:6 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Fetched 1171 kB in 7s (157 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages will be DOWNGRADED:
+  ros-jazzy-gz-physics-vendor
+0 upgraded, 0 newly installed, 1 downgraded, 0 to remove and 199 not upgraded.
+Need to get 730 kB of archives.
+After this operation, 394 kB disk space will be freed.
+Get:1 http://snapshots.ros.org/jazzy/2026-09-11/ubuntu noble/main amd64 ros-jazzy-gz-physics-vendor amd64 0.0.9-1noble.20260905.065116 [730 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 730 kB in 7s (104 kB/s)
+dpkg: warning: downgrading ros-jazzy-gz-physics-vendor from 0.0.10-1noble.20261031.122410 to 0.0.9-1noble.20260905.065116
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 109880 files and directories currently installed.)
+Preparing to unpack .../ros-jazzy-gz-physics-vendor_0.0.9-1noble.20260905.065116_amd64.deb ...
+Unpacking ros-jazzy-gz-physics-vendor (0.0.9-1noble.20260905.065116) over (0.0.10-1noble.20261031.122410) ...
+Setting up ros-jazzy-gz-physics-vendor (0.0.9-1noble.20260905.065116) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.8) ...
+ros-jazzy-gz-physics-vendor set on hold.

@@ -1,0 +1,17 @@
+{
+  "passed": false,
+  "checks": {
+    "startup_ready": true,
+    "physics_stream": false,
+    "no_uncommanded_propulsion": true,
+    "bounded_cleanup": true,
+    "no_live_children": false,
+    "injected_controller_exit": true,
+    "stack_exits_automatically": true
+  },
+  "exit_code": 0,
+  "observed_children": 21,
+  "remaining_children": [
+    4266
+  ]
+}
