@@ -26,6 +26,8 @@ target_include_directories(UsvAzimuthPropulsion PRIVATE include ${usv_energy_INC
 target_link_libraries(UsvAzimuthPropulsion ${VRX_WAVES_LIBRARY} gz-sim8::core gz-plugin2::register gz-transport13::core)
 add_library(UsvAppendageHydrodynamics SHARED src/AppendageHydrodynamics.cc)
 target_compile_features(UsvAppendageHydrodynamics PUBLIC cxx_std_17)
+# 附体逐面水动力每个物理步执行；标准优化不改变步长、浮点规则或断言。
+target_compile_options(UsvAppendageHydrodynamics PRIVATE $<$<CXX_COMPILER_ID:GNU,Clang>:-O2>)
 target_include_directories(UsvAppendageHydrodynamics PRIVATE include)
 target_link_libraries(UsvAppendageHydrodynamics ${VRX_WAVES_LIBRARY} gz-sim8::core gz-plugin2::register gz-transport13::core)
 install(TARGETS UsvAppendageHydrodynamics DESTINATION lib)

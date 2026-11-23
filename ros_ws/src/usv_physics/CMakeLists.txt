@@ -9,6 +9,8 @@ find_package(gz-plugin2 REQUIRED COMPONENTS register)
 find_package(DART REQUIRED CONFIG PATHS /opt/ros/jazzy/opt/gz_dartsim_vendor/share/dart/cmake NO_DEFAULT_PATH)
 add_library(UsvPhysics SHARED src/Physics.cc)
 target_compile_features(UsvPhysics PUBLIC cxx_std_17)
+# 完整地图实体更新处于每步热路径；只优化本后端，不使用 fast-math 或关闭断言。
+target_compile_options(UsvPhysics PRIVATE $<$<CXX_COMPILER_ID:GNU,Clang>:-O2>)
 target_include_directories(UsvPhysics PRIVATE include ../../../dependencies/vendor/gz-sim-physics ../../../dependencies/vendor/gz-physics7-dartsim ${DART_INCLUDE_DIRS})
 target_link_libraries(UsvPhysics gz-sim8::core gz-physics7::core gz-physics7::sdf gz-physics7::mesh gz-physics7::heightmap gz-common5::geospatial gz-common5::graphics gz-common5::profiler gz-plugin2::register ${DART_LIBRARIES})
 add_library(UsvInertiaResponseProbe SHARED src/InertiaResponseProbe.cc)
