@@ -1,6 +1,7 @@
 # 文档入口
 
 - [ROS 2 / VRX 启动与操船](getting_started/README.md)
+- [60% 倒车受扰恢复与小型被动稳定鳍](validation/reverse_recovery_2026-11-23/README.md)
 - [升级电池重布置与减少配重](validation/layout_2026-11-21/README.md)
 - [分布式横流阻力、实体配重与操纵复验](validation/distributed_drag_2026-11-21/README.md)
 - [接入前版本绑定与严格操纵验收](validation/preflight_2026-11-21/README.md)

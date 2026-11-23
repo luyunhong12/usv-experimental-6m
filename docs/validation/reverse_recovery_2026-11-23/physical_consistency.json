@@ -1,0 +1,294 @@
+{
+  "fin_volume_m3": 0.001914274750636318,
+  "fin_mass_kg": 5.168541826718059,
+  "fin_cg_m": [
+    0.5000000000000002,
+    -3.949501395356928e-19,
+    -0.18688709677419352
+  ],
+  "fin_inertia_kg_m2": [
+    [
+      0.06505085256153886,
+      9.170848053798798e-20,
+      -1.463672932855431e-16
+    ],
+    [
+      9.170848053798798e-20,
+      0.10385707985840976,
+      -4.173128058157222e-20
+    ],
+    [
+      -1.463672932855431e-16,
+      -4.173128058157222e-20,
+      0.03901204869623225
+    ]
+  ],
+  "expected_static_buoyancy_N": 18.77903530374228,
+  "cases": {
+    "reverse_25_10m": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "reverse_25_30m": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "reverse_25_60m": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "reverse_40_10m": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "reverse_40_30m": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "reverse_40_60m": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "reverse_60_10m": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "reverse_60_30m": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "reverse_60_60m": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "recovery_40_right": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "recovery_40_left": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "recovery_60_right": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "recovery_60_left": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "recovery_60_right_low_fuel": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "recovery_60_right_loaded_low_fuel": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "recovery_60_right_fin075": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "recovery_60_left_low_fuel": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "recovery_60_left_loaded_low_fuel": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "recovery_60_left_fin075": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "recovery_60_right_step2ms": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "recovery_60_right_added125": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "recovery_60_right_stern125": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "reverse_60_long": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "neutral_035": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "neutral_065": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "neutral_100": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "turn_055_left": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "turn_055_right": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "turn_100_left": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "turn_100_right": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "coast_100": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "brake_100": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "astern_left": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "astern_right": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "zigzag_10_10": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "loaded_low_fuel": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "zigzag_10_10_low_speed": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "reverse_25": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "reverse_40": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "reverse_60": {
+      "minimum_dissipation_W": 0.0,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "beam_load0_fuel6": {
+      "minimum_dissipation_W": 2.754830647207742e-07,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "head_load300_fuel6": {
+      "minimum_dissipation_W": 2.6656742631651564e-07,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "combined": {
+      "minimum_dissipation_W": 3.7337574252099815e-07,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    },
+    "stress": {
+      "minimum_dissipation_W": 3.113284478715761e-06,
+      "minimum_wet_area_m2": 0.13737500000000002,
+      "finite": true,
+      "dissipative": true
+    }
+  },
+  "recorded_static_buoyancy_N": 18.779032189140082
+}

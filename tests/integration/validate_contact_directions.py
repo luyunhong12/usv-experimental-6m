@@ -94,7 +94,8 @@ for link_element in base.findall("link"):
         link_element.remove(x)
 E.SubElement(base, "static").text = "true"
 cases = [
-    ("deck", [0, 0, 0], [0, 0], 0.85, 1.05),
+    # 船体原点上方是雷达支架；在无遮挡甲板区域测试原高度门槛。
+    ("deck", [0, 0, 0], [1.0, 0.5], 0.85, 1.05),
     ("bottom", [math.pi, 0, 0], [0, 0], 0, 0.12),
     ("port", [math.pi / 2, 0, 0], [0, -0.5], 0.9, 1.2),
     ("starboard", [-math.pi / 2, 0, 0], [0, 0.5], 0.9, 1.2),

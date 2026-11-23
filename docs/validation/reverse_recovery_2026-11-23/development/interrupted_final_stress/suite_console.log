@@ -1,0 +1,88 @@
+START reverse_25_30m
+START reverse_40_10m
+START reverse_25_10m
+START reverse_25_60m
+END reverse_40_10m 0
+START reverse_40_30m
+END reverse_25_10m 0
+START reverse_40_60m
+END reverse_40_30m 0
+START reverse_60_10m
+END reverse_25_30m 0
+START reverse_60_30m
+END reverse_60_10m 0
+START reverse_60_60m
+END reverse_60_30m 0
+START recovery_40_right
+END reverse_40_60m 0
+START recovery_40_left
+END reverse_25_60m 0
+START recovery_60_right
+END reverse_60_60m 0
+START recovery_60_left
+END recovery_40_right 0
+START recovery_60_right_low_fuel
+END recovery_40_left 0
+START recovery_60_right_loaded_low_fuel
+END recovery_60_right 0
+END recovery_60_left 0
+START recovery_60_right_fin075
+START recovery_60_left_low_fuel
+END recovery_60_right_low_fuel 0
+START recovery_60_left_loaded_low_fuel
+END recovery_60_right_loaded_low_fuel 0
+START recovery_60_left_fin075
+END recovery_60_right_fin075 0
+START recovery_60_right_step2ms
+END recovery_60_left_low_fuel 0
+START recovery_60_right_added125
+END recovery_60_left_loaded_low_fuel 0
+START recovery_60_right_stern125
+END recovery_60_left_fin075 0
+START reverse_60_long
+END recovery_60_right_added125 0
+START neutral_035
+END recovery_60_right_step2ms 0
+START neutral_065
+END neutral_035 0
+START neutral_100
+END neutral_065 0
+START turn_055_left
+END recovery_60_right_stern125 0
+START turn_055_right
+END turn_055_left 0
+START turn_100_left
+END turn_055_right 0
+START turn_100_right
+END reverse_60_long 0
+START coast_100
+END neutral_100 0
+START brake_100
+END turn_100_left 0
+START astern_left
+END turn_100_right 0
+START astern_right
+END coast_100 0
+START zigzag_10_10
+END brake_100 0
+START loaded_low_fuel
+END astern_left 0
+START zigzag_10_10_low_speed
+END astern_right 0
+START reverse_25
+END zigzag_10_10 0
+START reverse_40
+END zigzag_10_10_low_speed 0
+START reverse_60
+END loaded_low_fuel 0
+START beam_load0_fuel6
+END reverse_25 0
+START head_load300_fuel6
+END reverse_40 0
+START combined
+END reverse_60 0
+START stress
+END beam_load0_fuel6 0
+END head_load300_fuel6 0
+END combined 0
+END stress 0

@@ -1,0 +1,14 @@
+{
+  "geometry": "actual generated elliptic_fin mesh",
+  "probe_radius_m": 0.025,
+  "contact_native_step_s": 0.004,
+  "stabilizer_tip_surface_distance_m": [
+    0.022697138107705073,
+    0.0239313527726156
+  ],
+  "stabilizer_side_surface_distance_m": [
+    0.018588451500313137,
+    0.019568415822473952
+  ],
+  "limitation": "Support/presence criteria pass; side probe has 5.4\u20136.4 mm effective penetration in DART/ODE at 4 ms. Not zero-penetration or high-speed collision certification."
+}

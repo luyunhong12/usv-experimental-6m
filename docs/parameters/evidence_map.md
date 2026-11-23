@@ -1,12 +1,14 @@
 # 科学依据与证据地图
 
-最新补充：[升级电池质量矩、包络与操纵取舍](../validation/layout_2026-11-21/README.md)。
+最新补充：[倒车失稳归因、线性稳定性和小型被动鳍](../validation/reverse_recovery_2026-11-23/README.md)。
+
+此前：[升级电池质量矩、包络与操纵取舍](../validation/layout_2026-11-21/README.md)。
 
 上一轮：[分布式横流阻力与固定实体配平](../validation/distributed_drag_2026-11-21/README.md)。
 
 历史专项：[零舵受力归因、镜像剖分修复、阻力分账及直接操纵](../validation/force_maneuvers_2026-11-21/README.md)。历史约 0.058°/秒和旧参考几何不再代表当前版本。
 
-本项目没有实船测量，目标是建立物理关系可解释、参数可替换、试验可重复的工程平台。以下依据支持模型的方法选择，不构成真实船舶精度认证。最后整理：2026-11-21。
+本项目没有实船测量，目标是建立物理关系可解释、参数可替换、试验可重复的工程平台。以下依据支持模型的方法选择，不构成真实船舶精度认证。最后整理：2026-11-23。
 
 ## 怎样阅读证据
 
@@ -49,6 +51,8 @@
 六自由度框架参见上表 Fossen 来源。附体采用动态压强乘浸水面积与升阻力系数，按真实浸水几何的力臂施力；力矩来自作用点，不靠额外航向控制压住偏航。附加质量采用工程近似。
 
 [船体阻力配置](../../ros_ws/src/usv_description/config/resistance.json)、[附加质量配置](../../ros_ws/src/usv_description/config/hydrodynamics.json)、[附体配置及来源](../../ros_ws/src/usv_description/config/appendage_hydrodynamics.json) 对应 [当前专项报告](../validation/directional_stability_2026-11-21/README.md)。报告包含修复前失败、修复后结果、扰动释放、步长和系数敏感性。现有水动力系数未标定，附体与集中阻力预算仍需进一步拆分；有界响应也不等于绝对直线。
+
+新增 [被动稳定鳍报告](../validation/reverse_recovery_2026-11-23/README.md) 将“耗散”与“有推进时的方向稳定性”分开检查。方法来自 Fossen/MSS 与 MIT 横移—偏航稳定性课程；几何尺寸由小幅硬件设计约束与稳定性筛查给出。参数在 [逐件台账](../../ros_ws/src/usv_description/config/component_mass_ledger.json) 的 `passive_stabilizer` 条目；[同源几何实现](../../tools/lib/passive_stabilizer.py) 连接质量、惯性、碰撞和浮力，原生试验验证恢复时间与航速代价。这仍不是本船实测升阻力，也没有独立辨识鳍—船体非定常附加质量耦合。
 
 ### 推进、转向与能量
 

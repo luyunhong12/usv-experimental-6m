@@ -1,0 +1,3 @@
+[ 50%] Building CXX object CMakeFiles/test_steering_integral.dir/home/yh/Project/usv-experimental-6m/artifacts/validation/supervisor/20261123T024645Z-1d7c0f09/cpp-mutation/workspace/ros_ws/src/usv_simulation/tests/test_steering_integral.cc.o
+[100%] Linking CXX executable test_steering_integral
+[100%] Built target test_steering_integral

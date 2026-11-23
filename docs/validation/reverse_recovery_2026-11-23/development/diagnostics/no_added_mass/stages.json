@@ -1,0 +1,53 @@
+[
+  {
+    "name": "approach",
+    "duration": 100,
+    "throttle": -0.6,
+    "steering_deg": 0,
+    "index": 0,
+    "start_sim": 1.236,
+    "end_sim": 101.248,
+    "distance_triggered": false,
+    "stage_origin": [
+      -480.0,
+      180.0,
+      -1.684401818990256e-16
+    ],
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  },
+  {
+    "name": "pulse",
+    "duration": 2,
+    "throttle": -0.6,
+    "steering_deg": -5,
+    "index": 1,
+    "start_sim": 101.248,
+    "end_sim": 103.324,
+    "distance_triggered": false,
+    "stage_origin": [
+      -662.7809155348866,
+      176.56516460157994,
+      0.04083863488364721
+    ],
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  },
+  {
+    "name": "disturbance_recover",
+    "duration": 60,
+    "throttle": -0.6,
+    "steering_deg": 0,
+    "index": 2,
+    "start_sim": 103.324,
+    "end_sim": 163.336,
+    "distance_triggered": false,
+    "stage_origin": [
+      -666.6886500244896,
+      176.44230766454447,
+      -0.0074070828467218885
+    ],
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  }
+]

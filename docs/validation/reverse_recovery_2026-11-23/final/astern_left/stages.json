@@ -1,0 +1,56 @@
+[
+  {
+    "name": "reverse",
+    "duration": 30,
+    "mode": "direct",
+    "throttle": -0.4,
+    "steering_deg": 0,
+    "index": 0,
+    "start_sim": 1.236,
+    "end_sim": 31.32,
+    "distance_triggered": false,
+    "stage_origin": [
+      -480.0,
+      180.0,
+      -1.3534784069708356e-16
+    ],
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  },
+  {
+    "name": "astern_turn",
+    "duration": 45,
+    "mode": "direct",
+    "throttle": -0.4,
+    "steering_deg": -10,
+    "index": 1,
+    "start_sim": 31.32,
+    "end_sim": 76.372,
+    "distance_triggered": false,
+    "stage_origin": [
+      -508.8197701070196,
+      179.9802942351504,
+      0.0013831233219731994
+    ],
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  },
+  {
+    "name": "coast",
+    "duration": 40,
+    "mode": "direct",
+    "throttle": 0,
+    "steering_deg": 0,
+    "index": 2,
+    "start_sim": 76.372,
+    "end_sim": 116.384,
+    "distance_triggered": false,
+    "stage_origin": [
+      -510.50573118715647,
+      207.3973779800362,
+      2.8799311473391205
+    ],
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  }
+]

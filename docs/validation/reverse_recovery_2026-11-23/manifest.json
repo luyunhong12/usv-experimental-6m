@@ -1,0 +1,2313 @@
+{
+  "schema": 1,
+  "runtime_source_commit": "a7b27a2",
+  "suite_fingerprint": "f79d55c89a579855684a1c9443c001cef02887470a8d71ec7f3beed94d4b3ee8",
+  "complete_raw_packet": false,
+  "note": "Selected public evidence only. Full raw runs retained under local artifacts/reverse_recovery_2026-11-23; historical unsuccessful attempts preserved. File hashes describe exact public bytes.",
+  "files": {
+    "README.md": {
+      "sha256": "b58f1f66cf175657349967a6dc70275db33680912d202ee3476480c33b2fbaaa",
+      "bytes": 12857
+    },
+    "case-results.md": {
+      "sha256": "5ad54b85655e6e4001c2eb12bf2cf09c9e55888407471d38264aef588b6ff461",
+      "bytes": 3604
+    },
+    "code-review.md": {
+      "sha256": "cc88ef766b934f1cf44898376b632a6d9ad408aac1dfd68e633e05f70dcaa1e8",
+      "bytes": 3419
+    },
+    "contact_distance_audit.json": {
+      "sha256": "3ef66a7bac8fbfaac1530080af6be3b12a89aca5b105d65cbbf4d2771e56bdbc",
+      "bytes": 494
+    },
+    "development/candidate/forward_full/actuators_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate/forward_full/propulsion_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate/forward_full/result.json": {
+      "sha256": "9d96457f4009948cd6dcfcca0aedd12e8fec56b0f1f5c0db5488f9ce085fc585",
+      "bytes": 653
+    },
+    "development/candidate/forward_full/run_status.json": {
+      "sha256": "c5ca29420947df97d44bfa0a6d831f2955b790919cf5764c343957e7d8b73bc7",
+      "bytes": 391
+    },
+    "development/candidate/forward_full/source_versions.json": {
+      "sha256": "ea0b1565fb66b4afa81d940061a44c103cda23fd785953f138ba3a5204a86a14",
+      "bytes": 1242
+    },
+    "development/candidate/forward_full/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate/forward_full/stages.json": {
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "development/candidate/recovery_40_left/actuators_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate/recovery_40_left/propulsion_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate/recovery_40_left/result.json": {
+      "sha256": "0f88063fe211bfa244ae5481c2afe55176807a5a882927a2f1b6186fe4d880fa",
+      "bytes": 890
+    },
+    "development/candidate/recovery_40_left/run_status.json": {
+      "sha256": "0e58945a8d4de19f2c1437a116be0ea30d05d025c3ff5a77ca15dd91a0e02beb",
+      "bytes": 628
+    },
+    "development/candidate/recovery_40_left/source_versions.json": {
+      "sha256": "905c6c87a648247590309448965eacbcb14e13d870b948f70b95a844fb99bb51",
+      "bytes": 1246
+    },
+    "development/candidate/recovery_40_left/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate/recovery_40_left/stages.json": {
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "development/candidate/recovery_40_right/actuators_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate/recovery_40_right/propulsion_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate/recovery_40_right/result.json": {
+      "sha256": "61bc989d73d56d4c06a5701900c4b2e53962ae40f64b2dd6e94bd1ab288499a5",
+      "bytes": 892
+    },
+    "development/candidate/recovery_40_right/run_status.json": {
+      "sha256": "99471e2da5cdd796cfabc2b346f060321a000d6eee3d3cb654a3c2efc357d3a3",
+      "bytes": 630
+    },
+    "development/candidate/recovery_40_right/source_versions.json": {
+      "sha256": "b7cb55ad723d13f715d133f6c15b90bc8abfd39880f50ee6d97411e847e06d7e",
+      "bytes": 1247
+    },
+    "development/candidate/recovery_40_right/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate/recovery_40_right/stages.json": {
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "development/candidate/recovery_60_left/actuators_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate/recovery_60_left/propulsion_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate/recovery_60_left/result.json": {
+      "sha256": "d038ff14fc1b3018bdfac303b4a44fb0a7908a996189f474ff93c38987175abb",
+      "bytes": 890
+    },
+    "development/candidate/recovery_60_left/run_status.json": {
+      "sha256": "27d74c210acf5e16522bad8a83b56dfbccdf2a2f066d3388cfebc70a69d40a8d",
+      "bytes": 628
+    },
+    "development/candidate/recovery_60_left/source_versions.json": {
+      "sha256": "bd2ae8f35f98bb97a3c8ac613e06fd683440adfafa204fb4b28302413e88234c",
+      "bytes": 1246
+    },
+    "development/candidate/recovery_60_left/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate/recovery_60_left/stages.json": {
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "development/candidate/recovery_60_right/actuators_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate/recovery_60_right/propulsion_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate/recovery_60_right/result.json": {
+      "sha256": "ecd95a1d7ab85e8bbaed6e7d2d0b77be758d1773098b237e31633335545d304e",
+      "bytes": 892
+    },
+    "development/candidate/recovery_60_right/run_status.json": {
+      "sha256": "1a855fba9211948edec74fe4868ca881396261fbff79a3809200c1c656b42843",
+      "bytes": 630
+    },
+    "development/candidate/recovery_60_right/source_versions.json": {
+      "sha256": "fa0815a502707c759f19518db19bd3a5ee84f1b12dc0cbea0bb677d7a4663c1d",
+      "bytes": 1247
+    },
+    "development/candidate/recovery_60_right/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate/recovery_60_right/stages.json": {
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "development/candidate/startup-failure.log": {
+      "sha256": "96fd2870cd3ed1ce4d98ab69cd2bfc03b3d0d0bf89160aa2a31048e74a6d3e93",
+      "bytes": 20005
+    },
+    "development/candidate/suite_binding.json": {
+      "sha256": "caaceb33faf2449aafa491a1f1c2d07a78c6378da847f9ff33157174eee714e1",
+      "bytes": 122725
+    },
+    "development/candidate/summary.json": {
+      "sha256": "a1908af175db4771f47e5af39b37c3698180d29599f1ac5085f4c6964db386a3",
+      "bytes": 5427
+    },
+    "development/candidate2/forward_full/actuators_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate2/forward_full/propulsion_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate2/forward_full/result.json": {
+      "sha256": "9d96457f4009948cd6dcfcca0aedd12e8fec56b0f1f5c0db5488f9ce085fc585",
+      "bytes": 653
+    },
+    "development/candidate2/forward_full/run_status.json": {
+      "sha256": "c5ca29420947df97d44bfa0a6d831f2955b790919cf5764c343957e7d8b73bc7",
+      "bytes": 391
+    },
+    "development/candidate2/forward_full/source_versions.json": {
+      "sha256": "c94157eff0e1ee9a3040489630a00982851f0e06f9fd6c776c7af83a79cb3f5b",
+      "bytes": 1242
+    },
+    "development/candidate2/forward_full/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "09584bcfe54385834c8b57ee3df6a9ea84902aff28b693b132594c1ceadb7dee",
+      "bytes": 227
+    },
+    "development/candidate2/forward_full/stages.json": {
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "development/candidate2/recovery_40_left/actuators_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate2/recovery_40_left/propulsion_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate2/recovery_40_left/result.json": {
+      "sha256": "0f88063fe211bfa244ae5481c2afe55176807a5a882927a2f1b6186fe4d880fa",
+      "bytes": 890
+    },
+    "development/candidate2/recovery_40_left/run_status.json": {
+      "sha256": "0e58945a8d4de19f2c1437a116be0ea30d05d025c3ff5a77ca15dd91a0e02beb",
+      "bytes": 628
+    },
+    "development/candidate2/recovery_40_left/source_versions.json": {
+      "sha256": "9122b82d200aeaf76f68e6704cf4635b82e2ef594a38423c2702675ef40721e0",
+      "bytes": 1246
+    },
+    "development/candidate2/recovery_40_left/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "09584bcfe54385834c8b57ee3df6a9ea84902aff28b693b132594c1ceadb7dee",
+      "bytes": 227
+    },
+    "development/candidate2/recovery_40_left/stages.json": {
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "development/candidate2/recovery_40_right/actuators_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate2/recovery_40_right/propulsion_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate2/recovery_40_right/result.json": {
+      "sha256": "61bc989d73d56d4c06a5701900c4b2e53962ae40f64b2dd6e94bd1ab288499a5",
+      "bytes": 892
+    },
+    "development/candidate2/recovery_40_right/run_status.json": {
+      "sha256": "99471e2da5cdd796cfabc2b346f060321a000d6eee3d3cb654a3c2efc357d3a3",
+      "bytes": 630
+    },
+    "development/candidate2/recovery_40_right/source_versions.json": {
+      "sha256": "5ac3e757de1c16b08c75b05bc1e7afbd681a587b20e1ed4387850b5ba9422370",
+      "bytes": 1247
+    },
+    "development/candidate2/recovery_40_right/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "09584bcfe54385834c8b57ee3df6a9ea84902aff28b693b132594c1ceadb7dee",
+      "bytes": 227
+    },
+    "development/candidate2/recovery_40_right/stages.json": {
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "development/candidate2/recovery_60_left/actuators_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate2/recovery_60_left/propulsion_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate2/recovery_60_left/result.json": {
+      "sha256": "d038ff14fc1b3018bdfac303b4a44fb0a7908a996189f474ff93c38987175abb",
+      "bytes": 890
+    },
+    "development/candidate2/recovery_60_left/run_status.json": {
+      "sha256": "27d74c210acf5e16522bad8a83b56dfbccdf2a2f066d3388cfebc70a69d40a8d",
+      "bytes": 628
+    },
+    "development/candidate2/recovery_60_left/source_versions.json": {
+      "sha256": "8ba68ebb09200a4db2d9cfe5b6471e0c9048818df460d4c42d48ef886e3370d5",
+      "bytes": 1246
+    },
+    "development/candidate2/recovery_60_left/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "09584bcfe54385834c8b57ee3df6a9ea84902aff28b693b132594c1ceadb7dee",
+      "bytes": 227
+    },
+    "development/candidate2/recovery_60_left/stages.json": {
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "development/candidate2/recovery_60_right/actuators_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate2/recovery_60_right/propulsion_state.csv": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "development/candidate2/recovery_60_right/result.json": {
+      "sha256": "ecd95a1d7ab85e8bbaed6e7d2d0b77be758d1773098b237e31633335545d304e",
+      "bytes": 892
+    },
+    "development/candidate2/recovery_60_right/run_status.json": {
+      "sha256": "1a855fba9211948edec74fe4868ca881396261fbff79a3809200c1c656b42843",
+      "bytes": 630
+    },
+    "development/candidate2/recovery_60_right/source_versions.json": {
+      "sha256": "f049e58c5b3fdfa8d6712ca8dc3d4d54f78877e873360ae633cca0c6623ca786",
+      "bytes": 1247
+    },
+    "development/candidate2/recovery_60_right/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "09584bcfe54385834c8b57ee3df6a9ea84902aff28b693b132594c1ceadb7dee",
+      "bytes": 227
+    },
+    "development/candidate2/recovery_60_right/stages.json": {
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "development/candidate2/startup-failure.log": {
+      "sha256": "f0f3a947f8bbb810d48e9059a76fcec2122532fc28b343c55a6c28b2f41c8637",
+      "bytes": 31856
+    },
+    "development/candidate2/suite_binding.json": {
+      "sha256": "25256e7e81fd1be220d4501d1080ecf62c8f80bfa123bf00bbbd429a53f9ae0d",
+      "bytes": 122725
+    },
+    "development/candidate2/summary.json": {
+      "sha256": "9379d998aba2e8c69f9ac80fd4b95594d1481e4ac373f5c769ceb2b5a84ba7cd",
+      "bytes": 5427
+    },
+    "development/candidate3/forward_full/actuators_state.csv": {
+      "sha256": "80b72d7cea4df5d1fdfd3eb0955d9b30b41f390cb36fdf01fa739069812a6d27",
+      "bytes": 198874
+    },
+    "development/candidate3/forward_full/case_binding.json": {
+      "sha256": "8ab5e2aae7d1e5db9f13a70540467fc2d2cd248cdcf4917cd461eb3d52304718",
+      "bytes": 2780
+    },
+    "development/candidate3/forward_full/propulsion_state.csv": {
+      "sha256": "059eb49cc1a5aadae147a802108e30c54aa182b1d6eb84f667ce37ca8b6fd828",
+      "bytes": 423513
+    },
+    "development/candidate3/forward_full/result.json": {
+      "sha256": "15d1ec06acb4b5a30ca27c524cd0793d631e628b30b4fb9697568f2983a2756c",
+      "bytes": 1582
+    },
+    "development/candidate3/forward_full/run_status.json": {
+      "sha256": "9672372bf071119f4e4f0fd83c383d3f7e4f425f6fc207322828fb0699e9b989",
+      "bytes": 373
+    },
+    "development/candidate3/forward_full/source_versions.json": {
+      "sha256": "aba7fc6d7778ec8db2cfbe85067f9cbb11809247fb778dfc20350ef5f2b1fa70",
+      "bytes": 1242
+    },
+    "development/candidate3/forward_full/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "822089094790b147fee5f6770f38fe01067d160ed2df40162733e34f855d9dd1",
+      "bytes": 223791
+    },
+    "development/candidate3/forward_full/stages.json": {
+      "sha256": "d0d1ddec3e01a03203d98fa8ac296bd3f3e14f8fc3e3e865927c190408310e3c",
+      "bytes": 368
+    },
+    "development/candidate3/maneuver_assessment.json": {
+      "sha256": "b364d9b1bbade79d133b9f1d613936e1dbf58c602383ebaf21cefa5dc502a8c5",
+      "bytes": 11924
+    },
+    "development/candidate3/recovery_40_left/actuators_state.csv": {
+      "sha256": "7f7e82006da9000beda0e42d14297019d2eadab7cd238405c9ea52648c10aa9b",
+      "bytes": 319029
+    },
+    "development/candidate3/recovery_40_left/case_binding.json": {
+      "sha256": "91128061f526b5e3fd13d37d312121ce841cc03c8bc29601bbf4247d75fdc126",
+      "bytes": 3017
+    },
+    "development/candidate3/recovery_40_left/propulsion_state.csv": {
+      "sha256": "e034008d99116cc3ef74c8a68e87e1078b380db32360949c6844b51a5acf6535",
+      "bytes": 686308
+    },
+    "development/candidate3/recovery_40_left/result.json": {
+      "sha256": "faf93ec755a2fe034363b72f8b94174633b71700b29b86338f19aa7bdb455ec1",
+      "bytes": 2634
+    },
+    "development/candidate3/recovery_40_left/run_status.json": {
+      "sha256": "c9ab26c07356f0f4658817e280889b6061f46d40289c9b1bada87d8aa25900bb",
+      "bytes": 610
+    },
+    "development/candidate3/recovery_40_left/source_versions.json": {
+      "sha256": "13b09187d9ff73741378137054758d6b9a44b44878edc9bac3acdfe7f769da17",
+      "bytes": 1246
+    },
+    "development/candidate3/recovery_40_left/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "fba611662e639990d95f891b1d591da79f3073c1685ec39db7fc43125f3e74bc",
+      "bytes": 359118
+    },
+    "development/candidate3/recovery_40_left/stages.json": {
+      "sha256": "fc30758cf9650b92caf4ac2e1f6c888284484867323390721f933e885ba6213d",
+      "bytes": 1099
+    },
+    "development/candidate3/recovery_40_right/actuators_state.csv": {
+      "sha256": "5b606cbd64fb20080efc187569add9e14dac40f6ff678dd46802257a3de2af05",
+      "bytes": 320889
+    },
+    "development/candidate3/recovery_40_right/case_binding.json": {
+      "sha256": "31a3d580844447ebaa40529ee83c39c81bef252597358fc6d938108272cad1ac",
+      "bytes": 3019
+    },
+    "development/candidate3/recovery_40_right/propulsion_state.csv": {
+      "sha256": "3c0a6e572e76e293808c1a1d4706426a5754c6b000e7205ea26f2cc8b0a994a4",
+      "bytes": 691049
+    },
+    "development/candidate3/recovery_40_right/result.json": {
+      "sha256": "d854dff5b2329338eee3f16805ea0665ddde942c12e487766cf8522cd79311e1",
+      "bytes": 2637
+    },
+    "development/candidate3/recovery_40_right/run_status.json": {
+      "sha256": "bdbe2f38a5386dd9fb40b2f340f00dac2c519afceb7f8f58b6406dd23419d90b",
+      "bytes": 612
+    },
+    "development/candidate3/recovery_40_right/source_versions.json": {
+      "sha256": "f2504bfc3a87fd63fc5bbc2e41a123f8d590194cec71e1d59f4de681895f5518",
+      "bytes": 1247
+    },
+    "development/candidate3/recovery_40_right/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "dae956c3f6e62c2beab5bc9e3e5c68df1152ee942157e3cb589f95729403ac63",
+      "bytes": 360296
+    },
+    "development/candidate3/recovery_40_right/stages.json": {
+      "sha256": "0fcc03a1d2b2b53013c961fd6cd421734b7e0705440cffb6f0df810980a2cc15",
+      "bytes": 1097
+    },
+    "development/candidate3/recovery_60_left/actuators_state.csv": {
+      "sha256": "67f28094238614be571965105c34c0b4c14483b1ecec45b5c5d6c7e85ed85332",
+      "bytes": 318732
+    },
+    "development/candidate3/recovery_60_left/case_binding.json": {
+      "sha256": "d7f5dd5c67ad7564f91618f751cab1e4bc724606c5c39a600f3b290906e09f4d",
+      "bytes": 3017
+    },
+    "development/candidate3/recovery_60_left/propulsion_state.csv": {
+      "sha256": "3398206990c664d57c70ed252f043713ff7aa6c6f9aca9c30fb70f0d7dd93024",
+      "bytes": 686298
+    },
+    "development/candidate3/recovery_60_left/result.json": {
+      "sha256": "72e28480d209fe20823425e5e49d65802f771aaf4711926ac47e2125e894e185",
+      "bytes": 2628
+    },
+    "development/candidate3/recovery_60_left/run_status.json": {
+      "sha256": "fb866f1be0fbeb9082961d31deae019d590dacf4534535c9fd60d4f09744b95d",
+      "bytes": 610
+    },
+    "development/candidate3/recovery_60_left/source_versions.json": {
+      "sha256": "54f44802c57cba663c393a5e627b44269cacfd744a01cf46ca0e2577af7bc48c",
+      "bytes": 1246
+    },
+    "development/candidate3/recovery_60_left/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "3dbd27326198ad3833c19a8234042b8b276e195d11ead44c2fdbaf1adbe3607b",
+      "bytes": 362835
+    },
+    "development/candidate3/recovery_60_left/stages.json": {
+      "sha256": "44e921844b3c36a71b00bafd19e8fb048d6b1a502c32a3972040860453afcc36",
+      "bytes": 1096
+    },
+    "development/candidate3/recovery_60_right/actuators_state.csv": {
+      "sha256": "f9b44b3ec05d4c24421a4a4592f27c5108e617eb081f0c7ffb2f866c0b805fd2",
+      "bytes": 320349
+    },
+    "development/candidate3/recovery_60_right/case_binding.json": {
+      "sha256": "67544c3f3a06a525781c5b567411e8af2b0e02659070cd30581d5fc93cb99c5f",
+      "bytes": 3019
+    },
+    "development/candidate3/recovery_60_right/propulsion_state.csv": {
+      "sha256": "4e199f7f4c1acedbd4b6c8f6d8c1d1e7ccd63f6f6245e97c25466bf607f1c0ff",
+      "bytes": 690602
+    },
+    "development/candidate3/recovery_60_right/result.json": {
+      "sha256": "e239c3ff083c1fc74981f6bb20003a70d6fac8921f269d8dcbe28d817243697e",
+      "bytes": 2633
+    },
+    "development/candidate3/recovery_60_right/run_status.json": {
+      "sha256": "4b81fb65dbc542d32e2e2940d73193ab9ee4b92e7ea811c3c73869e18ac17c4a",
+      "bytes": 612
+    },
+    "development/candidate3/recovery_60_right/source_versions.json": {
+      "sha256": "82ed08698e63af85ba80402643cd8a563dd339eb787d9453ea8323f564fb5894",
+      "bytes": 1247
+    },
+    "development/candidate3/recovery_60_right/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "892608d6d1d501984962fd986a633a48fb3e1a8e81fdb2cb6dd3200b2732e0c9",
+      "bytes": 363746
+    },
+    "development/candidate3/recovery_60_right/stages.json": {
+      "sha256": "5710304cc57563978723b6d2f37768a76f5e9f97c58d82c940197cc8033ea49d",
+      "bytes": 1098
+    },
+    "development/candidate3/suite_binding.json": {
+      "sha256": "d359a2f68614063c11b163d535efcf3bef5b7ff0af7f5d9e4cbb30d77f894ddc",
+      "bytes": 122725
+    },
+    "development/candidate3/summary.json": {
+      "sha256": "c9e7513277358f3b239cc0ea7f9f9d2525982a7f36c30374b2d1cb07a1b589bd",
+      "bytes": 14283
+    },
+    "development/contact/result.json": {
+      "sha256": "a68a6cf3b40170c9219457d7465b411befed576072df19150ee9710fceae407b",
+      "bytes": 1952
+    },
+    "development/contact/trajectories.json": {
+      "sha256": "8e4afb7d4b59e3b79669be2e550ff476f81d68a822359b03201d10cbea2a03ea",
+      "bytes": 179271
+    },
+    "development/contact_final/result.json": {
+      "sha256": "1b2868fbcc9b1813735e031c604cc72637d1e5059a843a53faa27bfc5f4b5142",
+      "bytes": 1948
+    },
+    "development/contact_final/trajectories.json": {
+      "sha256": "d32dc90e5adc234f9779587bfa3f6c1f79c70ae5b64f1a75e4a82e854e4f63a1",
+      "bytes": 176011
+    },
+    "development/diagnostics/baseline/actuators_state.csv": {
+      "sha256": "555f51b3b399c08f350f7896359eb9c1df6119cbfadae37c0c4559e285cad2e3",
+      "bytes": 318573
+    },
+    "development/diagnostics/baseline/case_binding.json": {
+      "sha256": "ccdd23ce48cc025ba9f9742cd38bdf6097970f6d34a70c022f7eb998b1b1bb8f",
+      "bytes": 2788
+    },
+    "development/diagnostics/baseline/propulsion_state.csv": {
+      "sha256": "046a1ea29a9b818496a9b24fb79f05c8215c2af8699aaec1959399e226618278",
+      "bytes": 686833
+    },
+    "development/diagnostics/baseline/result.json": {
+      "sha256": "9799882759729d6df5b8553f01ff902fa10e95fb7282ff0f3d105c90db5c19f0",
+      "bytes": 2618
+    },
+    "development/diagnostics/baseline/run_status.json": {
+      "sha256": "c7301ef5447c21c8662303a970caa1118dc5a9e4721711283bc17fb388f71458",
+      "bytes": 603
+    },
+    "development/diagnostics/baseline/source_versions.json": {
+      "sha256": "7be44c5f55528e35048df79b7765985795885972d6eae9fcb7680521f8f2cf50",
+      "bytes": 1238
+    },
+    "development/diagnostics/baseline/stages.json": {
+      "sha256": "3619aeddbdf9a6384fdf00b015529582f380b4c5f48fe20ec2c4bfbab74c5d61",
+      "bytes": 1095
+    },
+    "development/diagnostics/no_added_mass/actuators_state.csv": {
+      "sha256": "f03a3f30337bdad1c0ddac6bfb33e457a0f27f01dad8a9f1502a9eb41c550c42",
+      "bytes": 318798
+    },
+    "development/diagnostics/no_added_mass/case_binding.json": {
+      "sha256": "1f15a8b4828521482b208b1b5e66119113702172b76a98836642f442ca9dbcc8",
+      "bytes": 2887
+    },
+    "development/diagnostics/no_added_mass/propulsion_state.csv": {
+      "sha256": "b69f04ea1e2ac5f5acb5beb540a9eac4cd3def0c6728eeef733d5c7009825315",
+      "bytes": 687224
+    },
+    "development/diagnostics/no_added_mass/result.json": {
+      "sha256": "83522edd5a3a11f066d7462b3dee9dfb3b50d5f5698736fbb6425a928b9b0527",
+      "bytes": 2721
+    },
+    "development/diagnostics/no_added_mass/run_status.json": {
+      "sha256": "3fa8bb2b84cf1afe7b2aaf834a25cfaf7c90888fb0bbf6e0c8ea2755879d5e93",
+      "bytes": 702
+    },
+    "development/diagnostics/no_added_mass/source_versions.json": {
+      "sha256": "cab4194de35063f11ca61a9cea9263dabac41a74048c4e31b34315ede711ec86",
+      "bytes": 1243
+    },
+    "development/diagnostics/no_added_mass/stages.json": {
+      "sha256": "b2ec3530afc918045d2600dab8e5effe1f6e0ab8c555f36e0ef8278a202ff72e",
+      "bytes": 1100
+    },
+    "development/diagnostics/no_appendages/actuators_state.csv": {
+      "sha256": "921c91d9875487281410a642ca54b13b304f53a160f2431a46dda558eaa57c37",
+      "bytes": 318830
+    },
+    "development/diagnostics/no_appendages/case_binding.json": {
+      "sha256": "4baf4ca1d0e692f0c4b546917bb056e106da1a6fa8bc8e8d9f9a0b9003d4b4b2",
+      "bytes": 2625
+    },
+    "development/diagnostics/no_appendages/propulsion_state.csv": {
+      "sha256": "e9fc9e2ba606b283290c86733db5fcc040150235aa489f9622dfd93adb0378b4",
+      "bytes": 687448
+    },
+    "development/diagnostics/no_appendages/result.json": {
+      "sha256": "3e2c997ab86d8618be5e85923a5f349ee5ad7bb79fdbd1384f574824025dfdc5",
+      "bytes": 2658
+    },
+    "development/diagnostics/no_appendages/run_status.json": {
+      "sha256": "2328f7afa598c3abd22a35a945029f9dd8cf9e0ef9317e7b627d74fed3e38e32",
+      "bytes": 640
+    },
+    "development/diagnostics/no_appendages/source_versions.json": {
+      "sha256": "493872e46db0071db5b70c8820409b151fad07582be0c7b7ecb954453a654802",
+      "bytes": 1243
+    },
+    "development/diagnostics/no_appendages/stages.json": {
+      "sha256": "5fb9087f79ba029f87be91c6249e7e57a7dc699e9484f803bd19aef04d3d7e19",
+      "bytes": 1094
+    },
+    "development/diagnostics/no_water_couple/actuators_state.csv": {
+      "sha256": "016a82c7ea90b006e08f4dde6715055314cef1ed59b375d1eb1f00361b90b161",
+      "bytes": 318972
+    },
+    "development/diagnostics/no_water_couple/case_binding.json": {
+      "sha256": "57c41d25a8d7bfacded1569065e0d616dd5003dd59954c9e4f6c6e7be59f0a3b",
+      "bytes": 2873
+    },
+    "development/diagnostics/no_water_couple/propulsion_state.csv": {
+      "sha256": "366eba30a28977fb2d98bc1def3d0d9a2b100471fcd55930007e88d9c4ae8166",
+      "bytes": 687988
+    },
+    "development/diagnostics/no_water_couple/result.json": {
+      "sha256": "a7b945978ebaa302003cf9ec61fa8c712139161ba8a9bed3d4e202cf48ccc813",
+      "bytes": 2707
+    },
+    "development/diagnostics/no_water_couple/run_status.json": {
+      "sha256": "e63fae7a7a4dddb2b66409c02dd644dad58fa437a88b169ae4d13167dc9c0343",
+      "bytes": 688
+    },
+    "development/diagnostics/no_water_couple/source_versions.json": {
+      "sha256": "677abf615df8bce31ff2af71970bd77cd3cd743bcd817942169cef4045f7b4de",
+      "bytes": 1245
+    },
+    "development/diagnostics/no_water_couple/stages.json": {
+      "sha256": "ace8693981f2174946c41fa304a53109477d385fc7a1666878ab04c1251d44a6",
+      "bytes": 1095
+    },
+    "development/diagnostics/suite_binding.json": {
+      "sha256": "1f88f4afabe6afb0a0cd9f81213a06be903104079842501a4ab0657141142425",
+      "bytes": 121524
+    },
+    "development/diagnostics/summary.json": {
+      "sha256": "0cdba76fc79f393bbfe2be7f6d381e735a336877df536f47281c591cabcc50c5",
+      "bytes": 12582
+    },
+    "development/interrupted_final_stress/stress/progress.json": {
+      "sha256": "2a5edaae91f54630ac974600f1fe7406b70727f688308b2c659d8c0b84bd52b2",
+      "bytes": 529
+    },
+    "development/interrupted_final_stress/stress/source_versions.json": {
+      "sha256": "e059c69ea67918cbe980a24f4d85edb0f1f4032fe9322f3adecb48df56f647e0",
+      "bytes": 1236
+    },
+    "development/interrupted_final_stress/stress/startup.json": {
+      "sha256": "579aac27c00f1ab15a8c53d28b0e32f51083209166b43be119576b8ac59f2240",
+      "bytes": 1032
+    },
+    "development/interrupted_final_stress/stress_console.log": {
+      "sha256": "33910df54379a218b461a01f5ab0455b4f8ee593f6537af2dd1b9b4df6227293",
+      "bytes": 1704
+    },
+    "development/interrupted_final_stress/suite_console.log": {
+      "sha256": "b51496fe716ef99b944511307c3afefcb7280e896d05045c9e5fda698ce2490a",
+      "bytes": 2020
+    },
+    "diagnostics.json": {
+      "sha256": "5a4f559430a01253ea0f440f8efedbacfd6528378f7da7330fec83beaf4ef039",
+      "bytes": 2188
+    },
+    "final/astern_left/case_binding.json": {
+      "sha256": "dc41d67b05b39c5e876f3c2af3a935cd6ed986eceb070e489937604353d710f6",
+      "bytes": 3061
+    },
+    "final/astern_left/result.json": {
+      "sha256": "8d6b0cb891b7eee4e8b1171b66dccbb380ce760f06d72ac50e0c706ddad3dd72",
+      "bytes": 2787
+    },
+    "final/astern_left/scene.json": {
+      "sha256": "64af21dbd5b06e1f3d7eb0eb804e491906f8cf93f7aad8297a2515a90a542c2e",
+      "bytes": 4205
+    },
+    "final/astern_left/source_versions.json": {
+      "sha256": "b72adf4edc75cec74fd0b5c9a04457b085717965e3e4d341fb6146e22f05de20",
+      "bytes": 1241
+    },
+    "final/astern_left/stages.json": {
+      "sha256": "ed72d4b4d6f222200db376962d8913514459f32c98a505c8fd7fd37e2ea54302",
+      "bytes": 1147
+    },
+    "final/astern_right/case_binding.json": {
+      "sha256": "941f442e8e69dc2f83ecab9ae320f89fc0b4baddf7ce8c729491f94aea1ef4fb",
+      "bytes": 3061
+    },
+    "final/astern_right/result.json": {
+      "sha256": "f0a7bb044e08419b0b523dac51fef6defc86a5e6d97aa64cee49946e2659e43e",
+      "bytes": 2783
+    },
+    "final/astern_right/scene.json": {
+      "sha256": "8896ad1bde5717e7ec880dc387190f291dbf714ca7ea9cea6ab82f7d541c37fc",
+      "bytes": 4206
+    },
+    "final/astern_right/source_versions.json": {
+      "sha256": "6b88fdadeb67ddae20f08f9ce55f7644141dae4691c9ae6c173d2fd5735e6a3e",
+      "bytes": 1242
+    },
+    "final/astern_right/stages.json": {
+      "sha256": "b13acb0f967229f7ed65b3996dd829f15dfd6c9b12dabf7faa2d0a82576a75c1",
+      "bytes": 1147
+    },
+    "final/beam_load0_fuel6/case_binding.json": {
+      "sha256": "034b3a91e9d6e011188a7f12546441f3d470eb38c82a159f3108ac93ec6c4e91",
+      "bytes": 2877
+    },
+    "final/beam_load0_fuel6/result.json": {
+      "sha256": "df9991d0cf625bbf834feb2c2b013e6b73f2ae1a967368836558e8dca6335743",
+      "bytes": 1650
+    },
+    "final/beam_load0_fuel6/scene.json": {
+      "sha256": "47dd7508929cf341fea2175856d845998b04e47867eefd385e53c4003ccff2d1",
+      "bytes": 4210
+    },
+    "final/beam_load0_fuel6/source_versions.json": {
+      "sha256": "8de120a83bc2e0d630ae10cb3f6612f7e127c6caa6f3e70e208e10114eead021",
+      "bytes": 1246
+    },
+    "final/beam_load0_fuel6/stages.json": {
+      "sha256": "7af58111d725b0e0d469027a2f5d87d7e0890558f28e70ce09adfd570e8db4eb",
+      "bytes": 395
+    },
+    "final/brake_100/case_binding.json": {
+      "sha256": "2212da6e33dce339af6215ac4b6df51868975da6a323dbea51bd405ddff96303",
+      "bytes": 3203
+    },
+    "final/brake_100/result.json": {
+      "sha256": "b4fb520a582b45d60a3139841ca1def07692713f6e3f60bb4b76c14462e2d612",
+      "bytes": 3396
+    },
+    "final/brake_100/scene.json": {
+      "sha256": "5f78d8612344789a156d5e807eb8ddb5da5a334a9c22df46b563b3209c912e3c",
+      "bytes": 4203
+    },
+    "final/brake_100/source_versions.json": {
+      "sha256": "cbf0bb31e738fe2ce235e67ed57344b24db7e31805ff30d4920611986b91b842",
+      "bytes": 1239
+    },
+    "final/brake_100/stages.json": {
+      "sha256": "143af8a50b18d91953f837ef1c1619c01f039a018d2b52b2a4bc382237b31bfe",
+      "bytes": 1539
+    },
+    "final/coast_100/case_binding.json": {
+      "sha256": "33717fac5c51bbd39daa0c236299b7e962ac6f3a089366bc3e7ef7ccdce6beac",
+      "bytes": 2905
+    },
+    "final/coast_100/result.json": {
+      "sha256": "806662d1f06d19cdb6b53b8e8649929c5f5e89b0176db8650dbda50296f2e25a",
+      "bytes": 2148
+    },
+    "final/coast_100/scene.json": {
+      "sha256": "6203826dc4122d5ebf119a7ee187d18dc335f915ccd7b5e02bb5283b7f35e5b1",
+      "bytes": 4203
+    },
+    "final/coast_100/source_versions.json": {
+      "sha256": "04f6c2cd7ae0d0025afbdb2b885250adec0e66b3fb44cbdb0c23d48ee343bc9b",
+      "bytes": 1239
+    },
+    "final/coast_100/stages.json": {
+      "sha256": "8ae0bb971ef2537444f8a09c54bff71abb021229976c3431402b761265b3edb9",
+      "bytes": 750
+    },
+    "final/combined/case_binding.json": {
+      "sha256": "93d8801e87ecb0384d9e13d31a63ef785e880532d09f19baa795993e9750a1c0",
+      "bytes": 2935
+    },
+    "final/combined/result.json": {
+      "sha256": "c7a9d53e70b3f715627768e4ba53fdb5d7a9cb645bbf6b16ab7061c952827a3b",
+      "bytes": 1709
+    },
+    "final/combined/scene.json": {
+      "sha256": "7814764b8ae81cfbe6c3f2d12f041a51e9d224ddfc19197e6604e8025b243bf8",
+      "bytes": 4191
+    },
+    "final/combined/source_versions.json": {
+      "sha256": "2cf43d64ddaf7ff24edff3d50723592bf1b0fa3766cd51780460322b7f216162",
+      "bytes": 1238
+    },
+    "final/combined/stages.json": {
+      "sha256": "a387521dd2b79b0fc96e3b9d11e0216a4b2c23240c13b055c739bb837dd924e9",
+      "bytes": 403
+    },
+    "final/head_load300_fuel6/case_binding.json": {
+      "sha256": "9aa80b6621ecfcb8c759e1db234cc52558c083127bd011c46e40ff0e85963a47",
+      "bytes": 2880
+    },
+    "final/head_load300_fuel6/result.json": {
+      "sha256": "961db385829339ed4fd3232b1ec43667376fc1d44acdc4a951736560a407cdbd",
+      "bytes": 1655
+    },
+    "final/head_load300_fuel6/scene.json": {
+      "sha256": "6e9cbfe156c35f55533f86d078099453a774852177796c0a0ab5e2e963a9ca69",
+      "bytes": 4210
+    },
+    "final/head_load300_fuel6/source_versions.json": {
+      "sha256": "38eb87038b6e2a219c1b1a569de586ea1f2ebad895f28d082e6ba78d9fbccd9b",
+      "bytes": 1248
+    },
+    "final/head_load300_fuel6/stages.json": {
+      "sha256": "18716176eda4a0cac26e203496702e663e5fe745d1bbd6ab903e678a55123016",
+      "bytes": 398
+    },
+    "final/loaded_low_fuel/actuators_state.csv": {
+      "sha256": "f01bddbd81a9e1ecb790b521089f51245cecebaa6c4d30dd533b333b353dc28c",
+      "bytes": 238438
+    },
+    "final/loaded_low_fuel/boat.sdf": {
+      "sha256": "f3392cc4b2b6cd85e7d01946911015dc3e4b8e8dd5c2d9709b32888a435465e5",
+      "bytes": 82004
+    },
+    "final/loaded_low_fuel/case_binding.json": {
+      "sha256": "839825de5d9568d76e21b4bd4a432324bf46166f473c5f75d92040f4288f3681",
+      "bytes": 2810
+    },
+    "final/loaded_low_fuel/health.json": {
+      "sha256": "2e93cbd9dd81fe7a3094e63a7bacf06868e28c70ec599be83405c5e7b7f79f5d",
+      "bytes": 293540
+    },
+    "final/loaded_low_fuel/propulsion_state.csv": {
+      "sha256": "da6873a1ab6ec9cc5ac3f1bc7887517b7bba3995012bd3b3c444076b56ffbcaa",
+      "bytes": 506676
+    },
+    "final/loaded_low_fuel/result.json": {
+      "sha256": "5d3e555cd63ad2d2269e4f8de81c2e788d67829d22214eacfef5aad1a7c427a9",
+      "bytes": 1575
+    },
+    "final/loaded_low_fuel/scene.json": {
+      "sha256": "56aa7d2c4406b6cd3a303883960dbaf96cd153fd8580e1abb4063c52be3341c7",
+      "bytes": 4207
+    },
+    "final/loaded_low_fuel/source_versions.json": {
+      "sha256": "1634eb2cbd438e701d67114cc03920435ea9e54c24a013de1ab798cb7775a239",
+      "bytes": 1245
+    },
+    "final/loaded_low_fuel/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "39ef3b80c9ffdcc646a5617f0028cd02a1e3090647841bf2fc0d4e6129de8c33",
+      "bytes": 268288
+    },
+    "final/loaded_low_fuel/stages.json": {
+      "sha256": "1c3fa0b0619dee5514a73be84f1a96c0986542fb3aca08b01c5fe9d3a620ecb0",
+      "bytes": 365
+    },
+    "final/neutral_035/case_binding.json": {
+      "sha256": "e98e0bd4a13eb8c7a6b192f03d733b5a282f800928f86ffddeeacc665efa10de",
+      "bytes": 2769
+    },
+    "final/neutral_035/result.json": {
+      "sha256": "81368f4b84a95904c7b61e88e70888650fea2a91f30b0d63713dc7de12678943",
+      "bytes": 1541
+    },
+    "final/neutral_035/scene.json": {
+      "sha256": "92661ffe89967accba081782425a842945ef3e6e003e524fbed9f8da7f36e35c",
+      "bytes": 4205
+    },
+    "final/neutral_035/source_versions.json": {
+      "sha256": "7f8ed29879a9d1f70906d6ed41c1084acfed098faa888bfeb5e035ffada82906",
+      "bytes": 1241
+    },
+    "final/neutral_035/stages.json": {
+      "sha256": "478d54bb2fcf040cdc6c281a8c080590992a1caafcaeaffcb80b7a17b22d2225",
+      "bytes": 370
+    },
+    "final/neutral_065/case_binding.json": {
+      "sha256": "34e91a61d82824d7b7712017c8b0b4ebfc7da10eac973286b74eb8f2daff620e",
+      "bytes": 2769
+    },
+    "final/neutral_065/result.json": {
+      "sha256": "fd140c0cebddfad9fa72279bc23677d8221418885fac724137593093390a97c8",
+      "bytes": 1542
+    },
+    "final/neutral_065/scene.json": {
+      "sha256": "af55552b01dfa2e47549d8d79b96a664252c9f1ed67eb0fcbec708afc0d45352",
+      "bytes": 4205
+    },
+    "final/neutral_065/source_versions.json": {
+      "sha256": "a78b5f4b9578c3dc8b2cb7f58d387526889ba5653834c95ad9d918b68bbdd143",
+      "bytes": 1241
+    },
+    "final/neutral_065/stages.json": {
+      "sha256": "44b79a88ff21f66d93a0261f30da415780d72279bb1be7fc0d3cf847adafd37f",
+      "bytes": 371
+    },
+    "final/neutral_100/actuators_state.csv": {
+      "sha256": "6ad6dbe2eb886ff09e54d008a63ba5c9e5984f1d072df8831fb40b8818e2e952",
+      "bytes": 355012
+    },
+    "final/neutral_100/boat.sdf": {
+      "sha256": "f254dee109238fc18df5748aa9d6b603264dfe090134f6adf347672b80c9a8b8",
+      "bytes": 82004
+    },
+    "final/neutral_100/case_binding.json": {
+      "sha256": "3dd783ce9c3812ad546e6f8a872840111534f2381780a43579dd00f766614877",
+      "bytes": 2766
+    },
+    "final/neutral_100/health.json": {
+      "sha256": "110955b870a080c53bdd712ac9a74603a1d098dc165a45f96b6a66f68e3fc8b7",
+      "bytes": 431331
+    },
+    "final/neutral_100/propulsion_state.csv": {
+      "sha256": "58ede59dd47a4d7aeed2d35a11f75839d5d5866ef4500ecb2248c82c87837d62",
+      "bytes": 755293
+    },
+    "final/neutral_100/result.json": {
+      "sha256": "788c4b89fae575a0c7d293900f5f00782946e1dd2758170102dfdef31198cdbe",
+      "bytes": 1534
+    },
+    "final/neutral_100/scene.json": {
+      "sha256": "2b1b1197e3bda8e12100cb903220d6279584558aa98a1cf3b98255150648800b",
+      "bytes": 4205
+    },
+    "final/neutral_100/source_versions.json": {
+      "sha256": "7fc88a1bd6585767cc6f700ab19a66697ab4f32495cc60263aaa1d30d536bc22",
+      "bytes": 1241
+    },
+    "final/neutral_100/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "65c44d1ae4da0f1cbfb9357b0a95ef7af5cd5e0d63f14b8a0dd3de40641ae3a8",
+      "bytes": 399264
+    },
+    "final/neutral_100/stages.json": {
+      "sha256": "201a8f6f3d93c9ba1f33bc25379d92232f979fe7d053ada05aed32192f5bc323",
+      "bytes": 368
+    },
+    "final/recovery_40_left/actuators_state.csv": {
+      "sha256": "af41dc04e77814943ebeb91310aaac04018d59e6ff59b9a80c52fc652f537cc7",
+      "bytes": 319243
+    },
+    "final/recovery_40_left/boat.sdf": {
+      "sha256": "f254dee109238fc18df5748aa9d6b603264dfe090134f6adf347672b80c9a8b8",
+      "bytes": 82004
+    },
+    "final/recovery_40_left/case_binding.json": {
+      "sha256": "57e73377562997e08f661128ebd79a50cfe68383ba08605be550def35db111d2",
+      "bytes": 3017
+    },
+    "final/recovery_40_left/health.json": {
+      "sha256": "c47c859a21cb7ad3ac38d46cb04c402fd77540fb2d5b4d03a10b8008743a7fc2",
+      "bytes": 393466
+    },
+    "final/recovery_40_left/propulsion_state.csv": {
+      "sha256": "0deedbf08b964ac0d86564c70f57935d3b81d93330755e4d5791df3541e63818",
+      "bytes": 686737
+    },
+    "final/recovery_40_left/result.json": {
+      "sha256": "dd6d92e325cbb3f26fb497ae9251c184103537f61567d673aeffc346a6638b56",
+      "bytes": 2631
+    },
+    "final/recovery_40_left/scene.json": {
+      "sha256": "7894eac8df4c9228b7b6e68adeb4131ef22bbef2674cf6049e7bff8e62aa52b7",
+      "bytes": 4210
+    },
+    "final/recovery_40_left/source_versions.json": {
+      "sha256": "12d43467fbf2ec490203804cfb10e73b0bbece6987dfe8767598e67b1e117a0a",
+      "bytes": 1246
+    },
+    "final/recovery_40_left/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "d376a78a3b748d4c8e35e38532d007cea1d2305b2f00b777fa87d2a8fb3dc867",
+      "bytes": 359345
+    },
+    "final/recovery_40_left/stages.json": {
+      "sha256": "0c16a7be46cdb727536b3c7d8abfb09ec232c20cbcca25b56252d88da9e23480",
+      "bytes": 1097
+    },
+    "final/recovery_40_right/actuators_state.csv": {
+      "sha256": "c281fd7dddd1b322feabddf69d666f95a5231418ded953f9f0af7adc2bc98aa5",
+      "bytes": 319060
+    },
+    "final/recovery_40_right/boat.sdf": {
+      "sha256": "f254dee109238fc18df5748aa9d6b603264dfe090134f6adf347672b80c9a8b8",
+      "bytes": 82004
+    },
+    "final/recovery_40_right/case_binding.json": {
+      "sha256": "aa92e3cb45a8b9ba74e6d60d3a715a1e077316cb29d4f6852912a942f499302c",
+      "bytes": 3019
+    },
+    "final/recovery_40_right/health.json": {
+      "sha256": "4d5caa5b2b13083449682607c8b099fc21cef05cca80d344df1345368f5cea42",
+      "bytes": 396286
+    },
+    "final/recovery_40_right/propulsion_state.csv": {
+      "sha256": "074dee4d486398aee9eb91b282406deb1a1dd28da09c3a2809109a4fa7ba8a5d",
+      "bytes": 687168
+    },
+    "final/recovery_40_right/result.json": {
+      "sha256": "02d7b6b3eebb3537e3904d0597a3485c7f70cc879d6626621f3982c38321d262",
+      "bytes": 2634
+    },
+    "final/recovery_40_right/scene.json": {
+      "sha256": "3910ee29b19d6ffe1fd574c473d8ca6dd5b4dea56953ac41852f6f665b89084f",
+      "bytes": 4211
+    },
+    "final/recovery_40_right/source_versions.json": {
+      "sha256": "44523125882747d9bd165777d9a65d023bef30ad2fefb46de60def70eb38d90b",
+      "bytes": 1247
+    },
+    "final/recovery_40_right/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "6b4216485ca30cf55183bbe0a8aeee944944aa1fa030bfcb78ea18ae1529645e",
+      "bytes": 358253
+    },
+    "final/recovery_40_right/stages.json": {
+      "sha256": "7dc6171df1223a64bf69ff6df5e38b7a7947fe0eab28f1eabccdcf50753a1061",
+      "bytes": 1101
+    },
+    "final/recovery_60_left/actuators_state.csv": {
+      "sha256": "e762dbf6a8ea8f2a6f3588a4f0d90ee84c5463d2267b91065836618b1e048774",
+      "bytes": 318744
+    },
+    "final/recovery_60_left/audit_appendages.csv": {
+      "sha256": "ab5fcddfb8da3c864e7d1f06632693487acee1902b7d511801c4819032d93830",
+      "bytes": 404059
+    },
+    "final/recovery_60_left/audit_hull.csv": {
+      "sha256": "713624defc0f6622e866203e9b77b3e2e5535f488e6918613c3f0d0fe804b100",
+      "bytes": 1128615
+    },
+    "final/recovery_60_left/audit_propulsion.csv": {
+      "sha256": "f8ef34380877b3c343c377ad794810fa63f0f4905cb94ce6eb528171df3021dc",
+      "bytes": 642898
+    },
+    "final/recovery_60_left/boat.sdf": {
+      "sha256": "f254dee109238fc18df5748aa9d6b603264dfe090134f6adf347672b80c9a8b8",
+      "bytes": 82004
+    },
+    "final/recovery_60_left/case_binding.json": {
+      "sha256": "69475b25904b75008aebbb34c4117a15ea2ee531592739e66b96e60c6787e90c",
+      "bytes": 3017
+    },
+    "final/recovery_60_left/health.json": {
+      "sha256": "ac32b3228ccd8c43de721cdff7126c2e2546b858ed64ce568e8748239473abd1",
+      "bytes": 391751
+    },
+    "final/recovery_60_left/propulsion_state.csv": {
+      "sha256": "f056abcb09ca27315716ae4ce7590474b7464d243df45d482a4ef8c5d2ca8d54",
+      "bytes": 686296
+    },
+    "final/recovery_60_left/result.json": {
+      "sha256": "d7132122c675e274dc2a82055b598d98fef6971d4cc7fb1376fec300de20fb67",
+      "bytes": 2629
+    },
+    "final/recovery_60_left/scene.json": {
+      "sha256": "714bf0f4490055166b1adf51fccfc8ec3e8288a61703c8317bdbb064840793b4",
+      "bytes": 4210
+    },
+    "final/recovery_60_left/source_versions.json": {
+      "sha256": "51adab22be4a01cde95f8b90c7da7035bb0e8929b28b2768f9052f339a05d4b3",
+      "bytes": 1246
+    },
+    "final/recovery_60_left/stabilizer_audit_appendages.csv": {
+      "sha256": "0db849297a8ccbd32d83d0be7e91cf6f6291ff17ede7cec70813512ff6fd8123",
+      "bytes": 405001
+    },
+    "final/recovery_60_left/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "c521936194fcf156af857a6d1f1eaf541fbb95b92db67b87739b26504dac68ef",
+      "bytes": 362837
+    },
+    "final/recovery_60_left/stages.json": {
+      "sha256": "49f2961991c80c744955aca81d777126831f712f950931451fdf20d5e4adf8a5",
+      "bytes": 1096
+    },
+    "final/recovery_60_left_fin075/actuators_state.csv": {
+      "sha256": "1fc099388b75c3d7d82f41e399bb207b894abf403dcc90fae5e80d3a6f3dd0e2",
+      "bytes": 319047
+    },
+    "final/recovery_60_left_fin075/boat.sdf": {
+      "sha256": "b3e4441a2c74e9265d437c84ff1859a332162833092befd5ab3dfe38aac56a1e",
+      "bytes": 82047
+    },
+    "final/recovery_60_left_fin075/case_binding.json": {
+      "sha256": "2fb58cefd710118c084848f4458088e22412ca2a9b1a1f647070cb56cf8300ee",
+      "bytes": 3066
+    },
+    "final/recovery_60_left_fin075/health.json": {
+      "sha256": "6645b052f9676eb1c2c5d3484405af37fa7fdcee89ea9f7118c13cb9a95075d9",
+      "bytes": 395732
+    },
+    "final/recovery_60_left_fin075/propulsion_state.csv": {
+      "sha256": "b5ca76f1358da5d4c953213271531fd4735dd7257010f6c6a227c6452bdaecb1",
+      "bytes": 686727
+    },
+    "final/recovery_60_left_fin075/result.json": {
+      "sha256": "9952641ce6d9bdc0d4ccc6e53bda81f68b6c9974448b557514ede885c68627e6",
+      "bytes": 2676
+    },
+    "final/recovery_60_left_fin075/scene.json": {
+      "sha256": "e38aeba256ea3c6115fdcc8d64e9bd766cd91641bcd033fec6555f7a214b5779",
+      "bytes": 4217
+    },
+    "final/recovery_60_left_fin075/source_versions.json": {
+      "sha256": "3bf162a52c42319cd1d37a5827cc5f29723981309e186e1c150f1acd9e4bdc67",
+      "bytes": 1253
+    },
+    "final/recovery_60_left_fin075/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "2402ee9f9b35c53f440c6e8b2df76e2cfa9e74345ce1103351e2c66acecaeddf",
+      "bytes": 363065
+    },
+    "final/recovery_60_left_fin075/stages.json": {
+      "sha256": "1a22603304d46a5428d81e29fc31705f8d975c94f7d890c687b0abf0824a1421",
+      "bytes": 1095
+    },
+    "final/recovery_60_left_loaded_low_fuel/actuators_state.csv": {
+      "sha256": "bb1dfb52469b9bade76983e79e8dc7e7329a40701e7676e6b228b531d1645565",
+      "bytes": 319417
+    },
+    "final/recovery_60_left_loaded_low_fuel/boat.sdf": {
+      "sha256": "f3392cc4b2b6cd85e7d01946911015dc3e4b8e8dd5c2d9709b32888a435465e5",
+      "bytes": 82004
+    },
+    "final/recovery_60_left_loaded_low_fuel/case_binding.json": {
+      "sha256": "5e18a416fa064f263bcaedae49f6a0f50117beeb08ac371b4f0866704831571f",
+      "bytes": 3073
+    },
+    "final/recovery_60_left_loaded_low_fuel/health.json": {
+      "sha256": "d7393df7101f1e525e187256e39ee929ac949648a021f4d08e217b728192e03b",
+      "bytes": 401713
+    },
+    "final/recovery_60_left_loaded_low_fuel/propulsion_state.csv": {
+      "sha256": "9c8b8ed758464e0c3d9401dbb6ea247720163c223cbd6d9a7720015b86163055",
+      "bytes": 686718
+    },
+    "final/recovery_60_left_loaded_low_fuel/result.json": {
+      "sha256": "42683419e1d026c2d6e89fd3954660f15b7e0830e356b10349e7ae4a1823310e",
+      "bytes": 2688
+    },
+    "final/recovery_60_left_loaded_low_fuel/scene.json": {
+      "sha256": "0ef7d6e894ce9adf309ea1f92616071ee910389834aa9beb80e129df2e1e8021",
+      "bytes": 4224
+    },
+    "final/recovery_60_left_loaded_low_fuel/source_versions.json": {
+      "sha256": "53cc2dc5868d55f1dc238dd09e07dd9ff874d119505de4960e474bda86141921",
+      "bytes": 1262
+    },
+    "final/recovery_60_left_loaded_low_fuel/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "23d405fc03558174b10d18e9df53ff154ca4f18a2d84b3dd2647877e9578fe93",
+      "bytes": 363085
+    },
+    "final/recovery_60_left_loaded_low_fuel/stages.json": {
+      "sha256": "5aeaf6f4549452c102448136a70af1b2312417cffb3563110b5031ebbd88bf1c",
+      "bytes": 1095
+    },
+    "final/recovery_60_left_low_fuel/actuators_state.csv": {
+      "sha256": "6629833da0df6523144562c07a4f9910b9638fc0a18c691997b8946b825fc2e7",
+      "bytes": 318541
+    },
+    "final/recovery_60_left_low_fuel/boat.sdf": {
+      "sha256": "e4aa73a21fd44fd255486c198c3b4adc13e5b647cb61643da5b2cca323064927",
+      "bytes": 82004
+    },
+    "final/recovery_60_left_low_fuel/case_binding.json": {
+      "sha256": "99d6b7cfb643834d85aa0d91d47faeac57884a753caeaaf7c677c9a491f6bcd2",
+      "bytes": 3043
+    },
+    "final/recovery_60_left_low_fuel/health.json": {
+      "sha256": "aa62077932ff2669815ab9a9a8c8f7faf2f4a13e018732579ffe14c4470e531a",
+      "bytes": 401125
+    },
+    "final/recovery_60_left_low_fuel/propulsion_state.csv": {
+      "sha256": "29dde56076e1351aa65970f9f3177bb365254ffae960be9f6e707a11f0385aa2",
+      "bytes": 687392
+    },
+    "final/recovery_60_left_low_fuel/result.json": {
+      "sha256": "62a001bc18440cb4043af7deb7071cccc383ac2f4e0e550acf3e86935591400e",
+      "bytes": 2653
+    },
+    "final/recovery_60_left_low_fuel/scene.json": {
+      "sha256": "1b6bbfd9c1fcd1193e6e4097012792fdf319b37dabf1214ddcef34e59fc7838b",
+      "bytes": 4219
+    },
+    "final/recovery_60_left_low_fuel/source_versions.json": {
+      "sha256": "495263debd0c2b5f21ab117f94b0219f0f19909836323b0b1f59908d0f80a519",
+      "bytes": 1255
+    },
+    "final/recovery_60_left_low_fuel/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "46c834e391c98d9e0ea1c7e5ce2352ceda5aadc8ee730fff4462e3644d1549b5",
+      "bytes": 362590
+    },
+    "final/recovery_60_left_low_fuel/stages.json": {
+      "sha256": "7d4b1dd9892a39de0229619102c8f814347e15de83f4db4fa6cc9a7d8a498226",
+      "bytes": 1107
+    },
+    "final/recovery_60_right/actuators_state.csv": {
+      "sha256": "dca29869e24df76b41ffa183540644a7039075eecf7d7d565ee53adac1b7abd4",
+      "bytes": 318746
+    },
+    "final/recovery_60_right/audit_appendages.csv": {
+      "sha256": "b321735c771b1648ae804d445d720e602ab46117cd76965ca174946dedd7411a",
+      "bytes": 403200
+    },
+    "final/recovery_60_right/audit_hull.csv": {
+      "sha256": "0ad369970e7750bb6f6e871042715acbbc0f9c4d0b8622b285c98345a570074a",
+      "bytes": 1127578
+    },
+    "final/recovery_60_right/audit_propulsion.csv": {
+      "sha256": "418041d16634c0566b59e4d4b0bf52efe62332daa440169fef50d47be5f53c68",
+      "bytes": 642371
+    },
+    "final/recovery_60_right/boat.sdf": {
+      "sha256": "f254dee109238fc18df5748aa9d6b603264dfe090134f6adf347672b80c9a8b8",
+      "bytes": 82004
+    },
+    "final/recovery_60_right/case_binding.json": {
+      "sha256": "57fb4b3ab41b940bc3e921042435e75a416e9da37c0c9f34d6e64614d7a18555",
+      "bytes": 3019
+    },
+    "final/recovery_60_right/health.json": {
+      "sha256": "9d2f4fff93a944823b71b3af4249166e6821655d0cabee234178c5e6e27dced7",
+      "bytes": 394152
+    },
+    "final/recovery_60_right/propulsion_state.csv": {
+      "sha256": "94a994090016f2fb0d3f6980db0f029e523f209aaef1b23fb44ff72c3b5a5ba3",
+      "bytes": 687157
+    },
+    "final/recovery_60_right/result.json": {
+      "sha256": "77ee18970453a6d1a2fe7a6d8b40d7ed061e8354d9cc84422cb5e219efb4fba3",
+      "bytes": 2637
+    },
+    "final/recovery_60_right/scene.json": {
+      "sha256": "2465629dd8236a3c9bcc9f4669bae730930924fe901dfcbfb1050955e4320440",
+      "bytes": 4211
+    },
+    "final/recovery_60_right/source_versions.json": {
+      "sha256": "076fc4b9ae39188d2b37ed82830a217d2776f1030ab909cd1b5971eca411cf25",
+      "bytes": 1247
+    },
+    "final/recovery_60_right/stabilizer_audit_appendages.csv": {
+      "sha256": "74a106cb1ebeafce023e9bc5da872259a2c1ac36f6a4ecebeab2b0f8d57684e3",
+      "bytes": 403561
+    },
+    "final/recovery_60_right/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "2d7998b941dc7baa81e7522ef127afcd3f0537977a2c4b9e809505f2e5b47da1",
+      "bytes": 361929
+    },
+    "final/recovery_60_right/stages.json": {
+      "sha256": "1919811d60f7035fa559898d18b712c06350a36f29a031f0f297b72603ec8acd",
+      "bytes": 1100
+    },
+    "final/recovery_60_right_added125/actuators_state.csv": {
+      "sha256": "61239499c7d2cfab8ff3b6753d61e9ad001dc11a48c64d4500cb192121893266",
+      "bytes": 318614
+    },
+    "final/recovery_60_right_added125/boat.sdf": {
+      "sha256": "9ce11a415e3b76c8b7ce19a9b305229a152905934af16ec1fc24e912be997981",
+      "bytes": 82012
+    },
+    "final/recovery_60_right_added125/case_binding.json": {
+      "sha256": "8e345449fe36d1472bdeefd4320b301b313361fb627ba8c392cb5af04dccf984",
+      "bytes": 3140
+    },
+    "final/recovery_60_right_added125/health.json": {
+      "sha256": "07fbcc1d148147262680424ac6b6b0d0adf3f5b430464f5e1a07a9fce71dedff",
+      "bytes": 398614
+    },
+    "final/recovery_60_right_added125/propulsion_state.csv": {
+      "sha256": "f99ad51b92f0c8489f1e3022f3da3f4d038b867df154c05bf17ed982ee211278",
+      "bytes": 686780
+    },
+    "final/recovery_60_right_added125/result.json": {
+      "sha256": "1fddafc720ce1a20746a8e2df5bd2759439d4f6cf0f9051021089355815cd0e8",
+      "bytes": 2750
+    },
+    "final/recovery_60_right_added125/scene.json": {
+      "sha256": "c65c3526d57456f22443846420407515e329186459d36da1ffd4c8d6b73aafb5",
+      "bytes": 4220
+    },
+    "final/recovery_60_right_added125/source_versions.json": {
+      "sha256": "c0e2c681f9bed0ff09fb7e39ca73bf3da4900c9e34ea105f32a669bd7bf38ac1",
+      "bytes": 1256
+    },
+    "final/recovery_60_right_added125/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "5c95cd229d7cc20703916acf30910c10c3ba41f78ca020d862e09a542b216554",
+      "bytes": 361538
+    },
+    "final/recovery_60_right_added125/stages.json": {
+      "sha256": "fa2637477dadeb1143ff4a364736238dc6c03b3ebead77e51bf70b7cd4d78e66",
+      "bytes": 1097
+    },
+    "final/recovery_60_right_fin075/actuators_state.csv": {
+      "sha256": "55bd63c97938abf182bd9e755094777bdd1920893045ce0dfda8a21cb2425907",
+      "bytes": 319229
+    },
+    "final/recovery_60_right_fin075/boat.sdf": {
+      "sha256": "b3e4441a2c74e9265d437c84ff1859a332162833092befd5ab3dfe38aac56a1e",
+      "bytes": 82047
+    },
+    "final/recovery_60_right_fin075/case_binding.json": {
+      "sha256": "b0afe478e71e954bf9f6f7c4e5ad7836357a8ada1a46f790eaf118a48a27839e",
+      "bytes": 3068
+    },
+    "final/recovery_60_right_fin075/health.json": {
+      "sha256": "e2f96e457aef3b2ee0601df27f6742b3fef38d0149653d4e4019331c90b5868b",
+      "bytes": 396917
+    },
+    "final/recovery_60_right_fin075/propulsion_state.csv": {
+      "sha256": "8114f1474c5f11c56840e65c8d1be12690c68df02dd73554a13a8a7f43eff1da",
+      "bytes": 688091
+    },
+    "final/recovery_60_right_fin075/result.json": {
+      "sha256": "a74a934de2f03b8940133ad13876bc5fe81cbc1167746fac338baa41674993c5",
+      "bytes": 2679
+    },
+    "final/recovery_60_right_fin075/scene.json": {
+      "sha256": "294b05cdc87c96919f06d5cbd57ec35b543ab7e6c110bf953de63fb11384d559",
+      "bytes": 4218
+    },
+    "final/recovery_60_right_fin075/source_versions.json": {
+      "sha256": "1eab43b4c97a845d302603ff9c9e5a30acacacc939ac89a1821047af59286231",
+      "bytes": 1254
+    },
+    "final/recovery_60_right_fin075/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "4ccadb281ac6aecb665607ea9ab1128e177940fd33683b4eba8f7a61e1fc3694",
+      "bytes": 362136
+    },
+    "final/recovery_60_right_fin075/stages.json": {
+      "sha256": "17b54bfafcc566937fb9a68eca3390368071ca5c12883ca56c40e969a2570df2",
+      "bytes": 1097
+    },
+    "final/recovery_60_right_loaded_low_fuel/actuators_state.csv": {
+      "sha256": "fab397a2f5fb5dc0a4e3004a7d847f1571b89db41ee6e5f928f4b555e5a75a86",
+      "bytes": 319262
+    },
+    "final/recovery_60_right_loaded_low_fuel/boat.sdf": {
+      "sha256": "f3392cc4b2b6cd85e7d01946911015dc3e4b8e8dd5c2d9709b32888a435465e5",
+      "bytes": 82004
+    },
+    "final/recovery_60_right_loaded_low_fuel/case_binding.json": {
+      "sha256": "d06d95c2beb0f861428a600c77e2a4ea92aeeab5dcd7896bd63ab87c72536760",
+      "bytes": 3075
+    },
+    "final/recovery_60_right_loaded_low_fuel/health.json": {
+      "sha256": "d8c1f31cbb9326e2ccedfa7d4dc2edd3d1256588986de5bc61409116ac1682cf",
+      "bytes": 404220
+    },
+    "final/recovery_60_right_loaded_low_fuel/propulsion_state.csv": {
+      "sha256": "54c90ab5376f5cc6618cbdb5e170f1edd79d3eaa45439cf17a242931baf012f1",
+      "bytes": 687291
+    },
+    "final/recovery_60_right_loaded_low_fuel/result.json": {
+      "sha256": "bffb9a5f48ea80cfa3e6f6f83ef774d14bf822aca6742d451652fd7dac4b8393",
+      "bytes": 2683
+    },
+    "final/recovery_60_right_loaded_low_fuel/scene.json": {
+      "sha256": "c32bb2be9130b3c3e4e965c84701ec962944fab9434b74094cccea5a93681d12",
+      "bytes": 4225
+    },
+    "final/recovery_60_right_loaded_low_fuel/source_versions.json": {
+      "sha256": "9984ad7f04c15b27b1b19ca44cb953f0c803f9f15b92d3d814af4be15096559c",
+      "bytes": 1263
+    },
+    "final/recovery_60_right_loaded_low_fuel/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "fde99051627b6ef456a2120b3a647f34aef5a1932f283e398af1688917ebbb7d",
+      "bytes": 361174
+    },
+    "final/recovery_60_right_loaded_low_fuel/stages.json": {
+      "sha256": "9e82f725b111d6c0e283b71c27adf9236e539ea8e423763c083e208a6040cca8",
+      "bytes": 1097
+    },
+    "final/recovery_60_right_low_fuel/actuators_state.csv": {
+      "sha256": "ef1039532d4f4575d143989a838bb4dbb5bac9070d954b833ecb7cd813117d82",
+      "bytes": 318515
+    },
+    "final/recovery_60_right_low_fuel/boat.sdf": {
+      "sha256": "e4aa73a21fd44fd255486c198c3b4adc13e5b647cb61643da5b2cca323064927",
+      "bytes": 82004
+    },
+    "final/recovery_60_right_low_fuel/case_binding.json": {
+      "sha256": "f723bdf8b874b99fc55402eded6e343b85d2aab47c2882982e6deb4792bf7ed1",
+      "bytes": 3045
+    },
+    "final/recovery_60_right_low_fuel/health.json": {
+      "sha256": "58914781f0aca88ce87aa893cb841896d2485d5ce8474b600363b2467fbe1796",
+      "bytes": 396308
+    },
+    "final/recovery_60_right_low_fuel/propulsion_state.csv": {
+      "sha256": "29ce83312641a4ddfafcf6578924e46f645632ef1d7daea010a8790f87fd92ab",
+      "bytes": 688234
+    },
+    "final/recovery_60_right_low_fuel/result.json": {
+      "sha256": "3f652d0f3f60e9e16f15428a8307676e5a17fc0b8961a75b5cf109448683b9e9",
+      "bytes": 2658
+    },
+    "final/recovery_60_right_low_fuel/scene.json": {
+      "sha256": "3630cfbd276be51d7a9ea8f06e0ac46b97d2e7a19f82ada054898cc7d1b74555",
+      "bytes": 4220
+    },
+    "final/recovery_60_right_low_fuel/source_versions.json": {
+      "sha256": "87cbc3a3a0f7f79637971f2bfb8275a0b9dadb33f565c44399a9e1be109cb212",
+      "bytes": 1256
+    },
+    "final/recovery_60_right_low_fuel/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "9029baddc9883ed39025484b60d68b8260d95290a2f34e43ef8837f9920b5d95",
+      "bytes": 361755
+    },
+    "final/recovery_60_right_low_fuel/stages.json": {
+      "sha256": "bd877595126b79afdacd83545c4f7d11a25cfa305ca87c41401a41e5fe3727e5",
+      "bytes": 1109
+    },
+    "final/recovery_60_right_step2ms/actuators_state.csv": {
+      "sha256": "383e1b18a68604d314d3282ed547e1af5993de5efde3812dd8c612ffb832a19c",
+      "bytes": 325970
+    },
+    "final/recovery_60_right_step2ms/boat.sdf": {
+      "sha256": "f254dee109238fc18df5748aa9d6b603264dfe090134f6adf347672b80c9a8b8",
+      "bytes": 82004
+    },
+    "final/recovery_60_right_step2ms/case_binding.json": {
+      "sha256": "0420457dfd76d041088ccec6d504ac05e7f147a7ee11d076a967a1bd1b8341a6",
+      "bytes": 3051
+    },
+    "final/recovery_60_right_step2ms/health.json": {
+      "sha256": "ce7f9747ee71275144c82c19c394dde429c922fc4ac59f2ddecfc536042e061c",
+      "bytes": 403136
+    },
+    "final/recovery_60_right_step2ms/propulsion_state.csv": {
+      "sha256": "6c45b245ff89d90520c57f2efa827c7a7e48db89b5e1e94af4374602096de0bf",
+      "bytes": 702760
+    },
+    "final/recovery_60_right_step2ms/result.json": {
+      "sha256": "227c33f9bc558877dcdfe1bcad45909b0b7e06dbdeb4d3c284ba039134ea6806",
+      "bytes": 2661
+    },
+    "final/recovery_60_right_step2ms/scene.json": {
+      "sha256": "29dac6b59e73cf9d6195720665fc46a50564966deec72e46d3fa6ec7f64617aa",
+      "bytes": 4219
+    },
+    "final/recovery_60_right_step2ms/source_versions.json": {
+      "sha256": "dbeb08e08420a0586eb618de750d74709706801213c8759e88ecbe2eeb4f5eea",
+      "bytes": 1255
+    },
+    "final/recovery_60_right_step2ms/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "82df231bb4cee5e77fcd0c8c190aa6c594e2a075fec3c2a07e7486314318ec83",
+      "bytes": 370149
+    },
+    "final/recovery_60_right_step2ms/stages.json": {
+      "sha256": "1bf1f4fd33e9442479c525dab8865e6c7106d2d88e73cb3257f53e9205633fed",
+      "bytes": 1098
+    },
+    "final/recovery_60_right_stern125/actuators_state.csv": {
+      "sha256": "06d899f1323d5fdcc48998b0bfabeae162ab4728392b737eb65284103f3ec3e4",
+      "bytes": 318302
+    },
+    "final/recovery_60_right_stern125/boat.sdf": {
+      "sha256": "06c4e002234720bf04a2b2d9b1ac274789f739976488c9241587984f12bbd164",
+      "bytes": 82047
+    },
+    "final/recovery_60_right_stern125/case_binding.json": {
+      "sha256": "06fe5501944d2f05642d02568b6251f7f1d4947dfb4fa5c8f021f2beb9eb0a11",
+      "bytes": 3069
+    },
+    "final/recovery_60_right_stern125/health.json": {
+      "sha256": "30b770224367388afc8c670d8692e1416af42483b3906ea0cf3f463e44e973d4",
+      "bytes": 399551
+    },
+    "final/recovery_60_right_stern125/propulsion_state.csv": {
+      "sha256": "277168e9b23a0490497cf3b3c13efdf4bef0bf3f534e4c6ef9b1d1ab5dd62a61",
+      "bytes": 686313
+    },
+    "final/recovery_60_right_stern125/result.json": {
+      "sha256": "494780f232d1432ce6d2e1412054572f07b7b878a5e75aaffb9e362fcfd3d501",
+      "bytes": 2681
+    },
+    "final/recovery_60_right_stern125/scene.json": {
+      "sha256": "196f4e6688f849789fcda67168d9de53c0bd37cf64e13baac6df9d675248dda8",
+      "bytes": 4220
+    },
+    "final/recovery_60_right_stern125/source_versions.json": {
+      "sha256": "39a3aa3a85e169aebdabb366d2d7a30453d0c159e317b5c0929fec967df05ea2",
+      "bytes": 1256
+    },
+    "final/recovery_60_right_stern125/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "0f66d9b7644292edfac3cbe1e5a60075cfa7db9b32b44aba85052d2ef0e03650",
+      "bytes": 361421
+    },
+    "final/recovery_60_right_stern125/stages.json": {
+      "sha256": "ae743d055a7e268d848773c04e09f523cd1fc0cdf423a171280445ea701c6fec",
+      "bytes": 1096
+    },
+    "final/reverse_25/case_binding.json": {
+      "sha256": "80bb08ee6e293364c0c8afd664eec2e0606499371d6fe83053bc9eea9dd7cac0",
+      "bytes": 2769
+    },
+    "final/reverse_25/result.json": {
+      "sha256": "e5821f64795e23dd4fef724a291678c9a1d019b37d72168a0154460fa3045eae",
+      "bytes": 1566
+    },
+    "final/reverse_25/scene.json": {
+      "sha256": "63f4edb3464eb0bf44f03f2fda0d5fd48f9f69efaea5e5037d7253190f57fb15",
+      "bytes": 4204
+    },
+    "final/reverse_25/source_versions.json": {
+      "sha256": "c31b569c64c1214d31313b5015eb84eb6c750bc0058bde67c81dade1154d9102",
+      "bytes": 1240
+    },
+    "final/reverse_25/stages.json": {
+      "sha256": "b83daa484322a463b764ff3532f3daa526bfaf14f4d3892e8146bcefc464098b",
+      "bytes": 372
+    },
+    "final/reverse_25_10m/case_binding.json": {
+      "sha256": "594123288464e96999c31fc87bbb487f7abf14518b5249e10f99bca1293339a5",
+      "bytes": 2828
+    },
+    "final/reverse_25_10m/result.json": {
+      "sha256": "6192d739d8c5c6a7204bff3ecde0256dc56439d71bae73e5a0a14965fa9400c0",
+      "bytes": 1609
+    },
+    "final/reverse_25_10m/scene.json": {
+      "sha256": "041bd79d76fe3515ab4e591372b6f1273a55387f48884860c3f4bbe59c0e6a18",
+      "bytes": 4208
+    },
+    "final/reverse_25_10m/source_versions.json": {
+      "sha256": "ef7100baf51434f9e4b970b42fbf5f093266c7f05536bf9d371cba5764045ef2",
+      "bytes": 1244
+    },
+    "final/reverse_25_10m/stages.json": {
+      "sha256": "21f958fb481ac1d269e189c0c8c8a9c60d9d955ce6b3a5acf6a8cae4f468b150",
+      "bytes": 402
+    },
+    "final/reverse_25_30m/case_binding.json": {
+      "sha256": "747ec2c2af5157c02d693dab9fdaf4152d3837672b1403319ef8674738d2ec2d",
+      "bytes": 2828
+    },
+    "final/reverse_25_30m/result.json": {
+      "sha256": "b9d8f30d0f4117d079f46803cb69af51710236e1c75b0ab480a67146e5c90e88",
+      "bytes": 1610
+    },
+    "final/reverse_25_30m/scene.json": {
+      "sha256": "18ae3190a9c15408597c6d0228b171728c43714514c6bdb5cb4fcac6c96c5522",
+      "bytes": 4208
+    },
+    "final/reverse_25_30m/source_versions.json": {
+      "sha256": "dc7c3efaee48313aae276a14b97aac3910711eddfa4947a85d93f08978f61bec",
+      "bytes": 1244
+    },
+    "final/reverse_25_30m/stages.json": {
+      "sha256": "466ef19490ca14ad7c3ab0d81f3dac8b61bdf7f81b1451cd30b41868549068a6",
+      "bytes": 402
+    },
+    "final/reverse_25_60m/actuators_state.csv": {
+      "sha256": "42bf828aa0276fb713ca240b94562ed67917889eccd1e4306d596ab55ef3f2e2",
+      "bytes": 226624
+    },
+    "final/reverse_25_60m/boat.sdf": {
+      "sha256": "f254dee109238fc18df5748aa9d6b603264dfe090134f6adf347672b80c9a8b8",
+      "bytes": 82004
+    },
+    "final/reverse_25_60m/case_binding.json": {
+      "sha256": "528e1a1e43f7cddb9f884a96d2a55eb5afcb65b1334d5da26be41d680251a167",
+      "bytes": 2828
+    },
+    "final/reverse_25_60m/health.json": {
+      "sha256": "e61d7680620be673353842773697a8b5d3784c97a1e98c9a97c6d48356d3d3ed",
+      "bytes": 279669
+    },
+    "final/reverse_25_60m/propulsion_state.csv": {
+      "sha256": "39cf3507efecc9adae7313083f5516d6a9dfe05e482406bdf0c3c119ab57aeba",
+      "bytes": 488001
+    },
+    "final/reverse_25_60m/result.json": {
+      "sha256": "6dd5984e89016fa50533171a21509c6c2e06fb3ab37303a47cc13059bce5e702",
+      "bytes": 1611
+    },
+    "final/reverse_25_60m/scene.json": {
+      "sha256": "477aee1f9a6c4f62b3979f016181001ed01b8376d97c7a9b2f89743915e51ebf",
+      "bytes": 4208
+    },
+    "final/reverse_25_60m/source_versions.json": {
+      "sha256": "3658ed9a256ffacd065f34c4daf0d5c99c9d0c401a5c9609e07ddb563948f218",
+      "bytes": 1244
+    },
+    "final/reverse_25_60m/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "e8aea393fa1761c7ce475938ac86ee47a870a08b1533d054d95398425aebb067",
+      "bytes": 254734
+    },
+    "final/reverse_25_60m/stages.json": {
+      "sha256": "167631064049d7418a7d5df4cb997f32111d47293e748646ef2e85cb438b4d97",
+      "bytes": 403
+    },
+    "final/reverse_40/case_binding.json": {
+      "sha256": "c630f8a4ee87bc2cc51235e8186cdb57b317d34b6b0740aa52568aa878765ea1",
+      "bytes": 2768
+    },
+    "final/reverse_40/result.json": {
+      "sha256": "ddc55b90e3bc2fba766f6877e3d6ea26aa6eec75cb2aa826b941fd67a543a184",
+      "bytes": 1566
+    },
+    "final/reverse_40/scene.json": {
+      "sha256": "13fb6544437354b64d365b0adafbb286727fe44faad69918ff4baec9836584d8",
+      "bytes": 4204
+    },
+    "final/reverse_40/source_versions.json": {
+      "sha256": "e24872147b7ffca648ef9d405f8d7928bc24cae883135e7b21fa06c5c854192f",
+      "bytes": 1240
+    },
+    "final/reverse_40/stages.json": {
+      "sha256": "bf47f47a4bc8db3a073424fc604d0b343dd9122676a72824a98ad3d2f08cc376",
+      "bytes": 371
+    },
+    "final/reverse_40_10m/case_binding.json": {
+      "sha256": "15ef06bf072658d46024deb550924495ce1248c041feb9c3b9aab14a67f7faab",
+      "bytes": 2827
+    },
+    "final/reverse_40_10m/result.json": {
+      "sha256": "d4a9403d0053eab3f449516a6b1cbae24af7b9c7b4a7faa2441bb999a167f9f4",
+      "bytes": 1600
+    },
+    "final/reverse_40_10m/scene.json": {
+      "sha256": "b01a26308de2157d84f4968c43a6d3e5f50b533036a28c78e6e852c15e92ae1e",
+      "bytes": 4208
+    },
+    "final/reverse_40_10m/source_versions.json": {
+      "sha256": "ff8c5eae6b2091948467905511af4e8978c2b82dc097cbcd851ca7165b3a58f7",
+      "bytes": 1244
+    },
+    "final/reverse_40_10m/stages.json": {
+      "sha256": "cc5ea7429b5e0b73402376dca5cc5360a10841a5058b3e375bdb14539f23f608",
+      "bytes": 400
+    },
+    "final/reverse_40_30m/case_binding.json": {
+      "sha256": "7bbd5c9106dd89e3d454e9b4a2e32e36a5876112cb720e72964db20f00487ed9",
+      "bytes": 2827
+    },
+    "final/reverse_40_30m/result.json": {
+      "sha256": "87adea5d4a5cc483e57f7ca1dccc7435dc46eafa1db0395e23b5ff27083b082f",
+      "bytes": 1607
+    },
+    "final/reverse_40_30m/scene.json": {
+      "sha256": "05aaed6f06ef5d4b0a44d319f670c932991d780cb6fc267a3932fe7942d40305",
+      "bytes": 4208
+    },
+    "final/reverse_40_30m/source_versions.json": {
+      "sha256": "5d4b285943176b9bcf1daf89025f9590d0664c94cad53a0dd020732c2dbf03ac",
+      "bytes": 1244
+    },
+    "final/reverse_40_30m/stages.json": {
+      "sha256": "62f6722bbca80048cfbf6b6a31561b892f1ee50942126a2cb62189a0f78f9846",
+      "bytes": 401
+    },
+    "final/reverse_40_60m/actuators_state.csv": {
+      "sha256": "b2d79f9d2714017393ee987c7036a9dd6ee3047f8e2711e69bed88899f06d10c",
+      "bytes": 117115
+    },
+    "final/reverse_40_60m/boat.sdf": {
+      "sha256": "f254dee109238fc18df5748aa9d6b603264dfe090134f6adf347672b80c9a8b8",
+      "bytes": 82004
+    },
+    "final/reverse_40_60m/case_binding.json": {
+      "sha256": "36cc51d8b404951f4189b7eb5763e0d5bc27593a80954b8620e7d36bddbd85de",
+      "bytes": 2827
+    },
+    "final/reverse_40_60m/health.json": {
+      "sha256": "2db147049686521de2e426919e2af42d2fb3b6403da68572d2b0dd9540576fbe",
+      "bytes": 145903
+    },
+    "final/reverse_40_60m/propulsion_state.csv": {
+      "sha256": "97c5be0dad63c4c389bca3244df1c709a13792f2b2b33dba9a464ecd649fbc03",
+      "bytes": 251997
+    },
+    "final/reverse_40_60m/result.json": {
+      "sha256": "c97d5c840a08aae528bad2f6010faca5d819c50a3850d0502ac5f26f4352fac9",
+      "bytes": 1607
+    },
+    "final/reverse_40_60m/scene.json": {
+      "sha256": "ff56809220c97482b11bd29b577ac56b2cf47c6bff3ed340cde24ff4dcc46cfd",
+      "bytes": 4208
+    },
+    "final/reverse_40_60m/source_versions.json": {
+      "sha256": "50eff6e7d36469339a182286e8c86ef2e104ecd0ef9e60343d6567edb5f2c276",
+      "bytes": 1244
+    },
+    "final/reverse_40_60m/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "a4518ce0f6a336076cca074a96e0c83900551ea517443e531a0be4e530b72879",
+      "bytes": 131559
+    },
+    "final/reverse_40_60m/stages.json": {
+      "sha256": "c99a0c980e85f3fe4878aa96114abe07046c2b6bdeef90ec2693f102f59c6c86",
+      "bytes": 400
+    },
+    "final/reverse_60/case_binding.json": {
+      "sha256": "288a17c65ebc86cacaf7a2599075ea0e069f6db647d90896e5d54e05d3157ddb",
+      "bytes": 2768
+    },
+    "final/reverse_60/result.json": {
+      "sha256": "f1efb38238d442a0c8e9fed0f0155460ec973621c572b4fe1af945899dc22937",
+      "bytes": 1561
+    },
+    "final/reverse_60/scene.json": {
+      "sha256": "acbaa46f2bace47134c51e76d6bcef393c22267062b198ba0457a1f6bcea11d1",
+      "bytes": 4204
+    },
+    "final/reverse_60/source_versions.json": {
+      "sha256": "b2267823dcd0a332c9193e6188fbc3e789829cc2c8e1f63c008cf56bcf5cbb9a",
+      "bytes": 1240
+    },
+    "final/reverse_60/stages.json": {
+      "sha256": "449570b7dc580df4d4199350ee7e9f6a3a2a04e26c688e6b0ea34bd07e162b45",
+      "bytes": 371
+    },
+    "final/reverse_60_10m/case_binding.json": {
+      "sha256": "fc99e028b237fa739c9be14036c3dbf632ef499e10a44fde9279e877b937515c",
+      "bytes": 2827
+    },
+    "final/reverse_60_10m/result.json": {
+      "sha256": "915875c579b8cf3b5d6bf9a745cfc2dc89caf4ab6075c3a820d4691a2a646807",
+      "bytes": 1602
+    },
+    "final/reverse_60_10m/scene.json": {
+      "sha256": "a34d82ab0c7a049682499bdaeea3cd33ba4f9dc7b14ed7008e8d2bc7913f9b1f",
+      "bytes": 4208
+    },
+    "final/reverse_60_10m/source_versions.json": {
+      "sha256": "6139b999c2a0f3051cb299678632bf8d5d9b72dd9136d0278862f550ee7f1ae1",
+      "bytes": 1244
+    },
+    "final/reverse_60_10m/stages.json": {
+      "sha256": "196803dc6185759da18d064f80aec66693ce44fead2894d9ff6aebf79f2022b3",
+      "bytes": 400
+    },
+    "final/reverse_60_30m/case_binding.json": {
+      "sha256": "4e8eb3a6dc17280ef4e6d3845080e6eeca8927632236760039854dcfb0b4d97e",
+      "bytes": 2827
+    },
+    "final/reverse_60_30m/result.json": {
+      "sha256": "360646d585276c84d36db4a4ba97a9d7724b362a100d8efa71948fa3da467655",
+      "bytes": 1605
+    },
+    "final/reverse_60_30m/scene.json": {
+      "sha256": "a3984549155ee1615efbe2553f6b93ebe56770bdfa645b52bd5b0bf07a8a7ef1",
+      "bytes": 4208
+    },
+    "final/reverse_60_30m/source_versions.json": {
+      "sha256": "4b57ad27c1af535502b84ea55aa17f81a44b67985ec4943f4fda56bbaa7281fc",
+      "bytes": 1244
+    },
+    "final/reverse_60_30m/stages.json": {
+      "sha256": "833113c794f0ef9f1951d7e20f54b30912611786bfd12b9d3cdc936f9c8ffaf5",
+      "bytes": 401
+    },
+    "final/reverse_60_60m/actuators_state.csv": {
+      "sha256": "3065053dae3b68dd937c6b69d03dd8a24ef6d563b52164eecd5327de39876d0b",
+      "bytes": 71843
+    },
+    "final/reverse_60_60m/boat.sdf": {
+      "sha256": "f254dee109238fc18df5748aa9d6b603264dfe090134f6adf347672b80c9a8b8",
+      "bytes": 82004
+    },
+    "final/reverse_60_60m/case_binding.json": {
+      "sha256": "ea23b0c9e61f53dc422bfd0f686a5f99cdf6f7ea5170335e463d74682e1ced21",
+      "bytes": 2827
+    },
+    "final/reverse_60_60m/health.json": {
+      "sha256": "7699cdbfe0aa1f06aafded03da98dac1dcc751e30863a23e80c44e2e93e04a44",
+      "bytes": 91591
+    },
+    "final/reverse_60_60m/propulsion_state.csv": {
+      "sha256": "4069fd8ec3114c0454dfc5d7d8bbf51fdb434ee9f3070a8eb0517a1b6c0c2b40",
+      "bytes": 154564
+    },
+    "final/reverse_60_60m/result.json": {
+      "sha256": "cfd0123460d6da6da021aae53d1f9c6d4a48f37e3f8da9cd497110bdc1c3be5c",
+      "bytes": 1602
+    },
+    "final/reverse_60_60m/scene.json": {
+      "sha256": "0269a0a4df18ebc83faa1556b9e487c3f3bbc5fb223ddf841c9b2dc3cc12b17f",
+      "bytes": 4208
+    },
+    "final/reverse_60_60m/source_versions.json": {
+      "sha256": "388c668997090256e391e975f8a10c244528bb6c308c1cd8e943c00f3a959c96",
+      "bytes": 1244
+    },
+    "final/reverse_60_60m/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "5928b33f00fac29f9827684deccabf920bb60ef7424b486aedc1982d4e12aa00",
+      "bytes": 81630
+    },
+    "final/reverse_60_60m/stages.json": {
+      "sha256": "949243f448c73dc1ddc7db7f959faed8539cc7e9865a03230ffda53198190be1",
+      "bytes": 400
+    },
+    "final/reverse_60_long/actuators_state.csv": {
+      "sha256": "876145a64b46f7f2c9b9ec36f2f9fe5be156ad7e133ebc37c864e0a4c63ad027",
+      "bytes": 587025
+    },
+    "final/reverse_60_long/audit_appendages.csv": {
+      "sha256": "3242dc3f0f00964acfcd5f3426ed88f3615b6ac6b57bb668a19c8f88166a99ec",
+      "bytes": 744658
+    },
+    "final/reverse_60_long/audit_hull.csv": {
+      "sha256": "36036bf7dc08e1bc3a5ede44350e73880138dd7a5a480b6f76e7d9508533223e",
+      "bytes": 2080144
+    },
+    "final/reverse_60_long/audit_propulsion.csv": {
+      "sha256": "ea6ec49d23bbfce754361acf0fa6e1fd8923eb63fb83213e7c953e697b66182b",
+      "bytes": 1184730
+    },
+    "final/reverse_60_long/boat.sdf": {
+      "sha256": "f254dee109238fc18df5748aa9d6b603264dfe090134f6adf347672b80c9a8b8",
+      "bytes": 82004
+    },
+    "final/reverse_60_long/case_binding.json": {
+      "sha256": "1cc76dea2f4050687b1c79516ecf7d2ce7187944ec88b7d7a48c03d512dd9cb7",
+      "bytes": 2773
+    },
+    "final/reverse_60_long/health.json": {
+      "sha256": "65421495adcb9ef4835f6685c0306e5a3f40e4ad0228b183aac4b1b1b2333a56",
+      "bytes": 717002
+    },
+    "final/reverse_60_long/propulsion_state.csv": {
+      "sha256": "4239d304b405bb7a70ea330f94c8b47c3397a490f882d6c7f669b93edc729903",
+      "bytes": 1265206
+    },
+    "final/reverse_60_long/result.json": {
+      "sha256": "c99af0c79b916c9e2e68993775706e43ac906efbd79c6165522340bbb47effec",
+      "bytes": 1568
+    },
+    "final/reverse_60_long/scene.json": {
+      "sha256": "d820df5e9e7da18b81ac4f9cb1ad9f415b7082138306db431ee19eb5c37641c2",
+      "bytes": 4209
+    },
+    "final/reverse_60_long/source_versions.json": {
+      "sha256": "587f6348bebca317d383a80c59fe0516b0ce8a435568e967886963313aa17237",
+      "bytes": 1245
+    },
+    "final/reverse_60_long/stabilizer_audit_appendages.csv": {
+      "sha256": "bb432faf81cd7203983ab80b2a61c083536ff4ec41d4f43993efecedf794ad64",
+      "bytes": 746331
+    },
+    "final/reverse_60_long/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "2dee634beb108c73fb9317314dea4ae37e90099cab227b6d783e1b29cc3c13fd",
+      "bytes": 669012
+    },
+    "final/reverse_60_long/stages.json": {
+      "sha256": "d927e1c39e4739301542ed90be3f9473f15a7b7cdb5e5646da7178bb997a66d3",
+      "bytes": 371
+    },
+    "final/stress/case_binding.json": {
+      "sha256": "6dd50472a3be81437f950f1284e56b5f455049be3369d3bc02bba45641515fc6",
+      "bytes": 2932
+    },
+    "final/stress/result.json": {
+      "sha256": "f80bccd8c93bed1f1b9908ec926c6919bea0f68d7dbf29fce76471e5f5d2f1ca",
+      "bytes": 1706
+    },
+    "final/stress/scene.json": {
+      "sha256": "3c58633d2e716456d92ae1903325b923b78c11e133ce3b7331006e654ec228c8",
+      "bytes": 4198
+    },
+    "final/stress/source_versions.json": {
+      "sha256": "aa5b51785757bc5bf2f32adf57ea620c52bd2c28a943569003b631be6bff2629",
+      "bytes": 1236
+    },
+    "final/stress/stages.json": {
+      "sha256": "f71cafd50311a230d382d7135fa866d986a89b45e29213924d3b8309f20c4cec",
+      "bytes": 401
+    },
+    "final/turn_055_left/case_binding.json": {
+      "sha256": "a87b3d588bdb1340253e3386afa3a5994816706b1d78c1bac0347b77f4c76cbe",
+      "bytes": 3057
+    },
+    "final/turn_055_left/result.json": {
+      "sha256": "8c4a240ec67bc45b8ea2068dd5a9bc9905751ac2397302e498da47b21a44f3c5",
+      "bytes": 2754
+    },
+    "final/turn_055_left/scene.json": {
+      "sha256": "f443bad7cbe1ac3ffcd5e5066a42379dce66a90d0a7776aff1eca177477628b5",
+      "bytes": 4207
+    },
+    "final/turn_055_left/source_versions.json": {
+      "sha256": "8f27f25975ea823f138b1d47bd3856cf669ca72cf777707930d1b81b7be3d9c9",
+      "bytes": 1243
+    },
+    "final/turn_055_left/stages.json": {
+      "sha256": "2a93d05063f2722d2ee0d54c5246278556f9dd6e26e751b60be0eb92c452b69b",
+      "bytes": 1138
+    },
+    "final/turn_055_right/case_binding.json": {
+      "sha256": "ff9d0d93773380227117867aecb6f323b12efc0c842b55b928c634307816f169",
+      "bytes": 3057
+    },
+    "final/turn_055_right/result.json": {
+      "sha256": "96b48db8f7a7f6b6edfe6cd67c29f9abf5167d94d9c05c3b4a67a982efc26426",
+      "bytes": 2762
+    },
+    "final/turn_055_right/scene.json": {
+      "sha256": "952f7bdbbcc1c2e0acb86ebd06742306786b3f630e38ec86a173e4218cc02245",
+      "bytes": 4208
+    },
+    "final/turn_055_right/source_versions.json": {
+      "sha256": "9675d90347ed5ffaac29c65677ff7417210c63b2f8f932cd14b6600a97df6686",
+      "bytes": 1244
+    },
+    "final/turn_055_right/stages.json": {
+      "sha256": "7d90203a2c3b669da1aaead3219d442a58c0138e5ab00df49bcbab3f3380dac9",
+      "bytes": 1143
+    },
+    "final/turn_100_left/case_binding.json": {
+      "sha256": "041f1afe842201fe1e96c87c19c8cdc3d64942692e6675cb3b679e3c8b326cff",
+      "bytes": 3051
+    },
+    "final/turn_100_left/result.json": {
+      "sha256": "15cb3e7555ac1a5e523dc21ddf076950200e4c04c620107a8b601b98be852f38",
+      "bytes": 2762
+    },
+    "final/turn_100_left/scene.json": {
+      "sha256": "802c92ab082fd3663ec97b443b418fa538da8f45e03bc36f31cc572f6eaab16f",
+      "bytes": 4207
+    },
+    "final/turn_100_left/source_versions.json": {
+      "sha256": "5eadd95582a4596860534fe6d5314d0e9ffd4be6821954250c48f3adbbe58b21",
+      "bytes": 1243
+    },
+    "final/turn_100_left/stages.json": {
+      "sha256": "a27eba86c6f2eabf940090b3f8977e2d057862efbc8859415fbcb9935b6fccfc",
+      "bytes": 1137
+    },
+    "final/turn_100_right/case_binding.json": {
+      "sha256": "7f14a3bd28d34325483767af1d73cabe3e1d92613682e46a73d87a76405634b3",
+      "bytes": 3051
+    },
+    "final/turn_100_right/result.json": {
+      "sha256": "0785fbfb99260d6e9c77660b4429d5ff383295e619794c04ef96b0d8c4666e31",
+      "bytes": 2761
+    },
+    "final/turn_100_right/scene.json": {
+      "sha256": "34e946395346e334161101b6c3541b827c77c4f636aad607091731158d0309aa",
+      "bytes": 4208
+    },
+    "final/turn_100_right/source_versions.json": {
+      "sha256": "8df31fc823780c6ad357b874bb618ce20c1ba0f65e7b9110fe781432d23645dc",
+      "bytes": 1244
+    },
+    "final/turn_100_right/stages.json": {
+      "sha256": "e8752c8e05eef0f0cf6d7aed905c44df42a7263c4341eec9a693609d5792dad4",
+      "bytes": 1134
+    },
+    "final/zigzag_10_10/actuators_state.csv": {
+      "sha256": "e08bef8e182ba4419fc4e370cb19e9a981437e886d1e9c987aea4f19d00ca4e8",
+      "bytes": 189132
+    },
+    "final/zigzag_10_10/boat.sdf": {
+      "sha256": "f254dee109238fc18df5748aa9d6b603264dfe090134f6adf347672b80c9a8b8",
+      "bytes": 82004
+    },
+    "final/zigzag_10_10/case_binding.json": {
+      "sha256": "8bf458434838a1e8f4db024374f9720d2fb0406d028050155dfe2d93be30ffda",
+      "bytes": 3648
+    },
+    "final/zigzag_10_10/health.json": {
+      "sha256": "c93d0b7b80ff5cb7e09b7602971bef1929b9da84b2ca617c52da6aa28ac994d8",
+      "bytes": 232027
+    },
+    "final/zigzag_10_10/propulsion_state.csv": {
+      "sha256": "dcc58e68f5f21d8a0916502c471ecd9c00c8ad9cfa25225b7995dd9d332b2b8a",
+      "bytes": 403034
+    },
+    "final/zigzag_10_10/result.json": {
+      "sha256": "150434a451cb925cfe70f050e80aecee0877db14cdf238ff20b8f43d5dcce559",
+      "bytes": 4559
+    },
+    "final/zigzag_10_10/scene.json": {
+      "sha256": "1f5a4d0df3eb8c42925cc2f1e1d7a475c1f36b49193f1b24f8966775d5758cf5",
+      "bytes": 4206
+    },
+    "final/zigzag_10_10/source_versions.json": {
+      "sha256": "d00ff23b1d1174c85c94d263ca9c82854675ee5a31825e0a1e6ec9fc62ab65f9",
+      "bytes": 1242
+    },
+    "final/zigzag_10_10/stabilizer_hydrodynamics_appendages.csv": {
+      "sha256": "1d4860c67aa1c45835b85115af0c4184a8efb16c37f2c84d04b89706fe69b7ba",
+      "bytes": 214030
+    },
+    "final/zigzag_10_10/stages.json": {
+      "sha256": "a34ab1d2da0d1689b36de3ea75db5cd910aa924960293f945a23e5570885d76e",
+      "bytes": 2532
+    },
+    "final/zigzag_10_10_low_speed/case_binding.json": {
+      "sha256": "8c6821e3addc68507095e1a505b9bcc0219ddcea2d7ef9271ccf6bb25c7ebece",
+      "bytes": 3658
+    },
+    "final/zigzag_10_10_low_speed/result.json": {
+      "sha256": "0e263d569ffe5a6a9a4dd7d0470c0b2b364109166c143c4fd65f943d0d6fc506",
+      "bytes": 4575
+    },
+    "final/zigzag_10_10_low_speed/scene.json": {
+      "sha256": "6cb33358c3a71e7a63ba7044fd3d639f03401211f345e82a350e69c67abf655a",
+      "bytes": 4216
+    },
+    "final/zigzag_10_10_low_speed/source_versions.json": {
+      "sha256": "a7f64c6e55898bf976ea596c4a28c11fcda780d2f6c6c18d86fe744b35f7f5dd",
+      "bytes": 1252
+    },
+    "final/zigzag_10_10_low_speed/stages.json": {
+      "sha256": "d4c8feddb4e60b3b6426b1be11452ca1a9c754256cd7dbe24cd81a6c6688a66d",
+      "bytes": 2528
+    },
+    "force_comparison_final.json": {
+      "sha256": "ffe4c8db9d0b6b05e9b9eff498b0ee741e9681be530e3c661f47960675e94b05",
+      "bytes": 13306
+    },
+    "force_comparison_initial.json": {
+      "sha256": "cc97cea3015cb2c59e1bf4363de6f00ec66f413efdf9340052795571925a28cf",
+      "bytes": 26575
+    },
+    "geometry.png": {
+      "sha256": "73799584ef0b0feccff0e01c9f80582ad7c9135e6d77ec70c5951f6bc01fa3c1",
+      "bytes": 152612
+    },
+    "historical_force_audit.json": {
+      "sha256": "0c054ad6a144e3eecf0cd674df23a3a59be4a8b6d5e29aae9ef0eefd85b59238",
+      "bytes": 3006
+    },
+    "maneuver_assessment.json": {
+      "sha256": "945212f1fb404b295320fa9c7dec4c3dc6f3425e2fb7ef3719406300a84b975e",
+      "bytes": 80818
+    },
+    "physical_consistency.json": {
+      "sha256": "020b15f1e5b73c65eeddd091e1a0cd84de008876abf81e6e24504d5b9b78574d",
+      "bytes": 8042
+    },
+    "planar_stability.json": {
+      "sha256": "fd25209cfc175e244471f20e21e032de9f38fcbf6e2b3d6e4f483a17cbec0a69",
+      "bytes": 5013
+    },
+    "recovery_comparison.png": {
+      "sha256": "9ceba9e67761bca8b6e4add74e18bec1fa384dddd7ee1016ad3aeba612d0d335",
+      "bytes": 195140
+    },
+    "review-delta.json": {
+      "sha256": "e43f3ba8726f266422d0e70b42bbdc51ab32578519b3a5b8cad990614dfdd57d",
+      "bytes": 1248
+    },
+    "suite_binding.json": {
+      "sha256": "30c25e6393beef32cb45a082a1dcf873c4795347703cccc69baf88c743b53624",
+      "bytes": 142092
+    },
+    "summary.json": {
+      "sha256": "394bcdf18219fd7970cb4a1c714ede2a12cb540541ac03f8c13e684b8e83e1d7",
+      "bytes": 116441
+    },
+    "supervisor-deep/cpp-coverage/build.log": {
+      "sha256": "aac45baeea29cd522189179e73ec0bde2e03b93f1bc9c91a6756a21c64791a5e",
+      "bytes": 3804
+    },
+    "supervisor-deep/cpp-coverage/configure.log": {
+      "sha256": "ff8bf38129aac9a6fd9d24dc3b44cde05bb839f1bdb1b3d1255fb3f05c3816b1",
+      "bytes": 12773
+    },
+    "supervisor-deep/cpp-coverage/coverage-tests.log": {
+      "sha256": "8ae3cecf8d18a2f7fbb654fd6494b8d30040a2ddc8308e429619293f93a8405f",
+      "bytes": 1619
+    },
+    "supervisor-deep/cpp-coverage/coverage-tests.xml": {
+      "sha256": "f95b622ab60cfc9413cf5ce5a462d59ee46eccd1b520c7db228f33ca70a36ac2",
+      "bytes": 2587
+    },
+    "supervisor-deep/cpp-coverage/gcovr.json": {
+      "sha256": "8c79c6f712df461944012c4024aa29a2fb58d32cf094262b65ef0a97ae93966f",
+      "bytes": 405770
+    },
+    "supervisor-deep/cpp-coverage/gcovr.log": {
+      "sha256": "b3cf371091aefd26cb5f88f884b0f358b5eb507d591130aa459d9876f899beda",
+      "bytes": 66
+    },
+    "supervisor-deep/cpp-coverage/snapshot.json": {
+      "sha256": "a19c9166e94db6bd1bde162fb7a15ae87f439f6226ad9b74a19d1c89eb0b6bbf",
+      "bytes": 3608
+    },
+    "supervisor-deep/cpp-mutation/baseline.log": {
+      "sha256": "d821ca9f4ee8093d35b5cf75873ba385167f62915fc7cc2a78a3f1f7a171d7ff",
+      "bytes": 484
+    },
+    "supervisor-deep/cpp-mutation/baseline.xml": {
+      "sha256": "e2f902a0e3145b61435f4542fa1dfcb8ecc89747aafac8a19e262e35ebffce7a",
+      "bytes": 344
+    },
+    "supervisor-deep/cpp-mutation/build.log": {
+      "sha256": "0334de80b9e588f4c074ccf00183ff9b5ea98cb9aa336ad7645b2e91c0b02d51",
+      "bytes": 338
+    },
+    "supervisor-deep/cpp-mutation/configure.log": {
+      "sha256": "ad90e9521b748df79037552c9916bf7b9ea92b8df252ee1a848294a97f042903",
+      "bytes": 12676
+    },
+    "supervisor-deep/cpp-mutation/cpp-mutation.json": {
+      "sha256": "cb8347a3ceeced12a2ffda0ad7de23bb072905688ad8e21b80e5261858ab4777",
+      "bytes": 2386
+    },
+    "supervisor-deep/cpp-mutation/mutant-build-0.log": {
+      "sha256": "0334de80b9e588f4c074ccf00183ff9b5ea98cb9aa336ad7645b2e91c0b02d51",
+      "bytes": 338
+    },
+    "supervisor-deep/cpp-mutation/mutant-build-1.log": {
+      "sha256": "0334de80b9e588f4c074ccf00183ff9b5ea98cb9aa336ad7645b2e91c0b02d51",
+      "bytes": 338
+    },
+    "supervisor-deep/cpp-mutation/mutant-build-10.log": {
+      "sha256": "0334de80b9e588f4c074ccf00183ff9b5ea98cb9aa336ad7645b2e91c0b02d51",
+      "bytes": 338
+    },
+    "supervisor-deep/cpp-mutation/mutant-build-11.log": {
+      "sha256": "0334de80b9e588f4c074ccf00183ff9b5ea98cb9aa336ad7645b2e91c0b02d51",
+      "bytes": 338
+    },
+    "supervisor-deep/cpp-mutation/mutant-build-2.log": {
+      "sha256": "0334de80b9e588f4c074ccf00183ff9b5ea98cb9aa336ad7645b2e91c0b02d51",
+      "bytes": 338
+    },
+    "supervisor-deep/cpp-mutation/mutant-build-3.log": {
+      "sha256": "0334de80b9e588f4c074ccf00183ff9b5ea98cb9aa336ad7645b2e91c0b02d51",
+      "bytes": 338
+    },
+    "supervisor-deep/cpp-mutation/mutant-build-4.log": {
+      "sha256": "0334de80b9e588f4c074ccf00183ff9b5ea98cb9aa336ad7645b2e91c0b02d51",
+      "bytes": 338
+    },
+    "supervisor-deep/cpp-mutation/mutant-build-5.log": {
+      "sha256": "0334de80b9e588f4c074ccf00183ff9b5ea98cb9aa336ad7645b2e91c0b02d51",
+      "bytes": 338
+    },
+    "supervisor-deep/cpp-mutation/mutant-build-6.log": {
+      "sha256": "0334de80b9e588f4c074ccf00183ff9b5ea98cb9aa336ad7645b2e91c0b02d51",
+      "bytes": 338
+    },
+    "supervisor-deep/cpp-mutation/mutant-build-7.log": {
+      "sha256": "0334de80b9e588f4c074ccf00183ff9b5ea98cb9aa336ad7645b2e91c0b02d51",
+      "bytes": 338
+    },
+    "supervisor-deep/cpp-mutation/mutant-build-8.log": {
+      "sha256": "0334de80b9e588f4c074ccf00183ff9b5ea98cb9aa336ad7645b2e91c0b02d51",
+      "bytes": 338
+    },
+    "supervisor-deep/cpp-mutation/mutant-build-9.log": {
+      "sha256": "0334de80b9e588f4c074ccf00183ff9b5ea98cb9aa336ad7645b2e91c0b02d51",
+      "bytes": 338
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-0.log": {
+      "sha256": "0d965a918a3e68e6ec8d1b39d45b3b325ab6733298be2b364bbcdcb5b1b3990f",
+      "bytes": 913
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-0.xml": {
+      "sha256": "7b0bb74b6347aed1688f29676f586db66a837a4e413c8600102b82f08184e8ec",
+      "bytes": 694
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-1.log": {
+      "sha256": "f7e37171881d7bc4b04a0c9a2d26250555f6c2b541d2f9599be6f7317ab4db36",
+      "bytes": 913
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-1.xml": {
+      "sha256": "9480285fbbc7bd27a2485a51035123158cfee0937020896c518be0946ab19107",
+      "bytes": 694
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-10.log": {
+      "sha256": "e16eeeaaa55b0fb13ea75e06f4da79611f7882d52a2f840ddc5b7f5a333ec723",
+      "bytes": 905
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-10.xml": {
+      "sha256": "f935a28d16990ebb84b44acf5b302ede6dc963607ed242d42f65573c6d0949da",
+      "bytes": 686
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-11.log": {
+      "sha256": "90b4040faa0f416db0ef436464bc5216cdccc3729e41f73eb972cfae6af37b1e",
+      "bytes": 861
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-11.xml": {
+      "sha256": "be918ffb2a06013205cb9c5c3d6a645b122c4589d37ebd14856202767e5ea6e1",
+      "bytes": 642
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-2.log": {
+      "sha256": "f7e37171881d7bc4b04a0c9a2d26250555f6c2b541d2f9599be6f7317ab4db36",
+      "bytes": 913
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-2.xml": {
+      "sha256": "7c1a84b69dc54391b4ac4d08cd0203a87b4bb8fdaa1db583ca516ee7cf9d385d",
+      "bytes": 694
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-3.log": {
+      "sha256": "0d965a918a3e68e6ec8d1b39d45b3b325ab6733298be2b364bbcdcb5b1b3990f",
+      "bytes": 913
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-3.xml": {
+      "sha256": "b0e9f72587dc84c2441b769893228f1a309be74bb383b3c09215aeb5c2446ed5",
+      "bytes": 694
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-4.log": {
+      "sha256": "e16eeeaaa55b0fb13ea75e06f4da79611f7882d52a2f840ddc5b7f5a333ec723",
+      "bytes": 905
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-4.xml": {
+      "sha256": "79a95efe2b2f58150b36405f5f5e5d4fc0b458a668ffbb11124d4690d7b782ab",
+      "bytes": 686
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-5.log": {
+      "sha256": "f9182cb4da441f53c006e646cca14b4f59e71cd1be2d9d08b1d884f06981cfee",
+      "bytes": 887
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-5.xml": {
+      "sha256": "ccd6f4c2fb52fca370ee5ebf98c7854a6eead182238af1910d74d44a6e04847b",
+      "bytes": 665
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-6.log": {
+      "sha256": "90b4040faa0f416db0ef436464bc5216cdccc3729e41f73eb972cfae6af37b1e",
+      "bytes": 861
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-6.xml": {
+      "sha256": "8b0b99653e6cdd044f3b06d40a719ea3444b50fade50d778bb333ce232ec2abb",
+      "bytes": 641
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-7.log": {
+      "sha256": "2339b5be6bf9ebf87c35e3b42f5a36312aaf3e6f5cc7d003203b363086ef28c2",
+      "bytes": 887
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-7.xml": {
+      "sha256": "34ecc96cb3dffa25d4042c1945b0affed270541f949847a4045a952c728c17b0",
+      "bytes": 665
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-8.log": {
+      "sha256": "ee37b51a850277fcc5a186936e54ddb342e26623fbb687d2c1fcafd5bb213099",
+      "bytes": 887
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-8.xml": {
+      "sha256": "4bf72510983ca1cc20c4ef642570cf0b0a4c7c7a17d057f62dc00ca45d344d06",
+      "bytes": 665
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-9.log": {
+      "sha256": "e16eeeaaa55b0fb13ea75e06f4da79611f7882d52a2f840ddc5b7f5a333ec723",
+      "bytes": 905
+    },
+    "supervisor-deep/cpp-mutation/mutant-test-9.xml": {
+      "sha256": "c76fc0b1f00361ead329fef21e2f2dc8dd98e3c8d2a08b1556992f3ce809f018",
+      "bytes": 685
+    },
+    "supervisor-deep/cpp-mutation/snapshot.json": {
+      "sha256": "2dc4102ff36e229216dd985767e07324d72dad8637bf77446236980cf13b9089",
+      "bytes": 361
+    },
+    "supervisor-deep/cpp-sanitizers/build.log": {
+      "sha256": "2a88efa79af535c4c83675d42df634adcfd5e91948dd9ce4e795bd538af836a9",
+      "bytes": 3828
+    },
+    "supervisor-deep/cpp-sanitizers/configure.log": {
+      "sha256": "a5d5ce693dbcaa4a1808c03e66823982b8a6a53490dfce6cc0ba4b1f22a1e59b",
+      "bytes": 12775
+    },
+    "supervisor-deep/cpp-sanitizers/sanitizer-tests.log": {
+      "sha256": "8d9c1ea39c2fd91c70cd13e22b9de6ec69969f96ebf8e885835b6cade90554c4",
+      "bytes": 1623
+    },
+    "supervisor-deep/cpp-sanitizers/sanitizer-tests.xml": {
+      "sha256": "1372253d4b872f2a0272868daf66a4758b65644e96794d061d03fdbfd63361ab",
+      "bytes": 2570
+    },
+    "supervisor-deep/cpp-sanitizers/snapshot.json": {
+      "sha256": "a19c9166e94db6bd1bde162fb7a15ae87f439f6226ad9b74a19d1c89eb0b6bbf",
+      "bytes": 3608
+    },
+    "supervisor-deep/report.json": {
+      "sha256": "aa40564f8f70af667dab60362dce36ffe4f1b449c6cc92ea7dc305dbcc5780e2",
+      "bytes": 76978
+    },
+    "supervisor-deep/report.txt": {
+      "sha256": "ce91e3bffbe70305e9cb197bd73dc196fc54ff4362f112cffd3a9c4dfd1465db",
+      "bytes": 1755
+    },
+    "supervisor-deep/usv-build-and-test.log": {
+      "sha256": "16535609f715635c0acdb12ff909631497f8dcb169642bcf599305d7896a5a24",
+      "bytes": 18333
+    },
+    "supervisor-deep/usv-runtime-regression.log": {
+      "sha256": "56156ae806d4bbd6c87f2214e013374e41a1e7984c82f93594e5da6a1ab1e71c",
+      "bytes": 5907
+    },
+    "supervisor-full/cpp-coverage/build.log": {
+      "sha256": "752365e702f7e9542a0fd838164e58c8545dbf024d2c62f66d3b60deb9f4baf8",
+      "bytes": 3804
+    },
+    "supervisor-full/cpp-coverage/configure.log": {
+      "sha256": "94e102d313be0fdd85060108bcc55970ec59b21e86a80ba256e2bc8835dcd250",
+      "bytes": 12773
+    },
+    "supervisor-full/cpp-coverage/coverage-tests.log": {
+      "sha256": "2d75cf54d52773e849f30a79e33df80d208fbae61f48592338194281b408a8fd",
+      "bytes": 1619
+    },
+    "supervisor-full/cpp-coverage/coverage-tests.xml": {
+      "sha256": "1ee82eaf0eacbbc2a12294418f397010bc7a1fb8fb329fe14e3a80ac3b6c5790",
+      "bytes": 2588
+    },
+    "supervisor-full/cpp-coverage/gcovr.json": {
+      "sha256": "8c79c6f712df461944012c4024aa29a2fb58d32cf094262b65ef0a97ae93966f",
+      "bytes": 405770
+    },
+    "supervisor-full/cpp-coverage/gcovr.log": {
+      "sha256": "b3cf371091aefd26cb5f88f884b0f358b5eb507d591130aa459d9876f899beda",
+      "bytes": 66
+    },
+    "supervisor-full/cpp-coverage/snapshot.json": {
+      "sha256": "a19c9166e94db6bd1bde162fb7a15ae87f439f6226ad9b74a19d1c89eb0b6bbf",
+      "bytes": 3608
+    },
+    "supervisor-full/report.json": {
+      "sha256": "10d8585b672a36b3279245478cb4e0945d2430a92c02a775ce756df04c6a1fb1",
+      "bytes": 77072
+    },
+    "supervisor-full/report.txt": {
+      "sha256": "2e40271f101797a0ed3eedd57fa2fb212cf94ad1385e0cffbf2154affcd19be7",
+      "bytes": 1650
+    },
+    "supervisor-full/usv-build-and-test.log": {
+      "sha256": "824af3f09ac6ecdaf24ee0d89105f6bcdc519b58c957695b91970172d862259c",
+      "bytes": 18558
+    },
+    "supervisor-quick/report.json": {
+      "sha256": "3555825b78f4c1e75e6206005e21be264cdb443abc07ab2b23a1cff210ca7dcf",
+      "bytes": 74354
+    },
+    "supervisor-quick/report.txt": {
+      "sha256": "73b633859a59be3a52d67318487f66c1a0c527a59840b76bfc54b877fbaec6df",
+      "bytes": 1545
+    }
+  }
+}

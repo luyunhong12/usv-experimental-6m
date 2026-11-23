@@ -1,0 +1,36 @@
+[  4%] Building CXX object CMakeFiles/test_wrench_audit.dir/home/yh/Project/usv-experimental-6m/artifacts/validation/supervisor/20261123T031937Z-63b9af4b/cpp-coverage/workspace/ros_ws/src/usv_simulation/tests/test_wrench_audit.cc.o
+[  8%] Building CXX object CMakeFiles/test_energy.dir/home/yh/Project/usv-experimental-6m/artifacts/validation/supervisor/20261123T031937Z-63b9af4b/cpp-coverage/workspace/ros_ws/src/usv_energy/tests/test_energy.cc.o
+[ 12%] Linking CXX executable test_energy
+[ 12%] Built target test_energy
+[ 16%] Building CXX object CMakeFiles/test_appendages.dir/home/yh/Project/usv-experimental-6m/artifacts/validation/supervisor/20261123T031937Z-63b9af4b/cpp-coverage/workspace/ros_ws/src/usv_simulation/tests/test_appendages.cc.o
+[ 20%] Linking CXX executable test_appendages
+[ 20%] Built target test_appendages
+[ 25%] Building CXX object CMakeFiles/test_steering_integral.dir/home/yh/Project/usv-experimental-6m/artifacts/validation/supervisor/20261123T031937Z-63b9af4b/cpp-coverage/workspace/ros_ws/src/usv_simulation/tests/test_steering_integral.cc.o
+[ 29%] Linking CXX executable test_steering_integral
+[ 29%] Built target test_steering_integral
+[ 33%] Building CXX object CMakeFiles/test_resistance.dir/home/yh/Project/usv-experimental-6m/artifacts/validation/supervisor/20261123T031937Z-63b9af4b/cpp-coverage/workspace/ros_ws/src/usv_simulation/tests/test_resistance.cc.o
+[ 37%] Linking CXX executable test_resistance
+[ 37%] Built target test_resistance
+[ 41%] Building CXX object CMakeFiles/test_added_mass.dir/home/yh/Project/usv-experimental-6m/artifacts/validation/supervisor/20261123T031937Z-63b9af4b/cpp-coverage/workspace/ros_ws/src/usv_simulation/tests/test_added_mass.cc.o
+[ 45%] Linking CXX executable test_wrench_audit
+[ 50%] Linking CXX executable test_added_mass
+[ 50%] Built target test_added_mass
+[ 54%] Building CXX object CMakeFiles/test_fuel_mass.dir/home/yh/Project/usv-experimental-6m/artifacts/validation/supervisor/20261123T031937Z-63b9af4b/cpp-coverage/workspace/ros_ws/src/usv_simulation/tests/test_fuel_mass.cc.o
+[ 54%] Built target test_wrench_audit
+[ 58%] Building CXX object CMakeFiles/test_propulsion.dir/home/yh/Project/usv-experimental-6m/artifacts/validation/supervisor/20261123T031937Z-63b9af4b/cpp-coverage/workspace/ros_ws/src/usv_simulation/tests/test_propulsion.cc.o
+[ 62%] Linking CXX executable test_propulsion
+[ 62%] Built target test_propulsion
+[ 66%] Building CXX object CMakeFiles/test_steering_reference.dir/home/yh/Project/usv-experimental-6m/artifacts/validation/supervisor/20261123T031937Z-63b9af4b/cpp-coverage/workspace/ros_ws/src/usv_simulation/tests/test_steering_reference.cc.o
+[ 70%] Linking CXX executable test_steering_reference
+[ 70%] Built target test_steering_reference
+[ 75%] Building CXX object CMakeFiles/test_wave_kinematics.dir/home/yh/Project/usv-experimental-6m/artifacts/validation/supervisor/20261123T031937Z-63b9af4b/cpp-coverage/workspace/ros_ws/src/usv_simulation/tests/test_wave_kinematics.cc.o
+[ 79%] Linking CXX executable test_wave_kinematics
+[ 79%] Built target test_wave_kinematics
+[ 83%] Building CXX object CMakeFiles/test_wave_pressure.dir/home/yh/Project/usv-experimental-6m/artifacts/validation/supervisor/20261123T031937Z-63b9af4b/cpp-coverage/workspace/ros_ws/src/usv_simulation/tests/test_wave_pressure.cc.o
+[ 87%] Linking CXX executable test_wave_pressure
+[ 87%] Built target test_wave_pressure
+[ 91%] Building CXX object CMakeFiles/test_hydrostatics.dir/home/yh/Project/usv-experimental-6m/artifacts/validation/supervisor/20261123T031937Z-63b9af4b/cpp-coverage/workspace/ros_ws/src/usv_simulation/tests/test_hydrostatics.cc.o
+[ 95%] Linking CXX executable test_hydrostatics
+[ 95%] Built target test_hydrostatics
+[100%] Linking CXX executable test_fuel_mass
+[100%] Built target test_fuel_mass

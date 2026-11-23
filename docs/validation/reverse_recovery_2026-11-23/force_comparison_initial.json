@@ -1,0 +1,786 @@
+{
+  "recovery_60_right": {
+    "before": {
+      "approach": {
+        "window_sim_s": [
+          86.424,
+          101.248
+        ],
+        "yaw_rate_deg_s": 0.4176173226836841,
+        "speed_km_h": -6.781616518379803,
+        "roll_deg": 0.19771878239203416,
+        "pitch_deg": 0.03710497292457934,
+        "components": {
+          "pressure": {
+            "mean_body_wrench_N_Nm": [
+              -9.980485074227296,
+              53.18222893088,
+              15411.308575991632,
+              -61.212864240865464,
+              -127.02868608107389,
+              0.3987158530585122
+            ],
+            "mean_world_vertical_moment_Nm": 3.369179935042155e-14
+          },
+          "hull_drag": {
+            "mean_body_wrench_N_Nm": [
+              870.1279776610057,
+              -20.85113447455359,
+              1.8951603677252953,
+              -10.249844124307259,
+              -427.88493851835113,
+              -14.550613429518087
+            ],
+            "mean_world_vertical_moment_Nm": -16.020446799631014
+          },
+          "added_mass": {
+            "mean_body_wrench_N_Nm": [
+              0.053940594349333744,
+              0.9275212766978318,
+              -0.0031621050501110678,
+              0.4562147612495964,
+              0.4216737399607873,
+              10.011374852050379
+            ],
+            "mean_world_vertical_moment_Nm": 10.012472836136894
+          },
+          "air": {
+            "mean_body_wrench_N_Nm": [
+              2.1735105400841874,
+              -0.002179208604217992,
+              1.0842021724855044e-19,
+              1.7721901331609333e-05,
+              0.01767556316546718,
+              -0.001233552876662405
+            ],
+            "mean_world_vertical_moment_Nm": -0.00117256127545014
+          },
+          "thrust": {
+            "mean_body_wrench_N_Nm": [
+              -879.464324204791,
+              -0.0013870130713565427,
+              -1.6799833129570945e-15,
+              -0.0008805698566250526,
+              558.3435296056601,
+              0.004239151662482722
+            ],
+            "mean_world_vertical_moment_Nm": 1.9309917232844482
+          },
+          "water_couple": {
+            "mean_body_wrench_N_Nm": [
+              0.0,
+              0.0,
+              0.0,
+              71.69643620297443,
+              0.0001130733200765854,
+              1.356939252319636e-16
+            ],
+            "mean_world_vertical_moment_Nm": -0.046430501337299916
+          },
+          "appendages": {
+            "mean_body_wrench_N_Nm": [
+              6.766922660480555,
+              -1.4139237299195464,
+              1.0842021724855044e-19,
+              -0.6906792493825615,
+              -3.955902083530419,
+              4.305383155276695
+            ],
+            "mean_world_vertical_moment_Nm": 4.292152736678578
+          }
+        },
+        "total_external_world_vertical_moment_Nm": 0.16756743385619363,
+        "note": "Gravity has zero resultant moment about whole-vessel COM; joint motor/servo torques are internal. Water-couple overrides are diagnostic counter-couples, not physical propulsion modes."
+      },
+      "recover": {
+        "window_sim_s": [
+          148.516,
+          163.336
+        ],
+        "yaw_rate_deg_s": -0.4050907904916963,
+        "speed_km_h": -6.781597796804026,
+        "roll_deg": 0.26526147090849894,
+        "pitch_deg": 0.03703386472343418,
+        "components": {
+          "pressure": {
+            "mean_body_wrench_N_Nm": [
+              -9.961466783499203,
+              71.3504665141654,
+              15411.402845802775,
+              -82.12409609114206,
+              -126.8485128385353,
+              0.5341905354682435
+            ],
+            "mean_world_vertical_moment_Nm": -1.6418964953067592e-14
+          },
+          "hull_drag": {
+            "mean_body_wrench_N_Nm": [
+              870.1309169013135,
+              20.69286889719945,
+              1.5479553676943774,
+              10.177250922980331,
+              -427.81809154495005,
+              14.17159000779437
+            ],
+            "mean_world_vertical_moment_Nm": 12.184201111057591
+          },
+          "added_mass": {
+            "mean_body_wrench_N_Nm": [
+              0.05268527700202162,
+              -0.9736978543393506,
+              0.004540556305296675,
+              -0.4789344258677823,
+              0.34081138515171006,
+              -9.96557856824589
+            ],
+            "mean_world_vertical_moment_Nm": -9.963582295470623
+          },
+          "air": {
+            "mean_body_wrench_N_Nm": [
+              2.173565362592417,
+              0.0021415594604596243,
+              2.4093381610788986e-20,
+              -1.741572852666797e-05,
+              0.01767600899661868,
+              0.0012122537595428563
+            ],
+            "mean_world_vertical_moment_Nm": 0.0012940858247706118
+          },
+          "thrust": {
+            "mean_body_wrench_N_Nm": [
+              -879.466660816852,
+              -0.0017207942053761953,
+              1.7270135938613546e-16,
+              -0.0010924767314737576,
+              558.3450130452825,
+              0.005259292631596263
+            ],
+            "mean_world_vertical_moment_Nm": 2.59021231533988
+          },
+          "water_couple": {
+            "mean_body_wrench_N_Nm": [
+              0.0,
+              0.0,
+              0.0,
+              71.69643620596655,
+              0.00014028356241937526,
+              -1.3636853991706566e-17
+            ],
+            "mean_world_vertical_moment_Nm": -0.046341261472303656
+          },
+          "appendages": {
+            "mean_body_wrench_N_Nm": [
+              6.766515372785996,
+              1.4911241623007654,
+              -1.144435626512477e-19,
+              0.7285502221282368,
+              -3.9556947563656824,
+              -4.540479238113635
+            ],
+            "mean_world_vertical_moment_Nm": -4.5592140828541465
+          }
+        },
+        "total_external_world_vertical_moment_Nm": 0.20656987242515262,
+        "note": "Gravity has zero resultant moment about whole-vessel COM; joint motor/servo torques are internal. Water-couple overrides are diagnostic counter-couples, not physical propulsion modes."
+      }
+    },
+    "candidate3": {
+      "approach": {
+        "window_sim_s": [
+          87.256,
+          102.08
+        ],
+        "yaw_rate_deg_s": 0.017160590717262725,
+        "speed_km_h": -6.751775054538457,
+        "roll_deg": 0.22972433554266825,
+        "pitch_deg": 0.04487390784396389,
+        "components": {
+          "pressure": {
+            "mean_body_wrench_N_Nm": [
+              -12.094946899174463,
+              61.91784404017358,
+              15442.90952668468,
+              -71.26381031346291,
+              -105.77587259933465,
+              0.36829083090953507
+            ],
+            "mean_world_vertical_moment_Nm": -7.873215968068337e-14
+          },
+          "hull_drag": {
+            "mean_body_wrench_N_Nm": [
+              864.7897189369907,
+              -0.6182989911821469,
+              2.1117982793369143,
+              -0.3025534443379068,
+              -423.2716290720931,
+              -0.4929657487581496
+            ],
+            "mean_world_vertical_moment_Nm": -2.1898043602905517
+          },
+          "added_mass": {
+            "mean_body_wrench_N_Nm": [
+              7.161539015657557e-05,
+              0.03932060161344341,
+              -0.00015759837241965374,
+              0.01925302672653881,
+              0.49712091683075726,
+              0.31776603765931954
+            ],
+            "mean_world_vertical_moment_Nm": 0.31974148066971164
+          },
+          "air": {
+            "mean_body_wrench_N_Nm": [
+              2.1544516037099584,
+              -2.400438741976119e-06,
+              5.477479725577809e-20,
+              2.486321213801145e-08,
+              0.0223153319130404,
+              -1.3503970082149244e-06
+            ],
+            "mean_world_vertical_moment_Nm": 8.812144650996516e-05
+          },
+          "thrust": {
+            "mean_body_wrench_N_Nm": [
+              -880.9046362873703,
+              -1.8615718170706824e-09,
+              -1.9477089694161816e-16,
+              -1.17770888268487e-09,
+              557.2974721531026,
+              5.720720921691318e-09
+            ],
+            "mean_world_vertical_moment_Nm": 2.2344474693826673
+          },
+          "water_couple": {
+            "mean_body_wrench_N_Nm": [
+              0.0,
+              0.0,
+              0.0,
+              71.69643619217668,
+              1.5151252859493623e-10,
+              1.555830117516699e-17
+            ],
+            "mean_world_vertical_moment_Nm": -0.056152459549742094
+          },
+          "appendages": {
+            "mean_body_wrench_N_Nm": [
+              6.710147611172587,
+              -0.010607460278745186,
+              6.738617669267545e-20,
+              -0.005098233023552738,
+              -3.9075502210931066,
+              0.03232872723457267
+            ],
+            "mean_world_vertical_moment_Nm": 0.016665385461292495
+          },
+          "stabilizer_lift_drag_buoyancy": {
+            "mean_body_wrench_N_Nm": [
+              7.233425436478559,
+              -0.21213280246055416,
+              18.778878601816324,
+              -0.14422754672964846,
+              -24.865350378223432,
+              -0.22540437836098437
+            ],
+            "mean_world_vertical_moment_Nm": -0.3249855214349806
+          }
+        },
+        "total_external_world_vertical_moment_Nm": 1.1568482812646359e-07,
+        "note": "Gravity has zero resultant moment about whole-vessel COM; joint motor/servo torques are internal. Water-couple overrides are diagnostic counter-couples, not physical propulsion modes."
+      },
+      "recover": {
+        "window_sim_s": [
+          149.344,
+          164.168
+        ],
+        "yaw_rate_deg_s": 0.016792975928779517,
+        "speed_km_h": -6.751775183673854,
+        "roll_deg": 0.229774635808529,
+        "pitch_deg": 0.04487385942608151,
+        "components": {
+          "pressure": {
+            "mean_body_wrench_N_Nm": [
+              -12.094933895381784,
+              61.93140168902268,
+              15442.909531528296,
+              -71.27941702670813,
+              -105.77574110182891,
+              0.36837100300543607
+            ],
+            "mean_world_vertical_moment_Nm": 5.694518930473198e-14
+          },
+          "hull_drag": {
+            "mean_body_wrench_N_Nm": [
+              864.7897502038276,
+              -0.5983234006172927,
+              2.111618191981441,
+              -0.2926664890962373,
+              -423.2716136657774,
+              -0.4808560392537692
+            ],
+            "mean_world_vertical_moment_Nm": -2.178074021338471
+          },
+          "added_mass": {
+            "mean_body_wrench_N_Nm": [
+              6.732262361749327e-05,
+              0.03720932170490507,
+              -0.0001491382107913678,
+              0.018218656351282198,
+              0.49708052258581453,
+              0.3072176213376177
+            ],
+            "mean_world_vertical_moment_Nm": 0.30919423584782346
+          },
+          "air": {
+            "mean_body_wrench_N_Nm": [
+              2.154451717749414,
+              -2.254523035090475e-06,
+              2.710505431213761e-20,
+              2.3351849606197073e-08,
+              0.022315333094235862,
+              -1.2679422103208395e-06
+            ],
+            "mean_world_vertical_moment_Nm": 8.822349712891628e-05
+          },
+          "thrust": {
+            "mean_body_wrench_N_Nm": [
+              -880.9046307733234,
+              -9.291845322713839e-05,
+              -4.2866944561915767e-16,
+              -5.878413731588397e-05,
+              557.2974686646835,
+              0.0002843135575028075
+            ],
+            "mean_world_vertical_moment_Nm": 2.235221057189827
+          },
+          "water_couple": {
+            "mean_body_wrench_N_Nm": [
+              0.0,
+              0.0,
+              0.0,
+              71.69643619434595,
+              7.5625916093239534e-06,
+              3.638100623229137e-17
+            ],
+            "mean_world_vertical_moment_Nm": -0.05615236863384922
+          },
+          "appendages": {
+            "mean_body_wrench_N_Nm": [
+              6.710147914921833,
+              -0.008834116604120998,
+              2.620155250173302e-19,
+              -0.004234980322258168,
+              -3.9075503855914544,
+              0.026922603332877423
+            ],
+            "mean_world_vertical_moment_Nm": 0.011255199393518689
+          },
+          "stabilizer_lift_drag_buoyancy": {
+            "mean_body_wrench_N_Nm": [
+              7.2334294789937115,
+              -0.20342499976974235,
+              18.778878535718164,
+              -0.1383148914017486,
+              -24.865353052865835,
+              -0.21615179181237162
+            ],
+            "mean_world_vertical_moment_Nm": -0.3157594822046852
+          }
+        },
+        "total_external_world_vertical_moment_Nm": 0.005772843751349946,
+        "note": "Gravity has zero resultant moment about whole-vessel COM; joint motor/servo torques are internal. Water-couple overrides are diagnostic counter-couples, not physical propulsion modes."
+      }
+    }
+  },
+  "recovery_60_left": {
+    "before": {
+      "approach": {
+        "window_sim_s": [
+          86.424,
+          101.248
+        ],
+        "yaw_rate_deg_s": 0.41761022955224536,
+        "speed_km_h": -6.781616572082385,
+        "roll_deg": 0.19771942742214899,
+        "pitch_deg": 0.03710497032404128,
+        "components": {
+          "pressure": {
+            "mean_body_wrench_N_Nm": [
+              -9.98048437539919,
+              53.182402433381924,
+              15411.30857641802,
+              -61.213063946872985,
+              -127.0286776069426,
+              0.39871712732119513
+            ],
+            "mean_world_vertical_moment_Nm": -3.124468276697693e-14
+          },
+          "hull_drag": {
+            "mean_body_wrench_N_Nm": [
+              870.1279896548898,
+              -20.850734233101797,
+              1.8951581258959338,
+              -10.249646928375476,
+              -427.88494402165156,
+              -14.550325018472396
+            ],
+            "mean_world_vertical_moment_Nm": -16.02016335403912
+          },
+          "added_mass": {
+            "mean_body_wrench_N_Nm": [
+              0.05393867528022663,
+              0.9274991071815628,
+              -0.003162039596121829,
+              0.4562038564039646,
+              0.42167415926083435,
+              10.01119683901874
+            ],
+            "mean_world_vertical_moment_Nm": 10.012294837094675
+          },
+          "air": {
+            "mean_body_wrench_N_Nm": [
+              2.1735105749076578,
+              -0.002179132107159654,
+              1.264902534566422e-19,
+              1.77212792372776e-05,
+              0.017675563448660784,
+              -0.0012335095739694887
+            ],
+            "mean_world_vertical_moment_Nm": -0.0011725177726062612
+          },
+          "thrust": {
+            "mean_body_wrench_N_Nm": [
+              -879.4643216228264,
+              -0.001387245466040965,
+              -3.0469454120268183e-15,
+              -0.0008807173965117555,
+              558.3435279664536,
+              0.0042398619387503745
+            ],
+            "mean_world_vertical_moment_Nm": 1.9309987137245335
+          },
+          "water_couple": {
+            "mean_body_wrench_N_Nm": [
+              0.0,
+              0.0,
+              0.0,
+              71.69643620297585,
+              0.00011309226590320437,
+              2.4734265561635976e-16
+            ],
+            "mean_world_vertical_moment_Nm": -0.04643049801642148
+          },
+          "appendages": {
+            "mean_body_wrench_N_Nm": [
+              6.766922888066901,
+              -1.4138964772022915,
+              7.107547575182751e-19,
+              -0.6906659316169702,
+              -3.955902201895177,
+              4.305300170359718
+            ],
+            "mean_world_vertical_moment_Nm": 4.292069698507591
+          }
+        },
+        "total_external_world_vertical_moment_Nm": 0.16759687949861876,
+        "note": "Gravity has zero resultant moment about whole-vessel COM; joint motor/servo torques are internal. Water-couple overrides are diagnostic counter-couples, not physical propulsion modes."
+      },
+      "recover": {
+        "window_sim_s": [
+          148.516,
+          163.336
+        ],
+        "yaw_rate_deg_s": 0.48212689862540126,
+        "speed_km_h": -6.781071985036897,
+        "roll_deg": 0.1917350255238026,
+        "pitch_deg": 0.037130756226299716,
+        "components": {
+          "pressure": {
+            "mean_body_wrench_N_Nm": [
+              -9.987414447904435,
+              51.57269920753418,
+              15411.305075765393,
+              -59.3602352315734,
+              -127.11313607315778,
+              0.3869049914214872
+            ],
+            "mean_world_vertical_moment_Nm": -6.954275118727556e-14
+          },
+          "hull_drag": {
+            "mean_body_wrench_N_Nm": [
+              870.0064268658693,
+              -24.569206596977835,
+              1.9149913373534264,
+              -12.082400036481523,
+              -427.8285832212637,
+              -17.244267438768023
+            ],
+            "mean_world_vertical_moment_Nm": -18.668023086231514
+          },
+          "added_mass": {
+            "mean_body_wrench_N_Nm": [
+              0.0731031549792244,
+              1.1390911521143023,
+              -0.0037677235950188998,
+              0.5602861375677546,
+              0.4168866970498225,
+              11.64443597414472
+            ],
+            "mean_world_vertical_moment_Nm": 11.645400314594784
+          },
+          "air": {
+            "mean_body_wrench_N_Nm": [
+              2.1731580202682097,
+              -0.002939312760563812,
+              4.5175090520229353e-20,
+              2.3903269574389898e-05,
+              0.01767269638099141,
+              -0.0016638267196355668
+            ],
+            "mean_world_vertical_moment_Nm": -0.0016046926222405863
+          },
+          "thrust": {
+            "mean_body_wrench_N_Nm": [
+              -879.4905155123519,
+              0.0013049542310419326,
+              -7.233411400717512e-15,
+              0.0008284733459716796,
+              558.3601576219485,
+              -0.003988353837533455
+            ],
+            "mean_world_vertical_moment_Nm": 1.8645078442488798
+          },
+          "water_couple": {
+            "mean_body_wrench_N_Nm": [
+              0.0,
+              0.0,
+              0.0,
+              71.69643617784781,
+              -0.00010638032534106124,
+              5.882640054090239e-16
+            ],
+            "mean_world_vertical_moment_Nm": -0.04646351110224453
+          },
+          "appendages": {
+            "mean_body_wrench_N_Nm": [
+              6.764615844317823,
+              -1.6662158281990485,
+              6.746146851020917e-19,
+              -0.8139747461885205,
+              -3.954702124885129,
+              5.073617013088547
+            ],
+            "mean_world_vertical_moment_Nm": 5.060881023351003
+          }
+        },
+        "total_external_world_vertical_moment_Nm": -0.1453021077614022,
+        "note": "Gravity has zero resultant moment about whole-vessel COM; joint motor/servo torques are internal. Water-couple overrides are diagnostic counter-couples, not physical propulsion modes."
+      }
+    },
+    "candidate3": {
+      "approach": {
+        "window_sim_s": [
+          86.324,
+          101.144
+        ],
+        "yaw_rate_deg_s": 0.017160590670723123,
+        "speed_km_h": -6.751775054538545,
+        "roll_deg": 0.22972433554906319,
+        "pitch_deg": 0.044873907843725844,
+        "components": {
+          "pressure": {
+            "mean_body_wrench_N_Nm": [
+              -12.094946899110575,
+              61.91784404189817,
+              15442.909526684916,
+              -71.26381031544432,
+              -105.77587259864768,
+              0.36829083091741055
+            ],
+            "mean_world_vertical_moment_Nm": 7.262708952756233e-16
+          },
+          "hull_drag": {
+            "mean_body_wrench_N_Nm": [
+              864.7897189370192,
+              -0.6182989886619418,
+              2.111798279254591,
+              -0.3025534430946967,
+              -423.27162907217894,
+              -0.49296574722979764
+            ],
+            "mean_world_vertical_moment_Nm": -2.1898043588107723
+          },
+          "added_mass": {
+            "mean_body_wrench_N_Nm": [
+              7.16153914495933e-05,
+              0.03932060134884718,
+              -0.00015759838727851097,
+              0.019253026597668414,
+              0.49712091678261605,
+              0.3177660363293182
+            ],
+            "mean_world_vertical_moment_Nm": 0.31974147933968466
+          },
+          "air": {
+            "mean_body_wrench_N_Nm": [
+              2.1544516037099672,
+              -2.400438723144889e-06,
+              -1.0258510138968748e-20,
+              2.4863211942978007e-08,
+              0.022315331913040495,
+              -1.3503969983776832e-06
+            ],
+            "mean_world_vertical_moment_Nm": 8.812144652229354e-05
+          },
+          "thrust": {
+            "mean_body_wrench_N_Nm": [
+              -880.9046362873648,
+              -1.8737757499279695e-09,
+              -1.855190384030752e-17,
+              -1.1854300480260746e-09,
+              557.2974721530994,
+              5.756976092281307e-09
+            ],
+            "mean_world_vertical_moment_Nm": 2.2344474694811165
+          },
+          "water_couple": {
+            "mean_body_wrench_N_Nm": [
+              0.0,
+              0.0,
+              0.0,
+              71.69643619217662,
+              1.5250581326178323e-10,
+              1.831097002419963e-18
+            ],
+            "mean_world_vertical_moment_Nm": -0.056152459549440245
+          },
+          "appendages": {
+            "mean_body_wrench_N_Nm": [
+              6.71014761117287,
+              -0.010607460055227306,
+              -1.2498441710596786e-19,
+              -0.005098232914755117,
+              -3.9075502210932473,
+              0.032328726553169596
+            ],
+            "mean_world_vertical_moment_Nm": 0.016665384779373175
+          },
+          "stabilizer_lift_drag_buoyancy": {
+            "mean_body_wrench_N_Nm": [
+              7.233425436479373,
+              -0.21213280136226967,
+              18.778878601816317,
+              -0.14422754598390525,
+              -24.865350378224075,
+              -0.2254043771940115
+            ],
+            "mean_world_vertical_moment_Nm": -0.32498552027137984
+          }
+        },
+        "total_external_world_vertical_moment_Nm": 1.1641510456466273e-07,
+        "note": "Gravity has zero resultant moment about whole-vessel COM; joint motor/servo torques are internal. Water-couple overrides are diagnostic counter-couples, not physical propulsion modes."
+      },
+      "recover": {
+        "window_sim_s": [
+          148.412,
+          163.236
+        ],
+        "yaw_rate_deg_s": 0.017474071539370674,
+        "speed_km_h": -6.7517749388034956,
+        "roll_deg": 0.22968142453468796,
+        "pitch_deg": 0.044873949344195925,
+        "components": {
+          "pressure": {
+            "mean_body_wrench_N_Nm": [
+              -12.094958045308545,
+              61.90627805040692,
+              15442.909522611815,
+              -71.25049626255759,
+              -105.77598546977077,
+              0.3682224386373305
+            ],
+            "mean_world_vertical_moment_Nm": -3.707258265804746e-14
+          },
+          "hull_drag": {
+            "mean_body_wrench_N_Nm": [
+              864.7896910295025,
+              -0.6353423442673118,
+              2.1119517984376106,
+              -0.3109891740586313,
+              -423.2716416074464,
+              -0.5032987337888004
+            ],
+            "mean_world_vertical_moment_Nm": -2.1998137020761295
+          },
+          "added_mass": {
+            "mean_body_wrench_N_Nm": [
+              7.543107803082558e-05,
+              0.0411223641853601,
+              -0.0001648128846806399,
+              0.02013575843882103,
+              0.4971552728409865,
+              0.3267638890765379
+            ],
+            "mean_world_vertical_moment_Nm": 0.328738332030263
+          },
+          "air": {
+            "mean_body_wrench_N_Nm": [
+              2.1544515028773983,
+              -2.530050998991401e-06,
+              1.5208947141810547e-19,
+              2.620570715158798e-08,
+              0.02231533086863915,
+              -1.4236274540285694e-06
+            ],
+            "mean_world_vertical_moment_Nm": 8.803149876401041e-05
+          },
+          "thrust": {
+            "mean_body_wrench_N_Nm": [
+              -880.9046412597671,
+              7.962772697186112e-05,
+              -5.466306419855805e-16,
+              5.0375862635448294e-05,
+              557.2974752988508,
+              -0.0002436463116264182
+            ],
+            "mean_world_vertical_moment_Nm": 2.233786414554303
+          },
+          "water_couple": {
+            "mean_body_wrench_N_Nm": [
+              0.0,
+              0.0,
+              0.0,
+              71.69643619031818,
+              -6.4808651979912495e-06,
+              4.452456921673805e-17
+            ],
+            "mean_world_vertical_moment_Nm": -0.05615253745750475
+          },
+          "appendages": {
+            "mean_body_wrench_N_Nm": [
+              6.710147329554399,
+              -0.012120519882346796,
+              3.3730734255104583e-19,
+              -0.005834782116740511,
+              -3.9075500690318288,
+              0.03694136270167488
+            ],
+            "mean_world_vertical_moment_Nm": 0.021281486521878678
+          },
+          "stabilizer_lift_drag_buoyancy": {
+            "mean_body_wrench_N_Nm": [
+              7.23342184620067,
+              -0.219560309875925,
+              18.778878658188276,
+              -0.14927087312263956,
+              -24.86534800031559,
+              -0.23329657087898154
+            ],
+            "mean_world_vertical_moment_Nm": -0.3328550667855332
+          }
+        },
+        "total_external_world_vertical_moment_Nm": -0.004927041713995651,
+        "note": "Gravity has zero resultant moment about whole-vessel COM; joint motor/servo torques are internal. Water-couple overrides are diagnostic counter-couples, not physical propulsion modes."
+      }
+    }
+  }
+}

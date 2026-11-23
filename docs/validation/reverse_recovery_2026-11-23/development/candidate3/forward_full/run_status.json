@@ -1,0 +1,21 @@
+{
+  "case": "forward_full",
+  "spec": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "wave_gain": 0,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "duration": 100,
+        "throttle": 1,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "finished_stages": 1,
+  "start_sim": 1.236,
+  "failure": null,
+  "bridge_resumed": false
+}

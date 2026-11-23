@@ -1,0 +1,14 @@
+Internal ctest changing into directory: /home/yh/Project/usv-experimental-6m/artifacts/validation/supervisor/20261123T024645Z-1d7c0f09/cpp-mutation/workspace/.build
+Test project /home/yh/Project/usv-experimental-6m/artifacts/validation/supervisor/20261123T024645Z-1d7c0f09/cpp-mutation/workspace/.build
+    Start 1: steering_integral
+1/1 Test #1: steering_integral ................Subprocess aborted***Exception:   1.09 sec
+test_steering_integral: /home/yh/Project/usv-experimental-6m/artifacts/validation/supervisor/20261123T024645Z-1d7c0f09/cpp-mutation/workspace/ros_ws/src/usv_simulation/tests/test_steering_integral.cc:47: int main(): Assertion `std::abs(x) < 1e-6' failed.
+
+
+0% tests passed, 1 tests failed out of 1
+
+Total Test time (real) =   1.09 sec
+
+The following tests FAILED:
+	  1 - steering_integral (Subprocess aborted)
+Errors while running CTest

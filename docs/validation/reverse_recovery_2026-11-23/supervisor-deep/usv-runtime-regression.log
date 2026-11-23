@@ -1,0 +1,228 @@
+PBR assets current
+{
+  "profile": "ENGINEERING_ESTIMATE_NOT_MEASURED",
+  "sealed_envelope_watertight": true,
+  "max_source_vertex_distance_m": 6.967255752501893e-08,
+  "sealed_envelope_volume_m3": 8.358237950000001,
+  "triangles": 106,
+  "total_trial_mass_kg": 1230.7805718688016,
+  "trial_total_cg_m": [
+    -0.6526744218511645,
+    -2.886185907601686e-18,
+    0.493518971415728
+  ],
+  "equilibrium_pose_z_roll_pitch": [
+    -0.2143194780499318,
+    2.1495369417028438e-17,
+    -0.002598950608264182
+  ],
+  "displaced_volume_m3": 1.2307805718688016,
+  "residual": [
+    -1.27675647831893e-13,
+    2.950972799453666e-12,
+    -3.2312561178749463e-17
+  ],
+  "roll_pitch_restoring_stiffness_Nm_rad": [
+    17564.60798608533,
+    174868.11342863704
+  ],
+  "limitations": [
+    "station envelope sealed deck; no flooding",
+    "appendage displacement omitted",
+    "estimated aggregate/mesh inertia; no measured mass distribution",
+    "linear/quadratic damping uncalibrated; constant diagonal added mass trial; VRX distributed hull pressure and deep-water orbital flow; relative current/wind enabled",
+    "propulsion and energy are engineering proxies; fuel inertia uses a quasi-static unbaffled box tank"
+  ]
+}
+Starting >>> vrx_gazebo
+Starting >>> usv_description
+Finished <<< usv_description [0.06s]
+Starting >>> vrx_ros
+Finished <<< vrx_ros [0.07s]
+Starting >>> usv_energy
+Finished <<< usv_energy [0.07s]
+Starting >>> usv_physics
+Finished <<< usv_physics [0.08s]
+Starting >>> usv_control
+Finished <<< vrx_gazebo [0.30s]
+Starting >>> wamv_description
+Finished <<< wamv_description [0.07s]
+Starting >>> wamv_gazebo
+Finished <<< wamv_gazebo [0.05s]
+Starting >>> vrx_gz
+Finished <<< usv_control [0.33s]
+Starting >>> usv_ardupilot
+Finished <<< usv_ardupilot [0.05s]
+Finished <<< vrx_gz [0.34s]
+Starting >>> usv_simulation
+Finished <<< usv_simulation [0.08s]
+Starting >>> usv_bringup
+Finished <<< usv_bringup [0.06s]
+
+Summary: 12 packages finished [1.00s]
+运行时证据：/home/yh/Project/usv-experimental-6m/artifacts/validation/deep-runtime/20261123T024701Z-ZTegNe
+{
+  "mode": "force",
+  "passed": true,
+  "samples": 225,
+  "checks": {
+    "force_or_torque_response": true,
+    "native_readback": true,
+    "no_velocity_impulse": true,
+    "finite": true
+  },
+  "measured_accelerations": [
+    0.9999999999999405,
+    1.99999999999978
+  ],
+  "expected_accelerations": [
+    1,
+    2
+  ],
+  "boundary_velocity_step": 0.039999999999995595
+}
+{
+  "mode": "torque",
+  "passed": true,
+  "samples": 225,
+  "checks": {
+    "force_or_torque_response": true,
+    "native_readback": true,
+    "no_velocity_impulse": true,
+    "finite": true
+  },
+  "measured_accelerations": [
+    0.33333333333334075,
+    0.6666666666665967
+  ],
+  "expected_accelerations": [
+    0.3333333333333333,
+    0.6666666666666666
+  ],
+  "boundary_velocity_step": 0.013333333333334085
+}
+{
+  "case": "forward",
+  "passed": true,
+  "samples": 391,
+  "checks": {
+    "coast_slowdown": true,
+    "finite": true,
+    "power_limited": true,
+    "torque_limited": true,
+    "attitude_bounded": true,
+    "watchdog_off": true,
+    "motion_direction": true
+  },
+  "driven_speed_m_s": 1.324158023366974,
+  "driven_yaw_deg": 0.019633971584662922,
+  "max_abs_power_W": 2479.953377568203,
+  "final_speed_m_s": 0.24201812625546573,
+  "max_abs_roll_pitch_deg": [
+    0.06623281108052397,
+    0.24789922139645568
+  ],
+  "final_sim_s": 40.036
+}
+{
+  "case": "reverse",
+  "passed": true,
+  "samples": 391,
+  "checks": {
+    "coast_slowdown": true,
+    "finite": true,
+    "power_limited": true,
+    "torque_limited": true,
+    "attitude_bounded": true,
+    "watchdog_off": true,
+    "motion_direction": true
+  },
+  "driven_speed_m_s": -1.0283327031373448,
+  "driven_yaw_deg": 0.07823627943843484,
+  "max_abs_power_W": 2479.9533679737106,
+  "final_speed_m_s": -0.2132277576309708,
+  "max_abs_roll_pitch_deg": [
+    0.06581279138419886,
+    0.232675172186172
+  ],
+  "final_sim_s": 40.036
+}
+{
+  "case": "left",
+  "passed": true,
+  "samples": 391,
+  "driven_steering_deg": -20.000028379754962,
+  "checks": {
+    "coast_slowdown": true,
+    "finite": true,
+    "power_limited": true,
+    "torque_limited": true,
+    "attitude_bounded": true,
+    "watchdog_off": true,
+    "motion_direction": true,
+    "steering_tracks": true,
+    "turn_direction": true
+  },
+  "driven_speed_m_s": 1.1545538070063592,
+  "driven_yaw_deg": 213.94671108424862,
+  "max_abs_power_W": 2479.9534140188075,
+  "final_speed_m_s": 0.2137247955150147,
+  "max_abs_roll_pitch_deg": [
+    0.6239936685399257,
+    0.237945634239594
+  ],
+  "final_sim_s": 40.036
+}
+{
+  "case": "right",
+  "passed": true,
+  "samples": 391,
+  "driven_steering_deg": 20.000029411219227,
+  "checks": {
+    "coast_slowdown": true,
+    "finite": true,
+    "power_limited": true,
+    "torque_limited": true,
+    "attitude_bounded": true,
+    "watchdog_off": true,
+    "motion_direction": true,
+    "steering_tracks": true,
+    "turn_direction": true
+  },
+  "driven_speed_m_s": 1.1546806155808425,
+  "driven_yaw_deg": -213.81045861963258,
+  "max_abs_power_W": 2479.9534109499427,
+  "final_speed_m_s": 0.21404292445008394,
+  "max_abs_roll_pitch_deg": [
+    0.5562037045261683,
+    0.2418340876509154
+  ],
+  "final_sim_s": 40.036
+}
+{
+  "case": "reversal",
+  "passed": true,
+  "samples": 391,
+  "reverse_rpm_delay_s": 0.5239999999999991,
+  "reverse_motion_delay_s": 4.216000000000001,
+  "checks": {
+    "coast_slowdown": true,
+    "finite": true,
+    "power_limited": true,
+    "torque_limited": true,
+    "attitude_bounded": true,
+    "watchdog_off": true,
+    "motion_direction": true,
+    "both_directions": true,
+    "finite_reversal_delay": true
+  },
+  "driven_speed_m_s": -0.9165785384706495,
+  "driven_yaw_deg": 0.07155724168892466,
+  "max_abs_power_W": 2479.953539782408,
+  "final_speed_m_s": -0.2093961776003073,
+  "max_abs_roll_pitch_deg": [
+    0.06879453001429511,
+    0.24783860399966023
+  ],
+  "final_sim_s": 40.036
+}

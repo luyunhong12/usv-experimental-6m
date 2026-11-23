@@ -16,6 +16,45 @@ spec.loader.exec_module(m)
 class ManeuverMetricsTest(unittest.TestCase):
     """验证本模块的解析不变量与失败条件。"""
 
+    def test_force_audit_requires_fin_and_respects_stage(self):
+        """新鳍遥测缺失必须失败，短阶段不得混入前一阶段力矩。"""
+        import json
+        import tempfile
+
+        module_spec = importlib.util.spec_from_file_location(
+            "force_audit", ROOT / "tools/analysis/analyze_force_audit.py"
+        )
+        audit = importlib.util.module_from_spec(module_spec)
+        module_spec.loader.exec_module(audit)
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp)
+            (folder / "boat.sdf").write_text(
+                '<sdf><model><plugin name="usv::PassiveStabilizer"/></model></sdf>'
+            )
+            (folder / "stages.json").write_text(
+                json.dumps(
+                    [dict(start_sim=0, end_sim=18), dict(start_sim=18, end_sim=20)]
+                )
+            )
+            trace = np.zeros((201, 17))
+            trace[:, 0] = np.linspace(0, 20, 201)
+            trace[:, 14] = np.maximum(trace[:, 0] - 18, 0)
+            np.savetxt(folder / "propulsion_state.csv", trace, delimiter=",")
+            for name, columns in [("audit_hull", 28), ("audit_propulsion", 16)]:
+                values = np.zeros((201, columns))
+                values[:, 0] = trace[:, 0]
+                np.savetxt(folder / (name + ".csv"), values, delimiter=",")
+            with self.assertRaises(FileNotFoundError):
+                audit.analyze(folder, -1)
+            fin = np.zeros((201, 10))
+            fin[:, 0] = trace[:, 0]
+            fin[:, 9] = np.where(trace[:, 0] >= 18, 7, -100)
+            np.savetxt(folder / "stabilizer_audit_appendages.csv", fin, delimiter=",")
+            result = audit.analyze(folder, -1)
+            self.assertAlmostEqual(result["total_external_world_vertical_moment_Nm"], 7)
+            self.assertAlmostEqual(result["yaw_rate_deg_s"], np.degrees(1))
+            self.assertGreater(result["window_sim_s"][0], 18)
+
     def test_environment_rejects_missing_motion_and_dry_propeller(self):
         """有波高而无升沉不能通过，推进器浸水不足也必须被识别。"""
         import tempfile

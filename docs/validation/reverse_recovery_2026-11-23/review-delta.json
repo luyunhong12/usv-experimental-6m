@@ -1,0 +1,20 @@
+{
+  "runtime_source_commit": "a7b27a2",
+  "deep_source_unchanged": true,
+  "changes_after_deep": {
+    "tests/integration/validate_contact_directions.py": {
+      "deep_sha256": "81887d06a6c798e7360911984af34354a78990c7701dcc58f9f4bdb738fcdf66",
+      "current_sha256": "bbdce852fbc355d5f6b8fb85d01f13b75e5cd8e339f27623c6a4102a8933af51"
+    },
+    "tests/unit/test_maneuver_metrics.py": {
+      "deep_sha256": "da9ef04597576212b8086da6b3f8a5c5e883bd67fa212169ce80c98e5326a9ef",
+      "current_sha256": "69bfa621036aa282b8b343485fd3a65c453cb560f188025f5b80aac8391d0bbf"
+    },
+    "tools/analysis/analyze_force_audit.py": {
+      "deep_sha256": "f9c388a55cdce3c88dd70ab33a0613afe945877100491ee0f3b6fee53f5a44e9",
+      "current_sha256": "8067bf81d3ae0fbf2f0388d9b0b3f3b0e56cd41f2f732ac2a274e2dd113e31de"
+    }
+  },
+  "explanation": "Deck probe moved to clear deck; force-audit tool now rejects missing declared fin data and clips stage windows; one independent regression test added. Production native physics and 44-case runtime inputs unchanged. Final full reruns build/tests; deep advanced checks apply to unchanged native production code. Unrelated prior preview changes excluded from commits.",
+  "full_report": "supervisor-full/report.json"
+}

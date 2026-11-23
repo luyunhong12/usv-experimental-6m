@@ -1,0 +1,150 @@
+[INFO] [launch]: All log files can be found below /home/yh/Project/usv-experimental-6m/ros_ws/log/hull-runtime/2026-11-23-10-35-43-405089-yh-cp-114584
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [gazebo-1]: process started with pid [114829]
+[INFO] [monitor_sim-2]: process started with pid [114830]
+[gazebo-1] [1;32m[Msg] [0m[1;32mGazebo Sim Server v[0m[1;32m8.15.0[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mLoading SDF world file[[0m[1;32m/home/yh/Project/usv-experimental-6m/artifacts/reverse_recovery_2026-11-23/candidate/recovery_60_right/world.sdf[0m[1;32m].[0m
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="usv"]/link[@name="hull"]/sensor[@name="imu"]/gz_frame_id:/home/yh/Project/usv-experimental-6m/artifacts/reverse_recovery_2026-11-23/candidate/recovery_60_right/boat.sdf:L1318]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="usv"]/link[@name="hull"]/sensor[@name="gps"]/gz_frame_id:/home/yh/Project/usv-experimental-6m/artifacts/reverse_recovery_2026-11-23/candidate/recovery_60_right/boat.sdf:L1371]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="usv"]/link[@name="hull"]/sensor[@name="magnetometer"]/gz_frame_id:/home/yh/Project/usv-experimental-6m/artifacts/reverse_recovery_2026-11-23/candidate/recovery_60_right/boat.sdf:L1408]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;32m[Msg] [0m[1;32mServing entity system service on [[0m[1;32m/[0m[1;32mentity/system/add[0m[1;32m][0m[1;32m[0m
+[gazebo-1] [1;36m[Dbg] [Physics.cc:2492] [0m[1;36mLoaded [[0m[1;36mgz::physics::dartsim::Plugin[0m[1;36m] from library [[0m[1;36m/opt/ros/jazzy/opt/gz_physics_vendor/lib/gz-physics-7/engine-plugins/libgz-physics-dartsim-plugin.so[0m[1;36m][0m[1;36m[0m
+[gazebo-1] [1;36m[Dbg] [SystemManager.cc:80] [0m[1;36mLoaded system [[0m[1;36mgz::sim::systems::Physics[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mCreate[0m[1;32m service on [[0m[1;32m/world/usv_sydney/create_multiple[0m[1;32m] (async)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mCreate[0m[1;32m service on [[0m[1;32m/world/usv_sydney/create_multiple/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mRemove[0m[1;32m service on [[0m[1;32m/world/usv_sydney/remove[0m[1;32m] (async)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mRemove[0m[1;32m service on [[0m[1;32m/world/usv_sydney/remove/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mPose[0m[1;32m service on [[0m[1;32m/world/usv_sydney/set_pose[0m[1;32m] (async)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mPose[0m[1;32m service on [[0m[1;32m/world/usv_sydney/set_pose/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mPose[0m[1;32m service on [[0m[1;32m/world/usv_sydney/set_pose_vector[0m[1;32m] (async)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mPose[0m[1;32m service on [[0m[1;32m/world/usv_sydney/set_pose_vector/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mLight configuration[0m[1;32m service on [[0m[1;32m/world/usv_sydney/light_config[0m[1;32m] (async)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mLight configuration[0m[1;32m service on [[0m[1;32m/world/usv_sydney/light_config/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mPhysics[0m[1;32m service on [[0m[1;32m/world/usv_sydney/set_physics[0m[1;32m] (async)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mPhysics[0m[1;32m service on [[0m[1;32m/world/usv_sydney/set_physics/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mSphericalCoordinates[0m[1;32m service on [[0m[1;32m/world/usv_sydney/set_spherical_coordinates[0m[1;32m] (async)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mSphericalCoordinates[0m[1;32m service on [[0m[1;32m/world/usv_sydney/set_spherical_coordinates/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mEnable collision[0m[1;32m service on [[0m[1;32m/world/usv_sydney/enable_collision[0m[1;32m] (async)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mEnable collision[0m[1;32m service on [[0m[1;32m/world/usv_sydney/enable_collision/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mDisable collision[0m[1;32m service on [[0m[1;32m/world/usv_sydney/disable_collision[0m[1;32m] (async)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mDisable collision[0m[1;32m service on [[0m[1;32m/world/usv_sydney/disable_collision/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mMaterial[0m[1;32m service on [[0m[1;32m/world/usv_sydney/visual_config[0m[1;32m] (async)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mMaterial[0m[1;32m service on [[0m[1;32m/world/usv_sydney/visual_config/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mMaterial[0m[1;32m service on [[0m[1;32m/world/usv_sydney/wheel_slip[0m[1;32m] (async)[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mMaterial[0m[1;32m service on [[0m[1;32m/world/usv_sydney/wheel_slip/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gazebo-1] [1;36m[Dbg] [SystemManager.cc:80] [0m[1;36mLoaded system [[0m[1;36mgz::sim::systems::UserCommands[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[gazebo-1] [1;36m[Dbg] [Sensors.cc:697] [0m[1;36mConfiguring Sensors system[0m[1;36m[0m
+[gazebo-1] [1;36m[Dbg] [Sensors.cc:557] [0m[1;36mSensorsPrivate::Run[0m[1;36m[0m
+[gazebo-1] [1;36m[Dbg] [SystemManager.cc:80] [0m[1;36mLoaded system [[0m[1;36mgz::sim::systems::Sensors[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[gazebo-1] [1;36m[Dbg] [Sensors.cc:532] [0m[1;36mSensorsPrivate::RenderThread started[0m[1;36m[0m
+[gazebo-1] [1;36m[Dbg] [Sensors.cc:337] [0m[1;36mWaiting for init[0m[1;36m[0m
+[gazebo-1] [1;36m[Dbg] [SystemManager.cc:80] [0m[1;36mLoaded system [[0m[1;36mgz::sim::systems::Imu[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[gazebo-1] [1;36m[Dbg] [Magnetometer.cc:261] [0m[1;36mMagnetometer: using param [use_units_gauss: [0m[1;36m1[0m[1;36m].[0m[1;36m[0m
+[gazebo-1] [1;36m[Dbg] [Magnetometer.cc:269] [0m[1;36mMagnetometer: using param [use_earth_frame_ned: [0m[1;36m1[0m[1;36m].[0m[1;36m[0m
+[gazebo-1] [1;36m[Dbg] [SystemManager.cc:80] [0m[1;36mLoaded system [[0m[1;36mgz::sim::systems::Magnetometer[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[gazebo-1] [1;36m[Dbg] [SystemManager.cc:80] [0m[1;36mLoaded system [[0m[1;36mgz::sim::systems::ForceTorque[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mServing particle emitter information on [[0m[1;32m/world/usv_sydney/particle_emitters[0m[1;32m][0m[1;32m[0m
+[gazebo-1] [1;36m[Dbg] [SystemManager.cc:80] [0m[1;36mLoaded system [[0m[1;36mgz::sim::systems::ParticleEmitter[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[gazebo-1] [1;36m[Dbg] [SystemManager.cc:80] [0m[1;36mLoaded system [[0m[1;36mgz::sim::systems::SceneBroadcaster[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[gazebo-1] [1;36m[Dbg] [SystemManager.cc:80] [0m[1;36mLoaded system [[0m[1;36mgz::sim::systems::Contact[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[gazebo-1] [1;36m[Dbg] [SystemManager.cc:80] [0m[1;36mLoaded system [[0m[1;36mgz::sim::systems::NavSat[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[gazebo-1] [1;36m[Dbg] [SystemManager.cc:80] [0m[1;36mLoaded system [[0m[1;36mvrx::PublisherPlugin[0m[1;36m] for entity [[0m[1;36m1[0m[1;36m][0m[1;36m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mInput Parameters:[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mmodel:     [0m[1;32mPMS[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mnumber:     [0m[1;32m3[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mscale:      [0m[1;32m1.1[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mangle:      [0m[1;32m0.4[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32msteepness:  [0m[1;32m0[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mamplitude:  [0m[1;32m0[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mperiod:     [0m[1;32m5[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mdirection:  [0m[1;32m0[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mtau:  [0m[1;32m2[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mgain:  [0m[1;32m0[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mDerived Parameters:[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mamplitudes:  [0m[1;32m0[0m[1;32m, [0m[1;32m0[0m[1;32m, [0m[1;32m0[0m[1;32m, [0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mwavenumbers: [0m[1;32m0.133171[0m[1;32m, [0m[1;32m0.161136[0m[1;32m, [0m[1;32m0.194975[0m[1;32m, [0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32momegas:      [0m[1;32m1.1424[0m[1;32m, [0m[1;32m1.25664[0m[1;32m, [0m[1;32m1.3823[0m[1;32m, [0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mperiods:     [0m[1;32m[Msg] [0m[1;32m5.5[0m[1;32m, [0m[1;32m[Msg] [0m[1;32m5[0m[1;32m, [0m[1;32m[Msg] [0m[1;32m4.54545[0m[1;32m, [0m[1;32m[Msg] [0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mphases:      [0m[1;32m0[0m[1;32m, [0m[1;32m0[0m[1;32m, [0m[1;32m0[0m[1;32m, [0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32msteepnesses: [0m[1;32m0[0m[1;32m, [0m[1;32m0[0m[1;32m, [0m[1;32m0[0m[1;32m, [0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mdirections:  [0m[1;32m[Msg] [0m[1;32m0.921061[0m[1;32m [0m[1;32m-0.389418[0m[1;32m; [0m[1;32m[Msg] [0m[1;32m1[0m[1;32m [0m[1;32m0[0m[1;32m; [0m[1;32m[Msg] [0m[1;32m0.921061[0m[1;32m [0m[1;32m0.389418[0m[1;32m; [0m[1;32m[Msg] [0m[1;32m[0m
+[gazebo-1] [1;36m[Dbg] [SystemManager.cc:80] [0m[1;36mLoaded system [[0m[1;36mvrx::WaveVisual[0m[1;36m] for entity [[0m[1;36m6[0m[1;36m][0m[1;36m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mInput Parameters:[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mmodel:     [0m[1;32mPMS[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mnumber:     [0m[1;32m3[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mscale:      [0m[1;32m1.1[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mangle:      [0m[1;32m0.4[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32msteepness:  [0m[1;32m0[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mamplitude:  [0m[1;32m0[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mperiod:     [0m[1;32m5[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mdirection:  [0m[1;32m0[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mtau:  [0m[1;32m2[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mgain:  [0m[1;32m0[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mDerived Parameters:[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mamplitudes:  [0m[1;32m0[0m[1;32m, [0m[1;32m0[0m[1;32m, [0m[1;32m0[0m[1;32m, [0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mwavenumbers: [0m[1;32m0.133171[0m[1;32m, [0m[1;32m0.161136[0m[1;32m, [0m[1;32m0.194975[0m[1;32m, [0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32momegas:      [0m[1;32m1.1424[0m[1;32m, [0m[1;32m1.25664[0m[1;32m, [0m[1;32m1.3823[0m[1;32m, [0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mperiods:     [0m[1;32m[Msg] [0m[1;32m5.5[0m[1;32m, [0m[1;32m[Msg] [0m[1;32m5[0m[1;32m, [0m[1;32m[Msg] [0m[1;32m4.54545[0m[1;32m, [0m[1;32m[Msg] [0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mphases:      [0m[1;32m0[0m[1;32m, [0m[1;32m0[0m[1;32m, [0m[1;32m0[0m[1;32m, [0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32msteepnesses: [0m[1;32m0[0m[1;32m, [0m[1;32m0[0m[1;32m, [0m[1;32m0[0m[1;32m, [0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mdirections:  [0m[1;32m[Msg] [0m[1;32m0.921061[0m[1;32m [0m[1;32m-0.389418[0m[1;32m; [0m[1;32m[Msg] [0m[1;32m1[0m[1;32m [0m[1;32m0[0m[1;32m; [0m[1;32m[Msg] [0m[1;32m0.921061[0m[1;32m [0m[1;32m0.389418[0m[1;32m; [0m[1;32m[Msg] [0m[1;32m[0m
+[gazebo-1] [1;36m[Dbg] [SystemManager.cc:80] [0m[1;36mLoaded system [[0m[1;36musv::HullHydrostatics[0m[1;36m] for entity [[0m[1;36m7[0m[1;36m][0m[1;36m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mInput Parameters:[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mmodel:     [0m[1;32mPMS[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mnumber:     [0m[1;32m3[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mscale:      [0m[1;32m1.1[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mangle:      [0m[1;32m0.4[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32msteepness:  [0m[1;32m0[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mamplitude:  [0m[1;32m0[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mperiod:     [0m[1;32m5[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mdirection:  [0m[1;32m0[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mtau:  [0m[1;32m2[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mgain:  [0m[1;32m0[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mDerived Parameters:[0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mamplitudes:  [0m[1;32m0[0m[1;32m, [0m[1;32m0[0m[1;32m, [0m[1;32m0[0m[1;32m, [0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mwavenumbers: [0m[1;32m0.133171[0m[1;32m, [0m[1;32m0.161136[0m[1;32m, [0m[1;32m0.194975[0m[1;32m, [0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32momegas:      [0m[1;32m1.1424[0m[1;32m, [0m[1;32m1.25664[0m[1;32m, [0m[1;32m1.3823[0m[1;32m, [0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mperiods:     [0m[1;32m[Msg] [0m[1;32m5.5[0m[1;32m, [0m[1;32m[Msg] [0m[1;32m5[0m[1;32m, [0m[1;32m[Msg] [0m[1;32m4.54545[0m[1;32m, [0m[1;32m[Msg] [0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mphases:      [0m[1;32m0[0m[1;32m, [0m[1;32m0[0m[1;32m, [0m[1;32m0[0m[1;32m, [0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32msteepnesses: [0m[1;32m0[0m[1;32m, [0m[1;32m0[0m[1;32m, [0m[1;32m0[0m[1;32m, [0m[1;32m[0m
+[gazebo-1] [1;32m[Msg] [0m[1;32mdirections:  [0m[1;32m[Msg] [0m[1;32m0.921061[0m[1;32m [0m[1;32m-0.389418[0m[1;32m; [0m[1;32m[Msg] [0m[1;32m1[0m[1;32m [0m[1;32m0[0m[1;32m; [0m[1;32m[Msg] [0m[1;32m0.921061[0m[1;32m [0m[1;32m0.389418[0m[1;32m; [0m[1;32m[Msg] [0m[1;32m[0m
+[gazebo-1] terminate called after throwing an instance of 'std::runtime_error'
+[gazebo-1]   what():  Invalid boat topic_namespace
+[gazebo-1] Stack trace (most recent call last):
+[gazebo-1] #31   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x795ba42b9152, in ruby_run_node
+[gazebo-1] #30   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x795ba42b4e2b, in 
+[gazebo-1] #29   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x795ba4458599, in rb_vm_exec
+[gazebo-1] #28   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x795ba445507b, in 
+[gazebo-1] #27   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x795ba4450b8e, in 
+[gazebo-1] #26   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x795ba444e37f, in 
+[gazebo-1] #25   Object "/usr/lib/x86_64-linux-gnu/ruby/3.2.0/fiddle.so", at 0x795ba4027b13, in 
+[gazebo-1] #24   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x795ba4416dcb, in rb_nogvl
+[gazebo-1] #23   Object "/usr/lib/x86_64-linux-gnu/ruby/3.2.0/fiddle.so", at 0x795ba402743b, in 
+[gazebo-1] #22   Object "/lib/x86_64-linux-gnu/libffi.so.8", at 0x795ba401b0bd, in ffi_call
+[gazebo-1] #21   Object "/lib/x86_64-linux-gnu/libffi.so.8", at 0x795ba40183ee, in 
+[gazebo-1] #20   Object "/lib/x86_64-linux-gnu/libffi.so.8", at 0x795ba401bb15, in 
+[gazebo-1] #19   Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8-gz.so.8.15.0", at 0x795b9e1d458e, in runServer
+[gazebo-1] #18   Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8", at 0x795b9db54e2a, in gz::sim::v8::Server::Server(gz::sim::v8::ServerConfig const&)
+[gazebo-1] #17   Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8", at 0x795b9db64d51, in gz::sim::v8::SimulationRunner::SimulationRunner(sdf::v14::World const&, std::shared_ptr<gz::sim::v8::SystemLoader> const&, gz::sim::v8::ServerConfig const&)
+[gazebo-1] #16   Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8", at 0x795b9db701f3, in gz::sim::v8::SimulationRunner::CreateEntities(sdf::v14::World const&)
+[gazebo-1] #15   Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8", at 0x795b9db2ce81, in gz::sim::v8::SdfEntityCreator::CreateEntities(sdf::v14::World const*, unsigned long)
+[gazebo-1] #14   Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8", at 0x795b9db2b4bf, in gz::sim::v8::SdfEntityCreator::CreateEntities(sdf::v14::Model const*)
+[gazebo-1] #13   Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8", at 0x795b9db29bb8, in gz::sim::v8::SdfEntityCreator::LoadModelPlugins()
+[gazebo-1] #12   Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8", at 0x795b9db3d00a, in 
+[gazebo-1] #11   Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8", at 0x795b9db6ad8c, in gz::sim::v8::SimulationRunner::LoadPlugins(unsigned long, std::vector<sdf::v14::Plugin, std::allocator<sdf::v14::Plugin> > const&)
+[gazebo-1] #10   Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8", at 0x795b9db77402, in gz::sim::v8::SystemManager::LoadPlugin(unsigned long, sdf::v14::Plugin const&)
+[gazebo-1] #9    Object "/opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8", at 0x795b9db76e70, in gz::sim::v8::SystemManager::AddSystemImpl(gz::sim::v8::SystemInternal, std::shared_ptr<sdf::v14::Element const>)
+[gazebo-1] #8    Object "/home/yh/Project/usv-experimental-6m/ros_ws/install/usv_simulation/lib/libUsvAppendageHydrodynamics.so", at 0x795b7a603fd1, in usv::AppendageHydrodynamics::Configure(unsigned long const&, std::shared_ptr<sdf::v14::Element const> const&, gz::sim::v8::EntityComponentManager&, gz::sim::v8::EventManager&)
+[gazebo-1] #7    Object "/home/yh/Project/usv-experimental-6m/ros_ws/install/usv_simulation/lib/libUsvAppendageHydrodynamics.so", at 0x795b7a60149e, in usv::TopicPrefix[abi:cxx11](std::shared_ptr<sdf::v14::Element const> const&)
+[gazebo-1] #6    Object "/lib/x86_64-linux-gnu/libstdc++.so.6", at 0x795b9eabb390, in __cxa_throw
+[gazebo-1] #5    Object "/lib/x86_64-linux-gnu/libstdc++.so.6", at 0x795b9eaa5a54, in std::terminate()
+[gazebo-1] #4    Object "/lib/x86_64-linux-gnu/libstdc++.so.6", at 0x795b9eabb0d9, in 
+[gazebo-1] #3    Object "/lib/x86_64-linux-gnu/libstdc++.so.6", at 0x795b9eaa5ff4, in 
+[gazebo-1] #2    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x795ba3e288fe, in abort
+[gazebo-1] #1    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x795ba3e4527d, in gsignal
+[gazebo-1] #0    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x795ba3e9ebec, in pthread_kill
+[gazebo-1] Aborted (Signal sent by tkill() 114831 1000)
+[gazebo-1] Aborted (core dumped)
+[ERROR] [gazebo-1]: process has died [pid 114829, exit code 134, cmd 'ruby /opt/ros/jazzy/opt/gz_tools_vendor/bin/gz sim -v 4 -r -s --headless-rendering /home/yh/Project/usv-experimental-6m/artifacts/reverse_recovery_2026-11-23/candidate/recovery_60_right/world.sdf --force-version 8'].
+[gazebo-1] [1;36m[Dbg] [SystemManager.cc:80] [0m[1;36mLoaded system [[0m[1;36musv::AzimuthPropulsion[0m[1;36m] for entity [[0m[1;36m7[0m
+[INFO] [monitor_sim-2]: process has finished cleanly [pid 114830]

@@ -6,6 +6,7 @@ Audit recorded external wrenches about whole-vessel COM; never fit forces.
 import argparse
 import json
 from pathlib import Path
+import xml.etree.ElementTree as E
 import numpy as np
 
 
@@ -13,14 +14,17 @@ def analyze(folder, stage_index=0):
     """将记录的各类外力矩换算到整船重心并进行收支审计。
 
     Args:
-        folder: 含推进状态、阶段及各分项受力 CSV 的结果目录
+        folder: 含 boat.sdf、推进状态、阶段及各分项受力 CSV 的结果目录；声明的插件缺少遥测时拒绝审计。
         stage_index: 审计阶段索引；负数按 Python 规则从末尾计数。
     """
     p = Path(folder)
     d = np.loadtxt(p / "propulsion_state.csv", delimiter=",", ndmin=2)
     stages = json.loads((p / "stages.json").read_text())
     end = stages[stage_index]["end_sim"]
-    selected = d[(d[:, 0] > end - 15) & (d[:, 0] < end)]
+    start = max(stages[stage_index]["start_sim"], end - 15)
+    selected = d[(d[:, 0] > start) & (d[:, 0] < end)]
+    if len(selected) < 5:
+        raise ValueError("Insufficient samples in audit stage")
     t = selected[:, 0]
     roll = selected[:, 15]
     pitch = selected[:, 16]
@@ -32,9 +36,11 @@ def analyze(folder, stage_index=0):
     topics = [
         ("hull", ["pressure", "hull_drag", "added_mass", "air"]),
         ("propulsion", ["thrust", "water_couple"]),
-        ("appendages", ["appendages"]),
     ]
-    if (p / "stabilizer_audit_appendages.csv").exists():
+    model = E.parse(p / "boat.sdf").find("model")
+    if model.find("plugin[@name='usv::AppendageHydrodynamics']") is not None:
+        topics.append(("appendages", ["appendages"]))
+    if model.find("plugin[@name='usv::PassiveStabilizer']") is not None:
         topics.append(("stabilizer", ["stabilizer_lift_drag_buoyancy"]))
     for topic, names in topics:
         filename = (

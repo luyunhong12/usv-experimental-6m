@@ -1,0 +1,87 @@
+{
+  "deck": {
+    "samples": 355,
+    "final_z_m": 1.6186092550343292,
+    "last_50_z_range_m": 2.8248190648838545e-06,
+    "expected_contact_surface_range_m": [
+      0.85,
+      1.05
+    ],
+    "passed": false
+  },
+  "bottom": {
+    "samples": 355,
+    "final_z_m": -0.03138558365933628,
+    "last_50_z_range_m": 0.04708592279082193,
+    "expected_contact_surface_range_m": [
+      0,
+      0.12
+    ],
+    "passed": true,
+    "criterion": "Rolling contact: last 50 samples sphere-centre distance to hull within radius +/- 5 mm; not rest on keel ridge",
+    "surface_distance_min_max_m": [
+      0.022719326285837897,
+      0.024997392723272456
+    ]
+  },
+  "port": {
+    "samples": 355,
+    "final_z_m": 1.0450716167786795,
+    "last_50_z_range_m": 0.0009481537888336167,
+    "expected_contact_surface_range_m": [
+      0.9,
+      1.2
+    ],
+    "passed": true
+  },
+  "starboard": {
+    "samples": 355,
+    "final_z_m": 1.0450695919889892,
+    "last_50_z_range_m": 0.0009485373598978608,
+    "expected_contact_surface_range_m": [
+      0.9,
+      1.2
+    ],
+    "passed": true
+  },
+  "stern": {
+    "samples": 355,
+    "final_z_m": 3.7729974485347824,
+    "last_50_z_range_m": 0.0,
+    "expected_contact_surface_range_m": [
+      3.0,
+      3.8
+    ],
+    "passed": true
+  },
+  "propeller_hub": {
+    "samples": 355,
+    "final_z_m": 3.8834692776005215,
+    "last_50_z_range_m": 9.216659297539564e-06,
+    "expected_contact_surface_range_m": [
+      3.7,
+      3.95
+    ],
+    "passed": true
+  },
+  "stabilizer_tip": {
+    "samples": 355,
+    "final_z_m": 0.4160967338518615,
+    "last_50_z_range_m": 0.0012342146649105268,
+    "expected_contact_surface_range_m": [
+      0.393,
+      0.393
+    ],
+    "passed": true
+  },
+  "stabilizer_side": {
+    "samples": 355,
+    "final_z_m": 0.02856840941794311,
+    "last_50_z_range_m": 0.0009799627475269752,
+    "expected_contact_surface_range_m": [
+      0.009,
+      0.009
+    ],
+    "passed": true
+  }
+}

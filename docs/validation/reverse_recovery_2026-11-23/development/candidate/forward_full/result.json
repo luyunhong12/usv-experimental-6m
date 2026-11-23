@@ -1,0 +1,30 @@
+{
+  "case": "forward_full",
+  "spec": {
+    "kind": "neutral",
+    "isolated_water": true,
+    "wave_gain": 0,
+    "stages": [
+      {
+        "name": "neutral",
+        "mode": "direct",
+        "duration": 100,
+        "throttle": 1,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "checks": {
+    "startup_ready": false,
+    "completed": false,
+    "no_failure": false,
+    "finite": false
+  },
+  "passed": false,
+  "failure": "Launch process exited",
+  "start_sim": null,
+  "metrics": {},
+  "summary": {},
+  "scope": "Native Gazebo/ROS; GPU image generation omitted, all device masses/power retained; no ArduPilot",
+  "postprocess_recovered": false
+}
