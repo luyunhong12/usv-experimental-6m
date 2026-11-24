@@ -1,6 +1,6 @@
-# usv_ardupilot（保留的历史适配器，当前暂停联调）
+# usv_ardupilot（JSON SITL 适配器）
 
-这是已有的 Gazebo ENU/FLU → ArduRover JSON SITL NED/FRD 本地适配代码，不表示当前船体已经完成飞控验收。本轮只完善 ROS/Gazebo 船体仿真，**不启动或重新接入 ArduPilot/Nav2**。日常启动请用项目根 `./usv run`，详见 [ROS 操船文档](../../../docs/getting_started/README.md)。
+这是已有的 Gazebo ENU/FLU → ArduRover JSON SITL NED/FRD 本地适配代码。2026-11-24 开始固定版本的容器与最小接口验收；不表示已完成自动导航或 Nav2，具体范围见 [接入记录](../../../docs/validation/sitl_setup_2026-11-24/README.md)。日常启动请用项目根 `./usv run`，详见 [ROS 操船文档](../../../docs/getting_started/README.md)。
 
 适配器使用原生 IMU、真值里程计和能源状态；SERVO1 PWM 对应转向、SERVO3 PWM 对应推进。它仅绑定 localhost，采用软同步而非严格锁步，不是实船硬件接口。传感器/PWM 过期或无供电时停驱，并使用控制权租约避免同时驱动。
 

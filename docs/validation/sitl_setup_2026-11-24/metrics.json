@@ -1,0 +1,10 @@
+{
+  "checks_passed": 14,
+  "checks_total": 14,
+  "arming_sim_s": 45.222,
+  "forward_speed_m_s": 3.5456093086198393,
+  "reverse_speed_m_s": -2.83543864959183,
+  "stop_request_delay_sim_s": 3.834000000000003,
+  "max_bridge_lag_s": 0.0,
+  "scope": "MANUAL RC override, isolated water, no rendering sensors; combined GCS/RC message loss, not independent GCS-only failsafe or closed-loop navigation."
+}

@@ -1,0 +1,43 @@
+{
+  "phase_start_sim_s": 45.222,
+  "forward_speed_m_s": 3.5456093086198393,
+  "reverse_speed_m_s": -2.83543864959183,
+  "passed": true,
+  "checks": {
+    "heartbeat": true,
+    "normal_arming": true,
+    "navigation_ready_before_arming": true,
+    "no_ekf_variance_after_arming": true,
+    "attitude_telemetry": true,
+    "servo_telemetry": true,
+    "completed": true,
+    "forward": true,
+    "reverse": true,
+    "right_turn": true,
+    "left_turn": true,
+    "neutral_throttle": true,
+    "driving_before_dropout": true,
+    "stopped_after_dropout": true
+  },
+  "status_tail": [
+    "EKF3 IMU0 tilt alignment complete",
+    "EKF3 IMU1 tilt alignment complete",
+    "EKF3 IMU0 MAG0 initial yaw alignment complete",
+    "EKF3 IMU1 MAG0 initial yaw alignment complete",
+    "AHRS: EKF3 active",
+    "GPS 1: probing for u-blox at 230400 baud",
+    "GPS 1: detected u-blox",
+    "Set HOME to -33.72261 150.6745 at -0.25m",
+    "EKF3 IMU0 origin set",
+    "EKF3 IMU1 origin set",
+    "Field Elevation Set: -0m",
+    "EKF3 IMU0 is using GPS",
+    "EKF3 IMU1 is using GPS",
+    "Throttle armed",
+    "Radio Failsafe"
+  ],
+  "external_sitl": true,
+  "rendering_enabled": false,
+  "gcs_dropout": true,
+  "isolated_water": true
+}

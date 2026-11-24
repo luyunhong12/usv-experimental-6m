@@ -6,7 +6,7 @@
 - `usv_energy`：油电消耗、充电、保护及仪表。
 - `usv_control`：当前 ROS 船舶控制、载荷接口、健康诊断。
 - `usv_bringup`：整船组合配置与统一启动；开发脚本需完整源码树。
-- `usv_ardupilot`：保留历史适配，不代表本轮重新验收。
+- `usv_ardupilot`：JSON SITL 适配；固定版本最小接口测试见最新接入记录，不等于自动导航验收。
 
 设计源文件与仿真运行网格分开；公共船体参数保留在 description，两个设计方案不复制一套物理实现。工具通过 `tools/lib/project_paths.py` 定位仓库，不依赖启动时工作目录。`tool_paths.json` 记录工具分组位置；新增脚本时同步维护。
 

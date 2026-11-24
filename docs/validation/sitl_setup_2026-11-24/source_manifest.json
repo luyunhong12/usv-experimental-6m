@@ -1,0 +1,11 @@
+{
+  "deploy/sitl/Dockerfile": "138da177e9891ab2c665c5c99730abf934dbaa13a6fd25457a53039baef83525",
+  "deploy/sitl/Dockerfile.dockerignore": "530f38ad52e8f5941b799257b809e4a11d5258bf2338a90e96fdd04ee3273bd4",
+  "dependencies/ardupilot.repos": "8bf97cf46205b80e399a71a9fb73f9ce37d0397d84861c07e9fe891ecb90d324",
+  "ros_ws/src/usv_bringup/scripts/run_sitl.py": "4ef5adab64c2f26017f252a3025f5ea117031464a186d13e8494d74ec45cec56",
+  "tests/integration/validate_ardupilot.py": "224de239b22d3071a55fb064721c22aaba027b0b7a079e4e148fb7d8e3d57511",
+  "ros_ws/src/usv_ardupilot/scripts/json_bridge.py": "249cf21dc4796cb9c28df69daeb944715ec74d9bb225defaed1c9f70a6c97674",
+  "ros_ws/src/usv_ardupilot/scripts/json_time.py": "d928efbaa25cc97e89324a0f5cbb27ae1e83f60dd159fd56aa590474670dcb28",
+  "ros_ws/src/usv_ardupilot/config/boat.parm": "716e4fb515718963dc97a6e7499cc9ae0c1cfaf7dc32dfc28c9ece27612d16dd",
+  "ros_ws/src/usv_ardupilot/config/platform15.parm": "cd2c5ec43b09bac87011a93c5c42cfe76032ed3fa3a209c8cb52bfe5745f29f2"
+}

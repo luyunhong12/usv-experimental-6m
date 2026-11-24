@@ -59,6 +59,26 @@ def _load_runtime_dependencies_1():
 p = argparse.ArgumentParser()
 p.add_argument("--profile", choices=["baseline", "platform15"], default="baseline")
 p.add_argument("--label")
+p.add_argument(
+    "--isolated-water",
+    action="store_true",
+    help="从试验世界移除其他模型，隔离码头碰撞对接口验收的影响；保留船体物理。",
+)
+p.add_argument(
+    "--gcs-dropout",
+    action="store_true",
+    help="正常操船后再次推进，再停止地面站心跳和遥控消息，验证失联停推。",
+)
+p.add_argument(
+    "--external-sitl",
+    action="store_true",
+    help="由调用者管理实例42的 SITL 生命周期；本测试只启动仿真与桥。",
+)
+p.add_argument(
+    "--no-rendering",
+    action="store_true",
+    help="仅从试验快照移除相机、GPU 雷达与渲染传感器插件，保留物理和 IMU。",
+)
 a = p.parse_args()
 if a.label and not a.label.isidentifier():
     p.error("Invalid label")
@@ -82,11 +102,9 @@ def _load_runtime_dependencies_2():
     Double_V,
 ) = _load_runtime_dependencies_2()
 
-out = root / (
-    "log/platform_validation/" + a.label
-    if a.label
-    else "log/integration_upgrade/ardupilot"
-)
+out = root.parent / "artifacts/sitl" / (a.label or "manual_validation")
+if out.exists():
+    p.error("Output directory already exists; choose a new --label")
 out.mkdir(parents=True, exist_ok=True)
 node = Node()
 rows = []
@@ -111,10 +129,24 @@ subprocess.run(
 )
 tree = E.parse(world)
 for inc in tree.findall("world/include"):
+    if a.isolated_water and inc.findtext("name") != "usv":
+        tree.find("world").remove(inc)
+        continue
     if inc.findtext("name") == "usv":
         snapshot = out / "boat.sdf"
         shutil.copy2(inc.findtext("uri"), snapshot)
         inc.find("uri").text = str(snapshot)
+        if a.no_rendering:
+            boat = E.parse(snapshot)
+            for parent in boat.iter():
+                for sensor in list(parent.findall("sensor")):
+                    if sensor.get("type") in {"camera", "gpu_lidar", "gpu_ray"}:
+                        parent.remove(sensor)
+            boat.write(snapshot, encoding="utf-8", xml_declaration=True)
+if a.no_rendering:
+    for plugin in list(tree.findall("world/plugin")):
+        if plugin.get("name") == "gz::sim::systems::Sensors":
+            tree.find("world").remove(plugin)
 tree.write(world, encoding="utf-8", xml_declaration=True)
 for filename in ["boat.parm", "platform15.parm"]:
     shutil.copy2(root / "src/usv_ardupilot/config" / filename, out / filename)
@@ -153,22 +185,29 @@ start(
     "bridge.log",
 )
 # Instance 42 has independent TCP/UDP ports and EEPROM/log directory.
-start(
-    [
-        "python3",
-        str(tool_path("run_sitl.py")),
-        "--instance",
-        "42",
-        "--profile",
-        a.profile,
-        "--wipe",
-    ],
-    "sitl.log",
-)
+if not a.external_sitl:
+    start(
+        [
+            "python3",
+            str(tool_path("run_sitl.py")),
+            "--instance",
+            "42",
+            "--profile",
+            a.profile,
+            "--wipe",
+        ],
+        "sitl.log",
+    )
 status = []
 attitudes = []
 heartbeats = []
 servo = []
+estimator = []
+estimator_faults = []
+navigation_ready = False
+navigation_ready_at_arming = False
+last_estimator_wall = 0.0
+estimator_ready_since = None
 phase_start = None
 armed = False
 conn = None
@@ -192,6 +231,8 @@ try:
             kind = m.get_type()
             if kind == "STATUSTEXT":
                 status.append(m.text)
+                if phase_start is not None and "EKF variance" in m.text:
+                    estimator_faults.append(m.text)
             elif kind == "HEARTBEAT":
                 heartbeats.append(m.to_dict())
                 armed = bool(m.base_mode & mavutil.mavlink.MAV_MODE_FLAG_SAFETY_ARMED)
@@ -199,9 +240,32 @@ try:
                 attitudes.append(m.to_dict())
             elif kind == "SERVO_OUTPUT_RAW":
                 servo.append(m.to_dict())
+            elif kind == "EKF_STATUS_REPORT":
+                estimator.append(dict(sim_s=rows[-1][0] if rows else 0, **m.to_dict()))
+                last_estimator_wall = time.monotonic()
+                required = (
+                    mavutil.mavlink.EKF_ATTITUDE
+                    | mavutil.mavlink.EKF_VELOCITY_HORIZ
+                    | mavutil.mavlink.EKF_POS_HORIZ_ABS
+                )
+                valid = (
+                    (m.flags & required) == required
+                    and m.velocity_variance < 1
+                    and m.pos_horiz_variance < 1
+                )
+                if not valid:
+                    estimator_ready_since = None
+                elif estimator_ready_since is None:
+                    estimator_ready_since = last_estimator_wall
+                navigation_ready = (
+                    estimator_ready_since is not None
+                    and last_estimator_wall - estimator_ready_since >= 2
+                )
         now = time.monotonic()
         sim = rows[-1][0] if rows else 0
-        if now - last_hb > 1:
+        elapsed = sim - phase_start if phase_start is not None else -1
+        link_active = not (a.gcs_dropout and elapsed >= 84)
+        if link_active and now - last_hb > 1:
             conn.mav.heartbeat_send(
                 mavutil.mavlink.MAV_TYPE_GCS,
                 mavutil.mavlink.MAV_AUTOPILOT_INVALID,
@@ -220,32 +284,50 @@ try:
             conn.mav.command_long_send(
                 1,
                 1,
-                mavutil.mavlink.MAV_CMD_COMPONENT_ARM_DISARM,
+                mavutil.mavlink.MAV_CMD_SET_MESSAGE_INTERVAL,
                 0,
-                1,
-                0,
+                mavutil.mavlink.MAVLINK_MSG_ID_EKF_STATUS_REPORT,
+                200000,
                 0,
                 0,
                 0,
                 0,
                 0,
             )
+            # MANUAL 可在导航估计尚未就绪时解锁；验收主动等待稳定定位，保留原解锁检查。
+            if navigation_ready and now - last_estimator_wall < 1:
+                conn.mav.command_long_send(
+                    1,
+                    1,
+                    mavutil.mavlink.MAV_CMD_COMPONENT_ARM_DISARM,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                )
             last_arm = now
         if armed and rows and phase_start is None:
+            navigation_ready_at_arming = navigation_ready
             phase_start = sim
         elapsed = sim - phase_start if phase_start is not None else -1
-        if now - last_rc > 0.1:
+        if link_active and now - last_rc > 0.1:
             thr = (
                 1800
-                if 0 <= elapsed < 12 or 28 <= elapsed < 48
+                if 0 <= elapsed < 12 or 28 <= elapsed < 68
                 else 1200 if 12 <= elapsed < 28 else 1500
             )
-            steer = 1800 if 28 <= elapsed < 48 else 1500
+            steer = 1800 if 28 <= elapsed < 48 else 1200 if 48 <= elapsed < 68 else 1500
+            if a.gcs_dropout and 76 <= elapsed < 84:
+                thr = 1800
             conn.mav.rc_channels_override_send(
                 1, 1, steer, 1500, thr, 1500, 65535, 65535, 65535, 65535
             )
             last_rc = now
-        if elapsed >= 55:
+        if elapsed >= (100 if a.gcs_dropout else 76):
             break
         time.sleep(0.003)
 finally:
@@ -269,34 +351,81 @@ finally:
 np.savetxt(out / "propulsion.csv", np.array(rows), delimiter=",")
 (out / "mavlink.json").write_text(
     json.dumps(
-        dict(status=status, attitude=attitudes, heartbeat=heartbeats, servo=servo),
+        dict(
+            status=status,
+            attitude=attitudes,
+            heartbeat=heartbeats,
+            servo=servo,
+            estimator=estimator,
+        ),
         indent=2,
     )
 )
 checks = {
     "heartbeat": bool(heartbeats),
     "normal_arming": phase_start is not None,
+    "navigation_ready_before_arming": navigation_ready_at_arming,
+    "no_ekf_variance_after_arming": not estimator_faults,
     "attitude_telemetry": bool(attitudes),
     "servo_telemetry": bool(servo),
+    "completed": False,
+    "forward": False,
+    "reverse": False,
+    "right_turn": False,
+    "left_turn": False,
+    "neutral_throttle": False,
 }
+if a.gcs_dropout:
+    checks.update(driving_before_dropout=False, stopped_after_dropout=False)
 if phase_start is not None and rows:
     d = np.array(rows)
     t = d[:, 0] - phase_start
     fwd = d[(t > 8) & (t < 11)]
     rev = d[(t > 24) & (t < 27)]
     turn = d[(t > 44) & (t < 47)]
-    checks["completed"] = bool(t[-1] >= 54)
+    left = d[(t > 64) & (t < 67)]
+    neutral = d[(t > 72) & (t < 75)]
+    checks["completed"] = bool(t[-1] >= 75)
     checks["forward"] = bool(len(fwd) and np.mean(fwd[:, 10]) > 0.2)
     checks["reverse"] = bool(len(rev) and np.mean(rev[:, 10]) < -0.2)
+    # 从各自转向阶段的后半段测增量，避免初始航向或上一阶段偏转造成假通过。
+    yaw = np.unwrap(d[:, 14])
+    right_window = yaw[(t > 38) & (t < 47)]
+    left_window = yaw[(t > 58) & (t < 67)]
     checks["right_turn"] = bool(
-        len(turn) and np.unwrap(d[:, 14])[np.where(t > 44)[0][0]] < -0.2
+        len(turn)
+        and len(right_window) > 1
+        and right_window[-1] - right_window[0] < -0.2
+    )
+    checks["left_turn"] = bool(
+        len(left) and len(left_window) > 1 and left_window[-1] - left_window[0] > 0.2
+    )
+    checks["neutral_throttle"] = bool(
+        len(neutral) and np.max(np.abs(neutral[:, 1])) < 0.01
     )
     result.update(
         phase_start_sim_s=phase_start,
         forward_speed_m_s=float(np.mean(fwd[:, 10])) if len(fwd) else None,
         reverse_speed_m_s=float(np.mean(rev[:, 10])) if len(rev) else None,
     )
-result.update(passed=all(checks.values()), checks=checks, status_tail=status[-15:])
+    if a.gcs_dropout:
+        before_loss = d[(t > 80) & (t < 83)]
+        after_loss = d[(t > 95) & (t < 99)]
+        checks["driving_before_dropout"] = bool(
+            len(before_loss) and np.mean(before_loss[:, 1]) > 0.1
+        )
+        checks["stopped_after_dropout"] = bool(
+            t[-1] >= 99 and len(after_loss) and np.max(np.abs(after_loss[:, 1])) < 0.01
+        )
+result.update(
+    passed=all(checks.values()),
+    checks=checks,
+    status_tail=status[-15:],
+    external_sitl=a.external_sitl,
+    rendering_enabled=not a.no_rendering,
+    gcs_dropout=a.gcs_dropout,
+    isolated_water=a.isolated_water,
+)
 (out / "result.json").write_text(json.dumps(result, indent=2))
 print(json.dumps(result, indent=2))
 raise SystemExit(0 if result["passed"] else 1)

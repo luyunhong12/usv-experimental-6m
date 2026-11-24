@@ -1,0 +1,30 @@
+{
+  "checked_files": 21,
+  "differences": [
+    "ros_ws/src/usv_description/config/pbr_visuals.json"
+  ],
+  "hashes": {
+    "ros_ws/src/usv_description/config/pbr_visuals.json": "a0fb749819f3706a64283dc97b96c068148166806149c3a3bfe4b3f4d2a79c0c",
+    "ros_ws/src/usv_description/config/hull_triangles.txt": "1e811c99cccd4dd2c5966aa0fc6fe964d3c155a2534a0ee4fdf2e6d1aeaf7ccc",
+    "ros_ws/src/usv_description/config/visual_refinement.json": "8246f02095aa83a5ad725418f39f450909bbf5c55ca1347bc17c5d60937cec53",
+    "ros_ws/src/usv_description/config/resistance.json": "b768ff4f47367bba4cf1db6e698933ab45d21b1b1bd549735cf1423652794d4f",
+    "ros_ws/src/usv_description/config/fuel_tank.json": "62ff0956f2f9093a638c1195e24251c6e13d9316cbe49d5031828f377fd28b24",
+    "ros_ws/src/usv_description/config/component_mass_ledger.json": "ad9f9bfe14e9b9261afd343227edfc26ce0702dfd60c4f751fe8f7390b562521",
+    "ros_ws/src/usv_description/config/payloads.json": "ba9d3a0fe413041c0451fa0d4888f281d03fe7092061b4aca7e94777145a69df",
+    "ros_ws/src/usv_description/config/hull_sealed.json": "761a6f64496474469cc0060604c8d0e1ec6304a17673f1636c8f984b6e2d4da8",
+    "ros_ws/src/usv_description/config/appendage_hydrodynamics.json": "fa2fb61ade736a80779de1b768562f2dcc39a5540ae371dc743ee60c63eb05ec",
+    "ros_ws/src/usv_description/config/engineering_mass_estimate.json": "fb1826f2b78e1b0435879c2dae2eeb1dbb3e716313fd4b397957ee89106409b1",
+    "ros_ws/src/usv_description/config/hull_geometry.json": "8c6c640488ffe0136922d7d9a690e30a2cb59c5b50120695bd842a49b494f9bf",
+    "ros_ws/src/usv_description/config/collision_exclusions.json": "1f76afb430fa88d105f81a62bf8e939b8a8c5475b0a21c362fdfc05a8694265a",
+    "ros_ws/src/usv_description/config/propulsion.json": "672f9a10f86d2d16268f5977430ea1ab9cd59c16d2c34a076dd7bd778b115523",
+    "ros_ws/src/usv_description/config/hydrodynamics.json": "fa162f5e8080d08a2cd76a823f0685d940739ac119ac08debcbf7e5d2ddee69c",
+    "ros_ws/src/usv_description/config/trial_load.json": "eade200ba09d154bc35ba619d0a2349bd6ea3e68fddc399e49f97d318fb1741f",
+    "ros_ws/src/usv_description/config/integration.json": "920f6081118d8f84e429af8c7b1d27e410e3d09afdf61c89739636a7d9cd1f4c",
+    "ros_ws/src/usv_description/config/profiles/speed15_concept.json": "70bb7df0ecbfd1c73185073e7f8eb522d7d989ea900b877e21d54650f7bd206f",
+    "ros_ws/src/usv_description/config/profiles/initial_1042kg_trial.json": "fddfdb781831a38859c5ef099d095901571858e92de11f0fe87bf0a9d1301a79",
+    "ros_ws/src/usv_energy/config/energy.json": "6fa054c61eec97e33bb1f67fdfef4e308cc5f575d2bfcb2ccdf4c41b9fb1be9d",
+    "ros_ws/src/usv_ardupilot/config/boat.parm": "716e4fb515718963dc97a6e7499cc9ae0c1cfaf7dc32dfc28c9ece27612d16dd",
+    "ros_ws/src/usv_ardupilot/config/platform15.parm": "cd2c5ec43b09bac87011a93c5c42cfe76032ed3fa3a209c8cb52bfe5745f29f2"
+  },
+  "pbr_equal_after_project_path_normalization": true
+}

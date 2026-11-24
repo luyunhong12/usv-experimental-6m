@@ -1,0 +1,1 @@
+PASS: second controller rejected: Actuator controller already active: ArduPilot JSON SITL pid=1887 boat=usv. Stop it or launch interfaces with control:=False.

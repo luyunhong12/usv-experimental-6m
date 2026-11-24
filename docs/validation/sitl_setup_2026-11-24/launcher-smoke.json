@@ -1,0 +1,21 @@
+{
+  "running": true,
+  "user": "1000:1000",
+  "network": "host",
+  "cap_drop": [
+    "ALL"
+  ],
+  "mounts": [
+    {
+      "Source": "/home/yh/Project/usv-experimental-6m/artifacts/sitl/platform15/instance_49",
+      "Destination": "/data",
+      "RW": true
+    },
+    {
+      "Source": "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_ardupilot/config",
+      "Destination": "/config",
+      "RW": false
+    }
+  ],
+  "removed_after_interrupt": true
+}

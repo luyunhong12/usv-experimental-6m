@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""按工程配置启动本机飞控仿真进程。
+"""按工程配置启动本机或容器中的飞控仿真进程。
 
-Start the existing local ArduRover binary in an isolated workspace directory.
+参数源只读挂载，持久状态写入 artifacts；容器通过 Linux 主机网络连接本机桥。
 """
 
 # Resolve the checkout independently of the current working directory.
@@ -44,21 +44,33 @@ p.add_argument(
     type=Path,
     default=Path(
         os.environ.get(
-            "ARDUPILOT_BIN", str(root.parents[1] / "ardupilot/build/sitl/bin/ardurover")
+            "ARDUPILOT_BIN",
+            str(root.parent / "dependencies/src/ardupilot/build/sitl/bin/ardurover"),
         )
     ),
+)
+p.add_argument(
+    "--container-image",
+    default=os.environ.get("ARDUPILOT_CONTAINER_IMAGE"),
+    help="容器镜像名或摘要；设置后使用 Docker，不使用本机 --binary。",
 )
 p.add_argument("--wipe", action="store_true")
 p.add_argument("--profile", choices=["baseline", "platform15"], default="baseline")
 a = p.parse_args()
 if not 0 <= a.instance <= 99:
     p.error("Instance must be in [0,99]")
-if not a.binary.is_file():
+if a.container_image and (
+    a.container_image.startswith("-") or any(c.isspace() for c in a.container_image)
+):
+    p.error("Invalid container image name")
+if not a.container_image and not a.binary.is_file():
     p.error("ArduRover binary not found; pass --binary or ARDUPILOT_BIN")
-work = root / "log/ardupilot" / a.profile / f"instance_{a.instance}"
+work = root.parent / "artifacts/sitl" / a.profile / f"instance_{a.instance}"
 work.mkdir(parents=True, exist_ok=True)
+parameter_dir = root / "src/usv_ardupilot/config"
+runtime_parameters = Path("/config") if a.container_image else parameter_dir
 args = [
-    str(a.binary.resolve()),
+    "/usr/local/bin/ardurover" if a.container_image else str(a.binary.resolve()),
     "--model",
     "JSON",
     "--sim-address",
@@ -70,9 +82,9 @@ args = [
     "--home",
     "-33.724223,150.679736,0,90",
     "--defaults",
-    str(root / "src/usv_ardupilot/config/boat.parm")
+    str(runtime_parameters / "boat.parm")
     + (
-        "," + str(root / "src/usv_ardupilot/config/platform15.parm")
+        "," + str(runtime_parameters / "platform15.parm")
         if a.profile == "platform15"
         else ""
     ),
@@ -83,6 +95,31 @@ args = [
 ]
 if a.wipe:
     args.append("--wipe")
+if a.container_image:
+    import shutil
+
+    docker = shutil.which("docker")
+    if docker is None:
+        p.error("Docker executable not found")
+    args = [
+        docker,
+        "run",
+        "--rm",
+        "--init",
+        "--network=host",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--user",
+        f"{os.getuid()}:{os.getgid()}",
+        "--name",
+        f"usv-sitl-{a.profile}-{a.instance}",
+        "--mount",
+        f"type=bind,source={parameter_dir},target=/config,readonly",
+        "--mount",
+        f"type=bind,source={work},target=/data",
+        a.container_image,
+        *args[1:],
+    ]
 print(
     f"JSON bridge port {9002+10*a.instance}; MAVLink TCP port {5760+10*a.instance}",
     flush=True,

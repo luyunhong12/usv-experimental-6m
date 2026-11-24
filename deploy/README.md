@@ -4,12 +4,12 @@
 
 ## 当前状态与实施顺序
 
-1. 保留已验收的本机 ROS/Gazebo/VRX，通过独立 SITL 容器接入；QGC 由用户在宿主机安装。
+1. 优先复用已验收的 ROS/Gazebo/VRX，通过独立 SITL 容器接入；QGC 在宿主机安装。2026-11-24 检测到宿主机依赖升级，当前联调改用原固定版本容器，不能沿用旧本机通过结论。
 2. 先验证时间、坐标系、PWM、唯一控制权、失联停推和低速闭环。
 3. 恢复完整相机/点云并验收，再迁移到 GPU 仿真容器。
 4. 两端验收后才增加 Compose 编排。当前没有可运行的 Compose 文件。
 
-当前仅建立目录职责；[SITL 配置位置](sitl/README.md) 尚未包含 Dockerfile 或完成构建。原有仿真配方继续位于 [tools/setup/Dockerfile](../tools/setup/Dockerfile)，其使用说明见 [容器指南](../docs/getting_started/container.md)。不维护第二份同功能仿真 Dockerfile。
+[SITL 配置位置](sitl/README.md) 已包含固定源码的 Dockerfile 与现有启动入口的容器模式。原有仿真配方继续位于 [tools/setup/Dockerfile](../tools/setup/Dockerfile)，其使用说明见 [容器指南](../docs/getting_started/container.md)。不维护第二份同功能仿真 Dockerfile。
 
 ## 网络和数据约定
 

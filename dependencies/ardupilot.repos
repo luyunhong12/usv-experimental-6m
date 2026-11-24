@@ -1,0 +1,10 @@
+# 飞控可选依赖；从项目根执行 vcs import dependencies/src < dependencies/ardupilot.repos。
+repositories:
+  # SITL 与 Rover 共用此源码，子模块须另行递归初始化。
+  ardupilot:
+    # 上游源码管理方式。
+    type: git
+    # 官方上游地址。
+    url: https://github.com/ArduPilot/ardupilot.git
+    # Rover-4.7.3 对应的完整提交；升级需要重新验收。
+    version: d9c5097c3d8333435712ffed86bca8ce00c4bb46

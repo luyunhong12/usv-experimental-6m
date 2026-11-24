@@ -163,7 +163,7 @@ usv-experimental-6m/
 │   ├── usv_energy/         # 油电消耗与保护
 │   ├── usv_control/        # ROS 控制与传感器接口
 │   ├── usv_bringup/        # 整船配置、统一启动
-│   └── usv_ardupilot/      # 历史适配，当前暂缓联调
+│   └── usv_ardupilot/      # JSON SITL 接口，开始固定版本接入验收
 ├── dependencies/           # 固定上游版本、最小源码片段与补丁
 ├── deploy/                 # SITL 容器与后续编排的部署配置
 ├── tools/                  # 安装、建模、参数计算、分析和手动操作
@@ -173,7 +173,7 @@ usv-experimental-6m/
 └── artifacts/              # 本地原始记录与备份，不进入 Git
 ```
 
-新增 SITL 目录职责见 [部署说明](deploy/README.md)；当前为目录准备阶段，未完成飞控容器构建或联调。
+新增 SITL 目录职责见 [部署说明](deploy/README.md)；已开始固定版本飞控容器与最小接口验收，范围见 [接入记录](docs/validation/sitl_setup_2026-11-24/README.md)。
 
 原始 Blender 文件和较大的网格使用 Git LFS。部分历史文档引用本地 artifacts 路径；这不表示文件已上传，公开可读的主要结果见上面的基线报告。完整过程没有被删除。
 

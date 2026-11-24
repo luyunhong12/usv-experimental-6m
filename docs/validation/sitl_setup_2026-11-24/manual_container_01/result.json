@@ -1,0 +1,37 @@
+{
+  "phase_start_sim_s": 25.201,
+  "forward_speed_m_s": 3.545635251311191,
+  "reverse_speed_m_s": -2.8354195889113982,
+  "passed": true,
+  "checks": {
+    "heartbeat": true,
+    "normal_arming": true,
+    "attitude_telemetry": true,
+    "servo_telemetry": true,
+    "completed": true,
+    "forward": true,
+    "reverse": true,
+    "right_turn": true,
+    "left_turn": true,
+    "neutral_throttle": true
+  },
+  "status_tail": [
+    "AHRS: EKF3 active",
+    "Arm: Accels inconsistent",
+    "GPS 1: probing for u-blox at 230400 baud",
+    "GPS 1: detected u-blox",
+    "Set HOME to -33.72261 150.6745 at -0.25m",
+    "Arm: Gyros inconsistent",
+    "Arm: Gyros inconsistent",
+    "EKF3 IMU0 origin set",
+    "EKF3 IMU1 origin set",
+    "Field Elevation Set: -0m",
+    "Arm: Gyros inconsistent",
+    "Throttle armed",
+    "EKF3 IMU0 is using GPS",
+    "EKF3 IMU1 is using GPS",
+    "EKF failsafe cleared"
+  ],
+  "external_sitl": true,
+  "rendering_enabled": false
+}

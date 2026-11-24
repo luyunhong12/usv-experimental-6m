@@ -1,0 +1,8 @@
+{
+  "version": "v5.1.5",
+  "sha256": "9a47e4cf269d9e4f897f582f6b19aa7ebf1e9e67c9d68a532a45b541354bc344",
+  "official_asset_digest_matches": true,
+  "application": "/home/yh/Applications/QGroundControl/QGroundControl-v5.1.5-x86_64.AppImage",
+  "desktop_entry": "/home/yh/.local/share/applications/usv-qgroundcontrol.desktop",
+  "gui_tested": false
+}

@@ -19,4 +19,4 @@ Python 工具依赖见 `tools/setup/requirements.txt`；Gazebo Python bindings �
 
 ## 飞控依赖位置
 
-ArduPilot（含 SITL）源码统一放在 `src/ardupilot/`，保留独立 Git 历史，不嵌入本仓库。当前仅预留目录，尚未下载；Git 不保存空目录。后续新增独立的 `ardupilot.repos` 并固定完整提交及子模块，原 `sources.repos` 继续服务现有仿真安装。源码下载、构建和联调状态见 [SITL 部署说明](../deploy/sitl/README.md)。QGC 由用户在宿主机安装，不作为 ROS 源码依赖。
+ArduPilot（含 SITL）源码统一放在 `src/ardupilot/`，保留独立 Git 历史，不嵌入本仓库。已下载并初始化递归子模块；独立的 `ardupilot.repos` 固定 Rover-4.7.3 的完整提交，子模块由该提交的 gitlink 固定，原 `sources.repos` 继续服务现有仿真安装。源码下载、构建和联调状态见 [SITL 部署说明](../deploy/sitl/README.md)。QGC 由用户在宿主机安装，不作为 ROS 源码依赖。

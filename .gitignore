@@ -20,3 +20,6 @@ venv/
 /dependencies/vendor/blender-mcp/build/
 
 /dependencies/vendor/blender-mcp/
+
+# Local desktop application downloads belong outside the source repository.
+/*.AppImage

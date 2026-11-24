@@ -1,0 +1,17 @@
+[
+  {
+    "arguments": [
+      "--instance",
+      "100"
+    ],
+    "returncode": 2,
+    "stderr": "usage: run_sitl.py [-h] [--instance INSTANCE] [--binary BINARY]\n                   [--container-image CONTAINER_IMAGE] [--wipe]\n                   [--profile {baseline,platform15}]\nrun_sitl.py: error: Instance must be in [0,99]\n"
+  },
+  {
+    "arguments": [
+      "--container-image=-invalid"
+    ],
+    "returncode": 2,
+    "stderr": "usage: run_sitl.py [-h] [--instance INSTANCE] [--binary BINARY]\n                   [--container-image CONTAINER_IMAGE] [--wipe]\n                   [--profile {baseline,platform15}]\nrun_sitl.py: error: Invalid container image name\n"
+  }
+]

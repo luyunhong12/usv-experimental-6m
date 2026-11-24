@@ -1,5 +1,7 @@
 # 文档入口
 
+- [QGC 安置与 SITL 容器接入](validation/sitl_setup_2026-11-24/README.md)：安装摘要、依赖漂移、正常操船与失联试验。
+
 - [稳定基线、独立复现与性能归因](validation/stable_baseline_2026-11-23/README.md)：候选源码、接近实时的前后对照、容器与固定版本复验。
 
 - [完整悉尼场景、相机与点云长测](validation/sydney_rendering_2026-11-23/README.md)：相机投影、DDS 大消息传输、GUI 与连续运行性能。

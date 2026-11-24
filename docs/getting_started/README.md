@@ -1,5 +1,8 @@
 # 用 ROS 2 在 VRX 中开船
 
+> 2026-11-24 环境提醒：本机 Gazebo 依赖已升级，旧构建缓存当前不能重新构建。请先核对 [依赖漂移记录](../validation/known_issues.md#2026-11-24-本机依赖漂移)；SITL 联调改用固定版本隔离环境，不能将历史本机验收视为当前环境保证。
+
+
 当前推荐入口是 **ROS 控制 + Gazebo/VRX 悉尼场景**，不需要安装或启动 ArduPilot、SITL 或 Nav2。本轮接入前验证见 [四步验收记录](../validation/platform_readiness_2026-11-21/README.md)，物理边界见 [已知问题](../validation/known_issues.md)。
 
 ## 环境与构建

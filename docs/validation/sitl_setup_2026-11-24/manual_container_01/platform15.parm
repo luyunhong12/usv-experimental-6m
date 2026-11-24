@@ -1,0 +1,34 @@
+# Engineering simulation profile; no real hardware calibration implied.
+CRUISE_SPEED 4.166667
+CRUISE_THROTTLE 94
+WP_SPEED 4.166667
+RTL_SPEED 1.2
+WP_RADIUS 3.0
+LOIT_RADIUS 4.0
+ATC_ACCEL_MAX 0.5
+ATC_DECEL_MAX 0.5
+ATC_STR_RAT_MAX 15
+ATC_STR_ACC_MAX 5
+ATC_STR_RAT_FF 0.1
+ATC_STR_RAT_P 0.25
+ATC_STR_RAT_I 0.005
+ATC_TURN_MAX_G 0.03
+BATT_CAPACITY 978000
+FS_GCS_ENABLE 1
+FS_GCS_TIMEOUT 5
+FS_TIMEOUT 1.5
+FS_ACTION 2
+# Match the physical single azimuth instead of car steering speed scaling.
+MOT_VEC_ANGLEMAX 35
+MOT_THR_MIN 1
+TURN_RADIUS 12
+WP_PIVOT_ANGLE 0
+ATC_STR_RAT_D 0.4
+ATC_STR_RAT_IMAX 0.02
+
+# Propeller static thrust is proportional to shaft RPM squared.
+MOT_THST_EXPO 1
+
+# A stationary azimuth must be able to steer fully without rudder arm/disarm gestures.
+# Use explicit MAVLink arming; normal ARMING_CHECK settings remain enabled.
+ARMING_RUDDER 0
