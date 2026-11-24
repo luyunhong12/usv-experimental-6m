@@ -173,7 +173,7 @@ usv-experimental-6m/
 └── artifacts/              # 本地原始记录与备份，不进入 Git
 ```
 
-新增 SITL 目录职责见 [部署说明](deploy/README.md)；已开始固定版本飞控容器与最小接口验收，范围见 [接入记录](docs/validation/sitl_setup_2026-11-24/README.md)。
+新增 SITL 目录职责见 [部署说明](deploy/README.md)；基础接口证据见 [接入记录](docs/validation/sitl_setup_2026-11-24/README.md)，GPU 双容器与 QGC 实际操船见 [联合验收](docs/validation/desktop_sitl_2026-11-24/README.md)。启动和摇杆操作见 [桌面 SITL 指南](docs/getting_started/desktop_sitl.md)。
 
 原始 Blender 文件和较大的网格使用 Git LFS。部分历史文档引用本地 artifacts 路径；这不表示文件已上传，公开可读的主要结果见上面的基线报告。完整过程没有被删除。
 
@@ -198,7 +198,7 @@ python3 tests/regression/run_performance_suite.py \
 3. **高速与复杂海况不足**：兴波、滑行、砰击、出水/空化及长时间大风浪尚未充分覆盖。
 4. **能源和实装边界**：40 kW 是概念动力方案；重载约 14.29 km/h。完整热管理、线长压降、安装强度及内部干涉仍待设计核查。
 5. **接触精度有限**：已修复薄鳍持续毫米级穿透，名义末段小于 0.01 mm；10 kg、约 4.37 m/s 探针仍有 2.87 mm 瞬态峰值，不代表零穿透、整船冲击或结构强度认证。
-6. **验证范围有限**：已补齐加鳍后 20 分钟物理航行与 10 分钟零舵长测；最新独立容器与完整GPU长测已通过，本机平均实时率 0.993、接近实时；GUI只验收90 s。跨机器、跨RMW、多船和不同传感器负载仍待验证。
+6. **验证范围有限**：已补齐加鳍后 20 分钟物理航行与 10 分钟零舵长测；最新独立容器与完整GPU长测已通过，本机平均实时率 0.993、接近实时；原基线GUI验收90 s；本轮双容器GUI、SITL与完整传感器已另做20分钟连续运行，见[桌面联合验收](docs/validation/desktop_sitl_2026-11-24/README.md)。跨机器、跨RMW、多船和不同传感器负载仍待验证。
 
 物理问题稳定后，再建立定位融合与 Nav2 船舶适配，重新验收 ArduPilot。两种控制模式必须明确执行器所有权，不能同时叠加控制。[集成规划](docs/integration/README.md) · [当前问题清单](docs/validation/known_issues.md)。
 

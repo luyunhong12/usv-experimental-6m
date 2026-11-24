@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "normal_arming_observed": true,
+    "all_phases_observed": true,
+    "no_ekf_variance_messages": true,
+    "forward_servo_samples": true,
+    "reverse_servo_samples": true,
+    "right_servo_samples": true,
+    "left_servo_samples": true,
+    "neutral_servo_samples": true,
+    "neutral_last_pwm": true,
+    "forward_physics": true,
+    "reverse_physics": true,
+    "both_actual_steering_directions": true
+  },
+  "passed": true,
+  "scope": "Basic manual integration smoke; does not replace manoeuvring quality baseline"
+}

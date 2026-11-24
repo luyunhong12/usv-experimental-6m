@@ -1,0 +1,70 @@
+# Local Linux desktop deployment; both processes share localhost intentionally.
+# 本机仿真与飞控两个独立服务；不启动实体硬件连接。
+services:
+  # 负责悉尼场景、物理、ROS接口和JSON桥。
+  simulation:
+    # 本地构建的固定用途镜像；验收另记录不可变摘要。
+    image: usv-simulation:sitl-gui
+    # 共享宿主机网络，使两端localhost可互通；仅用于本机实验。
+    network_mode: host
+    # 回收退出的子进程并转发停止信号。
+    init: true
+    # 与宿主机一致的UID/GID；当前镜像验证用户1000。
+    user: "${USV_UID}:${USV_GID}"
+    # 图形和传感器共享内存上限512MiB。
+    shm_size: 512m
+    # 向仿真容器开放本机NVIDIA GPU。
+    gpus: all
+    # 删除全部额外Linux能力。
+    cap_drop: [ALL]
+    # 禁止进程通过执行文件提升权限。
+    security_opt: [no-new-privileges:true]
+    # 显式提供显示、通信分区和日志配置。
+    environment:
+      # 当前X11桌面的显示编号。
+      DISPLAY: "${DISPLAY}"
+      # 只读挂载的当前会话授权文件。
+      XAUTHORITY: /run/usv/xauthority
+      # 本套仿真的唯一Gazebo通信分区；手动工具须保持一致。
+      GZ_PARTITION: usv_desktop
+      # 将Gazebo通信限制为本机地址。
+      GZ_IP: 127.0.0.1
+      # 同UID本机与容器控制者共享的协作锁目录。
+      USV_CONTROL_LOCK_DIR: /run/usv/control
+      # 持久化ROS运行日志的容器路径。
+      ROS_LOG_DIR: /work/usv/artifacts/container-runtime/roslogs
+      # 关闭Qt跨容器X11共享内存优化。
+      QT_X11_NO_MITSHM: "1"
+      # 提供图形、计算和驱动查询能力。
+      NVIDIA_DRIVER_CAPABILITIES: all
+      # 强制传感器使用NVIDIA EGL，缺驱动时失败而不静默退回CPU。
+      __EGL_VENDOR_LIBRARY_FILENAMES: /usr/share/glvnd/egl_vendor.d/10_nvidia.json
+      # GUI的GLX实现与传感器保持同一NVIDIA驱动。
+      __GLX_VENDOR_LIBRARY_NAME: nvidia
+    # 仅挂载显示授权、运行产物或只读参数，不覆盖镜像内编译产物。
+    volumes:
+      - /usr/share/glvnd/egl_vendor.d/10_nvidia.json:/usr/share/glvnd/egl_vendor.d/10_nvidia.json:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      - ${USV_XAUTHORITY}:/run/usv/xauthority:ro
+      - ../artifacts/control-locks:/run/usv/control
+      - ../artifacts:/work/usv/artifacts
+  # 负责ArduRover飞控计算，状态保存在宿主机。
+  sitl:
+    # 本地构建的固定用途镜像；验收另记录不可变摘要。
+    image: usv-sitl:rover-4.7.3
+    # 共享宿主机网络，使两端localhost可互通；仅用于本机实验。
+    network_mode: host
+    # 回收退出的子进程并转发停止信号。
+    init: true
+    # 与宿主机一致的UID/GID；当前镜像验证用户1000。
+    user: "${USV_UID}:${USV_GID}"
+    # 删除全部额外Linux能力。
+    cap_drop: [ALL]
+    # 禁止进程通过执行文件提升权限。
+    security_opt: [no-new-privileges:true]
+    # 仅挂载显示授权、运行产物或只读参数，不覆盖镜像内编译产物。
+    volumes:
+      - ../ros_ws/src/usv_ardupilot/config:/config:ro
+      - ../artifacts/container-runtime/sitl:/data
+    # JSON物理接口9102；实例10；悉尼原点纬经度和朝向；100Hz接口；TCP5860诊断与UDP14550地面站独立连接。
+    command: ["--model", "JSON", "--sim-address", "127.0.0.1", "--sim-port-out", "9102", "--instance", "10", "--home", "-33.724223,150.679736,0,90", "--defaults", "/config/boat.parm,/config/platform15.parm", "--speedup", "1", "--rate", "100", "--serial0", "tcp:5860", "--serial1", "udpclient:127.0.0.1:14550"]

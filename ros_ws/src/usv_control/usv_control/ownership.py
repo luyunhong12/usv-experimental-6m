@@ -24,7 +24,10 @@ class ControlLease:
         token = hashlib.sha256(
             (str(os.getuid()) + "|" + partition + "|" + boat).encode()
         ).hexdigest()[:24]
-        self.path = Path(tempfile.gettempdir()) / ("usv-control-" + token + ".lock")
+        # 容器与本机入口共享此目录，并使用同一 UID；默认保留旧的临时目录行为。
+        lock_root = Path(os.environ.get("USV_CONTROL_LOCK_DIR", tempfile.gettempdir()))
+        lock_root.mkdir(parents=True, exist_ok=True)
+        self.path = lock_root / ("usv-control-" + token + ".lock")
         self.file = self.path.open("a+")
         try:
             fcntl.flock(self.file, fcntl.LOCK_EX | fcntl.LOCK_NB)

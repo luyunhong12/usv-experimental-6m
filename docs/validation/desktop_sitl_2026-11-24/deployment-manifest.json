@@ -1,0 +1,10 @@
+{
+  "base_commit": "3659a5f398544c4504eec47d4138676cee940024",
+  "deployment_sha256": {
+    "deploy/compose.yaml": "130239c2d4afd5d4efce1147ed60bf930b323648ca683ae68209fa58fab3bf43",
+    "deploy/simulation/Dockerfile": "3bd2813d56e5946b8a829749aab3de96d4c2315aae6b03434c11c986bd76713a",
+    "deploy/simulation/Dockerfile.dockerignore": "e3076490a8548c5f291043db444ddaf0c0a6cefca05189ba1c9380aebf4087e3",
+    "deploy/sitl/Dockerfile": "138da177e9891ab2c665c5c99730abf934dbaa13a6fd25457a53039baef83525",
+    "supervisor.toml": "ef7307918bcadd988ae27e6ec22ab2f6f020e990a45cf9e3e5afa6ff83052e25"
+  }
+}

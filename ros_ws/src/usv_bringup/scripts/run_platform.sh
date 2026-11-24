@@ -6,7 +6,7 @@ mapfile -t platform_cfg < <(python3 -c 'import json,sys; c=json.load(open(sys.ar
 [[ ${#platform_cfg[@]} -eq 3 ]] || { echo 'Invalid platform configuration' >&2; exit 2; }
 control=ros
 if [[ "${1:-}" == --control ]]; then control="$2"; shift 2; fi
-case "$control" in ros|ardupilot) ;; *) echo 'Use --control ros or --control ardupilot' >&2; exit 2;; esac
+case "$control" in ros|ardupilot|ardupilot-external) ;; *) echo 'Use --control ros, ardupilot or ardupilot-external' >&2; exit 2;; esac
 # The coupled launcher intentionally fixes boat/profile; custom multi-boat use the lower-level launchers.
 for arg in "$@"; do
   case "$arg" in --name|--second-name|--profile|world:=*) echo "Use run_sydney.sh for custom boat/profile/world: $arg" >&2; exit 2;; esac
@@ -33,7 +33,9 @@ if [[ "$control" == ros ]]; then
 else
   setsid bash "$SIM_ROOT/src/usv_bringup/scripts/run_interfaces.sh" control:=False & children+=("$!")
   setsid bash "$SIM_ROOT/src/usv_bringup/scripts/run_ardupilot.sh" --port 9102 & children+=("$!")
-  setsid python3 "$SIM_ROOT/src/usv_bringup/scripts/run_sitl.py" --instance 10 --profile platform15 & children+=("$!")
+  if [[ "$control" == ardupilot ]]; then
+    setsid python3 "$SIM_ROOT/src/usv_bringup/scripts/run_sitl.py" --instance 10 --profile platform15 & children+=("$!")
+  fi
 fi
 if [[ "$control" == ros ]]; then
   source /opt/ros/jazzy/setup.bash

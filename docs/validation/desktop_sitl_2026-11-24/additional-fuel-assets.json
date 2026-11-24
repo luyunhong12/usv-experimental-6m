@@ -1,0 +1,47 @@
+{
+  "tent": {
+    "version": 4,
+    "url": "https://fuel.gazebosim.org/1.0/openrobotics/models/tent/4",
+    "files": {
+      "mesh/tent.dae": "0f7396af0dfc144839d9c583361db85a40e6c1fb6e0c2694084241c668f7beec",
+      "mesh/tent.png": "50c4ed8a59fd1ae2165f73e04a3314a2476f2cf9b5e2cacee3fd7b72b24bc439",
+      "model.config": "80bb6c8094c60b95567a7b6fe61354f35e3fd36768a1fa56d734d20a7938574b",
+      "model.sdf": "a6e9010f7bb6b5c527b0f050c2540361b990a4357592286d767f0ed5b72422b0",
+      "thumbnails/1.png": "d70f3d763300b299344bf9a79c4d70408d4a90f9debd82249b074048c8613a02",
+      "thumbnails/2.png": "502b6eee459549f052e56665d4b54199b9e0c189fba00328a02d1a7b4f55415c",
+      "thumbnails/3.png": "abfc3a7bb1e156e5aa3a23a04f299d449276c3b7e349eb1758115938e48a397d",
+      "thumbnails/4.png": "9d89d0b72707e13a8847f89dec43b53fdfc3e88135a83378d6839270f63aff6c",
+      "thumbnails/5.png": "aa2d77a0cd8ae287dd0337561d7dd993a6c35194992195d5a3d2dd41732b11aa"
+    }
+  },
+  "foldable_table": {
+    "version": 4,
+    "url": "https://fuel.gazebosim.org/1.0/openrobotics/models/foldable_table/4",
+    "files": {
+      "mesh/foldable_table.dae": "abc15a34b5110d7f62d661ee6e9ef2ff70b45f42d7548e7dc4b7c837b77779d6",
+      "mesh/foldable_table.png": "a9bd7a92ab81e214750108ecf305b1bdced61516612ede87202d5af1f537c1da",
+      "model.config": "800f41a313d0bf92169d96318383f1625fd8195954160f8f0acaf17bd3b59f28",
+      "model.sdf": "ad8df2ce58088802d66fda3031110864678f4281e1f3e278e61165445d71dd75",
+      "thumbnails/1.png": "dbab22aa2e6c8d7a94697b2c13815884a170707333fc5f7608db4037183478ac",
+      "thumbnails/2.png": "e01d2a1dde396f1f34083be906a8552b4e082b80fd19954bbd1c533e5c7a1a70",
+      "thumbnails/3.png": "79aa5ff02146ef449314599f9c5d5540f034f55bd22607ee1fdc0691cea4bcd6",
+      "thumbnails/4.png": "a108aa096e3dc1078715fafbe9f5785c215431576e7353b6f4ce0d13d184020c",
+      "thumbnails/5.png": "8133e8bbc37c221d117f12f227b90843663c503d33c69983a838ff0f346dd2c8"
+    }
+  },
+  "foldable_chair": {
+    "version": 3,
+    "url": "https://fuel.gazebosim.org/1.0/openrobotics/models/foldable_chair/3",
+    "files": {
+      "mesh/foldable_chair.dae": "fd035ca9ddf21ffc6757bb6d5a794be5299df6329b8f1574945826ec3fe66345",
+      "mesh/foldable_chair.png": "d120f8068d09dd91bd3fde4401406cdf4c620dfb529bcbb535827532f4632a3a",
+      "model.config": "50e6d163666f7d591097dc6648e638cfdb7a5dc9c132f7e3547792362d8d20d7",
+      "model.sdf": "aee1f51c36c70511283b0357d3b396c95edb024c0019f1c1cf0be40fe5dc04dd",
+      "thumbnails/1.png": "44d669a7e29f31412d3835ea6281f32307f1889822010e3801a2997fa7231ceb",
+      "thumbnails/2.png": "0b309b88735f6ed4f3cdfdf26bd0a6fe279e6b3c66a770991a021bd732a08973",
+      "thumbnails/3.png": "39aeef8cece94535bc7ebaefc455ae23a0d0ff8aa3e16fdd208abbd325c39191",
+      "thumbnails/4.png": "0098616c70ccab3df49556ce921c8a77875b5db26dd68e71ea79d56db0fde183",
+      "thumbnails/5.png": "015e2a54045ac81e0c813c227676599966193f854cb62ceaf83ae2d96e314ddc"
+    }
+  }
+}

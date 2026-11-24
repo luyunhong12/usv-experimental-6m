@@ -1,0 +1,16 @@
+{
+  "interval_sim_s": [
+    66.604,
+    135.486
+  ],
+  "body_surge_min_max_m_s": [
+    -1.8409525473483987,
+    2.3266857267460743
+  ],
+  "actual_azimuth_min_max_deg": [
+    -25.75897885123465,
+    25.836009223875525
+  ],
+  "neutral_end_request": 0.0,
+  "scope": "Final image physical telemetry; final long-run continues separately"
+}

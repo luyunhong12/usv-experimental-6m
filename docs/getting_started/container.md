@@ -1,5 +1,7 @@
 # 独立容器安装与复现
 
+新增GPU桌面和飞控双容器入口见[桌面SITL指南](desktop_sitl.md)，本页保留原独立无窗口复现过程。
+
 这是 Ubuntu 24.04 amd64、ROS 2 Jazzy / Gazebo Harmonic 的无窗口复现路径。容器从 GitHub 获取源码、Git LFS 模型、固定 VRX 和官方 Fuel 资源，不挂载主机源码、ROS 安装或构建产物。GPU 图形窗口、其他架构和任意未来软件源版本不在本次验证范围。
 
 ## 构建依赖镜像

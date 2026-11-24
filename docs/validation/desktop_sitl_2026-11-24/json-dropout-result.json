@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": {
+    "driving_before_dropout": true,
+    "stopped_within_1_5_wall_s": true,
+    "remained_zero_after_stop": true,
+    "observed_at_least_5_s_after_stop": true
+  },
+  "delay_wall_s": 1.0377209499997662,
+  "pre_dropout_request": 0.432,
+  "pre_dropout_body_speed_m_s": 0.7762991677956028,
+  "last_body_speed_m_s": 0.06855740378181147,
+  "scope": "SITL process stopped; Gazebo and JSON bridge remain alive; not a pure GCS-loss test"
+}

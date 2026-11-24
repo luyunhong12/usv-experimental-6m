@@ -1,0 +1,5 @@
+{
+  "usv-simulation:sitl-gui": "sha256:81e65ba5ca5c7642a144abf56597fb54275a195abb84f8f71c3239182d0a9463",
+  "usv-sitl:rover-4.7.3": "sha256:c94217aaf947e46f224d32512f84bb64067f87dabe1a3d45906a1da64b34fbcf",
+  "usv-repro:sensor-baseline": "sha256:b959261cd4ce0029f23e1ebfa32aafe9c3c54d025b8ea670f070c8b77eb34fee"
+}

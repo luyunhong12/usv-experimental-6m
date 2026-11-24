@@ -79,5 +79,7 @@
   "validate_public_cli.py": "tests/integration/validate_public_cli.py",
   "export_appendages.py": "tools/modeling/export_appendages.py",
   "assess_directional_stability.py": "tests/regression/assess_directional_stability.py",
-  "review.sh": "tools/analysis/review.sh"
+  "review.sh": "tools/analysis/review.sh",
+  "run_containers.sh": "tools/setup/run_containers.sh",
+  "fuel_assets.py": "tools/lib/fuel_assets.py"
 }

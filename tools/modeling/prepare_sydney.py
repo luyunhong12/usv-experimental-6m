@@ -35,6 +35,7 @@ from project_paths import WORKSPACE
 from pathlib import Path
 import xml.etree.ElementTree as E
 from contact_physics import configure_contact_physics
+from fuel_assets import localize_fuel_asset
 import json
 import hashlib
 import os
@@ -117,6 +118,11 @@ for uri in world.findall("include/uri"):
             raise FileNotFoundError(f"Missing cached VRX asset: {name}")
         if not local.exists():
             shutil.copytree(versions[-1], local)
+        local = localize_fuel_asset(
+            name,
+            ROOT / "../dependencies/vendor/fuel",
+            ROOT / "src/usv_description/models/instances/sydney_assets",
+        )
         uri.text = str(local)
         assets[name] = str(local)
     elif uri.text == "coast_waves":
@@ -137,7 +143,7 @@ for uri in world.findall("include/uri"):
         # WaveVisual resolves hard-coded texture names against SourceFilePath.
         # Keep a separate model file (inlining into the world breaks textures).
         calm = ROOT / (
-            "src/usv_description/models/coast_waves_gain_"
+            "src/usv_description/models/instances/coast_waves_gain_"
             + str(a.wave_gain).replace(".", "_")
         )
         if a.output:

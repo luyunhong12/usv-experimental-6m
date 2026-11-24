@@ -13,6 +13,7 @@ deep = ["python-docs", "black", "ruff", "cpp-docs", "parameter-docs", "cpp-compl
 # 函数参数、主 SDF 和已建立逐字段说明的权威 JSON。
 [settings.parameter-docs]
 paths = [
+  "deploy/compose.yaml",
   "ros_ws/src/usv_control/config/dds_transport.xml",
   "ros_ws/src/usv_description/models/usv_azimuth_trial.sdf",
   "ros_ws/src/usv_simulation/worlds/usv_hull_trial.sdf",

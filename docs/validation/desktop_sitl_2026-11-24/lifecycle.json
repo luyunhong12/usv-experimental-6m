@@ -1,0 +1,5 @@
+{
+  "repeat_up_preserved_container_id": true,
+  "compose_down_removed_both_services": true,
+  "control_lease_reacquired_after_down": true
+}

@@ -1,0 +1,21 @@
+{
+  "parameter": "WP_SPEED",
+  "before": {
+    "mavpackettype": "PARAM_VALUE",
+    "param_id": "WP_SPEED",
+    "param_value": 4.1666669845581055,
+    "param_type": 9,
+    "param_count": 1253,
+    "param_index": 65535
+  },
+  "after": {
+    "mavpackettype": "PARAM_VALUE",
+    "param_id": "WP_SPEED",
+    "param_value": 4.1666669845581055,
+    "param_type": 9,
+    "param_count": 1253,
+    "param_index": 65535
+  },
+  "same_value_write_readback": true,
+  "scope": "MAVLink protocol; no tuning change; not QGC parameter UI coverage"
+}
