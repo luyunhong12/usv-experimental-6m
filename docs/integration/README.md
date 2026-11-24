@@ -19,3 +19,7 @@ ArduPilot 模式：手动或导航适配 → ArduPilot → 执行器桥接 → G
 4. 再验收解锁、失联停推、重置恢复和低速闭环；飞控与定位稳定后才做 Nav2 任务导航。
 
 最新状态以 [稳定基线报告](../validation/stable_baseline_2026-11-23/README.md) 与 [问题清单](../validation/known_issues.md) 为准；旧 [接入前验收](../validation/preflight_2026-11-21/README.md) 保留历史边界。[ROS 单独运行](../getting_started/README.md) 不需要等飞控接入。
+
+## 2026-11-24 目录准备
+
+已建立 [部署目录](../../deploy/README.md) 与 [SITL 容器配置位置](../../deploy/sitl/README.md)。本次仅整理职责和位置，现有物理、启动脚本、测试数据未搬迁；未下载或启动飞控。后续按“本机仿真 + SITL 容器 + 本机 QGC”验收，再迁移 GPU 仿真容器。

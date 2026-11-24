@@ -11,3 +11,7 @@
 设计源文件与仿真运行网格分开；公共船体参数保留在 description，两个设计方案不复制一套物理实现。工具通过 `tools/lib/project_paths.py` 定位仓库，不依赖启动时工作目录。`tool_paths.json` 记录工具分组位置；新增脚本时同步维护。
 
 第三方 VRX 在 `dependencies/src/vrx`；colcon 显式扫描自有包和该依赖，不在源码目录维护第二份副本。编译输出、原始证据不属于源码。
+
+## 部署与第三方源码
+
+`deploy/sitl` 管理后续飞控容器配方，`dependencies/src/ardupilot` 管理上游源码；自有桥接器和参数仍在 `usv_ardupilot`。已有仿真 Dockerfile 保留 `tools/setup/Dockerfile`，避免移动导致旧启动说明和构建入口失效。详细职责及未实现项见 [部署说明](../../deploy/README.md)。QGC 在宿主机运行；未来 Nav2/定位包在真正实现时创建。
