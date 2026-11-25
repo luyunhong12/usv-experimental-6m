@@ -1,0 +1,15 @@
+[
+  {
+    "id": "sha256:9a39de035e72e6d673e2b72dd39f33d20741e3990e60eded78ee2fb6adb5de45",
+    "tags": [
+      "usv-simulation:corner-hold-20261125",
+      "usv-simulation:sitl-gui"
+    ]
+  },
+  {
+    "id": "sha256:c94217aaf947e46f224d32512f84bb64067f87dabe1a3d45906a1da64b34fbcf",
+    "tags": [
+      "usv-sitl:rover-4.7.3"
+    ]
+  }
+]

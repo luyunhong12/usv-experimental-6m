@@ -59,8 +59,10 @@
 - 非零请求与非零推力符号相反的采样占比分别约7.2%、6.6%、4.4%（仅统计|请求|>0.05且|推力|>5 N）。这是反转瞬态，不能据此说稳态推进方向接反。
 - 已通过保持的东向工况也有上述现象，因此这些不是超限的充分条件，更没有证明唯一根因。保持3 m问题仍未解决。
 
-### 接下来只验证一个有依据的候选
+### 后续候选及筛选结果
 
 当前飞控未设置独立转向减速度时，会使用10°/s²的转向加速度限值估计制动转速。实测从约9.4°/s到回中后基本停止转动经历约9.4秒，包含参考换舵和船体响应。因此先用 `ATC_STR_DEC_MAX=1°/s²` 作为有效转向减速的保守候选，检验提前规划转向制动是否有益。该数值不是纯机械角减速度标定，不能据此断言最优。保持其他参数和全部物理约束不变，不立即推广；必须经过原强横流3 m门槛及后续多流向复验。
+
+该候选已完成[强流完整筛选](../yaw_deceleration_2026-11-25/README.md)：24/25，保持峰值4.093 m、RMS 2.526 m，仍不合格，未采用。正式参数未变；没有进入全流向推广验收。
 
 上游依据：[ModeManual](https://github.com/ArduPilot/ardupilot/blob/d9c5097c3d8333435712ffed86bca8ce00c4bb46/Rover/mode_manual.cpp)说明手动转向默认不使用自动缩放；[AR_AttitudeControl](https://github.com/ArduPilot/ardupilot/blob/d9c5097c3d8333435712ffed86bca8ce00c4bb46/libraries/APM_Control/AR_AttitudeControl.cpp)的get_turn_rate_from_heading使用角度误差和减速度限制允许转速。
