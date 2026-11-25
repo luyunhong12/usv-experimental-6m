@@ -89,3 +89,34 @@ class SustainedMotionTests(unittest.TestCase):
             invalid = [row.copy() for row in samples]
             invalid[15][column] = value
             self.assertFalse(sustained_motion(invalid))
+
+
+class ResponseIdentificationTests(unittest.TestCase):
+    """区分开环辨识与完整导航验收，拒绝不完整响应数据。"""
+
+    def test_response_schedule_and_scope(self):
+        """确认反推边界、结束回中及辨识不能冒充导航通过。"""
+        from navigation_acceptance import response_command
+
+        self.assertEqual(response_command(149.9)[1][2], 1563)
+        self.assertEqual(response_command(150)[1][2], 1437)
+        self.assertEqual(response_command(290)[1], (1500, 1500, 1500))
+        for value in [-1, float("nan"), float("inf")]:
+            with self.assertRaises(ValueError):
+                response_command(value)
+        checks = dict.fromkeys(required_checks(response_only=True), True)
+        self.assertTrue(passed_checks(checks, response_only=True))
+        self.assertFalse(passed_checks(checks))
+        checks["response_coverage"] = False
+        self.assertFalse(passed_checks(checks, response_only=True))
+
+    def test_response_requires_complete_continuous_observations(self):
+        """拒绝截短、缺段、长缺测及非有限响应记录。"""
+        from navigation_acceptance import response_command, response_coverage
+
+        samples = [[i / 10, i / 10, response_command(i / 10)[0]] for i in range(2900)]
+        self.assertTrue(response_coverage(samples))
+        self.assertFalse(response_coverage(samples[:-100]))
+        self.assertFalse(response_coverage(samples[:500] + samples[520:]))
+        samples[100][0] = float("nan")
+        self.assertFalse(response_coverage(samples))

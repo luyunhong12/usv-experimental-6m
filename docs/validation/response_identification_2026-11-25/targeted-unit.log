@@ -1,0 +1,21 @@
+test_target_coverage_and_stationarity (test_navigation_acceptance.LoiterTargetTests.test_target_coverage_and_stationarity)
+不足时长、缺测、漂移目标和非有限数值必须拒绝。 ... ok
+test_empty_and_partial_runs_fail (test_navigation_acceptance.NavigationAcceptanceTests.test_empty_and_partial_runs_fail)
+空结果、仅连接成功或未完成任务不得通过。 ... ok
+test_every_required_stage_is_enforced (test_navigation_acceptance.NavigationAcceptanceTests.test_every_required_stage_is_enforced)
+逐项丢失或失败都应使完整运行失败。 ... ok
+test_failsafe_cannot_certify_navigation (test_navigation_acceptance.NavigationAcceptanceTests.test_failsafe_cannot_certify_navigation)
+仅失联试验不能充当 AUTO、返航与接管验收。 ... ok
+test_response_requires_complete_continuous_observations (test_navigation_acceptance.ResponseIdentificationTests.test_response_requires_complete_continuous_observations)
+拒绝截短、缺段、长缺测及非有限响应记录。 ... ok
+test_response_schedule_and_scope (test_navigation_acceptance.ResponseIdentificationTests.test_response_schedule_and_scope)
+确认反推边界、结束回中及辨识不能冒充导航通过。 ... ok
+test_motion_requires_speed_thrust_and_coverage (test_navigation_acceptance.SustainedMotionTests.test_motion_requires_speed_thrust_and_coverage)
+拒绝只有指令、短时移动、模式错误和中途缺测。 ... ok
+test_stop_requires_continuous_window (test_navigation_acceptance.SustainedStopTests.test_stop_requires_continuous_window)
+窗口内每个样本均须处于 HOLD 且停推。 ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.004s
+
+OK

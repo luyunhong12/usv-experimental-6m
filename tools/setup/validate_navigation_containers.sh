@@ -9,7 +9,7 @@ shift "$(( $# > 0 ? 1 : 0 ))"
 remaining=("$@")
 while (($#)); do
   case "$1" in
-    --failsafe-only|--mirror-course|--current-navigation) shift ;;
+    --failsafe-only|--mirror-course|--current-navigation|--response-only) shift ;;
     --timeout|--current-east|--current-north) [[ $# -ge 2 ]] || { echo 'Missing timeout' >&2; exit 2; }; shift 2 ;;
     *) echo "Unsupported option: $1" >&2; exit 2 ;;
   esac

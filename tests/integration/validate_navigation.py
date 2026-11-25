@@ -40,6 +40,9 @@ from navigation_acceptance import (
     sustained_stop,
     sustained_motion,
     observed_loiter_target,
+    RESPONSE_PLAN,
+    response_command,
+    response_coverage,
 )
 import os
 import sys
@@ -73,6 +76,7 @@ def _load_runtime_dependencies_1():
 p = argparse.ArgumentParser()
 p.add_argument("--label", default="navigation")
 p.add_argument("--failsafe-only", action="store_true")
+p.add_argument("--response-only", action="store_true")
 p.add_argument("--mirror-course", action="store_true")
 p.add_argument("--external-sitl", action="store_true")
 p.add_argument("--isolated-water", action="store_true")
@@ -84,6 +88,10 @@ p.add_argument("--timeout", type=float, default=900)
 p.add_argument("--output", type=_ProjectPath)
 
 a = p.parse_args()
+if a.response_only and (a.failsafe_only or a.mirror_course):
+    p.error(
+        "Response identification cannot be combined with failsafe-only or mirror-course"
+    )
 if not math.isfinite(a.timeout) or a.timeout <= 0:
     p.error("Timeout must be finite and positive")
 if not all(math.isfinite(v) and abs(v) <= 1 for v in (a.current_east, a.current_north)):
@@ -279,7 +287,9 @@ phase = "init"
 phase_t = 0.0
 last_hb = last_arm = last_upload = last_rc = 0.0
 begin = time.monotonic()
-checks = required_checks(a.failsafe_only)
+checks = required_checks(a.failsafe_only, a.response_only)
+response_samples = []
+response_index = -1
 parameter_values = {}
 parameter_targets = {}
 for line in (out / "navigation_low_speed.parm").read_text().splitlines():
@@ -295,6 +305,20 @@ parameter_targets.update(
     FS_THR_ENABLE=1,
     RC_OVERRIDE_TIME=3,
 )
+if a.response_only:
+    parameter_targets.update(
+        RC1_MIN=1100,
+        RC1_MAX=1900,
+        RC1_TRIM=1500,
+        RC1_DZ=30,
+        RC3_MIN=1100,
+        RC3_MAX=1900,
+        RC3_TRIM=1500,
+        RC3_DZ=30,
+        MANUAL_OPTIONS=0,
+        MOT_THST_EXPO=1,
+        MOT_THR_MIN=1,
+    )
 parameter_requests = cycle(parameter_targets)
 last_parameter_request_wall = 0.0
 current_waypoint = 1
@@ -356,7 +380,9 @@ def transition(value, sim):
     phase_t = sim
     event(value)
     # 导航包络试验在AUTO、LOITER和RTL施加同一世界坐标水流，其他阶段清零。
-    active = value == "loiter" or (a.current_navigation and value in {"auto", "rtl"})
+    active = value in {"loiter", "response"} or (
+        a.current_navigation and value in {"auto", "rtl"}
+    )
     east, north = (a.current_east, a.current_north) if active else (0.0, 0.0)
     flow.publish(Vector3d(x=east, y=north, z=0))
     event("current_command", east_m_s=east, north_m_s=north)
@@ -408,6 +434,8 @@ def manual_channels(phase, stage):
         phase: 当前试验阶段。
         stage: 手动阶段，前进、左舵、右舵、停推。
     """
+    if phase == "response":
+        return response_command(max(0.0, sim - phase_t))[1]
     if phase != "manual":
         return (1500, 1500, 1500)
     steering = [1500, 1250, 1750, 1500][stage]
@@ -607,6 +635,10 @@ try:
                 checks["navigation_ready_before_arming"] = navigation_ready
                 home = rows[-1][12:14]
                 phase_start = sim
+                if a.response_only:
+                    setmode(0)
+                    transition("response", sim)
+                    continue
                 if a.failsafe_only:
                     lat, lon = offset(*gps, 40, 0)
                     conn.mav.mission_item_int_send(
@@ -635,6 +667,41 @@ try:
                 ]
                 conn.mav.mission_clear_all_send(1, 1)
                 transition("upload", sim)
+        elif phase == "response":
+            elapsed = sim - phase_t
+            index, channels = response_command(elapsed)
+            if index >= len(RESPONSE_PLAN):
+                setmode(4)
+                transition("complete", sim)
+                break
+            if index != response_index:
+                response_index = index
+                event(
+                    "response_stage",
+                    stage=index,
+                    name=RESPONSE_PLAN[index][0],
+                    pwm=channels,
+                )
+            if (
+                rows
+                and actuators
+                and now - last_actuator_wall < 0.5
+                and (not response_samples or sim > response_samples[-1][0])
+            ):
+                response_samples.append(
+                    [
+                        sim,
+                        elapsed,
+                        index,
+                        mode,
+                        rows[-1][1],
+                        rows[-1][10],
+                        actuators[-1][1],
+                        actuators[-1][3],
+                        rows[-1][4],
+                        rows[-1][14],
+                    ]
+                )
         elif phase == "upload":
             if now - last_upload > 5:
                 conn.mav.mission_count_send(1, 1, len(waypoints))
@@ -853,7 +920,7 @@ if not a.failsafe_only:
         )
 path_metrics = {}
 checks["completed"] = phase == "complete"
-if not a.failsafe_only and home is not None and track:
+if not a.failsafe_only and not a.response_only and home is not None and track:
     tr = np.array(track)
     north = -30.0 if a.mirror_course else 30.0
     points = np.array([[0.0, 0.0], [40.0, 0.0], [40.0, north], [10.0, north]]) + home
@@ -901,7 +968,7 @@ if not a.failsafe_only and home is not None and track:
 checks["estimator_healthy_after_arming"] = bool(
     estimator_log and not estimator_faults and phase_start is not None
 )
-if not a.failsafe_only:
+if not a.failsafe_only and not a.response_only:
     checks["low_speed_tracking"] = bool(
         auto_speeds
         and 0.5 <= np.median(auto_speeds) <= 1.3
@@ -911,8 +978,34 @@ if not a.failsafe_only:
     json.dumps(dict(samples=estimator_log, faults=estimator_faults), indent=2)
 )
 checks["finite"] = bool(rows and np.isfinite(rows).all())
+if a.response_only:
+    checks["response_coverage"] = response_coverage(response_samples)
+    checks["response_manual"] = bool(
+        response_samples and all(r[3] == 0 for r in response_samples if r[1] > 2)
+    )
+    excitation = []
+    end = 0
+    for index, (_, duration, channels) in enumerate(RESPONSE_PLAN):
+        end += duration
+        tail = [r for r in response_samples if int(r[2]) == index and r[1] > end - 5]
+        if not tail:
+            excitation.append(False)
+            continue
+        command = float(np.median([r[4] for r in tail]))
+        angle = float(np.median([r[6] for r in tail]))
+        direction = np.sign(channels[2] - 1500)
+        helm = np.sign(channels[0] - 1500)
+        excitation.append(
+            bool(
+                (abs(command) < 0.01 if direction == 0 else command * direction > 0.05)
+                and (abs(angle) < 0.1 if helm == 0 else angle * helm > 0.1)
+            )
+        )
+    checks["response_excitation"] = all(excitation)
+    np.savetxt(out / "response.csv", np.array(response_samples), delimiter=",")
 r = dict(
-    passed=passed_checks(checks, a.failsafe_only),
+    passed=passed_checks(checks, a.failsafe_only, a.response_only),
+    response_plan=RESPONSE_PLAN if a.response_only else None,
     loiter_target_samples=loiter_observations,
     path_metrics=path_metrics,
     mirrored_course=a.mirror_course,
@@ -923,9 +1016,10 @@ r = dict(
     loss_stop_samples=loss_samples,
     loss_status=loss_status,
     scope=dict(
+        kind="open_loop_response" if a.response_only else "navigation_acceptance",
         isolated_water=a.isolated_water,
         rendering=not a.no_rendering,
-        target_speed_m_s=1.0,
+        target_speed_m_s=None if a.response_only else 1.0,
         current_east_m_s=a.current_east,
         current_north_m_s=a.current_north,
         current_phases=(

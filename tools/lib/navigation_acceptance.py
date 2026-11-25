@@ -1,12 +1,28 @@
 """低速导航验收的必需检查集合；未执行阶段不得默认为通过。"""
 
 
-def required_checks(failsafe_only=False):
+def required_checks(failsafe_only=False, response_only=False):
     """返回全部初始化为失败的检查项。
 
     Args:
         failsafe_only: 是否仅验收独立 GCS 心跳失联。
+        response_only: 是否仅检查开环响应辨识的数据完整性。
     """
+    if response_only:
+        return dict.fromkeys(
+            [
+                "low_speed_parameters",
+                "normal_arming",
+                "navigation_ready_before_arming",
+                "completed",
+                "finite",
+                "estimator_healthy_after_arming",
+                "response_manual",
+                "response_excitation",
+                "response_coverage",
+            ],
+            False,
+        )
     names = [
         "low_speed_parameters",
         "normal_arming",
@@ -40,14 +56,18 @@ def required_checks(failsafe_only=False):
     return dict.fromkeys(names, False)
 
 
-def passed_checks(checks, failsafe_only=False):
+def passed_checks(checks, failsafe_only=False, response_only=False):
     """仅当全部必需项存在且为布尔真时判为通过。
 
     Args:
         checks: 实际检查结果。
         failsafe_only: 是否使用仅失联试验的必需集合。
+        response_only: 是否使用响应辨识的独立必需集合。
     """
-    return all(checks.get(name) is True for name in required_checks(failsafe_only))
+    return all(
+        checks.get(name) is True
+        for name in required_checks(failsafe_only, response_only)
+    )
 
 
 def sustained_stop(samples, minimum_duration=5.0, maximum_gap=0.5):
@@ -119,5 +139,56 @@ def sustained_motion(samples):
             and mode == 15
             for t, speed, command, mode in samples
         )
+        and all(0 < b[0] - a[0] <= 0.5 for a, b in zip(samples, samples[1:]))
+    )
+
+
+# 时长为仿真秒，输入为原生RC通道1/2/3的PWM；1563/1437在已核对的30 us死区后约为正反8.9%驾驶员油门。
+RESPONSE_PLAN = (
+    ("settle", 20, (1500, 1500, 1500)),
+    ("forward", 40, (1500, 1500, 1563)),
+    ("left_input", 30, (1100, 1500, 1563)),
+    ("right_input", 30, (1900, 1500, 1563)),
+    ("center", 30, (1500, 1500, 1563)),
+    ("reverse", 40, (1500, 1500, 1437)),
+    ("reverse_left_input", 30, (1100, 1500, 1437)),
+    ("reverse_right_input", 30, (1900, 1500, 1437)),
+    ("stop", 40, (1500, 1500, 1500)),
+)
+
+
+def response_command(elapsed):
+    """根据仿真时间返回辨识阶段与PWM；非法时间拒绝，结束后回中。
+
+    Args:
+        elapsed: 已运行的仿真秒数。
+    """
+    import math
+
+    if not math.isfinite(elapsed) or elapsed < 0:
+        raise ValueError("Response elapsed time must be finite and non-negative")
+    end = 0
+    for index, (_, duration, channels) in enumerate(RESPONSE_PLAN):
+        end += duration
+        if elapsed < end:
+            return index, channels
+    return len(RESPONSE_PLAN), (1500, 1500, 1500)
+
+
+def response_coverage(samples):
+    """检查响应辨识覆盖完整时长、全部阶段且没有长时间缺测。
+
+    Args:
+        samples: 每行以仿真秒、阶段累计秒和阶段序号开头的有限数据。
+    """
+    import math
+
+    duration = sum(stage[1] for stage in RESPONSE_PLAN)
+    return bool(
+        len(samples) > 1
+        and samples[0][1] < 1
+        and samples[-1][1] > duration - 1
+        and {int(row[2]) for row in samples} == set(range(len(RESPONSE_PLAN)))
+        and all(all(math.isfinite(v) for v in row) for row in samples)
         and all(0 < b[0] - a[0] <= 0.5 for a, b in zip(samples, samples[1:]))
     )
