@@ -1,0 +1,7 @@
+{
+  "heading_total_variation_deg": 806.34,
+  "minimum_desired_speed_m_s": 0.1937497854232788,
+  "negative_desired_speed_samples": 0,
+  "samples": 1050,
+  "scope": "DataFlash stable LOITER after 15s until mode exit; raw NTUN.Yaw centidegrees converted to degrees; THR.DesSpeed is limited desired speed, not motor force."
+}

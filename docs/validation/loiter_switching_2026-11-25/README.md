@@ -30,3 +30,26 @@
 只在独立候选配置把 `LOIT_TYPE` 从0改为1，使用官方“始终船头朝向目标”策略。其他参数维持正式基线，**不叠加上一轮减速度候选**，不修改物理或固件。北向0.30 m/s完整25项导航验收，原3 m门槛不变。
 
 这用于检验取消前进/倒车选择后的总体表现，并非纯粹的单环节因果隔离：该模式也改变航向目标及绕行路径，仍可能为制动而输出负推力。未完成测试前不得宣称改进；若失败，保存失败证据、不采用。未接Nav2。
+
+### 对照已完成：未采用
+
+`hold_forwardonly_north030_20261125_01` 完成全部流程，24/25通过，唯一失败仍为3 m保持。LOIT_TYPE实际读回1；正式参数文件仍为0，没有叠加减速度候选。
+
+| 指标 | 原前进/倒车基线 | 始终船头朝向目标 |
+| --- | ---: | ---: |
+| 保持峰值 | 4.265 m | 11.766 m |
+| 保持RMS | 2.288 m | 6.672 m |
+| AUTO路径最大偏差 | 9.091 m | 9.198 m |
+| 完整检查 | 24/25 | 24/25 |
+
+保持15秒后的1050条DataFlash速度样本中，期望速度最小约0.194 m/s，没有负值；同期航向累计绝对变化约806.34°。累计绝对变化不等于净转角或两整圈，包含可能的往返转动。该模式确实去掉了稳定段目标速度变号，但带来了更大的转身运动和保持距离；因此不能简单禁用倒车，也不能把“有切换”直接当作根因。单次对照不是所有流场的普遍结论。
+
+![保持距离对照](forward_only/comparison.png)
+
+证据：[完整结果](forward_only/result.json)、[指标汇总](forward_only/summary.json)、[方向检查](forward_only/direction-check.json)、[候选配置](forward_only/navigation_low_speed.parm)、[镜像ID](forward_only/images.json)、[输入SHA256](forward_only/input-sha256.txt)、[运行文件哈希](forward_only/runtime-inputs.json)、[测试代码提交绑定](forward_only/verified-code-commit.json)。原始目录 `artifacts/navigation/hold_forwardonly_north030_20261125_01`，CSV无损压缩归档，解压后字节哈希见[manifest](forward_only/manifest.json)。临时容器结束后清理。
+
+[Code Supervisor quick](forward_only/supervisor-quick.log)通过，只代表quick范围。本步无运行源码变动，沿用[既有构建与单元测试](../response_identification_2026-11-25/build-test.log)，补做本次完整SITL集成测试；未重复full/deep。失败候选只归档到验证文档，没有推广。
+
+## 下一步边界
+
+保留前进和倒车两种能力，进一步按真实舵角、参考舵角、推力换向和航向误差定位每次切换的瞬态。只有证实某类切换产生不必要的反复时，才设计带明确退出条件的有限迟滞/协调策略，不能直接延迟全部切换；延迟也可能扩大位置误差。任何新策略必须单独标记实验固件或配置，并通过原3 m及多流向回归后才可采用。本轮没有解决有流保持问题，没有改动船体物理，也没有接Nav2。

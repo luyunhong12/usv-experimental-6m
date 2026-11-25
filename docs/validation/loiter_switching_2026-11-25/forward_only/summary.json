@@ -1,0 +1,84 @@
+{
+  "candidate": {
+    "passed": false,
+    "checks": {
+      "low_speed_parameters": true,
+      "normal_arming": true,
+      "navigation_ready_before_arming": true,
+      "guided_mode": true,
+      "moving_before_loss": true,
+      "gcs_failsafe_hold": true,
+      "gcs_failsafe_stops_command": true,
+      "failsafe_status_reported": true,
+      "independent_rc_link_healthy": true,
+      "completed": true,
+      "finite": true,
+      "estimator_healthy_after_arming": true,
+      "mission_upload": true,
+      "auto_waypoints": true,
+      "auto_path_corridor": true,
+      "loiter_mode": true,
+      "loiter_radius": true,
+      "loiter_target_observed": true,
+      "loiter_target_radius": false,
+      "rtl_mode": true,
+      "rtl_home": true,
+      "hold_stops_command": true,
+      "hold_slows_vessel": true,
+      "manual_takeover": true,
+      "low_speed_tracking": true
+    },
+    "final_phase": "complete",
+    "loiter_peak_m": 11.766120028963584,
+    "loiter_rms_m": 6.67246755957686,
+    "path_metrics": {
+      "max_m": 9.197516566806598,
+      "p95_m": 8.838583871128577,
+      "rms_m": 3.8279094550388106
+    }
+  },
+  "baseline": {
+    "passed": false,
+    "checks": {
+      "low_speed_parameters": true,
+      "normal_arming": true,
+      "navigation_ready_before_arming": true,
+      "guided_mode": true,
+      "moving_before_loss": true,
+      "gcs_failsafe_hold": true,
+      "gcs_failsafe_stops_command": true,
+      "failsafe_status_reported": true,
+      "independent_rc_link_healthy": true,
+      "completed": true,
+      "finite": true,
+      "estimator_healthy_after_arming": true,
+      "mission_upload": true,
+      "auto_waypoints": true,
+      "auto_path_corridor": true,
+      "loiter_mode": true,
+      "loiter_radius": true,
+      "loiter_target_observed": true,
+      "loiter_target_radius": false,
+      "rtl_mode": true,
+      "rtl_home": true,
+      "hold_stops_command": true,
+      "hold_slows_vessel": true,
+      "manual_takeover": true,
+      "low_speed_tracking": true
+    },
+    "final_phase": "complete",
+    "loiter_peak_m": 4.264868716081387,
+    "loiter_rms_m": 2.288036312693077,
+    "path_metrics": {
+      "max_m": 9.09075812548923,
+      "p95_m": 8.759479410789424,
+      "rms_m": 3.7968086142381976
+    }
+  },
+  "label": "hold_forwardonly_north030_20261125_01",
+  "changed_parameter": {
+    "LOIT_TYPE": 1.0
+  },
+  "raw_path": "artifacts/navigation/hold_forwardonly_north030_20261125_01",
+  "scope": "Single full navigation case, north 0.30 m/s; unchanged physics and official firmware; not repeated trials."
+}
