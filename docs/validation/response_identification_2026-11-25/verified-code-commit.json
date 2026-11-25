@@ -1,0 +1,4 @@
+{
+  "commit": "2b74b44b8d0f86d544d90711dc0be95ae1e23172",
+  "verified": "All three passing runs have byte-identical integration script, acceptance helper and runner to this commit; complete input manifests remain per case."
+}
