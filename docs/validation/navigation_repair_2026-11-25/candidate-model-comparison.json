@@ -1,0 +1,12 @@
+[
+  {
+    "file": "ros_ws/src/usv_description/models/usv_azimuth_trial.sdf",
+    "normalized_match": true,
+    "host_sha256": "7016a2e361de4ef0c48cb174ede619437f82088f9791f74f3027505757d54ee4"
+  },
+  {
+    "file": "ros_ws/src/usv_description/config/component_mass_ledger.json",
+    "normalized_match": true,
+    "host_sha256": "ad9f9bfe14e9b9261afd343227edfc26ce0702dfd60c4f751fe8f7390b562521"
+  }
+]

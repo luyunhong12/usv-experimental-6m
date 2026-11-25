@@ -1,0 +1,45 @@
+{
+  "parameters": {
+    "WP_SPEED": 1.0,
+    "RTL_SPEED": 0.800000011920929,
+    "WP_RADIUS": 3.0,
+    "LOIT_RADIUS": 4.0,
+    "ATC_ACCEL_MAX": 0.20000000298023224,
+    "ATC_DECEL_MAX": 0.20000000298023224,
+    "FS_GCS_ENABLE": 1.0,
+    "FS_GCS_TIMEOUT": 5.0,
+    "FS_TIMEOUT": 1.5,
+    "FS_ACTION": 2.0,
+    "FS_THR_ENABLE": 1.0,
+    "RC_OVERRIDE_TIME": 3.0,
+    "AHRS_EKF_TYPE": 3.0,
+    "EK3_ENABLE": 1.0
+  },
+  "expected": {
+    "WP_SPEED": 1,
+    "RTL_SPEED": 0.8,
+    "WP_RADIUS": 3,
+    "LOIT_RADIUS": 4,
+    "ATC_ACCEL_MAX": 0.2,
+    "ATC_DECEL_MAX": 0.2,
+    "FS_GCS_ENABLE": 1,
+    "FS_GCS_TIMEOUT": 5,
+    "FS_TIMEOUT": 1.5,
+    "FS_ACTION": 2,
+    "FS_THR_ENABLE": 1,
+    "RC_OVERRIDE_TIME": 3,
+    "AHRS_EKF_TYPE": 3,
+    "EK3_ENABLE": 1
+  },
+  "parameters_match": true,
+  "heartbeat": {
+    "mavpackettype": "HEARTBEAT",
+    "type": 11,
+    "autopilot": 3,
+    "base_mode": 1,
+    "custom_mode": 4,
+    "system_status": 3,
+    "mavlink_version": 3
+  },
+  "unarmed_hold": true
+}

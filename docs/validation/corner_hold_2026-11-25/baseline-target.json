@@ -1,0 +1,24 @@
+{
+  "tracking_radius6_left_01": {
+    "source": "DataFlash NTUN.WpDist, actual LOITER destination",
+    "window_s": [
+      15,
+      60
+    ],
+    "count": 450,
+    "max_m": 4.214696884155273,
+    "p95_m": 4.111670017242432,
+    "rms_m": 3.4576900041465994
+  },
+  "tracking_radius6_right_01": {
+    "source": "DataFlash NTUN.WpDist, actual LOITER destination",
+    "window_s": [
+      15,
+      60
+    ],
+    "count": 450,
+    "max_m": 5.258211612701416,
+    "p95_m": 5.213574433326721,
+    "rms_m": 3.9298169556314253
+  }
+}

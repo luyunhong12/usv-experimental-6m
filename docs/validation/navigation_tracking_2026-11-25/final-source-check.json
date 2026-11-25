@@ -1,0 +1,12 @@
+{
+  "tracking_radius6_left_01": {
+    "ros_ws/src/usv_ardupilot/config/navigation_low_speed.parm": true,
+    "tests/integration/validate_navigation.py": true,
+    "tools/setup/validate_navigation_containers.sh": true
+  },
+  "tracking_radius6_right_01": {
+    "ros_ws/src/usv_ardupilot/config/navigation_low_speed.parm": true,
+    "tests/integration/validate_navigation.py": true,
+    "tools/setup/validate_navigation_containers.sh": true
+  }
+}

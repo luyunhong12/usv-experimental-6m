@@ -1,0 +1,41 @@
+--- a/Rover/Parameters.h
++++ b/Rover/Parameters.h
+@@ -415,6 +415,7 @@
+ 
+     // gain for speed of correction in loiter
+     AP_Float loiter_speed_gain;
++    AP_Int8 loiter_keep_speed; // Experimental motor-boat active zero-speed regulation.
+ 
+     // FS options
+     AP_Int32 fs_options;
+--- a/Rover/Parameters.cpp
++++ b/Rover/Parameters.cpp
+@@ -669,6 +669,13 @@
+     // @Increment: 0.5
+     // @User: Advanced
+     AP_GROUPINFO("CRASH_TIMEOUT", 61, ParametersG2, crash_timeout, 2.0),
++
++    // @Param: LOIT_KEEP_SPEED
++    // @DisplayName: Experimental motor boat active loiter stop
++    // @Description: Keep the ground-speed controller active at zero requested speed in motor-boat LOITER. Preserves its disturbance-rejection integral instead of declaring a coast stop. HOLD and failsafe behaviour are unchanged. Simulation experiment only.
++    // @Values: 0:Upstream stop controller,1:Active zero-speed control
++    // @User: Advanced
++    AP_GROUPINFO("LOIT_KEEP_SPEED", 62, ParametersG2, loiter_keep_speed, 0),
+ 
+     AP_GROUPEND
+ };
+--- a/Rover/mode.cpp
++++ b/Rover/mode.cpp
+@@ -310,7 +310,11 @@
+         g2.sailboat.get_throttle_and_set_mainsail(target_speed, throttle_out);
+     } else {
+         // call speed or stop controller
+-        if (is_zero(target_speed) && !rover.is_balancebot()) {
++        // Only opt-in motor-boat LOITER retains zero-speed feedback and trim.
++        // Other modes, especially HOLD and failsafe, keep upstream stop semantics.
++        const bool active_loiter_stop = g2.loiter_keep_speed.get() == 1 &&
++            rover.is_boat() && !g2.sailboat.sail_enabled() && this == &rover.mode_loiter;
++        if (is_zero(target_speed) && !rover.is_balancebot() && !active_loiter_stop) {
+             bool stopped;
+             throttle_out = 100.0f * attitude_control.get_throttle_out_stop(g2.motors.limit.throttle_lower, g2.motors.limit.throttle_upper, g.speed_cruise, g.throttle_cruise * 0.01f, rover.G_Dt, stopped);
+         } else {

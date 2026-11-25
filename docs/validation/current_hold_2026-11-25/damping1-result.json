@@ -1,0 +1,164 @@
+{
+  "passed": false,
+  "checks": {
+    "low_speed_parameters": true,
+    "normal_arming": true,
+    "navigation_ready_before_arming": true,
+    "guided_mode": true,
+    "moving_before_loss": true,
+    "gcs_failsafe_hold": true,
+    "gcs_failsafe_stops_command": true,
+    "failsafe_status_reported": true,
+    "independent_rc_link_healthy": true,
+    "completed": true,
+    "finite": true,
+    "estimator_healthy_after_arming": true,
+    "mission_upload": true,
+    "auto_waypoints": true,
+    "auto_path_corridor": true,
+    "loiter_mode": true,
+    "loiter_radius": true,
+    "loiter_target_observed": true,
+    "loiter_target_radius": false,
+    "rtl_mode": true,
+    "rtl_home": true,
+    "hold_stops_command": true,
+    "hold_slows_vessel": true,
+    "manual_takeover": true,
+    "low_speed_tracking": true
+  },
+  "path_metrics": {
+    "max_m": 8.949308943533595,
+    "p95_m": 8.573119345274165,
+    "rms_m": 3.7065754167137768
+  },
+  "hold_peak_m": 5.888486782426609,
+  "events": [
+    {
+      "time": 45.222,
+      "event": "upload"
+    },
+    {
+      "time": 45.222,
+      "event": "current_command",
+      "east_m_s": 0.0,
+      "north_m_s": 0.0
+    },
+    {
+      "time": 45.322,
+      "event": "start_auto"
+    },
+    {
+      "time": 45.322,
+      "event": "current_command",
+      "east_m_s": 0.0,
+      "north_m_s": 0.0
+    },
+    {
+      "time": 45.322,
+      "event": "auto"
+    },
+    {
+      "time": 45.322,
+      "event": "current_command",
+      "east_m_s": 0.0,
+      "north_m_s": 0.3
+    },
+    {
+      "time": 95.114,
+      "event": "waypoint_reached",
+      "seq": 1
+    },
+    {
+      "time": 134.47,
+      "event": "waypoint_reached",
+      "seq": 2
+    },
+    {
+      "time": 182.629,
+      "event": "waypoint_reached",
+      "seq": 3
+    },
+    {
+      "time": 182.629,
+      "event": "loiter"
+    },
+    {
+      "time": 182.629,
+      "event": "current_command",
+      "east_m_s": 0.0,
+      "north_m_s": 0.3
+    },
+    {
+      "time": 302.672,
+      "event": "hold"
+    },
+    {
+      "time": 302.672,
+      "event": "current_command",
+      "east_m_s": 0.0,
+      "north_m_s": 0.0
+    },
+    {
+      "time": 332.759,
+      "event": "manual"
+    },
+    {
+      "time": 332.759,
+      "event": "current_command",
+      "east_m_s": 0.0,
+      "north_m_s": 0.0
+    },
+    {
+      "time": 364.764,
+      "event": "rtl"
+    },
+    {
+      "time": 364.764,
+      "event": "current_command",
+      "east_m_s": 0.0,
+      "north_m_s": 0.3
+    },
+    {
+      "time": 401.413,
+      "event": "outbound"
+    },
+    {
+      "time": 401.413,
+      "event": "current_command",
+      "east_m_s": 0.0,
+      "north_m_s": 0.0
+    },
+    {
+      "time": 413.427,
+      "event": "outbound_motion_ready",
+      "speed_m_s": 1.1130608443234515,
+      "command": 0.326,
+      "duration_s": 2.9279999999999973
+    },
+    {
+      "time": 413.427,
+      "event": "gcs_loss"
+    },
+    {
+      "time": 413.427,
+      "event": "current_command",
+      "east_m_s": 0.0,
+      "north_m_s": 0.0
+    },
+    {
+      "time": 431.499,
+      "event": "complete"
+    },
+    {
+      "time": 431.499,
+      "event": "current_command",
+      "east_m_s": 0.0,
+      "north_m_s": 0.0
+    },
+    {
+      "event": "auto_path_audit",
+      "max_distance_to_route_m": 8.949308943533595
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "west015": {
+    "peak_elapsed_s": 39.072,
+    "peak_error_m": 3.467949621498372,
+    "raw_result_sha256": "9735880d4f58112ebbdb29b37c2f3af67083b5df745676234aad7c34ca7afcbf"
+  },
+  "north030": {
+    "peak_elapsed_s": 102.78,
+    "peak_error_m": 4.264868716081387,
+    "raw_result_sha256": "0d0d41ef88cf0bbf659be05511338462e7c3128cbe1bb80b3e02cce73ea7d1ee"
+  }
+}

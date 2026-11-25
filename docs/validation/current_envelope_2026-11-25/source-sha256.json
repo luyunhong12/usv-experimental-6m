@@ -1,0 +1,6 @@
+{
+  "tests/integration/validate_navigation.py": "4336ea65f5f4efac99650d3dcadf9b8c57733c9fb04a905973a3c2459cdba678",
+  "tools/setup/validate_navigation_containers.sh": "e1640bcef12c0d62ca3ce4ec08127925eedb0c5dc5fc5ddb620aa864f74e727b",
+  "tools/lib/navigation_acceptance.py": "749f4b6a0f4b2fc6c16431e1b9f3a101906a1a2a63e6ca061678e4e1d9653363",
+  "ros_ws/src/usv_ardupilot/config/navigation_low_speed.parm": "f4c020f675d4dd229fa0d26bcbc51f7db88cdfe84f33c8d0d877c9d2790f2634"
+}

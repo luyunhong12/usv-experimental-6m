@@ -1,0 +1,114 @@
+[
+  {
+    "run": "navigation_repair_final_01",
+    "passed": true,
+    "phase": "complete",
+    "mirrored": false,
+    "path": {
+      "max_m": 9.755240445099673
+    },
+    "auto_s": 142.456,
+    "speed_median": 1.0092087741427647,
+    "loiter_error_m": 3.694832958477787,
+    "rtl_s": 20.596000000000004,
+    "max_abs_roll_pitch_deg": [
+      0.8935237456106794,
+      0.14349973520782158
+    ]
+  },
+  {
+    "run": "tracking_ff03_left_01",
+    "passed": true,
+    "phase": "complete",
+    "mirrored": false,
+    "path": {
+      "max_m": 14.53032569445827,
+      "p95_m": 12.527592544956633,
+      "rms_m": 5.528823907375545
+    },
+    "auto_s": 166.081,
+    "speed_median": 1.0049719948666844,
+    "loiter_error_m": 4.822688900381685,
+    "rtl_s": 145.889,
+    "max_abs_roll_pitch_deg": [
+      0.9421701379825761,
+      0.25472613740379074
+    ]
+  },
+  {
+    "run": "tracking_balanced_left_02",
+    "passed": true,
+    "phase": "complete",
+    "mirrored": false,
+    "path": {
+      "max_m": 8.648010946476802,
+      "p95_m": 7.485812750813352,
+      "rms_m": 2.761456627022466
+    },
+    "auto_s": 127.614,
+    "speed_median": 0.994479594619111,
+    "loiter_error_m": 4.801897001750318,
+    "rtl_s": 15.75,
+    "max_abs_roll_pitch_deg": [
+      0.8896305113835437,
+      0.14608629671347348
+    ]
+  },
+  {
+    "run": "tracking_radius6_left_01",
+    "passed": true,
+    "phase": "complete",
+    "mirrored": false,
+    "path": {
+      "max_m": 8.431203398502532,
+      "p95_m": 7.304447906365397,
+      "rms_m": 2.6762474107489904
+    },
+    "auto_s": 126.30199999999999,
+    "speed_median": 0.9914735507195895,
+    "loiter_error_m": 4.672487078806457,
+    "rtl_s": 5.653999999999996,
+    "max_abs_roll_pitch_deg": [
+      0.8945070519559366,
+      0.14506896493733443
+    ]
+  },
+  {
+    "run": "tracking_radius6_right_01",
+    "passed": true,
+    "phase": "complete",
+    "mirrored": true,
+    "path": {
+      "max_m": 8.897407675845784,
+      "p95_m": 7.667250402096954,
+      "rms_m": 2.7528965332296993
+    },
+    "auto_s": 129.936,
+    "speed_median": 0.9927738861170219,
+    "loiter_error_m": 5.329627939060752,
+    "rtl_s": 103.38499999999999,
+    "max_abs_roll_pitch_deg": [
+      0.9693501937128838,
+      0.2850413329325312
+    ]
+  },
+  {
+    "run": "tracking_rate25_left_01",
+    "passed": false,
+    "phase": "interrupted",
+    "mirrored": false,
+    "path": {
+      "max_m": 14.13443162805629,
+      "p95_m": 12.705209944014882,
+      "rms_m": 5.05007459632926
+    },
+    "auto_s": 136.297,
+    "speed_median": 0.9940030473554095,
+    "loiter_error_m": 2.9898634815939653,
+    "rtl_s": null,
+    "max_abs_roll_pitch_deg": [
+      0.6998185787732378,
+      0.1733549064451506
+    ]
+  }
+]

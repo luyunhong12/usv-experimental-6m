@@ -1,0 +1,146 @@
+[
+  {
+    "event": "forward",
+    "wall": 1795586445.6964667,
+    "position": {
+      "mavpackettype": "GLOBAL_POSITION_INT",
+      "time_boot_ms": 98717,
+      "lat": -337226056,
+      "lon": 1506745542,
+      "alt": -240,
+      "relative_alt": 47,
+      "vx": 0,
+      "vy": 9,
+      "vz": 3,
+      "hdg": 9102
+    }
+  },
+  {
+    "event": "forward_end",
+    "wall": 1795586477.902956,
+    "position": {
+      "mavpackettype": "GLOBAL_POSITION_INT",
+      "time_boot_ms": 130816,
+      "lat": -337226040,
+      "lon": 1506748382,
+      "alt": -260,
+      "relative_alt": 20,
+      "vx": -8,
+      "vy": 96,
+      "vz": -3,
+      "hdg": 9249
+    }
+  },
+  {
+    "event": "left_turn",
+    "wall": 1795586477.9033535,
+    "position": {
+      "mavpackettype": "GLOBAL_POSITION_INT",
+      "time_boot_ms": 130816,
+      "lat": -337226040,
+      "lon": 1506748382,
+      "alt": -260,
+      "relative_alt": 20,
+      "vx": -8,
+      "vy": 96,
+      "vz": -3,
+      "hdg": 9249
+    }
+  },
+  {
+    "event": "left_turn_end",
+    "wall": 1795586516.2049265,
+    "position": {
+      "mavpackettype": "GLOBAL_POSITION_INT",
+      "time_boot_ms": 169016,
+      "lat": -337224243,
+      "lon": 1506749131,
+      "alt": -290,
+      "relative_alt": -7,
+      "vx": 62,
+      "vy": 4,
+      "vz": 6,
+      "hdg": 159
+    }
+  },
+  {
+    "event": "second_turn",
+    "wall": 1795586516.2053058,
+    "position": {
+      "mavpackettype": "GLOBAL_POSITION_INT",
+      "time_boot_ms": 169016,
+      "lat": -337224243,
+      "lon": 1506749131,
+      "alt": -290,
+      "relative_alt": -7,
+      "vx": 62,
+      "vy": 4,
+      "vz": 6,
+      "hdg": 159
+    }
+  },
+  {
+    "event": "second_turn_end",
+    "wall": 1795586544.5235932,
+    "position": {
+      "mavpackettype": "GLOBAL_POSITION_INT",
+      "time_boot_ms": 197216,
+      "lat": -337224011,
+      "lon": 1506747004,
+      "alt": -350,
+      "relative_alt": -62,
+      "vx": 19,
+      "vy": -92,
+      "vz": 5,
+      "hdg": 27163
+    }
+  },
+  {
+    "event": "loiter",
+    "wall": 1795586546.5270534,
+    "position": {
+      "mavpackettype": "GLOBAL_POSITION_INT",
+      "time_boot_ms": 199216,
+      "lat": -337224002,
+      "lon": 1506746817,
+      "alt": -230,
+      "relative_alt": 51,
+      "vx": -4,
+      "vy": -75,
+      "vz": -9,
+      "hdg": 25667
+    }
+  },
+  {
+    "event": "hold",
+    "wall": 1795586578.5567384,
+    "position": {
+      "mavpackettype": "GLOBAL_POSITION_INT",
+      "time_boot_ms": 231116,
+      "lat": -337223982,
+      "lon": 1506746655,
+      "alt": -260,
+      "relative_alt": 27,
+      "vx": 0,
+      "vy": -3,
+      "vz": -3,
+      "hdg": 12656
+    }
+  },
+  {
+    "event": "finished",
+    "wall": 1795586603.5983717,
+    "position": {
+      "mavpackettype": "GLOBAL_POSITION_INT",
+      "time_boot_ms": 256016,
+      "lat": -337223959,
+      "lon": 1506746622,
+      "alt": -390,
+      "relative_alt": -205,
+      "vx": 0,
+      "vy": -8,
+      "vz": 14,
+      "hdg": 12478
+    }
+  }
+]

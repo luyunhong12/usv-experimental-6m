@@ -1,0 +1,6 @@
+{
+  "dependencies/patches/ardupilot-rover-loiter-velocity-damping.patch": "dc8b46d27e13ebeef69fba72b7231e5bd8c888730560e457396561b8eea7dfa4",
+  "deploy/sitl/Dockerfile.loiter": "94072d4dcca1b844ff5dea57bdefbaba0a83e07027b4f67af149fc9dda3fc2c3",
+  "deploy/sitl/Dockerfile.loiter.dockerignore": "838c1758e18384061807d31179578c767f513252280bfe09bc5e0cf835e43d9a",
+  "tools/setup/validate_navigation_containers.sh": "b97617d1d170e7e88e4d951c49ea0436ca273c96bb466a89730a0929f93451a9"
+}

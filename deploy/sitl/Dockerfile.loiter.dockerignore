@@ -1,0 +1,13 @@
+# 构建上下文只包含已固定的飞控源码，避免发送船模、凭据和试验数据。
+**
+!dependencies/
+!dependencies/src/
+!dependencies/src/ardupilot/
+!dependencies/src/ardupilot/**
+dependencies/src/ardupilot/build/
+dependencies/src/ardupilot/venv*/
+dependencies/src/ardupilot/.venv/
+dependencies/src/ardupilot/**/__pycache__/
+!dependencies/patches/
+!dependencies/patches/ardupilot-rover-loiter-velocity-damping.patch
+!dependencies/patches/ardupilot-rover-loiter-active-stop.patch

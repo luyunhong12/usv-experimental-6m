@@ -22,3 +22,8 @@ BATT_CURR_PIN 12
 BATT_VOLT_MULT 10.1
 BATT_AMP_PERVLT 17
 LOG_DISARMED 1
+
+# JSON free-running transport must still use the real EKF3 estimator.
+# SIM_JSON otherwise changes the default to truth-based EKF type 10.
+AHRS_EKF_TYPE 3
+EK3_ENABLE 1

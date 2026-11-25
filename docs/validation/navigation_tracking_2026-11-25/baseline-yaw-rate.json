@@ -1,0 +1,11 @@
+{
+  "window_s": [
+    98,
+    105
+  ],
+  "count": 70,
+  "median_desired_deg_s": -15.0,
+  "median_actual_deg_s": -9.84877872467041,
+  "estimated_output_per_rad_s": 0.3158570535772507,
+  "basis": "Observed closed-loop quasi-steady response at ~1 m/s; candidate feedforward, not real-vessel calibration."
+}

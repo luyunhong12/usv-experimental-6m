@@ -86,3 +86,17 @@ class StepLimiter:
         )
         self.last = result
         return result
+
+
+def encode_sensor_packet(state):
+    """生成兼容 ArduPilot JSON 布尔解析器的紧凑数据包。
+
+    Args:
+        state: 物理观测字典；拒绝 NaN 和无穷值。
+    """
+    import json
+
+    # Rover 4.7.3 的 BOOLEAN 分支不会跳过冒号后的空格。
+    return (
+        "\n" + json.dumps(state, allow_nan=False, separators=(",", ":")) + "\n"
+    ).encode()

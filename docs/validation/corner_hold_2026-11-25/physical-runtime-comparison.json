@@ -1,0 +1,42 @@
+{
+  "/work/usv/ros_ws/src/usv_ardupilot/scripts/json_bridge.py": {
+    "baseline_sha256": "0fa3072a04e93cb94bee20ec6a8bb9326cc0e7755e2897bff38e88979558bdf3",
+    "candidate_sha256": "0fa3072a04e93cb94bee20ec6a8bb9326cc0e7755e2897bff38e88979558bdf3",
+    "identical": true
+  },
+  "/work/usv/ros_ws/install/usv_simulation/lib/libUsvAppendageHydrodynamics.so": {
+    "baseline_sha256": "4971dfd9611cad96c16a1f8329bb38592de1a6e62cb02e65f15b24fab8a1ae42",
+    "candidate_sha256": "4971dfd9611cad96c16a1f8329bb38592de1a6e62cb02e65f15b24fab8a1ae42",
+    "identical": true
+  },
+  "/work/usv/ros_ws/install/usv_simulation/lib/libUsvHullHydrostatics.so": {
+    "baseline_sha256": "c6a84871110a8755fa9597d97a1405196df0c9e7821d69d896ee9e9d1a4ab5b8",
+    "candidate_sha256": "c6a84871110a8755fa9597d97a1405196df0c9e7821d69d896ee9e9d1a4ab5b8",
+    "identical": true
+  },
+  "/work/usv/ros_ws/install/usv_simulation/lib/libUsvSteeringCommandFilter.so": {
+    "baseline_sha256": "5755ff96299580ea4b9aadef173799f737d5d4b4bc9aa86bc4dce1e86e2b3a28",
+    "candidate_sha256": "5755ff96299580ea4b9aadef173799f737d5d4b4bc9aa86bc4dce1e86e2b3a28",
+    "identical": true
+  },
+  "/work/usv/ros_ws/install/usv_simulation/lib/libUsvAzimuthPropulsion.so": {
+    "baseline_sha256": "c996c93ddb70be4c430936b990c80b4808bba5c965a229f5dd8ae8b712ae867d",
+    "candidate_sha256": "c996c93ddb70be4c430936b990c80b4808bba5c965a229f5dd8ae8b712ae867d",
+    "identical": true
+  },
+  "/work/usv/ros_ws/install/usv_physics/lib/libUsvPhysics.so": {
+    "baseline_sha256": "3877596a3c9b56f876cb51f134baedc99d2ad8287e445eb68a86b1134e66d4e4",
+    "candidate_sha256": "3877596a3c9b56f876cb51f134baedc99d2ad8287e445eb68a86b1134e66d4e4",
+    "identical": true
+  },
+  "/work/usv/ros_ws/install/usv_physics/lib/libUsvInertiaResponseProbe.so": {
+    "baseline_sha256": "d9f3a43a341d07663ccb993799b5bd63af5a6f316f0523d462634a7bdcf8743d",
+    "candidate_sha256": "d9f3a43a341d07663ccb993799b5bd63af5a6f316f0523d462634a7bdcf8743d",
+    "identical": true
+  },
+  "generated_boat.sdf": {
+    "baseline_sha256": "2e8c1dacadef89b4aee976c455498ed0fbd142b8879d0dd8abf01a6249738fad",
+    "candidate_sha256": "2e8c1dacadef89b4aee976c455498ed0fbd142b8879d0dd8abf01a6249738fad",
+    "identical": true
+  }
+}

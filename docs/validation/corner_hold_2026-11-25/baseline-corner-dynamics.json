@@ -1,0 +1,10 @@
+{
+  "window_s": [
+    90,
+    110
+  ],
+  "median_speed_m_s": 1.0306305828787954,
+  "median_abs_course_accel_m_s2": 0.1972120217592766,
+  "p95_abs_course_accel_m_s2": 0.2454636626325431,
+  "max_abs_sideslip_deg": 15.62514433095564
+}

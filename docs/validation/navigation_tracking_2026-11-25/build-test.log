@@ -1,0 +1,395 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.10kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/usv-repro:sensor-baseline
+#2 DONE 0.0s
+
+#3 [internal] load build context
+#3 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/usv-repro:sensor-baseline@sha256:b959261cd4ce0029f23e1ebfa32aafe9c3c54d025b8ea670f070c8b77eb34fee
+#4 resolve docker.io/library/usv-repro:sensor-baseline@sha256:b959261cd4ce0029f23e1ebfa32aafe9c3c54d025b8ea670f070c8b77eb34fee 0.0s done
+#4 DONE 0.0s
+
+#3 [internal] load build context
+#3 transferring context: 87.90kB 0.0s done
+#3 DONE 0.1s
+
+#5 [2/5] RUN test -f /opt/ros/jazzy/opt/gz_physics_vendor/lib/libgz-physics7.so.7.8.0     && test -f /opt/ros/jazzy/opt/gz_sim_vendor/lib/libgz-sim8.so.8.15.0
+#5 CACHED
+
+#6 [3/5] COPY --chown=1000:1000 . /work/usv
+#6 CACHED
+
+#7 [4/5] WORKDIR /work/usv
+#7 CACHED
+
+#8 [5/5] RUN test ! -e ros_ws/build && test ! -e ros_ws/install     && test ! -e dependencies/src/ardupilot     && ./usv build && ./usv test
+#8 7.833 hull 876562
+#8 8.073 azimuth 27144
+#8 8.112 propeller 7164
+#8 8.508 {
+#8 8.508   "profile": "ENGINEERING_ESTIMATE_NOT_MEASURED",
+#8 8.508   "sealed_envelope_watertight": true,
+#8 8.508   "max_source_vertex_distance_m": 6.967255752501893e-08,
+#8 8.508   "sealed_envelope_volume_m3": 8.358237950000001,
+#8 8.508   "triangles": 106,
+#8 8.508   "total_trial_mass_kg": 1230.7805718688016,
+#8 8.508   "trial_total_cg_m": [
+#8 8.508     -0.6526744218511645,
+#8 8.508     -2.886185907601686e-18,
+#8 8.508     0.493518971415728
+#8 8.508   ],
+#8 8.508   "equilibrium_pose_z_roll_pitch": [
+#8 8.508     -0.2143194780499318,
+#8 8.508     2.1495369417028438e-17,
+#8 8.508     -0.002598950608264182
+#8 8.508   ],
+#8 8.508   "displaced_volume_m3": 1.2307805718688016,
+#8 8.508   "residual": [
+#8 8.508     -1.27675647831893e-13,
+#8 8.508     2.950972799453666e-12,
+#8 8.508     -3.2312561178749463e-17
+#8 8.508   ],
+#8 8.508   "roll_pitch_restoring_stiffness_Nm_rad": [
+#8 8.508     17564.60798608533,
+#8 8.508     174868.11342863704
+#8 8.508   ],
+#8 8.508   "limitations": [
+#8 8.508     "station envelope sealed deck; no flooding",
+#8 8.508     "appendage displacement omitted",
+#8 8.508     "estimated aggregate/mesh inertia; no measured mass distribution",
+#8 8.508     "linear/quadratic damping uncalibrated; constant diagonal added mass trial; VRX distributed hull pressure and deep-water orbital flow; relative current/wind enabled",
+#8 8.508     "propulsion and energy are engineering proxies; fuel inertia uses a quasi-static unbaffled box tank"
+#8 8.508   ]
+#8 8.508 }
+#8 9.045 Starting >>> vrx_gazebo
+#8 9.050 Starting >>> usv_description
+#8 9.919 Finished <<< usv_description [0.87s]
+#8 9.919 Starting >>> vrx_ros
+#8 10.11 Finished <<< vrx_gazebo [1.06s]
+#8 10.11 Starting >>> wamv_description
+#8 10.92 Finished <<< wamv_description [0.81s]
+#8 10.92 Starting >>> wamv_gazebo
+#8 11.52 Finished <<< wamv_gazebo [0.60s]
+#8 11.52 Starting >>> usv_energy
+#8 12.53 Finished <<< usv_energy [1.01s]
+#8 12.53 Starting >>> usv_physics
+#8 18.09 Finished <<< vrx_ros [8.17s]
+#8 18.09 Starting >>> usv_control
+#8 18.98 Finished <<< usv_control [0.89s]
+#8 18.98 Starting >>> vrx_gz
+#8 33.59 Finished <<< vrx_gz [14.6s]
+#8 33.59 Starting >>> usv_ardupilot
+#8 34.29 Finished <<< usv_ardupilot [0.71s]
+#8 47.30 Finished <<< usv_physics [34.8s]
+#8 47.30 Starting >>> usv_simulation
+#8 55.95 Finished <<< usv_simulation [8.65s]
+#8 55.95 Starting >>> usv_bringup
+#8 56.56 Finished <<< usv_bringup [0.61s]
+#8 56.60 
+#8 56.60 Summary: 12 packages finished [47.6s]
+#8 57.28 测试证据：/work/usv/artifacts/validation/unit-tests/20261125T015059Z-HAvSNg/tests.log
+#8 57.89 Starting >>> usv_energy
+#8 57.93 UpdateCTestConfiguration  from :/work/usv/ros_ws/build/usv_energy/CTestConfiguration.ini
+#8 57.93 Parse Config file:/work/usv/ros_ws/build/usv_energy/CTestConfiguration.ini
+#8 57.93    Site: buildkitsandbox
+#8 57.93    Build name: (empty)
+#8 57.93  Add coverage exclude regular expressions.
+#8 57.93 Create new tag: 20261125-0151 - Experimental
+#8 57.93 UpdateCTestConfiguration  from :/work/usv/ros_ws/build/usv_energy/CTestConfiguration.ini
+#8 57.93 Parse Config file:/work/usv/ros_ws/build/usv_energy/CTestConfiguration.ini
+#8 57.93 Test project /work/usv/ros_ws/build/usv_energy
+#8 57.93 Constructing a list of tests
+#8 57.93 Done constructing a list of tests
+#8 57.93 Updating test list for fixtures
+#8 57.93 Added 0 tests to meet fixture requirements
+#8 57.93 Checking test dependency graph...
+#8 57.93 Checking test dependency graph end
+#8 57.93 test 1
+#8 57.93     Start 1: energy_conservation_and_faults
+#8 57.93 
+#8 57.93 1: Test command: /work/usv/ros_ws/build/usv_energy/test_energy
+#8 57.93 1: Working Directory: /work/usv/ros_ws/build/usv_energy
+#8 57.93 1: Test timeout computed to be: 10000000
+#8 57.94 1: PASS conservation, charge/discharge, reserve, thermal, fuel, starter, cooling, sensor, reset
+#8 57.94 1/1 Test #1: energy_conservation_and_faults ...   Passed    0.01 sec
+#8 57.94 
+#8 57.94 100% tests passed, 0 tests failed out of 1
+#8 57.94 
+#8 57.94 Total Test time (real) =   0.01 sec
+#8 57.94 Finished <<< usv_energy [0.05s]
+#8 57.94 Starting >>> usv_simulation
+#8 57.96 UpdateCTestConfiguration  from :/work/usv/ros_ws/build/usv_simulation/CTestConfiguration.ini
+#8 57.96 Parse Config file:/work/usv/ros_ws/build/usv_simulation/CTestConfiguration.ini
+#8 57.96    Site: buildkitsandbox
+#8 57.96    Build name: (empty)
+#8 57.96  Add coverage exclude regular expressions.
+#8 57.96 Create new tag: 20261125-0151 - Experimental
+#8 57.96 UpdateCTestConfiguration  from :/work/usv/ros_ws/build/usv_simulation/CTestConfiguration.ini
+#8 57.96 Parse Config file:/work/usv/ros_ws/build/usv_simulation/CTestConfiguration.ini
+#8 57.96 Test project /work/usv/ros_ws/build/usv_simulation
+#8 57.96 Constructing a list of tests
+#8 57.96 Done constructing a list of tests
+#8 57.96 Updating test list for fixtures
+#8 57.96 Added 0 tests to meet fixture requirements
+#8 57.96 Checking test dependency graph...
+#8 57.96 Checking test dependency graph end
+#8 57.96 test 1
+#8 57.96       Start  1: whole_vessel_wrench_transform
+#8 57.96 
+#8 57.96 1: Test command: /work/usv/ros_ws/build/usv_simulation/test_wrench_audit
+#8 57.96 1: Working Directory: /work/usv/ros_ws/build/usv_simulation
+#8 57.96 1: Test timeout computed to be: 10000000
+#8 58.00  1/11 Test  #1: whole_vessel_wrench_transform ........   Passed    0.04 sec
+#8 58.00 test 2
+#8 58.00       Start  2: appendage_geometry_and_passivity
+#8 58.00 
+#8 58.00 2: Test command: /work/usv/ros_ws/build/usv_simulation/test_appendages
+#8 58.00 2: Working Directory: /work/usv/ros_ws/build/usv_simulation
+#8 58.00 2: Test timeout computed to be: 10000000
+#8 58.01 2: Wet clipping, center, force passivity, mirror/reverse symmetry and restoring moment passed
+#8 58.01  2/11 Test  #2: appendage_geometry_and_passivity .....   Passed    0.00 sec
+#8 58.01 test 3
+#8 58.01       Start  3: steering_integral_load_rejection
+#8 58.01 
+#8 58.01 3: Test command: /work/usv/ros_ws/build/usv_simulation/test_steering_integral
+#8 58.01 3: Working Directory: /work/usv/ros_ws/build/usv_simulation
+#8 58.01 3: Test timeout computed to be: 10000000
+#8 58.01  3/11 Test  #3: steering_integral_load_rejection .....   Passed    0.00 sec
+#8 58.01 test 4
+#8 58.01       Start  4: geometry_resistance_passivity
+#8 58.01 
+#8 58.01 4: Test command: /work/usv/ros_ws/build/usv_simulation/test_resistance
+#8 58.01 4: Working Directory: /work/usv/ros_ws/build/usv_simulation
+#8 58.01 4: Test timeout computed to be: 10000000
+#8 58.01  4/11 Test  #4: geometry_resistance_passivity ........   Passed    0.00 sec
+#8 58.01 test 5
+#8 58.01       Start  5: added_mass_invariants
+#8 58.01 
+#8 58.01 5: Test command: /work/usv/ros_ws/build/usv_simulation/test_added_mass
+#8 58.01 5: Working Directory: /work/usv/ros_ws/build/usv_simulation
+#8 58.01 5: Test timeout computed to be: 10000000
+#8 58.01 5: Added inertia signs, zero-speed acceleration, skew power and timestep convergence passed
+#8 58.01  5/11 Test  #5: added_mass_invariants ................   Passed    0.00 sec
+#8 58.01 test 6
+#8 58.01       Start  6: fuel_volume_mass_inertia
+#8 58.01 
+#8 58.01 6: Test command: /work/usv/ros_ws/build/usv_simulation/test_fuel_mass
+#8 58.01 6: Working Directory: /work/usv/ros_ws/build/usv_simulation
+#8 58.01 6: Test timeout computed to be: 10000000
+#8 58.08 6: PASS analytic levels, tilted complementary volumes, tensors and bounds
+#8 58.08  6/11 Test  #6: fuel_volume_mass_inertia .............   Passed    0.07 sec
+#8 58.08 test 7
+#8 58.08       Start  7: propulsion_force_power_bounds
+#8 58.08 
+#8 58.08 7: Test command: /work/usv/ros_ws/build/usv_simulation/test_propulsion
+#8 58.08 7: Working Directory: /work/usv/ros_ws/build/usv_simulation
+#8 58.08 7: Test timeout computed to be: 10000000
+#8 58.08  7/11 Test  #7: propulsion_force_power_bounds ........   Passed    0.00 sec
+#8 58.08 test 8
+#8 58.08       Start  8: steering_reference_bounds
+#8 58.08 
+#8 58.08 8: Test command: /work/usv/ros_ws/build/usv_simulation/test_steering_reference
+#8 58.08 8: Working Directory: /work/usv/ros_ws/build/usv_simulation
+#8 58.08 8: Test timeout computed to be: 10000000
+#8 58.09  8/11 Test  #8: steering_reference_bounds ............   Passed    0.00 sec
+#8 58.09 test 9
+#8 58.09       Start  9: wave_kinematics_consistency
+#8 58.09 
+#8 58.09 9: Test command: /work/usv/ros_ws/build/usv_simulation/test_wave_kinematics
+#8 58.09 9: Working Directory: /work/usv/ros_ws/build/usv_simulation
+#8 58.09 9: Test timeout computed to be: 10000000
+#8 58.09 9: Shared surface height/slopes, startup derivative, orbital depth decay, divergence and calm current passed
+#8 58.09  9/11 Test  #9: wave_kinematics_consistency ..........   Passed    0.00 sec
+#8 58.09 test 10
+#8 58.09       Start 10: distributed_wave_pressure_analytic
+#8 58.09 
+#8 58.09 10: Test command: /work/usv/ros_ws/build/usv_simulation/test_wave_pressure
+#8 58.09 10: Working Directory: /work/usv/ros_ws/build/usv_simulation
+#8 58.09 10: Test timeout computed to be: 10000000
+#8 58.10 10: Flat/tilted surfaces, dry/full immersion, exact moments, translation and curved-wave convergence passed
+#8 58.10 10/11 Test #10: distributed_wave_pressure_analytic ...   Passed    0.01 sec
+#8 58.10 test 11
+#8 58.10       Start 11: hydrostatics_analytic
+#8 58.10 
+#8 58.10 11: Test command: /work/usv/ros_ws/build/usv_simulation/test_hydrostatics
+#8 58.10 11: Working Directory: /work/usv/ros_ws/build/usv_simulation
+#8 58.10 11: Test timeout computed to be: 10000000
+#8 58.10 11: dry, partial, full, translated and rotated analytic cases passed
+#8 58.10 11/11 Test #11: hydrostatics_analytic ................   Passed    0.00 sec
+#8 58.10 
+#8 58.10 100% tests passed, 0 tests failed out of 11
+#8 58.10 
+#8 58.10 Total Test time (real) =   0.14 sec
+#8 58.11 Finished <<< usv_simulation [0.17s]
+#8 58.11 
+#8 58.11 Summary: 2 packages finished [0.34s]
+#8 58.25 Summary: 12 tests, 0 errors, 0 failures, 0 skipped
+#8 58.55 test_precision_rejects_penetration_and_sampling_gaps (test_equipment_ledger.ContactPrecisionTest.test_precision_rejects_penetration_and_sampling_gaps)
+#8 58.55 稳态 6 mm 穿透、整球穿过及漏采样必须失败。 ... ok
+#8 60.03 test_signed_gap_includes_inside_sphere (test_equipment_ledger.ContactPrecisionTest.test_signed_gap_includes_inside_sphere)
+#8 60.03 球心进入实体时不可把到表面的正距离误认为没有穿透。 ... ok
+#8 60.03 test_battery_capacity_matches_count (test_equipment_ledger.LedgerTests.test_battery_capacity_matches_count)
+#8 60.03 验证电池容量与所选电池数量一致。 ... ok
+#8 60.03 test_fixed_ballast_mass_geometry_and_balance (test_equipment_ledger.LedgerTests.test_fixed_ballast_mass_geometry_and_balance)
+#8 60.03 配重来自横向质量矩，实体体积和惯性必须与台账一致。 ... ok
+#8 60.03 test_fuel_exact_once (test_equipment_ledger.LedgerTests.test_fuel_exact_once)
+#8 60.03 验证燃油质量只计入一次。 ... ok
+#8 60.08 test_nominal_fore_ballast_equilibrium (test_equipment_ledger.LedgerTests.test_nominal_fore_ballast_equilibrium)
+#8 60.08 新增鳍后检验真实浮力平衡，两方案均不生成纵向配重。 ... ok
+#8 60.38 test_power_modes (test_equipment_ledger.LedgerTests.test_power_modes)
+#8 60.38 验证不同模式的辅助功率预算。 ... ok
+#8 60.39 test_profile_increment (test_equipment_ledger.LedgerTests.test_profile_increment)
+#8 60.39 验证方案升级增加的质量与台账一致。 ... ok
+#8 60.39 test_reject_duplicate (test_equipment_ledger.LedgerTests.test_reject_duplicate)
+#8 60.39 验证重复台账标识被拒绝。 ... ok
+#8 60.39 test_relocated_batteries_clear_equipment (test_equipment_ledger.LedgerTests.test_relocated_batteries_clear_equipment)
+#8 60.39 电池与托架须避开集中设备包络，并保留至少 30 mm 船壳余量。 ... ok
+#8 60.39 test_unique_and_physical (test_equipment_ledger.LedgerTests.test_unique_and_physical)
+#8 60.39 验证标识唯一且质量惯性满足基本物理约束。 ... ok
+#8 60.41 test_generation_idempotent (test_equipment_ledger.StabilizerTests.test_generation_idempotent)
+#8 60.41 两次生成仍各有一个显示、碰撞及独立受力实例。 ... ok
+#8 60.43 test_invalid_geometry (test_equipment_ledger.StabilizerTests.test_invalid_geometry)
+#8 60.43 非法尺寸和截面数量在生成之前拒绝。 ... ok
+#8 60.43 test_solid_accounting (test_equipment_ledger.StabilizerTests.test_solid_accounting)
+#8 60.43 解析椭圆柱加相似截面棱台校验体积和台账质量惯性。 ... ok
+#8 60.45 test_missing_or_unsafe_model_fails (test_fuel_assets.TestFuelAssets.test_missing_or_unsafe_model_fails)
+#8 60.45 缺模型和越界名称不得静默联网或继续启动。 ... ok
+#8 60.45 test_recursive_references_preserve_sources (test_fuel_assets.TestFuelAssets.test_recursive_references_preserve_sources)
+#8 60.45 递归模型和跨模型网格可离线访问，原SDF保持不变。 ... ok
+#8 60.45 test_centerline_buoyancy (test_hull_symmetry.HullSymmetryTest.test_centerline_buoyancy)
+#8 60.45 验证中线姿态下浮心横向对称。 ... ok
+#8 60.53 test_heeled_mirror (test_hull_symmetry.HullSymmetryTest.test_heeled_mirror)
+#8 60.53 验证左右横倾的体积与浮心镜像关系。 ... ok
+#8 60.57 test_boolean_has_no_leading_space (test_json_time.PacketEncodingTests.test_boolean_has_no_leading_space)
+#8 60.57 真实 wire 字节必须能被不跳空格的 BOOLEAN 分支识别。 ... ok
+#8 60.57 test_bounded_steps_and_quaternions (test_json_time.StepLimiterTests.test_bounded_steps_and_quaternions)
+#8 60.57 一秒间隔分成五十步，保持单位四元数并到达目标位置。 ... ok
+#8 60.57 test_clock_reset_rejected (test_json_time.StepLimiterTests.test_clock_reset_rejected)
+#8 60.57 时间回退必须明确报错。 ... ok
+#8 60.57 test_duplicate_suppressed (test_json_time.StepLimiterTests.test_duplicate_suppressed)
+#8 60.57 相同时间戳不重复发送状态。 ... ok
+#8 60.57 test_circle (test_maneuver_metrics.ManeuverMetricsTest.test_circle)
+#8 60.57 用解析圆轨迹验证回转指标。 ... ok
+#8 60.57 test_coasting_sway_is_not_stop (test_maneuver_metrics.ManeuverMetricsTest.test_coasting_sway_is_not_stop)
+#8 60.57 验证仍有横向漂移时不会误报停止。 ... ok
+#8 60.57 test_dropout_window_preserves_real_failures (test_maneuver_metrics.ManeuverMetricsTest.test_dropout_window_preserves_real_failures)
+#8 60.57 结束停推应排除，阶段内失联或漏停推仍必须失败。 ... ok
+#8 60.58 test_duplicate_time_rejected (test_maneuver_metrics.ManeuverMetricsTest.test_duplicate_time_rejected)
+#8 60.58 重复采样时间不能进入速度微分或拟合。 ... ok
+#8 60.58 test_environment_rejects_missing_motion_and_dry_propeller (test_maneuver_metrics.ManeuverMetricsTest.test_environment_rejects_missing_motion_and_dry_propeller)
+#8 60.58 有波高而无升沉不能通过，推进器浸水不足也必须被识别。 ... ok
+#8 60.58 test_force_audit_requires_fin_and_respects_stage (test_maneuver_metrics.ManeuverMetricsTest.test_force_audit_requires_fin_and_respects_stage)
+#8 60.58 新鳍遥测缺失必须失败，短阶段不得混入前一阶段力矩。 ... ok
+#8 60.59 test_recovery_counts_transient_not_only_tail (test_maneuver_metrics.ManeuverMetricsTest.test_recovery_counts_transient_not_only_tail)
+#8 60.59 稳态已恢复也不能忽略此前的大幅超越。 ... ok
+#8 60.59 test_reverse_crossing_reports_sway (test_maneuver_metrics.ManeuverMetricsTest.test_reverse_crossing_reports_sway)
+#8 60.59 验证反推过零时保留横向速度。 ... ok
+#8 60.59 test_reverse_distance_uses_initial_frame (test_maneuver_metrics.ManeuverMetricsTest.test_reverse_distance_uses_initial_frame)
+#8 60.59 旋转坐标系下区分纵向进距、横漂和累计路径。 ... ok
+#8 60.59 test_reverse_recovery_retains_equilibrium_yaw (test_maneuver_metrics.ManeuverMetricsTest.test_reverse_recovery_retains_equilibrium_yaw)
+#8 60.59 恢复到非零配平偏航不等于回到原航向。 ... ok
+#8 60.60 test_short_pulse_excludes_previous_stage (test_maneuver_metrics.ManeuverMetricsTest.test_short_pulse_excludes_previous_stage)
+#8 60.60 短脉冲舵角验收不能混入此前的零舵样本。 ... ok
+#8 60.60 test_trigger_requires_measured_heading (test_maneuver_metrics.ManeuverMetricsTest.test_trigger_requires_measured_heading)
+#8 60.60 即使记录触发标记，也必须达到实际航向阈值。 ... ok
+#8 60.60 test_missing_and_invalid (test_mass_properties.MassProperties.test_missing_and_invalid)
+#8 60.60 验证缺失与非物理的质量属性被拒绝。 ... ok
+#8 60.60 test_parallel_axis (test_mass_properties.MassProperties.test_parallel_axis)
+#8 60.60 验证平行轴定理的惯性组合结果。 ... ok
+#8 60.60 test_plate_mass (test_mass_properties.MassProperties.test_plate_mass)
+#8 60.60 验证板面积、厚度与密度给出的质量。 ... ok
+#8 60.60 test_empty_and_partial_runs_fail (test_navigation_acceptance.NavigationAcceptanceTests.test_empty_and_partial_runs_fail)
+#8 60.60 空结果、仅连接成功或未完成任务不得通过。 ... ok
+#8 60.60 test_every_required_stage_is_enforced (test_navigation_acceptance.NavigationAcceptanceTests.test_every_required_stage_is_enforced)
+#8 60.60 逐项丢失或失败都应使完整运行失败。 ... ok
+#8 60.60 test_failsafe_cannot_certify_navigation (test_navigation_acceptance.NavigationAcceptanceTests.test_failsafe_cannot_certify_navigation)
+#8 60.60 仅失联试验不能充当 AUTO、返航与接管验收。 ... ok
+#8 60.60 test_stop_requires_continuous_window (test_navigation_acceptance.SustainedStopTests.test_stop_requires_continuous_window)
+#8 60.60 窗口内每个样本均须处于 HOLD 且停推。 ... ok
+#8 60.87 <frozen importlib._bootstrap>:488: DeprecationWarning: Type google.protobuf.pyext._message.ScalarMapContainer uses PyType_Spec with a metaclass that has custom tp_new. This is deprecated and will no longer be allowed in Python 3.14.
+#8 60.87 <frozen importlib._bootstrap>:488: DeprecationWarning: Type google.protobuf.pyext._message.MessageMapContainer uses PyType_Spec with a metaclass that has custom tp_new. This is deprecated and will no longer be allowed in Python 3.14.
+#8 60.87 /usr/lib/python3/dist-packages/google/protobuf/internal/well_known_types.py:91: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+#8 60.87   _EPOCH_DATETIME_NAIVE = datetime.datetime.utcfromtimestamp(0)
+#8 60.87 test_missing_physical_subscriber (test_readiness.TestCommandReadiness.test_missing_physical_subscriber)
+#8 60.87 只有两个物理订阅端都连接才能声明指令通道可用。 ... ok
+#8 60.87 test_unacknowledged_command_and_recovery (test_readiness.TestCommandReadiness.test_unacknowledged_command_and_recovery)
+#8 60.87 持续丢失油门反馈会失败，实际收到后才恢复。 ... ok
+#8 60.87 test_exclusive_domains_and_release (test_readiness.TestDomainIsolation.test_exclusive_domains_and_release)
+#8 60.87 文件锁互斥应跨进程生效，关闭租约后域可以再次使用。 ... ok
+#8 60.90 test_missing_and_stale (test_readiness.TestReadiness.test_missing_and_stale)
+#8 60.90 验证缺失和过期健康状态会清空窗口。 ... ok
+#8 60.90 test_paused_and_reset (test_readiness.TestReadiness.test_paused_and_reset)
+#8 60.90 验证暂停和时钟回退不被视为持续就绪。 ... ok
+#8 60.90 test_window (test_readiness.TestReadiness.test_window)
+#8 60.90 验证完整就绪时间窗口。 ... ok
+#8 60.90 test_independent_camera_has_no_stereo_translation (test_rendering_audit.RenderingAuditTests.test_independent_camera_has_no_stereo_translation)
+#8 60.90 侧相机不能继承 Gazebo 的伪基线，右相机保留已知 0.2 m 基线。 ... ok
+#8 60.90 test_invalid_content_and_stale_frames_fail (test_rendering_audit.RenderingAuditTests.test_invalid_content_and_stale_frames_fail)
+#8 60.90 无效内容和旧帧必须失败，即使消息数量足够。 ... ok
+#8 60.90 test_padded_big_endian_points (test_rendering_audit.RenderingAuditTests.test_padded_big_endian_points)
+#8 60.90 两行点云带填充且字段顺序不同，按明确 XYZ 预期读取。 ... ok
+#8 60.90 test_stream_rejects_missing_tail_and_duplicate_time (test_rendering_audit.RenderingAuditTests.test_stream_rejects_missing_tail_and_duplicate_time)
+#8 60.90 正常 5 Hz 流通过；尾部无数据和重复时间不能被平均频率隐藏。 ... ok
+#8 60.90 test_geometry_is_authoritative (test_resistance_budget.ResistanceBudgetTest.test_geometry_is_authoritative)
+#8 60.90 验证轮廓几何优先于缓存面积。 ... ok
+#8 60.90 test_overallocation_rejected (test_resistance_budget.ResistanceBudgetTest.test_overallocation_rejected)
+#8 60.90 验证附体分配超过预算时被拒绝。 ... ok
+#8 60.90 test_reference_conservation (test_resistance_budget.ResistanceBudgetTest.test_reference_conservation)
+#8 60.90 验证原轴向阻力总预算守恒。 ... ok
+#8 60.90 test_explicit_identical_resume (test_trial_evidence.EvidenceTests.test_explicit_identical_resume)
+#8 60.90 只有显式恢复且源码、二进制、工况一致时才允许复用。 ... ok
+#8 60.91 test_failed_process_cannot_be_masked_by_result_json (test_trial_evidence.EvidenceTests.test_failed_process_cannot_be_masked_by_result_json)
+#8 60.91 子进程失败时，即使遗留结果写通过也必须使套件失败。 ... START case
+#8 60.93 FAIL case: exit 1; evidence retained
+#8 60.93 END case 1
+#8 60.93 ok
+#8 60.93 test_legacy_and_incomplete_outputs_rejected (test_trial_evidence.EvidenceTests.test_legacy_and_incomplete_outputs_rejected)
+#8 60.93 无版本清单的历史输出不能直接标记为新版本验收。 ... ok
+#8 60.93 test_missing_hash_rejected (test_trial_evidence.EvidenceTests.test_missing_hash_rejected)
+#8 60.93 删去必需遥测摘要不能使不完整证据继续通过。 ... ok
+#8 60.93 test_rendered_sample_modification_rejected (test_trial_evidence.EvidenceTests.test_rendered_sample_modification_rejected)
+#8 60.93 公开渲染样本也必须绑定，不能只封存计数结果。 ... ok
+#8 60.93 test_requested_spec_change_rejected (test_trial_evidence.EvidenceTests.test_requested_spec_change_rejected)
+#8 60.93 同名工况不能用旧遥测证明新参数。 ... ok
+#8 60.93 test_source_and_binary_change_rejected (test_trial_evidence.EvidenceTests.test_source_and_binary_change_rejected)
+#8 60.93 源码或构建库内容变化均使旧缓存失效。 ... ok
+#8 60.93 test_trace_modification_rejected (test_trial_evidence.EvidenceTests.test_trace_modification_rejected)
+#8 60.93 结果仍写 passed 时，修改过的遥测也必须被拒绝。 ... ok
+#8 60.93 
+#8 60.93 ----------------------------------------------------------------------
+#8 60.93 Ran 62 tests in 2.386s
+#8 60.93 
+#8 60.93 OK
+#8 61.02 test_actuator_rate_and_limits (test_vector_thrust.InterfaceTests.test_actuator_rate_and_limits)
+#8 61.02 验证执行器速率和角度限制。 ... ok
+#8 61.02 test_cg_offset_moment (test_vector_thrust.InterfaceTests.test_cg_offset_moment)
+#8 61.02 验证重心偏置产生的力矩。 ... ok
+#8 61.02 test_invalid (test_vector_thrust.InterfaceTests.test_invalid)
+#8 61.02 验证非法输入被拒绝。 ... ok
+#8 61.02 test_right_turn_and_reverse (test_vector_thrust.InterfaceTests.test_right_turn_and_reverse)
+#8 61.02 验证右转与反推的方向约定。 ... ok
+#8 61.02 test_straight (test_vector_thrust.InterfaceTests.test_straight)
+#8 61.02 验证零转角直推的力与力矩。 ... ok
+#8 61.02 
+#8 61.02 ----------------------------------------------------------------------
+#8 61.02 Ran 5 tests in 0.000s
+#8 61.02 
+#8 61.02 OK
+#8 DONE 61.1s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 21.6s done
+#9 exporting manifest sha256:9bc8ed3de9b3c91adad32cce7f45c186c68a25086fd972ef9e984ccc5d34058d 0.0s done
+#9 exporting config sha256:c7b11d87f6638d14ab00fa2a41531c131caff28d5ba088446fbbccf42d22fde8 0.0s done
+#9 exporting attestation manifest sha256:a5bd46f5d450b69f9925546acb5053727d6de64103b86311f2ce2e56f45f184f 0.0s done
+#9 exporting manifest list sha256:bc583d381a9b2988d9c7365394ffb9e286dd16705407a96703416aeefde2311f 0.0s done
+#9 naming to docker.io/library/usv-simulation:tracking-20261125 done
+#9 unpacking to docker.io/library/usv-simulation:tracking-20261125
+#9 unpacking to docker.io/library/usv-simulation:tracking-20261125 2.6s done
+#9 DONE 24.4s

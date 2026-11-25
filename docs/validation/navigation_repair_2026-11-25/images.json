@@ -1,0 +1,130 @@
+[
+    {
+        "Id": "sha256:4064415880c9aa5a8ff9941f524e119f0394aaa274419ac686b63f7a2474f80d",
+        "RepoTags": [
+            "usv-simulation:navigation-audit-20261125-final"
+        ],
+        "RepoDigests": [
+            "usv-simulation@sha256:4064415880c9aa5a8ff9941f524e119f0394aaa274419ac686b63f7a2474f80d"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-11-25T09:15:30.590009754+08:00",
+        "Config": {
+            "User": "1000:1000",
+            "Env": [
+                "PATH=/opt/usv-venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "LC_ALL=C.UTF-8",
+                "ROS_DISTRO=jazzy",
+                "DEBIAN_FRONTEND=noninteractive",
+                "NVIDIA_DRIVER_CAPABILITIES=all"
+            ],
+            "Entrypoint": [
+                "/ros_entrypoint.sh"
+            ],
+            "Cmd": [
+                "./usv",
+                "run",
+                "--control",
+                "ardupilot-external"
+            ],
+            "WorkingDir": "/work/usv",
+            "Labels": {
+                "org.opencontainers.image.version": "24.04"
+            },
+            "ArgsEscaped": true,
+            "Shell": [
+                "/bin/bash",
+                "-c"
+            ]
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 1680159859,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:6078cde548a521a729def2ee7875e9f65513c18f0d4bac4db817417617d7006a",
+                "sha256:3df4fcaf3100fabebec0708eda68a03a3ab5a43c2fcc5d4a66f618b6a51313d3",
+                "sha256:76829913616f892749a1831fc77be6477b25f4d0d5f9dd38142d62d5f067fb29",
+                "sha256:4f12ad26f6f4a7a2c62555af6320cac2eed185891ead3142a244caffb9613be8",
+                "sha256:12161651e7f61535217bc26701d8fbd607372e1964ef1053107dbc09c1bd2b40",
+                "sha256:f81dd5fe4f4ece963058cfde3a4a81162743e75178afd97690cd26e19f8514c9",
+                "sha256:636acecb5a8c8f728ebe0d875e21bc1a4e722d0d0057b66961130c8433cb4f85",
+                "sha256:64636a3549eb8dd9b492dbdc9f8042765e06560fec1c429ffbe058eda41e1919",
+                "sha256:794d055f2ab4fa93844d2f5e52071397006b07804434734f176c79adeeb4028e",
+                "sha256:f227e3ebec759fd9ceb10a05d7f8dddad5ca8c85e82be3fc8b5d00f9213a7960",
+                "sha256:6969932bd46a61bcb1aaa2b8b3e73fa18f5ac510dec20d0e1ef94be84acbd29c",
+                "sha256:3e517dd0482dcd8790571d9c24a4dbb3dfca6f7ec70f79d6c2b401c16c4cceb5",
+                "sha256:8ba998f473f8a99452768cc7832fee4e148cc6122178534c7c7aab95a26a8c84",
+                "sha256:26ccea100fafc394e8426c467d09e50444be6ab751376da5448b009f4ad5237c",
+                "sha256:2bcfedc6b75735be3cd8f745d8cb102af8d16378aa7a3bef00b4ea9a7c35c043",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:862ba6afbe2b8098ecdd471087d01aa02815ea327bd7aaad7b65ec363bc4257f",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:7f57ca64753796c659de47da5ccb24ab6c575842446b908bf62eb50532f6ee02"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-11-25T01:15:53.202577458Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:4064415880c9aa5a8ff9941f524e119f0394aaa274419ac686b63f7a2474f80d",
+            "size": 856
+        }
+    },
+    {
+        "Id": "sha256:c94217aaf947e46f224d32512f84bb64067f87dabe1a3d45906a1da64b34fbcf",
+        "RepoTags": [
+            "usv-sitl:rover-4.7.3"
+        ],
+        "RepoDigests": [
+            "usv-sitl@sha256:c94217aaf947e46f224d32512f84bb64067f87dabe1a3d45906a1da64b34fbcf"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-11-24T09:46:33.707142015+08:00",
+        "Config": {
+            "User": "1000:1000",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "/usr/local/bin/ardurover"
+            ],
+            "Cmd": [
+                "--help"
+            ],
+            "WorkingDir": "/data",
+            "Labels": {
+                "org.opencontainers.image.revision": "d9c5097c3d8333435712ffed86bca8ce00c4bb46",
+                "org.opencontainers.image.source": "https://github.com/ArduPilot/ardupilot",
+                "org.opencontainers.image.version": "Rover-4.7.3"
+            },
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 31973295,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:32ab39660fd51c6dc3aae486b42d42bbe8fe4c1db78eaf57bb9c21198de48a16",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:ea61ab605364386ca6d3f8004edf302d80e981a9d0fcd1bee5da30b14888354f",
+                "sha256:6598057a2ef10bc0dc6eca8793b814cb4268aae05b9171a2b5cba59b24142a2a",
+                "sha256:f68cf84394c1c49623c2aadff31c81cd067a6cbffb68ab6ecbe2b6a388139928",
+                "sha256:57b0f895fdc54ee4a73793baba45d68920343c33388fa53cef052b7aecc922d9",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-11-24T01:46:34.36308621Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:c94217aaf947e46f224d32512f84bb64067f87dabe1a3d45906a1da64b34fbcf",
+            "size": 856
+        }
+    }
+]

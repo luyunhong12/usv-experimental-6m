@@ -1,0 +1,4 @@
+{
+  "duplicate_rejected": true,
+  "message": "Actuator controller already active: ArduPilot JSON SITL pid=22 boat=usv. Stop it or launch interfaces with control:=False."
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "args": [
+      "--current-east",
+      "nan"
+    ],
+    "exit_code": 2,
+    "message": "validate_navigation.py: error: Current components must be finite and within +/-1 m/s"
+  },
+  {
+    "args": [
+      "--current-north",
+      "inf"
+    ],
+    "exit_code": 2,
+    "message": "validate_navigation.py: error: Current components must be finite and within +/-1 m/s"
+  },
+  {
+    "args": [
+      "--current-east",
+      "1.01"
+    ],
+    "exit_code": 2,
+    "message": "validate_navigation.py: error: Current components must be finite and within +/-1 m/s"
+  }
+]

@@ -1,0 +1,21 @@
+# Experimental fork only; the original release recipe and image remain unchanged.
+FROM usv-sitl-toolchain:rover-4.7.3 AS builder
+COPY --chown=1000:1000 dependencies/src/ardupilot /opt/ardupilot
+ARG LOITER_PATCH=ardupilot-rover-loiter-active-stop.patch
+COPY --chown=1000:1000 dependencies/patches/${LOITER_PATCH} /tmp/loiter.patch
+WORKDIR /opt/ardupilot
+USER 1000:1000
+# Verify pristine pinned upstream BEFORE applying the explicit, archived patch.
+RUN test "$(git rev-parse HEAD)" = d9c5097c3d8333435712ffed86bca8ce00c4bb46 \
+    && test -z "$(git submodule status --recursive | sed -n '/^[+-U]/p')" \
+    && git diff --quiet && git diff --cached --quiet \
+    && git submodule foreach --recursive 'git diff --quiet && git diff --cached --quiet' \
+    && git apply --check /tmp/loiter.patch && git apply /tmp/loiter.patch \
+    && ./waf configure --board sitl --no-submodule-update && ./waf rover -j4 \
+    && git submodule status --recursive > build/submodules.txt
+FROM usv-sitl:rover-4.7.3
+LABEL org.opencontainers.image.version="Rover-4.7.3-usv-loiter-experimental" \
+      org.opencontainers.image.description="Experimental motor boat LOITER patch; not the upstream release"
+COPY --from=builder /opt/ardupilot/build/sitl/bin/ardurover /usr/local/bin/ardurover
+COPY --from=builder /opt/ardupilot/build/submodules.txt /opt/sitl/submodules.txt
+COPY --from=builder /tmp/loiter.patch /opt/sitl/loiter.patch

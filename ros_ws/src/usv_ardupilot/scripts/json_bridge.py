@@ -17,7 +17,7 @@ import threading
 import signal
 import numpy as np
 from scipy.spatial.transform import Rotation
-from json_time import StepLimiter
+from json_time import StepLimiter, encode_sensor_packet
 from gz.transport13 import Node
 from usv_control.ownership import ControlLease
 from gz.msgs10.imu_pb2 import IMU
@@ -234,7 +234,7 @@ try:
         fresh_pwm = time.monotonic() - last_pwm_wall <= 1 and lag <= 0.1
         throttle.publish(Double(data=th if fresh_pwm else 0.0))
         steering.publish(Double(data=st if fresh_pwm else 0.0))
-        last_packet = ("\n" + json.dumps(data, allow_nan=False) + "\n").encode()
+        last_packet = encode_sensor_packet(data)
         sock.sendto(last_packet, peer)
         last_frame = pending
         pending = None

@@ -1,0 +1,39 @@
+{
+  "expected": {
+    "ATC_STR_RAT_FF": 0.3,
+    "PSC_POS_P": 0.1,
+    "PSC_VEL_P": 0.5,
+    "TURN_RADIUS": 6,
+    "WP_SPEED": 1,
+    "RTL_SPEED": 0.8,
+    "ATC_STR_RAT_MAX": 15,
+    "ATC_STR_ACC_MAX": 5,
+    "ATC_TURN_MAX_G": 0.03,
+    "AHRS_EKF_TYPE": 3,
+    "EK3_ENABLE": 1
+  },
+  "actual": {
+    "ATC_STR_RAT_FF": 0.30000001192092896,
+    "PSC_POS_P": 0.10000000149011612,
+    "PSC_VEL_P": 0.5,
+    "TURN_RADIUS": 6.0,
+    "WP_SPEED": 1.0,
+    "RTL_SPEED": 0.800000011920929,
+    "ATC_STR_RAT_MAX": 15.0,
+    "ATC_STR_ACC_MAX": 5.0,
+    "ATC_TURN_MAX_G": 0.029999999329447746,
+    "AHRS_EKF_TYPE": 3.0,
+    "EK3_ENABLE": 1.0
+  },
+  "parameters_match": true,
+  "heartbeat": {
+    "mavpackettype": "HEARTBEAT",
+    "type": 11,
+    "autopilot": 3,
+    "base_mode": 1,
+    "custom_mode": 4,
+    "system_status": 3,
+    "mavlink_version": 3
+  },
+  "unarmed_hold": true
+}

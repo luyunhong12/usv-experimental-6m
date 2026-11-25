@@ -1,0 +1,62 @@
+{
+  "tracking_radius6_left_01": {
+    "auto_start_s": 45.322,
+    "window_after_auto_s": [
+      20,
+      35
+    ],
+    "THR_samples": 150,
+    "PIDA_samples": 750,
+    "median_THR_speed_m_s_output_percent_desired_m_s": [
+      0.9685268104076385,
+      8.572508335113525,
+      0.9629319310188293
+    ],
+    "median_PIDA_P_I_FF_normalized": [
+      -0.0001366709839203395,
+      -0.13264812529087067,
+      0.21723442524671555
+    ],
+    "raw_dataflash": "artifacts/navigation/tracking_radius6_left_01/sitl/logs/00000001.BIN"
+  },
+  "tracking_radius6_right_01": {
+    "auto_start_s": 45.322,
+    "window_after_auto_s": [
+      20,
+      35
+    ],
+    "THR_samples": 150,
+    "PIDA_samples": 750,
+    "median_THR_speed_m_s_output_percent_desired_m_s": [
+      0.9697433412075043,
+      8.5699782371521,
+      0.9645180106163025
+    ],
+    "median_PIDA_P_I_FF_normalized": [
+      -0.00022035041911294684,
+      -0.13244175910949707,
+      0.2175642028450966
+    ],
+    "raw_dataflash": "artifacts/navigation/tracking_radius6_right_01/sitl/logs/00000001.BIN"
+  },
+  "corner_hold_lowff_right_02": {
+    "auto_start_s": 53.371,
+    "window_after_auto_s": [
+      20,
+      35
+    ],
+    "THR_samples": 150,
+    "PIDA_samples": 750,
+    "median_THR_speed_m_s_output_percent_desired_m_s": [
+      0.9604105353355408,
+      8.438851356506348,
+      0.956483006477356
+    ],
+    "median_PIDA_P_I_FF_normalized": [
+      -0.0007060946081764996,
+      -0.0009366957820020616,
+      0.08607959002256393
+    ],
+    "raw_dataflash": "artifacts/navigation/corner_hold_lowff_right_02/sitl/logs/00000001.BIN"
+  }
+}

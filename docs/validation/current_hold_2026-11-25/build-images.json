@@ -1,0 +1,154 @@
+[
+    {
+        "Id": "sha256:9ed97e093971e3a45c38812a9314560da63c36fe773c70e3083e3160d371cfac",
+        "RepoTags": [
+            "usv-sitl-toolchain:rover-4.7.3"
+        ],
+        "RepoDigests": [
+            "usv-sitl-toolchain@sha256:9ed97e093971e3a45c38812a9314560da63c36fe773c70e3083e3160d371cfac"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-11-24T09:43:47.077333907+08:00",
+        "Config": {
+            "Env": [
+                "PATH=/opt/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "DEBIAN_FRONTEND=noninteractive"
+            ],
+            "Cmd": [
+                "/bin/bash"
+            ],
+            "Labels": {
+                "org.opencontainers.image.version": "24.04"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 194033089,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:32ab39660fd51c6dc3aae486b42d42bbe8fe4c1db78eaf57bb9c21198de48a16",
+                "sha256:64767f396af5ac6daa789f0412be72039d37b55091df2b330ee19dbdc34c29dc",
+                "sha256:21cf39116a7d5dcfef197b30d16707610941257b0533b15cb772a1c418c36815"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-11-24T01:43:57.922987063Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:9ed97e093971e3a45c38812a9314560da63c36fe773c70e3083e3160d371cfac",
+            "size": 855
+        }
+    },
+    {
+        "Id": "sha256:c94217aaf947e46f224d32512f84bb64067f87dabe1a3d45906a1da64b34fbcf",
+        "RepoTags": [
+            "usv-sitl:rover-4.7.3"
+        ],
+        "RepoDigests": [
+            "usv-sitl@sha256:c94217aaf947e46f224d32512f84bb64067f87dabe1a3d45906a1da64b34fbcf"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-11-24T09:46:33.707142015+08:00",
+        "Config": {
+            "User": "1000:1000",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "/usr/local/bin/ardurover"
+            ],
+            "Cmd": [
+                "--help"
+            ],
+            "WorkingDir": "/data",
+            "Labels": {
+                "org.opencontainers.image.revision": "d9c5097c3d8333435712ffed86bca8ce00c4bb46",
+                "org.opencontainers.image.source": "https://github.com/ArduPilot/ardupilot",
+                "org.opencontainers.image.version": "Rover-4.7.3"
+            },
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 31973295,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:32ab39660fd51c6dc3aae486b42d42bbe8fe4c1db78eaf57bb9c21198de48a16",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:ea61ab605364386ca6d3f8004edf302d80e981a9d0fcd1bee5da30b14888354f",
+                "sha256:6598057a2ef10bc0dc6eca8793b814cb4268aae05b9171a2b5cba59b24142a2a",
+                "sha256:f68cf84394c1c49623c2aadff31c81cd067a6cbffb68ab6ecbe2b6a388139928",
+                "sha256:57b0f895fdc54ee4a73793baba45d68920343c33388fa53cef052b7aecc922d9",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-11-24T01:46:34.36308621Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:c94217aaf947e46f224d32512f84bb64067f87dabe1a3d45906a1da64b34fbcf",
+            "size": 856
+        }
+    },
+    {
+        "Id": "sha256:cf0da66665f3085bbc01ce9fddd709f19b0dcd3e461648be764bc6665e681759",
+        "RepoTags": [
+            "usv-sitl:loiter-velocity-experimental"
+        ],
+        "RepoDigests": [
+            "usv-sitl@sha256:cf0da66665f3085bbc01ce9fddd709f19b0dcd3e461648be764bc6665e681759"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-11-25T15:07:11.72918264+08:00",
+        "Config": {
+            "User": "1000:1000",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "/usr/local/bin/ardurover"
+            ],
+            "Cmd": [
+                "--help"
+            ],
+            "WorkingDir": "/data",
+            "Labels": {
+                "org.opencontainers.image.description": "Experimental velocity-damped motor boat LOITER; not the upstream release",
+                "org.opencontainers.image.revision": "d9c5097c3d8333435712ffed86bca8ce00c4bb46",
+                "org.opencontainers.image.source": "https://github.com/ArduPilot/ardupilot",
+                "org.opencontainers.image.version": "Rover-4.7.3-usv-loiter-experimental"
+            },
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 34165523,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:32ab39660fd51c6dc3aae486b42d42bbe8fe4c1db78eaf57bb9c21198de48a16",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:ea61ab605364386ca6d3f8004edf302d80e981a9d0fcd1bee5da30b14888354f",
+                "sha256:6598057a2ef10bc0dc6eca8793b814cb4268aae05b9171a2b5cba59b24142a2a",
+                "sha256:f68cf84394c1c49623c2aadff31c81cd067a6cbffb68ab6ecbe2b6a388139928",
+                "sha256:57b0f895fdc54ee4a73793baba45d68920343c33388fa53cef052b7aecc922d9",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:a89d547e7d0b0c4504181d24f92d3f5d37fdc95b2aa58c108fe972de7bc61eac",
+                "sha256:8f2fdc4333de2440ed34357c8aa02dbfe0f9ee2f0a53a0fefb59ab7b997bc308",
+                "sha256:a1ff63bf83752e683924de71d7713d5a0364058b5ad65d69699b07bf5563b442"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-11-25T07:07:12.182728096Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:cf0da66665f3085bbc01ce9fddd709f19b0dcd3e461648be764bc6665e681759",
+            "size": 856
+        }
+    }
+]

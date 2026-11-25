@@ -1,0 +1,30 @@
+# SIMULATION ONLY. Apply after boat.parm,platform15.parm on a fresh instance.
+# Keep calibrated propulsion feedforward; reduce navigation targets only.
+WP_SPEED 1.0
+RTL_SPEED 0.8
+WP_RADIUS 3.0
+LOIT_RADIUS 4.0
+ATC_ACCEL_MAX 0.2
+ATC_DECEL_MAX 0.2
+# Explicit simulated link-loss policy, verified by parameter readback.
+FS_GCS_ENABLE 1
+FS_ACTION 2
+FS_TIMEOUT 1.5
+FS_THR_ENABLE 1
+RC_OVERRIDE_TIME 3
+FS_GCS_TIMEOUT 5
+# Low-speed yaw-rate feedforward trial: logged 15 deg/s demand yielded ~10 deg/s.
+# Increase feedforward only; retain rate/acceleration limits and physical model.
+ATC_STR_RAT_FF 0.3
+# Match the outer-loop bandwidth to the measured multi-second yaw response.
+# Halve position/velocity gains together; verify both turn directions before use.
+PSC_POS_P 0.1
+PSC_VEL_P 0.5
+# 1 m/s and observed ~14 deg/s imply ~4.1 m steady radius; use 6 m margin.
+# AR_WPNav uses max(WP_RADIUS, TURN_RADIUS) for S-curve corner planning.
+TURN_RADIUS 6
+# Low-speed corner trial: the first 90-degree turn saturates at 15 deg/s.
+# Keep 6 m planning radius; allow faster heading response with 0.05 g lateral cap.
+ATC_STR_RAT_MAX 25
+ATC_STR_ACC_MAX 10
+ATC_TURN_MAX_G 0.05

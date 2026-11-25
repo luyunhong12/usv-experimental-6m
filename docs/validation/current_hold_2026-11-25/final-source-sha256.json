@@ -1,0 +1,8 @@
+{
+  "dependencies/patches/ardupilot-rover-loiter-velocity-damping.patch": "dc8b46d27e13ebeef69fba72b7231e5bd8c888730560e457396561b8eea7dfa4",
+  "dependencies/patches/ardupilot-rover-loiter-active-stop.patch": "3ab3996110725c74bb2ec02b8787587396f12a46758a0973fb7faea5797650ee",
+  "deploy/sitl/Dockerfile.loiter": "e5a4a5fe0e8823541f223427e8d627f3b5d0921950fee21a327f7c99951d734c",
+  "deploy/sitl/Dockerfile.loiter.dockerignore": "7414c79f8c4379a10d4db960cd88d180f0f384efb937085c3dc4d19d1cf97306",
+  "tools/setup/validate_navigation_containers.sh": "b97617d1d170e7e88e4d951c49ea0436ca273c96bb466a89730a0929f93451a9",
+  "ros_ws/src/usv_ardupilot/config/navigation_low_speed.parm": "f4c020f675d4dd229fa0d26bcbc51f7db88cdfe84f33c8d0d877c9d2790f2634"
+}

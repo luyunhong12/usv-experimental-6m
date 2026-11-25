@@ -55,7 +55,9 @@ p.add_argument(
     help="容器镜像名或摘要；设置后使用 Docker，不使用本机 --binary。",
 )
 p.add_argument("--wipe", action="store_true")
-p.add_argument("--profile", choices=["baseline", "platform15"], default="baseline")
+p.add_argument(
+    "--profile", choices=["baseline", "platform15", "navigation"], default="baseline"
+)
 a = p.parse_args()
 if not 0 <= a.instance <= 99:
     p.error("Instance must be in [0,99]")
@@ -85,7 +87,7 @@ args = [
     str(runtime_parameters / "boat.parm")
     + (
         "," + str(runtime_parameters / "platform15.parm")
-        if a.profile == "platform15"
+        if a.profile in {"platform15", "navigation"}
         else ""
     ),
     "--speedup",
@@ -93,6 +95,9 @@ args = [
     "--rate",
     "100",
 ]
+if a.profile == "navigation":
+    index = args.index("--defaults") + 1
+    args[index] += "," + str(runtime_parameters / "navigation_low_speed.parm")
 if a.wipe:
     args.append("--wipe")
 if a.container_image:

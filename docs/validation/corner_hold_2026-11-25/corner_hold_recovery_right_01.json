@@ -1,0 +1,219 @@
+{
+  "passed": false,
+  "path_metrics": {
+    "max_m": 6.98135355800855,
+    "p95_m": 5.891014680761089,
+    "rms_m": 2.2618956432401336
+  },
+  "mirrored_course": true,
+  "actual_parameters": {
+    "BARO_ALT_OFFSET": 0.0,
+    "WP_SPEED": 1.0,
+    "RTL_SPEED": 0.800000011920929,
+    "WP_RADIUS": 3.0,
+    "LOIT_RADIUS": 0.75,
+    "ATC_ACCEL_MAX": 0.20000000298023224,
+    "ATC_DECEL_MAX": 0.20000000298023224,
+    "FS_GCS_ENABLE": 1.0,
+    "FS_ACTION": 2.0,
+    "FS_TIMEOUT": 1.5,
+    "FS_THR_ENABLE": 1.0,
+    "RC_OVERRIDE_TIME": 3.0,
+    "FS_GCS_TIMEOUT": 5.0,
+    "ATC_STR_RAT_FF": 0.30000001192092896,
+    "PSC_POS_P": 0.10000000149011612,
+    "PSC_VEL_P": 0.5,
+    "TURN_RADIUS": 6.0,
+    "LOIT_SPEED_GAIN": 0.20000000298023224,
+    "ATC_BRAKE": 1.0,
+    "ATC_SPEED_I": 0.05000000074505806,
+    "ATC_SPEED_IMAX": 0.20000000298023224,
+    "BARO1_GND_PRESS": 101322.765625,
+    "BARO2_GND_PRESS": 101324.8125,
+    "RELAY1_FUNCTION": 1.0,
+    "CAM1_TYPE": 0.0,
+    "CAM2_TYPE": 0.0,
+    "INS_GYR_ID": 2752772.0,
+    "INS_ACC_ID": 2753028.0,
+    "INS_GYR2_ID": 2752780.0,
+    "INS_ACC2_ID": 2753036.0,
+    "ARMING_SKIPCHK": 0.0,
+    "EK3_SRC1_POSXY": 3.0,
+    "LOIT_TYPE": 0.0,
+    "AHRS_EKF_TYPE": 3.0,
+    "EK3_ENABLE": 1.0,
+    "MIS_TOTAL": 4.0,
+    "STAT_RUNTIME": 259.0,
+    "STAT_FLTTIME": 211.0,
+    "STAT_FLTCNT": 2.0,
+    "STAT_DISTFLWN": 117.24446868896484
+  },
+  "required_parameters": {
+    "WP_SPEED": 1.0,
+    "RTL_SPEED": 0.8,
+    "WP_RADIUS": 3.0,
+    "LOIT_RADIUS": 0.75,
+    "ATC_ACCEL_MAX": 0.2,
+    "ATC_DECEL_MAX": 0.2,
+    "FS_GCS_ENABLE": 1,
+    "FS_ACTION": 2,
+    "FS_TIMEOUT": 1.5,
+    "FS_THR_ENABLE": 1,
+    "RC_OVERRIDE_TIME": 3,
+    "FS_GCS_TIMEOUT": 5.0,
+    "ATC_STR_RAT_FF": 0.3,
+    "PSC_POS_P": 0.1,
+    "PSC_VEL_P": 0.5,
+    "TURN_RADIUS": 6.0,
+    "LOIT_SPEED_GAIN": 0.2,
+    "ATC_BRAKE": 1.0,
+    "ATC_SPEED_I": 0.05,
+    "ATC_SPEED_IMAX": 0.2,
+    "LOIT_TYPE": 0.0,
+    "AHRS_EKF_TYPE": 3,
+    "EK3_ENABLE": 1
+  },
+  "loss_status": [],
+  "scope": {
+    "isolated_water": true,
+    "rendering": false,
+    "target_speed_m_s": 1.0
+  },
+  "auto_speed_median_m_s": 0.9769344676845779,
+  "auto_speed_p95_m_s": 1.1393575760025292,
+  "checks": {
+    "low_speed_parameters": true,
+    "normal_arming": true,
+    "navigation_ready_before_arming": true,
+    "guided_mode": false,
+    "moving_before_loss": false,
+    "gcs_failsafe_hold": false,
+    "gcs_failsafe_stops_command": false,
+    "failsafe_status_reported": false,
+    "independent_rc_link_healthy": false,
+    "completed": false,
+    "finite": true,
+    "estimator_healthy_after_arming": true,
+    "mission_upload": true,
+    "auto_waypoints": true,
+    "auto_path_corridor": true,
+    "loiter_mode": false,
+    "loiter_radius": false,
+    "loiter_target_observed": false,
+    "loiter_target_radius": false,
+    "rtl_mode": false,
+    "rtl_home": false,
+    "hold_stops_command": false,
+    "hold_slows_vessel": false,
+    "manual_takeover": false,
+    "low_speed_tracking": true
+  },
+  "final_phase": "interrupted",
+  "events": [
+    {
+      "time": 45.222,
+      "event": "upload"
+    },
+    {
+      "time": 45.322,
+      "event": "start_auto"
+    },
+    {
+      "time": 45.322,
+      "event": "auto"
+    },
+    {
+      "time": 90.674,
+      "event": "waypoint_reached",
+      "seq": 1
+    },
+    {
+      "time": 131.037,
+      "event": "waypoint_reached",
+      "seq": 2
+    },
+    {
+      "time": 168.09,
+      "event": "waypoint_reached",
+      "seq": 3
+    },
+    {
+      "time": 168.09,
+      "event": "loiter"
+    },
+    {
+      "time": 284.297,
+      "event": "interrupted"
+    },
+    {
+      "event": "auto_path_audit",
+      "max_distance_to_route_m": 6.98135355800855
+    }
+  ],
+  "waypoints_lat_lon": [
+    [
+      -33.7226062,
+      150.6745516
+    ],
+    [
+      -33.7226062,
+      150.67498361987992
+    ],
+    [
+      -33.72287569458716,
+      150.67498361987992
+    ],
+    [
+      -33.72287569458716,
+      150.67465960496997
+    ]
+  ],
+  "home_xy": [
+    -479.99999043061763,
+    179.9999966709765
+  ],
+  "loiter_max_error_m": 4.447890215709984,
+  "rtl_min_distance_m": null,
+  "max_speed_km_h": 4.814125359079715,
+  "status_tail": [
+    "Flight mode change failed",
+    "Beginning INS calibration. Do not move vehicle",
+    "ArduPilot Ready",
+    "RCInput: decoding UDP (Pulses)",
+    "AHRS: DCM active",
+    "EKF3 IMU0 initialised",
+    "EKF3 IMU1 initialised",
+    "EKF3 IMU0 tilt alignment complete",
+    "EKF3 IMU1 tilt alignment complete",
+    "EKF3 IMU0 MAG0 initial yaw alignment complete",
+    "EKF3 IMU1 MAG0 initial yaw alignment complete",
+    "AHRS: EKF3 active",
+    "GPS 1: probing for u-blox at 230400 baud",
+    "GPS 1: detected u-blox",
+    "Set HOME to -33.72261 150.6745 at -0.25m",
+    "EKF3 IMU0 origin set",
+    "EKF3 IMU1 origin set",
+    "Field Elevation Set: -0m",
+    "PreArm: Need Position Estimate",
+    "EKF3 IMU0 is using GPS",
+    "EKF3 IMU1 is using GPS",
+    "Throttle armed",
+    "Flight plan received",
+    "Mission: 1 WP",
+    "Reached waypoint #1",
+    "Mission: 2 WP",
+    "Reached waypoint #2",
+    "Mission: 3 WP",
+    "Reached waypoint #3",
+    "Mission Complete"
+  ],
+  "rc_source": "native SITL UDP 5931; no MAVLink RC overrides during experiment",
+  "stable_target_metrics": {
+    "count": 9892,
+    "max_m": 4.46858007948775,
+    "p95_m": 4.048248084752036,
+    "rms_m": 2.5511768727385036,
+    "duration_s": 101.16400000000002
+  },
+  "raw_evidence": "artifacts/navigation/corner_hold_recovery_right_01"
+}

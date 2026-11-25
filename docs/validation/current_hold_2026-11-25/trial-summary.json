@@ -1,0 +1,1458 @@
+{
+  "current_north030_20261125_01": {
+    "label": "Baseline",
+    "passed": false,
+    "final_phase": "complete",
+    "checks": {
+      "low_speed_parameters": true,
+      "normal_arming": true,
+      "navigation_ready_before_arming": true,
+      "guided_mode": true,
+      "moving_before_loss": true,
+      "gcs_failsafe_hold": true,
+      "gcs_failsafe_stops_command": true,
+      "failsafe_status_reported": true,
+      "independent_rc_link_healthy": true,
+      "completed": true,
+      "finite": true,
+      "estimator_healthy_after_arming": true,
+      "mission_upload": true,
+      "auto_waypoints": true,
+      "auto_path_corridor": true,
+      "loiter_mode": true,
+      "loiter_radius": true,
+      "loiter_target_observed": true,
+      "loiter_target_radius": false,
+      "rtl_mode": true,
+      "rtl_home": true,
+      "hold_stops_command": true,
+      "hold_slows_vessel": true,
+      "manual_takeover": true,
+      "low_speed_tracking": true
+    },
+    "hold_peak_m": 4.264868716081387,
+    "hold_rms_m": 2.288036312693077,
+    "stable_observation_duration_s": 105.001,
+    "path_metrics": {
+      "max_m": 9.09075812548923,
+      "p95_m": 8.759479410789424,
+      "rms_m": 3.7968086142381976
+    },
+    "motor_mean_w": 841.0182352628839,
+    "input_parameters": {
+      "WP_SPEED": 1.0,
+      "RTL_SPEED": 0.8,
+      "WP_RADIUS": 3.0,
+      "ATC_ACCEL_MAX": 0.2,
+      "ATC_DECEL_MAX": 0.1,
+      "CRUISE_SPEED": 1.0,
+      "CRUISE_THROTTLE": 9.0,
+      "SPEED_MAX": 1.0,
+      "ATC_SPEED_I": 0.02,
+      "ATC_SPEED_IMAX": 0.05,
+      "ATC_BRAKE": 1.0,
+      "LOIT_RADIUS": 0.0,
+      "LOIT_SPEED_GAIN": 0.3,
+      "LOIT_TYPE": 0.0,
+      "ATC_STR_RAT_FF": 0.3,
+      "PSC_POS_P": 0.1,
+      "PSC_VEL_P": 0.5,
+      "TURN_RADIUS": 6.0,
+      "ATC_STR_RAT_MAX": 20.0,
+      "ATC_STR_ACC_MAX": 10.0,
+      "FS_GCS_ENABLE": 1.0,
+      "FS_ACTION": 2.0,
+      "FS_TIMEOUT": 1.5,
+      "FS_THR_ENABLE": 1.0,
+      "RC_OVERRIDE_TIME": 3.0,
+      "FS_GCS_TIMEOUT": 5.0
+    },
+    "image_ids": [
+      "sha256:9a39de035e72e6d673e2b72dd39f33d20741e3990e60eded78ee2fb6adb5de45",
+      "sha256:c94217aaf947e46f224d32512f84bb64067f87dabe1a3d45906a1da64b34fbcf"
+    ],
+    "raw_result_sha256": "0d0d41ef88cf0bbf659be05511338462e7c3128cbe1bb80b3e02cce73ea7d1ee",
+    "raw_path": "artifacts/navigation/current_north030_20261125_01",
+    "events": [
+      {
+        "time": 45.222,
+        "event": "upload"
+      },
+      {
+        "time": 45.222,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 45.322,
+        "event": "start_auto"
+      },
+      {
+        "time": 45.322,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 45.322,
+        "event": "auto"
+      },
+      {
+        "time": 45.322,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 95.114,
+        "event": "waypoint_reached",
+        "seq": 1
+      },
+      {
+        "time": 134.874,
+        "event": "waypoint_reached",
+        "seq": 2
+      },
+      {
+        "time": 183.537,
+        "event": "waypoint_reached",
+        "seq": 3
+      },
+      {
+        "time": 183.537,
+        "event": "loiter"
+      },
+      {
+        "time": 183.537,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 303.581,
+        "event": "hold"
+      },
+      {
+        "time": 303.581,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 333.668,
+        "event": "manual"
+      },
+      {
+        "time": 333.668,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 365.672,
+        "event": "rtl"
+      },
+      {
+        "time": 365.672,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 441.595,
+        "event": "outbound"
+      },
+      {
+        "time": 441.595,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 453.61,
+        "event": "outbound_motion_ready",
+        "speed_m_s": 0.9691602189766024,
+        "command": 0.37,
+        "duration_s": 2.9279999999999973
+      },
+      {
+        "time": 453.61,
+        "event": "gcs_loss"
+      },
+      {
+        "time": 453.61,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 471.682,
+        "event": "complete"
+      },
+      {
+        "time": 471.682,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "event": "auto_path_audit",
+        "max_distance_to_route_m": 9.09075812548923
+      }
+    ]
+  },
+  "hold_gain020_north030_20261125_01": {
+    "label": "Gain 0.2",
+    "passed": false,
+    "final_phase": "interrupted",
+    "checks": {
+      "low_speed_parameters": true,
+      "normal_arming": true,
+      "navigation_ready_before_arming": true,
+      "guided_mode": false,
+      "moving_before_loss": false,
+      "gcs_failsafe_hold": false,
+      "gcs_failsafe_stops_command": false,
+      "failsafe_status_reported": false,
+      "independent_rc_link_healthy": false,
+      "completed": false,
+      "finite": true,
+      "estimator_healthy_after_arming": true,
+      "mission_upload": true,
+      "auto_waypoints": true,
+      "auto_path_corridor": true,
+      "loiter_mode": true,
+      "loiter_radius": true,
+      "loiter_target_observed": true,
+      "loiter_target_radius": false,
+      "rtl_mode": false,
+      "rtl_home": false,
+      "hold_stops_command": false,
+      "hold_slows_vessel": false,
+      "manual_takeover": false,
+      "low_speed_tracking": true
+    },
+    "hold_peak_m": 4.245658889120721,
+    "hold_rms_m": 2.5372736941129506,
+    "stable_observation_duration_s": 105.001,
+    "path_metrics": {
+      "max_m": 8.563993211227796,
+      "p95_m": 8.296771978151355,
+      "rms_m": 3.565375486286059
+    },
+    "motor_mean_w": 532.9944215125794,
+    "input_parameters": {
+      "WP_SPEED": 1.0,
+      "RTL_SPEED": 0.8,
+      "WP_RADIUS": 3.0,
+      "ATC_ACCEL_MAX": 0.2,
+      "ATC_DECEL_MAX": 0.1,
+      "CRUISE_SPEED": 1.0,
+      "CRUISE_THROTTLE": 9.0,
+      "SPEED_MAX": 1.0,
+      "ATC_SPEED_I": 0.02,
+      "ATC_SPEED_IMAX": 0.05,
+      "ATC_BRAKE": 1.0,
+      "LOIT_RADIUS": 0.0,
+      "LOIT_SPEED_GAIN": 0.2,
+      "LOIT_TYPE": 0.0,
+      "ATC_STR_RAT_FF": 0.3,
+      "PSC_POS_P": 0.1,
+      "PSC_VEL_P": 0.5,
+      "TURN_RADIUS": 6.0,
+      "ATC_STR_RAT_MAX": 20.0,
+      "ATC_STR_ACC_MAX": 10.0,
+      "FS_GCS_ENABLE": 1.0,
+      "FS_ACTION": 2.0,
+      "FS_TIMEOUT": 1.5,
+      "FS_THR_ENABLE": 1.0,
+      "RC_OVERRIDE_TIME": 3.0,
+      "FS_GCS_TIMEOUT": 5.0
+    },
+    "image_ids": [
+      "sha256:9a39de035e72e6d673e2b72dd39f33d20741e3990e60eded78ee2fb6adb5de45",
+      "sha256:c94217aaf947e46f224d32512f84bb64067f87dabe1a3d45906a1da64b34fbcf"
+    ],
+    "raw_result_sha256": "6d7b7339c09be511a4f5875fedd514fad4b2e97899063591542bc11a0a4d367c",
+    "raw_path": "artifacts/navigation/hold_gain020_north030_20261125_01",
+    "events": [
+      {
+        "time": 45.222,
+        "event": "upload"
+      },
+      {
+        "time": 45.222,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 45.322,
+        "event": "start_auto"
+      },
+      {
+        "time": 45.322,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 45.322,
+        "event": "auto"
+      },
+      {
+        "time": 45.322,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 95.215,
+        "event": "waypoint_reached",
+        "seq": 1
+      },
+      {
+        "time": 133.763,
+        "event": "waypoint_reached",
+        "seq": 2
+      },
+      {
+        "time": 181.72,
+        "event": "waypoint_reached",
+        "seq": 3
+      },
+      {
+        "time": 181.72,
+        "event": "loiter"
+      },
+      {
+        "time": 181.72,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 301.764,
+        "event": "hold"
+      },
+      {
+        "time": 301.764,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 318.927,
+        "event": "interrupted"
+      },
+      {
+        "event": "auto_path_audit",
+        "max_distance_to_route_m": 8.563993211227796
+      }
+    ]
+  },
+  "hold_brake020_north030_20261125_01": {
+    "label": "Brake 0.2",
+    "passed": false,
+    "final_phase": "interrupted",
+    "checks": {
+      "low_speed_parameters": true,
+      "normal_arming": true,
+      "navigation_ready_before_arming": true,
+      "guided_mode": false,
+      "moving_before_loss": false,
+      "gcs_failsafe_hold": false,
+      "gcs_failsafe_stops_command": false,
+      "failsafe_status_reported": false,
+      "independent_rc_link_healthy": false,
+      "completed": false,
+      "finite": true,
+      "estimator_healthy_after_arming": true,
+      "mission_upload": true,
+      "auto_waypoints": true,
+      "auto_path_corridor": true,
+      "loiter_mode": true,
+      "loiter_radius": true,
+      "loiter_target_observed": true,
+      "loiter_target_radius": false,
+      "rtl_mode": false,
+      "rtl_home": false,
+      "hold_stops_command": true,
+      "hold_slows_vessel": true,
+      "manual_takeover": false,
+      "low_speed_tracking": true
+    },
+    "hold_peak_m": 4.283757009750974,
+    "hold_rms_m": 2.46347415852766,
+    "stable_observation_duration_s": 105.00000000000003,
+    "path_metrics": {
+      "max_m": 8.899780611403685,
+      "p95_m": 8.577965705640537,
+      "rms_m": 3.696184992912995
+    },
+    "motor_mean_w": 865.998437653831,
+    "input_parameters": {
+      "WP_SPEED": 1.0,
+      "RTL_SPEED": 0.8,
+      "WP_RADIUS": 3.0,
+      "ATC_ACCEL_MAX": 0.2,
+      "ATC_DECEL_MAX": 0.2,
+      "WP_ACCEL": 0.1,
+      "CRUISE_SPEED": 1.0,
+      "CRUISE_THROTTLE": 9.0,
+      "SPEED_MAX": 1.0,
+      "ATC_SPEED_I": 0.02,
+      "ATC_SPEED_IMAX": 0.05,
+      "ATC_BRAKE": 1.0,
+      "LOIT_RADIUS": 0.0,
+      "LOIT_SPEED_GAIN": 0.3,
+      "LOIT_TYPE": 0.0,
+      "ATC_STR_RAT_FF": 0.3,
+      "PSC_POS_P": 0.1,
+      "PSC_VEL_P": 0.5,
+      "TURN_RADIUS": 6.0,
+      "ATC_STR_RAT_MAX": 20.0,
+      "ATC_STR_ACC_MAX": 10.0,
+      "FS_GCS_ENABLE": 1.0,
+      "FS_ACTION": 2.0,
+      "FS_TIMEOUT": 1.5,
+      "FS_THR_ENABLE": 1.0,
+      "RC_OVERRIDE_TIME": 3.0,
+      "FS_GCS_TIMEOUT": 5.0
+    },
+    "image_ids": [
+      "sha256:9a39de035e72e6d673e2b72dd39f33d20741e3990e60eded78ee2fb6adb5de45",
+      "sha256:c94217aaf947e46f224d32512f84bb64067f87dabe1a3d45906a1da64b34fbcf"
+    ],
+    "raw_result_sha256": "cf2dd1f1aa7c08191d2462bea1715c90a61802070b7476f68540d9471505d67d",
+    "raw_path": "artifacts/navigation/hold_brake020_north030_20261125_01",
+    "events": [
+      {
+        "time": 45.222,
+        "event": "upload"
+      },
+      {
+        "time": 45.222,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 45.322,
+        "event": "start_auto"
+      },
+      {
+        "time": 45.322,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 45.322,
+        "event": "auto"
+      },
+      {
+        "time": 45.322,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 95.013,
+        "event": "waypoint_reached",
+        "seq": 1
+      },
+      {
+        "time": 134.369,
+        "event": "waypoint_reached",
+        "seq": 2
+      },
+      {
+        "time": 182.528,
+        "event": "waypoint_reached",
+        "seq": 3
+      },
+      {
+        "time": 182.528,
+        "event": "loiter"
+      },
+      {
+        "time": 182.528,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 302.571,
+        "event": "hold"
+      },
+      {
+        "time": 302.571,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 332.658,
+        "event": "manual"
+      },
+      {
+        "time": 332.658,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 334.778,
+        "event": "interrupted"
+      },
+      {
+        "event": "auto_path_audit",
+        "max_distance_to_route_m": 8.899780611403685
+      }
+    ]
+  },
+  "hold_gain050_north030_20261125_01": {
+    "label": "Gain 0.5",
+    "passed": false,
+    "final_phase": "interrupted",
+    "checks": {
+      "low_speed_parameters": true,
+      "normal_arming": true,
+      "navigation_ready_before_arming": true,
+      "guided_mode": false,
+      "moving_before_loss": false,
+      "gcs_failsafe_hold": false,
+      "gcs_failsafe_stops_command": false,
+      "failsafe_status_reported": false,
+      "independent_rc_link_healthy": false,
+      "completed": false,
+      "finite": true,
+      "estimator_healthy_after_arming": true,
+      "mission_upload": true,
+      "auto_waypoints": true,
+      "auto_path_corridor": true,
+      "loiter_mode": true,
+      "loiter_radius": true,
+      "loiter_target_observed": true,
+      "loiter_target_radius": false,
+      "rtl_mode": false,
+      "rtl_home": false,
+      "hold_stops_command": true,
+      "hold_slows_vessel": true,
+      "manual_takeover": true,
+      "low_speed_tracking": true
+    },
+    "hold_peak_m": 6.471958567125136,
+    "hold_rms_m": 3.4810934872481027,
+    "stable_observation_duration_s": 105.00000000000003,
+    "path_metrics": {
+      "max_m": 9.044174268012029,
+      "p95_m": 8.729905155104063,
+      "rms_m": 3.7728967017573245
+    },
+    "motor_mean_w": 1017.7601767032255,
+    "input_parameters": {
+      "WP_SPEED": 1.0,
+      "RTL_SPEED": 0.8,
+      "WP_RADIUS": 3.0,
+      "ATC_ACCEL_MAX": 0.2,
+      "ATC_DECEL_MAX": 0.1,
+      "CRUISE_SPEED": 1.0,
+      "CRUISE_THROTTLE": 9.0,
+      "SPEED_MAX": 1.0,
+      "ATC_SPEED_I": 0.02,
+      "ATC_SPEED_IMAX": 0.05,
+      "ATC_BRAKE": 1.0,
+      "LOIT_RADIUS": 0.0,
+      "LOIT_SPEED_GAIN": 0.5,
+      "LOIT_TYPE": 0.0,
+      "ATC_STR_RAT_FF": 0.3,
+      "PSC_POS_P": 0.1,
+      "PSC_VEL_P": 0.5,
+      "TURN_RADIUS": 6.0,
+      "ATC_STR_RAT_MAX": 20.0,
+      "ATC_STR_ACC_MAX": 10.0,
+      "FS_GCS_ENABLE": 1.0,
+      "FS_ACTION": 2.0,
+      "FS_TIMEOUT": 1.5,
+      "FS_THR_ENABLE": 1.0,
+      "RC_OVERRIDE_TIME": 3.0,
+      "FS_GCS_TIMEOUT": 5.0
+    },
+    "image_ids": [
+      "sha256:9a39de035e72e6d673e2b72dd39f33d20741e3990e60eded78ee2fb6adb5de45",
+      "sha256:c94217aaf947e46f224d32512f84bb64067f87dabe1a3d45906a1da64b34fbcf"
+    ],
+    "raw_result_sha256": "19bf35a5934a98fe4a3c9c187d7dc4cb5e68598e507541ba63d46e8c88e80188",
+    "raw_path": "artifacts/navigation/hold_gain050_north030_20261125_01",
+    "events": [
+      {
+        "time": 45.222,
+        "event": "upload"
+      },
+      {
+        "time": 45.222,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 45.322,
+        "event": "start_auto"
+      },
+      {
+        "time": 45.322,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 45.322,
+        "event": "auto"
+      },
+      {
+        "time": 45.322,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 95.114,
+        "event": "waypoint_reached",
+        "seq": 1
+      },
+      {
+        "time": 134.571,
+        "event": "waypoint_reached",
+        "seq": 2
+      },
+      {
+        "time": 183.234,
+        "event": "waypoint_reached",
+        "seq": 3
+      },
+      {
+        "time": 183.234,
+        "event": "loiter"
+      },
+      {
+        "time": 183.234,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 303.278,
+        "event": "hold"
+      },
+      {
+        "time": 303.278,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 333.365,
+        "event": "manual"
+      },
+      {
+        "time": 333.365,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 365.369,
+        "event": "rtl"
+      },
+      {
+        "time": 365.369,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 483.192,
+        "event": "interrupted"
+      },
+      {
+        "event": "auto_path_audit",
+        "max_distance_to_route_m": 9.044174268012029
+      }
+    ]
+  },
+  "hold_damping1_north030_20261125_01": {
+    "label": "Velocity D=1",
+    "passed": false,
+    "final_phase": "complete",
+    "checks": {
+      "low_speed_parameters": true,
+      "normal_arming": true,
+      "navigation_ready_before_arming": true,
+      "guided_mode": true,
+      "moving_before_loss": true,
+      "gcs_failsafe_hold": true,
+      "gcs_failsafe_stops_command": true,
+      "failsafe_status_reported": true,
+      "independent_rc_link_healthy": true,
+      "completed": true,
+      "finite": true,
+      "estimator_healthy_after_arming": true,
+      "mission_upload": true,
+      "auto_waypoints": true,
+      "auto_path_corridor": true,
+      "loiter_mode": true,
+      "loiter_radius": true,
+      "loiter_target_observed": true,
+      "loiter_target_radius": false,
+      "rtl_mode": true,
+      "rtl_home": true,
+      "hold_stops_command": true,
+      "hold_slows_vessel": true,
+      "manual_takeover": true,
+      "low_speed_tracking": true
+    },
+    "hold_peak_m": 5.888486782426609,
+    "hold_rms_m": 3.861092598047622,
+    "stable_observation_duration_s": 105.00000000000003,
+    "path_metrics": {
+      "max_m": 8.949308943533595,
+      "p95_m": 8.573119345274165,
+      "rms_m": 3.7065754167137768
+    },
+    "motor_mean_w": 716.0458725527188,
+    "input_parameters": {
+      "WP_SPEED": 1.0,
+      "RTL_SPEED": 0.8,
+      "WP_RADIUS": 3.0,
+      "ATC_ACCEL_MAX": 0.2,
+      "ATC_DECEL_MAX": 0.1,
+      "CRUISE_SPEED": 1.0,
+      "CRUISE_THROTTLE": 9.0,
+      "SPEED_MAX": 1.0,
+      "ATC_SPEED_I": 0.02,
+      "ATC_SPEED_IMAX": 0.05,
+      "ATC_BRAKE": 1.0,
+      "LOIT_RADIUS": 0.0,
+      "LOIT_SPEED_GAIN": 0.3,
+      "LOIT_TYPE": 0.0,
+      "ATC_STR_RAT_FF": 0.3,
+      "PSC_POS_P": 0.1,
+      "PSC_VEL_P": 0.5,
+      "TURN_RADIUS": 6.0,
+      "ATC_STR_RAT_MAX": 20.0,
+      "ATC_STR_ACC_MAX": 10.0,
+      "FS_GCS_ENABLE": 1.0,
+      "FS_ACTION": 2.0,
+      "FS_TIMEOUT": 1.5,
+      "FS_THR_ENABLE": 1.0,
+      "RC_OVERRIDE_TIME": 3.0,
+      "FS_GCS_TIMEOUT": 5.0,
+      "LOIT_VEL_D": 1.0
+    },
+    "image_ids": [
+      "sha256:9a39de035e72e6d673e2b72dd39f33d20741e3990e60eded78ee2fb6adb5de45",
+      "sha256:cf0da66665f3085bbc01ce9fddd709f19b0dcd3e461648be764bc6665e681759"
+    ],
+    "raw_result_sha256": "f33b72e58b7996b8b0968470bf05441e81f37728227bb0999b5aa4e340857b40",
+    "raw_path": "artifacts/navigation/hold_damping1_north030_20261125_01",
+    "events": [
+      {
+        "time": 45.222,
+        "event": "upload"
+      },
+      {
+        "time": 45.222,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 45.322,
+        "event": "start_auto"
+      },
+      {
+        "time": 45.322,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 45.322,
+        "event": "auto"
+      },
+      {
+        "time": 45.322,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 95.114,
+        "event": "waypoint_reached",
+        "seq": 1
+      },
+      {
+        "time": 134.47,
+        "event": "waypoint_reached",
+        "seq": 2
+      },
+      {
+        "time": 182.629,
+        "event": "waypoint_reached",
+        "seq": 3
+      },
+      {
+        "time": 182.629,
+        "event": "loiter"
+      },
+      {
+        "time": 182.629,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 302.672,
+        "event": "hold"
+      },
+      {
+        "time": 302.672,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 332.759,
+        "event": "manual"
+      },
+      {
+        "time": 332.759,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 364.764,
+        "event": "rtl"
+      },
+      {
+        "time": 364.764,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 401.413,
+        "event": "outbound"
+      },
+      {
+        "time": 401.413,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 413.427,
+        "event": "outbound_motion_ready",
+        "speed_m_s": 1.1130608443234515,
+        "command": 0.326,
+        "duration_s": 2.9279999999999973
+      },
+      {
+        "time": 413.427,
+        "event": "gcs_loss"
+      },
+      {
+        "time": 413.427,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 431.499,
+        "event": "complete"
+      },
+      {
+        "time": 431.499,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "event": "auto_path_audit",
+        "max_distance_to_route_m": 8.949308943533595
+      }
+    ]
+  },
+  "hold_radius05_control_north030_20261125_01": {
+    "label": "Radius 0.5",
+    "passed": false,
+    "final_phase": "interrupted",
+    "checks": {
+      "low_speed_parameters": true,
+      "normal_arming": true,
+      "navigation_ready_before_arming": true,
+      "guided_mode": false,
+      "moving_before_loss": false,
+      "gcs_failsafe_hold": false,
+      "gcs_failsafe_stops_command": false,
+      "failsafe_status_reported": false,
+      "independent_rc_link_healthy": false,
+      "completed": false,
+      "finite": true,
+      "estimator_healthy_after_arming": true,
+      "mission_upload": true,
+      "auto_waypoints": true,
+      "auto_path_corridor": true,
+      "loiter_mode": true,
+      "loiter_radius": true,
+      "loiter_target_observed": true,
+      "loiter_target_radius": false,
+      "rtl_mode": false,
+      "rtl_home": false,
+      "hold_stops_command": true,
+      "hold_slows_vessel": true,
+      "manual_takeover": false,
+      "low_speed_tracking": true
+    },
+    "hold_peak_m": 4.2189494670107,
+    "hold_rms_m": 2.0345597318469797,
+    "stable_observation_duration_s": 105.00000000000003,
+    "path_metrics": {
+      "max_m": 8.858941866957537,
+      "p95_m": 8.569310613002472,
+      "rms_m": 3.710972719399576
+    },
+    "motor_mean_w": 466.707007684707,
+    "input_parameters": {
+      "WP_SPEED": 1.0,
+      "RTL_SPEED": 0.8,
+      "WP_RADIUS": 3.0,
+      "ATC_ACCEL_MAX": 0.2,
+      "ATC_DECEL_MAX": 0.1,
+      "CRUISE_SPEED": 1.0,
+      "CRUISE_THROTTLE": 9.0,
+      "SPEED_MAX": 1.0,
+      "ATC_SPEED_I": 0.02,
+      "ATC_SPEED_IMAX": 0.05,
+      "ATC_BRAKE": 1.0,
+      "LOIT_RADIUS": 0.5,
+      "LOIT_SPEED_GAIN": 0.3,
+      "LOIT_TYPE": 0.0,
+      "ATC_STR_RAT_FF": 0.3,
+      "PSC_POS_P": 0.1,
+      "PSC_VEL_P": 0.5,
+      "TURN_RADIUS": 6.0,
+      "ATC_STR_RAT_MAX": 20.0,
+      "ATC_STR_ACC_MAX": 10.0,
+      "FS_GCS_ENABLE": 1.0,
+      "FS_ACTION": 2.0,
+      "FS_TIMEOUT": 1.5,
+      "FS_THR_ENABLE": 1.0,
+      "RC_OVERRIDE_TIME": 3.0,
+      "FS_GCS_TIMEOUT": 5.0
+    },
+    "image_ids": [
+      "sha256:9a39de035e72e6d673e2b72dd39f33d20741e3990e60eded78ee2fb6adb5de45",
+      "sha256:c94217aaf947e46f224d32512f84bb64067f87dabe1a3d45906a1da64b34fbcf"
+    ],
+    "raw_result_sha256": "8146f20367e350654087647edf92032fefbd98188dcd19e7f03ab2074c8b4044",
+    "raw_path": "artifacts/navigation/hold_radius05_control_north030_20261125_01",
+    "events": [
+      {
+        "time": 45.222,
+        "event": "upload"
+      },
+      {
+        "time": 45.222,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 45.322,
+        "event": "start_auto"
+      },
+      {
+        "time": 45.322,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 45.322,
+        "event": "auto"
+      },
+      {
+        "time": 45.322,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 95.114,
+        "event": "waypoint_reached",
+        "seq": 1
+      },
+      {
+        "time": 134.268,
+        "event": "waypoint_reached",
+        "seq": 2
+      },
+      {
+        "time": 182.729,
+        "event": "waypoint_reached",
+        "seq": 3
+      },
+      {
+        "time": 182.729,
+        "event": "loiter"
+      },
+      {
+        "time": 182.729,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 302.773,
+        "event": "hold"
+      },
+      {
+        "time": 302.773,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 332.86,
+        "event": "manual"
+      },
+      {
+        "time": 332.86,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 342.653,
+        "event": "interrupted"
+      },
+      {
+        "event": "auto_path_audit",
+        "max_distance_to_route_m": 8.858941866957537
+      }
+    ]
+  },
+  "hold_active_north030_20261125_01": {
+    "label": "Active stop R0.5",
+    "passed": false,
+    "final_phase": "complete",
+    "checks": {
+      "low_speed_parameters": true,
+      "normal_arming": true,
+      "navigation_ready_before_arming": true,
+      "guided_mode": true,
+      "moving_before_loss": true,
+      "gcs_failsafe_hold": true,
+      "gcs_failsafe_stops_command": true,
+      "failsafe_status_reported": true,
+      "independent_rc_link_healthy": true,
+      "completed": true,
+      "finite": true,
+      "estimator_healthy_after_arming": true,
+      "mission_upload": true,
+      "auto_waypoints": true,
+      "auto_path_corridor": true,
+      "loiter_mode": true,
+      "loiter_radius": true,
+      "loiter_target_observed": true,
+      "loiter_target_radius": false,
+      "rtl_mode": true,
+      "rtl_home": true,
+      "hold_stops_command": true,
+      "hold_slows_vessel": true,
+      "manual_takeover": true,
+      "low_speed_tracking": true
+    },
+    "hold_peak_m": 3.9018456759206916,
+    "hold_rms_m": 2.1520646705606006,
+    "stable_observation_duration_s": 105.00000000000003,
+    "path_metrics": {
+      "max_m": 8.947017218847236,
+      "p95_m": 8.633008920136206,
+      "rms_m": 3.727785535654119
+    },
+    "motor_mean_w": 538.9732559600149,
+    "input_parameters": {
+      "WP_SPEED": 1.0,
+      "RTL_SPEED": 0.8,
+      "WP_RADIUS": 3.0,
+      "ATC_ACCEL_MAX": 0.2,
+      "ATC_DECEL_MAX": 0.1,
+      "CRUISE_SPEED": 1.0,
+      "CRUISE_THROTTLE": 9.0,
+      "SPEED_MAX": 1.0,
+      "ATC_SPEED_I": 0.02,
+      "ATC_SPEED_IMAX": 0.05,
+      "ATC_BRAKE": 1.0,
+      "LOIT_RADIUS": 0.5,
+      "LOIT_SPEED_GAIN": 0.3,
+      "LOIT_TYPE": 0.0,
+      "ATC_STR_RAT_FF": 0.3,
+      "PSC_POS_P": 0.1,
+      "PSC_VEL_P": 0.5,
+      "TURN_RADIUS": 6.0,
+      "ATC_STR_RAT_MAX": 20.0,
+      "ATC_STR_ACC_MAX": 10.0,
+      "FS_GCS_ENABLE": 1.0,
+      "FS_ACTION": 2.0,
+      "FS_TIMEOUT": 1.5,
+      "FS_THR_ENABLE": 1.0,
+      "RC_OVERRIDE_TIME": 3.0,
+      "FS_GCS_TIMEOUT": 5.0,
+      "LOIT_KEEP_SPEED": 1.0
+    },
+    "image_ids": [
+      "sha256:9a39de035e72e6d673e2b72dd39f33d20741e3990e60eded78ee2fb6adb5de45",
+      "sha256:5ada9f7d6a43dec483d823955d9366a3d8499c3240ecc737d4cbd754b5cf5a63"
+    ],
+    "raw_result_sha256": "49826859ad0cfd24996dc0d67c306aa3fb4671506e5267b379ff17998038332b",
+    "raw_path": "artifacts/navigation/hold_active_north030_20261125_01",
+    "events": [
+      {
+        "time": 45.222,
+        "event": "upload"
+      },
+      {
+        "time": 45.222,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 45.322,
+        "event": "start_auto"
+      },
+      {
+        "time": 45.322,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 45.322,
+        "event": "auto"
+      },
+      {
+        "time": 45.322,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 95.114,
+        "event": "waypoint_reached",
+        "seq": 1
+      },
+      {
+        "time": 134.369,
+        "event": "waypoint_reached",
+        "seq": 2
+      },
+      {
+        "time": 182.83,
+        "event": "waypoint_reached",
+        "seq": 3
+      },
+      {
+        "time": 182.83,
+        "event": "loiter"
+      },
+      {
+        "time": 182.83,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 302.874,
+        "event": "hold"
+      },
+      {
+        "time": 302.874,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 332.961,
+        "event": "manual"
+      },
+      {
+        "time": 332.961,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 364.966,
+        "event": "rtl"
+      },
+      {
+        "time": 364.966,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 444.019,
+        "event": "outbound"
+      },
+      {
+        "time": 444.019,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 456.033,
+        "event": "outbound_motion_ready",
+        "speed_m_s": 1.1130229746653375,
+        "command": 0.326,
+        "duration_s": 2.9279999999999973
+      },
+      {
+        "time": 456.033,
+        "event": "gcs_loss"
+      },
+      {
+        "time": 456.033,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 474.105,
+        "event": "complete"
+      },
+      {
+        "time": 474.105,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "event": "auto_path_audit",
+        "max_distance_to_route_m": 8.947017218847236
+      }
+    ]
+  },
+  "hold_active_radius1_north030_20261125_01": {
+    "label": "Active stop R1",
+    "passed": false,
+    "final_phase": "complete",
+    "checks": {
+      "low_speed_parameters": true,
+      "normal_arming": true,
+      "navigation_ready_before_arming": true,
+      "guided_mode": true,
+      "moving_before_loss": true,
+      "gcs_failsafe_hold": true,
+      "gcs_failsafe_stops_command": true,
+      "failsafe_status_reported": true,
+      "independent_rc_link_healthy": true,
+      "completed": true,
+      "finite": true,
+      "estimator_healthy_after_arming": true,
+      "mission_upload": true,
+      "auto_waypoints": true,
+      "auto_path_corridor": true,
+      "loiter_mode": true,
+      "loiter_radius": true,
+      "loiter_target_observed": true,
+      "loiter_target_radius": false,
+      "rtl_mode": true,
+      "rtl_home": true,
+      "hold_stops_command": true,
+      "hold_slows_vessel": true,
+      "manual_takeover": true,
+      "low_speed_tracking": true
+    },
+    "hold_peak_m": 4.63973308772601,
+    "hold_rms_m": 3.1366576684317415,
+    "stable_observation_duration_s": 105.00000000000003,
+    "path_metrics": {
+      "max_m": 8.996361148730927,
+      "p95_m": 8.628212788167701,
+      "rms_m": 3.7286160945235074
+    },
+    "motor_mean_w": 807.0432813498987,
+    "input_parameters": {
+      "WP_SPEED": 1.0,
+      "RTL_SPEED": 0.8,
+      "WP_RADIUS": 3.0,
+      "ATC_ACCEL_MAX": 0.2,
+      "ATC_DECEL_MAX": 0.1,
+      "CRUISE_SPEED": 1.0,
+      "CRUISE_THROTTLE": 9.0,
+      "SPEED_MAX": 1.0,
+      "ATC_SPEED_I": 0.02,
+      "ATC_SPEED_IMAX": 0.05,
+      "ATC_BRAKE": 1.0,
+      "LOIT_RADIUS": 1.0,
+      "LOIT_SPEED_GAIN": 0.3,
+      "LOIT_TYPE": 0.0,
+      "ATC_STR_RAT_FF": 0.3,
+      "PSC_POS_P": 0.1,
+      "PSC_VEL_P": 0.5,
+      "TURN_RADIUS": 6.0,
+      "ATC_STR_RAT_MAX": 20.0,
+      "ATC_STR_ACC_MAX": 10.0,
+      "FS_GCS_ENABLE": 1.0,
+      "FS_ACTION": 2.0,
+      "FS_TIMEOUT": 1.5,
+      "FS_THR_ENABLE": 1.0,
+      "RC_OVERRIDE_TIME": 3.0,
+      "FS_GCS_TIMEOUT": 5.0,
+      "LOIT_KEEP_SPEED": 1.0
+    },
+    "image_ids": [
+      "sha256:9a39de035e72e6d673e2b72dd39f33d20741e3990e60eded78ee2fb6adb5de45",
+      "sha256:5ada9f7d6a43dec483d823955d9366a3d8499c3240ecc737d4cbd754b5cf5a63"
+    ],
+    "raw_result_sha256": "a2ab1fdf1411ac859b9c0f057c0c014e1c99ef5b0918903b9ed93e5e0278a5bf",
+    "raw_path": "artifacts/navigation/hold_active_radius1_north030_20261125_01",
+    "events": [
+      {
+        "time": 45.222,
+        "event": "upload"
+      },
+      {
+        "time": 45.222,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 45.322,
+        "event": "start_auto"
+      },
+      {
+        "time": 45.322,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 45.322,
+        "event": "auto"
+      },
+      {
+        "time": 45.322,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 95.114,
+        "event": "waypoint_reached",
+        "seq": 1
+      },
+      {
+        "time": 134.369,
+        "event": "waypoint_reached",
+        "seq": 2
+      },
+      {
+        "time": 182.931,
+        "event": "waypoint_reached",
+        "seq": 3
+      },
+      {
+        "time": 182.931,
+        "event": "loiter"
+      },
+      {
+        "time": 182.931,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 302.975,
+        "event": "hold"
+      },
+      {
+        "time": 302.975,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 333.062,
+        "event": "manual"
+      },
+      {
+        "time": 333.062,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 365.067,
+        "event": "rtl"
+      },
+      {
+        "time": 365.067,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.3
+      },
+      {
+        "time": 441.999,
+        "event": "outbound"
+      },
+      {
+        "time": 441.999,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 454.014,
+        "event": "outbound_motion_ready",
+        "speed_m_s": 1.1152769803954938,
+        "command": 0.338,
+        "duration_s": 2.9279999999999973
+      },
+      {
+        "time": 454.014,
+        "event": "gcs_loss"
+      },
+      {
+        "time": 454.014,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "time": 472.086,
+        "event": "complete"
+      },
+      {
+        "time": 472.086,
+        "event": "current_command",
+        "east_m_s": 0.0,
+        "north_m_s": 0.0
+      },
+      {
+        "event": "auto_path_audit",
+        "max_distance_to_route_m": 8.996361148730927
+      }
+    ]
+  }
+}

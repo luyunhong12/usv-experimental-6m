@@ -1,0 +1,126 @@
+{
+  "final_phase": "interrupted",
+  "hold_peak_m": 6.471958567125136,
+  "checks": {
+    "low_speed_parameters": true,
+    "normal_arming": true,
+    "navigation_ready_before_arming": true,
+    "guided_mode": false,
+    "moving_before_loss": false,
+    "gcs_failsafe_hold": false,
+    "gcs_failsafe_stops_command": false,
+    "failsafe_status_reported": false,
+    "independent_rc_link_healthy": false,
+    "completed": false,
+    "finite": true,
+    "estimator_healthy_after_arming": true,
+    "mission_upload": true,
+    "auto_waypoints": true,
+    "auto_path_corridor": true,
+    "loiter_mode": true,
+    "loiter_radius": true,
+    "loiter_target_observed": true,
+    "loiter_target_radius": false,
+    "rtl_mode": false,
+    "rtl_home": false,
+    "hold_stops_command": true,
+    "hold_slows_vessel": true,
+    "manual_takeover": true,
+    "low_speed_tracking": true
+  },
+  "events": [
+    {
+      "time": 45.222,
+      "event": "upload"
+    },
+    {
+      "time": 45.222,
+      "event": "current_command",
+      "east_m_s": 0.0,
+      "north_m_s": 0.0
+    },
+    {
+      "time": 45.322,
+      "event": "start_auto"
+    },
+    {
+      "time": 45.322,
+      "event": "current_command",
+      "east_m_s": 0.0,
+      "north_m_s": 0.0
+    },
+    {
+      "time": 45.322,
+      "event": "auto"
+    },
+    {
+      "time": 45.322,
+      "event": "current_command",
+      "east_m_s": 0.0,
+      "north_m_s": 0.3
+    },
+    {
+      "time": 95.114,
+      "event": "waypoint_reached",
+      "seq": 1
+    },
+    {
+      "time": 134.571,
+      "event": "waypoint_reached",
+      "seq": 2
+    },
+    {
+      "time": 183.234,
+      "event": "waypoint_reached",
+      "seq": 3
+    },
+    {
+      "time": 183.234,
+      "event": "loiter"
+    },
+    {
+      "time": 183.234,
+      "event": "current_command",
+      "east_m_s": 0.0,
+      "north_m_s": 0.3
+    },
+    {
+      "time": 303.278,
+      "event": "hold"
+    },
+    {
+      "time": 303.278,
+      "event": "current_command",
+      "east_m_s": 0.0,
+      "north_m_s": 0.0
+    },
+    {
+      "time": 333.365,
+      "event": "manual"
+    },
+    {
+      "time": 333.365,
+      "event": "current_command",
+      "east_m_s": 0.0,
+      "north_m_s": 0.0
+    },
+    {
+      "time": 365.369,
+      "event": "rtl"
+    },
+    {
+      "time": 365.369,
+      "event": "current_command",
+      "east_m_s": 0.0,
+      "north_m_s": 0.3
+    },
+    {
+      "time": 483.192,
+      "event": "interrupted"
+    },
+    {
+      "event": "auto_path_audit",
+      "max_distance_to_route_m": 9.044174268012029
+    }
+  ]
+}

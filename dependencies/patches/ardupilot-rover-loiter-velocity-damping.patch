@@ -1,0 +1,54 @@
+--- a/Rover/Parameters.h
++++ b/Rover/Parameters.h
+@@ -415,6 +415,7 @@
+ 
+     // gain for speed of correction in loiter
+     AP_Float loiter_speed_gain;
++    AP_Float loiter_velocity_damping; // Experimental motor-boat horizontal velocity damping.
+ 
+     // FS options
+     AP_Int32 fs_options;
+--- a/Rover/Parameters.cpp
++++ b/Rover/Parameters.cpp
+@@ -669,6 +669,14 @@
+     // @Increment: 0.5
+     // @User: Advanced
+     AP_GROUPINFO("CRASH_TIMEOUT", 61, ParametersG2, crash_timeout, 2.0),
++
++    // @Param: LOIT_VEL_D
++    // @DisplayName: Experimental motor boat loiter velocity damping
++    // @Description: Subtract this multiple of measured horizontal ground velocity from the position-derived return velocity. Zero preserves upstream behaviour. Motor boats only; simulation experiment, not a sea-trial calibrated setting.
++    // @Range: 0 3
++    // @Increment: 0.1
++    // @User: Advanced
++    AP_GROUPINFO("LOIT_VEL_D", 62, ParametersG2, loiter_velocity_damping, 0.0f),
+ 
+     AP_GROUPEND
+ };
+--- a/Rover/mode_loiter.cpp
++++ b/Rover/mode_loiter.cpp
+@@ -41,6 +41,24 @@
+ 
+         // calculate bearing to destination
+         _desired_yaw_cd = rover.current_loc.get_bearing_to(_destination);
++
++        // Experimental velocity damping for motor boats. All downstream speed,
++        // steering, actuator and physical limits remain active. Invalid velocity
++        // falls back to the original position-only controller.
++        Vector3f velocity_ned;
++        if (rover.is_boat() && !g2.sailboat.sail_enabled() &&
++            is_positive(g2.loiter_velocity_damping) &&
++            ahrs.get_velocity_NED(velocity_ned) &&
++            !velocity_ned.is_nan() && !velocity_ned.is_inf()) {
++            Vector2f return_velocity = rover.current_loc.get_distance_NE(_destination);
++            return_velocity *= (_desired_speed / MAX(_distance_to_destination, 0.01f));
++            return_velocity -= Vector2f(velocity_ned.x, velocity_ned.y) *
++                               constrain_float(g2.loiter_velocity_damping, 0.0f, 3.0f);
++            _desired_speed = MIN(return_velocity.length(), g2.wp_nav.get_default_speed());
++            if (_desired_speed > 0.01f) {
++                _desired_yaw_cd = degrees(atan2f(return_velocity.y, return_velocity.x)) * 100.0f;
++            }
++        }
+         float yaw_error_cd = wrap_180_cd(_desired_yaw_cd - ahrs.yaw_sensor);
+         // if destination is behind vehicle, reverse towards it
+         if ((fabsf(yaw_error_cd) > 9000 && g2.loit_type == 0) || g2.loit_type == 2) {

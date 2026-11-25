@@ -34,6 +34,13 @@ sys.path.insert(
     ),
 )
 from project_paths import WORKSPACE, tool_path
+from navigation_acceptance import (
+    required_checks,
+    passed_checks,
+    sustained_stop,
+    sustained_motion,
+    observed_loiter_target,
+)
 import os
 import sys
 import time
@@ -47,6 +54,8 @@ import struct
 import numpy as np
 import xml.etree.ElementTree as E
 import shutil
+import hashlib
+from itertools import cycle
 
 root = WORKSPACE
 sys.path.insert(0, str(root / "../dependencies/vendor/python"))
@@ -64,7 +73,21 @@ def _load_runtime_dependencies_1():
 p = argparse.ArgumentParser()
 p.add_argument("--label", default="navigation")
 p.add_argument("--failsafe-only", action="store_true")
+p.add_argument("--mirror-course", action="store_true")
+p.add_argument("--external-sitl", action="store_true")
+p.add_argument("--isolated-water", action="store_true")
+p.add_argument("--no-rendering", action="store_true")
+p.add_argument("--current-east", type=float, default=0.15)
+p.add_argument("--current-north", type=float, default=0.1)
+p.add_argument("--current-navigation", action="store_true")
+p.add_argument("--timeout", type=float, default=900)
+p.add_argument("--output", type=_ProjectPath)
+
 a = p.parse_args()
+if not math.isfinite(a.timeout) or a.timeout <= 0:
+    p.error("Timeout must be finite and positive")
+if not all(math.isfinite(v) and abs(v) <= 1 for v in (a.current_east, a.current_north)):
+    p.error("Current components must be finite and within +/-1 m/s")
 if not a.label.isidentifier():
     p.error("Invalid label")
 os.environ["GZ_PARTITION"] = "usv_platform_" + a.label
@@ -90,12 +113,15 @@ def _load_runtime_dependencies_2():
     Vector3d,
 ) = _load_runtime_dependencies_2()
 
-out = root / "log/platform_validation" / a.label
-out.mkdir(parents=True, exist_ok=True)
+out = (a.output or root.parent / "artifacts/navigation" / a.label).resolve()
+out.mkdir(parents=True, exist_ok=False)
 rc_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 node = Node()
 rows = []
 energy = []
+actuators = []
+last_actuator_wall = 0.0
+last_physics_wall = 0.0
 
 
 def record_message_1(m):
@@ -104,6 +130,8 @@ def record_message_1(m):
     Args:
         m: 当前订阅接收到的消息，类型由订阅接口确定。
     """
+    global last_physics_wall
+    last_physics_wall = time.monotonic()
     return rows.append(list(m.data))
 
 
@@ -120,6 +148,20 @@ def record_message_2(m):
 
 
 node.subscribe(Double_V, "/usv/energy/truth", record_message_2)
+
+
+def record_actuator(message):
+    """记录实测舵角，用于验证手动输入到物理关节的响应。
+
+    Args:
+        message: 执行器遥测消息。
+    """
+    global last_actuator_wall
+    last_actuator_wall = time.monotonic()
+    actuators.append(list(message.data))
+
+
+node.subscribe(Double_V, "/usv/actuators/state", record_actuator)
 flow = node.advertise("/vrx/current/velocity", Vector3d)
 world = out / "world.sdf"
 subprocess.run(
@@ -137,15 +179,43 @@ subprocess.run(
 # Capture the exact boat and flight-control defaults before launching.
 tree = E.parse(world)
 for inc in tree.findall("world/include"):
+    if a.isolated_water and inc.findtext("name") != "usv":
+        tree.find("world").remove(inc)
+        continue
     if inc.findtext("name") == "usv":
         snapshot = out / "boat.sdf"
         shutil.copy2(inc.findtext("uri"), snapshot)
         inc.find("uri").text = str(snapshot)
+if a.no_rendering:
+    boat = E.parse(snapshot)
+    for parent in boat.iter():
+        for sensor in list(parent.findall("sensor")):
+            if sensor.get("type") in {"camera", "gpu_lidar", "gpu_ray"}:
+                parent.remove(sensor)
+    boat.write(snapshot, encoding="utf-8", xml_declaration=True)
+    for plugin in list(tree.findall("world/plugin")):
+        if plugin.get("name") == "gz::sim::systems::Sensors":
+            tree.find("world").remove(plugin)
 tree.write(world, encoding="utf-8", xml_declaration=True)
-for parameter_file in ["boat.parm", "platform15.parm"]:
+for parameter_file in ["boat.parm", "platform15.parm", "navigation_low_speed.parm"]:
     shutil.copy2(
         root / "src/usv_ardupilot/config" / parameter_file, out / parameter_file
     )
+# Bind the generated scenario and actual executable inputs, not just source defaults.
+inputs = [
+    world,
+    snapshot,
+    _ProjectPath(__file__),
+    root.parent / "tools/lib/navigation_acceptance.py",
+    root / "src/usv_ardupilot/scripts/json_bridge.py",
+]
+inputs += list(out.glob("*.parm"))
+inputs += list((root / "install/usv_simulation/lib").glob("*.so"))
+inputs += list((root / "install/usv_physics/lib").glob("*.so"))
+input_hashes = {
+    str(path): hashlib.sha256(path.read_bytes()).hexdigest() for path in inputs
+}
+(out / "runtime-inputs.json").write_text(json.dumps(input_hashes, indent=2))
 procs = []
 files = []
 
@@ -180,18 +250,19 @@ start(
     ],
     "bridge.log",
 )
-start(
-    [
-        "python3",
-        str(tool_path("run_sitl.py")),
-        "--instance",
-        "43",
-        "--profile",
-        "platform15",
-        "--wipe",
-    ],
-    "sitl.log",
-)
+if not a.external_sitl:
+    start(
+        [
+            "python3",
+            str(tool_path("run_sitl.py")),
+            "--instance",
+            "43",
+            "--profile",
+            "navigation",
+            "--wipe",
+        ],
+        "sitl.log",
+    )
 conn = None
 status = []
 events = []
@@ -208,10 +279,46 @@ phase = "init"
 phase_t = 0.0
 last_hb = last_arm = last_upload = last_rc = 0.0
 begin = time.monotonic()
-checks = {}
+checks = required_checks(a.failsafe_only)
+parameter_values = {}
+parameter_targets = {}
+for line in (out / "navigation_low_speed.parm").read_text().splitlines():
+    if line.strip() and not line.lstrip().startswith("#"):
+        name, value = line.split()
+        parameter_targets[name] = float(value)
+parameter_targets.update(
+    AHRS_EKF_TYPE=3,
+    EK3_ENABLE=1,
+    FS_GCS_ENABLE=1,
+    FS_ACTION=2,
+    FS_TIMEOUT=1.5,
+    FS_THR_ENABLE=1,
+    RC_OVERRIDE_TIME=3,
+)
+parameter_requests = cycle(parameter_targets)
+last_parameter_request_wall = 0.0
+current_waypoint = 1
+route_samples = []
+loss_samples = []
+loss_status = []
+rc_health_times = []
+manual_samples = []
+outbound_motion_samples = []
+manual_stage = 0
+last_heartbeat_wall = 0.0
+estimator_ready_since = None
+last_estimator_wall = 0.0
+estimator_faults = []
+estimator_log = []
+hold_samples = []
+auto_speeds = []
 rc_health = []
 loiter_center = None
 loiter_errors = []
+loiter_observations = []
+loiter_target = None
+last_target_wall = 0.0
+last_gps_wall = 0.0
 home_errors = []
 phase_start = None
 M = mavutil.mavlink
@@ -248,6 +355,11 @@ def transition(value, sim):
     phase = value
     phase_t = sim
     event(value)
+    # 导航包络试验在AUTO、LOITER和RTL施加同一世界坐标水流，其他阶段清零。
+    active = value == "loiter" or (a.current_navigation and value in {"auto", "rtl"})
+    east, north = (a.current_east, a.current_north) if active else (0.0, 0.0)
+    flow.publish(Vector3d(x=east, y=north, z=0))
+    event("current_command", east_m_s=east, north_m_s=north)
 
 
 def offset(lat, lon, east, north):
@@ -289,8 +401,42 @@ def send_item(seq):
     )
 
 
+def manual_channels(phase, stage):
+    """返回手动试验的原生 RC 通道；其他阶段保持中位。
+
+    Args:
+        phase: 当前试验阶段。
+        stage: 手动阶段，前进、左舵、右舵、停推。
+    """
+    if phase != "manual":
+        return (1500, 1500, 1500)
+    steering = [1500, 1250, 1750, 1500][stage]
+    return (steering, 1500, 1600 if stage < 3 else 1500)
+
+
+def manual_response(samples):
+    """用各阶段后四秒验证推进、实测舵角与停推响应。
+
+    Args:
+        samples: elapsed、推进请求、纵向速度、实测舵角、阶段。
+    """
+    stages = [
+        [r for r in samples if int(r[4]) == stage and r[0] % 8 > 4]
+        for stage in range(4)
+    ]
+    if not all(stages):
+        return False
+    return bool(
+        np.median([r[1] for r in stages[0]]) > 0.05
+        and max(r[2] for r in stages[0]) > 0.1
+        and np.median([r[3] for r in stages[1]]) < -0.1
+        and np.median([r[3] for r in stages[2]]) > 0.1
+        and all(abs(r[1]) < 0.01 for r in stages[3])
+    )
+
+
 try:
-    while time.monotonic() - begin < 660:
+    while time.monotonic() - begin < a.timeout:
         if any(p.poll() is not None for p in procs):
             event("process_exit")
             break
@@ -311,13 +457,46 @@ try:
             kind = m.get_type()
             if kind == "STATUSTEXT":
                 status.append(m.text)
+                if phase == "gcs_loss":
+                    loss_status.append(m.text)
                 print("SITL:", m.text, flush=True)
+                if armed and "EKF variance" in m.text:
+                    estimator_faults.append(m.text)
+            elif kind == "EKF_STATUS_REPORT":
+                if now - last_estimator_wall >= 1:
+                    estimator_ready_since = None
+                last_estimator_wall = now
+                required = M.EKF_ATTITUDE | M.EKF_VELOCITY_HORIZ | M.EKF_POS_HORIZ_ABS
+                valid = (
+                    (m.flags & required) == required
+                    and math.isfinite(m.velocity_variance)
+                    and math.isfinite(m.pos_horiz_variance)
+                    and m.velocity_variance < 1
+                    and m.pos_horiz_variance < 1
+                )
+                estimator_log.append(dict(sim_s=sim, **m.to_dict()))
+                if not valid:
+                    estimator_ready_since = None
+                    if armed:
+                        estimator_faults.append("invalid EKF flags/variance")
+                elif estimator_ready_since is None:
+                    estimator_ready_since = now
+            elif kind == "PARAM_VALUE":
+                parameter_values[m.param_id] = m.param_value
             elif kind == "HEARTBEAT":
+                last_heartbeat_wall = now
                 armed = bool(m.base_mode & M.MAV_MODE_FLAG_SAFETY_ARMED)
                 mode = m.custom_mode
+            elif kind == "POSITION_TARGET_GLOBAL_INT":
+                loiter_target = (m.lat_int * 1e-7, m.lon_int * 1e-7)
+                last_target_wall = now
+            elif kind == "MISSION_CURRENT":
+                current_waypoint = m.seq
             elif kind == "GLOBAL_POSITION_INT":
                 gps = (m.lat * 1e-7, m.lon * 1e-7)
+                last_gps_wall = now
             elif kind == "SYS_STATUS" and phase == "gcs_loss":
+                rc_health_times.append(now)
                 rc_health.append(
                     bool(
                         m.onboard_control_sensors_health
@@ -347,21 +526,85 @@ try:
         # Native SITL RC UDP is independent: MAVLink RC overrides also refresh GCS last-seen.
         if now - last_rc > 0.2:
             rc_socket.sendto(
-                struct.pack("<8H", 1500, 1500, 1500, 1500, 1800, 1000, 1000, 1800),
+                struct.pack(
+                    "<8H",
+                    *manual_channels(phase, manual_stage),
+                    1500,
+                    1800,
+                    1000,
+                    1000,
+                    1800
+                ),
                 ("127.0.0.1", 5931),
             )
             last_rc = now
+        checks["low_speed_parameters"] = all(
+            name in parameter_values and abs(parameter_values[name] - value) < 1e-5
+            for name, value in parameter_targets.items()
+        )
+        if phase != "init" and now - last_heartbeat_wall > 2:
+            event("heartbeat_stale")
+            break
+        if phase != "init" and now - last_physics_wall > 2:
+            event("physics_telemetry_stale")
+            break
+        navigation_ready = (
+            estimator_ready_since is not None
+            and now - estimator_ready_since >= 2
+            and now - last_estimator_wall < 1
+        )
+        if now - last_estimator_wall >= 1:
+            estimator_ready_since = None
+        if armed and now - last_estimator_wall > 2:
+            estimator_faults.append("EKF telemetry stale")
+            break
         if phase == "init":
+            # 逐项限速读回，避免大批请求挤满飞控参数响应队列；不得绕过读回校验。
+            if now - last_parameter_request_wall >= 0.1:
+                name = next(parameter_requests)
+                if (
+                    name not in parameter_values
+                    or abs(parameter_values[name] - parameter_targets[name]) >= 1e-5
+                ):
+                    conn.mav.param_request_read_send(1, 1, name.encode(), -1)
+                last_parameter_request_wall = now
             if now - last_arm > 4:
                 setmode(15)
                 conn.mav.request_data_stream_send(1, 1, M.MAV_DATA_STREAM_ALL, 10, 1)
-                if mode == 15:
+                conn.mav.command_long_send(
+                    1,
+                    1,
+                    M.MAV_CMD_SET_MESSAGE_INTERVAL,
+                    0,
+                    M.MAVLINK_MSG_ID_EKF_STATUS_REPORT,
+                    200000,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                )
+                conn.mav.command_long_send(
+                    1,
+                    1,
+                    M.MAV_CMD_SET_MESSAGE_INTERVAL,
+                    0,
+                    M.MAVLINK_MSG_ID_POSITION_TARGET_GLOBAL_INT,
+                    200000,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                )
+                if mode == 15 and navigation_ready and checks["low_speed_parameters"]:
                     conn.mav.command_long_send(
                         1, 1, M.MAV_CMD_COMPONENT_ARM_DISARM, 0, 1, 0, 0, 0, 0, 0, 0
                     )
                 last_arm = now
             if armed and gps and rows:
                 checks["normal_arming"] = True
+                checks["navigation_ready_before_arming"] = navigation_ready
                 home = rows[-1][12:14]
                 phase_start = sim
                 if a.failsafe_only:
@@ -386,9 +629,9 @@ try:
                     continue
                 waypoints = [
                     gps,
-                    offset(*gps, 70, 0),
-                    offset(*gps, 70, 40),
-                    offset(*gps, 20, 40),
+                    offset(*gps, 40, 0),
+                    offset(*gps, 40, -30 if a.mirror_course else 30),
+                    offset(*gps, 10, -30 if a.mirror_course else 30),
                 ]
                 conn.mav.mission_clear_all_send(1, 1)
                 transition("upload", sim)
@@ -411,28 +654,82 @@ try:
                 event("auto_mode_rejected")
                 break
         elif phase == "auto":
+            if rows and 1 <= current_waypoint <= 3:
+                route_samples.append([*rows[-1][12:14], current_waypoint, sim])
+            if sim - phase_t > 10:
+                auto_speeds.append(abs(rows[-1][10]))
             if 3 in reached:
                 checks["auto_waypoints"] = bool({1, 2, 3}.issubset(reached) and armed)
                 loiter_center = rows[-1][12:14]
                 setmode(5)
                 transition("loiter", sim)
-            elif sim - phase_t > 240:
+            elif sim - phase_t > 400:
                 event("auto_timeout")
                 break
         elif phase == "loiter":
-            flow.publish(Vector3d(x=0.15, y=0.1, z=0))
+            flow.publish(Vector3d(x=a.current_east, y=a.current_north, z=0))
             if sim - phase_t > 15:
                 loiter_errors.append(
                     float(np.linalg.norm(np.array(rows[-1][12:14]) - loiter_center))
                 )
-            if sim - phase_t > 60:
+            if (
+                gps
+                and loiter_target
+                and now - last_target_wall < 1
+                and now - last_gps_wall < 1
+            ):
+                north = (gps[0] - loiter_target[0]) * 111319.49
+                east = (
+                    (gps[1] - loiter_target[1])
+                    * 111319.49
+                    * math.cos(math.radians(gps[0]))
+                )
+                loiter_observations.append(
+                    [sim - phase_t, math.hypot(east, north), *gps, *loiter_target]
+                )
+            if sim - phase_t > 120:
                 checks["loiter_mode"] = mode == 5
+                checks["loiter_target_observed"] = observed_loiter_target(
+                    loiter_observations
+                )
+                stable_errors = [r[1] for r in loiter_observations if r[0] > 15]
+                checks["loiter_target_radius"] = bool(
+                    stable_errors and max(stable_errors) <= 3.0
+                )
                 checks["loiter_radius"] = bool(
                     loiter_errors and max(loiter_errors) < 12
                 )
                 flow.publish(Vector3d(x=0, y=0, z=0))
-                setmode(11)
-                transition("rtl", sim)
+                setmode(4)
+                transition("hold", sim)
+        elif phase == "hold":
+            if sim - phase_t > 20:
+                hold_samples.append(rows[-1])
+            if sim - phase_t > 30:
+                checks["hold_stops_command"] = bool(
+                    hold_samples
+                    and mode == 4
+                    and all(abs(r[1]) < 0.01 for r in hold_samples)
+                )
+                checks["hold_slows_vessel"] = bool(
+                    hold_samples and max(abs(r[10]) for r in hold_samples) < 0.3
+                )
+                setmode(0)
+                transition("manual", sim)
+        elif phase == "manual":
+            if mode == 0 and rows and actuators and now - last_actuator_wall < 0.5:
+                elapsed = sim - phase_t
+                manual_stage = min(int(elapsed // 8), 3)
+                manual_samples.append(
+                    [elapsed, rows[-1][1], rows[-1][10], actuators[-1][1], manual_stage]
+                )
+                if elapsed > 32:
+                    checks["manual_takeover"] = manual_response(manual_samples)
+                    manual_stage = 0
+                    setmode(11)
+                    transition("rtl", sim)
+            elif sim - phase_t > 10:
+                break
         elif phase == "rtl":
             dist = float(np.linalg.norm(np.array(rows[-1][12:14]) - home))
             home_errors.append(dist)
@@ -463,19 +760,44 @@ try:
                 event("rtl_timeout")
                 break
         elif phase == "outbound":
-            if sim - phase_t > 12:
+            sample = [rows[-1][0], rows[-1][10], rows[-1][1], mode]
+            if (
+                not outbound_motion_samples
+                or sample[0] > outbound_motion_samples[-1][0]
+            ):
+                outbound_motion_samples.append(sample)
+            motion_window = [
+                row for row in outbound_motion_samples if row[0] >= sample[0] - 3
+            ]
+            if sim - phase_t > 12 and sustained_motion(motion_window):
                 checks["guided_mode"] = mode == 15
-                checks["moving_before_loss"] = abs(rows[-1][10]) > 0.3
+                checks["moving_before_loss"] = True
+                event(
+                    "outbound_motion_ready",
+                    speed_m_s=sample[1],
+                    command=sample[2],
+                    duration_s=motion_window[-1][0] - motion_window[0][0],
+                )
                 transition("gcs_loss", sim)
+            elif sim - phase_t > 60:
+                event("outbound_motion_timeout")
+                break
         elif phase == "gcs_loss":
+            if sim - phase_t >= 10 and (
+                not loss_samples or rows[-1][0] > loss_samples[-1][0]
+            ):
+                loss_samples.append([rows[-1][0], rows[-1][1], mode])
             if sim - phase_t > 18:
                 checks["gcs_failsafe_hold"] = mode == 4
-                checks["gcs_failsafe_stops_command"] = abs(rows[-1][1]) < 0.01
+                checks["gcs_failsafe_stops_command"] = sustained_stop(loss_samples)
                 checks["failsafe_status_reported"] = any(
-                    s.endswith(" Failsafe") for s in status
+                    s.endswith(" Failsafe") for s in loss_status
                 )
                 checks["independent_rc_link_healthy"] = bool(
-                    rc_health and all(rc_health)
+                    len(rc_health) >= 10
+                    and all(rc_health)
+                    and rc_health_times[-1] - rc_health_times[0] >= 15
+                    and max(np.diff(rc_health_times)) < 1
                 )
                 transition("complete", sim)
                 break
@@ -514,7 +836,7 @@ finally:
         f.close()
     rc_socket.close()
 if not a.failsafe_only:
-    logs = root / "log/ardupilot/platform15/instance_43/logs"
+    logs = root.parent / "artifacts/sitl/navigation/instance_43/logs"
     if list(logs.glob("*.BIN")):
 
         def modification_time_3(p):
@@ -529,10 +851,12 @@ if not a.failsafe_only:
             max(logs.glob("*.BIN"), key=modification_time_3),
             out / "flight_control.BIN",
         )
+path_metrics = {}
 checks["completed"] = phase == "complete"
 if not a.failsafe_only and home is not None and track:
     tr = np.array(track)
-    points = np.array([[0.0, 0.0], [70.0, 0.0], [70.0, 40.0], [20.0, 40.0]]) + home
+    north = -30.0 if a.mirror_course else 30.0
+    points = np.array([[0.0, 0.0], [40.0, 0.0], [40.0, north], [10.0, north]]) + home
 
     def distance_to_segment(points, start, end):
         """计算平面点到有限线段的距离。
@@ -546,24 +870,70 @@ if not a.failsafe_only and home is not None and track:
         q = np.clip((points - start) @ v / np.dot(v, v), 0, 1)
         return np.linalg.norm(points - (start + q[:, None] * v), axis=1)
 
-    auto = tr[tr[:, 4] == 10, 1:3]
-    if len(auto):
-        path_error = np.min(
-            np.array(
-                [distance_to_segment(auto, points[i], points[i + 1]) for i in range(3)]
-            ),
-            axis=0,
+    if route_samples:
+        path_error = np.array(
+            [
+                distance_to_segment(
+                    np.array([sample[:2]]),
+                    points[int(sample[2]) - 1],
+                    points[int(sample[2])],
+                )[0]
+                for sample in route_samples
+            ]
+        )
+        np.savetxt(
+            out / "active_segment.csv",
+            np.column_stack((route_samples, path_error)),
+            delimiter=",",
         )
         checks["auto_path_corridor"] = bool(np.max(path_error) < 15)
+        path_metrics = dict(
+            max_m=float(np.max(path_error)),
+            p95_m=float(np.percentile(path_error, 95)),
+            rms_m=float(np.sqrt(np.mean(path_error**2))),
+        )
         events.append(
             {
                 "event": "auto_path_audit",
                 "max_distance_to_route_m": float(np.max(path_error)),
             }
         )
+checks["estimator_healthy_after_arming"] = bool(
+    estimator_log and not estimator_faults and phase_start is not None
+)
+if not a.failsafe_only:
+    checks["low_speed_tracking"] = bool(
+        auto_speeds
+        and 0.5 <= np.median(auto_speeds) <= 1.3
+        and np.percentile(auto_speeds, 95) <= 1.5
+    )
+(out / "estimator.json").write_text(
+    json.dumps(dict(samples=estimator_log, faults=estimator_faults), indent=2)
+)
 checks["finite"] = bool(rows and np.isfinite(rows).all())
 r = dict(
-    passed=all(checks.values()),
+    passed=passed_checks(checks, a.failsafe_only),
+    loiter_target_samples=loiter_observations,
+    path_metrics=path_metrics,
+    mirrored_course=a.mirror_course,
+    actual_parameters=parameter_values,
+    required_parameters=parameter_targets,
+    manual_response_samples=manual_samples,
+    outbound_motion_samples=outbound_motion_samples,
+    loss_stop_samples=loss_samples,
+    loss_status=loss_status,
+    scope=dict(
+        isolated_water=a.isolated_water,
+        rendering=not a.no_rendering,
+        target_speed_m_s=1.0,
+        current_east_m_s=a.current_east,
+        current_north_m_s=a.current_north,
+        current_phases=(
+            ["auto", "loiter", "rtl"] if a.current_navigation else ["loiter"]
+        ),
+    ),
+    auto_speed_median_m_s=float(np.median(auto_speeds)) if auto_speeds else None,
+    auto_speed_p95_m_s=float(np.percentile(auto_speeds, 95)) if auto_speeds else None,
     checks=checks,
     final_phase=phase,
     events=events,
@@ -576,14 +946,13 @@ r = dict(
     rc_health_samples_during_gcs_loss=rc_health,
     rc_source="native SITL UDP 5931; no MAVLink RC overrides during experiment",
 )
-for name, data in [("propulsion", rows), ("energy", energy), ("track", track)]:
+for name, data in [
+    ("propulsion", rows),
+    ("energy", energy),
+    ("track", track),
+    ("actuators", actuators),
+]:
     np.savetxt(out / (name + ".csv"), np.array(data), delimiter=",")
 (out / "result.json").write_text(json.dumps(r, indent=2))
 print(json.dumps(r, indent=2))
-if not a.failsafe_only and (out / "flight_control.BIN").exists():
-    audit = subprocess.run(
-        ["python3", str(tool_path("audit_navigation_clock.py")), a.label]
-    )
-    r["passed"] = r["passed"] and audit.returncode == 0
-    (out / "result.json").write_text(json.dumps(r, indent=2))
 raise SystemExit(0 if r["passed"] else 1)

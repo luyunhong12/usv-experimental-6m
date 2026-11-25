@@ -64,5 +64,20 @@ class StepLimiterTests(unittest.TestCase):
             self.limiter.next(target)
 
 
+class PacketEncodingTests(unittest.TestCase):
+    """锁定上游布尔字段的线协议兼容性。"""
+
+    def test_boolean_has_no_leading_space(self):
+        """真实 wire 字节必须能被不跳空格的 BOOLEAN 分支识别。"""
+        import json
+        from json_time import encode_sensor_packet
+
+        packet = encode_sensor_packet({"timestamp": 1.0, "no_time_sync": True})
+        self.assertIn(b'"no_time_sync":true', packet)
+        self.assertTrue(json.loads(packet)["no_time_sync"])
+        with self.assertRaises(ValueError):
+            encode_sensor_packet({"timestamp": float("nan")})
+
+
 if __name__ == "__main__":
     unittest.main()
