@@ -73,3 +73,15 @@
 ```
 
 方向、作用阶段和切换时刻保存在结果中。参数分量须有限且绝对值不超过1 m/s，此输入范围不代表模型已通过相应强流验证。实际结果、失败项和复现输入见[恒流方向与强度试验](../validation/current_envelope_2026-11-25/README.md)。
+# 风浪专项验收（2026-11-26）
+
+独立容器完整检查入口支持物理风浪：
+
+```bash
+./usv navigation-test wind5_wave1_new_label \
+  --current-east 0 --current-north 0 --wind-north 5 --wave-gain 1 --timeout 1200
+```
+
+标签必须未使用过。世界ENU风速单位m/s；`--wave-gain`是波谱增益，不是浪高米数。风浪保持到试验结束，含HOLD、返航和失联；不要同时用其他程序操控该独立实例。该入口不启动QGC或桌面GUI。
+
+本轮该工况30/30通过，仍不能外推到其他风浪流组合；详见[结果和适用范围](../validation/control_weather_2026-11-26/README.md)。恒流保持问题另列，原3 m门槛没有放宽。

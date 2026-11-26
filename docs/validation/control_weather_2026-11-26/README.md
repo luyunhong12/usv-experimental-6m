@@ -39,3 +39,20 @@
 原检查含有限数据、姿态、功率限制、能量平衡、燃油质量一致性、阻力耗散与控制健康。补充检查使用原环境门槛10°/10°/80%，并核对实际风向风速、非平静波面及稳定段环境采样连续性；没有改写原结果。[完整汇总](physics_sensitivity/summary.json)、[SDF参数实际值与镜像](physics_sensitivity/verified-model-inputs.json)、[工况定义](../../../tests/scenarios/weather_uncertainty.json)。各工况子目录保存原结果、源版本和数据压缩件，manifest记录原始字节SHA256。原件保留在 `artifacts/weather_uncertainty_20261126`。
 
 这只说明三组离散假设下数值与低速直接推进的表现，没有辨识真实系数、覆盖变参组合或证明任何风浪下都稳定。详细科学依据、缺失数据及15 km/h适用边界已整理为[模型可信范围](../../parameters/model_validity.md)。第四项能在无实船数据下完成的是此类可追溯假设和敏感性验证；实船预测标定仍未完成。
+
+## 步骤四：指定风浪的完整导航已通过
+
+`weather_wind5_wave1_20261126_01` 使用原正式飞控与正式低速参数，修复后启动器，**30/30通过**。向北恒风5 m/s、波谱增益1.0、零恒流，完整AUTO三航点→LOITER 120秒→HOLD→MANUAL接管→RTL→GUIDED→独立GCS失联停推；风和波浪贯穿全部阶段。
+
+| 指标 | 结果 | 原门槛 |
+| --- | ---: | ---: |
+| 稳定保持峰值 | 1.299 m | ≤3 m |
+| 稳定保持RMS | 0.763 m | 记录，不替代峰值判据 |
+| 最大横摇/纵摇 | 3.568° / 3.219° | 各<10° |
+| 最小桨浸水比例 | 100% | ≥80% |
+
+[完整摘要及30项检查](weather_navigation/summary.json)、[原始结果压缩件](weather_navigation/result.json.gz)、[代码/参数清单](weather_navigation/input-sha256.txt)、[运行文件哈希](weather_navigation/runtime-inputs.json)。源码逐字节匹配提交 `1ebc757`，镜像ID也在摘要中；CSV无损归档，未改写原结果。原始文件在 `artifacts/navigation/weather_wind5_wave1_20261126_01`。
+
+本轮为隔离水域、关闭GPU图像生成的物理/飞控测试，所有设备质量和功耗保留。**不是完整悉尼场景相机/点云风浪长测，不覆盖阵风、其他波向、带流组合或其他载荷。** 单次通过也不是统计可靠性保证；它解决了此前这组5 m/s风、增益1.0浪仅凭预览、没有完整导航证据的问题。有流3 m保持仍另行调查，不能用本结果替代。
+
+启动器回归增加最终完成断言后再次执行了[最终full检查](supervisor-final-full.log)，[完整机器报告](supervisor-final-full.json.gz)及[实际构建/测试](final-full-build-test.log)保存独立证据，没有覆盖上一步报告。当前生产物理未修改；实验速度投影仍需单独SITL验收，不能借full通过提前采用。

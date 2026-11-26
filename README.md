@@ -22,6 +22,8 @@
 
 2026-11-26新增实测风浪导航门禁，并完成三组5 m/s风、波谱增益1.0下的直接推进物理敏感性检查；有流保持仍在修正中。[本轮进展](docs/validation/control_weather_2026-11-26/README.md)。各模块科学依据、未标定参数和15 km/h概念方案的限制见[模型可信范围](docs/parameters/model_validity.md)。
 
+指定的5 m/s向北风、波谱增益1.0、零恒流工况已完成隔离水域SITL导航30/30验收，保持峰值1.299 m；不等于完整悉尼GPU风浪长测或所有流场均通过。[原始结果与边界](docs/validation/control_weather_2026-11-26/weather_navigation/summary.json)。
+
 ## 船长什么样，结构是什么
 
 **以下是设计渲染图和 Gazebo 仿真截图，目前没有实船照片。** 设计图用于说明结构；历史截图用于展示外观，不作为最新物理测试的证明。
