@@ -45,7 +45,7 @@
 
 [固件真实编译](preview-build.log)、[输入哈希](preview-source-sha256.json)、[实际应用的头文件](preview-test/Rover/LoiterYawPreview.h)、[边界测试](preview-test/preview_test.cc)。测试涵盖已知40°角积分、左右对称、零/负/非法时域、非法角速度、最大有限数和极小时域。沙箱内ASan/UBSan程序遇到[LeakSanitizer与ptrace环境不兼容](preview-test/sanitizer-sandbox-error.log)，不算通过；同一二进制在已授权的普通沙箱外运行，[检查通过](preview-test/sanitized-outside-sandbox.log)，没有关闭检测。该结果只覆盖这个纯函数，不是整套ArduPilot的sanitizer认证。
 
-该补丁与之前实验都占G2槽62，互斥使用独立镜像与全新EEPROM；正式飞控不变。北向0.30 m/s完整25项正在筛选，不因编译/边界测试通过而提前采用。
+该补丁与之前实验都占G2槽62，互斥使用独立镜像与全新EEPROM；正式飞控不变。北向0.30 m/s完整25项已完成，结果见下；未因编译/边界测试通过而提前采用。
 
 ### 第一版完整结果：未采用
 
@@ -57,8 +57,16 @@
 
 第二版仅将相同有界预见量放到原正反向选择和速度缩放之前：统一用`wrap(bearing−yaw−rate×tau)`判断，保留原90°选择规则与下游控制器；时域仍4秒，不同时更改数值。没有新增状态、定时器或物理力。原几何目标位置不变；调整的是控制器对残余转动的估计。上一版镜像和补丁保留，第二版使用新镜像名，禁止覆盖第一版证据。
 
-[当前补丁](../../../dependencies/patches/ardupilot-rover-loiter-yaw-preview.patch)。这是独立单变量结构对照，尚未获得运行结果；不能因逻辑更一致就宣布3 m已修复。
+[当前补丁](../../../dependencies/patches/ardupilot-rover-loiter-yaw-preview.patch)。这是独立单变量结构对照，完整运行仍未通过，不能因逻辑更一致就宣布3 m已修复。
 
 用第一版实际GPS目标方位与近时NTUN/PIDS审计，保持15秒后、距离目标大于0.1米的10170个样本中，按当前航向和按4秒预见航向作出的正反向选择约14.85%不同；最大对齐年龄0.124秒。见[定义与哈希](choice-audit.json)、[全量审计](choice-audit.csv.gz)。这不是精确控制周期重放或根因的充分证明，但说明两种判断在实际记录中确实会分歧，值得做统一状态的对照。
 
 第二版[真实编译日志](motion-preview-build.log)、[补丁哈希](motion-preview-source-sha256.json)、[镜像内补丁哈希](motion-preview-image-patch.txt)。纯函数头文件与第一版逐字节相同，沿用该函数真实边界/ASan+UBSan结果；整体接线变化由完整固件重编译和独立SITL运行验证，不能只用头文件测试代替。
+
+### 第二版完整结果：未采用
+
+`hold_motionpreview4_north030_20261126_01`完整24/25，唯一失败为保持；峰值3.969 m、RMS 2.906 m，原3 m标准不变。横摇峰值0.895°、纵摇0.142°，湿润比例1。见[完整摘要与原数据](motion_preview_run/summary.json)。第二版比第一版的位置误差更大，不能用统一预见状态替代执行器协调的验证，正式参数和固件保持原基线。
+
+[执行器审计](actuator-audit/README.md)补充第二版数据：舵角请求/实际RMSE 28.30°，误差>10°占50.29%；有效子集中横向推进代理量与转向请求异号20.21%，明显推力符号滞后0.43%；死区外油门变号7次、转速请求/实际RMSE 11.67°/s。减少变号没有带来保持通过，两个问题仍未解决。
+
+用户随后要求核对官方开源接入方案。下一步先评估同一船体接入官方插件的对照，不将接口替换当作控制问题已经解决，也不直接替换船体或放宽验收。

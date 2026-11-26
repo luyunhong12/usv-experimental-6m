@@ -1,0 +1,18 @@
+{
+  "label": "current_north030_20261125_01",
+  "samples": 1050,
+  "lateral_proxy_request_opposition_fraction": 0.21535181236673773,
+  "lateral_proxy_valid_samples": 938,
+  "thrust_sign_lag_fraction": 0.010146561443066516,
+  "thrust_valid_samples": 887,
+  "helm_request_tracking_rmse_deg": 28.315539299547318,
+  "helm_request_error_above_10deg_fraction": 0.43523809523809526,
+  "throttle_sign_changes_after_1pct_deadband": 9,
+  "yaw_rate_tracking_rmse_deg_s": 11.562607808756674,
+  "source_sha256": {
+    "run/result.json": "0d0d41ef88cf0bbf659be05511338462e7c3128cbe1bb80b3e02cce73ea7d1ee",
+    "run/propulsion.csv": "10844f8be9da34f102604a91c75aec9bd0759641e38e28eb1dc2c02f60f56c83",
+    "run/actuators.csv": "4b97200b5be40355b8ccee3a930f7ade65a2170b7c60d3a656cf1958405aa30a",
+    "sitl/logs/00000001.BIN": "5e8e821ecd14896e5fedc28847b3c9b67dcf72745363edb804675c46d316ce86"
+  }
+}
