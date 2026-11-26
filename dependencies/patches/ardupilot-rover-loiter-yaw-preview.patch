@@ -17,7 +17,7 @@
 +
 +    // @Param: LOIT_YAW_TAU
 +    // @DisplayName: Experimental motor boat loiter yaw preview
-+    // @Description: Subtract measured earth-frame yaw rate times this horizon from the geometric heading target, limited to 90 degrees. Only motor boat LOITER type 0 with vectored thrust. Default zero preserves upstream behavior. Simulation experiment, not sea-trial calibrated.
++    // @Description: Use measured earth-frame yaw rate times this horizon to preview heading before forward/reverse selection and speed scaling, limited to 90 degrees. Only motor boat LOITER type 0 with vectored thrust. Default zero preserves upstream behavior. Simulation experiment, not sea-trial calibrated.
 +    // @Units: s
 +    // @Range: 0 5
 +    // @User: Advanced
@@ -33,13 +33,13 @@
  
  bool ModeLoiter::_enter()
  {
-@@ -53,6 +54,16 @@
-         // 45deg of error reduces speed to 75%, 90deg of error reduces speed to 50%
-         float yaw_error_ratio = 1.0f - constrain_float(fabsf(yaw_error_cd / 9000.0f), 0.0f, 1.0f) * 0.5f;
-         _desired_speed *= yaw_error_ratio;
+@@ -41,6 +42,16 @@
+ 
+         // calculate bearing to destination
+         _desired_yaw_cd = rover.current_loc.get_bearing_to(_destination);
 +
-+        // 仅调整本周期新算出的航向；不在半径内对保留航向累加预见量。
-+        // 保留原几何方向与速度缩放，执行器和船体约束不变。
++        // 在几何方向选择之前预见本周期航向；换向、速度缩放、收舵使用同一状态。
++        // 不在半径内对保留航向累加预见量，执行器和船体约束不变。
 +        if (rover.is_boat() && !g2.sailboat.sail_enabled() &&
 +            g2.loit_type == 0 && g2.motors.have_vectored_thrust() &&
 +            g2.loiter_yaw_preview.get() > 0) {
@@ -47,9 +47,9 @@
 +                loiter_yaw_preview_rad(ahrs.get_yaw_rate_earth(),
 +                                       g2.loiter_yaw_preview.get())));
 +        }
-     }
- 
-     // 0 turn rate is no limit
+         float yaw_error_cd = wrap_180_cd(_desired_yaw_cd - ahrs.yaw_sensor);
+         // if destination is behind vehicle, reverse towards it
+         if ((fabsf(yaw_error_cd) > 9000 && g2.loit_type == 0) || g2.loit_type == 2) {
 --- /dev/null
 +++ b/Rover/LoiterYawPreview.h
 @@ -0,0 +1,23 @@

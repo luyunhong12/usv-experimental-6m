@@ -1,0 +1,4 @@
+{
+  "dependencies/patches/ardupilot-rover-loiter-yaw-preview.patch": "6802b6877d8ba7b3f67f482cb27dcf2e258f75266279b959e74f38960b319aa8",
+  "pure_header_identical_to_first_version": true
+}

@@ -1,0 +1,9 @@
+{
+  "source_run": "artifacts/navigation/hold_preview4_north030_20261126_01",
+  "dataflash_sha256": "456962738e63fcd9d7c6269b217d00218e1fcd6248df14ced7de0a1e39e1181a",
+  "result_sha256": "9761c39af955273467278da7f858a8e6751b28bca9a8ce98731351aae4e4ba72",
+  "samples": 10170,
+  "different_choice_fraction": 0.14847590953785644,
+  "max_join_age_s": 0.12399999999999523,
+  "definition": "GPS target bearing versus nearest previous NTUN yaw/PIDS measured yaw rate; samples >15s and >0.1m; horizon 4s; not a controller-cycle replay"
+}

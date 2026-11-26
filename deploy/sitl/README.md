@@ -98,6 +98,6 @@ docker build --network none -f deploy/sitl/Dockerfile.loiter \
 
 `ardupilot-rover-loiter-yaw-preview.patch` 是另一个互斥实验，`LOIT_YAW_TAU`
 为航向预见时域（秒，默认0，最大5），只在动力船矢量推进LOITER自动方向模式
-的保持半径外调整本周期航向。仍使用实验G2槽62，必须独立构建镜像并wipe EEPROM，
+的保持半径外，先预见航向再统一选择正反向、速度缩放和转向。第一版仅调整收舵已归档，未采用。仍使用实验G2槽62，必须独立构建镜像并wipe EEPROM，
 不得叠加其他实验补丁。依据、编译、测试和是否获采用见
 [执行器动态调查](../../docs/validation/loiter_dynamics_2026-11-26/README.md)。
