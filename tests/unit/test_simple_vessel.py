@@ -47,6 +47,21 @@ class SimpleVesselTest(unittest.TestCase):
             with self.assertRaises(FileExistsError):
                 prepare(output)
 
+    def test_explicit_source_is_used(self):
+        """显式来源必须生效，不能静默退回默认6 kW模型。"""
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(__file__).resolve().parents[2]
+            tree = ET.parse(
+                root / "ros_ws/src/usv_description/models/usv_azimuth_trial.sdf"
+            )
+            tree.getroot().find("model").set("name", "selected_source")
+            source = Path(directory) / "input.sdf"
+            tree.write(source)
+            output = Path(directory) / "candidate"
+            prepare(output, source)
+            result = ET.parse(output / "model.sdf").getroot().find("model")
+            self.assertEqual(result.get("name"), "selected_source")
+
 
 if __name__ == "__main__":
     unittest.main()

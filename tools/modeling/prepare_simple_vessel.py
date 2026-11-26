@@ -58,11 +58,12 @@ def subtract_part(mass, center, inertia, part):
     return result
 
 
-def prepare(destination):
+def prepare(destination, source=None):
     """生成可独立加载的候选模型、静水场景和来源清单。
 
     Args:
         destination: 不存在的输出目录；拒绝覆盖既有试验。
+        source: 可选原船SDF路径；默认6 kW基准，用于明确区分不同动力/载荷方案。
 
     Raises:
         FileExistsError: 输出目录已经存在。
@@ -70,7 +71,11 @@ def prepare(destination):
     """
     destination = Path(destination).resolve()
     destination.mkdir(parents=True, exist_ok=False)
-    source = ROOT / "ros_ws/src/usv_description/models/usv_azimuth_trial.sdf"
+    source = (
+        Path(source).resolve()
+        if source is not None
+        else (ROOT / "ros_ws/src/usv_description/models/usv_azimuth_trial.sdf")
+    )
     tree = ET.parse(source)
     model = tree.getroot().find("model")
     hull = model.find("link[@name='hull']")
@@ -113,6 +118,7 @@ def prepare(destination):
     world.write(destination / "world.sdf", encoding="utf-8", xml_declaration=True)
     result = {
         "status": "CANDIDATE_NOT_NAVIGATION_VALIDATED",
+        "source_path": str(source),
         "source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
         "removed_mass_kg": part["mass_kg"],
         "fixed_hull": fixed,
@@ -126,4 +132,6 @@ def prepare(destination):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("output", type=Path, help="新的候选模型输出目录")
-    prepare(parser.parse_args().output)
+    parser.add_argument("--source", type=Path, help="原船SDF；不指定时使用6 kW基准")
+    args = parser.parse_args()
+    prepare(args.output, args.source)

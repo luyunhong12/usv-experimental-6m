@@ -38,6 +38,7 @@ import signal
 import subprocess
 import json
 import math
+import hashlib
 import copy
 import argparse
 import uuid
@@ -85,7 +86,12 @@ parser.add_argument(
 parser.add_argument(
     "--case", default=None, help="只运行指定接触位置；逐位置运行可隔离多发布器发现问题"
 )
+parser.add_argument(
+    "--model", type=Path, help="指定候选SDF；只能配合baseline避免重复改变质量与推进配置"
+)
 args = parser.parse_args()
+if args.model is not None and (not args.model.is_file() or args.profile != "baseline"):
+    parser.error("--model requires an existing SDF and --profile baseline")
 if args.step_size is not None and not 0 < args.step_size <= 0.01:
     parser.error("step-size must be in (0, 0.01]")
 if not 0.03 <= args.drop_height <= 3 or not 0.1 <= args.probe_mass <= 10:
@@ -131,9 +137,31 @@ def _load_runtime_dependencies_1():
 
 snapshot = execution_snapshot()
 validation_sources = [Path(__file__), W.parent / "tools/modeling/contact_checks.py"]
+
+
+def model_digest(path):
+    """计算指定候选的内容摘要，不要求其处于源码目录内。
+
+    Args:
+        path: 候选SDF路径；None表示使用默认版本绑定范围。
+
+    Returns:
+        文件SHA256，或默认模型对应的None。
+    """
+    return hashlib.sha256(path.read_bytes()).hexdigest() if path is not None else None
+
+
+candidate_hash = model_digest(args.model)
 source_hashes = hashes(validation_sources)
 (out / "source_versions.json").write_text(
-    json.dumps({"execution": snapshot, "validation_sources": source_hashes}, indent=2)
+    json.dumps(
+        {
+            "execution": snapshot,
+            "validation_sources": source_hashes,
+            "candidate_model_sha256": candidate_hash,
+        },
+        indent=2,
+    )
 )
 world = E.parse(W / "src/usv_simulation/worlds/usv_hull_trial.sdf")
 ww = world.getroot().find("world")
@@ -158,7 +186,11 @@ for x in list(ww):
     ):
         ww.remove(x)
 base = (
-    E.parse(W / "src/usv_description/models/usv_azimuth_trial.sdf")
+    E.parse(
+        args.model
+        if args.model is not None
+        else W / "src/usv_description/models/usv_azimuth_trial.sdf"
+    )
     .getroot()
     .find("model")
 )
@@ -186,6 +218,11 @@ cases = [
     ("stabilizer_tip", [math.pi, 0, 0], [0.5, 0], 0.393, 0.393),
     ("stabilizer_side", [math.pi / 2, 0, 0], [0.5, 0.2], 0.009, 0.009),
 ]
+# 无鳍候选不再拥有这两个被测实体；其余六项门槛保持不变。
+if not any(
+    "passive_stabilizer" in c.get("name", "") for c in base.findall("link/collision")
+):
+    cases = [case for case in cases if not case[0].startswith("stabilizer_")]
 if args.case is not None:
     cases = [case for case in cases if case[0] == args.case]
     if not cases:
@@ -373,7 +410,8 @@ result["physics_backend"] = {
 }
 result["version_binding"] = {
     "passed": execution_snapshot() == snapshot
-    and hashes(validation_sources) == source_hashes,
+    and hashes(validation_sources) == source_hashes
+    and model_digest(args.model) == candidate_hash,
     "requirement": "Runtime inputs, installed binaries and validation sources unchanged",
 }
 (out / "sample_times.json").write_text(json.dumps(times))
