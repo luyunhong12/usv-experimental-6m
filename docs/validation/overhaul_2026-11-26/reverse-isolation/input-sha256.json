@@ -48,5 +48,16 @@
   "ros_ws/src/usv_simulation/include/AppendageHydrodynamics.hh": "6dbb6a76f086737a003808edacff8f64b9825066ba56eb1439656a987040c17e",
   "artifacts/rebuild/build/libUsvAzimuthPropulsion.so": "fa961eb7ace818d0b51fdcb98844ddd47cbe2b185a75d2bff03f5f4fe8ba2909",
   "tests/scenarios/reverse_task_acceptance.json": "754dc727e9b26a23d472a6d6e91edd5977fb2650c98b9396d9abc24fbc65e5e5",
-  "artifacts/rebuild/reverse-isolation-v1/linear-build-final.log": "d240abe55b37124c2bebff0769402424eceffe08badc2ca4794e5f2234f0ba8b"
+  "artifacts/rebuild/reverse-isolation-v1/linear-build-final.log": "d240abe55b37124c2bebff0769402424eceffe08badc2ca4794e5f2234f0ba8b",
+  "artifacts/rebuild/reverse-isolation-v1/timestep_half/model.sdf": "10634548dae528f197c756e113ea59d606ff42eb0030bed02c404f7b4400c498",
+  "artifacts/rebuild/reverse-isolation-v1/timestep_half/world.sdf": "ff8cff4206da00581a21f21acbd421014c8a2bc57aebd2b3bc1d951a4dcc7fe6",
+  "artifacts/rebuild/reverse-isolation-v1/timestep_half/run.py": "794e7e50398fd0b579df308d3483422496acbf46d6ca7bf10680ecd3f3c30b1e",
+  "artifacts/rebuild/reverse-isolation-v1/timestep_half/equilibrium.json": "3fba96a21a594a8287366e0fa69c4886f1c529d7f1e27ddf12a417cf8955f4d2",
+  "artifacts/rebuild/reverse-isolation-v1/timestep_half/reverse_left/result.json": "2808474501bd9a068c02a27a9a933056e0b1bd047677bcd4b79beeceb26b74ee",
+  "artifacts/rebuild/reverse-isolation-v1/timestep_half/reverse_left/propulsion.csv": "203d708c965af9c998cd7196c2865aaf784a8cace9b389fcae3162dd9f037ef2",
+  "artifacts/rebuild/reverse-isolation-v1/timestep_half/reverse_left/actuators.csv": "5cffab9ce319c222482cff6576bdad0cc245f203bab0a947eec703d554e2e7ac",
+  "artifacts/rebuild/reverse-isolation-v1/timestep_half/reverse_left/hydrostatics.csv": "edbb09cebd1a13beb6a2aad4945c4e338b8c43b266e86e699ab2411d34a54cd8",
+  "artifacts/rebuild/reverse-isolation-v1/timestep_half/reverse_left/commands.csv": "6e5e75759c343398813d6dc57c6955740eadf47f9b19e973ca3a72c06cc3a32a",
+  "artifacts/rebuild/reverse-isolation-v1/timestep_half/reverse_left/runtime.log": "00520b65d1051aa9baede9d27bf560f83b6fe88b7aade49669fc9581f516bd91",
+  "artifacts/rebuild/reverse-isolation-v1/timestep_half/reverse_left/world.sdf": "f966fae89ffc6d5de5863e6993b58424e52f1f35c3b6e90d84aa99ffdb9cfc16"
 }
