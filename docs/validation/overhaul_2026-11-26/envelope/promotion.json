@@ -1,0 +1,47 @@
+{
+  "tested_physics_commit": "89331214789bbab6b9b2d41ab229f347b598538f",
+  "source_unchanged": true,
+  "maneuvers": {
+    "completed": 22,
+    "passed": 20
+  },
+  "environment": {
+    "completed": 8,
+    "passed": 5
+  },
+  "failed_cases": {
+    "maneuvers": {
+      "pulse_100_-1": [
+        "reverse_yaw",
+        "pulse_recover_time",
+        "reverse_directional_quality"
+      ],
+      "pulse_100_+1": [
+        "reverse_yaw",
+        "pulse_recover_time",
+        "pulse_recover_tail",
+        "reverse_directional_quality"
+      ]
+    },
+    "environment": {
+      "wind5": [
+        "neutral_yaw"
+      ],
+      "combined": [
+        "neutral_yaw"
+      ],
+      "loaded_combined": [
+        "neutral_yaw"
+      ]
+    }
+  },
+  "promote_default": false,
+  "passed_release_tag_created": false,
+  "decision": "Original acceptance gates not satisfied; keep candidate isolated, preserve previous default and rollback tag. No ArduPilot/Nav2 integration.",
+  "model_limits": [
+    "Small-drift approximation exceeded in sharp forward turns",
+    "Static separation sections do not follow instantaneous wave immersion",
+    "Added test payload wind area/center not separately modelled"
+  ],
+  "code_review": "Quick checks pass; prior full complexity exceptions CC10/CC11 remain; no new full/deep claim"
+}
