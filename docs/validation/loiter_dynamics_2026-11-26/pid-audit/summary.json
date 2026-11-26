@@ -1,0 +1,29 @@
+{
+  "current_north030_20261125_01": {
+    "sha256": "5e8e821ecd14896e5fedc28847b3c9b67dcf72745363edb804675c46d316ce86",
+    "n": 1050,
+    "D_exceeds_available_lateral_fraction": 0.43047619047619046,
+    "D_changes_total_sign_fraction": 0.07809523809523809,
+    "sum_exceeds_available_lateral_fraction": 0.9476190476190476,
+    "median_abs_throttle_pct": 5.812218189239502,
+    "D_abs_p95": 0.0820760428905487
+  },
+  "current_west015_20261125_01": {
+    "sha256": "c864716900569a12a14bcae48ff8fa1cfc84cd142d426c112fb1fb46c79a134b",
+    "n": 1050,
+    "D_exceeds_available_lateral_fraction": 0.5057142857142857,
+    "D_changes_total_sign_fraction": 0.0838095238095238,
+    "sum_exceeds_available_lateral_fraction": 0.9476190476190476,
+    "median_abs_throttle_pct": 2.856199860572815,
+    "D_abs_p95": 0.06960992515087128
+  },
+  "current_east015_20261125_01": {
+    "sha256": "53cedc89a20d7102a43424052f37a79319c43aa5d8effdf8fcd01bcd7f197e9b",
+    "n": 1051,
+    "D_exceeds_available_lateral_fraction": 0.510941960038059,
+    "D_changes_total_sign_fraction": 0.0922930542340628,
+    "sum_exceeds_available_lateral_fraction": 0.9419600380589914,
+    "median_abs_throttle_pct": 3.230222225189209,
+    "D_abs_p95": 0.0695529580116272
+  }
+}

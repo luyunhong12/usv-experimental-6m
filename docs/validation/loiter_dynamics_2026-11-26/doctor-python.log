@@ -1,0 +1,47 @@
+[
+  {
+    "tool": "pyright",
+    "path": "/home/yh/Project/code-supervisor/.venv/bin/pyright",
+    "available": true
+  },
+  {
+    "tool": "bandit",
+    "path": "/home/yh/Project/code-supervisor/.venv/bin/bandit",
+    "available": true
+  },
+  {
+    "tool": "pip-audit",
+    "path": "/home/yh/Project/code-supervisor/.venv/bin/pip-audit",
+    "available": true
+  },
+  {
+    "tool": "crapper",
+    "version": "0.1.0",
+    "available": true
+  },
+  {
+    "tool": "dryer",
+    "version": "0.1.0",
+    "available": true
+  },
+  {
+    "tool": "mutator",
+    "version": "0.1.0",
+    "available": true
+  },
+  {
+    "tool": "coverage",
+    "version": "7.10.7",
+    "available": true
+  },
+  {
+    "tool": "detect-secrets",
+    "version": "1.5.0",
+    "available": true
+  },
+  {
+    "tool": "hypothesis",
+    "version": "6.142.4",
+    "available": true
+  }
+]

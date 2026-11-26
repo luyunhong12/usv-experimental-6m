@@ -1,0 +1,78 @@
+--- a/Rover/Parameters.h
++++ b/Rover/Parameters.h
+@@ -415,6 +415,7 @@
+ 
+     // gain for speed of correction in loiter
+     AP_Float loiter_speed_gain;
++    AP_Float loiter_yaw_preview; // 实验偏航预见时域，秒；默认0关闭。
+ 
+     // FS options
+     AP_Int32 fs_options;
+--- a/Rover/Parameters.cpp
++++ b/Rover/Parameters.cpp
+@@ -669,6 +669,14 @@
+     // @Increment: 0.5
+     // @User: Advanced
+     AP_GROUPINFO("CRASH_TIMEOUT", 61, ParametersG2, crash_timeout, 2.0),
++
++    // @Param: LOIT_YAW_TAU
++    // @DisplayName: Experimental motor boat loiter yaw preview
++    // @Description: Subtract measured earth-frame yaw rate times this horizon from the geometric heading target, limited to 90 degrees. Only motor boat LOITER type 0 with vectored thrust. Default zero preserves upstream behavior. Simulation experiment, not sea-trial calibrated.
++    // @Units: s
++    // @Range: 0 5
++    // @User: Advanced
++    AP_GROUPINFO("LOIT_YAW_TAU", 62, ParametersG2, loiter_yaw_preview, 0),
+ 
+     AP_GROUPEND
+ };
+--- a/Rover/mode_loiter.cpp
++++ b/Rover/mode_loiter.cpp
+@@ -1,4 +1,5 @@
+ #include "Rover.h"
++#include "LoiterYawPreview.h"
+ 
+ bool ModeLoiter::_enter()
+ {
+@@ -53,6 +54,16 @@
+         // 45deg of error reduces speed to 75%, 90deg of error reduces speed to 50%
+         float yaw_error_ratio = 1.0f - constrain_float(fabsf(yaw_error_cd / 9000.0f), 0.0f, 1.0f) * 0.5f;
+         _desired_speed *= yaw_error_ratio;
++
++        // 仅调整本周期新算出的航向；不在半径内对保留航向累加预见量。
++        // 保留原几何方向与速度缩放，执行器和船体约束不变。
++        if (rover.is_boat() && !g2.sailboat.sail_enabled() &&
++            g2.loit_type == 0 && g2.motors.have_vectored_thrust() &&
++            g2.loiter_yaw_preview.get() > 0) {
++            _desired_yaw_cd = wrap_180_cd(_desired_yaw_cd - 100.0f * degrees(
++                loiter_yaw_preview_rad(ahrs.get_yaw_rate_earth(),
++                                       g2.loiter_yaw_preview.get())));
++        }
+     }
+ 
+     // 0 turn rate is no limit
+--- /dev/null
++++ b/Rover/LoiterYawPreview.h
+@@ -0,0 +1,23 @@
++/** @file LoiterYawPreview.h
++ * @brief 根据实测偏航率生成有界航向预见量，不计算或改变物理力。
++ */
++#pragma once
++#include <cmath>
++
++/** @brief 计算应从本周期几何航向减去的预见量，避免舵机迟滞下过晚收舵。
++ * @param yaw_rate_rad_s EKF地球系偏航角速度，rad/s，NED向右为正。
++ * @param horizon_s 工程预见时域，秒；非正/非有限为关闭，最大5秒。
++ * @return 有符号角度修正rad，绝对值不超过pi/2；非法角速度返回0。
++ * @note 90度上限是异常/极端状态的控制约束，不是船体动力学认证。
++ */
++inline float loiter_yaw_preview_rad(float yaw_rate_rad_s, float horizon_s)
++{
++    if (!std::isfinite(yaw_rate_rad_s) || !std::isfinite(horizon_s) || horizon_s <= 0) {
++        return 0.0f;
++    }
++    constexpr float half_pi = 1.5707963267948966f;
++    const float horizon = std::fmin(horizon_s, 5.0f);
++    const float rate_bound = half_pi / horizon;
++    const float bounded_rate = std::fmax(-rate_bound, std::fmin(yaw_rate_rad_s, rate_bound));
++    return bounded_rate * horizon;
++}

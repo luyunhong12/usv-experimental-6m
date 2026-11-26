@@ -1,0 +1,62 @@
+[
+  {
+    "tool": "cmake",
+    "path": "/usr/bin/cmake",
+    "available": true
+  },
+  {
+    "tool": "ctest",
+    "path": "/usr/bin/ctest",
+    "available": true
+  },
+  {
+    "tool": "g++",
+    "path": "/usr/bin/g++",
+    "available": true
+  },
+  {
+    "tool": "gcov",
+    "path": "/usr/bin/gcov",
+    "available": true
+  },
+  {
+    "tool": "doxygen",
+    "path": "/home/yh/Project/code-supervisor/.tools/doxygen",
+    "available": true
+  },
+  {
+    "tool": "clang-tidy",
+    "path": "/home/yh/Project/code-supervisor/.venv/bin/clang-tidy",
+    "available": true
+  },
+  {
+    "tool": "gcovr",
+    "path": "/home/yh/Project/code-supervisor/.venv/bin/gcovr",
+    "available": true
+  },
+  {
+    "tool": "jscpd",
+    "path": "/home/yh/Project/code-supervisor/.tools/node_modules/.bin/jscpd",
+    "available": true
+  },
+  {
+    "tool": "node",
+    "path": "/home/yh/.nvm/versions/node/v24.18.0/bin/node",
+    "available": true
+  },
+  {
+    "tool": "lizard",
+    "version": "1.17.31",
+    "available": true
+  },
+  {
+    "tool": "tree-sitter",
+    "version": "0.25.2",
+    "available": true
+  },
+  {
+    "tool": "tree-sitter-cpp",
+    "version": "0.23.4",
+    "available": true
+  }
+]

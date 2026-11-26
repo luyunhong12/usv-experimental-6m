@@ -1,0 +1,1 @@
+ba87762632def314e1b58846bcdbdefdd4250a7a502f7e759deb73c7d36c45f7  /opt/sitl/loiter.patch

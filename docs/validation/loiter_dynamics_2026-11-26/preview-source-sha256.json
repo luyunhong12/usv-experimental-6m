@@ -1,0 +1,7 @@
+{
+  "dependencies/patches/ardupilot-rover-loiter-yaw-preview.patch": "ba87762632def314e1b58846bcdbdefdd4250a7a502f7e759deb73c7d36c45f7",
+  "deploy/sitl/Dockerfile.loiter": "e5a4a5fe0e8823541f223427e8d627f3b5d0921950fee21a327f7c99951d734c",
+  "deploy/sitl/Dockerfile.loiter.dockerignore": "982d63f352168f48fa0baaa46e00657dd448f600d131e219595a48b60efba6ab",
+  "docs/validation/loiter_dynamics_2026-11-26/preview-test/Rover/LoiterYawPreview.h": "16f6183b4daff68e340dd15a8d77e61dd32c0e95a9ef1ac32c431f5795bf8312",
+  "docs/validation/loiter_dynamics_2026-11-26/preview-test/preview_test.cc": "2d1720bf2f2f9772fb4ad518e4e663886ff7a4ad5dad6bccca19fa38d0c1e489"
+}
