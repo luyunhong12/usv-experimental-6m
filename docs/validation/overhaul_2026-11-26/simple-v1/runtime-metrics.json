@@ -1,0 +1,20 @@
+{
+  "static": {
+    "samples": 99,
+    "mean_surge_m_s": -1.7766340477773605e-06,
+    "max_roll_deg": 0.0003171170515390081,
+    "max_pitch_deg": 0.16461985263078988
+  },
+  "forward": {
+    "samples": 100,
+    "mean_surge_m_s": 0.3183758941570588,
+    "max_roll_deg": 0.007273171642763767,
+    "max_pitch_deg": 0.16633546671801644
+  },
+  "reverse": {
+    "samples": 99,
+    "mean_surge_m_s": -0.22314783649832862,
+    "max_roll_deg": 0.007265552694789442,
+    "max_pitch_deg": 0.16215336035145075
+  }
+}

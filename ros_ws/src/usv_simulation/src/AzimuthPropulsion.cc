@@ -58,6 +58,7 @@ class AzimuthPropulsion : public gz::sim::System,
   std::vector<gz::sim::Entity> massLinks;
   gz::transport::Node::Publisher massPub;
   double massLast = -1;
+  bool energyEnabled = true; ///< 旧模型默认启用能源；简化模型显式关闭。
   energy::Model energyModel;
   energy::Sensors sensors;
   std::atomic<bool> generatorEnabled{false}, coolingOk{true}, sensorsOk{true};
@@ -112,18 +113,21 @@ public:
     if (!shaft.Valid(ecm) || !prop.Valid(ecm) || !hull.Valid(ecm))
       throw std::runtime_error("Missing propulsion links/joint");
     LoadPropulsion(s);
-    LoadEnergyAndTank(s);
-    massLinks = {hull.Entity(), model.LinkByName(ecm, "azimuth"),
-                 prop.Entity()};
-    massPub = node.Advertise<gz::msgs::Double_V>(prefix + "/fuel_mass/state");
-    node.Subscribe(prefix + "/energy/generator_enable",
-                   &AzimuthPropulsion::OnGenerator, this);
-    node.Subscribe(prefix + "/energy/cooling_ok", &AzimuthPropulsion::OnCooling,
-                   this);
-    node.Subscribe(prefix + "/energy/sensors_ok", &AzimuthPropulsion::OnSensors,
-                   this);
-    energyPub = node.Advertise<gz::msgs::Double_V>(prefix + "/energy/truth");
-    sensorPub = node.Advertise<gz::msgs::Double_V>(prefix + "/energy/sensors");
+    energyEnabled = s->Get<bool>("energy_enabled", true).first;
+    if (energyEnabled) {
+      LoadEnergyAndTank(s);
+      massLinks = {hull.Entity(), model.LinkByName(ecm, "azimuth"),
+                   prop.Entity()};
+      massPub = node.Advertise<gz::msgs::Double_V>(prefix + "/fuel_mass/state");
+      node.Subscribe(prefix + "/energy/generator_enable",
+                     &AzimuthPropulsion::OnGenerator, this);
+      node.Subscribe(prefix + "/energy/cooling_ok", &AzimuthPropulsion::OnCooling,
+                     this);
+      node.Subscribe(prefix + "/energy/sensors_ok", &AzimuthPropulsion::OnSensors,
+                     this);
+      energyPub = node.Advertise<gz::msgs::Double_V>(prefix + "/energy/truth");
+      sensorPub = node.Advertise<gz::msgs::Double_V>(prefix + "/energy/sensors");
+    }
     shaft.EnableVelocityCheck(ecm);
     prop.EnableVelocityChecks(ecm);
     hull.EnableVelocityChecks(ecm);
@@ -175,7 +179,7 @@ public:
     coolingOk = true;
     sensorsOk = true;
     massLast = -1;
-    ApplyFuel(ecm);
+    if (energyEnabled) ApplyFuel(ecm);
   }
 
 public:
@@ -213,22 +217,25 @@ public:
                     radius * std::sqrt(std::max(0., 1 - axis.Z() * axis.Z())));
     auto output = PropellerForces(p, cmd, (*w)[0], ref,
                                   (*vel - env.waterVelocity).Dot(axis), wet);
-    energyModel.Prepare(dt, generatorEnabled.load(), coolingOk.load());
+    if (energyEnabled)
+      energyModel.Prepare(dt, generatorEnabled.load(), coolingOk.load());
     auto sp = steering.Position(ecm), sv = steering.Velocity(ecm);
     if (!ValidSteeringSnapshot(sp,sv))
       return;
     auto steeringOutput=UpdateSteering(dt,*sp,*sv,ecm);
     double steeringTorque=steeringOutput.first,steeringW=steeringOutput.second;
-    output.motorTorque =
-        energy::LimitTorque(energyModel.p, output.motorTorque, (*w)[0],
-                            energyModel.MotorBudget(dt, steeringW));
+    if (energyEnabled) {
+      output.motorTorque = energy::LimitTorque(
+          energyModel.p, output.motorTorque, (*w)[0],
+          energyModel.MotorBudget(dt, steeringW));
+      energyModel.Step(
+          dt, energy::MotorElectrical(energyModel.p, output.motorTorque, (*w)[0]),
+          steeringW);
+      ApplyFuel(ecm);
+      sensors.Update(now, energyModel, hp->Rot().Roll(), hp->Rot().Pitch(),
+                     sensorsOk.load() && energyModel.s.unservedW < 1e-3);
+    }
     output.shaftPower = output.motorTorque * (*w)[0];
-    energyModel.Step(
-        dt, energy::MotorElectrical(energyModel.p, output.motorTorque, (*w)[0]),
-        steeringW);
-    ApplyFuel(ecm);
-    sensors.Update(now, energyModel, hp->Rot().Roll(), hp->Rot().Pitch(),
-                   sensorsOk.load() && energyModel.s.unservedW < 1e-3);
     shaft.SetForce(ecm, {output.motorTorque});
     prop.AddWorldWrench(ecm, axis * output.thrust, gz::math::Vector3d::Zero);
     prop.AddWorldWrench(ecm, gz::math::Vector3d::Zero,
@@ -275,7 +282,7 @@ public:
    */
   void PostUpdate(const gz::sim::UpdateInfo &info,
                   const gz::sim::EntityComponentManager &ecm) override {
-    if (info.paused)
+    if (info.paused || !energyEnabled)
       return;
     double now = std::chrono::duration<double>(info.simTime).count();
     if (now - massLast < .1)
@@ -487,7 +494,8 @@ std::pair<double,double> UpdateSteering(double dt,const std::vector<double>&sp,c
       return steeringIdle + std::abs(torque * sv[0]) / steeringEfficiency +
              steeringCopper * torque * torque;
     };
-    double servoBudget = std::min(steeringMaxW, energyModel.ActuatorBudget(dt));
+    double servoBudget = energyEnabled
+        ? std::min(steeringMaxW, energyModel.ActuatorBudget(dt)) : steeringMaxW;
     double steeringW = 0;
     if (servoBudget < steeringIdle) {
       steeringIntegral = {};
@@ -559,10 +567,16 @@ void PublishState(const Telemetry&state,gz::sim::EntityComponentManager&ecm) {
       pub.Publish(msg);
       gz::msgs::Double_V am;
       for (double x : {now, steeringPosition, steeringVelocity, steeringRef.position,
-                       steeringTorque, steeringW, energyModel.s.steeringWh,
-                       double(energyModel.s.unservedW < 1e-3)})
+                       steeringTorque, steeringW})
         am.add_data(x);
+      if (energyEnabled) {
+        am.add_data(energyModel.s.steeringWh);
+        am.add_data(double(energyModel.s.unservedW < 1e-3));
+      }
       actuatorPub.Publish(am);
+      last = now;
+      // 简化船仍保留电机/舵机额定能力，但没有虚构电池或燃油读数。
+      if (!energyEnabled) return;
       const auto &es = energyModel.s;
       const auto &ep = energyModel.p;
       gz::msgs::Double_V em;
