@@ -1,0 +1,112 @@
+{
+  "gmsh-final": {
+    "cells": 361366,
+    "max_nonorthogonality_deg": 57.7056,
+    "max_skewness": 0.875504,
+    "min_determinant": 0.0014435,
+    "status": "Mesh OK",
+    "manifest": {
+      "source_sha256": "6b140a23f01633a194e3ace364c4da3940266bb935efdcca14335ae2ade3351a",
+      "tool_sha256": "1445f0234c561465858827391d73a0535f0506050a37ff77e8ff9eb19625fb24",
+      "gmsh_version": "4.15.0",
+      "scale": 1,
+      "input_triangles": 106,
+      "planar_surfaces": 87,
+      "input_volume_m3": 8.35823787018325,
+      "mesh_sha256": "6127b33ae5053373c043e6368635c34878a7d3970f0080f5c30a3a7f1ce07e4d",
+      "quality_status": "requires_openfoam_checkMesh"
+    },
+    "geometry": {
+      "input_vertices": 55,
+      "input_triangles": 106,
+      "mesh_boundary_triangles": 5956,
+      "input_volume_m3": 8.35823787018325,
+      "boundary_volume_m3": 8.358237901146515,
+      "volume_relative_error": 3.7045204681618316e-09,
+      "input_area_m2": 31.628204752594154,
+      "boundary_area_m2": 31.62821259154906,
+      "boundary_sample_max_distance_m": 5.000930449012552e-06,
+      "source_sample_max_distance_m": 3.4042840078836174e-06,
+      "input_bounds": [
+        [
+          -3.0,
+          -1.125,
+          -0.2526162266731262
+        ],
+        [
+          3.0,
+          1.125,
+          0.7673837542533875
+        ]
+      ],
+      "boundary_bounds": [
+        [
+          -3.0,
+          -1.125,
+          -0.252616
+        ],
+        [
+          3.0,
+          1.125,
+          0.767384
+        ]
+      ],
+      "boundary_watertight": true
+    }
+  },
+  "gmsh-medium": {
+    "cells": 980722,
+    "max_nonorthogonality_deg": 60.1853,
+    "max_skewness": 0.705644,
+    "min_determinant": 0.00158301,
+    "status": "Mesh OK",
+    "manifest": {
+      "source_sha256": "6b140a23f01633a194e3ace364c4da3940266bb935efdcca14335ae2ade3351a",
+      "tool_sha256": "1445f0234c561465858827391d73a0535f0506050a37ff77e8ff9eb19625fb24",
+      "gmsh_version": "4.15.0",
+      "scale": 0.7071067811865475,
+      "input_triangles": 106,
+      "planar_surfaces": 87,
+      "input_volume_m3": 8.35823787018325,
+      "mesh_sha256": "87c0d65c134b925e53f5264f699fdc6d99b3d18e226ffd383bcfefeb799d498f",
+      "quality_status": "requires_openfoam_checkMesh"
+    },
+    "geometry": {
+      "input_vertices": 55,
+      "input_triangles": 106,
+      "mesh_boundary_triangles": 11024,
+      "input_volume_m3": 8.35823787018325,
+      "boundary_volume_m3": 8.35823780373541,
+      "volume_relative_error": 7.949982006039136e-09,
+      "input_area_m2": 31.628204752594154,
+      "boundary_area_m2": 31.628206678083995,
+      "boundary_sample_max_distance_m": 4.976034340046431e-06,
+      "source_sample_max_distance_m": 1.7656368390018226e-06,
+      "input_bounds": [
+        [
+          -3.0,
+          -1.125,
+          -0.2526162266731262
+        ],
+        [
+          3.0,
+          1.125,
+          0.7673837542533875
+        ]
+      ],
+      "boundary_bounds": [
+        [
+          -3.0,
+          -1.125,
+          -0.252616
+        ],
+        [
+          3.0,
+          1.125,
+          0.767384
+        ]
+      ],
+      "boundary_watertight": true
+    }
+  }
+}
