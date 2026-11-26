@@ -88,3 +88,10 @@ docker build --network none -f deploy/sitl/Dockerfile.loiter \
 三种实验互斥，不能叠加，也不能复用其他实验的EEPROM；当前补丁使用相同的临时参数槽，独立验收入口每轮wipe并读回新参数。正式 `usv-sitl:rover-4.7.3`、Compose及默认配置未切换。[实验结果与采用状态](../../docs/validation/control_weather_2026-11-26/README.md)是唯一结论入口，未通过原门槛及多流向回归不得推广。
 
 投影候选随后完整24/25，强流保持峰值7.575 m，未采用。第四种独立实验为 `ardupilot-rover-loiter-direction-hysteresis.patch`，使用 `LOIT_DIR_HYST`（度，默认0，最大30）保留前进/倒车选择的角度记忆；20°试验对应70°–110°切换区间，不是定时等待。它与前三种补丁互斥，同样只限动力船LOITER type 0，必须新建/wipe实验状态，不能叠加或覆盖正式镜像。通过相同构建参数选择该补丁并使用独立标签 `usv-sitl:loiter-direction-hysteresis-experimental`；边界测试、实际编译和当前SITL状态见上述本轮报告。
+
+另一独立筛选补丁 `ardupilot-rover-loiter-direction-sync.patch` 使用
+`LOIT_DIR_SYNC=1` 协调LOITER几何方向与上一周期推进指令的航向框架切换。
+默认0，只有无帆动力船、矢量推进、`LOIT_TYPE=0`生效；1%死区是本船试验值。
+它同样占用实验G2槽62，**不得叠加其他LOITER补丁或复用其EEPROM**。
+使用`Dockerfile.loiter`显式传入该补丁并独立命名镜像，测试入口每轮`--wipe`。
+这是待验候选，不能替代正式`rover-4.7.3`镜像。

@@ -88,3 +88,21 @@ c++ -std=c++11 -Wall -Wextra -Werror -pedantic \
 ### 迟滞实验已完成：未采用
 
 `hold_hysteresis20_north030_20261126_01` 完整24/25，保持峰值7.739 m、RMS 4.110 m，唯一失败为原3 m保持门槛。[完整摘要](hysteresis/summary.json)及同目录无损原始数据保留。迟滞会减少几何边界附近的选择，但本船该工况效果更差；正式参数和镜像不启用。
+
+## 推进指令与航向框架同步实验
+
+源码机制核对：上游 `ModeLoiter::update()` 在几何方位跨90°时立即切换180°航向框架，速度控制另行限加减速；`AP_MotorsUGV::output_regular()` 的矢量混控使用 `atan(steering_norm / throttle_norm)`。两个变化并非同一时刻，因此可能形成两次相反换舵。这个机制是可核对的候选原因，不能把相关性当成保持超限的唯一根因。
+
+独立默认关闭补丁 `LOIT_DIR_SYNC=1` 保留原速度目标和缩放，只在请求的前进/倒车方向改变时，等待上一周期推进指令超过同向1%才接受新的航向框架。首次几何决策直接初始化；没有改变方向请求时，制动油门不得独自改变框架。等待时仍更新目标方位，并非冻结航向控制。仅无帆动力船、矢量推进、LOITER自动方向模式启用。其他模式、失联处理、物理执行器和正式参数均未改变。
+
+1%是对应当前`MOT_THR_MIN=1`的试验死区，尚非通用标定；所用是推进**指令**，不是实际推力，仍有执行器迟滞。没有引入Gazebo真值、已知水流或无限转向能力。与其他实验补丁互斥，只允许独立新EEPROM试验，未获全套运行证据前不推广。
+
+[补丁](../../../dependencies/patches/ardupilot-rover-loiter-direction-sync.patch)、[实际应用头文件](sync-test/Rover/LoiterDirectionSync.h)、[双向边界/制动/无效值测试](sync-test/direction_sync_test.cc)、[测试结果](sync-test/result.log)。复核：
+
+```bash
+c++ -std=c++11 -Wall -Wextra -Werror -pedantic \
+  docs/validation/control_weather_2026-11-26/sync-test/direction_sync_test.cc \
+  -o /tmp/usv-direction-sync-test && /tmp/usv-direction-sync-test
+```
+
+边界测试不是导航验收；先筛选北向0.30 m/s的原25项，再根据结果决定是否做多方向回归。既有[DataFlash事件提取](../loiter_switching_2026-11-25/README.md)提供目标、速度、油门变化的独立观察，也显示通过工况存在切换，不能仅凭切换计数认定故障。

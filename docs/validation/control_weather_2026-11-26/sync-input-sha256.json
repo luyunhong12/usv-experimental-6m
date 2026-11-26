@@ -1,0 +1,7 @@
+{
+  "dependencies/patches/ardupilot-rover-loiter-direction-sync.patch": "a7a873b0bc418bf0c0ed6d22d162939655259b29e987a624026f6807b6145ccf",
+  "deploy/sitl/Dockerfile.loiter": "e5a4a5fe0e8823541f223427e8d627f3b5d0921950fee21a327f7c99951d734c",
+  "deploy/sitl/Dockerfile.loiter.dockerignore": "982d63f352168f48fa0baaa46e00657dd448f600d131e219595a48b60efba6ab",
+  "docs/validation/control_weather_2026-11-26/sync-test/Rover/LoiterDirectionSync.h": "3ff925e564a96ae326da9a58078f033fa18d7c40fc79fafd08b3f934d364f510",
+  "docs/validation/control_weather_2026-11-26/sync-test/direction_sync_test.cc": "de7725cc32acbf937969a6ad810d661da12fef2b7bd6f18be011d1f2a4bd8009"
+}

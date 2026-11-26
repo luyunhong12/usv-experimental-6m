@@ -1,0 +1,116 @@
+--- a/Rover/Parameters.h
++++ b/Rover/Parameters.h
+@@ -415,6 +415,7 @@
+ 
+     // gain for speed of correction in loiter
+     AP_Float loiter_speed_gain;
++    AP_Int8 loiter_direction_sync; // 实验指令方向同步开关，默认关闭。
+ 
+     // FS options
+     AP_Int32 fs_options;
+--- a/Rover/Parameters.cpp
++++ b/Rover/Parameters.cpp
+@@ -669,6 +669,13 @@
+     // @Increment: 0.5
+     // @User: Advanced
+     AP_GROUPINFO("CRASH_TIMEOUT", 61, ParametersG2, crash_timeout, 2.0),
++
++    // @Param: LOIT_DIR_SYNC
++    // @DisplayName: Experimental vectored motor boat loiter direction synchronization
++    // @Description: Delay heading frame reversal until the previous propulsion command agrees with the requested travel direction. Only motor boat LOITER type 0 with vectored thrust. Simulation experiment, not accepted for deployment.
++    // @Values: 0:Disabled,1:Enabled
++    // @User: Advanced
++    AP_GROUPINFO("LOIT_DIR_SYNC", 62, ParametersG2, loiter_direction_sync, 0),
+ 
+     AP_GROUPEND
+ };
+--- a/Rover/mode.h
++++ b/Rover/mode.h
+@@ -673,6 +673,8 @@
+ 
+     Location _destination;      // target location to hold position around
+     float _desired_speed;       // desired speed (ramped down from initial speed to zero)
++    bool _loiter_heading_initialized{false}; // 首次几何决策时初始化，不借用进入时的制动油门。
++    bool _loiter_heading_reverse{false}; // 已接受的航向框架；不等同于实际运动方向。
+ };
+ 
+ class ModeManual : public Mode
+--- a/Rover/mode_loiter.cpp
++++ b/Rover/mode_loiter.cpp
+@@ -1,4 +1,5 @@
+ #include "Rover.h"
++#include "LoiterDirectionSync.h"
+ 
+ bool ModeLoiter::_enter()
+ {
+@@ -11,6 +12,8 @@
+     if (!attitude_control.get_forward_speed(_desired_speed)) {
+         _desired_speed = 0.0f;
+     }
++
++    _loiter_heading_initialized = false;
+ 
+     // initialise heading to current heading
+     _desired_yaw_cd = ahrs.yaw_sensor;
+@@ -42,8 +45,10 @@
+         // calculate bearing to destination
+         _desired_yaw_cd = rover.current_loc.get_bearing_to(_destination);
+         float yaw_error_cd = wrap_180_cd(_desired_yaw_cd - ahrs.yaw_sensor);
++        const float target_bearing_cd = _desired_yaw_cd;
++        const bool reverse = (fabsf(yaw_error_cd) > 9000 && g2.loit_type == 0) || g2.loit_type == 2;
+         // if destination is behind vehicle, reverse towards it
+-        if ((fabsf(yaw_error_cd) > 9000 && g2.loit_type == 0) || g2.loit_type == 2) {
++        if (reverse) {
+             _desired_yaw_cd = wrap_180_cd(_desired_yaw_cd + 18000);
+             yaw_error_cd = wrap_180_cd(_desired_yaw_cd - ahrs.yaw_sensor);
+             _desired_speed = -_desired_speed;
+@@ -53,6 +58,20 @@
+         // 45deg of error reduces speed to 75%, 90deg of error reduces speed to 50%
+         float yaw_error_ratio = 1.0f - constrain_float(fabsf(yaw_error_cd / 9000.0f), 0.0f, 1.0f) * 0.5f;
+         _desired_speed *= yaw_error_ratio;
++
++        // 速度请求沿用上游规则；只协调航向框架，避免制动油门单独触发180度跳变。
++        if (g2.loiter_direction_sync.get() == 1 && rover.is_boat() &&
++            !g2.sailboat.sail_enabled() && g2.loit_type == 0 &&
++            g2.motors.have_vectored_thrust()) {
++            _loiter_heading_reverse = loiter_synced_heading_reverse(
++                reverse, _loiter_heading_reverse, _loiter_heading_initialized,
++                g2.motors.get_throttle());
++            _loiter_heading_initialized = true;
++            _desired_yaw_cd = wrap_180_cd(target_bearing_cd +
++                                         (_loiter_heading_reverse ? 18000 : 0));
++        } else {
++            _loiter_heading_initialized = false;
++        }
+     }
+ 
+     // 0 turn rate is no limit
+--- /dev/null
++++ b/Rover/LoiterDirectionSync.h
+@@ -0,0 +1,26 @@
++/** @file LoiterDirectionSync.h
++ * @brief 桨舵一体LOITER的实验指令同步判定，不施加或改变船体受力。
++ */
++#pragma once
++#include <cmath>
++
++/** @brief 等待推进指令同向后接受新的航向框架，首次决策直接采用几何方向。
++ * @param requested_reverse 本周期按目标相对方位选择的行驶方向。
++ * @param heading_reverse 上一周期已接受的航向框架是否倒车。
++ * @param initialized 当前LOITER是否已有几何决策；重新进入时必须置false。
++ * @param throttle_pct 上一周期推进指令，百分比[-100,100]，不是实际推力或真值。
++ * @return 航向框架是否倒车；制动指令不改变未变更的方向请求。
++ * @note 1%试验死区对应当前MOT_THR_MIN=1；并非通用标定值。零或非有限指令等待。
++ */
++inline bool loiter_synced_heading_reverse(bool requested_reverse, bool heading_reverse,
++                                         bool initialized, float throttle_pct)
++{
++    if (!initialized || requested_reverse == heading_reverse) {
++        return requested_reverse;
++    }
++    if (!std::isfinite(throttle_pct)) {
++        return heading_reverse;
++    }
++    const bool command_agrees = requested_reverse ? throttle_pct < -1.0f : throttle_pct > 1.0f;
++    return command_agrees ? requested_reverse : heading_reverse;
++}
