@@ -1,0 +1,17 @@
+{
+  "/work/usv/artifacts/navigation/hold_preview4_north030_20261126_01/run/world.sdf": "aa71060aa563ee416c0cea3e780bbc1fe608e990609b73c15a109727016d5470",
+  "/work/usv/artifacts/navigation/hold_preview4_north030_20261126_01/run/boat.sdf": "2e8c1dacadef89b4aee976c455498ed0fbd142b8879d0dd8abf01a6249738fad",
+  "/work/usv/tests/integration/validate_navigation.py": "fcd84d6b405f298b9ed18fb76bceda62f558ec253885f238db2d622986d34d24",
+  "/work/usv/tools/lib/navigation_acceptance.py": "99722689d0bbd74376ecb47cefa27aa4e1022a5dcf430262fdf475f4e48c10a9",
+  "/work/usv/ros_ws/src/usv_ardupilot/scripts/json_bridge.py": "0fa3072a04e93cb94bee20ec6a8bb9326cc0e7755e2897bff38e88979558bdf3",
+  "/work/usv/tests/scenarios/environment_acceptance.json": "68507767cc6dbb092d6878e59160e6588edcd4b36ce53f1f4e92dcd752cf62b8",
+  "/work/usv/artifacts/navigation/hold_preview4_north030_20261126_01/run/boat.parm": "34e156f5d53bd4c50db11a75179f5847c22abd73ff5d15d0ac6eac5fde9c348b",
+  "/work/usv/artifacts/navigation/hold_preview4_north030_20261126_01/run/navigation_low_speed.parm": "b7aaa40496bb57dae2b003fecd8391b8bf01d56fa1e695358e67044e926cb71e",
+  "/work/usv/artifacts/navigation/hold_preview4_north030_20261126_01/run/platform15.parm": "cd2c5ec43b09bac87011a93c5c42cfe76032ed3fa3a209c8cb52bfe5745f29f2",
+  "/work/usv/ros_ws/install/usv_simulation/lib/libUsvAppendageHydrodynamics.so": "4971dfd9611cad96c16a1f8329bb38592de1a6e62cb02e65f15b24fab8a1ae42",
+  "/work/usv/ros_ws/install/usv_simulation/lib/libUsvHullHydrostatics.so": "c6a84871110a8755fa9597d97a1405196df0c9e7821d69d896ee9e9d1a4ab5b8",
+  "/work/usv/ros_ws/install/usv_simulation/lib/libUsvSteeringCommandFilter.so": "5755ff96299580ea4b9aadef173799f737d5d4b4bc9aa86bc4dce1e86e2b3a28",
+  "/work/usv/ros_ws/install/usv_simulation/lib/libUsvAzimuthPropulsion.so": "c996c93ddb70be4c430936b990c80b4808bba5c965a229f5dd8ae8b712ae867d",
+  "/work/usv/ros_ws/install/usv_physics/lib/libUsvPhysics.so": "3877596a3c9b56f876cb51f134baedc99d2ad8287e445eb68a86b1134e66d4e4",
+  "/work/usv/ros_ws/install/usv_physics/lib/libUsvInertiaResponseProbe.so": "d9f3a43a341d07663ccb993799b5bd63af5a6f316f0523d462634a7bdcf8743d"
+}
