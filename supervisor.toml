@@ -59,7 +59,7 @@ inputs = ["tests/native", "ros_ws/src/usv_energy/include", "ros_ws/src/usv_energ
 jobs = 2
 timeout = 600
 minimum = 80
-files = ["ros_ws/src/usv_energy/include/usv_energy/EnergyModel.hh", "ros_ws/src/usv_energy/include/usv_energy/Sensors.hh", "ros_ws/src/usv_simulation/include/WrenchAudit.hh", "ros_ws/src/usv_simulation/include/AppendageHydrodynamics.hh", "ros_ws/src/usv_simulation/include/SteeringIntegral.hh", "ros_ws/src/usv_simulation/include/Resistance.hh", "ros_ws/src/usv_simulation/include/AddedMass.hh", "ros_ws/src/usv_simulation/include/FuelMass.hh", "ros_ws/src/usv_simulation/include/PropulsionModel.hh", "ros_ws/src/usv_simulation/include/SteeringReference.hh", "ros_ws/src/usv_simulation/include/WaveKinematics.hh", "ros_ws/src/usv_simulation/include/WavePressure.hh", "ros_ws/src/usv_simulation/include/Hydrostatics.hh"]
+files = ["ros_ws/src/usv_energy/include/usv_energy/EnergyModel.hh", "ros_ws/src/usv_energy/include/usv_energy/Sensors.hh", "ros_ws/src/usv_simulation/include/WrenchAudit.hh", "ros_ws/src/usv_simulation/include/AppendageHydrodynamics.hh", "ros_ws/src/usv_simulation/include/SteeringIntegral.hh", "ros_ws/src/usv_simulation/include/Resistance.hh", "ros_ws/src/usv_simulation/include/AddedMass.hh", "ros_ws/src/usv_simulation/include/HullSeparation.hh", "ros_ws/src/usv_simulation/include/FuelMass.hh", "ros_ws/src/usv_simulation/include/PropulsionModel.hh", "ros_ws/src/usv_simulation/include/SteeringReference.hh", "ros_ws/src/usv_simulation/include/WaveKinematics.hh", "ros_ws/src/usv_simulation/include/WavePressure.hh", "ros_ws/src/usv_simulation/include/Hydrostatics.hh"]
 
 [settings.cpp-sanitizers]
 cmake_source = "tests/native"

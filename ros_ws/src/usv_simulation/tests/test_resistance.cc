@@ -26,6 +26,12 @@ void CheckSeparatedFlow() {
   const auto yaw = HullSeparationCorrection(profile, -2, 0, .1);
   if (std::abs(yaw.moment + 80.0 / 3) > 1e-10)
     throw std::runtime_error("Separated yaw integral mismatch");
+}
+
+/** @brief 验证参考点变换与耗散性，不依赖具体船体参数。 */
+void CheckSeparationEnergy() {
+  std::istringstream data("-2 0\n0 100\n2 0\n");
+  const auto profile = LoadHullSeparation(data, 0);
   std::istringstream offsetData("-2 0\n0 100\n2 0\n");
   const auto offset = LoadHullSeparation(offsetData, 1);
   for (double u : {-2., 0., 2.})
@@ -38,6 +44,10 @@ void CheckSeparatedFlow() {
             std::abs(f.moment - f.force - shifted.moment) > 1e-10)
           throw std::runtime_error("Separation energy/reference mismatch");
       }
+}
+
+/** @brief 拒绝截断、不闭合、乱序及多峰剖面。 */
+void CheckSeparationInput() {
   for (const char *bad : {"", "0 0 1", "0 0 1 -1 2 0",
                           "0 0 2 100 1 0", "0 1 1 100 2 0",
                           "0 0 1 100 2 50 3 100 4 0"}) {
@@ -51,6 +61,21 @@ void CheckSeparatedFlow() {
     if (!rejected)
       throw std::runtime_error("Invalid separation profile accepted");
   }
+}
+
+/** @brief 用矩形剖面验证平坦峰区和零长度端部跳变。 */
+void CheckSeparationPlateau() {
+  std::istringstream data("-2 0\n-2 100\n2 100\n2 0\n");
+  const auto profile = LoadHullSeparation(data, 0);
+  const auto ahead = HullSeparationCorrection(profile, 2, .1, 0);
+  const auto astern = HullSeparationCorrection(profile, -2, .1, 0);
+  if (std::abs(profile.swayMass - 400) > 1e-10 ||
+      std::abs(profile.yawInertia - 1600.0 / 3) > 1e-10 ||
+      std::abs(ahead.force + 20) > 1e-10 ||
+      std::abs(ahead.moment - 40) > 1e-10 ||
+      std::abs(astern.force + 20) > 1e-10 ||
+      std::abs(astern.moment + 40) > 1e-10)
+    throw std::runtime_error("Separated plateau/end jump mismatch");
 }
 
 /** @brief 用均匀船长解析积分验证横移预算与自然产生的偏航阻尼。 */
@@ -91,6 +116,9 @@ void CheckDistributedPassivity() {
  */
 int main() {
   CheckSeparatedFlow();
+  CheckSeparationEnergy();
+  CheckSeparationInput();
+  CheckSeparationPlateau();
   CheckDistributedIntegrals();
   CheckDistributedPassivity();
   V l(120, 600, 1400), q(180, 1500, 1800), ref(.36, 1.24, 4.49);
