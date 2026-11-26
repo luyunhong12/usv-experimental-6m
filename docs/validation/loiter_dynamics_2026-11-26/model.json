@@ -1,0 +1,140 @@
+{
+  "source_cases": {
+    "calm": "response_calm_20261125_02",
+    "north030": "response_north030_20261125_02",
+    "west015": "response_west015_20261125_02"
+  },
+  "hashes": {
+    "calm": {
+      "propulsion.csv": "22e524955c810dd45e3e946be07ba1f1cf333d233164992af4c90f1bd37b762c",
+      "actuators.csv": "b9d7275279ce6b1405045377f77d88db1dcd420a978c368947e2df62ed4ebb4f",
+      "response.csv": "aad7abd61d59505fe591c9e3a8c957684bef79e1408ea1aa0728c4e9d35e6d61"
+    },
+    "north030": {
+      "propulsion.csv": "1a880b1ba26735bfa0377a9549100e9f8e96608bfa8eb095dbe827c6817b95b3",
+      "actuators.csv": "64e80a82d89f4086658eba31e083e9c1eefecc4b61e97803b1ebe3eac9956553",
+      "response.csv": "61d4fd2ae73aff459a57f47fd3b2c9861567457a6a091abbc118431ed73cafb7"
+    },
+    "west015": {
+      "propulsion.csv": "6a6de631e5696cd9caa81c275cce3885e30b9b7f1ca0a93bfc87cf41d20af057",
+      "actuators.csv": "f7359054f9d481d063bd0b7315b66d9b19f472c25fd34e1c0d23a8d93a30839c",
+      "response.csv": "2f37ac5c28884c2e1a879187cd3417d1e218066bc6d0a322a539e81fcaf67ae5"
+    }
+  },
+  "models": {
+    "forward": {
+      "coef_a_b_c": [
+        -0.6382350250129072,
+        -0.000665069113304552,
+        0.0008660776796849789
+      ],
+      "time_constant_s": 1.5668209371301376,
+      "steady_force_gain_rad_s_N": -0.0010420442113641478,
+      "training_stages": [
+        2,
+        3
+      ],
+      "training_samples": 594,
+      "singular_values": [
+        3608.6587210349003,
+        24.191560925926407,
+        0.5958026373294552
+      ],
+      "predictions": {
+        "calm_turns": {
+          "rmse_deg_s": 0.3690468839965819,
+          "peak_deg_s": 1.0217321571205376,
+          "is_training_interval": true,
+          "csv": "forward_calm_turns.csv"
+        },
+        "calm_recenter": {
+          "rmse_deg_s": 0.34192597198293845,
+          "peak_deg_s": 0.9252988389820755,
+          "is_training_interval": false,
+          "csv": "forward_calm_recenter.csv"
+        },
+        "north030_turns": {
+          "rmse_deg_s": 0.36858437229088875,
+          "peak_deg_s": 1.0203917176633008,
+          "is_training_interval": false,
+          "csv": "forward_north030_turns.csv"
+        },
+        "north030_recenter": {
+          "rmse_deg_s": 0.34315365950894805,
+          "peak_deg_s": 0.9275084506821002,
+          "is_training_interval": false,
+          "csv": "forward_north030_recenter.csv"
+        },
+        "west015_turns": {
+          "rmse_deg_s": 0.36932550100507233,
+          "peak_deg_s": 1.0219135040656628,
+          "is_training_interval": false,
+          "csv": "forward_west015_turns.csv"
+        },
+        "west015_recenter": {
+          "rmse_deg_s": 0.3423272903012013,
+          "peak_deg_s": 0.9257704021384394,
+          "is_training_interval": false,
+          "csv": "forward_west015_recenter.csv"
+        }
+      }
+    },
+    "reverse": {
+      "coef_a_b_c": [
+        -0.5665336940576279,
+        -0.0006969113529058361,
+        -0.00040114677200843603
+      ],
+      "time_constant_s": 1.765120081098442,
+      "steady_force_gain_rad_s_N": -0.0012301322237595743,
+      "training_stages": [
+        6,
+        7
+      ],
+      "training_samples": 595,
+      "singular_values": [
+        2414.7241923108363,
+        24.210455010989584,
+        0.513580077383573
+      ],
+      "predictions": {
+        "calm_turns": {
+          "rmse_deg_s": 0.14445289380237544,
+          "peak_deg_s": 0.39435046107044114,
+          "is_training_interval": true,
+          "csv": "reverse_calm_turns.csv"
+        },
+        "calm_recenter": {
+          "rmse_deg_s": 0.3233555180373005,
+          "peak_deg_s": 0.9516842856287536,
+          "is_training_interval": false,
+          "csv": "reverse_calm_recenter.csv"
+        },
+        "north030_turns": {
+          "rmse_deg_s": 0.14514525864653016,
+          "peak_deg_s": 0.39652798924520594,
+          "is_training_interval": false,
+          "csv": "reverse_north030_turns.csv"
+        },
+        "north030_recenter": {
+          "rmse_deg_s": 0.3217449360400144,
+          "peak_deg_s": 0.9489296055524624,
+          "is_training_interval": false,
+          "csv": "reverse_north030_recenter.csv"
+        },
+        "west015_turns": {
+          "rmse_deg_s": 0.14464450323256597,
+          "peak_deg_s": 0.39420387454437295,
+          "is_training_interval": false,
+          "csv": "reverse_west015_turns.csv"
+        },
+        "west015_recenter": {
+          "rmse_deg_s": 0.32189401777849425,
+          "peak_deg_s": 0.947319899472786,
+          "is_training_interval": false,
+          "csv": "reverse_west015_recenter.csv"
+        }
+      }
+    }
+  }
+}

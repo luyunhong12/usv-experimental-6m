@@ -1,0 +1,14 @@
+{
+  "4": {
+    "initial_yaw_rate_deg_s": -9.405283356783963,
+    "integrated_heading_change_deg": -44.37594545625279,
+    "equivalent_time_s": 4.718193357167144,
+    "note": "stage4 retains forward thrust; stage8 also cuts reverse thrust, NOT an equivalent reverse helm-only test"
+  },
+  "8": {
+    "initial_yaw_rate_deg_s": 7.453148188265733,
+    "integrated_heading_change_deg": 22.339396063664317,
+    "equivalent_time_s": 2.997310062724307,
+    "note": "stage4 retains forward thrust; stage8 also cuts reverse thrust, NOT an equivalent reverse helm-only test"
+  }
+}
