@@ -4,6 +4,7 @@
 #include "AddedMass.hh"
 #include "Environment.hh"
 #include "Hydrostatics.hh"
+#include "HullSeparation.hh"
 #include "Resistance.hh"
 #include "WavePressure.hh"
 #include "WrenchAudit.hh"
@@ -41,6 +42,8 @@ class HullHydrostatics : public gz::sim::System,
   std::vector<std::array<size_t, 3>> faces;
   V addedM, addedJ, previousV, previousW;
   double addedSwayYaw = 0; ///< 横移/偏航流体惯性耦合，kg·m。
+  std::optional<HullSeparationProfile> separation; ///< 可选固定载荷分离修正。
+  gz::transport::Node::Publisher separationPub;
   double previousTime = -1;
   gz::transport::Node::Publisher addedPub;
   bool geometryResistance = false;
@@ -90,6 +93,7 @@ public:
         !std::isfinite(addedSwayYaw) || addedM.Min() < 0 || addedJ.Min() < 0 ||
         addedSwayYaw * addedSwayYaw > addedM.Y() * addedJ.Z())
       throw std::runtime_error("Added inertia must be finite positive semidefinite");
+    LoadSeparation(s);
     addedPub = node.Advertise<gz::msgs::Double_V>(TopicPrefix(s) +
                                                   "/hydrodynamics/added_mass");
     environment.Configure(s);
@@ -145,7 +149,7 @@ public:
       PublishAddedMass(now, aw, local, w);
       drag = GeometryDrag(linear, quadratic, local, scales);
       torque = AngularDrag(w, scales);
-      ApplyDistributedLateral(local, w, drag, torque);
+      ApplyDistributedLateral(now, local, w, drag, torque);
       dragTorque = torque;
       dissipation = -(drag.Dot(local) + torque.Dot(w));
       V worldDrag = pose->Rot() * drag;
@@ -173,6 +177,26 @@ public:
   }
 
 private:
+  /** @brief 读取可选分离剖面并核对与附加惯性来自同一几何积分。
+   * @param s 船体插件配置；separation_sections_file为可选绝对数据路径。
+   */
+  void LoadSeparation(const std::shared_ptr<const sdf::Element> &s) {
+    if (!s->HasElement("separation_sections_file"))
+      return;
+    if (!distributedLateralDrag)
+      throw std::runtime_error("Separation candidate requires distributed drag");
+    std::ifstream input(s->Get<std::string>("separation_sections_file"));
+    separation = LoadHullSeparation(input, dragCenter.X());
+    const V expected(addedM.Y(), addedSwayYaw, addedJ.Z());
+    const V integrated(separation->swayMass, separation->swayYaw,
+                       separation->yawInertia);
+    for (int i = 0; i < 3; ++i)
+      if (std::abs(expected[i] - integrated[i]) >
+          .001 * std::max(1.0, std::abs(expected[i])))
+        throw std::runtime_error("Separation and added inertia must share a profile");
+    separationPub = node.Advertise<gz::msgs::Double_V>(
+        TopicPrefix(s) + "/hydrodynamics/separation");
+  }
   /** @brief 读取流体、阻尼和空气阻力配置。
    * @param s 插件 SDF 配置元素。
    */
@@ -425,19 +449,33 @@ private:
     return {local, w};
   }
   /** @brief 用几何分布的横向阻力替代集中侧向及偏航项。
+   * @param now 当前仿真时间，s，用于同步分离修正遥测。
    * @param local 阻力参考点的局部相对速度，m/s。
    * @param w 体坐标角速度，rad/s。
    * @param drag 需要更新侧向分量的体坐标阻力，N。
    * @param torque 需要更新偏航分量的参考点阻力矩，N·m。
    */
-  void ApplyDistributedLateral(const V &local, const V &w, V &drag,
-                               V &torque) const {
+  void ApplyDistributedLateral(double now, const V &local, const V &w, V &drag,
+                               V &torque) {
     if (distributedLateralDrag) {
       const auto lateral = DistributedLateralDrag(
           lateralPatches, local.Y(), w.Z(), linear.Y() / referenceArea,
           quadratic.Y() / referenceProjected.Y());
       drag.Y(lateral.force);
       torque.Z(lateral.moment);
+    }
+    if (separation) {
+      const auto correction =
+          HullSeparationCorrection(*separation, local.X(), local.Y(), w.Z());
+      drag.Y() += correction.force;
+      torque.Z() += correction.moment;
+      if (now - last >= .1) {
+        gz::msgs::Double_V msg;
+        for (double value : {now, local.X(), local.Y(), w.Z(), correction.force,
+                             correction.moment})
+          msg.add_data(value);
+        separationPub.Publish(msg);
+      }
     }
   }
   /** @brief 按现有角阻尼公式计算局部阻力矩。

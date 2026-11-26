@@ -2,8 +2,56 @@
  * @brief 当前模块的解析回归验证。
  */
 #include "Resistance.hh"
+#include "HullSeparation.hh"
 #include <cassert>
+#include <sstream>
 using namespace usv;
+
+/** @brief 验证两侧线性截面的分离差额、解析矩及参考点变换。 */
+void CheckSeparatedFlow() {
+  std::istringstream data("-2 0\n0 100\n2 0\n");
+  const auto profile = LoadHullSeparation(data, 0);
+  if (std::abs(profile.swayMass - 200) > 1e-10 ||
+      std::abs(profile.swayYaw) > 1e-10 ||
+      std::abs(profile.yawInertia - 400.0 / 3) > 1e-10)
+    throw std::runtime_error("Triangular strip inertia mismatch");
+  const auto ahead = HullSeparationCorrection(profile, 2, .1, 0);
+  const auto astern = HullSeparationCorrection(profile, -2, .1, 0);
+  if (std::abs(ahead.force + 20) > 1e-10 ||
+      std::abs(ahead.moment - 20) > 1e-10 ||
+      std::abs(astern.force + 20) > 1e-10 ||
+      std::abs(astern.moment + 20) > 1e-10)
+    throw std::runtime_error("Separated flow direction mismatch");
+  // -|u|∫0²50*x²*r dx = -80/3 N·m，不能只用区间中点平方。
+  const auto yaw = HullSeparationCorrection(profile, -2, 0, .1);
+  if (std::abs(yaw.moment + 80.0 / 3) > 1e-10)
+    throw std::runtime_error("Separated yaw integral mismatch");
+  std::istringstream offsetData("-2 0\n0 100\n2 0\n");
+  const auto offset = LoadHullSeparation(offsetData, 1);
+  for (double u : {-2., 0., 2.})
+    for (double v : {-.3, 0., .3})
+      for (double r : {-.1, 0., .1}) {
+        const auto f = HullSeparationCorrection(profile, u, v, r);
+        const auto shifted = HullSeparationCorrection(offset, u, v + r, r);
+        if (f.force * v + f.moment * r > 1e-10 ||
+            std::abs(f.force - shifted.force) > 1e-10 ||
+            std::abs(f.moment - f.force - shifted.moment) > 1e-10)
+          throw std::runtime_error("Separation energy/reference mismatch");
+      }
+  for (const char *bad : {"", "0 0 1", "0 0 1 -1 2 0",
+                          "0 0 2 100 1 0", "0 1 1 100 2 0",
+                          "0 0 1 100 2 50 3 100 4 0"}) {
+    std::istringstream input(bad);
+    bool rejected = false;
+    try {
+      LoadHullSeparation(input, 0);
+    } catch (const std::runtime_error &) {
+      rejected = true;
+    }
+    if (!rejected)
+      throw std::runtime_error("Invalid separation profile accepted");
+  }
+}
 
 /** @brief 用均匀船长解析积分验证横移预算与自然产生的偏航阻尼。 */
 void CheckDistributedIntegrals() {
@@ -42,6 +90,7 @@ void CheckDistributedPassivity() {
 /** @brief 执行该文件定义的解析或场景回归验证。
  */
 int main() {
+  CheckSeparatedFlow();
   CheckDistributedIntegrals();
   CheckDistributedPassivity();
   V l(120, 600, 1400), q(180, 1500, 1800), ref(.36, 1.24, 4.49);
