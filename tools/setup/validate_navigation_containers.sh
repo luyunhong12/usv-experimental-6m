@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 # Independent instance 43; never connects to the desktop SITL/QGC instance 10.
 set -euo pipefail
-ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/../.." && pwd)"
+# 长测期间文件可能继续编辑；先将整份启动器读入内存，防止bash按旧偏移续读新文件。
+if [[ "${USV_NAV_RUNNER_FROZEN:-0}" != 1 ]]; then
+  export USV_NAV_RUNNER_FROZEN=1
+  exec bash -c "$(cat -- "$0")" "$0" "$@"
+fi
+ROOT="$(cd -- "$(dirname -- "$0")/../.." && pwd)"
 label="${1:-navigation_$(date -u +%Y%m%dT%H%M%SZ)}"
 [[ "$label" =~ ^[A-Za-z][A-Za-z0-9_]*$ ]] || { echo 'Invalid label' >&2; exit 2; }
 shift "$(( $# > 0 ? 1 : 0 ))"

@@ -184,3 +184,89 @@ class WeatherAcceptanceTests(unittest.TestCase):
         self.assertFalse(
             any(weather_checks(environment, propulsion, (0, 5, 0), 1, limits).values())
         )
+
+
+class NavigationLauncherTests(unittest.TestCase):
+    """验证长测启动器在磁盘文件变化后仍执行已冻结版本。"""
+
+    def test_running_launcher_survives_source_rewrite(self):
+        """替身Docker等待期间覆盖原脚本，不应改变续执行和输入快照。"""
+        import os
+        import shutil
+        import subprocess
+        import tempfile
+        import time
+
+        project = Path(__file__).resolve().parents[2]
+        relative = Path("tools/setup/validate_navigation_containers.sh")
+        original = (project / relative).read_bytes()
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for name in [
+                relative,
+                Path("tools/lib/navigation_acceptance.py"),
+                Path("tests/integration/validate_navigation.py"),
+            ]:
+                (root / name).parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(project / name, root / name)
+            config = root / "ros_ws/src/usv_ardupilot/config"
+            config.mkdir(parents=True)
+            (config / "boat.parm").write_text("FRAME_CLASS 2\n")
+            binary = root / "bin"
+            binary.mkdir()
+            stub = binary / "docker"
+            stub.write_text(
+                """#!/bin/bash
+case "$1 $2" in
+  'container inspect') exit 1 ;;
+  'image inspect') echo '[]' ;;
+  'create --name') echo stub-id ;;
+  'start -a') touch "$USV_STUB_READY"; while [[ ! -e "$USV_STUB_RELEASE" ]]; do sleep 0.05; done ;;
+  'inspect -f') echo 0 ;;
+esac
+exit 0
+"""
+            )
+            stub.chmod(0o755)
+            ready, release = root / "ready", root / "release"
+            environment = {
+                **os.environ,
+                "PATH": str(binary) + os.pathsep + os.environ["PATH"],
+                "USV_STUB_READY": str(ready),
+                "USV_STUB_RELEASE": str(release),
+            }
+            environment.pop("USV_NAV_RUNNER_FROZEN", None)
+            environment.pop("USV_NAV_CONFIG_DIR", None)
+            process = subprocess.Popen(
+                ["bash", str(root / relative), "frozen_test"],
+                env=environment,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+                text=True,
+            )
+            try:
+                deadline = time.monotonic() + 10
+                while (
+                    not ready.exists()
+                    and time.monotonic() < deadline
+                    and process.poll() is None
+                ):
+                    time.sleep(0.02)
+                self.assertTrue(
+                    ready.exists(), "Launcher did not reach the blocked Docker stub"
+                )
+                (root / relative).write_text("#!/bin/bash\nexit 42\n")
+                release.touch()
+                output, _ = process.communicate(timeout=10)
+                self.assertEqual(process.returncode, 0, output)
+                self.assertIn("Navigation evidence:", output)
+                self.assertEqual(
+                    (
+                        root / "artifacts/navigation/frozen_test/inputs/runner.sh"
+                    ).read_bytes(),
+                    original,
+                )
+            finally:
+                if process.poll() is None:
+                    process.kill()
+                    process.communicate(timeout=5)

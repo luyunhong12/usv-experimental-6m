@@ -1,0 +1,87 @@
+version = 1
+name = "usv-experimental-6m"
+source = ["ros_ws/src", "tools", "tests", "design/azimuth_thruster/仿真接口"]
+exclude = ["tools/modeling/blender_connection/*"]
+policy = ["CONTRIBUTING.md", "docs/parameters/README.md"]
+checks = ["python-docs", "black", "ruff", "cpp-docs", "parameter-docs", "cpp-complexity", "cpp-duplicates", "cpp-coverage", "cpp-sanitizers", "cpp-mutation"]
+
+[required]
+quick = ["python-docs", "black", "ruff", "cpp-docs", "parameter-docs"]
+full = ["python-docs", "black", "ruff", "cpp-docs", "parameter-docs", "cpp-complexity", "cpp-duplicates", "usv-build-and-test"]
+deep = ["python-docs", "black", "ruff", "cpp-docs", "parameter-docs", "cpp-complexity", "cpp-duplicates", "cpp-coverage", "cpp-sanitizers", "cpp-mutation", "usv-build-and-test", "usv-runtime-regression"]
+
+# 函数参数、主 SDF 和已建立逐字段说明的权威 JSON。
+[settings.parameter-docs]
+paths = [
+  "deploy/compose.yaml",
+  "ros_ws/src/usv_control/config/dds_transport.xml",
+  "ros_ws/src/usv_description/models/usv_azimuth_trial.sdf",
+  "ros_ws/src/usv_simulation/worlds/usv_hull_trial.sdf",
+  "ros_ws/src/usv_energy/config/energy.json",
+  "ros_ws/src/usv_description/config/propulsion.json",
+  "ros_ws/src/usv_description/config/fuel_tank.json",
+  "ros_ws/src/usv_description/config/appendage_hydrodynamics.json",
+  "ros_ws/src/usv_description/config/component_mass_ledger.json",
+  "ros_ws/src/usv_description/config/hydrodynamics.json",
+  "ros_ws/src/usv_description/config/resistance.json",
+]
+
+[settings.cpp-complexity]
+threshold = 10
+
+[settings.cpp-duplicates]
+min_lines = 5
+min_tokens = 50
+
+# 保持构建和测试串行；构建失败时不使用旧产物继续测试。
+# 仅 full/deep 且显式 --run-commands 时执行，不启动航行仿真。
+[[commands]]
+id = "usv-build-and-test"
+argv = ["docker", "run", "--rm", "--network", "none", "--user", "1000:1000", "-v", "/home/yh/Project/usv-experimental-6m/tests/unit:/work/usv/tests/unit:ro", "-v", "/home/yh/Project/usv-experimental-6m/tools/lib/navigation_acceptance.py:/work/usv/tools/lib/navigation_acceptance.py:ro", "-v", "/home/yh/Project/usv-experimental-6m/tools/setup/validate_navigation_containers.sh:/work/usv/tools/setup/validate_navigation_containers.sh:ro", "-v", "/home/yh/Project/usv-experimental-6m/tests/integration/validate_navigation.py:/work/usv/tests/integration/validate_navigation.py:ro", "usv-simulation:sitl-gui", "bash", "-c", "./usv build && ./usv test"]
+profile = "full"
+timeout = 1800
+finding_codes = [1]
+
+[settings.parameter-docs.documentation]
+"ros_ws/src/usv_description/models/usv_azimuth_trial.sdf" = "docs/parameters/supervisor-vessel-sdf.md"
+"ros_ws/src/usv_simulation/worlds/usv_hull_trial.sdf" = "docs/parameters/supervisor-world-sdf.md"
+"ros_ws/src/usv_energy/config/energy.json" = "docs/parameters/supervisor-energy.md"
+"ros_ws/src/usv_description/config/propulsion.json" = "docs/parameters/supervisor-propulsion.md"
+"ros_ws/src/usv_description/config/fuel_tank.json" = "docs/parameters/supervisor-fuel-tank.md"
+"ros_ws/src/usv_description/config/appendage_hydrodynamics.json" = "docs/parameters/supervisor-appendage-hydrodynamics.md"
+"ros_ws/src/usv_description/config/component_mass_ledger.json" = "docs/parameters/supervisor-component-mass-ledger.md"
+"ros_ws/src/usv_description/config/hydrodynamics.json" = "docs/parameters/supervisor-hydrodynamics.md"
+"ros_ws/src/usv_description/config/resistance.json" = "docs/parameters/supervisor-resistance.md"
+
+[settings.cpp-coverage]
+cmake_source = "tests/native"
+inputs = ["tests/native", "ros_ws/src/usv_energy/include", "ros_ws/src/usv_energy/tests", "ros_ws/src/usv_simulation/include", "ros_ws/src/usv_simulation/tests"]
+jobs = 2
+timeout = 600
+minimum = 80
+files = ["ros_ws/src/usv_energy/include/usv_energy/EnergyModel.hh", "ros_ws/src/usv_energy/include/usv_energy/Sensors.hh", "ros_ws/src/usv_simulation/include/WrenchAudit.hh", "ros_ws/src/usv_simulation/include/AppendageHydrodynamics.hh", "ros_ws/src/usv_simulation/include/SteeringIntegral.hh", "ros_ws/src/usv_simulation/include/Resistance.hh", "ros_ws/src/usv_simulation/include/AddedMass.hh", "ros_ws/src/usv_simulation/include/FuelMass.hh", "ros_ws/src/usv_simulation/include/PropulsionModel.hh", "ros_ws/src/usv_simulation/include/SteeringReference.hh", "ros_ws/src/usv_simulation/include/WaveKinematics.hh", "ros_ws/src/usv_simulation/include/WavePressure.hh", "ros_ws/src/usv_simulation/include/Hydrostatics.hh"]
+
+[settings.cpp-sanitizers]
+cmake_source = "tests/native"
+inputs = ["tests/native", "ros_ws/src/usv_energy/include", "ros_ws/src/usv_energy/tests", "ros_ws/src/usv_simulation/include", "ros_ws/src/usv_simulation/tests"]
+jobs = 2
+timeout = 600
+kind = "address,undefined"
+
+# 有限二元算子变异：覆盖转向积分抗饱和逻辑的全部候选，不代表全工程变异覆盖。
+[settings.cpp-mutation]
+cmake_source = "tests/native"
+inputs = ["tests/native", "ros_ws/src/usv_simulation/include/SteeringIntegral.hh", "ros_ws/src/usv_simulation/tests/test_steering_integral.cc"]
+configure_args = ["-DUSV_NATIVE_TESTS=steering_integral"]
+files = ["ros_ws/src/usv_simulation/include/SteeringIntegral.hh"]
+max_mutants = 100
+jobs = 2
+timeout = 120
+
+# 串行置于完整构建测试之后；每个场景使用独立通信分区和证据目录。
+[[commands]]
+id = "usv-runtime-regression"
+argv = ["bash", "tools/analysis/deep_runtime.sh"]
+profile = "deep"
+timeout = 900
+finding_codes = [1]

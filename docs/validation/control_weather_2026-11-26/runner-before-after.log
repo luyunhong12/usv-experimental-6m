@@ -1,0 +1,23 @@
+Old launcher exit: 1
+F
+======================================================================
+FAIL: test_running_launcher_survives_source_rewrite (test_navigation_acceptance.NavigationLauncherTests.test_running_launcher_survives_source_rewrite)
+替身Docker等待期间覆盖原脚本，不应改变续执行和输入快照。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/tmpi1h3e0d1/tests/unit/test_navigation_acceptance.py", line 262, in test_running_launcher_survives_source_rewrite
+    self.assertIn("Navigation evidence:", output)
+AssertionError: 'Navigation evidence:' not found in ''
+
+----------------------------------------------------------------------
+Ran 1 test in 0.095s
+
+FAILED (failures=1)
+
+Fixed launcher suite exit: 0
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.106s
+
+OK
+
