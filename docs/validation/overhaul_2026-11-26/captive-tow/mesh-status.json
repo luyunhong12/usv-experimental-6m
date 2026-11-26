@@ -1,0 +1,69 @@
+{
+  "image_digest": "sha256:690476d30ce93c50b7c8e75ff49fd59faa55b78fae72b90aaba54337f7e0afc5",
+  "scope": "MESH_PREPARATION_NOT_FLOW_VALIDATION",
+  "results": {
+    "cfd-bare-mesh-v2": {
+      "cells": 263959,
+      "concave_cells": 5047,
+      "failed_mesh_checks": 2,
+      "high_skew_faces": 2,
+      "config_sha256": {
+        "meshQualityDict": "79e46751c413d6a94a11bb9e14910e7fed0a32f184bcc44cfe0e9bae0028cb5a",
+        "fvSchemes": "dde052ac74c995ffe4fcc6de37636559204a34545967020eb96b94d8015dfc16",
+        "blockMeshDict": "c684eaf72f5906b638943a6d8588af8056ab6908e837f2dc88311d5418d5613f",
+        "fvSolution": "48e61e0402615d31ff14eba640055603421bb51a9f2372bb18cb865a4a5f9f40",
+        "snappyHexMeshDict": "926bc20b2f3e28992d4cc49f47fcb885eb84da81e94e03b785f03c07101724ac",
+        "controlDict": "bef5a3c8579e16dd7cceb39d9f656db273d3ca7d525ee9954e03469992dec1bc"
+      },
+      "mesh_sha256": {
+        "constant/polyMesh/owner": "48c6cd2a03ecd89da67748c2639c4c3bab3de58c4424571e1851f3cf8ba8bfe8",
+        "constant/polyMesh/pointZones": "6f9c8fe066f1f9b02e66f8adba8be668e1b450a240c80aff57ef3638ec6eb06a",
+        "constant/polyMesh/level0Edge": "6709d3aae4ac0d0a2dd7f51ec0170143025f42a69dec4d94a0950d983ec5bc36",
+        "constant/polyMesh/faces": "478be87e72311d3f08a0ca838d8eb1c6a8d72c742cf6ead28ac5ab4c98988e58",
+        "constant/polyMesh/points": "cc34f1f9a24890f20f817d273977ae95e5f5e1da720786917eb0dfcf362bfed7",
+        "constant/polyMesh/cellLevel": "47353888511248a92165355729233f545976ce1f4f322778a571bfb451ab8ebe",
+        "constant/polyMesh/cellZones": "733bed75538f5e60bbdc2a8ad4e6f54e91b88e06b27e69630400a2a70b60cc34",
+        "constant/polyMesh/surfaceIndex": "e1e210beb2b92a042677b676fff57fe1191f7124055cd0a2fa86e3718a03a3bb",
+        "constant/polyMesh/pointLevel": "22d30423401e2e06e8502b694242a0958db978212fcaf2660fc626e8c887b348",
+        "constant/polyMesh/faceZones": "4a9f2636ee08820a0874a667e2cdf06cb4e1ec77a320dcf15700e248a3195ef5",
+        "constant/polyMesh/neighbour": "07b29efc9cdaff33bcbc174a6a04514e0902da6ad21155f55a27f5f2810164b2",
+        "constant/polyMesh/boundary": "ebb6f41cbda56ccf43c99092946b122173adb87cc8f894366a6619d861fe0f45",
+        "constant/polyMesh/sets/skewFaces": "4c3adc31dc5446295d116c17c574793a78465e18fb04fc440ee7a0d2cbdbcf69",
+        "constant/polyMesh/sets/concaveCells": "0b0de2a41a5ae33ee4db7e246d05dc622a813e46335820e54e6082467668bbe4",
+        "constant/polyMesh/sets/concaveFaces": "239137b431f46347b734465ca00552e18208b28c9e341a493f5d7d57206b04df"
+      }
+    },
+    "cfd-bare-mesh-v3": {
+      "cells": 263063,
+      "concave_cells": 4995,
+      "failed_mesh_checks": 1,
+      "high_skew_faces": 0,
+      "config_sha256": {
+        "meshQualityDict": "8300dedb1e6d1434de590e6c0444b27f07b6cec0c14176ca0c43941d4df2db44",
+        "fvSchemes": "dde052ac74c995ffe4fcc6de37636559204a34545967020eb96b94d8015dfc16",
+        "blockMeshDict": "c684eaf72f5906b638943a6d8588af8056ab6908e837f2dc88311d5418d5613f",
+        "fvSolution": "48e61e0402615d31ff14eba640055603421bb51a9f2372bb18cb865a4a5f9f40",
+        "snappyHexMeshDict": "f0518211018664f5cf492c61c1308cf0b6cec9c5b6be549ae04aacc32300bee4",
+        "controlDict": "bef5a3c8579e16dd7cceb39d9f656db273d3ca7d525ee9954e03469992dec1bc",
+        "surfaceFeatureExtractDict": "58c771b688b0e3fbb2985c9f811c20a0e02fe4b6731601e13e57dbc2fa04c677"
+      },
+      "mesh_sha256": {
+        "constant/polyMesh/owner": "ec9b5c4cab5ee24fa6755c6e990f574ea4f31885d2c36e9ee4a1dd527fabfe08",
+        "constant/polyMesh/pointZones": "6f9c8fe066f1f9b02e66f8adba8be668e1b450a240c80aff57ef3638ec6eb06a",
+        "constant/polyMesh/level0Edge": "6709d3aae4ac0d0a2dd7f51ec0170143025f42a69dec4d94a0950d983ec5bc36",
+        "constant/polyMesh/faces": "2c04de0eb69f4d3f6f0c19927f9413e479ad7a09b5c722fbdbb1d05a79db7fd7",
+        "constant/polyMesh/points": "61953cb861d9fba76b5ebe78cc7674d668dec7ca301cf94cb4b76fd7001857d5",
+        "constant/polyMesh/cellLevel": "58f79739a347b910793d2c39d827835ba82ad7cdf7d528f61a2f7cca53ad9a78",
+        "constant/polyMesh/cellZones": "733bed75538f5e60bbdc2a8ad4e6f54e91b88e06b27e69630400a2a70b60cc34",
+        "constant/polyMesh/surfaceIndex": "7e5e4f100f80b0c913a64e9117e2ca2af0f91c1e828b23abe5fe8afe8df71921",
+        "constant/polyMesh/pointLevel": "15e2fe2aba1f0cd6f68f62b9b92ac778da59db7d31a3615a2802913823f6db42",
+        "constant/polyMesh/faceZones": "4a9f2636ee08820a0874a667e2cdf06cb4e1ec77a320dcf15700e248a3195ef5",
+        "constant/polyMesh/neighbour": "16b1fd34c6deaf11ecae8f892830b076f741fa20bbfec2aad2a9d17ec02ac65c",
+        "constant/polyMesh/boundary": "85d09e2cf8e188fe3320e2411eb1997b76d4673fb99c7ddd7a468214068d15cf",
+        "constant/polyMesh/sets/concaveCells": "5afb24d187cb576aa9d1ddcaed2389693e87b50ef3fd4f8d1b610a33e88e7fee"
+      }
+    }
+  },
+  "flow_solved": false,
+  "accepted_for_calibration": false
+}

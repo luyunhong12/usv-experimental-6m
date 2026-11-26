@@ -1,0 +1,71 @@
+{
+  "status": "SOLVER_AVAILABLE_SURFACE_CHECKED_MESH_GATE_FAILED_NO_FLOW_SOLUTION",
+  "proposed_solver": "OpenCFD OpenFOAM v2506 interFoam available; no flow solve executed",
+  "physics": {
+    "density_water_kg_m3": 1000,
+    "nu_water_m2_s": 1e-06,
+    "density_air_kg_m3": 1.225,
+    "nu_air_m2_s": 1.5e-05,
+    "gravity_m_s2": [
+      0,
+      0,
+      -9.81
+    ],
+    "turbulence": "kOmegaSST with consistent wall treatment; investigate model-form uncertainty",
+    "free_surface": "two-phase VOF; initially z=0",
+    "attitude": "fixed to exported equilibrium; no free heave/pitch in first comparison"
+  },
+  "initial_domain_m": {
+    "x": [
+      -24,
+      24
+    ],
+    "y": [
+      -12,
+      12
+    ],
+    "z": [
+      -12,
+      6
+    ]
+  },
+  "verification": {
+    "grid_h_ratios": [
+      2,
+      1.4142135623730951,
+      1
+    ],
+    "indicative_cell_counts": [
+      400000,
+      1100000,
+      3200000
+    ],
+    "fixed_time_steps_s": [
+      0.002,
+      0.001,
+      0.0005
+    ],
+    "max_Courant_target": 0.5,
+    "initial_transient_convective_times_L_over_U": 20,
+    "initial_average_convective_times_L_over_U": 5,
+    "force_block_mean_relative_target": 0.02,
+    "independent_domain_expansion_required": true,
+    "thresholds_are_project_planning_targets_not_ittc_certification": true
+  },
+  "stages": [
+    "Repair/review CFD surfaces and select fixed solver container; no blind hole fill or normal reversal",
+    "Bare-hull oblique tow; grid/time/domain/averaging convergence on nonzero beta case",
+    "Bare hull small-angle pairs at three speeds and both directions",
+    "Locked appendages after topology/union review; compare separated patch forces",
+    "Prescribed yaw/PMM to identify Y_r and N_r; not inferred from oblique tow alone",
+    "Validate rotating propulsor/wake separately before powered-stability conclusions",
+    "Only then consider force-model changes and unchanged free-running regression"
+  ],
+  "blockers": [
+    "Coarse mesh check fails concave-cell check; no boundary-layer or mesh/time-converged flow calculation",
+    "Azimuth surface has 64 nonmanifold edges; propeller component orientation needs review",
+    "OpenFOAM found 2528 azimuth and 446 propeller self-intersection locations; Boolean outer-boundary repair not performed",
+    "No independent force derivatives or uncertainty budget yet"
+  ],
+  "image_digest": "sha256:690476d30ce93c50b7c8e75ff49fd59faa55b78fae72b90aaba54337f7e0afc5"
+}

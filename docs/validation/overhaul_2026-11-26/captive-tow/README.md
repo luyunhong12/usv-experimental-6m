@@ -69,4 +69,4 @@ python3 tools/analysis/captive_tow.py \
 
 code-supervisor quick通过；完整构建、12原生测试、83 Python测试、5接口测试通过。full仍报告既有ReadSeparationSections CC=10与AzimuthPropulsion::PreUpdate CC=11；重复/覆盖检查通过，不宣称full或deep全部通过。[24项复核](review.md)与原始机器报告归档保留。
 
-本轮没有修改生产力模型，所以不重复宣称完成新的自由航行回归，原[27/32结果](../refinement/acceptance.md)继续有效。下一步先完成独立CFD验证准备（下一份报告）：几何预检已发现附体表面问题，求解尚未执行。只有拿到可用的独立导数/不确定度后，才决定修改模型及重跑原航行验收。
+本轮没有修改生产力模型，所以不重复宣称完成新的自由航行回归，原[27/32结果](../refinement/acceptance.md)继续有效。下一步先完成[独立CFD验证准备](cfd-plan.md)：官方OpenFOAM容器已固定，独立检查发现附体自交，裸船粗网格仍有凹单元检查失败，流场求解尚未执行。只有拿到可用的独立导数/不确定度后，才决定修改模型及重跑原航行验收。

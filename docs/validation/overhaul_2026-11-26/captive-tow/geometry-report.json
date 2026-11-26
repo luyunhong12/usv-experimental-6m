@@ -1,0 +1,143 @@
+{
+  "status": "PREFLIGHT_ONLY_NOT_CFD_READY",
+  "coordinate_system": "world axes aligned with hull at equilibrium; water z=0; metres",
+  "equilibrium_z_roll_pitch": [
+    -0.25261623933582933,
+    -4.942083026818993e-13,
+    -2.389393314456674e-13
+  ],
+  "source_sha256": {
+    "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/config/hull_triangles.txt": "1e811c99cccd4dd2c5966aa0fc6fe964d3c155a2534a0ee4fdf2e6d1aeaf7ccc",
+    "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/collision_azimuth.dae": "eb1b5f38f5075abc0700082633f7a46c424d078d6ce37546b6e8a1a4af590636",
+    "/home/yh/Project/usv-experimental-6m/ros_ws/src/usv_description/meshes/collision_propeller.dae": "7f1853a2382947ae028f237ec13b540df23ce30a437aad8d57840ac467eeea1f"
+  },
+  "surfaces": {
+    "hull": {
+      "vertices": 55,
+      "triangles": 106,
+      "bounds_world_m": [
+        [
+          -3.0000000000002145,
+          -1.124999999999565,
+          -0.25261623933611604
+        ],
+        [
+          2.999999999999756,
+          1.125000000000435,
+          0.7673837606648874
+        ]
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "signed_volume_m3": 8.35823795,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "component_volumes_m3": [
+        8.35823795
+      ],
+      "positive_closed_solid": true,
+      "self_intersection_checked": true,
+      "stl_sha256": "6b140a23f01633a194e3ace364c4da3940266bb935efdcca14335ae2ade3351a",
+      "self_intersection_backend": "OpenFOAM v2506 surfaceCheck",
+      "reported_intersection_locations": 0
+    },
+    "azimuth": {
+      "vertices": 3360,
+      "triangles": 6792,
+      "bounds_world_m": [
+        [
+          -3.7605364724799735,
+          -0.1361999999996754,
+          -0.5530851512577086
+        ],
+        [
+          -3.3444363724801547,
+          0.15250000000035532,
+          0.6723837487423265
+        ]
+      ],
+      "watertight": false,
+      "winding_consistent": true,
+      "signed_volume_m3": 0.01871618727234116,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 64,
+      "components": 20,
+      "component_volumes_m3": [
+        -0.008247100374788735,
+        0.011495137972578888,
+        0.002328182979315987,
+        0.00013565155792783054,
+        0.00012588673997335534,
+        0.001881988179099675,
+        -0.011495137972578916,
+        0.00028757297972255015,
+        0.011863513205478645,
+        0.003126681032148967,
+        0.00012646709825516112,
+        0.0003450900242804485,
+        0.0002329030136930193,
+        7.621811211082157e-05,
+        -0.011863513205478652,
+        0.01820622249026514,
+        5.638721978793581e-06,
+        5.638721748845547e-06,
+        5.638721748870079e-06,
+        7.350727486028679e-05
+      ],
+      "positive_closed_solid": false,
+      "self_intersection_checked": true,
+      "stl_sha256": "d5580f9e4b0f2f459ff5b2225d86de2dc0beaf171674caceb8986ebc08f21134",
+      "self_intersection_backend": "OpenFOAM v2506 surfaceCheck",
+      "reported_intersection_locations": 2528
+    },
+    "propeller": {
+      "vertices": 3590,
+      "triangles": 7164,
+      "bounds_world_m": [
+        [
+          -3.837383746739967,
+          -0.1434513000000746,
+          -0.5177968460127729
+        ],
+        [
+          -3.753039116739958,
+          0.10316879999989445,
+          -0.26509844601275967
+        ]
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "signed_volume_m3": 0.00015674791953707487,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "components": 4,
+      "component_volumes_m3": [
+        0.00023658180852931688,
+        -2.5641427706887913e-05,
+        -2.656327936334828e-05,
+        -2.7629181922037458e-05
+      ],
+      "positive_closed_solid": true,
+      "self_intersection_checked": true,
+      "stl_sha256": "b5ff47833b70a2f5cd0ce1c0c23d944add297c57a7e8e5190f58edefd16321b9",
+      "self_intersection_backend": "OpenFOAM v2506 surfaceCheck",
+      "reported_intersection_locations": 446
+    }
+  },
+  "remaining": [
+    "Separate connected parts are not automatically a watertight Boolean union",
+    "Intersecting/internal surfaces and hull-appendage junction require review",
+    "No volume mesh, solver, wall treatment or CFD result has been validated",
+    "Rotating propeller omitted in initial bare-hull CFD; powered comparisons require separate validated propulsor model"
+  ],
+  "openfoam_check": {
+    "version": "2506",
+    "build": "_615aae61-20250627",
+    "image_digest": "sha256:690476d30ce93c50b7c8e75ff49fd59faa55b78fae72b90aaba54337f7e0afc5",
+    "hull_self_intersections": 0,
+    "azimuth_reported_self_intersection_locations": 2528,
+    "propeller_reported_self_intersection_locations": 446,
+    "note": "Independent surfaceCheck output; count is reported intersection locations, not necessarily unique defective faces"
+  }
+}
