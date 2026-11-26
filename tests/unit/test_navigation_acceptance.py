@@ -120,3 +120,67 @@ class ResponseIdentificationTests(unittest.TestCase):
         self.assertFalse(response_coverage(samples[:500] + samples[520:]))
         samples[100][0] = float("nan")
         self.assertFalse(response_coverage(samples))
+
+
+class WeatherAcceptanceTests(unittest.TestCase):
+    """确保风浪输入缺失、物理遥测缺测和姿态超界不能伪装通过。"""
+
+    def test_weather_requires_additional_gates(self):
+        """原25项全绿仍不能代替包含风浪的30项验收。"""
+        checks = dict.fromkeys(required_checks(), True)
+        self.assertFalse(passed_checks(checks, weather=True))
+        checks.update(dict.fromkeys(required_checks(weather=True), True))
+        self.assertTrue(passed_checks(checks, weather=True))
+        checks["wind_applied"] = False
+        self.assertFalse(passed_checks(checks, weather=True))
+
+    def test_weather_rejects_absent_wrong_or_incomplete_inputs(self):
+        """只有完整时间窗、正确实测风速及非平静波面才可通过。"""
+        from navigation_acceptance import weather_checks
+
+        import json
+
+        limits = json.loads(
+            (
+                Path(__file__).resolve().parents[1]
+                / "scenarios/environment_acceptance.json"
+            ).read_text()
+        )
+        propulsion = [[i / 10] + [0.0] * 16 for i in range(301)]
+        for row in propulsion:
+            row[8] = 1.0
+        environment = [
+            [i / 10, (i % 20) / 100] + [0.0] * 5 + [0.0, 5.0, 0.0] for i in range(301)
+        ]
+        self.assertTrue(
+            all(weather_checks(environment, propulsion, (0, 5, 0), 1, limits).values())
+        )
+        self.assertFalse(
+            weather_checks([], propulsion, (0, 5, 0), 1, limits)["environment_coverage"]
+        )
+        self.assertFalse(
+            weather_checks(environment[:100], propulsion, (0, 5, 0), 1, limits)[
+                "environment_coverage"
+            ]
+        )
+        self.assertFalse(
+            weather_checks(environment, propulsion, (5, 0, 0), 1, limits)[
+                "wind_applied"
+            ]
+        )
+        flat = [r.copy() for r in environment]
+        for row in flat:
+            row[1] = 0.0
+        self.assertFalse(
+            weather_checks(flat, propulsion, (0, 5, 0), 1, limits)["wave_observed"]
+        )
+        propulsion[-1][15] = 0.6
+        self.assertFalse(
+            weather_checks(environment, propulsion, (0, 5, 0), 1, limits)[
+                "attitude_envelope"
+            ]
+        )
+        environment[90][8] = float("nan")
+        self.assertFalse(
+            any(weather_checks(environment, propulsion, (0, 5, 0), 1, limits).values())
+        )

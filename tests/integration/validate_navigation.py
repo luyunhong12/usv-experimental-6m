@@ -43,6 +43,7 @@ from navigation_acceptance import (
     RESPONSE_PLAN,
     response_command,
     response_coverage,
+    weather_checks,
 )
 import os
 import sys
@@ -84,10 +85,22 @@ p.add_argument("--no-rendering", action="store_true")
 p.add_argument("--current-east", type=float, default=0.15)
 p.add_argument("--current-north", type=float, default=0.1)
 p.add_argument("--current-navigation", action="store_true")
+p.add_argument("--wind-east", type=float, default=0.0)
+p.add_argument("--wind-north", type=float, default=0.0)
+p.add_argument("--wave-gain", type=float, default=0.0)
 p.add_argument("--timeout", type=float, default=900)
 p.add_argument("--output", type=_ProjectPath)
 
 a = p.parse_args()
+weather_enabled = bool(a.wind_east or a.wind_north or a.wave_gain)
+weather_limits_path = root.parent / "tests/scenarios/environment_acceptance.json"
+weather_limits = json.loads(weather_limits_path.read_text())
+if weather_enabled and (a.response_only or a.failsafe_only):
+    p.error("Weather acceptance requires the complete navigation sequence")
+if not all(math.isfinite(v) and abs(v) <= 10 for v in (a.wind_east, a.wind_north)):
+    p.error("Wind components must be finite and within +/-10 m/s")
+if not math.isfinite(a.wave_gain) or not 0 <= a.wave_gain <= 1:
+    p.error("Wave gain must be finite and within [0, 1]")
 if a.response_only and (a.failsafe_only or a.mirror_course):
     p.error(
         "Response identification cannot be combined with failsafe-only or mirror-course"
@@ -128,6 +141,7 @@ node = Node()
 rows = []
 energy = []
 actuators = []
+environment = []
 last_actuator_wall = 0.0
 last_physics_wall = 0.0
 
@@ -170,6 +184,19 @@ def record_actuator(message):
 
 
 node.subscribe(Double_V, "/usv/actuators/state", record_actuator)
+
+
+def record_environment(message):
+    """记录物理插件实际采用的风速和局部波面，供输入核验。
+
+    Args:
+        message: 环境Double_V遥测，字段布局见HullHydrostatics发布实现。
+    """
+    environment.append(list(message.data))
+
+
+node.subscribe(Double_V, "/usv/environment/state", record_environment)
+wind = node.advertise("/vrx/wind/velocity", Vector3d)
 flow = node.advertise("/vrx/current/velocity", Vector3d)
 world = out / "world.sdf"
 subprocess.run(
@@ -178,6 +205,8 @@ subprocess.run(
         str(tool_path("prepare_sydney.py")),
         "--profile",
         "speed15_concept",
+        "--wave-gain",
+        str(a.wave_gain),
         "--output",
         str(world),
     ],
@@ -217,6 +246,7 @@ inputs = [
     root.parent / "tools/lib/navigation_acceptance.py",
     root / "src/usv_ardupilot/scripts/json_bridge.py",
 ]
+inputs.append(weather_limits_path)
 inputs += list(out.glob("*.parm"))
 inputs += list((root / "install/usv_simulation/lib").glob("*.so"))
 inputs += list((root / "install/usv_physics/lib").glob("*.so"))
@@ -287,7 +317,7 @@ phase = "init"
 phase_t = 0.0
 last_hb = last_arm = last_upload = last_rc = 0.0
 begin = time.monotonic()
-checks = required_checks(a.failsafe_only, a.response_only)
+checks = required_checks(a.failsafe_only, a.response_only, weather_enabled)
 response_samples = []
 response_index = -1
 parameter_values = {}
@@ -478,6 +508,8 @@ try:
                 continue
         now = time.monotonic()
         sim = rows[-1][0] if rows else 0
+        if weather_enabled:
+            wind.publish(Vector3d(x=a.wind_east, y=a.wind_north, z=0))
         for _ in range(60):
             m = conn.recv_match(blocking=False)
             if m is None:
@@ -1003,8 +1035,18 @@ if a.response_only:
         )
     checks["response_excitation"] = all(excitation)
     np.savetxt(out / "response.csv", np.array(response_samples), delimiter=",")
+if weather_enabled:
+    checks.update(
+        weather_checks(
+            environment,
+            rows,
+            (a.wind_east, a.wind_north, 0),
+            a.wave_gain,
+            weather_limits,
+        )
+    )
 r = dict(
-    passed=passed_checks(checks, a.failsafe_only, a.response_only),
+    passed=passed_checks(checks, a.failsafe_only, a.response_only, weather_enabled),
     response_plan=RESPONSE_PLAN if a.response_only else None,
     loiter_target_samples=loiter_observations,
     path_metrics=path_metrics,
@@ -1022,6 +1064,11 @@ r = dict(
         target_speed_m_s=None if a.response_only else 1.0,
         current_east_m_s=a.current_east,
         current_north_m_s=a.current_north,
+        wind_east_m_s=a.wind_east,
+        wind_north_m_s=a.wind_north,
+        wave_gain=a.wave_gain,
+        wind_scope="constant throughout all phases" if weather_enabled else "zero",
+        weather_screen_limits=weather_limits if weather_enabled else None,
         current_phases=(
             ["auto", "loiter", "rtl"] if a.current_navigation else ["loiter"]
         ),
@@ -1045,6 +1092,7 @@ for name, data in [
     ("energy", energy),
     ("track", track),
     ("actuators", actuators),
+    ("environment", environment),
 ]:
     np.savetxt(out / (name + ".csv"), np.array(data), delimiter=",")
 (out / "result.json").write_text(json.dumps(r, indent=2))

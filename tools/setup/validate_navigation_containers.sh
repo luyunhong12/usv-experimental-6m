@@ -10,7 +10,7 @@ remaining=("$@")
 while (($#)); do
   case "$1" in
     --failsafe-only|--mirror-course|--current-navigation|--response-only) shift ;;
-    --timeout|--current-east|--current-north) [[ $# -ge 2 ]] || { echo 'Missing timeout' >&2; exit 2; }; shift 2 ;;
+    --timeout|--current-east|--current-north|--wind-east|--wind-north|--wave-gain) [[ $# -ge 2 ]] || { echo 'Missing numeric argument' >&2; exit 2; }; shift 2 ;;
     *) echo "Unsupported option: $1" >&2; exit 2 ;;
   esac
 done

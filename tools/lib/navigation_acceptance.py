@@ -1,12 +1,13 @@
 """低速导航验收的必需检查集合；未执行阶段不得默认为通过。"""
 
 
-def required_checks(failsafe_only=False, response_only=False):
+def required_checks(failsafe_only=False, response_only=False, weather=False):
     """返回全部初始化为失败的检查项。
 
     Args:
         failsafe_only: 是否仅验收独立 GCS 心跳失联。
         response_only: 是否仅检查开环响应辨识的数据完整性。
+        weather: 是否追加风浪实测和姿态筛查，不替代原导航门槛。
     """
     if response_only:
         return dict.fromkeys(
@@ -53,21 +54,93 @@ def required_checks(failsafe_only=False, response_only=False):
             "manual_takeover",
             "low_speed_tracking",
         ]
+    if weather:
+        names += [
+            "environment_coverage",
+            "wind_applied",
+            "wave_observed",
+            "attitude_envelope",
+            "propeller_immersed",
+        ]
     return dict.fromkeys(names, False)
 
 
-def passed_checks(checks, failsafe_only=False, response_only=False):
+def passed_checks(checks, failsafe_only=False, response_only=False, weather=False):
     """仅当全部必需项存在且为布尔真时判为通过。
 
     Args:
         checks: 实际检查结果。
         failsafe_only: 是否使用仅失联试验的必需集合。
         response_only: 是否使用响应辨识的独立必需集合。
+        weather: 是否要求追加风浪检查全部通过。
     """
     return all(
         checks.get(name) is True
-        for name in required_checks(failsafe_only, response_only)
+        for name in required_checks(failsafe_only, response_only, weather)
     )
+
+
+def weather_checks(environment, propulsion, wind, wave_gain, limits):
+    """检查风浪已作用于物理插件及姿态是否处于保守筛查范围。
+
+    跳过启动前5秒，要求环境遥测覆盖剩余运行区间且缺口不超过0.5秒。
+    姿态和螺旋桨浸水界限来自原环境验收配置，不是船舶稳性认证。
+
+    Args:
+        environment: 环境状态行，时间在列0，波高在列1，世界风速在列7至9。
+        propulsion: 推进状态行，时间在列0，横摇/纵摇弧度在列15至16。
+        wind: 期望世界风速三分量，单位m/s，全程恒定。
+        wave_gain: 期望波谱增益；正值须观测到至少0.01m波面变化。
+        limits: 原环境验收配置，含横摇/纵摇度数和最小桨浸水比例。
+
+    Returns:
+        五个布尔检查结果；空、短行和非有限遥测一律失败。
+    """
+    import math
+
+    result = dict.fromkeys(
+        [
+            "environment_coverage",
+            "wind_applied",
+            "wave_observed",
+            "attitude_envelope",
+            "propeller_immersed",
+        ],
+        False,
+    )
+    if not environment or not propulsion:
+        return result
+    if not all(len(r) >= 10 and all(math.isfinite(v) for v in r) for r in environment):
+        return result
+    if not all(len(r) >= 17 and all(math.isfinite(v) for v in r) for r in propulsion):
+        return result
+    start, end = propulsion[0][0] + 5, propulsion[-1][0]
+    samples = [r for r in environment if start <= r[0] <= end]
+    if len(samples) < 2:
+        return result
+    result["environment_coverage"] = bool(
+        end - start >= 10
+        and samples[0][0] - start <= 0.5
+        and end - samples[-1][0] <= 0.5
+        and all(0 < b[0] - a[0] <= 0.5 for a, b in zip(samples, samples[1:]))
+    )
+    result["wind_applied"] = all(
+        all(abs(actual - target) < 1e-6 for actual, target in zip(r[7:10], wind))
+        for r in samples
+    )
+    heights = [r[1] for r in samples]
+    result["wave_observed"] = wave_gain == 0 or max(heights) - min(heights) > 0.01
+    result["attitude_envelope"] = all(
+        abs(r[15]) < math.radians(limits["environment_max_roll_deg"])
+        and abs(r[16]) < math.radians(limits["environment_max_pitch_deg"])
+        for r in propulsion
+    )
+    result["propeller_immersed"] = all(
+        r[8] >= limits["minimum_propeller_wet_fraction"]
+        for r in propulsion
+        if r[0] >= start
+    )
+    return result
 
 
 def sustained_stop(samples, minimum_duration=5.0, maximum_gap=0.5):
