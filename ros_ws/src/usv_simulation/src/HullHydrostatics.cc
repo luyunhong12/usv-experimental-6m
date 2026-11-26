@@ -42,6 +42,7 @@ class HullHydrostatics : public gz::sim::System,
   std::vector<std::array<size_t, 3>> faces;
   V addedM, addedJ, previousV, previousW;
   double addedSwayYaw = 0; ///< 横移/偏航流体惯性耦合，kg·m。
+  std::array<V, 3> airCenters; ///< 各受力轴的水上投影形心，船体坐标m。
   std::optional<HullSeparationProfile> separation; ///< 可选固定载荷分离修正。
   gz::transport::Node::Publisher separationPub;
   double previousTime = -1;
@@ -137,7 +138,8 @@ public:
       link.AddWorldWrench(ecm, force, pressure.torque);
     auto vel = link.WorldLinearVelocity(ecm),
          omega = link.WorldAngularVelocity(ecm);
-    V drag = V::Zero, air = V::Zero, dragTorque = V::Zero;
+    V drag = V::Zero, dragTorque = V::Zero;
+    AirDragWrench air;
     AddedWrench aw{V::Zero, V::Zero};
     const bool movingWet = HasWetMotion(vel, omega, vol.volume);
     if (movingWet) {
@@ -156,15 +158,10 @@ public:
       link.AddWorldWrench(ecm, worldDrag,
                           (dragPoint - pose->Pos()).Cross(worldDrag) +
                               pose->Rot() * torque);
-      V airRelative =
-          pose->Rot().Inverse() *
-          (*vel + omega->Cross(pose->Rot() * airCenter) - env.airVelocity);
-      for (int i = 0; i < 3; ++i)
-        air[i] = -.5 * 1.225 * airCdArea[i] * airRelative[i] *
-                 std::abs(airRelative[i]);
-      V airWorld = pose->Rot() * air;
-      link.AddWorldWrench(ecm, airWorld,
-                          (pose->Rot() * airCenter).Cross(airWorld));
+      const V airRelative = pose->Rot().Inverse() * (*vel - env.airVelocity);
+      air = DirectionalAirDrag(airCdArea, airCenters, airRelative, w);
+      link.AddWorldWrench(ecm, pose->Rot() * air.force,
+                          pose->Rot() * air.torque);
     }
     if (!movingWet)
       previousTime = -1;
@@ -210,10 +207,25 @@ private:
     dragCenter = s->Get<V>("drag_center", V::Zero).first;
     airCenter = s->Get<V>("air_center", V(0, 0, .5)).first;
     airCdArea = s->Get<V>("air_cd_area", V(1, 3, 0)).first;
+    LoadAirCenters(s);
     if (rho <= 0 || linear.Min() < 0 || angular.Min() < 0 ||
         quadratic.Min() < 0 || angularQuadratic.Min() < 0 ||
         airCdArea.Min() < 0)
       throw std::runtime_error("Invalid fluid/damping parameters");
+  }
+  /** @brief 读取可选分轴风压形心；未配置时逐轴回退到原air_center。
+   * @param s 当前船体插件的SDF配置。
+   */
+  void LoadAirCenters(const std::shared_ptr<const sdf::Element> &s) {
+    const std::array<std::string, 3> keys{
+        "air_center_x", "air_center_y", "air_center_z"};
+    for (size_t i = 0; i < keys.size(); ++i) {
+      airCenters[i] = s->Get<V>(keys[i], airCenter).first;
+      if (!airCenters[i].IsFinite())
+        throw std::runtime_error("Air pressure centers must be finite");
+    }
+    if (!airCdArea.IsFinite())
+      throw std::runtime_error("Air drag areas must be finite");
   }
   /** @brief 检查并读取竖直向下的重力。
    * @param ecm Gazebo 实体组件管理器。
@@ -349,7 +361,7 @@ private:
    * @param dragTorque 局部阻力矩。
    * @param dragPoint 世界坐标阻力作用点。
    * @param aw 附加质量力与力矩。
-   * @param air 局部空气阻力。
+   * @param air 局部空气阻力及船体原点力矩。
    * @param dissipation 耗散功率，W。
    * @param ecm Gazebo 实体组件管理器。
    */
@@ -358,7 +370,7 @@ private:
                     const PressureResult &pressure, const V &projected,
                     const ResistanceScales &scales, const Volume &vol,
                     const V &force, const V &drag, const V &dragTorque,
-                    const V &dragPoint, const AddedWrench &aw, const V &air,
+                    const V &dragPoint, const AddedWrench &aw, const AirDragWrench &air,
                     double dissipation, gz::sim::EntityComponentManager &ecm) {
     if (now - last >= .1) {
       auto af = WholeVesselFrame(modelEntity, ecm);
@@ -368,8 +380,8 @@ private:
                   dragPoint);
       AuditWrench(audit, af, pose.Rot() * aw.force, pose.Rot() * aw.torque,
                   dragPoint);
-      AuditWrench(audit, af, pose.Rot() * air, V::Zero,
-                  pose.Pos() + pose.Rot() * airCenter);
+      AuditWrench(audit, af, pose.Rot() * air.force,
+                  pose.Rot() * air.torque, pose.Pos());
       auditPub.Publish(audit);
       gz::msgs::Double_V dm;
       for (double x :
@@ -403,7 +415,7 @@ private:
            {now, env.height, env.dx, env.dy, env.waterVelocity.X(),
             env.waterVelocity.Y(), env.waterVelocity.Z(), env.airVelocity.X(),
             env.airVelocity.Y(), env.airVelocity.Z(), drag.X(), drag.Y(),
-            drag.Z(), air.X(), air.Y(), air.Z()})
+            drag.Z(), air.force.X(), air.force.Y(), air.force.Z()})
         em.add_data(x);
       envPub.Publish(em);
       last = now;

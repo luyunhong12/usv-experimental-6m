@@ -4,7 +4,36 @@
 #pragma once
 #include "Hydrostatics.hh"
 #include <stdexcept>
+#include <array>
 namespace usv {
+/** @brief 空气阻力合力及关于船体原点的力矩，单位N和N·m。 */
+struct AirDragWrench {
+  V force = V::Zero;
+  V torque = V::Zero;
+};
+
+/** @brief 按各轴投影形心计算法向空气阻力，包含转动引起的局部风速。
+ * @param cdArea 各轴阻力系数乘投影面积，m²，有限且非负。
+ * @param centers 各轴投影形心，船体坐标m；沿受力轴的分量不影响结果。
+ * @param velocity 船体原点相对均匀空气的线速度，船体轴m/s。
+ * @param angular 船体角速度，船体轴rad/s。
+ * @return 合力及原点力矩；空气密度沿用1.225 kg/m³。
+ * @note 各方向法向平板近似，不代表三维绕流压力求解。
+ */
+inline AirDragWrench DirectionalAirDrag(const V &cdArea,
+                                       const std::array<V, 3> &centers,
+                                       const V &velocity, const V &angular) {
+  AirDragWrench result;
+  for (size_t axis = 0; axis < centers.size(); ++axis) {
+    const double normal = (velocity + angular.Cross(centers[axis]))[axis];
+    V force = V::Zero;
+    force[axis] = -.5 * 1.225 * cdArea[axis] * normal * std::abs(normal);
+    result.force += force;
+    result.torque += centers[axis].Cross(force);
+  }
+  return result;
+}
+
 /** @brief 保存表面积比例与各轴投影面积比例。
  */
 struct ResistanceScales {

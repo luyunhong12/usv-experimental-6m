@@ -7,6 +7,41 @@
 #include <sstream>
 using namespace usv;
 
+/** @brief 核对分轴作用点的解析力矩和转动耗散。 */
+void CheckDirectionalAirDrag() {
+  const std::array<V, 3> centers{V(0, 1, 0), V(1, 0, 0), V::Zero};
+  const auto spin = DirectionalAirDrag(V(2, 3, 0), centers, V::Zero, V(0, 0, 1));
+  if ((spin.force - V(1.225, -1.8375, 0)).Length() > 1e-12 ||
+      (spin.torque - V(0, 0, -3.0625)).Length() > 1e-12)
+    throw std::runtime_error("Directional wind torque mismatch");
+  for (double speed : {-2., 0., 2.}) {
+    const V velocity(speed, .3, 0), angular(0, 0, .2);
+    const auto wrench = DirectionalAirDrag(V(2, 3, 0), centers, velocity, angular);
+    if (wrench.force.Dot(velocity) + wrench.torque.Dot(angular) > 1e-12)
+      throw std::runtime_error("Wind drag adds relative kinetic energy");
+  }
+}
+
+/** @brief 相同作用点时与原风阻式等价，并验证原点变换。 */
+void CheckAirReference() {
+  const V center(.2, -.1, .8), velocity(2, -3, .1), angular(.1, 0, .2);
+  const V cdArea(1, 3, 0), local = velocity + angular.Cross(center);
+  const std::array<V, 3> centers{center, center, center};
+  const auto legacy = DirectionalAirDrag(cdArea, centers, velocity, angular);
+  V expected;
+  for (size_t axis = 0; axis < 3; ++axis)
+    expected[axis] = -.5 * 1.225 * cdArea[axis] * local[axis] * std::abs(local[axis]);
+  const V offset(.4, .3, .2);
+  const std::array<V, 3> shifted{center - offset, center - offset, center - offset};
+  const auto translated = DirectionalAirDrag(
+      cdArea, shifted, velocity + angular.Cross(offset), angular);
+  if ((legacy.force - expected).Length() > 1e-12 ||
+      (legacy.torque - center.Cross(expected)).Length() > 1e-12 ||
+      (translated.force - legacy.force).Length() > 1e-12 ||
+      (translated.torque - legacy.torque + offset.Cross(legacy.force)).Length() > 1e-12)
+    throw std::runtime_error("Wind legacy/reference invariance mismatch");
+}
+
 /** @brief 验证两侧线性截面的分离差额、解析矩及参考点变换。 */
 void CheckSeparatedFlow() {
   std::istringstream data("-2 0\n0 100\n2 0\n");
@@ -115,6 +150,8 @@ void CheckDistributedPassivity() {
 /** @brief 执行该文件定义的解析或场景回归验证。
  */
 int main() {
+  CheckDirectionalAirDrag();
+  CheckAirReference();
   CheckSeparatedFlow();
   CheckSeparationEnergy();
   CheckSeparationInput();
