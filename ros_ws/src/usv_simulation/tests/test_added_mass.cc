@@ -35,10 +35,29 @@ void CheckPlanarCoupling() {
   check(isotropic.torque.Length() < 1e-12);
 }
 
+/** @brief 验证偏置流体惯性的一阶矩、互易性及无耗散耦合。
+ * @note 两个100 kg横向流体质点位于x=0和2 m，独立给出
+ *       A22=200 kg、A26=200 kg·m、A66=400 kg·m²。
+ */
+void CheckOffsetFluidInertia() {
+  const V mass(70, 200, 250), inertia(30, 200, 400);
+  const auto sway = AddedMassWrench(mass, inertia, V::Zero, V::Zero,
+                                    V(0, 1, 0), V::Zero, 200);
+  const auto yaw = AddedMassWrench(mass, inertia, V::Zero, V::Zero,
+                                   V::Zero, V(0, 0, 1), 200);
+  check(sway.force.Y() == -200 && sway.torque.Z() == -200);
+  check(yaw.force.Y() == -200 && yaw.torque.Z() == -400);
+  const V velocity(-2, .3, -.1), rate(.1, -.2, .3);
+  const auto force = AddedMassWrench(mass, inertia, velocity, rate,
+                                     V::Zero, V::Zero, 200);
+  check(std::abs(velocity.Dot(force.force) + rate.Dot(force.torque)) < 1e-10);
+}
+
 /** @brief 执行该文件定义的解析或场景回归验证。
  */
 int main(){
  CheckPlanarCoupling();
+ CheckOffsetFluidInertia();
  V m(70,250,250),j(30,200,200),v(2,.3,-.1),w(.1,-.2,.3);auto c=AddedMassWrench(m,j,v,w,V::Zero,V::Zero);check(std::abs(v.Dot(c.force)+w.Dot(c.torque))<1e-10);
  auto a=AddedMassWrench(m,j,V::Zero,V::Zero,V(1,2,3),V(4,5,6));check((a.force-V(-70,-500,-750)).Length()<1e-10);check((a.torque-V(-120,-1000,-1200)).Length()<1e-10);
  // Exact constant-force response after the explicit one-step transient.

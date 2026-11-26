@@ -28,3 +28,7 @@
 阶段结果：[无鳍固定载荷候选](simple-v1/README.md)、[静水恢复](static-recovery/README.md)。
 
 继续验证：[基准船倒车与随浪](baseline-dynamics/README.md)、[六部位碰撞](contacts/README.md)、[高功率倒车失败与对照](high-power-reverse/README.md)。高功率无鳍方案尚未达标，不切默认、不接飞控。
+
+## 高功率无鳍倒车的后续核算
+
+[湿表面与横剖面重算](section-hydrodynamics/README.md)记录几何依据、积分收敛、可选横移/偏航附加惯性耦合及隔离候选。重算不等于验收通过；目前不得将新参数作为默认合格模型。

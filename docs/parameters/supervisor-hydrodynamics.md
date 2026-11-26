@@ -13,3 +13,9 @@
 | `/source` | 该项采用的资料来源或来源链接。 |
 | `/max_step_s` | 对应模型建议或验证的最大时间步长，单位 s。 |
 | `/limitations` | 当前模型不覆盖或未验证的条件。 |
+
+## 可选SDF横移/偏航耦合
+
+HullHydrostatics插件支持可选元素`added_sway_yaw`，单位kg·m，默认0保持旧对角模型。它是流体惯性矩阵中A26=A62，不是力矩、阻尼系数或新增实体质量；与`added_linear`、`added_angular`使用同一个`drag_center`参考点。可正可负，必须有限，并满足A26²≤A22·A66；所有对角项有限且非负。固定系数通过加速度项及一致的动量/科氏项共同生效，不能只设置加速度耦合而漏掉动量耦合。
+
+本次未修改默认JSON和SDF的旧参数；几何重算候选及失败证据见[湿剖面重算](../validation/overhaul_2026-11-26/section-hydrodynamics/README.md)。该参数目前只在隔离候选中启用，不表示整船已通过操纵验收。

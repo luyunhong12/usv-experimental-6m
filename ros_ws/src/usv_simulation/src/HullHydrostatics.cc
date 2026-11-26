@@ -40,6 +40,7 @@ class HullHydrostatics : public gz::sim::System,
   std::vector<double> depths;
   std::vector<std::array<size_t, 3>> faces;
   V addedM, addedJ, previousV, previousW;
+  double addedSwayYaw = 0; ///< 横移/偏航流体惯性耦合，kg·m。
   double previousTime = -1;
   gz::transport::Node::Publisher addedPub;
   bool geometryResistance = false;
@@ -84,8 +85,11 @@ public:
     depths.resize(vertices.size());
     addedM = s->Get<V>("added_linear", V::Zero).first;
     addedJ = s->Get<V>("added_angular", V::Zero).first;
-    if (addedM.Min() < 0 || addedJ.Min() < 0)
-      throw std::runtime_error("Negative added inertia");
+    addedSwayYaw = s->Get<double>("added_sway_yaw", 0).first;
+    if (!addedM.IsFinite() || !addedJ.IsFinite() ||
+        !std::isfinite(addedSwayYaw) || addedM.Min() < 0 || addedJ.Min() < 0 ||
+        addedSwayYaw * addedSwayYaw > addedM.Y() * addedJ.Z())
+      throw std::runtime_error("Added inertia must be finite positive semidefinite");
     addedPub = node.Advertise<gz::msgs::Double_V>(TopicPrefix(s) +
                                                   "/hydrodynamics/added_mass");
     environment.Configure(s);
@@ -295,7 +299,7 @@ private:
     double dt = now - previousTime;
     if (previousTime >= 0 && dt > 0 && dt <= .004001) {
       aw = AddedMassWrench(addedM, addedJ, local, w, (local - previousV) / dt,
-                           (w - previousW) / dt);
+                           (w - previousW) / dt, addedSwayYaw);
       V f = pose.Rot() * aw.force;
       link.AddWorldWrench(
           ecm, f, (pose.Rot() * dragCenter).Cross(f) + pose.Rot() * aw.torque);
