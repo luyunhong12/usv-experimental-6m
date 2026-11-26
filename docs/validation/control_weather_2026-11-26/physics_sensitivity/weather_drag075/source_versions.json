@@ -1,0 +1,15 @@
+{
+  "partition": "usv_perf_weather_drag075_789e3918",
+  "ros_domain": "120",
+  "sha256": {
+    "ros_ws/src/usv_control/scripts/boat_control.py": "6a296bee7013a1f6b06b5d8ead1dafa36ad9fb8c515d7186408729092f9b570b",
+    "ros_ws/src/usv_simulation/src/HullHydrostatics.cc": "2ac808abcc0068bdc5c70e301840e747384a447d772fa7893eb3728575459d00",
+    "ros_ws/src/usv_simulation/src/AzimuthPropulsion.cc": "6c7df4dffb3c1e9ae0f93a494042f2bf8f02097be3eaefa21d306fd372d9d365",
+    "ros_ws/src/usv_description/config/resistance.json": "b768ff4f47367bba4cf1db6e698933ab45d21b1b1bd549735cf1423652794d4f",
+    "ros_ws/src/usv_description/config/trial_load.json": "eade200ba09d154bc35ba619d0a2349bd6ea3e68fddc399e49f97d318fb1741f",
+    "ros_ws/src/usv_simulation/src/AppendageHydrodynamics.cc": "0993a291b2323da2f41678f496262072796173b0aa43bb28aaa49d9e7b8e61bc",
+    "ros_ws/src/usv_simulation/include/AppendageHydrodynamics.hh": "6dbb6a76f086737a003808edacff8f64b9825066ba56eb1439656a987040c17e",
+    "ros_ws/src/usv_simulation/include/WrenchAudit.hh": "37b108719c77924708c9f81bd72ddd2cf857437922d3d8b94e6c66db50af3009",
+    "ros_ws/src/usv_description/config/appendage_hydrodynamics.json": "fa2fb61ade736a80779de1b768562f2dcc39a5540ae371dc743ee60c63eb05ec"
+  }
+}

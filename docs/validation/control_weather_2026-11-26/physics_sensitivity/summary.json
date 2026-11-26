@@ -1,0 +1,179 @@
+{
+  "weather_nominal": {
+    "original_passed": true,
+    "original_checks": {
+      "startup_ready": true,
+      "completed": true,
+      "no_failure": true,
+      "finite": true,
+      "attitude_bounded": true,
+      "power_limited": true,
+      "energy_balance": true,
+      "fuel_mass_consistent": true,
+      "resistance_dissipative": true,
+      "command_reached_physics": true,
+      "health_command_observed": true,
+      "initial_soc_matches": true
+    },
+    "supplementary_checks": {
+      "wind_actual_matches": true,
+      "roll_within_existing_environment_limit": true,
+      "pitch_within_existing_environment_limit": true,
+      "propeller_immersed": true,
+      "wave_observed": true,
+      "environment_continuous": true
+    },
+    "all_checks_passed": true,
+    "metrics": {
+      "environment_run": {
+        "tail_speed_m_s": 1.0163551186863864,
+        "tail_speed_std_m_s": 0.1349335885864613,
+        "mean_motor_w": 769.9433536928514,
+        "distance_m": 174.05178901701976,
+        "heading_change_rad": 0.9405533465996421,
+        "mean_wet_area_m2": 10.536359719411873,
+        "mean_projected_x_m2": 0.35767276627482836,
+        "mean_surge_drag_n": 291.0338237509612
+      }
+    },
+    "summary": {
+      "max_roll_pitch_deg": [
+        2.6094173834404026,
+        3.2529985760075744
+      ],
+      "soc_start_end": [
+        0.8999999990860809,
+        0.899103193591933
+      ],
+      "temperature_max_c": 25.000579211387297,
+      "fuel_consumed_l": 0.0,
+      "sim_end": 181.417
+    },
+    "minimum_propeller_wet_fraction": 1.0,
+    "measured_wind_enu_m_s": [
+      0.0,
+      5.0,
+      0.0
+    ],
+    "raw_path": "artifacts/weather_uncertainty_20261126/weather_nominal",
+    "scope": "180 s direct propulsion in wind/waves; no heading hold, no ArduPilot, no GPU rendering. Discrete sensitivity probes, not calibration."
+  },
+  "weather_drag075": {
+    "original_passed": true,
+    "original_checks": {
+      "startup_ready": true,
+      "completed": true,
+      "no_failure": true,
+      "finite": true,
+      "attitude_bounded": true,
+      "power_limited": true,
+      "energy_balance": true,
+      "fuel_mass_consistent": true,
+      "resistance_dissipative": true,
+      "command_reached_physics": true,
+      "health_command_observed": true,
+      "initial_soc_matches": true
+    },
+    "supplementary_checks": {
+      "wind_actual_matches": true,
+      "roll_within_existing_environment_limit": true,
+      "pitch_within_existing_environment_limit": true,
+      "propeller_immersed": true,
+      "wave_observed": true,
+      "environment_continuous": true
+    },
+    "all_checks_passed": true,
+    "metrics": {
+      "environment_run": {
+        "tail_speed_m_s": 1.0637131671949527,
+        "tail_speed_std_m_s": 0.1943758180343965,
+        "mean_motor_w": 769.9417209690549,
+        "distance_m": 197.11602299913446,
+        "heading_change_rad": 1.0364713611343885,
+        "mean_wet_area_m2": 10.591725092045115,
+        "mean_projected_x_m2": 0.36789087986492996,
+        "mean_surge_drag_n": 269.9309548364753
+      }
+    },
+    "summary": {
+      "max_roll_pitch_deg": [
+        2.7151735595216655,
+        3.1604236147252087
+      ],
+      "soc_start_end": [
+        0.8999999990860809,
+        0.8991026136075237
+      ],
+      "temperature_max_c": 25.00057933113943,
+      "fuel_consumed_l": 0.0,
+      "sim_end": 181.922
+    },
+    "minimum_propeller_wet_fraction": 1.0,
+    "measured_wind_enu_m_s": [
+      0.0,
+      5.0,
+      0.0
+    ],
+    "raw_path": "artifacts/weather_uncertainty_20261126/weather_drag075",
+    "scope": "180 s direct propulsion in wind/waves; no heading hold, no ArduPilot, no GPU rendering. Discrete sensitivity probes, not calibration."
+  },
+  "weather_added125": {
+    "original_passed": true,
+    "original_checks": {
+      "startup_ready": true,
+      "completed": true,
+      "no_failure": true,
+      "finite": true,
+      "attitude_bounded": true,
+      "power_limited": true,
+      "energy_balance": true,
+      "fuel_mass_consistent": true,
+      "resistance_dissipative": true,
+      "command_reached_physics": true,
+      "health_command_observed": true,
+      "initial_soc_matches": true
+    },
+    "supplementary_checks": {
+      "wind_actual_matches": true,
+      "roll_within_existing_environment_limit": true,
+      "pitch_within_existing_environment_limit": true,
+      "propeller_immersed": true,
+      "wave_observed": true,
+      "environment_continuous": true
+    },
+    "all_checks_passed": true,
+    "metrics": {
+      "environment_run": {
+        "tail_speed_m_s": 1.0042241271204928,
+        "tail_speed_std_m_s": 0.11696009603875489,
+        "mean_motor_w": 769.9432096579797,
+        "distance_m": 173.8168516646691,
+        "heading_change_rad": 0.9037624743473219,
+        "mean_wet_area_m2": 10.546121733565702,
+        "mean_projected_x_m2": 0.35881577323333985,
+        "mean_surge_drag_n": 290.8693999609901
+      }
+    },
+    "summary": {
+      "max_roll_pitch_deg": [
+        2.503309875150055,
+        3.2811962593251147
+      ],
+      "soc_start_end": [
+        0.8999999990860809,
+        0.8991031036925246
+      ],
+      "temperature_max_c": 25.00057927870273,
+      "fuel_consumed_l": 0.0,
+      "sim_end": 181.417
+    },
+    "minimum_propeller_wet_fraction": 1.0,
+    "measured_wind_enu_m_s": [
+      0.0,
+      5.0,
+      0.0
+    ],
+    "raw_path": "artifacts/weather_uncertainty_20261126/weather_added125",
+    "scope": "180 s direct propulsion in wind/waves; no heading hold, no ArduPilot, no GPU rendering. Discrete sensitivity probes, not calibration."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "case": "weather_nominal",
+  "spec": {
+    "kind": "environment",
+    "isolated_water": true,
+    "payload_kg": 0,
+    "fuel_l": 60,
+    "wave_gain": 1.0,
+    "initial_yaw": 0.0,
+    "wind": [
+      0,
+      5,
+      0
+    ],
+    "stages": [
+      {
+        "name": "environment_run",
+        "duration": 180,
+        "mode": "direct",
+        "throttle": 0.3,
+        "steering_deg": 0
+      }
+    ]
+  },
+  "finished_stages": 1,
+  "start_sim": 1.209,
+  "failure": null,
+  "bridge_resumed": false
+}

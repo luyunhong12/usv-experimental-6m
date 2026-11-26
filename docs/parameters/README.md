@@ -8,6 +8,8 @@
 
 没有实船数据的参数必须保留工程假设、来源、单位和适用工况。目录整理不会提高模型物理可信度。
 
+逐模块依据、数据缺口、15 km/h高速适用边界和可补充的仿真验证见[模型可信范围](model_validity.md)。方程有依据不等于具体参数已经实船标定。
+
 ## 机器检查参数表
 
 Supervisor 已关联两个主 SDF，以及能源、推进、油箱、附体、设备台账、附加质量和阻力 JSON 的逐字段说明。具体文件见根目录 `supervisor.toml` 的 `settings.parameter-docs.documentation`。

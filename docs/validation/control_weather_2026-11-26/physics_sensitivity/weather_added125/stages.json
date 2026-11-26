@@ -1,0 +1,20 @@
+[
+  {
+    "name": "environment_run",
+    "duration": 180,
+    "mode": "direct",
+    "throttle": 0.3,
+    "steering_deg": 0,
+    "index": 0,
+    "start_sim": 1.209,
+    "end_sim": 181.215,
+    "distance_triggered": false,
+    "stage_origin": [
+      -479.9912210999588,
+      179.99464902861945,
+      -0.0007890130487159784
+    ],
+    "heading_triggered": false,
+    "heading_reference_rad": null
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "result.json": "b01cb365c4685ac16c25d0a7a800697f6e61539d8aa997d37707207f1d7cfd65",
+  "run_status.json": "b4b5e4367f1a8e49285b7cf002e3e24656cb1aaa3ab2fc4af5613c40a10bede8",
+  "source_versions.json": "9d22a78777baec0d60c056afac0c6ad196222bba2e7cae488a887c519752ec24",
+  "scene.json": "9720a952177fe00d537857448bb63ddf2340d4fae35a0d797a7c3cda0c367109",
+  "stages.json": "26af271868686a8c920e64f99a1b0d7135bd4cc7024dcdce909f67d60f724820",
+  "boat.sdf": "4730003a1f80382cd552606692d2c3e982e3bfa3b8330a7c45950ed58493e3a9",
+  "propulsion_state.csv": "b31dcec43d8c2c31cf3c850ebc06552d091d4d87e709efa6412bcd2ee8438ba2",
+  "environment_state.csv": "6c36908933e20e1847f74b614464b68a9bce3da91ac9f5c8c628a131b14e03b8",
+  "wave_response_state.csv": "eef93eeb689cc95569fab78cfa568c04229c5c809ade98aef5f8919269a616f3",
+  "energy_truth.csv": "3a89ec4795f71b14d3a8afffa3738fdbc34c512403dfee6611c9b1d3154a2513",
+  "hydrodynamics_resistance.csv": "6c5c761d3783f9398537f6e34212838b4cb51a478086a47b6e9cb05e1103b271"
+}
