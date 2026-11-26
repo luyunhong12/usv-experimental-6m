@@ -60,10 +60,10 @@ int main() {
       check((f + reverse).Length() < 1e-9);
     }
   check(AppendageForce(1000, 0, .4, .03, .7, V(4, .1, 0)).Length() == 0);
-  // A stern surface provides a restoring yaw moment against a lateral velocity;
-  // no heading command or attitude reference enters the force law.
+  // 艉部侧向阻力产生正偏航力矩，但这不等于前进和倒车均航向稳定。
+  // 偏航稳定性必须结合整船横移/偏航耦合判断，不能由局部耗散代替。
   V force = AppendageForce(1000, .04, .4, .03, .7, V(4, .1, 0));
   check(V(-3, 0, 0).Cross(force).Z() > 0);
   std::cout << "Wet clipping, center, force passivity, mirror/reverse symmetry "
-               "and restoring moment passed\n";
+               "and stern moment arm passed\n";
 }
