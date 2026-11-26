@@ -1,0 +1,12 @@
+{
+  "run/result.json": "05bdfa5eb7f16b000c237d3825c32bf36fccdef9d2fd3c000b49418ddde86903",
+  "run/propulsion.csv": "acb80a37701a1c561c30f8ddc51d5423607f436012c3b6a9096873ddc9a1e1bf",
+  "run/actuators.csv": "1f8d162d4e4c36e3bab57984ae57f8f630ef066303c60c7271b18adc81fdd802",
+  "run/energy.csv": "b43aca45f580cf35cc9e0a9544917026a7371edc896360abd5a8b1a641d9a539",
+  "run/track.csv": "19ac8da8617ee18d06a3dcfa5c5a9735a0892b4d88eff2b09eb19e68983af34b",
+  "run/environment.csv": "1f5f9e4ce6826830c04ee8501195b4b1bf1031864ce4ef2ed93d540bc2412d4f",
+  "input-sha256.txt": "c578862a572fdaa9dffa2d80427714f7f876c5664463d4fa00384bfd4bbbdb0e",
+  "run/runtime-inputs.json": "c70b50cf986a89dd29dcf05218730b10587fa90596c5783c6f3f571ce569be81",
+  "inputs/config/navigation_low_speed.parm": "ba5a0b758e24c0fec3dda282c90e35705003f5ce905f2326d47210db8c75ec90",
+  "sitl/logs/00000001.BIN": "873f9811a160d096f86ef2fd678f245cf31c1336f1f3652d5825167db0a1f840"
+}
