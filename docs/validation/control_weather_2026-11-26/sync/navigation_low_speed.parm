@@ -1,0 +1,50 @@
+# SIMULATION ONLY: load after boat.parm,platform15.parm.
+# Evidence: docs/validation/corner_hold_2026-11-25/README.md
+# Low-speed navigation requests (m/s, m, m/s^2); physical forces are unchanged.
+WP_SPEED 1.0
+RTL_SPEED 0.8
+WP_RADIUS 3.0
+ATC_ACCEL_MAX 0.2
+# Plan 5 m stopping distance at 1 m/s; this is not a measured stopping guarantee.
+ATC_DECEL_MAX 0.1
+
+# Local straight-run fit: ~0.97 m/s required ~8.6% controller throttle.
+# Percent here is controller throttle, not motor RPM. High-speed profile is separate.
+CRUISE_SPEED 1.0
+CRUISE_THROTTLE 9
+# Avoid extrapolating this local fit to an 11.1 m/s pilot speed request.
+# This scales speed-controlled modes; raw MANUAL throttle is not speed-limited.
+SPEED_MAX 1.0
+# Speed P remains 0.2; I=0.02 gives P/I=10 s and trim is bounded to 5%.
+# The local FF fit removes the old ~13% steady correction; avoid storing excess trim.
+ATC_SPEED_I 0.02
+ATC_SPEED_IMAX 0.05
+# Retain active braking: coasting-only candidates failed current holding.
+ATC_BRAKE 1
+
+# Continuous LOITER correction; zero deadband does not lock the physical position.
+# Keep forward/reverse recovery; bow-only recovery caused large circles.
+LOIT_RADIUS 0.0
+LOIT_SPEED_GAIN 0.3
+LOIT_TYPE 0
+
+# Existing yaw-rate feedforward and AUTO position/velocity gains.
+ATC_STR_RAT_FF 0.3
+PSC_POS_P 0.1
+PSC_VEL_P 0.5
+TURN_RADIUS 6
+# Yaw request limits (deg/s, deg/s^2), not azimuth joint speed or body overrides.
+# Physical helm angle/rate/torque and the 0.03g AUTO lateral limit remain in force.
+ATC_STR_RAT_MAX 20
+ATC_STR_ACC_MAX 10
+
+# Simulated link-loss policy, verified by parameter readback and link-loss tests.
+FS_GCS_ENABLE 1
+FS_ACTION 2
+FS_TIMEOUT 1.5
+FS_THR_ENABLE 1
+RC_OVERRIDE_TIME 3
+FS_GCS_TIMEOUT 5
+
+# Experimental heading/propulsion command synchronization, default off upstream.
+LOIT_DIR_SYNC 1
