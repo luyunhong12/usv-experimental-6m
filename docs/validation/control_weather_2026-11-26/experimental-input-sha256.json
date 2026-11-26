@@ -1,0 +1,8 @@
+{
+  "dependencies/patches/ardupilot-rover-loiter-projection.patch": "8be9582721c559db65551ec7db3ca4c64d474b42773d03af5991524329ab52e1",
+  "dependencies/patches/ardupilot-rover-loiter-direction-hysteresis.patch": "8e8f5befdf15375c607c72f9ff834fcceebcaa4c618509a8cc8d44b887772955",
+  "deploy/sitl/Dockerfile.loiter": "e5a4a5fe0e8823541f223427e8d627f3b5d0921950fee21a327f7c99951d734c",
+  "deploy/sitl/Dockerfile.loiter.dockerignore": "982d63f352168f48fa0baaa46e00657dd448f600d131e219595a48b60efba6ab",
+  "docs/validation/control_weather_2026-11-26/direction-test/Rover/LoiterDirection.h": "573cdbe82ac09f9fa9c6356d6c23f895f40a7dfcae22ebbbff0cfee09506b922",
+  "docs/validation/control_weather_2026-11-26/direction-test/direction_test.cc": "ec8e89e99c123697e70dbbeca708c8f7c33a8278bf1acd30d3d0e79f58e6d08a"
+}

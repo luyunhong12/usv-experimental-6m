@@ -1,0 +1,95 @@
+--- a/Rover/Parameters.h
++++ b/Rover/Parameters.h
+@@ -415,6 +415,7 @@
+ 
+     // gain for speed of correction in loiter
+     AP_Float loiter_speed_gain;
++    AP_Float loiter_direction_hyst; // 实验正反向切换角度余量，度；默认0保持原逻辑。
+ 
+     // FS options
+     AP_Int32 fs_options;
+--- a/Rover/Parameters.cpp
++++ b/Rover/Parameters.cpp
+@@ -669,6 +669,14 @@
+     // @Increment: 0.5
+     // @User: Advanced
+     AP_GROUPINFO("CRASH_TIMEOUT", 61, ParametersG2, crash_timeout, 2.0),
++
++    // @Param: LOIT_DIR_HYST
++    // @DisplayName: Experimental motor boat loiter direction hysteresis
++    // @Description: Direction selection hysteresis around 90 degrees for motor-boat LOITER type 0 only. Positive values retain the previous forward/reverse choice within the angular band. Simulation experiment, not accepted for deployment.
++    // @Units: deg
++    // @Range: 0 30
++    // @User: Advanced
++    AP_GROUPINFO("LOIT_DIR_HYST", 62, ParametersG2, loiter_direction_hyst, 0),
+ 
+     AP_GROUPEND
+ };
+--- a/Rover/mode.h
++++ b/Rover/mode.h
+@@ -673,6 +673,7 @@
+ 
+     Location _destination;      // target location to hold position around
+     float _desired_speed;       // desired speed (ramped down from initial speed to zero)
++    bool _reverse_for_loiter{false}; // 当前LOITER方向状态，每次进入按实际纵向运动重新初始化。
+ };
+ 
+ class ModeManual : public Mode
+--- a/Rover/mode_loiter.cpp
++++ b/Rover/mode_loiter.cpp
+@@ -1,4 +1,5 @@
+ #include "Rover.h"
++#include "LoiterDirection.h"
+ 
+ bool ModeLoiter::_enter()
+ {
+@@ -11,6 +12,8 @@
+     if (!attitude_control.get_forward_speed(_desired_speed)) {
+         _desired_speed = 0.0f;
+     }
++
++    _reverse_for_loiter = _desired_speed < 0.0f;
+ 
+     // initialise heading to current heading
+     _desired_yaw_cd = ahrs.yaw_sensor;
+@@ -43,7 +46,15 @@
+         _desired_yaw_cd = rover.current_loc.get_bearing_to(_destination);
+         float yaw_error_cd = wrap_180_cd(_desired_yaw_cd - ahrs.yaw_sensor);
+         // if destination is behind vehicle, reverse towards it
+-        if ((fabsf(yaw_error_cd) > 9000 && g2.loit_type == 0) || g2.loit_type == 2) {
++        bool reverse = (fabsf(yaw_error_cd) > 9000 && g2.loit_type == 0) || g2.loit_type == 2;
++        // 仅动力船自动正反向选择可启用角度迟滞；不改变原速度缩放或执行器限制。
++        if (g2.loiter_direction_hyst.get() > 0 && rover.is_boat() &&
++            !g2.sailboat.sail_enabled() && g2.loit_type == 0) {
++            reverse = loiter_direction_reverse(yaw_error_cd, _reverse_for_loiter,
++                                               g2.loiter_direction_hyst.get());
++        }
++        _reverse_for_loiter = reverse;
++        if (reverse) {
+             _desired_yaw_cd = wrap_180_cd(_desired_yaw_cd + 18000);
+             yaw_error_cd = wrap_180_cd(_desired_yaw_cd - ahrs.yaw_sensor);
+             _desired_speed = -_desired_speed;
+--- /dev/null
++++ b/Rover/LoiterDirection.h
+@@ -0,0 +1,21 @@
++/** @file LoiterDirection.h
++ * @brief 动力船LOITER的独立角度迟滞判定；不计算或施加物理力。
++ */
++#pragma once
++#include <cmath>
++
++/** @brief 根据目标相对方位和上一方向选择正反向；不修改调用方状态。
++ * @param yaw_error_cd 未按倒车折算的相对方位，单位厘度，通常在[-18000,18000]。
++ * @param was_reverse 上一周期是否选择倒车。
++ * @param margin_deg 迟滞半宽，单位度；非有限或非正值使用原90度规则，最大钳制到30。
++ * @return true选择倒车；调用方保存返回值。此函数不是定时器，不保证最小驻留时间。
++ */
++inline bool loiter_direction_reverse(float yaw_error_cd, bool was_reverse, float margin_deg)
++{
++    if (!std::isfinite(margin_deg) || margin_deg <= 0.0f) {
++        return std::fabs(yaw_error_cd) > 9000.0f;
++    }
++    const float margin_cd = std::fmin(margin_deg, 30.0f) * 100.0f;
++    const float boundary_cd = 9000.0f + (was_reverse ? -margin_cd : margin_cd);
++    return std::fabs(yaw_error_cd) > boundary_cd;
++}

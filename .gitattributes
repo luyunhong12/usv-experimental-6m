@@ -6,6 +6,6 @@
 *.stl filter=lfs diff=lfs merge=lfs -text
 # Patch context and archived experiment evidence retain their original bytes.
 # These whitespace exceptions do not apply to production source or test code.
-*.patch whitespace=-blank-at-eol
+*.patch whitespace=-blank-at-eol,-blank-at-eof
 docs/validation/**/*.csv whitespace=cr-at-eol
 docs/validation/**/*.log whitespace=-blank-at-eol,-blank-at-eof

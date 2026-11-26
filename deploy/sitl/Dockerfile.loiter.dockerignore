@@ -11,3 +11,7 @@ dependencies/src/ardupilot/**/__pycache__/
 !dependencies/patches/
 !dependencies/patches/ardupilot-rover-loiter-velocity-damping.patch
 !dependencies/patches/ardupilot-rover-loiter-active-stop.patch
+
+!dependencies/patches/ardupilot-rover-loiter-projection.patch
+
+!dependencies/patches/ardupilot-rover-loiter-direction-hysteresis.patch

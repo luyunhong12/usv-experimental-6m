@@ -56,3 +56,31 @@
 本轮为隔离水域、关闭GPU图像生成的物理/飞控测试，所有设备质量和功耗保留。**不是完整悉尼场景相机/点云风浪长测，不覆盖阵风、其他波向、带流组合或其他载荷。** 单次通过也不是统计可靠性保证；它解决了此前这组5 m/s风、增益1.0浪仅凭预览、没有完整导航证据的问题。有流3 m保持仍另行调查，不能用本结果替代。
 
 启动器回归增加最终完成断言后再次执行了[最终full检查](supervisor-final-full.log)，[完整机器报告](supervisor-final-full.json.gz)及[实际构建/测试](final-full-build-test.log)保存独立证据，没有覆盖上一步报告。当前生产物理未修改；实验速度投影仍需单独SITL验收，不能借full通过提前采用。
+
+## 纵向投影控制实验
+
+令目标方位相对船头的角度为α，原算法在目标跨过侧向90°边界时，先选择前进/倒车，再要求约±0.5q的速度，q是距离比例回归速度。新的默认关闭实验把该分支的速度改为纵向投影 `q cos(α)`：前后两侧在90°附近连续过零，0°/180°仍分别请求±q。它只使用飞控已有位置/航向，不使用Gazebo真值或已知水流向量；物理模型完全不变。
+
+实验只限动力船LOITER的前进/倒车自动选择模式。**航向目标的180°选择跳变仍然存在**，此修改不是完整的方向协调器；纵向请求变小也可能导致转向推力不足，因此必须观察真实运行，不能只凭投影数学关系宣布修复。补丁保持默认0、官方原分支不变，镜像单独命名，正式配置未启用。
+
+[补丁](../../../dependencies/patches/ardupilot-rover-loiter-projection.patch)、[真实编译日志](projection-build.log)、[复现入口与隔离要求](../../../deploy/sitl/README.md)。当前先筛选北向0.30 m/s，保留原25项和3 m门槛；未完成筛选前不推广。
+
+### 投影已完成：未采用
+
+`hold_projection_north030_20261126_01` 完整24/25，唯一失败为3 m保持，峰值7.575 m、RMS 4.060 m。该改动明显劣于原基线4.265 m；不能把“速度连续”当成控制效果改善。[完整摘要](projection/summary.json)、[原结果](projection/result.json.gz)和同目录CSV/哈希保留。正式配置、正式飞控镜像未改变。
+
+## 方向迟滞独立实验
+
+新候选只为方向选择增加角度记忆，保留上游速度缩放和正式转速参数，**不叠加投影、速度阻尼或主动停止补丁**。`LOIT_DIR_HYST=20°`使当前前进时目标方位超过110°才选倒车；当前倒车时方位降至70°或以下才选前进。区间内保持上次选择，但航向和速度控制继续工作，不冻结船体运动。20°为明确标注的工程试验半宽，不是实船标定，不保证固定最小驻留秒数。
+
+仅动力船、无帆、LOITER、`LOIT_TYPE=0`可启用，默认0完全沿用90°规则。每次进入LOITER按实测纵向速度符号初始化方向；参数非法则回退原边界，最大余量钳制30°。只允许原有实体能力，不添加补偿物理力，也不绕开解锁、HOLD或失联处理。
+
+[补丁](../../../dependencies/patches/ardupilot-rover-loiter-direction-hysteresis.patch)、[编译日志](hysteresis-build.log)、[源码摘要](experimental-input-sha256.json)、[镜像内补丁摘要](hysteresis-image-patch.txt)。独立纯判定函数从实际应用补丁的源码编译，[边界测试](direction-test/direction_test.cc)、[实际头文件](direction-test/Rover/LoiterDirection.h)、[结果](direction-test/result.log)保留。复核命令：
+
+```bash
+c++ -std=c++11 -Wall -Wextra -Werror -pedantic \
+  docs/validation/control_weather_2026-11-26/direction-test/direction_test.cc \
+  -o /tmp/usv-direction-test && /tmp/usv-direction-test
+```
+
+这些检查证明边界实现，不证明保持效果。当前先跑原北向0.30 m/s完整25项筛选，未通过前不推广。

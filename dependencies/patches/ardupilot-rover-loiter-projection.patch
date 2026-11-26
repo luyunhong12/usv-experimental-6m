@@ -1,0 +1,41 @@
+--- a/Rover/Parameters.h
++++ b/Rover/Parameters.h
+@@ -415,6 +415,7 @@
+ 
+     // gain for speed of correction in loiter
+     AP_Float loiter_speed_gain;
++    AP_Int8 loiter_project_speed; // 实验开关：仅动力船LOITER使用纵向速度投影，默认关闭。
+ 
+     // FS options
+     AP_Int32 fs_options;
+--- a/Rover/Parameters.cpp
++++ b/Rover/Parameters.cpp
+@@ -669,6 +669,13 @@
+     // @Increment: 0.5
+     // @User: Advanced
+     AP_GROUPINFO("CRASH_TIMEOUT", 61, ParametersG2, crash_timeout, 2.0),
++
++    // @Param: LOIT_PROJ_SPEED
++    // @DisplayName: Experimental motor boat loiter speed projection
++    // @Description: Project the return velocity onto the boat longitudinal axis in motor-boat LOITER only. Keeps forward/reverse choice but removes the discontinuous half-speed demand at its boundary. Simulation experiment; not accepted for deployment.
++    // @Values: 0:Upstream speed scaling,1:Longitudinal projection
++    // @User: Advanced
++    AP_GROUPINFO("LOIT_PROJ_SPEED", 62, ParametersG2, loiter_project_speed, 0),
+ 
+     AP_GROUPEND
+ };
+--- a/Rover/mode_loiter.cpp
++++ b/Rover/mode_loiter.cpp
+@@ -52,6 +52,12 @@
+         // reduce desired speed if yaw_error is large
+         // 45deg of error reduces speed to 75%, 90deg of error reduces speed to 50%
+         float yaw_error_ratio = 1.0f - constrain_float(fabsf(yaw_error_cd / 9000.0f), 0.0f, 1.0f) * 0.5f;
++        // 动力船试验：船侧目标不应要求半速纵向运动。投影在正反向边界连续过零。
++        // 只改期望速度，不绕过真实舵机/推力约束；非LOITER、帆船与默认配置保持原样。
++        if (g2.loiter_project_speed.get() == 1 && rover.is_boat() &&
++            !g2.sailboat.sail_enabled() && g2.loit_type == 0) {
++            yaw_error_ratio = MAX(0.0f, cosf(radians(yaw_error_cd * 0.01f)));
++        }
+         _desired_speed *= yaw_error_ratio;
+     }
+ 

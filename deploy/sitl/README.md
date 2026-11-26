@@ -61,7 +61,7 @@ Linux 主机网络用于兼容现有 localhost JSON 桥；不代表网络隔离�
 
 最小接口测试复用 `tests/integration/validate_ardupilot.py`：`--external-sitl` 表示外部管理实例42（JSON9422、MAVLink6180）；`--no-rendering` 只在试验快照中移除相机与GPU雷达；`--isolated-water` 移除地图其他模型但不改变船体物理；`--gcs-dropout` 在推进中停止地面站心跳和遥控覆盖。每轮用不同 `--label`，输出位于 `artifacts/sitl/<label>`。默认等待姿态、水平速度、绝对位置估计连续就绪2秒后请求正常解锁。
 
-## 实验性 LOITER 速度阻尼（尚未替换正式镜像）
+## 实验性 LOITER 补丁（尚未替换正式镜像）
 
 `Dockerfile.loiter` 从干净的固定上游源码构建显式实验补丁；默认是 `dependencies/patches/ardupilot-rover-loiter-active-stop.patch`，可用构建参数LOITER_PATCH选择保留的失败速度阻尼实验，不修改本地上游checkout。需先具备原版运行镜像和对应本地 `usv-sitl-toolchain:rover-4.7.3` 工具链镜像；构建使用 `--network none`，工具链与运行基础镜像ID应另行存档。它是实验分支，不能标称未经修改的官方固件。
 
@@ -74,3 +74,17 @@ docker build --network none -f deploy/sitl/Dockerfile.loiter -t usv-sitl:loiter-
 测试入口支持 `USV_SITL_IMAGE` 和 `USV_NAV_CONFIG_DIR`，分别指定实验镜像与含三个完整parm文件的候选目录；仍复制输入快照并记录不可变镜像ID，默认继续使用原正式版本。调查、失败候选和采用状态见[跨流向保持调查](../../docs/validation/current_hold_2026-11-25/README.md)。
 
 主动零地速实验新增LOIT_KEEP_SPEED（0/1，默认0），只改变机动船LOITER的零速度分支，保留原速度积分和反馈。原版半径对照及试验结果未完成前不得推广；HOLD和失联语义不改。速度阻尼与主动零地速是两个独立补丁，不叠加。
+
+上述两个候选已在2026-11-25调查中失败，未采用；保留用于复现失败，不是推荐配置。
+
+2026-11-26另增加 `ardupilot-rover-loiter-projection.patch`，新增 `LOIT_PROJ_SPEED`（0/1，默认0）。只有动力船、无帆、LOITER、`LOIT_TYPE=0` 且显式开启时，将原角度线性缩放替换为纵向余弦投影，避免正反向90°边界两侧各保留半速请求。该补丁不修改原航向选择，也不绕过执行器和水动力，因此不能仅凭连续投影断言解决转向协调。
+
+```bash
+docker build --network none -f deploy/sitl/Dockerfile.loiter \
+  --build-arg LOITER_PATCH=ardupilot-rover-loiter-projection.patch \
+  -t usv-sitl:loiter-projection-experimental .
+```
+
+三种实验互斥，不能叠加，也不能复用其他实验的EEPROM；当前补丁使用相同的临时参数槽，独立验收入口每轮wipe并读回新参数。正式 `usv-sitl:rover-4.7.3`、Compose及默认配置未切换。[实验结果与采用状态](../../docs/validation/control_weather_2026-11-26/README.md)是唯一结论入口，未通过原门槛及多流向回归不得推广。
+
+投影候选随后完整24/25，强流保持峰值7.575 m，未采用。第四种独立实验为 `ardupilot-rover-loiter-direction-hysteresis.patch`，使用 `LOIT_DIR_HYST`（度，默认0，最大30）保留前进/倒车选择的角度记忆；20°试验对应70°–110°切换区间，不是定时等待。它与前三种补丁互斥，同样只限动力船LOITER type 0，必须新建/wipe实验状态，不能叠加或覆盖正式镜像。通过相同构建参数选择该补丁并使用独立标签 `usv-sitl:loiter-direction-hysteresis-experimental`；边界测试、实际编译和当前SITL状态见上述本轮报告。
