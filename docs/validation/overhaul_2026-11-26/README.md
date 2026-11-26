@@ -26,3 +26,5 @@
 标准模型不是完整CFD、结构强度、材料破坏、发动机热力学或续航模型。本次只备份、核对源码与写文档，未改运行代码，无新增物理/导航通过结论。
 
 阶段结果：[无鳍固定载荷候选](simple-v1/README.md)、[静水恢复](static-recovery/README.md)。
+
+继续验证：[基准船倒车与随浪](baseline-dynamics/README.md)、[六部位碰撞](contacts/README.md)、[高功率倒车失败与对照](high-power-reverse/README.md)。高功率无鳍方案尚未达标，不切默认、不接飞控。
