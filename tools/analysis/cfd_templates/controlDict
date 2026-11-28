@@ -1,0 +1,52 @@
+// 启动预检控制：@END@ 为秒，@CG@ 为固定工况世界重心坐标（米）。
+application interFoam;
+startFrom startTime;
+startTime 0;
+stopAt endTime;
+endTime @END@;
+deltaT 0.001;
+writeControl adjustableRunTime;
+writeInterval @END@;
+purgeWrite 2;
+writeFormat binary;
+writePrecision 12;
+timeFormat general;
+timePrecision 9;
+runTimeModifiable false;
+// 自适应步长上限；不是网格或时间收敛证明。
+adjustTimeStep yes;
+maxCo 0.5;
+maxAlphaCo 0.25;
+maxDeltaT 0.002;
+functions
+{
+    forces
+    {
+        type forces;
+        libs (forces);
+        patches (hull);
+        p p;
+        U U;
+        rho rho;
+        CofR (@CG@);
+        writeControl timeStep;
+        writeInterval 1;
+        log yes;
+    }
+    yPlus
+    {
+        type yPlus;
+        libs (fieldFunctionObjects);
+        writeControl writeTime;
+        log yes;
+    }
+    extrema
+    {
+        type fieldMinMax;
+        libs (fieldFunctionObjects);
+        fields (U p_rgh alpha.water k omega);
+        writeControl timeStep;
+        writeInterval 10;
+        log yes;
+    }
+}

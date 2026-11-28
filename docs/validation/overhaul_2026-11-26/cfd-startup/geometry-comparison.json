@@ -1,0 +1,37 @@
+{
+  "input_vertices": 55,
+  "input_triangles": 106,
+  "mesh_boundary_triangles": 11232,
+  "input_volume_m3": 8.35823787018325,
+  "boundary_volume_m3": 8.358237870496993,
+  "volume_relative_error": 3.753686250718147e-11,
+  "input_area_m2": 31.628204752594154,
+  "boundary_area_m2": 31.628204752596933,
+  "boundary_sample_max_distance_m": 1.1290529942352391e-08,
+  "source_sample_max_distance_m": 4.196405406692851e-09,
+  "input_bounds": [
+    [
+      -3.0,
+      -1.125,
+      -0.2526162266731262
+    ],
+    [
+      3.0,
+      1.125,
+      0.7673837542533875
+    ]
+  ],
+  "boundary_bounds": [
+    [
+      -3.0,
+      -1.125,
+      -0.252616226673
+    ],
+    [
+      3.0,
+      1.125,
+      0.767383754253
+    ]
+  ],
+  "boundary_watertight": true
+}

@@ -1,0 +1,17 @@
+FoamFile { version 2.0; format ascii; class dictionary; object transportProperties; }
+phases (water air);
+// 密度 kg/m³、运动粘度 m²/s；水密度与当前 Gazebo 工况一致，均为工程假设。
+water
+{
+    transportModel Newtonian;
+    nu [0 2 -1 0 0 0 0] 1e-6;
+    rho [1 -3 0 0 0 0 0] 1000;
+}
+air
+{
+    transportModel Newtonian;
+    nu [0 2 -1 0 0 0 0] 1.5e-5;
+    rho [1 -3 0 0 0 0 0] 1.225;
+}
+// 表面张力 N/m，水-空气常温工程值，未按本船实测温盐度修正。
+sigma [1 0 -2 0 0 0 0] 0.072;

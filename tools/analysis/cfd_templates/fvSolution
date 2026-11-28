@@ -1,0 +1,64 @@
+FoamFile { version 2.0; format ascii; class dictionary; object fvSolution; }
+// 线性求解器绝对/相对残差，量纲随各方程；不代替流场统计收敛。
+solvers
+{
+    Phi
+    {
+        solver GAMG;
+        tolerance 1e-10;
+        relTol 0;
+        smoother DICGaussSeidel;
+    }
+    "alpha.water.*"
+    {
+        nAlphaCorr 2;
+        nAlphaSubCycles 1;
+        cAlpha 1;
+        MULESCorr yes;
+        nLimiterIter 10;
+        solver smoothSolver;
+        smoother symGaussSeidel;
+        tolerance 1e-8;
+        relTol 0;
+    }
+    "pcorr.*"
+    {
+        solver PCG;
+        preconditioner DIC;
+        tolerance 1e-8;
+        relTol 0;
+    }
+    p_rgh
+    {
+        solver GAMG;
+        tolerance 1e-8;
+        relTol 0.01;
+        smoother DICGaussSeidel;
+    }
+    p_rghFinal
+    {
+        $p_rgh;
+        relTol 0;
+    }
+    "(U|k|omega).*"
+    {
+        solver smoothSolver;
+        smoother symGaussSeidel;
+        tolerance 1e-8;
+        relTol 0.01;
+    }
+}
+// 采用真实时间步，未使用官方 DTC 稳态教程的 localEuler 局部伪时间。
+PIMPLE
+{
+    momentumPredictor no;
+    nOuterCorrectors 2;
+    nCorrectors 2;
+    nNonOrthogonalCorrectors 1;
+}
+relaxationFactors
+{
+    equations { ".*" 1; }
+}
+// 初始势流投影只初始化速度/通量，不写入欧拉压力或冒充粘性稳态解。
+potentialFlow { nNonOrthogonalCorrectors 10; }

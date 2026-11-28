@@ -1,0 +1,31 @@
+{
+  "scope": "startup-pipeline-only; not manoeuvring acceptance or steady CFD calibration",
+  "static_duration_s": 0.1,
+  "dynamic_duration_s": 0.02,
+  "u_m_s": -3.43,
+  "beta_deg": [
+    0,
+    -2,
+    2
+  ],
+  "static_limits": {
+    "max_speed_m_s": 0.001,
+    "abs_Fx_Fy_N": 0.1,
+    "abs_yaw_moment_Nm": 0.1,
+    "buoyancy_relative_error": 0.001
+  },
+  "numeric_limits": {
+    "alpha_min": -1e-06,
+    "alpha_max": 1.000001,
+    "min_timestep_s": 1e-08,
+    "must_reach_end": true
+  },
+  "mirror_screen": {
+    "relative_error": 0.05,
+    "denominator_floor_force_N": 1,
+    "denominator_floor_moment_Nm": 1,
+    "zero_beta_abs_Fy_N": 5,
+    "zero_beta_abs_Nz_Nm": 5
+  },
+  "note": "New CFD startup screening tolerances, declared before final matrix. Original Gazebo acceptance is unchanged. Passing does not establish grid/time/domain/statistical convergence."
+}

@@ -1,0 +1,9 @@
+FoamFile { version 2.0; format ascii; class dictionary; object turbulenceProperties; }
+// 采用 RANS SST；壁面函数及 y+ 必须另行核验，开启模型不代表经过校准。
+simulationType RAS;
+RAS
+{
+    RASModel kOmegaSST;
+    turbulence on;
+    printCoeffs on;
+}
