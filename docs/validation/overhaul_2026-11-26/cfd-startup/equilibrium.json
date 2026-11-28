@@ -1,0 +1,20 @@
+{
+  "mass_kg": 1571.1745300420837,
+  "cg_m": [
+    -0.5660579922343724,
+    -2.2595963450775448e-18,
+    0.4918677352423693
+  ],
+  "equilibrium_z_roll_pitch": [
+    -0.25261623933582933,
+    -4.942083026818993e-13,
+    -2.389393314456674e-13
+  ],
+  "volume_m3": 1.5711745300420836,
+  "residual": [
+    9.892087149410145e-13,
+    -3.085975919248085e-12,
+    5.68614888055437e-13
+  ],
+  "scope": "Hull-only clipped volume, no fin; fixed assembled mass. Appendage buoyancy is not modeled by existing plugin."
+}

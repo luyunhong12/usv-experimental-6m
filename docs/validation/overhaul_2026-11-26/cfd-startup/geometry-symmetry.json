@@ -1,0 +1,7 @@
+{
+  "source_sha256": "6b140a23f01633a194e3ace364c4da3940266bb935efdcca14335ae2ade3351a",
+  "max_mirrored_vertex_nearest_distance_m": 1.008184963464942e-12,
+  "note": "Vertices/face centers/edge midpoints sampled against original surface; not a continuous Hausdorff bound or mesh convergence proof.",
+  "mirrored_surface_sample_count": 585,
+  "max_mirrored_surface_sample_distance_m": 1.0007223999117243e-12
+}

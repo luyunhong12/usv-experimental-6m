@@ -27,10 +27,14 @@
 | 21 | 工作日志 | 通过 | 失败、修复、配置、原始力和哈希都归档；不以终端退出码代替结果。 |
 | 22 | 控制上下文 | 通过 | 大体积网格/流场保留本地artifacts；docs保存足以审计的日志/清单。 |
 | 23 | 工作区清理 | 通过 | 保留用户模型/数据及无关未提交改动；未删除旧失败证据。 |
-| 24 | 提交推送 | 待完成 | 按用户授权只提交本轮工具和文档，完成后以Git提交记录为准。 |
+| 24 | 提交推送 | 通过（第一阶段） | dd20bc8已推送vrx-vessel-rebuild；本轮最终结果另行文档提交。 |
 
 逐参数：函数Google风格中文说明；OpenFOAM参数在模板注释及主报告表格中人工核对。自动parameter-docs配置并未覆盖OpenFOAM字典，不能把该自动通过解释成字典逐项认证。
 
 本轮未运行ASan/UBSan、TSan、导航实跑、全套自由航行或稳态CFD收敛测试。
 
 2026-11-28 full复核：[报告](supervisor/report.txt)、[机器清单](supervisor/report.json)、[构建测试](supervisor/usv-build-and-test.log)。source_unchanged=true；12个原生测试、95个Python测试、5个接口测试通过。既有ReadSeparationSections CC=10与AzimuthPropulsion::PreUpdate CC=11仍报告问题，未以忽略规则隐藏。固定仿真镜像内运行原./usv build与./usv test；仅外部配置将命令包装进容器，原检查门槛不变。
+
+版本边界：全工程构建使用report.json中记录的工作区（含其他未提交变更），source_unchanged=true只证明检查期间不变。CFD源码和每个case单独哈希绑定；本轮没有声称干净检出提交即可复现所有全工程测试状态。
+
+最终业务判据：原网格±2°侧力/偏航力矩镜像误差6.07%/24.54%，均未通过5%门槛；追加镜像网格诊断得到0.0053%/0.0306%，用于定位离散偏差，不替换原失败。全部体场与旧记录保留，原始压缩归档逐文件SHA256及Markdown链接已核对。最终阶段只新增诊断数据和文档，未改已检查的工具源码或模板。

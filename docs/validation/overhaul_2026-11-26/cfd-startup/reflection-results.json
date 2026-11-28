@@ -1,0 +1,24 @@
+{
+  "scope": "diagnostic reflection; original mesh mirror gate remains FAILED",
+  "end_reached": true,
+  "mesh_ok": true,
+  "inputs_unchanged": true,
+  "min_dt_s": 0.000101101670431,
+  "alpha_min": -1.72113844997e-15,
+  "alpha_max": 1.00000005569,
+  "wall_s": 252.0,
+  "comparisons": {
+    "Fy": {
+      "original_minus": 84.16987927973,
+      "reflected_plus": -84.17433753464,
+      "final_relative_error": 5.296594078930143e-05,
+      "max_interpolated_history_relative_error": 0.00020819819318967692
+    },
+    "Nz": {
+      "original_minus": -25.49875195071,
+      "reflected_plus": 25.49094434854,
+      "final_relative_error": 0.00030624234842175117,
+      "max_interpolated_history_relative_error": 0.001010842241587489
+    }
+  }
+}

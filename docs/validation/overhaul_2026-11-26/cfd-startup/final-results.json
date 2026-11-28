@@ -1,0 +1,170 @@
+{
+  "scope": "STARTUP_ONLY_NOT_STEADY_OR_MANOEUVRING_ACCEPTANCE",
+  "cases": {
+    "static": {
+      "checks": {
+        "exit_zero": true,
+        "end_reached": true,
+        "mesh_ok": true,
+        "alpha_bounded": true,
+        "timestep": true,
+        "finite_forces": true,
+        "inputs_unchanged": true,
+        "static_speed": true,
+        "static_horizontal_force": true,
+        "static_yaw": true,
+        "buoyancy": true
+      },
+      "complete": true,
+      "duration_s": 0.1,
+      "steps": 51,
+      "alpha_min": 0.0,
+      "alpha_max": 1.0,
+      "min_dt_s": 0.00120481927711,
+      "max_logged_speed_m_s": 5.16981798996e-06,
+      "final_force_N": [
+        1.002672536308e-08,
+        -6.109516341622e-09,
+        15494.7834679
+      ],
+      "final_moment_Nm": [
+        0.01050216876768,
+        -25.80621341012,
+        -0.03447808747078
+      ],
+      "wall_s": 95.0,
+      "final_yplus_min_max_mean": [
+        2.80326323891e-06,
+        0.0580830564838,
+        0.000984593530216
+      ],
+      "max_abs_Fx_Fy_N": [
+        1.005443662128e-08,
+        6.117138421327e-09
+      ],
+      "max_abs_Nz_Nm": 0.03447808832566,
+      "max_buoyancy_relative_error": 3.283280055217181e-08,
+      "startup_pass": true
+    },
+    "reverse-zero": {
+      "checks": {
+        "exit_zero": true,
+        "end_reached": true,
+        "mesh_ok": true,
+        "alpha_bounded": true,
+        "timestep": true,
+        "finite_forces": true,
+        "inputs_unchanged": true,
+        "zero_beta_Fy": true,
+        "zero_beta_Nz": true
+      },
+      "complete": true,
+      "duration_s": 0.02,
+      "steps": 51,
+      "alpha_min": -9.96828099593e-13,
+      "alpha_max": 1.00000003929,
+      "min_dt_s": 0.000168761003216,
+      "max_logged_speed_m_s": 10.259910506,
+      "final_force_N": [
+        4.513744476655,
+        -0.2708225321785,
+        16014.77396843
+      ],
+      "final_moment_Nm": [
+        0.4476761838121,
+        57.56438218713,
+        0.2348680135474
+      ],
+      "wall_s": 104.0,
+      "final_yplus_min_max_mean": [
+        2.17593068362,
+        366.56991323,
+        42.1039032401
+      ],
+      "startup_pass": true
+    },
+    "reverse-minus": {
+      "checks": {
+        "exit_zero": true,
+        "end_reached": true,
+        "mesh_ok": true,
+        "alpha_bounded": true,
+        "timestep": true,
+        "finite_forces": true,
+        "inputs_unchanged": true
+      },
+      "complete": true,
+      "duration_s": 0.02,
+      "steps": 140,
+      "alpha_min": -1.72113844997e-15,
+      "alpha_max": 1.00000005518,
+      "min_dt_s": 0.000101101670431,
+      "max_logged_speed_m_s": 11.0975975397,
+      "final_force_N": [
+        8.260932374712,
+        84.16987927973,
+        16812.84818709
+      ],
+      "final_moment_Nm": [
+        -67.47818459477,
+        147.330934683,
+        -25.49875195071
+      ],
+      "wall_s": 277.0,
+      "final_yplus_min_max_mean": [
+        2.49088781019,
+        1224.60155595,
+        112.249648859
+      ],
+      "startup_pass": true
+    },
+    "reverse-plus": {
+      "checks": {
+        "exit_zero": true,
+        "end_reached": true,
+        "mesh_ok": true,
+        "alpha_bounded": true,
+        "timestep": true,
+        "finite_forces": true,
+        "inputs_unchanged": true
+      },
+      "complete": true,
+      "duration_s": 0.02,
+      "steps": 104,
+      "alpha_min": -1.58047942855e-12,
+      "alpha_max": 1.00000004868,
+      "min_dt_s": 0.000146801749714,
+      "max_logged_speed_m_s": 11.1748078472,
+      "final_force_N": [
+        8.314366244373,
+        -89.44172036188,
+        16804.30728565
+      ],
+      "final_moment_Nm": [
+        74.29899937953,
+        147.7182714894,
+        32.63275303065
+      ],
+      "wall_s": 193.0,
+      "final_yplus_min_max_mean": [
+        2.95580610744,
+        1255.94430191,
+        112.38386713
+      ],
+      "startup_pass": true
+    }
+  },
+  "final_time_mirror": {
+    "Fy": {
+      "relative_error": 0.06073143837200711,
+      "limit": 0.05,
+      "pass": false
+    },
+    "Nz": {
+      "relative_error": 0.245443536417216,
+      "limit": 0.05,
+      "pass": false
+    }
+  },
+  "all_startup_screens_pass": false
+}
